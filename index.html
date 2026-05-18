@@ -3386,7 +3386,7 @@
       </div>
       <div style="flex:1">
         <div style="color:#e2e8f0;font-weight:600;font-size:13px;letter-spacing:0.01em;">Analyst Assistant</div>
-        <div style="color:#64748b;font-size:11px;margin-top:1px;">Reads all 9 master CSVs · Llama 3.3 (Groq)</div>
+        <div style="color:#64748b;font-size:11px;margin-top:1px;">Reads all 11 master CSVs · Llama 3.3 (Groq)</div>
       </div>
       <button onclick="chatClear()" title="Clear conversation"
         style="background:none;border:none;cursor:pointer;color:#475569;font-size:11px;padding:4px 8px;
@@ -3495,6 +3495,8 @@
     daily_ext:            { file:'daily_news_master_extraction.csv',   search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'DAILY NEWS EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
     businessdebut:        { file:'businessdebut_master.csv',           search:['title'],                                                           fmt:r=>`• ${r.date} | ${r.title} | ${r.link}`,                                                                                               label:'BUSINESS DEBUT',           desc:'Columns: title, date, link' },
     businessdebut_ext:    { file:'businessdebut_master_extraction.csv',search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'BUSINESS DEBUT EXTRACTION',desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
+    warn:                 { file:'warn_master.csv',                      search:['state','company','city','closure_type','notes'],                   fmt:r=>`• ${r.state} | ${r.company} | ${r.city} | Notice:${r.notice_date} | Layoff:${r.layoff_date} | Affected:${r.employees_affected} | ${r.closure_type}`,  label:'WARN NOTICES',             desc:'Columns: state, company, city, notice_date, layoff_date, employees_affected, closure_type, notes' },
+    comingsoon:           { file:'company_website_master.csv',           search:['company','address'],                                               fmt:r=>`• ${r.company} | ${r.address} | Opens:${r.opening_date} | ${r.link}`,                                                                       label:'COMPANY WEBSITE – COMING SOON', desc:'Columns: company, address, opening_date, link' },
   };
 
   // Session cache — each CSV is fetched once then kept in memory
@@ -3562,6 +3564,8 @@
     const isDaily      = /daily|industry|region|relevance|score/.test(q);
     const isBusiness   = /business|debut/.test(q);
     const isExtract    = /extract|location|address|where/.test(q);
+    const isWarn       = /\bwarn\b|layoff|layoffs|closure|closures|employees affected|workers|job loss|mass layoff/.test(q);
+    const isComingSoon = /coming soon|grand opening|new store|opening soon|comingsoon|new location|opens|aldi|burlington|five below|trader joe|target|marshalls|wawa|chick.fil.a|jersey mike|longhorn|natural grocer|capital grille|yard house|kirkland|7.eleven|teso/.test(q);
 
     const keys = new Set();
     if (isRestaurant) { keys.add('restaurant'); keys.add('restaurant_ext'); }
@@ -3569,6 +3573,8 @@
     if (isBusiness)   { keys.add('businessdebut'); keys.add('businessdebut_ext'); }
     if (isExtract)    { keys.add('restaurant_ext'); keys.add('daily_ext'); keys.add('ct_scoop_ext'); keys.add('businessdebut_ext'); }
     if (isDaily)        keys.add('daily');
+    if (isWarn)         keys.add('warn');
+    if (isComingSoon)   keys.add('comingsoon');
     if (/store|banner|retail|opening|closing|analyst/.test(q)) keys.add('banner');
     if (keys.size === 0) { keys.add('banner'); keys.add('daily'); }
 

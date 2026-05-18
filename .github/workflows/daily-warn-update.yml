@@ -85,6 +85,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add warn_latest.json
           git add warn_output/ || true
+          git add master_file/warn_master.csv || true
           git diff --staged --quiet || git commit -m "Auto-update: Daily WARN fetch $(date -u '+%Y-%m-%d %H:%M UTC')"
           git fetch origin main
           git rebase origin/main

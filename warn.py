@@ -1968,6 +1968,12 @@ def run_all(
     df_master.to_csv(MASTER_FILE, index=False, encoding='utf-8')
     log.info(f"Master file updated → {MASTER_FILE}  ({len(df_master)} total rows)")
 
+    # ── Mirror to master_file/ alongside other project master CSVs ───────────
+    master_folder = Path("master_file")
+    master_folder.mkdir(exist_ok=True)
+    df_master.to_csv(master_folder / "warn_master.csv", index=False, encoding='utf-8')
+    log.info(f"Master file mirrored → {master_folder / 'warn_master.csv'}")
+
     return combined
 
 

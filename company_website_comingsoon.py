@@ -2242,21 +2242,14 @@ def main():
         new_label = f"{new_count} new row(s) highlighted in yellow" if new_count else "no new rows"
         print(f"Excel   → {excel_path}  ({new_label})")
 
-    # ── CSV master file — accumulates all records across runs ─────────────────
-    CW_MASTER_CSV = Path("docs") / "company_website_master.csv"
-    df_csv = pd.DataFrame(merged_records)
-    df_csv['Date_Appended'] = date.today().strftime("%Y-%m-%d")
-
-    if CW_MASTER_CSV.exists():
-        df_master = pd.read_csv(CW_MASTER_CSV, encoding='utf-8')
-        df_master = pd.concat([df_master, df_csv], ignore_index=True)
-    else:
-        df_master = df_csv
-
-    df_master = df_master.drop_duplicates(subset=['company', 'address'])
+    # ── CSV master file — mirrors the JSON master (merged_records already has
+    #    correct is_new / first_seen from update_master, no concat needed) ────
+    CW_MASTER_CSV = Path("master_file") / "company_website_master.csv"
+    df_master = pd.DataFrame(merged_records)
+    df_master['Date_Appended'] = date.today().strftime("%Y-%m-%d")
     df_master = df_master.sort_values(['company', 'address'])
     df_master.to_csv(CW_MASTER_CSV, index=False, encoding='utf-8')
-    print(f"CSV Master → {CW_MASTER_CSV}  ({len(df_master)} total rows)")
+    print(f"CSV Master → {CW_MASTER_CSV}  ({len(df_master)} total rows, {new_count} new)")
 
 
 if __name__ == "__main__":
