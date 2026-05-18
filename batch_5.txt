@@ -1,0 +1,69 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 81 ---
+URL: https://whatnow.com/chicago/restaurants/tilly-bagel-owners-cooking-up-third-location-in-lakeview/
+Title: Tilly Bagel Owners Cooking Up Third Location in Lakeview
+Published: May 14, 2026
+Address (from scraper): 3162 N Broadway, Chicago, IL 60657
+
+Chicago-style bagels are coming to the North Side neighborhood. (Image credit: tillybagelshop.com) SHARE Fresh bagels are on the way to a Lakeview storefront this summer. The owners of Tilly Bagel have been teasing their new shop on social media coming to 3162 N Broadway in Lakeview . This will be the company’s third location, with the most recent expansion into Fulton Market. An opening date has not yet been announced, but signage is now up. The business was founded by locals Hannah Tillett and Mike Banaszak , who opened the first location in 2023 in South Loop, 34 E Balbo Drive. What Now Chicago previously covered the two opening their second spot in late 2024 at 210 N Aberdeen Street in Fulton Market . In April, the owners gave an update on construction progress at the new address. Earlier that month, they received the business permit and are now installing the kitchen area. Progress of the inside is believed to be nearing completion. Chicago-style bagels at the shops include the plain, everything, sesame, cheesy garlic, cheddar and cinnamon. The team also serves a tomato grilled cheese bagelwich with melted sharp cheddar. All of their bagels are available both in-store and for ordering online. The new Tilly is opening near the intersection of W Belmont Avenue, next to BottlesUp! wine store. This is also across the street from Roebuck bar, and DryHop Brewers . It marks their first expansion to the city’s North Side. What Now Chicago has reached out to Tillett and Banaszak and is awaiting comment. Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 3162 N Broadway, Chicago, IL 60657 Be the First to Know From new restaurant openings to exciting retail launches and real estate insights, be the first to know what’s happening in Chicago Subscribe & Stay Ahead Share This Article Facebook Copy Link Print By Evan Gallagher Regional Reporter Evan Gallagher is a reporter with a passion for news writing from the
+
+--- Article 82 ---
+URL: https://whatnow.com/seattle/restaurants/yoka-tea-eyes-ballard-expansion-following-madrona-success/
+Title: Yoka Tea Eyes Ballard Expansion Following Madrona Success
+Published: May 14, 2026
+Address (from scraper): 5335 Ballard Ave NW, Seattle, WA 98107
+
+Yoka Tea exterior sign (Image credit: Yoka Tea) SHARE Just over a year after opening its first brick-and-mortar café in Madrona, Yoka Tea is preparing to expand to Ballard with a second Seattle location, continuing the brand’s community-focused approach to hospitality. According to the Puget Sound Business Journal , the new 2,200-square-foot café is expected to open by early fall at 5335 Ballard Ave. NW , in the former Little Tin Goods and Apothecary space. Founded by Marcellus Beza and Amy Park , Yoka Tea first launched as a pop-up in 2023, then opened its Madrona café in 2025. Since then, the shop has gained a loyal following for its matcha drinks, community-centered approach, and emphasis on creating what the owners describe as a genuine third space where people can gather, slow down, work creatively, meet friends, or feel connected outside of home and work. The expansion also aligned with the kind of neighborhood the founders always envisioned for Yoka. “Ballard felt right because it shares a lot of the same values we care deeply about at Yoka — community, creativity, intentionality, and culture,” the owners shared with Whatnow Seattle . “What drew us in most was the feeling that people there genuinely value spaces that bring people together.” While the new café will carry the same philosophy that shaped the Madrona location, Marcellus and Amy explained that Ballard will evolve into its own version of the Yoka experience. “Madrona will always be incredibly special to us because it was our first real home. That space taught us so much about hospitality, community, and what people truly resonated with. The Ballard location will carry the same heart and philosophy, but it’ll evolve in its own way,” they said. The Ballard shop will also serve as an opportunity for the team to experiment with new ideas while staying grounded in the identity that helped build Yoka’s loyal following. Guests can expect expanded food offerings, rotating seasonal drinks, natural wine, and
+
+--- Article 83 ---
+URL: https://whatnow.com/philadelphia/restaurants/ogyu-plans-premium-japanese-yakiniku-experience-on-the-main-line/
+Title: Ogyu Plans Premium Japanese Yakiniku Experience in Ardmore
+Published: May 14, 2026
+Address (from scraper): 60 Greenfield Ave., Ardmore, PA 19003
+
+Ogyu's interior design (Image credit: Ogyu's website) SHARE A new Japanese restaurant is coming soon to the Main Line. Ogyu , from Sam Li , founder of O Restaurant Group , will open at 60 Greenfield Ave. in Ardmore, in the former Iron Hill Brewery space. Li told What Now Philadelphia the new restaurant will be a premium all-you-can-eat Japanese yakiniku concept. Yakiniku is a Japanese style of tabletop grilling in which diners cook bite-sized cuts of beef, pork, chicken and vegetables over a shared grill. The raw ingredients are lightly seasoned, cooked at the table and typically served with dipping sauces. The restaurant group operates a growing portfolio of brands spanning fast-casual, cafe-style and full-service dining, including Osushi, Hiramasa and Frozen Boba/BB.Q Chicken. Osushi serves as the group’s flagship sushi concept, offering sushi, sashimi and creative rolls. Hiramasa is a more upscale Japanese restaurant focused on wagyu, premium seafood and chef-driven entrees. Frozen Boba/BB.Q Chicken is a fast-casual concept pairing Korean fried chicken with bubble tea and dessert-style beverages, offering takeout-friendly comfort food. An official opening date for Ogyu has not yet been announced; however, updates are available on the restaurant group’s website. Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 60 Greenfield Ave., Ardmore, PA 19003 Be the First to Know From new restaurant openings to exciting retail launches and real estate insights, be the first to know what’s happening in Philadelphia Subscribe & Stay Ahead Share This Article Facebook Copy Link Print By Courtney McGinley Regional Reporter Courtney McGinley is a Regional Reporter based in Pittsburgh, PA. A graduate of Penn State University's Donald P. Bellisario College of Communications, she has been working as a journalist since earning her degree. Before joining What Now Media Group, Courtney was a Live News Fellow at Newsweek, w
+
+--- Article 84 ---
+URL: https://whatnow.com/austin/restaurants/on-the-grind-bringing-coffee-kiosk-to-kyle/
+Title: On The Grind Bringing Coffee Kiosk To Kyle | What Now Austin
+Published: May 14, 2026
+
+On The Grind (Image credit: https://www.instagram.com/onthegrindcoffee/?hl=en) SHARE Local coffee brand On The Grind is bringing a location to Kyle. On The Grind will bring a 639-square-foot drive-through coffee kiosk to 1857 W. RR 150 in Kyle, according to a filing with the Texas Department of Licensing and Regulation. On The Grind launched in 2013 and the website now lists 17 locations, largely in the San Antonio area. Currently, the closest location to Kyle is in San Marcos. Construction on the Kyle location is expected to begin this summer with plans to finish in 2027, according to the filing. An exact opening timeline has not been announced. On The Grind serves signature beverages such as the Hawaiian (a chocolate macadamia nut breve), the Coconut Joy (a coconut mocha) and the Grasshopper (a mint-infused white chocolate mocha). The menu also features refreshers, shakes and smoothies. Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. Be the First to Know From new restaurant openings to exciting retail launches and real estate insights, be the first to know what’s happening in Austin Subscribe & Stay Ahead Share This Article Facebook Copy Link Print By Emily McGinn Senior Regional Reporter Follow: Emily McGinn is a passionate writer from the Los Angeles area. She has experience reporting on local news and the restaurant industry, and in multimedia writing for podcasts and videos. In her free time, she enjoys exploring restaurants and finding new coffee shops to try. Previous Article Proud Mary Coffee Appears To Have Second Austin Location In The Works Next Article Pinthouse Location To Take Shape In Leander Leave a Comment Leave a Reply Cancel reply Other Relevant News Espadas de Brazil Opening Brazilian Steakhouse In Bastrop May 15, 2026 Emily McGinn Pinthouse Location To Take Shape In Leander May 14, 2026 Emily McGinn On The Grind Bringing Coffee Kiosk To Kyle May 14, 2026 Emily McGinn Proud Mary 
