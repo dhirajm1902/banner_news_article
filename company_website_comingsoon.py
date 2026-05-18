@@ -2242,14 +2242,39 @@ def main():
         new_label = f"{new_count} new row(s) highlighted in yellow" if new_count else "no new rows"
         print(f"Excel   → {excel_path}  ({new_label})")
 
-    # ── CSV master file — mirrors the JSON master (merged_records already has
-    #    correct is_new / first_seen from update_master, no concat needed) ────
+    # ── CSV master — source of truth for NEW detection ───────────────────────
+    # Load existing CSV to find which scraped records are genuinely new.
+    # is_new = True only when (company, address) pair is absent from the CSV.
     CW_MASTER_CSV = Path("master_file") / "company_website_master.csv"
-    df_master = pd.DataFrame(merged_records)
-    df_master['Date_Appended'] = date.today().strftime("%Y-%m-%d")
-    df_master = df_master.sort_values(['company', 'address'])
-    df_master.to_csv(CW_MASTER_CSV, index=False, encoding='utf-8')
-    print(f"CSV Master → {CW_MASTER_CSV}  ({len(df_master)} total rows, {new_count} new)")
+    today_str = date.today().strftime("%Y-%m-%d")
+
+    # Build a dict of existing records keyed by _record_key, reset is_new flags
+    existing = {}
+    if CW_MASTER_CSV.exists():
+        df_existing = pd.read_csv(CW_MASTER_CSV, encoding='utf-8')
+        for _, row in df_existing.iterrows():
+            k = _record_key(row.to_dict())
+            d = row.to_dict()
+            d['is_new'] = False          # clear flag from previous run
+            existing[k] = d
+
+    # Overlay fresh scraped records; new = not in existing CSV
+    csv_new_count = 0
+    for rec in merged_records:
+        k = _record_key(rec)
+        if k in existing:
+            # Update opening_date if we now have one and didn't before
+            if rec.get('opening_date') and not existing[k].get('opening_date'):
+                existing[k]['opening_date'] = rec['opening_date']
+        else:
+            existing[k] = {**rec, 'is_new': True,
+                           'first_seen': today_str, 'Date_Appended': today_str}
+            csv_new_count += 1
+
+    df_csv_master = pd.DataFrame(list(existing.values()))
+    df_csv_master = df_csv_master.sort_values(['company', 'address'])
+    df_csv_master.to_csv(CW_MASTER_CSV, index=False, encoding='utf-8')
+    print(f"CSV Master → {CW_MASTER_CSV}  ({len(df_csv_master)} total rows, {csv_new_count} new)")
 
 
 if __name__ == "__main__":
