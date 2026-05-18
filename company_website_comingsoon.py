@@ -2251,7 +2251,7 @@ def main():
     # Build a dict of existing records keyed by _record_key, reset is_new flags
     existing = {}
     if CW_MASTER_CSV.exists():
-        df_existing = pd.read_csv(CW_MASTER_CSV, encoding='utf-8')
+        df_existing = pd.read_csv(CW_MASTER_CSV, encoding='utf-8').fillna('')
         for _, row in df_existing.iterrows():
             k = _record_key(row.to_dict())
             d = row.to_dict()
