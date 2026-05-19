@@ -22,6 +22,7 @@ Scrapers:
   • TJ Maxx        — https://tjmaxx.tjx.com/store/jump/topic/grand-openings/2600014 (Selenium)
   • Natural Grocers — https://www.naturalgrocers.com/new-store-announcements (Selenium)
   • Capital Grille  — https://www.thecapitalgrille.com/locations/new-locations (Selenium)
+  • Hobby Lobby     — https://newsroom.hobbylobby.com/new-stores (requests)
 
 Output:
   docs/company_website_latest.json
@@ -2000,6 +2001,120 @@ def scrape_capital_grille(driver: webdriver.Chrome) -> list[dict]:
     return results
 
 
+# ── Hobby Lobby scraper ──────────────────────────────────────────────────────
+
+HOBBY_LOBBY_BASE_URL = "https://newsroom.hobbylobby.com"
+HOBBY_LOBBY_LIST_URL = HOBBY_LOBBY_BASE_URL + "/new-stores"
+HOBBY_LOBBY_HEADERS  = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    )
+}
+HOBBY_LOBBY_DATE_RE = re.compile(
+    r"\b(?:January|February|March|April|May|June|July|August|September|"
+    r"October|November|December)\s+\d{1,2},?\s+\d{4}\b"
+)
+HOBBY_LOBBY_ADDR_LOCATED = re.compile(
+    r"(?:located at|at)\s+([\d]+[^.,]+(?:,\s*[A-Za-z ]+)?)",
+    re.IGNORECASE,
+)
+HOBBY_LOBBY_ADDR_STREET = re.compile(
+    r"\b(\d{2,5}\s+[A-Z][a-z]+(?:\s+[A-Za-z]+){1,5}"
+    r"\s+(?:St|Ave|Blvd|Dr|Rd|Ln|Way|Pkwy|Hwy|Court|Ct|Place|Pl|Square|Sq|"
+    r"Loop|Trail|Trl|Circle|Cir|Row|Mall|Drive|Street|Avenue|Road|Lane|Parkway|Highway))\.?",
+    re.IGNORECASE,
+)
+
+
+def _hl_listing_page(page_num: int) -> list[dict]:
+    url = f"{HOBBY_LOBBY_LIST_URL}?page={page_num}"
+    resp = requests.get(url, headers=HOBBY_LOBBY_HEADERS, timeout=30)
+    resp.raise_for_status()
+    soup = BeautifulSoup(resp.text, "html.parser")
+    results = []
+    for art in soup.select("article.card"):
+        title_tag = art.select_one("h3")
+        date_tag  = art.select_one(".text-dark.opacity-75.small, .mb-3.small, time")
+        link_tag  = art.select_one("a[href*='/new-stores/']")
+        title = title_tag.get_text(strip=True) if title_tag else ""
+        date  = date_tag.get_text(strip=True)  if date_tag  else ""
+        href  = link_tag["href"]               if link_tag  else ""
+        link  = (HOBBY_LOBBY_BASE_URL + href) if href.startswith("/") else href
+        results.append({"title": title, "listing_date": date, "link": link})
+    return results
+
+
+def _hl_article(url: str) -> tuple[str, str]:
+    try:
+        resp = requests.get(url, headers=HOBBY_LOBBY_HEADERS, timeout=30)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"  [Hobby Lobby] Could not fetch {url}: {e}")
+        return "", ""
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+
+    time_tag = soup.select_one("time")
+    if time_tag:
+        opening_date = time_tag.get_text(strip=True)
+    else:
+        body_text = soup.get_text(" ", strip=True)
+        dates = HOBBY_LOBBY_DATE_RE.findall(body_text)
+        opening_date = dates[0] if dates else ""
+
+    paras = soup.select("article p, .entry-content p, main p, .post-content p") or soup.find_all("p")
+    body_text = " ".join(p.get_text(" ", strip=True) for p in paras)
+
+    address = ""
+    m = HOBBY_LOBBY_ADDR_LOCATED.search(body_text)
+    if m:
+        address = m.group(1).strip().rstrip(",")
+    else:
+        m2 = HOBBY_LOBBY_ADDR_STREET.search(body_text)
+        if m2:
+            address = m2.group(1).strip()
+
+    return address, opening_date
+
+
+def scrape_hobby_lobby(max_pages: int = 2) -> list[dict]:
+    print(f"[Hobby Lobby] Scraping {HOBBY_LOBBY_LIST_URL} ({max_pages} page(s))…")
+    cards: list[dict] = []
+    for page in range(1, max_pages + 1):
+        try:
+            page_cards = _hl_listing_page(page)
+            if not page_cards:
+                print(f"[Hobby Lobby] Page {page}: no articles — stopping.")
+                break
+            cards.extend(page_cards)
+            print(f"[Hobby Lobby] Page {page}: {len(page_cards)} article(s) (total: {len(cards)})")
+        except Exception as e:
+            print(f"[Hobby Lobby] Page {page} error: {e}")
+        time.sleep(0.5)
+
+    results = []
+    for i, card in enumerate(cards, 1):
+        print(f"  [{i}/{len(cards)}] {card['link']}")
+        address, opening_date = _hl_article(card["link"])
+        # Fall back to listing date if article page had no date
+        if not opening_date:
+            opening_date = card.get("listing_date", "")
+        # Strip time component from listing date strings like "May 12, 2026 10:30 AM"
+        opening_date = re.sub(r"\s+\d{1,2}:\d{2}\s*[AP]M.*", "", opening_date).strip()
+        print(f"    → {opening_date or '(no date)'} | {address or '(no address)'}")
+        results.append({
+            "company":      "Hobby Lobby",
+            "address":      address,
+            "opening_date": extract_date(opening_date) or opening_date,
+            "link":         card["link"],
+        })
+        time.sleep(0.4)
+
+    print(f"[Hobby Lobby] {len(results)} new store article(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -2174,6 +2289,12 @@ def main():
     finally:
         if driver:
             driver.quit()
+
+    # ── Hobby Lobby ──
+    try:
+        all_stores.extend(scrape_hobby_lobby())
+    except Exception as e:
+        print(f"[Hobby Lobby] Scraping failed: {e}")
 
     print(f"\nTotal records collected this run: {len(all_stores)}")
 
