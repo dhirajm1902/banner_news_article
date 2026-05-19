@@ -23,6 +23,7 @@ Scrapers:
   • Natural Grocers — https://www.naturalgrocers.com/new-store-announcements (Selenium)
   • Capital Grille  — https://www.thecapitalgrille.com/locations/new-locations (Selenium)
   • Hobby Lobby     — https://newsroom.hobbylobby.com/new-stores (requests)
+  • Ulta Beauty     — https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings (requests)
 
 Output:
   docs/company_website_latest.json
@@ -2115,6 +2116,57 @@ def scrape_hobby_lobby(max_pages: int = 2) -> list[dict]:
     return results
 
 
+# ── Ulta Beauty scraper ──────────────────────────────────────────────────────
+
+ULTA_URL = "https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings"
+ULTA_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    )
+}
+
+
+def scrape_ulta() -> list[dict]:
+    print(f"[Ulta Beauty] Fetching {ULTA_URL}")
+    try:
+        resp = requests.get(ULTA_URL, headers=ULTA_HEADERS, timeout=30)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"[Ulta Beauty] Error: {e}")
+        return []
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    cards = soup.find_all("div", class_="StoreListItem__content")
+    print(f"[Ulta Beauty] Found {len(cards)} card(s).")
+
+    results = []
+    for card in cards:
+        try:
+            paras = card.find_all_next("p")
+            address2 = paras[1].get_text(strip=True) if len(paras) > 1 else ""
+            address3 = paras[2].get_text(strip=True) if len(paras) > 2 else ""
+            address  = ", ".join(p for p in [address2, address3] if p)
+
+            status_tag   = card.find("div", class_="StoreListItem__statusText")
+            opening_date = status_tag.get_text(strip=True) if status_tag else ""
+
+            if not address:
+                continue
+
+            results.append({
+                "company":      "Ulta Beauty",
+                "address":      address,
+                "opening_date": extract_date(opening_date) or opening_date,
+                "link":         ULTA_URL,
+            })
+        except Exception as e:
+            print(f"  [Ulta Beauty] Error parsing card: {e}")
+
+    print(f"[Ulta Beauty] {len(results)} store(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -2295,6 +2347,12 @@ def main():
         all_stores.extend(scrape_hobby_lobby())
     except Exception as e:
         print(f"[Hobby Lobby] Scraping failed: {e}")
+
+    # ── Ulta Beauty ──
+    try:
+        all_stores.extend(scrape_ulta())
+    except Exception as e:
+        print(f"[Ulta Beauty] Scraping failed: {e}")
 
     print(f"\nTotal records collected this run: {len(all_stores)}")
 
