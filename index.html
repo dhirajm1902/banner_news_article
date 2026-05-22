@@ -542,6 +542,17 @@
                 </div>
                 <div id="mgmtContent" class="hidden">
                     <div id="mgmtStatsRow" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"></div>
+
+                    <!-- Personalized Analyst Messages -->
+                    <div class="glass rounded-2xl overflow-hidden mb-6">
+                        <div class="px-4 py-3 border-b border-white/5 flex items-center gap-2">
+                            <i class="fas fa-comment-dots text-purple-400"></i>
+                            <h3 class="text-sm font-semibold text-gray-200">Analyst Performance Messages</h3>
+                            <span class="text-xs text-gray-500 ml-auto">Personalised based on current progress</span>
+                        </div>
+                        <div id="mgmtPersonalizedMessages" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4"></div>
+                    </div>
+
                     <div class="grid grid-cols-2 gap-6 mb-6" style="min-width:0;">
                         <!-- Analyst Breakdown -->
                         <div class="glass rounded-2xl overflow-hidden min-w-0 flex flex-col" style="max-height:520px;">
@@ -3161,6 +3172,80 @@
             }).join('');
         document.getElementById('mgmtAnalystBody').innerHTML =
             analystRows || '<tr><td colspan="5" class="px-4 py-6 text-center text-gray-500">No data</td></tr>';
+
+        // Personalised analyst messages
+        const HIGH_MESSAGES = [
+            (name, p, done, assigned) => `Outstanding work, ${name}! At ${p}% completion you're setting the benchmark for the entire team. Your consistency and dedication inspire everyone around you — keep this incredible momentum and finish strong!`,
+            (name, p, done, assigned) => `You're absolutely crushing it, ${name}! ${done} out of ${assigned} articles completed at ${p}%. Your commitment to quality and speed is exactly what drives this team forward. Stay the course — you're leading the way!`,
+            (name, p, done, assigned) => `Elite-level performance, ${name}! ${p}% done with ${assigned - done} articles still to go. The finish line is in sight — bring home that 100% and set a record for the team!`,
+        ];
+        const MID_MESSAGES = [
+            (name, p, done, assigned) => `Great progress, ${name}! You're at ${p}% with ${done} articles done. One focused session today and you'll break into the top tier — the finish line is well within reach. Keep pushing!`,
+            (name, p, done, assigned) => `You're more than halfway there, ${name} — ${p}% and counting! Channel this energy into a strong final sprint, tackle a few more articles, and watch yourself climb to the top of the leaderboard.`,
+            (name, p, done, assigned) => `Solid work on ${done} of ${assigned} articles, ${name}! You clearly have the skills — now let's turn up the volume and push past 75%. A little extra focus today will make a huge difference!`,
+        ];
+        const LOW_MESSAGES = [
+            (name, p, done, assigned) => `Every article counts, ${name}! Your dashboard shows ${done} of ${assigned} done (${p}%). Let's pick up the pace — even a few extra completions today will make a real difference to the team. You've got this!`,
+            (name, p, done, assigned) => `The team is rooting for you, ${name}! At ${p}% there's exciting progress to be made. Check your dashboard, tackle those ${assigned - done} pending articles, and let's turn this around together — you have real potential!`,
+            (name, p, done, assigned) => `Time to shine, ${name}! Your current progress is ${p}% (${done}/${assigned}). Open your dashboard, prioritise your queue, and let's get those numbers climbing — a strong day today can completely change the picture!`,
+        ];
+
+        const personalMsgs = Object.entries(analystMap).map(([name, s]) => {
+            const p = s.assigned > 0 ? Math.round(s.done / s.assigned * 100) : 0;
+            const seed = name.length % 3;
+            let borderColor, bgGlow, barColor, textColor, badgeHtml, message;
+
+            if (p > 75) {
+                borderColor = 'border-green-500/40';
+                bgGlow      = 'bg-green-500/5';
+                barColor    = 'bg-green-500';
+                textColor   = 'text-green-400';
+                badgeHtml   = '<span class="text-xs px-2 py-0.5 rounded-full bg-green-500/15 border border-green-500/30 text-green-300">🔥 Top Performer</span>';
+                message     = HIGH_MESSAGES[seed](name, p, s.done, s.assigned);
+            } else if (p > 50) {
+                borderColor = 'border-yellow-500/40';
+                bgGlow      = 'bg-yellow-500/5';
+                barColor    = 'bg-yellow-500';
+                textColor   = 'text-yellow-400';
+                badgeHtml   = '<span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/15 border border-yellow-500/30 text-yellow-300">💪 Making Progress</span>';
+                message     = MID_MESSAGES[seed](name, p, s.done, s.assigned);
+            } else {
+                borderColor = 'border-red-500/40';
+                bgGlow      = 'bg-red-500/5';
+                barColor    = 'bg-red-500';
+                textColor   = 'text-red-400';
+                badgeHtml   = '<span class="text-xs px-2 py-0.5 rounded-full bg-red-500/15 border border-red-500/30 text-red-300">⚡ Needs Boost</span>';
+                message     = LOW_MESSAGES[seed](name, p, s.done, s.assigned);
+            }
+
+            const lastSeen = s.lastActivity
+                ? 'Last active: ' + new Date(s.lastActivity).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+                : 'No activity yet';
+
+            return `<div class="rounded-xl p-4 border ${borderColor} ${bgGlow} flex flex-col gap-3">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                    <div class="flex items-center gap-2">
+                        <div class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold text-white">${name.charAt(0).toUpperCase()}</div>
+                        <span class="font-semibold text-white text-sm">${name}</span>
+                    </div>
+                    ${badgeHtml}
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="flex-1 bg-gray-700 rounded-full h-1.5">
+                        <div class="${barColor} h-1.5 rounded-full transition-all duration-700" style="width:${p}%"></div>
+                    </div>
+                    <span class="text-xs ${textColor} font-bold w-10 text-right">${p}%</span>
+                </div>
+                <p class="text-xs text-gray-300 leading-relaxed">${message}</p>
+                <div class="text-xs text-gray-500 flex items-center justify-between mt-auto pt-1 border-t border-white/5">
+                    <span><span class="text-green-400 font-semibold">${s.done}</span> done · <span class="text-orange-400 font-semibold">${s.assigned - s.done}</span> pending</span>
+                    <span>${lastSeen}</span>
+                </div>
+            </div>`;
+        }).join('');
+
+        document.getElementById('mgmtPersonalizedMessages').innerHTML =
+            personalMsgs || '<p class="text-gray-500 text-sm col-span-3 text-center py-4">No analyst data available.</p>';
 
         // Activity feed
         const articlesByKey = {};
