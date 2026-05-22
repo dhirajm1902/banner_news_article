@@ -3015,12 +3015,32 @@
         document.getElementById('companyWebEmptyState').classList.add('hidden');
         document.getElementById('companyWebTableContainer').classList.remove('hidden');
 
-        tbody.innerHTML = filteredCompanyWebRows.map((r, i) => {
+        // NEW items always float to the top; preserve existing order within each group
+        const sortedRows = [...filteredCompanyWebRows].sort((a, b) => {
+            if (a.is_new === b.is_new) return 0;
+            return a.is_new ? -1 : 1;
+        });
+
+        const newCount  = sortedRows.filter(r => r.is_new === true).length;
+        const showSplit = newCount > 0 && newCount < sortedRows.length;
+        const newHeader = newCount > 0
+            ? `<tr><td colspan="8" class="px-3 py-2 text-xs font-semibold text-yellow-300 uppercase tracking-widest bg-yellow-500/8 border-b border-yellow-500/20">
+                   <i class="fas fa-star mr-1.5 text-yellow-400"></i>New This Run — ${newCount} location${newCount !== 1 ? 's' : ''}
+               </td></tr>`
+            : '';
+
+        tbody.innerHTML = newHeader + sortedRows.map((r, i) => {
             const key    = cwDoneKey(r);
             const isDone = localStorage.getItem(key) === 'true';
             const isNew  = r.is_new === true;
-            const rowBg  = isDone ? 'background:rgba(16,185,129,0.06);' : isNew ? 'background:rgba(234,179,8,0.05);' : '';
+            const rowBg  = isDone ? 'background:rgba(16,185,129,0.06);' : isNew ? 'background:rgba(234,179,8,0.06);' : '';
             const safeKey = key.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+            // Divider row between NEW and existing entries
+            const divider = (showSplit && i === newCount)
+                ? `<tr><td colspan="8" class="px-3 py-2 text-xs text-gray-500 uppercase tracking-widest bg-white/3 border-t-2 border-white/10">
+                       <i class="fas fa-history mr-1.5 text-gray-600"></i>Previously Seen
+                   </td></tr>`
+                : '';
             const linkCell = r.link
                 ? `<a href="${escapeHtml(r.link)}" target="_blank" rel="noopener noreferrer"
                       class="px-2 py-1 rounded-lg text-xs bg-blue-900/40 text-blue-300 border border-blue-700/30 hover:bg-blue-800/60 transition-colors whitespace-nowrap">
@@ -3030,7 +3050,7 @@
             const statusCell = isNew
                 ? `<span class="px-2 py-0.5 rounded-full text-xs font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/40 whitespace-nowrap">✨ NEW</span>`
                 : `<span class="text-gray-600 text-xs">—</span>`;
-            return `
+            return divider + `
             <tr style="${rowBg}" class="border-t border-white/5 transition-colors ${isNew ? 'border-l-2 border-l-yellow-500/40' : ''}">
                 <td class="px-3 py-3 text-center">
                     <label class="cursor-pointer inline-flex items-center justify-center w-6 h-6 rounded-md border-2 transition-all ${isDone ? 'bg-emerald-500 border-emerald-500' : 'border-gray-600 hover:border-emerald-500'}" onclick="toggleCompanyWebDone('${safeKey}')">
