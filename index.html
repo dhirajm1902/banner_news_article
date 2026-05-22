@@ -3094,12 +3094,24 @@
                 }
             }
 
-            // Match email prefix → analyst name (case-insensitive, prefix/contains)
+            // Match email prefix → analyst full name
+            // Email pattern: firstName + lastNameInitial  e.g. "suryakantr" → "Suryakant Rajput"
             const prefix = _currentUserEmail.split('@')[0].toLowerCase();
             const names  = Object.keys(analystMap);
-            const matched = names.find(n => n.toLowerCase() === prefix)
-                         || names.find(n => prefix.startsWith(n.toLowerCase()) || n.toLowerCase().startsWith(prefix));
-            if (!matched) return; // analyst not in data — hide card
+            const matched =
+                // 1. Exact match (unlikely but safest)
+                names.find(n => n.toLowerCase() === prefix) ||
+                // 2. Email prefix starts with analyst's first name (primary strategy)
+                names.find(n => {
+                    const firstName = n.trim().split(/\s+/)[0].toLowerCase();
+                    return firstName.length >= 3 && prefix.startsWith(firstName);
+                }) ||
+                // 3. Analyst first name starts with email prefix (short email edge case)
+                names.find(n => {
+                    const firstName = n.trim().split(/\s+/)[0].toLowerCase();
+                    return firstName.length >= 3 && firstName.startsWith(prefix.slice(0, 6));
+                });
+            if (!matched) return; // no match — card stays hidden
 
             const s = analystMap[matched];
             const p = s.assigned > 0 ? Math.round(s.done / s.assigned * 100) : 0;
