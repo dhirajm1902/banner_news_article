@@ -2945,22 +2945,19 @@ def scrape_kansas() -> pd.DataFrame:
             table = soup.find("table")
             if not table:
                 break
+            # Columns: Employer | City | ZIP | LWIB Area | Notice Date | WARN Type
             for tr in table.find_all("tr")[1:]:
                 cells = tr.find_all("td")
-                if not cells:
+                if len(cells) < 5:
                     continue
-                employer_cell = cells[0]
-                company = " ".join(employer_cell.get_text(" ", strip=True).split())
-                location = " ".join(cells[1].get_text(" ", strip=True).split()) if len(cells) > 1 else ""
-                notice_date = " ".join(cells[2].get_text(" ", strip=True).split()) if len(cells) > 2 else ""
-                # Split "City, KS 67201" → city
-                city = ""
-                m = re.match(r"^(.+?),?\s+[A-Z]{2}\s+\d{5}", location)
-                city = m.group(1).strip() if m else location.split(",")[0].strip()
+                def _txt(i):
+                    return " ".join(cells[i].get_text(" ", strip=True).split()) if len(cells) > i else ""
                 rows_out.append({
-                    "company":    company,
-                    "city":       city,
-                    "notice_date": notice_date,
+                    "company":      _txt(0),
+                    "city":         _txt(1),
+                    "notice_date":  _txt(4),
+                    "closure_type": _txt(5),
+                    "notes":        _txt(3),
                 })
             # Stop when there is no "next page" link
             if not soup.select_one("a.next_page[href], a[rel~='next']"):
