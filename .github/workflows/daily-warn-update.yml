@@ -11,7 +11,7 @@ permissions:
 jobs:
   warn-scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
 
     steps:
       - name: Checkout repository
@@ -30,7 +30,7 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install requests beautifulsoup4 pandas lxml playwright nest_asyncio \
-                      selenium webdriver-manager openpyxl
+                      selenium webdriver-manager openpyxl pymupdf
 
       - name: Install Playwright browsers
         run: playwright install chromium --with-deps
