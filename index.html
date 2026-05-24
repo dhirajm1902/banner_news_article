@@ -222,6 +222,21 @@
         .data-table thead th { background: rgba(15,20,40,0.9); color: #94a3b8; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; }
         .data-table tbody tr.warn-highlight { background: rgba(22,163,74,0.10); border-left: 3px solid #16a34a; }
         .data-table tbody tr.warn-highlight:hover { background: rgba(22,163,74,0.18); }
+        .warn-new-badge {
+            display: inline-flex; align-items: center; gap: 4px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            box-shadow: 0 2px 8px rgba(245,158,11,0.45);
+            color: #fff; font-size: 0.65rem; font-weight: 800;
+            padding: 2px 7px; border-radius: 999px; letter-spacing: 0.04em;
+            vertical-align: middle; white-space: nowrap;
+        }
+        .warn-new-section-row td {
+            background: rgba(245,158,11,0.08) !important;
+            border-top: 1px solid rgba(245,158,11,0.25) !important;
+            border-bottom: 1px solid rgba(245,158,11,0.25) !important;
+            padding: 7px 12px !important;
+        }
+        .warn-new-section-row:hover { background: none !important; }
 
         .analyst-section { scroll-margin-top: 90px; }
         .analyst-heading {
@@ -2858,7 +2873,21 @@
             return warnSortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
         });
 
-        tbody.innerHTML = sorted.map((r, i) => {
+        // Determine "new" = notice_date is today or yesterday (browser local date)
+        const _today = new Date(); _today.setHours(0,0,0,0);
+        const _yesterday = new Date(_today); _yesterday.setDate(_today.getDate() - 1);
+        function _isNew(r) {
+            const nd = new Date(r.notice_date);
+            if (isNaN(nd.getTime())) return false;
+            nd.setHours(0,0,0,0);
+            return nd >= _yesterday;
+        }
+        const newCount = (warnSortCol === 'notice_date' && warnSortDir === 'desc')
+            ? sorted.filter(_isNew).length : 0;
+
+        let bannerInserted = false;
+        const rows = [];
+        sorted.forEach((r, i) => {
             const isClosure = (r.closure_type||'').toLowerCase().includes('clos');
             const typeBadge = isClosure
                 ? `<span class="badge-closing px-2 py-1 rounded-full text-xs font-bold text-white"><i class="fas fa-building-circle-xmark mr-1 text-xs"></i>Closure</span>`
@@ -2866,11 +2895,30 @@
                 ? `<span class="px-2 py-1 rounded-full text-xs bg-amber-900/40 text-amber-300 border border-amber-700/30">${escapeHtml(r.closure_type)}</span>`
                 : `<span class="text-gray-600 text-xs">—</span>`;
             const isTracked = WARN_HIGHLIGHT_COMPANIES.has((r.company||'').toLowerCase().trim());
-            return `
+            const isNew = _isNew(r);
+
+            // Insert the "NEW THIS RUN" banner before the first new row (only when default sort)
+            if (warnSortCol === 'notice_date' && warnSortDir === 'desc' && isNew && !bannerInserted) {
+                bannerInserted = true;
+                rows.push(`
+                <tr class="warn-new-section-row">
+                    <td colspan="9">
+                        <span style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:800;color:#f59e0b;letter-spacing:0.08em;">
+                            <span style="font-size:1rem;">✦</span>
+                            NEW THIS RUN — ${newCount} NOTICE${newCount !== 1 ? 'S' : ''}
+                            <span style="font-size:0.65rem;color:#9ca3af;font-weight:500;font-style:italic;">(today &amp; yesterday)</span>
+                        </span>
+                    </td>
+                </tr>`);
+            }
+
+            rows.push(`
             <tr class="${isTracked ? 'warn-highlight' : ''}">
                 <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
                 <td class="px-3 py-3 max-w-[180px]">
-                    <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.company||'')}">${highlight(r.company||'—', term)}</span>
+                    <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.company||'')}">
+                        ${isNew ? `<span class="warn-new-badge mr-1">✦ NEW</span>` : ''}${highlight(r.company||'—', term)}
+                    </span>
                 </td>
                 <td class="px-3 py-3 text-gray-400 text-xs">${highlight(r.city||'—', term)}</td>
                 <td class="px-3 py-3">
@@ -2883,8 +2931,9 @@
                 <td class="px-3 py-3 max-w-[200px]">
                     <span class="text-gray-500 text-xs line-clamp-2 block" title="${escapeHtml(r.notes||'')}">${highlight(r.notes||'—', term)}</span>
                 </td>
-            </tr>`;
-        }).join('');
+            </tr>`);
+        });
+        tbody.innerHTML = rows.join('');
 
         document.getElementById('warnRowCount').textContent = filteredWarnRows.length;
         _updateWarnSortIcons();
