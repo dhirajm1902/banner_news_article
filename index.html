@@ -989,12 +989,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
-                    <div class="flex-1 relative">
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3 flex-wrap">
+                    <div class="flex-1 relative min-w-48">
                         <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
                         <input type="text" id="dailySearchInput" placeholder="Search by title…"
                             class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterDailyArticles,250)()">
                     </div>
+                    <select id="dailyStatusFilter" onchange="filterDailyArticles()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Status</option>
+                        <option value="Opening">Opening</option>
+                        <option value="Closing">Closing</option>
+                    </select>
+                    <select id="dailyIndustryFilter" onchange="filterDailyArticles()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Industries</option>
+                    </select>
                     <button onclick="downloadDailyCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
                         <i class="fas fa-download"></i><span>Download CSV</span>
                     </button>
@@ -1054,13 +1062,13 @@
                     <table class="w-full text-sm text-left data-table table-fixed">
                         <thead><tr>
                             <th class="px-3 py-3 w-12">#</th>
-                            <th class="px-3 py-3">Store / Business</th>
-                            <th class="px-3 py-3">Location</th>
-                            <th class="px-3 py-3 w-28">Event Type</th>
+                            <th class="px-3 py-3 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="sortDailyExtTable('store_name')">Store / Business <i id="sort-dailyext-store" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-3 py-3 cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyExtTable('location')">Location <i id="sort-dailyext-location" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-3 py-3 w-28 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="sortDailyExtTable('event_type')">Event Type <i id="sort-dailyext-type" class="fas fa-sort text-gray-600 ml-1"></i></th>
                             <th class="px-3 py-3 w-36">Event Date</th>
                             <th class="px-3 py-3 w-40">Status</th>
                             <th class="px-3 py-3">Description</th>
-                            <th class="px-3 py-3 w-32">Published Date</th>
+                            <th class="px-3 py-3 w-32 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="sortDailyExtTable('published_date')">Published Date <i id="sort-dailyext-date" class="fas fa-sort-down text-gray-400 ml-1"></i></th>
                             <th class="px-3 py-3 w-20">Link</th>
                         </tr></thead>
                         <tbody id="dailyExtTableBody"></tbody>
@@ -1323,7 +1331,9 @@
     let bizArticles = [], filteredBizArticles = [];
     let bizExtractionRows = [], filteredBizExtractionRows = [];
     let dailyNewsArticles = [], filteredDailyNewsArticles = [];
+    let dailySortCol = 'date', dailySortDir = 'desc';
     let dailyNewsExtractionRows = [], filteredDailyNewsExtractionRows = [];
+    let dailyExtSortCol = 'published_date', dailyExtSortDir = 'desc';
     let warnRows = [], filteredWarnRows = [];
     let warnSortCol = 'notice_date', warnSortDir = 'desc';
     let companyWebRows = [], filteredCompanyWebRows = [];
@@ -2484,6 +2494,7 @@
                 relevance_score: item.relevance_score != null ? item.relevance_score : ''
             }));
             filteredDailyNewsArticles = dailyNewsArticles;
+            populateDailyArticleFilters();
             updateDailyNewsStats(filteredDailyNewsArticles);
             renderDailyNewsArticles();
             updateNavTotal();
@@ -2502,16 +2513,69 @@
     }
 
     function filterDailyArticles() {
-        const term = document.getElementById('dailySearchInput').value.toLowerCase();
-        filteredDailyNewsArticles = dailyNewsArticles.filter(a => !term ||
-            (a.title||'').toLowerCase().includes(term) ||
-            (a.industry||'').toLowerCase().includes(term) ||
-            (a.source||'').toLowerCase().includes(term) ||
-            (a.status||'').toLowerCase().includes(term) ||
-            (a.region||'').toLowerCase().includes(term) ||
-            (a.keyword||'').toLowerCase().includes(term));
+        const term     = document.getElementById('dailySearchInput').value.toLowerCase();
+        const status   = document.getElementById('dailyStatusFilter').value;
+        const industry = document.getElementById('dailyIndustryFilter').value;
+        filteredDailyNewsArticles = dailyNewsArticles.filter(a => {
+            const ms = !term ||
+                (a.title||'').toLowerCase().includes(term) ||
+                (a.industry||'').toLowerCase().includes(term) ||
+                (a.source||'').toLowerCase().includes(term) ||
+                (a.status||'').toLowerCase().includes(term) ||
+                (a.region||'').toLowerCase().includes(term) ||
+                (a.keyword||'').toLowerCase().includes(term);
+            const ss = status   === 'all' || a.status   === status;
+            const is = industry === 'all' || a.industry === industry;
+            return ms && ss && is;
+        });
+        sortDailyData();
         updateDailyNewsStats(filteredDailyNewsArticles);
         renderDailyNewsArticles();
+    }
+
+    function populateDailyArticleFilters() {
+        const industries = [...new Set(dailyNewsArticles.map(a => a.industry).filter(Boolean))].sort();
+        const sel = document.getElementById('dailyIndustryFilter');
+        sel.innerHTML = '<option value="all">All Industries</option>' +
+            industries.map(i => `<option value="${escapeHtml(i)}">${escapeHtml(i)}</option>`).join('');
+    }
+
+    function sortDailyTable(col) {
+        dailySortDir = (dailySortCol === col && dailySortDir === 'asc') ? 'desc' : 'asc';
+        dailySortCol = col;
+        sortDailyData();
+        renderDailyNewsArticles();
+    }
+
+    function sortDailyData() {
+        filteredDailyNewsArticles.sort((a, b) => {
+            const va = (a[dailySortCol === 'date' ? 'date' : dailySortCol] || '').toLowerCase();
+            const vb = (b[dailySortCol === 'date' ? 'date' : dailySortCol] || '').toLowerCase();
+            return dailySortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+        });
+    }
+
+    function sortDailyExtTable(col) {
+        dailyExtSortDir = (dailyExtSortCol === col && dailyExtSortDir === 'asc') ? 'desc' : 'asc';
+        dailyExtSortCol = col;
+        ['store_name','location','event_type','published_date'].forEach(c => {
+            const idMap = { store_name:'sort-dailyext-store', location:'sort-dailyext-location', event_type:'sort-dailyext-type', published_date:'sort-dailyext-date' };
+            const el = document.getElementById(idMap[c]);
+            if (!el) return;
+            el.className = c === dailyExtSortCol
+                ? 'fas ' + (dailyExtSortDir === 'asc' ? 'fa-sort-up' : 'fa-sort-down') + ' text-gray-400 ml-1'
+                : 'fas fa-sort text-gray-600 ml-1';
+        });
+        sortDailyExtData();
+        renderDailyNewsExtractionTable();
+    }
+
+    function sortDailyExtData() {
+        filteredDailyNewsExtractionRows.sort((a, b) => {
+            const va = (a[dailyExtSortCol] || '').toLowerCase();
+            const vb = (b[dailyExtSortCol] || '').toLowerCase();
+            return dailyExtSortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+        });
     }
 
     function downloadDailyCSV() {
@@ -2560,16 +2624,21 @@
                 <td class="px-3 py-2 text-gray-300 text-xs text-center">${a.relevance_score !== '' ? escapeHtml(String(a.relevance_score)) : '—'}</td>
             </tr>`;
         }).join('');
+        const _di = (col, label) => {
+            const active = col === dailySortCol;
+            const icon = active ? (dailySortDir === 'asc' ? 'fa-sort-up text-gray-400' : 'fa-sort-down text-gray-400') : 'fa-sort text-gray-600';
+            return `<th class="px-3 py-3 whitespace-nowrap cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyTable('${col}')">${label} <i id="sort-daily-${col}" class="fas ${icon} ml-1"></i></th>`;
+        };
         container.innerHTML = `
             <table class="w-full text-sm text-left data-table">
                 <thead><tr>
                     <th class="px-3 py-3 w-8">#</th>
-                    <th class="px-3 py-3 whitespace-nowrap">Status</th>
-                    <th class="px-3 py-3 whitespace-nowrap">Industry</th>
+                    ${_di('status','Status')}
+                    ${_di('industry','Industry')}
                     <th class="px-3 py-3 whitespace-nowrap">Region</th>
-                    <th class="px-3 py-3">Title</th>
-                    <th class="px-3 py-3 whitespace-nowrap">Source</th>
-                    <th class="px-3 py-3 whitespace-nowrap">Published Date</th>
+                    ${_di('title','Title')}
+                    ${_di('source','Source')}
+                    ${_di('date','Published Date')}
                     <th class="px-3 py-3 whitespace-nowrap text-center">Link</th>
                     <th class="px-3 py-3 whitespace-nowrap">Keyword</th>
                     <th class="px-3 py-3 whitespace-nowrap text-center">Score</th>
@@ -2615,6 +2684,7 @@
             const ms = !term || ['store_name','location','short_description','status'].some(k => (r[k]||'').toLowerCase().includes(term));
             return ms && (type === 'all' || r.event_type === type);
         });
+        sortDailyExtData();
         updateDailyNewsExtStats(filteredDailyNewsExtractionRows);
         renderDailyNewsExtractionTable();
     }
