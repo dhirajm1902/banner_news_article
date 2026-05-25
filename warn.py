@@ -5117,6 +5117,108 @@ def scrape_south_carolina() -> pd.DataFrame:
     return _normalise(df, "South Carolina")
 
 
+def scrape_west_virginia() -> pd.DataFrame:
+    """West Virginia WorkForce — scrape PDF links from the WARN listing page.
+    Company name and notice date are parsed from the PDF filename.
+    URL: https://workforcewv.org/job-seeker/layoffs-downsizing/warn-listing/
+    """
+    import re as _re
+    log.info("Scraping West Virginia...")
+    url = "https://workforcewv.org/job-seeker/layoffs-downsizing/warn-listing/"
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+    resp.raise_for_status()
+    soup = BeautifulSoup(resp.content, "html.parser")
+
+    data = []
+    for a in soup.find_all("a", href=True):
+        href = a["href"]
+        if "wp-content/uploads" not in href or not href.lower().endswith(".pdf"):
+            continue
+
+        filename = href.rsplit("/", 1)[-1]          # e.g. Greenbrier-Minerals-WARN-2-13-26.pdf
+        stem     = filename[:-4]                     # strip .pdf
+
+        # Extract company name: everything before "-WARN" or "_WARN" (case-insensitive)
+        m = _re.split(r"[-_]WARN[-_ ]", stem, flags=_re.IGNORECASE, maxsplit=1)
+        company = m[0].replace("-", " ").replace("_", " ").strip() if m else stem
+
+        # Derive notice date from URL path year/month (most reliable)
+        path_m = _re.search(r"/uploads/(\d{4})/(\d{2})/", href)
+        if path_m:
+            notice_date = f"{path_m.group(2)}/01/{path_m.group(1)}"  # MM/01/YYYY
+        else:
+            notice_date = ""
+
+        data.append({
+            "company":            company,
+            "city":               "",
+            "notice_date":        notice_date,
+            "layoff_date":        "",
+            "employees_affected": "",
+            "closure_type":       "",
+            "notes":              href if href.startswith("http") else f"https://workforcewv.org{href}",
+        })
+
+    df = pd.DataFrame(data).drop_duplicates(subset=["company", "notice_date"])
+    log.info(f"  West Virginia: {len(df)} rows")
+    return _normalise(df, "West Virginia")
+
+
+def scrape_wisconsin() -> pd.DataFrame:
+    """Wisconsin DWD — fetch WARN notices from public Google Sheets CSV export.
+    Spreadsheet ID: 1cyZiHZcepBI7ShB3dMcRprUFRG24lbwEnEDRBMhAqsA
+    Sheets: Originals + Updates (combined, deduped by PK)
+    """
+    import io as _io
+    log.info("Scraping Wisconsin...")
+
+    SHEET_ID = "1cyZiHZcepBI7ShB3dMcRprUFRG24lbwEnEDRBMhAqsA"
+    base = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet="
+
+    frames = []
+    for sheet in ("Originals", "Updates"):
+        try:
+            r = requests.get(base + sheet, headers=HEADERS, timeout=30)
+            r.raise_for_status()
+            df_sheet = pd.read_csv(_io.StringIO(r.text), dtype=str)
+            df_sheet.columns = [c.strip() for c in df_sheet.columns]
+            # Drop empty trailing columns Google Sheets sometimes appends
+            df_sheet = df_sheet[[c for c in df_sheet.columns if not c.startswith("Unnamed")]]
+            frames.append(df_sheet)
+            log.info(f"  Wisconsin/{sheet}: {len(df_sheet)} rows")
+        except Exception as exc:
+            log.warning(f"  Wisconsin/{sheet}: failed ({exc})")
+
+    if not frames:
+        return _normalise(pd.DataFrame(), "Wisconsin")
+
+    df = pd.concat(frames, ignore_index=True)
+
+    # Deduplicate: keep first occurrence of each PK (Originals take priority)
+    if "PK" in df.columns:
+        df = df.drop_duplicates(subset=["PK"], keep="first")
+
+    df.rename(columns={
+        "Company":          "company",
+        "City":             "city",
+        "AffectedWorkers":  "employees_affected",
+        "NoticeRcvd":       "notice_date",
+        "NoticeType":       "closure_type",
+        "LayoffBeginDate":  "layoff_date",
+        "NAICSDescription": "notes",
+        "County":           "county_tmp",
+    }, inplace=True)
+
+    # Append county into notes
+    if "county_tmp" in df.columns:
+        df["notes"] = (df.get("notes", pd.Series("", index=df.index)).fillna("") + " | " +
+                       df["county_tmp"].fillna("")).str.strip(" |")
+        df.drop(columns=["county_tmp"], inplace=True)
+
+    log.info(f"  Wisconsin: {len(df)} total rows after dedup")
+    return _normalise(df, "Wisconsin")
+
+
 # ── Registry ──────────────────────────────────────────────────────────────────
 # To add a new state: implement scrape_<state>() above and add it here.
 
@@ -5168,6 +5270,8 @@ SCRAPERS: dict[str, callable] = {
     "Arizona":        scrape_arizona,
     "Illinois":       scrape_illinois,
     "Massachusetts":  scrape_massachusetts,
+    "West Virginia":  scrape_west_virginia,
+    "Wisconsin":      scrape_wisconsin,
 }
 
 
