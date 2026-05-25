@@ -11,6 +11,7 @@ Output:
     newsbatch_1.txt, newsbatch_2.txt, ... (each ready to paste directly into Claude)
 """
 
+import csv
 import json
 import time
 from pathlib import Path
@@ -98,6 +99,18 @@ def main():
     if not articles:
         print("❌  No articles found in docs/news_data.json.")
         return
+
+    # Filter out already-processed URLs
+    master_path = Path("data/daily_news/daily_news_extraction_master.csv")
+    done_urls = set()
+    if master_path.exists():
+        with open(master_path, encoding="utf-8", newline="") as f:
+            done_urls = {row["article_link"] for row in csv.DictReader(f)}
+        print(f"✓  {len(done_urls)} already-processed URLs loaded from master CSV")
+    articles = [a for a in articles if a.get("direct_link", "") not in done_urls]
+
+    # Sort newest articles first so newsbatch_1 always has the latest
+    articles.sort(key=lambda a: a.get("published_date", ""), reverse=True)
 
     total         = len(articles)
     total_batches = (total + BATCH_SIZE - 1) // BATCH_SIZE
