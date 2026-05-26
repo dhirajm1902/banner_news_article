@@ -1,202 +1,26 @@
-You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+Now let me search for the article content directly for articles that couldn't be fetched:Now I have enough information to compile the full table. Here is the extraction:
 
-🔍 Extract these fields
-• Store/Shop/Restaurant Name
-• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
-• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
-• Event Date
-  - For openings → Opening Date
-  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
-• Status
-  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
-  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
-  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
-• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+---
 
-📊 Output format
-Create ONE clean Markdown table with these exact column headers (in this order):
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+|---|---|---|---|---|---|---|---|
+| Pica's Restaurant (closing – Upper Darby location) | Upper Darby, PA (address not specified) | Closing | Not specified (last day was the Sunday prior to publication) | closed | After 70 years in Upper Darby, Pica's Restaurant has closed its longtime location as the business prepares to relocate to a smaller space in Broomall. The business's last day in Upper Darby was the Sunday before the article was published. The business announced on social media that it will share the opening date for the new location soon. | https://www.msn.com/en-us/news/us/iconic-pizzeria-moving-to-broomall-closing-longtime-restaurant-after-70-years/ar-AA23vxDU | 2026-05-24 05:33:32 |
+| Pica's Restaurant (opening – Broomall new location) | 1101 Sussex Blvd., Suite 10, Broomall, PA | Opening | Not specified | will announce the opening date soon | Pica's Restaurant is relocating to a multi-use business complex in Broomall at 1101 Sussex Blvd., Suite 10, where construction was noted as well-underway in February. The business said on social media that it will announce the opening date soon. The new Broomall location will be a smaller space than the former Upper Darby restaurant. | https://www.msn.com/en-us/news/us/iconic-pizzeria-moving-to-broomall-closing-longtime-restaurant-after-70-years/ar-AA23vxDU | 2026-05-24 05:33:32 |
+| Wahlburgers | Multiple locations (79 locations, addresses not specified) | Closing | Not specified (this year) | quietly closed 79 locations this year | Wahlburgers, the burger chain owned by Paul, Donnie, and Mark Wahlberg, has closed 79 locations this year, primarily due to the end of a franchise agreement with Hy-Vee stores. CEO Randy Sharpe clarified the closures, noting most were food court kiosks rather than full-service restaurants. Sharpe stated, "It's not about closing locations; it's about ensuring that every Wahlburgers represents what we stand for." | https://www.msn.com/en-us/foodanddrink/foodnews/beloved-burger-chain-quietly-closed-79-locations-this-year/ar-AA1ItB6n | 2026-05-24 05:02:24 |
+| Wendy's | Multiple U.S. locations (addresses not specified) | Closing | May 2026 (ongoing) | closing | Wendy's expects to trim roughly 5%–6% of its system — hundreds of restaurants — after prolonged bad sales at lower-volume stores. Most closures are tied to aging locations with weaker traffic and thinner margins, with franchise-heavy regions appearing most exposed. Connecticut has already seen at least one recent closure, and more are expected through late spring. | https://www.msn.com/en-us/money/companies/wendy-s-and-9-other-major-restaurants-that-are-closing-in-may/ar-AA23u40q | 2026-05-24 04:27:03 |
+| Pizza Hut | Multiple U.S. locations (addresses not specified) | Closing | May 2026 (ongoing) | closing 250 U.S. locations | Pizza Hut is closing 250 U.S. locations as part of broader restaurant industry closures in May 2026. Rising food costs, weaker traffic, and lease pressure are cited as contributing factors across the sector. Specific location details and exact closing dates are not provided in the article. | https://www.msn.com/en-us/money/companies/wendy-s-and-9-other-major-restaurants-that-are-closing-in-may/ar-AA23u40q | 2026-05-24 04:27:03 |
+| Papa John's | Multiple U.S. locations (addresses not specified) | Closing | 2026–2027 | plans to close 200 restaurants in 2026, with another 100 projected for 2027 | Papa John's announced plans to close 200 restaurants in 2026, with another 100 projected for 2027, pointing to weaker unit economics as the cause. This is part of broader restaurant chain closures covered in the article. Specific location details and exact closing dates are not provided. | https://www.msn.com/en-us/money/companies/wendy-s-and-9-other-major-restaurants-that-are-closing-in-may/ar-AA23u40q | 2026-05-24 04:27:03 |
+| Foot Locker | Multiple locations across 20 countries (addresses not specified) | Closing | 2026 | closing underperforming stores | Following Dick's Sporting Goods' completion of its approximately $2.4–2.5 billion acquisition of Foot Locker in September, Dick's announced plans to close underperforming Foot Locker stores in 2026 as part of a restructuring described as "cleaning out the garage." Dick's CEO Ed Stack said the company is clearing unproductive inventory and impairing some store assets, though the specific number and locations of stores to be closed were not disclosed. As of November 1, Foot Locker operated about 2,589 stores in 20 countries. | https://www.msn.com/en-us/money/companies/foot-locker-closing-stores-in-major-shakeup-clean-out-the-garage/ar-AA1R7XoS | 2026-05-24 03:31:52 |
+| Amigos Mexican Grill | Laurel, MD (address not specified) | Closing | Not specified (temporarily shut down the week before May 15, 2026) | temporarily shut down | Amigos Mexican Grill in Laurel had its use and occupancy permit temporarily suspended by the city's fire marshal and permit services after three people were shot and two stabbed at a Cinco de Mayo event held nearby. The restaurant was shut down the week before the article's publication date. No permanent closure date was mentioned. | https://www.msn.com/en-us/news/us/restaurant-closes-sportswear-retailer-opening-clothier-sets-down-roots-artists-sought-md-business-news/ar-AA23jmQy | 2026-05-24 02:39:17 |
+| J.Crew Factory | 2311-G Forest Dr., Annapolis, MD (Festival at Riva shopping center) | Opening | Thursday (prior to May 15, 2026) | grand opening | J.Crew Factory held a grand opening at 2311-G Forest Dr. in the Festival at Riva shopping center in Annapolis, occupying the space that previously housed Lane Bryant. The apparel and accessories store is now open. No zip code was mentioned in the article. | https://www.msn.com/en-us/news/us/restaurant-closes-sportswear-retailer-opening-clothier-sets-down-roots-artists-sought-md-business-news/ar-AA23jmQy | 2026-05-24 02:39:17 |
+| DTLR | Annapolis Mall, Annapolis, MD (address not specified) | Opening | Not specified | opened | A first-of-its-kind store concept from DTLR has opened at the Annapolis Mall, offering a reimagined sportswear shopper experience. The article describes it as a "New DTLR Era" bringing a reimagined experience to the mall. No specific address or opening date is provided beyond the mall location. | https://www.msn.com/en-us/news/us/restaurant-closes-sportswear-retailer-opening-clothier-sets-down-roots-artists-sought-md-business-news/ar-AA23jmQy | 2026-05-24 02:39:17 |
+| Grouse Gravity Coaster (Grouse Mountain) | Grouse Mountain Resort, North Vancouver, BC (address not specified) | Opening | Wednesday, May 23, 2026 | grand opening | Grouse Mountain welcomed the first riders on its new Grouse Gravity Coaster on Wednesday, May 23, 2026, a permanent attraction featuring a closed-loop 1,434-metre track with a 919-metre downhill descent and 91 metres of vertical drop. The ride reaches speeds of up to 45 km/h during an approximately five-minute experience and was approximately four years in planning and construction. | https://www.kelownanow.com/watercooler/news//news/Provincial/Thrilling_coaster_ride_now_open_at_Grouse_Mountain | 2026-05-24 00:30:00 |
+| Qdoba Mexican Eats | New York, New Jersey, and Pennsylvania (nearly 90 locations planned; specific addresses not specified) | Opening | Not specified (future, development agreements signed December 10, 2025) | plans to open nearly 90 restaurants | Qdoba Mexican Eats has signed development agreements with several franchise operators — including The Rose Group (35 locations in PA and South Jersey), Doherty Enterprises (27 in NJ and NY), Cafua Management (25 in Central/Upstate NY), and The Tattva Group (South Central PA) — totaling nearly 90 new restaurants across NY, NJ, and PA. The brand is targeting more than 100 new openings annually by 2027 with a goal of roughly doubling its U.S. footprint by 2032. No specific individual opening dates or addresses are provided. | https://www.msn.com/en-us/money/companies/qdoba-plans-to-open-nearly-90-restaurants-across-ny-nj-pa/ar-AA1S68O5 | 2026-05-23 23:33:10 |
 
-📌 Rules
-• Add one row per article in the order the articles are given
-• If an article contains multiple businesses, create a separate row for each
-• If an article includes both openings and closures, extract each separately
-• For Published Date → copy exactly the value from the "Published:" line in the article metadata
-• If an article has zero relevant business opening or closure information, still include a row with:
-  - Store Name: "No qualifying business found"
-  - Other columns: "N/A"
+---
 
-🚫 Strict constraints
-• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+**Non-working or unusable articles List:**
 
-📎 Final section (mandatory)
-At the very end of your response, add:
-Non-working or unusable articles List:
-• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
-If none, write: None
-
-✅ Articles below — extract now:
-
-
---- Article 181 ---
-URL: https://www.kidderminstershuttle.co.uk/news/26133359.geez-jerk-house-kidderminster-opening-date-revealed/
-Title: Opening date for new Caribbean restaurant in town revealed
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-23 11:00:00
-
-Geez Jerk House Kidderminster opening date revealed Business Kidderminster By 
-            Lauren Chaloner Senior reporter Share 0 Comments 3 Skip to next photo 1 / 1 Show caption 1 / 1 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
-        and has been written by our American colleagues.
-        It does not necessarily reflect the view of The Herald. The opening date for a brand-new Caribbean restaurant in the heart of town has been revealed. Geez Jerk House will be bringing an authentic taste of the Caribbean to Bridge Street in Kidderminster. Owner Gina Capecci, who started Gees Kitchen in 2023, said she wanted to bring something new to the town. The mum-of-one said: "We're really excited to open. We are a family female run business. We feel women need an environment where they feel welcome and safe. "I started the business in 2023 doing events and pop-ups. I took over a place in Dudley and we also used to have a premises in Old Hill. We'd been interested in opening somewhere in Kidderminster for a while, so when this space came up, it was such a relief to finally find the right place. "We do a lot of events in Stourport and Kidderminster, so we know the hype for Caribbean food is there." Owner Gina Capecci (Image: Supplied) The new restaurant will also be holding a meet and greet on Bank Holiday Monday (May 25) from 1pm to 6pm. This includes a free sample buffet between 2pm and 4pm, a bouncy castle in the beer garden, and free grape cooler or pineapple slush on arrival. The official grand opening will be on Thursday (May 28). On Friday (May 29), there will be music by DJ Chloe and on Saturday (May 30), there will be music by DJ Rizzy from 10pm to 3am. There will be 20 per cent off all dine-in meals on the grand opening weekend from Thursday (May 28) to Saturday (May 30) with bookings for opening weekend being taken by contacting Geez Jerk House. Customers can expect Caribbean themes night with a
-
---- Article 182 ---
-URL: https://www.the-sun.com/money/16401013/red-lobster-serves-final-dish-closes/
-Title: Final hours until Red Lobster spot serves last dish as it prepares to close for good
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-23 10:30:21
-
-Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Comment now HUNGRY Americans have just hours left to eat at a beloved Red Lobster location as it prepares to shut down once and for all. The seafood chain has experienced a turbulent few years following its 2024 bankruptcy and mass closure wave of 130 locations . Sign up for the Money newsletter Thank you! A beloved location is closing Credit: Getty Now, the chain has confirmed the permanent closure of a location in Tallahassee, Florida , on Sunday, May 24. Advertisement Customers have just hours from now to eat at the popular spot. The restaurant is Red Lobster ‘s longest continuously running location, having survived the bankruptcy two years ago. During its bankruptcy, Red Lobster closed 17 restaurants in Florida. READ MORE MONEY NEWS TWO IN ONE DAY Another Red Lobster to serve its last Cheddar Biscuit as location closes NAILED DOWN Olive Garden and Red Lobster say no to painted and false nails under safety law When Red Lobster was beginning to make its bankruptcy comeback with a new CEO and operational changes , the new General Manager of the Florida spot told customers that it wasn’t finished yet. At the time, the newly-appointed manager Nicholas Southerland told diners not to write it off, and that “Things have changed; give us a chance.” He continued: “Our community deserves a place to come and enjoy and be able to just spend time together. “I wanted to see a restaurant that is in the heart of the community back running. I wanted to help bring it back to life.” Most read in Money STORE OVERHAUL Dollar General breaks tradition and rolls out Costco policy at all locations UN-LUCKY PENNY Say goodbye forever to JCPenney as ‘dead mall’ store to permanently close CASH IN Krispy Kreme lovers can get $3,500 direct payment from $1.6million settlement ON THE GRILLE Olive Garden's upscale 'sister chain' restaurant permanently closes May 31 The Tallahassee restaurant launched a new menu am
-
---- Article 183 ---
-URL: https://www.travelandtourworld.com/news/article/1asmk7ym892g/
-Title: Beaches Turks & Caicos Unveils Lavish Treasure Beach Village Expansion in Caribbean: Everything You Need to Know
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-23 10:23:40
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/1asmk7ym892g/]
-
---- Article 184 ---
-URL: https://www.aol.com/articles/rogers-barbecue-restaurant-closing-just-153221000.html
-Title: Rogers barbecue restaurant closing just weeks after reporting multiple break-ins
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-23 10:02:56
-
-Kyler Swaim Fri, May 22, 2026 at 3:32 PM UTC 0 Related video: Rogers restaurant owner dealing with multiple break-ins ROGERS, Ark. (KNWA/KFTA) — A popular Rogers barbecue joint is closing its doors for good after just four years of operation. OZ Smokehouse owner Jordan Poole said in a recent social media post that the restaurant’s last day would be on Sunday, May 24. “We have enjoyed serving yall for nearly 4 years but unfortunately we need to pack it up,” Poole said in the post. “Please come out and see us before we are gone.” Harps Food Stores to accept NationsBenefits flex cards at all locations Advertisement The news comes just weeks after Poole told KNWA/FOX24 that his business was the victim of several break-ins. Poole said the suspect had stolen more than $1,000 worth of liquor and other items in those incidents. “Im sure many of you know the economy is brutal right especially for restaurants. Costs have sky rocketed and will continue to sky rocket,” Poole continued in the post. He concluded the post by calling on people to continue supporting small businesses and noting that there are many great ones in downtown Rogers. Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to KNWA FOX24.
-
---- Article 185 ---
-URL: https://www.dispatch.com/picture-gallery/news/local/2026/05/23/looking-back-big-bear-grocery-stores-columbus/90196875007/
-Title: Looking back at Big Bear stores in central Ohio
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-23 10:01:00
-
-LOCAL Looking back at Big Bear stores in central Ohio May 23, 2026, 6:01 a.m. ET The old silos still stand on the site of a new Big Bear Farms store at 4000 W. Powell Rd. The grand opening was on Saturday January 17, 1998. Lynn Ischay/Columbus Dispatch Mike Courts of Grandview posts the price of kiwi fruit at the new Big Bear store in Powell. Courts is an assistant produce manager at Big Bear store # 265 in Grove City. He was on the set up crew of the new Powell store on January 16, 1998. Lynn Itchy/Columbus Dispatch Gary Kopp, 60, 228 W. Main St. in Newark, hops on his bike to go home after getting groceries at the Big Bear store in downtown Newark on November 12, 2003. The sign was put up in 1940 when the store, #11 in the chain, opened. Jeff Hinckley/Columbus Dispatch Keeping their spirits up in spite of impending layoffs are Big Bear employees, from left, Michelle Tacey, Jim Dunlap, Stacey Eaton, Robin Williams, Vickie Garrett and Kelly Riddlebaugh, in front of the store at 1501 Dublin-Granville Road on January 28, 2004. Jeff Hinckley/Columbus Dispatch Logo from Big Bear shirt at store on January 30, 2004. Renee Sauer/Columbus Dispatch A Big Bear basket in 2004. Renee Sauer/Columbus Dispatch Carl Eckert, a German Village resident, has patronized the Big Bear in his neighborhood for the forty-two years he's lived there. He bought the model truck when the store offered them during their 50th anniversary celebration, and the poster behind him was hanging in the store for the holidays. Since Eckert knew they were closing, he asked if he could have it. Renee Sauer/Columbus Dispatch A worker retrieves shopping carts from the parking lot of a Big Bear at Town & Country Shopping Center in Whitehall on December 1, 2003. Fred Squillante/Columbus Dispatch Big Bear president, Steve Breech, stands at a display in the International food section of the new Big Bear store at Sawmill and 161 on April 9, 1996. Ken Chamberlain/Columbus Dispatch Jim Lehman has purchased the former 
-
---- Article 186 ---
-URL: https://www.msn.com/en-us/travel/news/death-by-a-thousand-cuts-riverside-ave-restaurant-plans-to-close-after-2-years/ar-AA1D5V2l?ocid=msedgdhp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: 'Death by a thousand cuts': Riverside Ave. restaurant plans to close after 2 years
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-23 10:00:01
-
-MSN
-
---- Article 187 ---
-URL: https://www.latimes.com/food/story/2026-05-23/michelin-chef-michael-cimarusti-on-connie-and-teds-closing
-Title: 'This is a reckoning': Michael Cimarusti on Connie & Ted's closure and the state of restaurants
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-23 10:00:00
-
-By Stephanie Breijo Staff Writer Follow May 23, 2026 3 AM PT 82 6 min Click here to listen to this article Share via Close extra sharing options Email Facebook X LinkedIn Threads Reddit WhatsApp Copy Link URL Copied! Print 0:00 0:00 1x This is read by an automated voice. Please report any issues or inconsistencies here . West Hollywood seafood favorite Connie & Ted’s will close July 1, ending a 13-year run as Michael Cimarusti’s casual, New England-style counterpoint to Michelin-starred Providence. Cimarusti along with his wife and partner Crisi Echiverri cite surging labor and seafood costs, post-pandemic sales drops and shifting habits as ‘middle restaurants’ — between fast-casual and tasting menu destinations — falter. Since the announcement, regulars are packing the dining room for one last lobster roll, order of fried clams and bowl of chowder before Connie & Ted’s bows out. In 2013, eight years after he opened Providence, which earned its third Michelin star last year,  chef Michael Cimarusti opened Connie & Ted’s with the idea of  offering Los Angeles an easy and more affordable way to taste of his cooking and seafood sourcing.    A taste of New England in West Hollywood, it quickly became known for  fried clams and chowders harkening to Cimarusti’s Rhode Island childhood and plump lobster rolls filled with never-frozen lobster. But on July 1, after years of highs, lows and financial setbacks, Connie & Ted’s will close. Like many other L.A. restaurateurs, Cimarusti alongside  his wife and business partner, Crisi Echiverri , cited inflation  and  the high cost of labor in West Hollywood, which is one of the highest in the country at $20.25 for non-hotel employees. But the biggest factor, Cimarusti said, was the dip in sales. The  pandemic, followed by the 2023 entertainment-industry strikes and the 2025 fires led to a prolonged loss of business. Advertisement “I wanted to be able to  re-create that food here in Los Angeles and do it the right way, without any 
-
---- Article 188 ---
-URL: https://www.the-sun.com/money/16400964/popular-fast-food-chain-better-than-raising-canes/
-Title: Popular fast-food chain 'better than Raising Cane's' to open new diner in days with chance to get YEAR of free chicken
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-23 09:36:06
-
-Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Comment now A POPULAR chain restaurant that claims to be the chicken finger pioneers will open its doors in days. And customers have the chance to win a huge prize – a whole year of free chicken. Sign up for the Money newsletter Thank you! One happy customer who ate at another location said the chicken was ‘better than Raising Cane’s’ Credit: Raising Canes Guthrie’s shiny new branch will be located on 3100 Western Blvd., Jacksonville, NC 28546 Credit: Alamy Advertisement Guthrie’s will open a new branch in New Jacksonville, North Carolina on May 27. The restaurant chain is known for its golden-fried chicken fingers. One happy customer who ate at another Guthrie’s said the chicken was “better than Raising Cane’s”. The new store is the seventh location of the chain in the Carolinas, as it continues to expand in the region. Read more in money FLOCKING IN Dairy Queen gets snapped up by booming chicken chain - May 25 date revealed RAISING HIGHER Booming chicken chain to open 9 locations - first wave starts May 4 Guthrie’s shiny new branch will be located on 3100 Western Blvd., Jacksonville, NC 28546. At the grand opening, the first 100 customers will be in with a chance of winning a year’s supply of chicken. 10 lucky winners will be plucked from the first 100 diners to buy an Original Box Combo. They will be awarded one free Original Box Combo per week for 52 weeks to keep them stocked for a year. Advertisement Most read in Money UN-LUCKY PENNY Say goodbye forever to JCPenney as ‘dead mall’ store to permanently close STORE OVERHAUL Dollar General breaks tradition and rolls out Costco policy at all locations CASH IN Krispy Kreme lovers can get $3,500 direct payment from $1.6million settlement ON THE GRILLE Olive Garden's upscale 'sister chain' restaurant permanently closes May 31 Customers will need to arrive early to secure their spot in line and a chance to win free chicken. The restaura
-
---- Article 189 ---
-URL: https://www.msn.com/en-us/travel/tripideas/nielsen-s-frozen-custard-to-celebrate-grand-opening-at-henderson-resort-casino/ar-AA23BTVk?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Nielsen’s Frozen Custard to celebrate grand opening at Henderson resort, casino
-Status hint: Opening | Industry: Hospitality
-Published: 2026-05-23 09:34:21
-
-MSN
-
---- Article 190 ---
-URL: https://www.aol.com/articles/publix-opens-avenir-tornado-destruction-153421000.html
-Title: Publix opens in Avenir after tornado destruction. What new store offers
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-23 09:22:56
-
-Julius Whigham II, Palm Beach Post Updated Fri, May 22, 2026 at 11:04 PM UTC 0 Nearly two years after a tornado destroyed a Publix supermarket on the verge of opening in Avenir, residents of the growing western Palm Beach Gardens community finally have a new store to call their own. Florida's signature grocer opened the new store on May 21 in the Avenir Town Center at 12535 Northlake Blvd., west of Florida's Turnpike. The first day saw customers peruse shopping aisles and enjoy samples as vehicles advertising the store's opening drove through surrounding neighborhoods. A giant motorized shopping cart caught the attention of the customers as it cruised through the parking lot. "We’re proud to welcome customers to their new Publix,” Lindsey Willis, Publix media relations manager, said in a statement. “Following last year’s weather event in the area, it’s especially meaningful to open our doors and continue being there for our customers with the service and quality products they know and love.” Customers enter the Publix supermarket store in the Avenir Town Center on Thursday, May 21, 2026. The store opened nearly two years after a tornado caused significant damage to a Publix store under construction at that location. The new store is one of the larger new Publix venues at 48,388 square feet and features traditional amenities such as a bakery, a deli, a pharmacy and a liquor store. It also features an upstairs seating area for customers. It joins several other newer stores across Palm Beach County. Advertisement Publix planned to open the Avenir store in the fall of 2024, but an EF3 tornado spawned by Hurricane Milton that October caused significant damage to the nearly completed structure, as well as to several nearby homes. Spanning nearly 4,800 acres, Avenir is a mixed-used development of residential homes, businesses, schools, parks and nature preserve areas in western Palm Beach Gardens. The new Publix will be one of two major grocery chains opening in the next f
-
---- Article 191 ---
-URL: https://www.msn.com/en-us/foodanddrink/foodnews/frank-pepe-s-to-open-new-westport-location-next-month/ar-AA23ve6Z
-Title: Frank Pepe's to open new Westport location next month
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-23 09:21:53
-
-MSN
-
---- Article 192 ---
-URL: https://www.tallahassee.com/story/entertainment/restaurants/2026/05/23/tallahassee-bar-growler-country-announces-opening-date-for-new-location/90214465007/
-Title: Tallahassee bar Growler Country announces opening date for new location
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-23 09:05:00
-
-RESTAURANTS Tallahassee bar Growler Country announces opening date for new location Kyla A Sanford Tallahassee Democrat May 23, 2026, 5:05 a.m. ET If you've been keeping up with our reports, then you know the town is buzzing with excitement over the food scene. From the opening of The Peach Cobbler Factory to Fazoli's, and now, an old favorite is reopening its doors. The popular bar and craft beer destination known as Growler Country is officially reopening in a new location on 8110 Killearn Plaza Lane on June 12. It sits in the former Pro Bank building, right next door to Redemption Hill Church and Little Lambs Children's Center. The owners, Mario Fernandez and his family shared the news in an email stating: "After years of hard work, many Facebook comments, & an infinite amount of red tape, we are ecstatic to announce the grand opening of Growler Country Tavern & Grill’s Northside location...We thank you for your patience, for your encouragement, & for telling us how you felt along the way." To celebrate, Growler Country will host VIP preview events before the grand opening for longtime fans, before opening to the public on Fridays, Saturdays and Sundays. Years in the works In 2021, the Fernandez family took over the Capital Circle Northeast location. After 10 years of operation, the family closed the spot prized for its game day watch parties, generous craft beer selection and a revered Cuban sandwich in their hub on 3305 Capital Circle N.E. while building out the northeast storefront. For the past two years, the owners of the popular Growler Country restaurant on Capital Circle have teased about the opening of the new space. Now the long-awaited debut is right around the corner. Here's a refresher on what you can expect on your visit. The top floor will feature one of Tallahassee’s favorite Cuban sandwiches, gourmet tacos, a great selection of craft beers and vintage sports antiques to make what is known as Growler Country. The den is filled with sports-themed m
-
---- Article 193 ---
-URL: https://www.tcpalm.com/story/entertainment/dining/2026/05/23/florida-shake-shack-opening-in-port-st-lucie-county-near-texas-roadhouse-fort-pierce-treasure-coast/90144676007/
-Title: Florida Shake Shack to open first Treasure Coast store
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-23 09:01:00
-
-DINING Florida Shake Shack to open first Treasure Coast store The first Shake Shack location on the Treasure Coast is planned for Port St. Lucie. Olivia Franklin Treasure Coast Newspapers May 23, 2026, 5:01 a.m. ET Shake Shack will open a new store in Port St. Lucie, according to plans it submitted to the city Feb. 11. The plans were approved March 30, which will make this the first Shake Shack on the Treasure Coast. There are currently 24 Shake Shake locations in Florida according to the company's website . The Shake Shack will be at 200 N.W. Peacock Blvd. , next to the Texas Roadhouse, according to the city's website. What is Shake Shack? Shake Shack is a chain that serves burgers, fries, frozen custard, hot dogs and more. It was started by Danny Meyer in 2001 in Madison Square Park in New York City as a single hot dog stand. What's on Shake Shack's menu? Burgers Chicken (sandwiches and bites) Lettuce wrap sandwiches Hot dogs Shakes Sides (fries, onion rings, mac & cheese) Olivia Franklin is TCPalm’s trending reporter. You can contact her at olivia.franklin@tcpalm.com , 317-627-8048 or follow her on X @Livvvvv_5 . Featured Weekly Ad
-
---- Article 194 ---
-URL: https://www.fayobserver.com/story/business/2026/05/23/lockdown-notice-posted-at-closed-fayetteville-nc-hooters/90214239007/
-Title: Fayetteville Hooters closed as landlord posts lockout notice
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-23 09:01:00
-
-BUSINESS Fayetteville Hooters closed as landlord posts lockout notice F.T. Norton Fayetteville Observer May 23, 2026, 5:01 a.m. ET The Hooters restaurant on North McPherson Church Road in Fayetteville appears to have closed, with a sign on the door stating the building had been “locked-down by the landlord.” The restaurant at 501 N. McPherson Church Road — which first opened there in 1994 — is listed on Google and Facebook as "permanently closed," and a notice posted at the property warns unauthorized entry could result in criminal prosecution. The closure comes amid the ongoing Chapter 11 bankruptcy proceedings involving Hooters of America LLC, which filed for bankruptcy protection in March 2025 as part of a company restructuring effort. It remains unclear whether the Fayetteville closure was directly related to the bankruptcy, a lease dispute, or another reason. The Fayetteville restaurant had operated in the city since 1994. Recently, the chain Twin Peaks — which features a similar sports bar concept featuring scantily clad waitstaff — opened just blocks from the Fayetteville Hooters location. No recent civil filings related to Hooters were readily identifiable in Cumberland County court records. In the wake of Hooters' bankruptcy, restaurants have shut down across the country — including in March when the last Hooters in New York City closed, prompting a New York Post headline reading, “Thanks for the mammaries.” In a recent interview with People magazine, Hooters CEO Neil Kiefer said the chain is trying to return to a more family-friendly image by toning down uniforms and moving away from bikini-night promotions. Kiefer said the company’s increasingly sexualized image in recent years “chased away a lot of customers.” Hooters corporate representatives did not respond to an email requesting information on the status of the Fayetteville restaurant. Featured Weekly Ad
-
---- Article 195 ---
-URL: https://www.cbc.ca/news/canada/new-brunswick/what-kids-need-moncton-store-9.7206073
-Title: After 15 years of temporary spaces, Moncton non-profit opens its own free clothing store
-Status hint: Opening | Industry: Apparel
-Published: 2026-05-23 09:00:00
-
-New Brunswick After 15 years of temporary spaces, Moncton non-profit opens its own free clothing store What Kids Need Moncton opened its own store in Riverview in May. What Kids Need Moncton store served more than 300 people in its first week Raechel Huizinga · CBC News · Posted: May 23, 2026 5:00 AM EDT | Last Updated: May 23 Play Listen to this article Estimated 5 minutes The audio version of this article is generated by AI-based technology. Mispronunciations can occur. We are working with our partners to continually review and improve the results. Amanda Pooley, founder of What Kids Need Moncton, opened the organization's first official space in May. (Raechel Huizinga/CBC) Social Sharing Amanda Pooley needed a shirt for her young son — a surprise child she had in her 40s — so she opened a bag that someone had donated to her not-for-profit and pulled one out. She recognized the shirt immediately; it had belonged to her older child at some point in the 15 years since she started What Kids Need Moncton. This wasn’t exactly surprising. Items often cycled in and out as children outgrew them and parents returned the clothes to Pooley's non-profit organization for the next kid. With a team of volunteers, she’d spent over a decade operating this gift economy, a system where items and services are exchanged freely between people out of storage spaces, garages and spare basements. Until now. The Sue Shop's clothes are displayed to resemble a traditional store setting — but they're all free, Pooley stressed. (Victoria Walton/CBC) Pooley opened The SUE Shop in May, a free clothing store for struggling families. Located in the basement of the old Gunningsville School in Riverview, the store is open to everyone — no cost, no questions asked, no proof of income required. Pooley named the store after her aunt Sue, who died just over a year ago. "She was a huge influence in my life, and she very strongly believed that stuff was not garbage," Pooley said. "If you were done with it
-
---- Article 196 ---
-URL: https://www.aol.com/news/long-beach-used-bookstore-brink-000300952.html
-Title: Long Beach used bookstore on brink of closure, finds a new location
-Status hint: Opening | Industry: Books / Toys / Gaming
-Published: 2026-05-23 08:40:39
-
-Sat, May 16, 2026 at 12:03 AM UTC 0 Advertisement Planet Books in Long Beach relocates, with volunteers helping out and dedicated customers happy to still find treasures among its vast collection.
-
---- Article 197 ---
-URL: https://www.business-standard.com/amp/content/press-releases-ani/celebrities-entrepreneurs-and-influencers-gather-for-the-grand-opening-of-mehman-prive-126052300607_1.html
-Title: Celebrities, Entrepreneurs, and Influencers Gather for the Grand Opening of Mehman Prive
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-23 08:30:14
-
-Celebrities, Entrepreneurs, and Influencers Gather for the Grand Opening of Mehman Prive 3 min read  Last Updated : May 23 2026 | 11:35 PM IST Add as Preferred source
-
---- Article 198 ---
-URL: https://www.msn.com/en-us/money/companies/chipotle-set-to-open-first-bellefonte-area-location/ar-AA22D65E?ocid=finance-verthp-feeds&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Chipotle set to open first Bellefonte area location
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-23 08:12:50
-
-MSN
-
---- Article 199 ---
-URL: https://www.turlockjournal.com/news/local/end-of-an-era-minervas-furniture-to-close-its-doors-after-43-years/
-Title: End of an era: Minerva’s Furniture to close its doors after 43 years
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-23 07:23:53
-
-Minerva’s Furniture, currently located at 331 6th St., is having a going out of business sale (KRISTINA HACKER/The Journal). What started out as a small business fixing and selling washers and dryers that turned into a furniture and appliance shop and eventually the Minerva’s Furniture that has been a Turlock fixture for decades is closing. That family-owned, small business success story will be making its final sales by the end of the month. “There’s a lot of history. Minerva’s is really sad to shut down. I kind of needed my dad’s blessing, but my father said to me, go right ahead. If you feel like you need to close down, you have my permission,” said Fabiola Sandoval-Sanchez, who owns the business with her husband Jorge Sanchez. The founders and current owners of Minerva’s Furniture, pictured left to right (standing) are Jorge Sanchez, Carlos Sandoval, Fabiola Sandoval-Sanchez and seated is Carmen Sandoval (Photo contributed). Carlos Sandoval Sr. and his wife Carmen Sandoval began Minerva’s in the mid-1980s after establishing a small 2,000 square foot store on 4th Street. The Sandovals interest in the furniture industry was precipitated by Sandoval Sr.’s experience fixing and selling washers and dryers at the flea market. Once customers began to request additional items like dressers and bedroom sets, Sandoval began to cultivate clientele and lay the foundation for his business. Eventually the family-owned store moved from its 4th Street location to open up shop at its first West Main Street location in the mid-1990s. However, a fire in the building forced the store to move to another West Main Street storefront before moving to Market Street in the former Youngdale’s building. A year ago, the furniture store moved to another iconic building on Sixth Street. Sandoval-Sanchez said that she and her family have been through a lot of the past few years — battling cancer and raising a young family — and it was just time to not be working seven days a week. Minerva’s ha
-
---- Article 200 ---
-URL: https://independent.ng/open-for-business-5-0-to-gather-africas-faith-driven-entrepreneurs-business-leaders-in-lagos/
-Title: Open for Business 5.0 to Gather Africa’s Faith-Driven Entrepreneurs, Business Leaders in Lagos
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-23 07:18:43
-
-Business News Open for Business 5.0 to Gather Africa’s Faith-Driven Entrepreneurs, Business Leaders in Lagos by Isaac Agber May 23, 2026 written by Isaac Agber May 23, 2026 Share 0 Facebook Twitter Pinterest Email 0 Hills Business Connections, the business and leadership outreach arm of The Ecclesia Hills Church, has announced the return of its flagship annual conference, Open for Business 5.0, with the 2026 edition themed “Crossing the Red Sea”. The two-day conference, scheduled to hold on May 30 and 31, 2026, in Lagos, is expected to bring together a diverse network of entrepreneurs, professionals, innovators, ministry leaders, corporate executives, and emerging change-makers from across Africa for discussions centred on leadership, enterprise, purpose, and societal transformation. According to the organisers, this year’s theme draws inspiration from the biblical account in Exodus 14 and reflects the realities of navigating uncertainty, overcoming challenges, and embracing transformational change despite difficult circumstances. They explained that the conference aims to encourage participants to pursue courageous leadership, renewed vision, and strategic action in their various fields of influence. Speaking on the significance of the theme, the organisers noted that “Crossing the Red Sea” symbolises moving beyond fear, stagnation, and limitations into a new season of impact, opportunity, and purpose-driven achievement. They added that the gathering would challenge participants to take bold steps in business, ministry, family life, leadership, and nation-building while equipping them with practical strategies for sustainable growth and influence. The conference programme will feature conversations and sessions focused on business and entrepreneurship, leadership and professional development, ministry and service, family and relationships, nation-building, transformational living, and personal growth. The first day of the conference will take place on Saturday, May
+- **Article 183** — The MSN URL was blocked by robots.txt; content was retrieved via an AOL/FinanceBuzz mirror. The article is a listicle covering 10 restaurant chains closing in May 2026 but only named Wendy's, Pizza Hut, and Papa John's with any meaningful detail. Other chains mentioned (up to 10 total) were not extractable from the available text snippets with sufficient detail to create separate rows per the strict constraints.
+- **Article 184** — The MSN URL was blocked by robots.txt; content was retrieved via multiple news mirrors. The article does not specify which individual Foot Locker store locations will close or provide any specific addresses or dates.
+- **Article 185** — The MSN URL returned a "URL too long" error; content was successfully retrieved via the Patch.com source article.
