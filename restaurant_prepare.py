@@ -13,6 +13,7 @@ Output:
 
 import json
 import time
+from datetime import datetime
 from pathlib import Path
 
 import requests
@@ -92,6 +93,23 @@ def main():
 
     raw = json.loads(rest_path.read_text(encoding="utf-8"))
     articles = raw.get("data", []) if isinstance(raw, dict) else raw
+
+    # Filter out already-processed URLs
+    done_path = Path("restaurant_extraction_latest.json")
+    done_urls = set()
+    if done_path.exists():
+        done_data = json.loads(done_path.read_text(encoding="utf-8"))
+        done_urls = {r.get("article_link", "") for r in done_data.get("data", [])}
+        done_urls |= {r.get("identifier", "") for r in done_data.get("non_working", [])}
+        print(f"✓  {len(done_urls)} already-processed URLs loaded from extraction JSON")
+    articles = [a for a in articles if a.get("url", "") not in done_urls]
+
+    # Sort newest articles first so batch_1 always has the latest
+    articles.sort(
+        key=lambda a: datetime.strptime(a["date"], "%B %d, %Y") if a.get("date") else datetime.min,
+        reverse=True,
+    )
+
     total = len(articles)
     total_batches = (total + BATCH_SIZE - 1) // BATCH_SIZE
 
