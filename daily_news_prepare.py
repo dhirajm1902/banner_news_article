@@ -18,7 +18,7 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-BATCH_SIZE = 20
+BATCH_SIZE = 50
 MAX_CHARS  = 2000
 
 EXTRACTION_PROMPT = """\
