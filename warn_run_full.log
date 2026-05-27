@@ -1,0 +1,326 @@
+INFO | warn_scraper | Scraping Alabama...
+INFO | warn_scraper |   Alabama: 25 rows
+INFO | warn_scraper |   Saved warn_output\warn_alabama_2026-05-24.csv
+INFO | warn_scraper | Scraping Alaska...
+INFO | warn_scraper |   Alaska: 66 rows
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:72: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(df["notice_date"], errors="coerce")
+INFO | warn_scraper |   Saved warn_output\warn_alaska_2026-05-24.csv
+INFO | warn_scraper | Scraping DC...
+INFO | warn_scraper |   DC: 45 rows
+INFO | warn_scraper |   Saved warn_output\warn_dc_2026-05-24.csv
+INFO | warn_scraper | Scraping Maryland...
+INFO | warn_scraper |   Maryland: 64 rows
+INFO | warn_scraper |   Saved warn_output\warn_maryland_2026-05-24.csv
+INFO | warn_scraper | Scraping Ohio...
+INFO | WDM | ====== WebDriver manager ======
+INFO | WDM | Get LATEST chromedriver version for google-chrome
+INFO | WDM | Get LATEST chromedriver version for google-chrome
+INFO | WDM | Driver [C:\Users\Lenovo\.wdm\drivers\chromedriver\win64\148.0.7778.178\chromedriver-win32/chromedriver.exe] found in cache
+INFO | warn_scraper |   Ohio [2025] loading https://jfs.ohio.gov/job-services-and-unemployment/job-services/job-programs-and-services/submit-a-warn-notice/2025-Public-Notice-of-Layoffs-and-Closures
+INFO | warn_scraper |   Ohio [2025] page 1: 89 total
+INFO | warn_scraper |   Ohio [2026] loading https://jfs.ohio.gov/job-services-and-unemployment/job-services/job-programs-and-services/submit-a-warn-notice/current-public-notices-of-layoffs-and-closures-sa
+INFO | warn_scraper |   Ohio [2026] page 1: 44 total
+INFO | warn_scraper |   Ohio: 133 rows
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:72: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(df["notice_date"], errors="coerce")
+INFO | warn_scraper |   Saved warn_output\warn_ohio_2026-05-24.csv
+INFO | warn_scraper | Scraping Oklahoma...
+INFO | warn_scraper |   Oklahoma page 1: 10 rows
+INFO | warn_scraper |   Oklahoma page 2: 10 rows
+INFO | warn_scraper |   Oklahoma page 3: 10 rows
+INFO | warn_scraper |   Oklahoma page 4: 10 rows
+INFO | warn_scraper |   Oklahoma page 5: 10 rows
+INFO | warn_scraper |   Oklahoma page 6: 10 rows
+INFO | warn_scraper |   Oklahoma page 7: 10 rows
+INFO | warn_scraper |   Oklahoma page 8: 10 rows
+INFO | warn_scraper |   Oklahoma page 9: 10 rows
+INFO | warn_scraper |   Oklahoma page 10: 10 rows
+INFO | warn_scraper |   Oklahoma page 11: 10 rows
+INFO | warn_scraper |   Oklahoma page 12: 10 rows
+INFO | warn_scraper |   Oklahoma page 13: 10 rows
+INFO | warn_scraper |   Oklahoma page 14: 10 rows
+INFO | warn_scraper |   Oklahoma page 15: 10 rows
+INFO | warn_scraper |   Oklahoma page 16: 10 rows
+INFO | warn_scraper |   Oklahoma page 17: 10 rows
+INFO | warn_scraper |   Oklahoma page 18: 10 rows
+INFO | warn_scraper |   Oklahoma page 19: 10 rows
+INFO | warn_scraper |   Oklahoma page 20: 10 rows
+INFO | warn_scraper |   Oklahoma page 21: 10 rows
+INFO | warn_scraper |   Oklahoma page 22: 5 rows
+INFO | warn_scraper |   Oklahoma: 215 rows
+INFO | warn_scraper |   Saved warn_output\warn_oklahoma_2026-05-24.csv
+INFO | warn_scraper | Scraping Oregon...
+INFO | warn_scraper |   Oregon: downloading https://ccwd.hecc.oregon.gov/Layoff/Reports/WARNList_034530.xlsx
+INFO | warn_scraper |   Oregon raw columns: ['Unnamed: 0', 'Worker Adjustment and Retraining Notification (WARN) List', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6']
+INFO | warn_scraper |   Oregon: 404 rows
+INFO | warn_scraper |   Saved warn_output\warn_oregon_2026-05-24.csv
+INFO | warn_scraper | Scraping Pennsylvania...
+INFO | WDM | ====== WebDriver manager ======
+INFO | WDM | Get LATEST chromedriver version for google-chrome
+INFO | WDM | Get LATEST chromedriver version for google-chrome
+INFO | WDM | Driver [C:\Users\Lenovo\.wdm\drivers\chromedriver\win64\148.0.7778.178\chromedriver-win32/chromedriver.exe] found in cache
+INFO | warn_scraper |   Pennsylvania [2025]: 110 month(s)
+INFO | warn_scraper |   Pennsylvania [2025]: 98 rows
+INFO | warn_scraper |   Pennsylvania [2026]: 39 month(s)
+INFO | warn_scraper |   Pennsylvania [2026]: 34 rows
+INFO | warn_scraper |   Pennsylvania: 132 rows total
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:72: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(df["notice_date"], errors="coerce")
+INFO | warn_scraper |   Saved warn_output\warn_pennsylvania_2026-05-24.csv
+INFO | warn_scraper | Scraping South Dakota...
+INFO | warn_scraper |   South Dakota: 78 rows
+INFO | warn_scraper |   Saved warn_output\warn_south_dakota_2026-05-24.csv
+INFO | warn_scraper | Scraping Tennessee...
+INFO | WDM | ====== WebDriver manager ======
+INFO | WDM | Get LATEST chromedriver version for google-chrome
+INFO | WDM | Get LATEST chromedriver version for google-chrome
+INFO | WDM | Driver [C:\Users\Lenovo\.wdm\drivers\chromedriver\win64\148.0.7778.178\chromedriver-win32/chromedriver.exe] found in cache
+INFO | warn_scraper |   Tennessee: 80 rows from 2 table(s)
+INFO | warn_scraper |   Saved warn_output\warn_tennessee_2026-05-24.csv
+INFO | warn_scraper | Scraping Texas (direct CSV download)...
+INFO | warn_scraper |   Texas raw columns: ['NOTICE_DATE', 'JOB_SITE_NAME', 'COUNTY_NAME', 'WDA_NAME', 'TOTAL_LAYOFF_NUMBER', 'LayOff_Date', 'WFDD_RECEIVED_DATE', 'CITY_NAME']
+INFO | warn_scraper |   Texas: 2352 rows
+INFO | warn_scraper |   Saved warn_output\warn_texas_2026-05-24.csv
+INFO | warn_scraper | Scraping Vermont...
+INFO | warn_scraper |   Vermont page 1: 25 rows | total: 25
+INFO | warn_scraper |   Vermont page 2: 25 rows | total: 48
+INFO | warn_scraper |   Vermont page 3: 25 rows | total: 72
+INFO | warn_scraper |   Vermont page 4: 22 rows | total: 94
+INFO | warn_scraper |   Vermont: 94 rows total
+INFO | warn_scraper |   Saved warn_output\warn_vermont_2026-05-24.csv
+INFO | warn_scraper | Scraping Virginia...
+INFO | warn_scraper |   Virginia: loading https://virginiaworks.gov/im-an-employer/retain-and-grow/warn-notices/
+INFO | warn_scraper |   Virginia page 1: 50 rows | new: 46 | total: 46
+INFO | warn_scraper |   Virginia page 2: 50 rows | new: 49 | total: 95
+INFO | warn_scraper |   Virginia page 3: 50 rows | new: 43 | total: 138
+INFO | warn_scraper |   Virginia page 4: 50 rows | new: 50 | total: 188
+INFO | warn_scraper |   Virginia page 5: 50 rows | new: 44 | total: 232
+INFO | warn_scraper |   Virginia page 6: 50 rows | new: 44 | total: 276
+INFO | warn_scraper |   Virginia page 7: 50 rows | new: 45 | total: 321
+INFO | warn_scraper |   Virginia page 8: 50 rows | new: 43 | total: 364
+INFO | warn_scraper |   Virginia page 9: 50 rows | new: 38 | total: 402
+INFO | warn_scraper |   Virginia page 10: 50 rows | new: 48 | total: 450
+INFO | warn_scraper |   Virginia page 11: 50 rows | new: 47 | total: 497
+INFO | warn_scraper |   Virginia page 12: 50 rows | new: 50 | total: 547
+INFO | warn_scraper |   Virginia page 13: 50 rows | new: 50 | total: 597
+INFO | warn_scraper |   Virginia page 14: 50 rows | new: 43 | total: 640
+INFO | warn_scraper |   Virginia page 15: 50 rows | new: 42 | total: 682
+INFO | warn_scraper |   Virginia page 16: 50 rows | new: 47 | total: 729
+INFO | warn_scraper |   Virginia page 17: 50 rows | new: 47 | total: 776
+INFO | warn_scraper |   Virginia page 18: 50 rows | new: 49 | total: 825
+INFO | warn_scraper |   Virginia page 19: 50 rows | new: 49 | total: 874
+INFO | warn_scraper |   Virginia page 20: 50 rows | new: 50 | total: 924
+INFO | warn_scraper |   Virginia page 21: 50 rows | new: 49 | total: 973
+INFO | warn_scraper |   Virginia page 22: 50 rows | new: 48 | total: 1021
+INFO | warn_scraper |   Virginia page 23: 5 rows | new: 5 | total: 1026
+INFO | warn_scraper |   Virginia: 1026 rows
+INFO | warn_scraper |   Saved warn_output\warn_virginia_2026-05-24.csv
+INFO | warn_scraper | Scraping Washington...
+INFO | warn_scraper |   Washington page 1
+INFO | warn_scraper |   Washington page 2
+INFO | warn_scraper |   Washington page 3
+INFO | warn_scraper |   Washington page 4
+INFO | warn_scraper |   Washington page 5
+INFO | warn_scraper |   Washington page 6
+INFO | warn_scraper |   Washington page 7
+INFO | warn_scraper |   Washington page 8
+INFO | warn_scraper |   Washington page 9
+INFO | warn_scraper |   Washington page 10
+INFO | warn_scraper |   No more pages after page 10.
+INFO | warn_scraper |   Washington: 170 rows
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:72: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(df["notice_date"], errors="coerce")
+INFO | warn_scraper |   Saved warn_output\warn_washington_2026-05-24.csv
+INFO | warn_scraper | Scraping California...
+INFO | warn_scraper |   California: downloading https://edd.ca.gov/siteassets/files/jobs_and_training/warn/warn_report1.xlsx
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\worksheet\_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+INFO | warn_scraper |   California: 1428 rows
+INFO | warn_scraper |   Saved warn_output\warn_california_2026-05-24.csv
+INFO | warn_scraper | Scraping Colorado...
+INFO | warn_scraper |   Colorado [View Real-Time 2026 Warns]: 21 rows
+INFO | warn_scraper |   Colorado [View 2025 WARN List]: 68 rows
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:2038: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(combined[dcol], errors="coerce")
+INFO | warn_scraper |   Colorado: 89 total rows
+INFO | warn_scraper |   Saved warn_output\warn_colorado_2026-05-24.csv
+INFO | warn_scraper |   Connecticut: fetching layoffdata.com Google Sheets XLSX
+INFO | warn_scraper |   Connecticut: 469 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_connecticut_2026-05-24.csv
+INFO | warn_scraper | Scraping Delaware...
+INFO | warn_scraper |   Delaware raw columns: ['Employer', 'City', 'ZIP', 'LWIB Area', 'Notice Date', 'WARN Type']
+INFO | warn_scraper |   Delaware: 3 rows
+INFO | warn_scraper |   Saved warn_output\warn_delaware_2026-05-24.csv
+INFO | warn_scraper | Scraping Florida...
+INFO | warn_scraper |   Florida raw columns: ['Warn Number', 'LWDB', 'Company Name', 'Address 1', 'Address 2', 'City', 'State', 'Zip', 'County', 'State Notification Date', 'Layoff Begin Date', 'Layoff End Date', 'Affected Employees', 'Industry']
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:2269: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(data[dcol], errors="coerce")
+INFO | warn_scraper |   Florida: 101 rows
+INFO | warn_scraper |   Saved warn_output\warn_florida_2026-05-24.csv
+INFO | warn_scraper | Scraping Georgia...
+INFO | WDM | ====== WebDriver manager ======
+INFO | WDM | Get LATEST chromedriver version for google-chrome
+INFO | WDM | Get LATEST chromedriver version for google-chrome
+INFO | WDM | Driver [C:\Users\Lenovo\.wdm\drivers\chromedriver\win64\148.0.7778.178\chromedriver-win32/chromedriver.exe] found in cache
+INFO | warn_scraper |   Georgia raw columns: ['GA WARN ID', 'Company Name', 'Submitted Date', 'Total Number of Affected Employees', 'source_entry_url']
+INFO | warn_scraper |   Georgia: 257 rows
+INFO | warn_scraper |   Saved warn_output\warn_georgia_2026-05-24.csv
+INFO | warn_scraper | Scraping Hawaii...
+INFO | warn_scraper |   Hawaii [2025]: 31 cumulative rows
+INFO | warn_scraper |   Hawaii [2026]: 43 cumulative rows
+INFO | warn_scraper |   Hawaii: 43 rows
+INFO | warn_scraper |   Saved warn_output\warn_hawaii_2026-05-24.csv
+INFO | warn_scraper | Scraping Idaho...
+INFO | warn_scraper |   Idaho: downloading https://www.labor.idaho.gov/wp-content/uploads/2026/04/Idaho-WARN-notices.pdf
+INFO | warn_scraper |   Idaho: 17 rows
+INFO | warn_scraper |   Saved warn_output\warn_idaho_2026-05-24.csv
+INFO | warn_scraper | Scraping Indiana...
+INFO | warn_scraper |   Indiana: 1211 rows
+INFO | warn_scraper |   Saved warn_output\warn_indiana_2026-05-24.csv
+INFO | warn_scraper | Scraping Iowa...
+INFO | warn_scraper |   Iowa: downloading https://workforce.iowa.gov/media/1190/download?inline
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:2900: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(data[dcol], errors="coerce")
+INFO | warn_scraper |   Iowa: 255 rows
+INFO | warn_scraper |   Saved warn_output\warn_iowa_2026-05-24.csv
+INFO | warn_scraper | Scraping Kansas...
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:2981: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(data[dcol], errors="coerce")
+INFO | warn_scraper |   Kansas: 910 rows
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:72: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(df["notice_date"], errors="coerce")
+INFO | warn_scraper |   Saved warn_output\warn_kansas_2026-05-24.csv
+INFO | warn_scraper | Scraping Kentucky...
+INFO | warn_scraper |   Kentucky: 1216 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_kentucky_2026-05-24.csv
+INFO | warn_scraper | Scraping Louisiana...
+INFO | warn_scraper |   Louisiana: 612 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_louisiana_2026-05-24.csv
+INFO | warn_scraper | Scraping Maine...
+INFO | warn_scraper |   Maine: 90 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_maine_2026-05-24.csv
+INFO | warn_scraper |   Michigan: starting Selenium scrape
+INFO | WDM | ====== WebDriver manager ======
+INFO | WDM | Get LATEST chromedriver version for google-chrome
+INFO | WDM | Get LATEST chromedriver version for google-chrome
+INFO | WDM | Driver [C:\Users\Lenovo\.wdm\drivers\chromedriver\win64\148.0.7778.178\chromedriver-win32/chromedriver.exe] found in cache
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:3384: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(df[dcol], errors="coerce")
+INFO | warn_scraper |   Michigan: 91 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_michigan_2026-05-24.csv
+INFO | warn_scraper |   Minnesota: fetching layoffdata.com/minnesota page
+INFO | warn_scraper |   Minnesota: 1338 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_minnesota_2026-05-24.csv
+INFO | warn_scraper |   Nevada: fetching WARN page
+INFO | warn_scraper |   Nevada: 11 rows from 2026 PDF
+INFO | warn_scraper |   Nevada: 51 rows from 2025 PDF
+INFO | warn_scraper |   Nevada: 62 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_nevada_2026-05-24.csv
+INFO | warn_scraper |   New Hampshire: fetching layoffdata.com page
+INFO | warn_scraper |   New Hampshire: 114 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_new_hampshire_2026-05-24.csv
+INFO | warn_scraper |   New Jersey: fetching WARN page
+INFO | warn_scraper |   New Jersey: 59 rows from 2026 PDF
+INFO | warn_scraper |   New Jersey: 114 rows from 2025 PDF
+INFO | warn_scraper |   New Jersey: 173 rows (pre-filter)
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:72: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(df["notice_date"], errors="coerce")
+INFO | warn_scraper |   Saved warn_output\warn_new_jersey_2026-05-24.csv
+INFO | warn_scraper |   New Mexico: fetching WARN page
+INFO | warn_scraper |   New Mexico: 1 rows from 2026 PDF
+INFO | warn_scraper |   New Mexico: 4 rows from 2025 PDF
+INFO | warn_scraper |   New Mexico: 5 rows (pre-filter)
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:72: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(df["notice_date"], errors="coerce")
+INFO | warn_scraper |   Saved warn_output\warn_new_mexico_2026-05-24.csv
+INFO | warn_scraper |   Mississippi: fetching layoffdata.com page
+INFO | warn_scraper |   Mississippi: 757 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_mississippi_2026-05-24.csv
+INFO | warn_scraper |   Missouri: fetching layoffdata.com page
+INFO | warn_scraper |   Missouri: 970 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_missouri_2026-05-24.csv
+INFO | warn_scraper |   Montana: fetching WARN page
+INFO | warn_scraper |   Montana: 44 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_montana_2026-05-24.csv
+INFO | warn_scraper |   Nebraska: fetching WARN page
+INFO | warn_scraper |   Nebraska: 42 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_nebraska_2026-05-24.csv
+INFO | warn_scraper |   New York: fetching Tableau Public CSV
+INFO | warn_scraper |   New York: 79 rows from Tableau CSV
+INFO | warn_scraper |   New York: fetching WARN notice listing page
+INFO | warn_scraper |   New York: found 68 individual notice links
+INFO | warn_scraper |   New York: 147 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_new_york_2026-05-24.csv
+INFO | warn_scraper |   North Carolina: fetching Tableau CSV
+INFO | warn_scraper |   North Carolina: 41 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_north_carolina_2026-05-24.csv
+INFO | warn_scraper |   North Dakota: fetching layoffdata.com page
+ERROR | warn_scraper |   North Dakota: XLSX download failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+INFO | warn_scraper |   Saved warn_output\warn_north_dakota_2026-05-24.csv
+INFO | warn_scraper |   Rhode Island: fetching layoffdata.com page
+INFO | warn_scraper |   Rhode Island: 125 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_rhode_island_2026-05-24.csv
+INFO | warn_scraper |   South Carolina: fetching WARN page
+INFO | warn_scraper |   South Carolina: 36 rows from 2025 PDF
+INFO | warn_scraper |   South Carolina: 36 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_south_carolina_2026-05-24.csv
+INFO | warn_scraper |   Utah: fetching WARN page
+INFO | warn_scraper |   Utah: 28 rows (pre-filter)
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:72: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  parsed = pd.to_datetime(df["notice_date"], errors="coerce")
+INFO | warn_scraper |   Saved warn_output\warn_utah_2026-05-24.csv
+INFO | warn_scraper |   Arizona: fetching WARN results
+INFO | warn_scraper |   Arizona: 80 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_arizona_2026-05-24.csv
+INFO | warn_scraper |   Illinois: fetching layoffdata.com Google Sheets XLSX
+INFO | warn_scraper |   Illinois: 1070 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_illinois_2026-05-24.csv
+INFO | warn_scraper |   Massachusetts: fetching layoffdata.com Google Sheets XLSX
+INFO | warn_scraper |   Massachusetts: 637 rows (pre-filter)
+INFO | warn_scraper |   Saved warn_output\warn_massachusetts_2026-05-24.csv
+INFO | warn_scraper | 
+Combined file saved \u2192 warn_output\warn_combined_2026-05-24.csv  (8151 total rows)
+C:\Users\Lenovo\Downloads\Banner_article_by_analyst (1)\Banner_article_by_analyst\warn.py:5245: FutureWarning: The behavior of Series.argsort in the presence of NA values is deprecated. In a future version, NA values will be ordered last instead of set to -1.
+  df_master = df_master.iloc[_sort_dt.argsort()[::-1].values]
+INFO | warn_scraper | Master file updated \u2192 warn_output\warn_master.csv  (6735 total rows)
+INFO | warn_scraper | Master file mirrored \u2192 master_file\warn_master.csv
+INFO | warn_scraper | warn_latest.json written: 8151 rows
+
+============================================================
+TOTAL ROWS: 8151
+STATES:     ['Alabama', 'Alaska', 'Arizona', 'California', 'Colorado', 'Connecticut', 'DC', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington']
+============================================================
+
+        state                                                           company                         city         notice_date           layoff_date employees_affected closure_type                   notes
+      Alabama                                                     LineQuest LLC                       Pelham          04/23/2026            08/01/2026                113      closure                        
+      Alabama                                            Serta Mattress Company                      Cullman          04/15/2026            04/17/2026                102      closure                        
+      Alabama                                    Legacy Supply Chain Operations                      Decatur          04/09/2026            06/06/2026                  6      closure                        
+      Alabama                                          Resolute Forest Products                       Alpine          03/31/2026            05/24/2026                 20      closure                        
+      Alabama                                          Resolute Forest Products                  Coosa Pines          03/31/2026            05/24/2026                255      closure                        
+      Alabama                                                     Louis Vuitton                   Birmingham          02/19/2026            02/17/2026                 10      closure                        
+      Alabama                                    Tiffin Motorhomes Incorporated                     Winfield          02/05/2026            05/12/2026                139      closure                        
+      Alabama                            Southern Parallel Forest Products Corp                  Albertville          02/12/2026            04/08/2026                 62      closure                        
+      Alabama                                                 Saks Fifth Avenue                   Birmingham          02/10/2026            04/11/2026                 44      closure                        
+      Alabama                                                 Salon Centric Inc                     Mc Calla          01/13/2026            06/30/2026                 79      closure                        
+      Alabama                                      Oerlikon Balzers Coating USA                    Pell City          10/30/2025            03/31/2026                  8      closure                        
+      Alabama                                                     Renfro Brands                   Fort Payne          10/28/2025            12/27/2025                455      closure                        
+      Alabama                                     Quest Diagnostics/Pack Health                   Birmingham          09/29/2025            11/28/2025                 98      closure                        
+      Alabama Magnolia Ridge Center/SunBridge Gardendale Health Care Center LLC                   Gardendale          09/15/2025            09/10/2025                103      closure                        
+      Alabama                            Russell Brands LLC Distribution Center               Alexander City          08/01/2025            09/29/2025                 80      closure                        
+          ...                                                               ...                          ...                 ...                   ...                ...          ...                     ...
+Massachusetts                                  Making Opportunities Count, Inc.                  Westminster 2025-02-28 00:00:00   2025-04-30 00:00:00                 10                              Central
+Massachusetts                                  Making Opportunities Count, Inc.                        Acton 2025-02-28 00:00:00   2025-04-30 00:00:00                 10                              Central
+Massachusetts                                 Kovalus Separation Solutions, LLC                       Boston 2025-02-25 00:00:00 04/30/2025-06/30/2025                100                               Boston
+Massachusetts                                              G2 Secure Staff, LLC                       Boston 2025-02-14 00:00:00   2025-04-16 00:00:00                528                               Boston
+Massachusetts                                                  Kennametal, Inc.                   Greenfield 2025-02-12 00:00:00   2025-04-15 00:00:00                 54                                 West
+Massachusetts                                          Thermo Fisher Scientific Cambridge, Plainville        2025-01-31 00:00:00   2025-03-30 00:00:00                300              Boston, Metro Southwest
+Massachusetts                           Connecticut Pie, LLC DBA Diana's Bakery                       Agawam 2025-01-30 00:00:00   2025-03-31 00:00:00                229                                 West
+Massachusetts                                                Immunity Bio. Inc.                   Burlington 2025-01-29 00:00:00   2025-03-25 00:00:00                  1                               Remote
+Massachusetts                                                       Pharma Cann                    Holliston 2025-01-29 00:00:00   2025-03-31 00:00:00                 19                            Southeast
+Massachusetts                                            The Newark Group, Inc.                    Fitchburg 2025-01-28 00:00:00 06/30/2025-07/15/2025                 71                                 West
+Massachusetts                                                  DHL Supply Chain                      Taunton 2025-01-28 00:00:00   2025-08-08 00:00:00                 52                            Southeast
+Massachusetts                                  Edaron, LLC ("Holyoke facility")                      Holyoke 2025-01-14 00:00:00   2025-06-30 00:00:00                 53                                 West
+Massachusetts                             Edaron, LLC ("South Hadley facility")                 South Hadley 2025-01-14 00:00:00   2025-03-31 00:00:00                 24                                 West
+Massachusetts                                             Nordstrom North Shore                      Peabody 2025-01-07 00:00:00   2025-03-08 00:00:00                134                            Northeast
+Massachusetts                                       Nordstrom South Shore Plaza                    Braintree 2025-01-07 00:00:00   2025-03-08 00:00:00                166                            Southeast

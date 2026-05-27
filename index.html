@@ -222,6 +222,21 @@
         .data-table thead th { background: rgba(15,20,40,0.9); color: #94a3b8; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; }
         .data-table tbody tr.warn-highlight { background: rgba(22,163,74,0.10); border-left: 3px solid #16a34a; }
         .data-table tbody tr.warn-highlight:hover { background: rgba(22,163,74,0.18); }
+        .warn-new-badge {
+            display: inline-flex; align-items: center; gap: 4px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            box-shadow: 0 2px 8px rgba(245,158,11,0.45);
+            color: #fff; font-size: 0.65rem; font-weight: 800;
+            padding: 2px 7px; border-radius: 999px; letter-spacing: 0.04em;
+            vertical-align: middle; white-space: nowrap;
+        }
+        .warn-new-section-row td {
+            background: rgba(245,158,11,0.08) !important;
+            border-top: 1px solid rgba(245,158,11,0.25) !important;
+            border-bottom: 1px solid rgba(245,158,11,0.25) !important;
+            padding: 7px 12px !important;
+        }
+        .warn-new-section-row:hover { background: none !important; }
 
         .analyst-section { scroll-margin-top: 90px; }
         .analyst-heading {
@@ -974,12 +989,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
-                    <div class="flex-1 relative">
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3 flex-wrap">
+                    <div class="flex-1 relative min-w-48">
                         <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
                         <input type="text" id="dailySearchInput" placeholder="Search by title…"
                             class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterDailyArticles,250)()">
                     </div>
+                    <select id="dailyStatusFilter" onchange="filterDailyArticles()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Status</option>
+                        <option value="Opening">Opening</option>
+                        <option value="Closing">Closing</option>
+                    </select>
+                    <select id="dailyIndustryFilter" onchange="filterDailyArticles()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Industries</option>
+                    </select>
                     <button onclick="downloadDailyCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
                         <i class="fas fa-download"></i><span>Download CSV</span>
                     </button>
@@ -1039,13 +1062,13 @@
                     <table class="w-full text-sm text-left data-table table-fixed">
                         <thead><tr>
                             <th class="px-3 py-3 w-12">#</th>
-                            <th class="px-3 py-3">Store / Business</th>
-                            <th class="px-3 py-3">Location</th>
-                            <th class="px-3 py-3 w-28">Event Type</th>
+                            <th class="px-3 py-3 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="sortDailyExtTable('store_name')">Store / Business <i id="sort-dailyext-store" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-3 py-3 cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyExtTable('location')">Location <i id="sort-dailyext-location" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-3 py-3 w-28 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="sortDailyExtTable('event_type')">Event Type <i id="sort-dailyext-type" class="fas fa-sort text-gray-600 ml-1"></i></th>
                             <th class="px-3 py-3 w-36">Event Date</th>
                             <th class="px-3 py-3 w-40">Status</th>
                             <th class="px-3 py-3">Description</th>
-                            <th class="px-3 py-3 w-32">Published Date</th>
+                            <th class="px-3 py-3 w-32 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="sortDailyExtTable('published_date')">Published Date <i id="sort-dailyext-date" class="fas fa-sort-down text-gray-400 ml-1"></i></th>
                             <th class="px-3 py-3 w-20">Link</th>
                         </tr></thead>
                         <tbody id="dailyExtTableBody"></tbody>
@@ -1308,7 +1331,9 @@
     let bizArticles = [], filteredBizArticles = [];
     let bizExtractionRows = [], filteredBizExtractionRows = [];
     let dailyNewsArticles = [], filteredDailyNewsArticles = [];
+    let dailySortCol = 'date', dailySortDir = 'desc';
     let dailyNewsExtractionRows = [], filteredDailyNewsExtractionRows = [];
+    let dailyExtSortCol = 'published_date', dailyExtSortDir = 'desc';
     let warnRows = [], filteredWarnRows = [];
     let warnSortCol = 'notice_date', warnSortDir = 'desc';
     let companyWebRows = [], filteredCompanyWebRows = [];
@@ -2469,6 +2494,7 @@
                 relevance_score: item.relevance_score != null ? item.relevance_score : ''
             }));
             filteredDailyNewsArticles = dailyNewsArticles;
+            populateDailyArticleFilters();
             updateDailyNewsStats(filteredDailyNewsArticles);
             renderDailyNewsArticles();
             updateNavTotal();
@@ -2487,16 +2513,69 @@
     }
 
     function filterDailyArticles() {
-        const term = document.getElementById('dailySearchInput').value.toLowerCase();
-        filteredDailyNewsArticles = dailyNewsArticles.filter(a => !term ||
-            (a.title||'').toLowerCase().includes(term) ||
-            (a.industry||'').toLowerCase().includes(term) ||
-            (a.source||'').toLowerCase().includes(term) ||
-            (a.status||'').toLowerCase().includes(term) ||
-            (a.region||'').toLowerCase().includes(term) ||
-            (a.keyword||'').toLowerCase().includes(term));
+        const term     = document.getElementById('dailySearchInput').value.toLowerCase();
+        const status   = document.getElementById('dailyStatusFilter').value;
+        const industry = document.getElementById('dailyIndustryFilter').value;
+        filteredDailyNewsArticles = dailyNewsArticles.filter(a => {
+            const ms = !term ||
+                (a.title||'').toLowerCase().includes(term) ||
+                (a.industry||'').toLowerCase().includes(term) ||
+                (a.source||'').toLowerCase().includes(term) ||
+                (a.status||'').toLowerCase().includes(term) ||
+                (a.region||'').toLowerCase().includes(term) ||
+                (a.keyword||'').toLowerCase().includes(term);
+            const ss = status   === 'all' || a.status   === status;
+            const is = industry === 'all' || a.industry === industry;
+            return ms && ss && is;
+        });
+        sortDailyData();
         updateDailyNewsStats(filteredDailyNewsArticles);
         renderDailyNewsArticles();
+    }
+
+    function populateDailyArticleFilters() {
+        const industries = [...new Set(dailyNewsArticles.map(a => a.industry).filter(Boolean))].sort();
+        const sel = document.getElementById('dailyIndustryFilter');
+        sel.innerHTML = '<option value="all">All Industries</option>' +
+            industries.map(i => `<option value="${escapeHtml(i)}">${escapeHtml(i)}</option>`).join('');
+    }
+
+    function sortDailyTable(col) {
+        dailySortDir = (dailySortCol === col && dailySortDir === 'asc') ? 'desc' : 'asc';
+        dailySortCol = col;
+        sortDailyData();
+        renderDailyNewsArticles();
+    }
+
+    function sortDailyData() {
+        filteredDailyNewsArticles.sort((a, b) => {
+            const va = (a[dailySortCol === 'date' ? 'date' : dailySortCol] || '').toLowerCase();
+            const vb = (b[dailySortCol === 'date' ? 'date' : dailySortCol] || '').toLowerCase();
+            return dailySortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+        });
+    }
+
+    function sortDailyExtTable(col) {
+        dailyExtSortDir = (dailyExtSortCol === col && dailyExtSortDir === 'asc') ? 'desc' : 'asc';
+        dailyExtSortCol = col;
+        ['store_name','location','event_type','published_date'].forEach(c => {
+            const idMap = { store_name:'sort-dailyext-store', location:'sort-dailyext-location', event_type:'sort-dailyext-type', published_date:'sort-dailyext-date' };
+            const el = document.getElementById(idMap[c]);
+            if (!el) return;
+            el.className = c === dailyExtSortCol
+                ? 'fas ' + (dailyExtSortDir === 'asc' ? 'fa-sort-up' : 'fa-sort-down') + ' text-gray-400 ml-1'
+                : 'fas fa-sort text-gray-600 ml-1';
+        });
+        sortDailyExtData();
+        renderDailyNewsExtractionTable();
+    }
+
+    function sortDailyExtData() {
+        filteredDailyNewsExtractionRows.sort((a, b) => {
+            const va = (a[dailyExtSortCol] || '').toLowerCase();
+            const vb = (b[dailyExtSortCol] || '').toLowerCase();
+            return dailyExtSortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+        });
     }
 
     function downloadDailyCSV() {
@@ -2545,16 +2624,21 @@
                 <td class="px-3 py-2 text-gray-300 text-xs text-center">${a.relevance_score !== '' ? escapeHtml(String(a.relevance_score)) : '—'}</td>
             </tr>`;
         }).join('');
+        const _di = (col, label) => {
+            const active = col === dailySortCol;
+            const icon = active ? (dailySortDir === 'asc' ? 'fa-sort-up text-gray-400' : 'fa-sort-down text-gray-400') : 'fa-sort text-gray-600';
+            return `<th class="px-3 py-3 whitespace-nowrap cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyTable('${col}')">${label} <i id="sort-daily-${col}" class="fas ${icon} ml-1"></i></th>`;
+        };
         container.innerHTML = `
             <table class="w-full text-sm text-left data-table">
                 <thead><tr>
                     <th class="px-3 py-3 w-8">#</th>
-                    <th class="px-3 py-3 whitespace-nowrap">Status</th>
-                    <th class="px-3 py-3 whitespace-nowrap">Industry</th>
+                    ${_di('status','Status')}
+                    ${_di('industry','Industry')}
                     <th class="px-3 py-3 whitespace-nowrap">Region</th>
-                    <th class="px-3 py-3">Title</th>
-                    <th class="px-3 py-3 whitespace-nowrap">Source</th>
-                    <th class="px-3 py-3 whitespace-nowrap">Published Date</th>
+                    ${_di('title','Title')}
+                    ${_di('source','Source')}
+                    ${_di('date','Published Date')}
                     <th class="px-3 py-3 whitespace-nowrap text-center">Link</th>
                     <th class="px-3 py-3 whitespace-nowrap">Keyword</th>
                     <th class="px-3 py-3 whitespace-nowrap text-center">Score</th>
@@ -2600,6 +2684,7 @@
             const ms = !term || ['store_name','location','short_description','status'].some(k => (r[k]||'').toLowerCase().includes(term));
             return ms && (type === 'all' || r.event_type === type);
         });
+        sortDailyExtData();
         updateDailyNewsExtStats(filteredDailyNewsExtractionRows);
         renderDailyNewsExtractionTable();
     }
@@ -2858,7 +2943,21 @@
             return warnSortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
         });
 
-        tbody.innerHTML = sorted.map((r, i) => {
+        // Determine "new" = notice_date is today or yesterday (browser local date)
+        const _today = new Date(); _today.setHours(0,0,0,0);
+        const _yesterday = new Date(_today); _yesterday.setDate(_today.getDate() - 1);
+        function _isNew(r) {
+            const nd = new Date(r.notice_date);
+            if (isNaN(nd.getTime())) return false;
+            nd.setHours(0,0,0,0);
+            return nd >= _yesterday;
+        }
+        const newCount = (warnSortCol === 'notice_date' && warnSortDir === 'desc')
+            ? sorted.filter(_isNew).length : 0;
+
+        let bannerInserted = false;
+        const rows = [];
+        sorted.forEach((r, i) => {
             const isClosure = (r.closure_type||'').toLowerCase().includes('clos');
             const typeBadge = isClosure
                 ? `<span class="badge-closing px-2 py-1 rounded-full text-xs font-bold text-white"><i class="fas fa-building-circle-xmark mr-1 text-xs"></i>Closure</span>`
@@ -2866,11 +2965,30 @@
                 ? `<span class="px-2 py-1 rounded-full text-xs bg-amber-900/40 text-amber-300 border border-amber-700/30">${escapeHtml(r.closure_type)}</span>`
                 : `<span class="text-gray-600 text-xs">—</span>`;
             const isTracked = WARN_HIGHLIGHT_COMPANIES.has((r.company||'').toLowerCase().trim());
-            return `
+            const isNew = _isNew(r);
+
+            // Insert the "NEW THIS RUN" banner before the first new row (only when default sort)
+            if (warnSortCol === 'notice_date' && warnSortDir === 'desc' && isNew && !bannerInserted) {
+                bannerInserted = true;
+                rows.push(`
+                <tr class="warn-new-section-row">
+                    <td colspan="9">
+                        <span style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:800;color:#f59e0b;letter-spacing:0.08em;">
+                            <span style="font-size:1rem;">✦</span>
+                            NEW THIS RUN — ${newCount} NOTICE${newCount !== 1 ? 'S' : ''}
+                            <span style="font-size:0.65rem;color:#9ca3af;font-weight:500;font-style:italic;">(today &amp; yesterday)</span>
+                        </span>
+                    </td>
+                </tr>`);
+            }
+
+            rows.push(`
             <tr class="${isTracked ? 'warn-highlight' : ''}">
                 <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
                 <td class="px-3 py-3 max-w-[180px]">
-                    <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.company||'')}">${highlight(r.company||'—', term)}</span>
+                    <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.company||'')}">
+                        ${isNew ? `<span class="warn-new-badge mr-1">✦ NEW</span>` : ''}${highlight(r.company||'—', term)}
+                    </span>
                 </td>
                 <td class="px-3 py-3 text-gray-400 text-xs">${highlight(r.city||'—', term)}</td>
                 <td class="px-3 py-3">
@@ -2883,8 +3001,9 @@
                 <td class="px-3 py-3 max-w-[200px]">
                     <span class="text-gray-500 text-xs line-clamp-2 block" title="${escapeHtml(r.notes||'')}">${highlight(r.notes||'—', term)}</span>
                 </td>
-            </tr>`;
-        }).join('');
+            </tr>`);
+        });
+        tbody.innerHTML = rows.join('');
 
         document.getElementById('warnRowCount').textContent = filteredWarnRows.length;
         _updateWarnSortIcons();

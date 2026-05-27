@@ -11,6 +11,7 @@ Output:
     newsbatch_1.txt, newsbatch_2.txt, ... (each ready to paste directly into Claude)
 """
 
+import csv
 import json
 import time
 from pathlib import Path
@@ -18,8 +19,14 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
+<<<<<<< HEAD
 BATCH_SIZE = 50
 MAX_CHARS  = 2000
+=======
+BATCH_SIZE       = 20
+MAX_CHARS        = 2000
+MAX_OUTPUT_KEEP  = 25   # discard shifted output files beyond this number
+>>>>>>> fe6578f2efae68b27f3edcec2fdd9740c8d41644
 
 EXTRACTION_PROMPT = """\
 You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
@@ -99,11 +106,53 @@ def main():
         print("❌  No articles found in docs/news_data.json.")
         return
 
+    # Load already-processed URLs from master CSV
+    master_path = Path("data/daily_news/daily_news_extraction_master.csv")
+    done_urls = set()
+    if master_path.exists():
+        with open(master_path, encoding="utf-8", newline="") as f:
+            done_urls = {row["article_link"] for row in csv.DictReader(f)}
+        print(f"✓  {len(done_urls)} already-processed URLs loaded from master CSV")
+
+    # Sort ALL articles newest first
+    articles.sort(key=lambda a: a.get("published_date", ""), reverse=True)
+
+    # Count new articles to determine how many batch slots to free at the top
+    new_articles  = [a for a in articles if a.get("direct_link", "") not in done_urls]
+    new_batch_count = (len(new_articles) + BATCH_SIZE - 1) // BATCH_SIZE if new_articles else 0
+    print(f"✓  {len(new_articles)} new article(s) -> {new_batch_count} new batch(es) at the top")
+
+    # Shift existing newsbatch output files up to make room for new batches
+    if new_batch_count > 0:
+        existing = sorted(
+            [p for p in Path(".").glob("newsbatch_*_output.md")
+             if p.stem.split("_")[1].isdigit()],
+            key=lambda p: int(p.stem.split("_")[1]),
+            reverse=True,
+        )
+        for p in existing:
+            n = int(p.stem.split("_")[1])
+            p.rename(p.parent / f"newsbatch_{n + new_batch_count}_output.md")
+        if existing:
+            print(f"  shifted {len(existing)} output file(s) up by {new_batch_count}")
+
+        # Discard any output files that exceed the rolling cap
+        discarded = 0
+        for p in Path(".").glob("newsbatch_*_output.md"):
+            parts = p.stem.split("_")
+            if len(parts) >= 2 and parts[1].isdigit() and int(parts[1]) > MAX_OUTPUT_KEEP:
+                p.unlink()
+                discarded += 1
+        if discarded:
+            print(f"  discarded {discarded} old output file(s) beyond limit of {MAX_OUTPUT_KEEP}")
+
+    # Only create batch files for new articles (old ones already have output files)
+    articles = new_articles
     total         = len(articles)
     total_batches = (total + BATCH_SIZE - 1) // BATCH_SIZE
 
     generated = raw.get("generated", "unknown")
-    print(f"✓  {total} articles  (generated: {generated})")
+    print(f"✓  {total} new articles  (generated: {generated})")
     print(f"✓  {total_batches} batch file(s) to create\n")
 
     batch_files = []
@@ -138,22 +187,34 @@ def main():
 
         content = EXTRACTION_PROMPT + "\n\n" + "\n\n".join(blocks)
         Path(filename).write_text(content, encoding="utf-8")
+
+        # Create blank placeholder output file so all slots are visible immediately
+        out_placeholder = filename.replace(".txt", "_output.md")
+        if not Path(out_placeholder).exists():
+            Path(out_placeholder).write_text("", encoding="utf-8")
+
         batch_files.append(filename)
-        print(f"  ✓ Saved → {filename}\n")
+        print(f"  ✓ Saved → {filename}  (blank {out_placeholder} created)\n")
 
     print("=" * 60)
     print("NEXT STEPS")
     print("=" * 60)
     for i, fname in enumerate(batch_files):
-        out_name = fname.replace(".txt", "_output.md")
+        out_name = fname.replace('.txt', '_output.md')
         flag = "" if i == 0 else " --append"
-        print(f"\n  Batch {i + 1}:")
-        print(f"    1. Open {fname} → Copy all text → Paste into Claude")
-        print(f"    2. Copy Claude's response → Save as {out_name}")
+        print(f"\n  Batch {i + 1}:  <- NEW - needs processing")
+        print(f"    1. Open {fname} -> Copy all text -> Paste into Claude")
+        print(f"    2. Copy Claude's response -> Save as {out_name}")
         print(f"    3. Run: python daily_news_save_output_cluade.py {out_name}{flag}")
+
+    if total_batches == 0:
+        print("\n  No new articles today - all batches already extracted.")
 
     print("\n  After all batches:")
     print("    git add daily_news_extraction_latest.json")
+    print("    git add data/daily_news/daily_news_extraction_master.csv")
+    print("    git add daily_news_prepare.py")
+    print("    git add batches/")
     print("    git commit -m \"chore: daily news extraction update\"")
     print("    git push")
     print("=" * 60)
