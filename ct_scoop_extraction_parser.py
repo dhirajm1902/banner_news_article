@@ -40,6 +40,7 @@ COLUMN_MAP = {
     "store/restaurant":                       "store_name",
     "store / restaurant":                     "store_name",
     "store name":                             "store_name",
+    "business name":                          "store_name",
     "location or full address with zip code": "location",
     "location or full address":               "location",
     "location":                               "location",
@@ -47,8 +48,11 @@ COLUMN_MAP = {
     "event date":                             "event_date",
     "status":                                 "status",
     "short description":                      "short_description",
+    "description":                            "short_description",
     "article link":                           "article_link",
     "article":                                "article_link",
+    "source link":                            "article_link",
+    "link":                                   "article_link",
 }
 
 

@@ -19,14 +19,9 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-<<<<<<< HEAD
-BATCH_SIZE = 50
-MAX_CHARS  = 2000
-=======
-BATCH_SIZE       = 20
+BATCH_SIZE       = 50
 MAX_CHARS        = 2000
 MAX_OUTPUT_KEEP  = 25   # discard shifted output files beyond this number
->>>>>>> fe6578f2efae68b27f3edcec2fdd9740c8d41644
 
 EXTRACTION_PROMPT = """\
 You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
