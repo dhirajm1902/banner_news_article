@@ -182,8 +182,14 @@ def main():
 
         content = EXTRACTION_PROMPT + "\n\n" + "\n\n".join(blocks)
         Path(filename).write_text(content, encoding="utf-8")
+
+        # Create blank placeholder output file so all slots are visible immediately
+        out_placeholder = filename.replace(".txt", "_output.md")
+        if not Path(out_placeholder).exists():
+            Path(out_placeholder).write_text("", encoding="utf-8")
+
         batch_files.append(filename)
-        print(f"  ✓ Saved → {filename}\n")
+        print(f"  ✓ Saved → {filename}  (blank {out_placeholder} created)\n")
 
     print("=" * 60)
     print("NEXT STEPS")
