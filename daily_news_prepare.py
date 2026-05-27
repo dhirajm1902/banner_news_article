@@ -19,8 +19,9 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-BATCH_SIZE = 20
-MAX_CHARS  = 2000
+BATCH_SIZE       = 20
+MAX_CHARS        = 2000
+MAX_OUTPUT_KEEP  = 25   # discard shifted output files beyond this number
 
 EXTRACTION_PROMPT = """\
 You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
@@ -130,6 +131,16 @@ def main():
         if existing:
             print(f"  shifted {len(existing)} output file(s) up by {new_batch_count}")
 
+        # Discard any output files that exceed the rolling cap
+        discarded = 0
+        for p in Path(".").glob("newsbatch_*_output.md"):
+            parts = p.stem.split("_")
+            if len(parts) >= 2 and parts[1].isdigit() and int(parts[1]) > MAX_OUTPUT_KEEP:
+                p.unlink()
+                discarded += 1
+        if discarded:
+            print(f"  discarded {discarded} old output file(s) beyond limit of {MAX_OUTPUT_KEEP}")
+
     # Only create batch files for new articles (old ones already have output files)
     articles = new_articles
     total         = len(articles)
@@ -178,7 +189,7 @@ def main():
     print("NEXT STEPS")
     print("=" * 60)
     for i, fname in enumerate(batch_files):
-        out_name = f"batches/{fname.replace('.txt', '_output.md')}"
+        out_name = fname.replace('.txt', '_output.md')
         flag = "" if i == 0 else " --append"
         print(f"\n  Batch {i + 1}:  <- NEW - needs processing")
         print(f"    1. Open {fname} -> Copy all text -> Paste into Claude")
