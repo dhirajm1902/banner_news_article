@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Store News Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Supabase Auth — hide page until session verified -->
+    <!-- Supabase Auth â€” hide page until session verified -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>document.documentElement.style.visibility = 'hidden';</script>
     <style>
@@ -75,7 +75,7 @@
         }
         .stats-card:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
 
-        /* ── UPDATED: Opening = green, Closing = red ── */
+        /* â”€â”€ UPDATED: Opening = green, Closing = red â”€â”€ */
         .badge-opening {
             background: linear-gradient(135deg, #16a34a, #15803d);
             box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
@@ -316,15 +316,15 @@
                 Retail Intelligence Tracker
             </h2>
             <p class="text-slate-400 text-base mb-5 max-w-xl mx-auto">
-                Real-time store openings &amp; closings across USA &amp; Canada — updated daily
+                Real-time store openings &amp; closings across USA &amp; Canada â€” updated daily
             </p>
             <div class="inline-flex items-center gap-2 px-4 py-2 glass rounded-xl text-sm">
                 <i class="fas fa-clock text-blue-400"></i>
                 <span class="text-gray-400">Last updated:</span>
-                <span id="updateDate" class="font-semibold text-blue-300">Loading…</span>
+                <span id="updateDate" class="font-semibold text-blue-300">Loadingâ€¦</span>
             </div>
             <div class="mt-3 text-xs text-gray-600 flex items-center justify-center gap-4">
-                <span><kbd class="kbd">1</kbd>–<kbd class="kbd">5</kbd> switch tabs</span>
+                <span><kbd class="kbd">1</kbd>â€“<kbd class="kbd">5</kbd> switch tabs</span>
                 <span><kbd class="kbd">R</kbd> refresh</span>
             </div>
         </div>
@@ -408,13 +408,13 @@
                 </div>
             </div>
 
-            <!-- Personal progress banner — filled by loadPersonalProgress() -->
+            <!-- Personal progress banner â€” filled by loadPersonalProgress() -->
             <div id="personalProgressCard" class="hidden mb-6 fade-in"></div>
 
             <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
                 <div class="flex-1 relative">
                     <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
-                    <input type="text" id="searchInput" placeholder="Search by store, analyst, or title…"
+                    <input type="text" id="searchInput" placeholder="Search by store, analyst, or titleâ€¦"
                         class="input-field w-full pl-11 pr-4 py-3 text-sm"
                         oninput="debounce(filterStoreArticles, 250)()">
                 </div>
@@ -493,7 +493,7 @@
                 <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3 flex-wrap">
                     <div class="flex-1 relative min-w-[180px]">
                         <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
-                        <input type="text" id="histSearchInput" placeholder="Search by store, analyst, or title…"
+                        <input type="text" id="histSearchInput" placeholder="Search by store, analyst, or titleâ€¦"
                             class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterHistoricalArticles,250)()">
                     </div>
                     <select id="histAnalystFilter" onchange="filterHistoricalArticles()" class="input-field px-4 py-3 text-sm">
@@ -520,7 +520,7 @@
                         <i class="fas fa-download"></i><span>Download CSV</span>
                     </button>
                 </div>
-                <div id="histLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading historical data…</p></div>
+                <div id="histLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading historical dataâ€¦</p></div>
                 <div id="histEmptyState" class="text-center py-20 hidden">
                     <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-inbox text-3xl text-gray-600"></i>
@@ -531,7 +531,7 @@
                 <div id="histTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
                     <table class="w-full text-sm text-left data-table">
                         <thead><tr>
-                            <th class="px-3 py-3 w-10 text-center">✓</th>
+                            <th class="px-3 py-3 w-10 text-center">âœ“</th>
                             <th class="px-3 py-3 w-10 text-center">#</th>
                             <th class="px-4 py-3 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="toggleHistSort()">
                                 Date <i id="histSortIcon" class="fas fa-sort-down text-indigo-400 ml-1"></i>
@@ -556,7 +556,7 @@
             <div id="storeManagementSubTab" class="hidden">
                 <div id="mgmtLoadingState" class="flex flex-col items-center justify-center py-20">
                     <i class="fas fa-spinner fa-spin text-4xl text-blue-400 mb-4"></i>
-                    <p class="text-gray-400">Loading management data…</p>
+                    <p class="text-gray-400">Loading management dataâ€¦</p>
                 </div>
                 <div id="mgmtContent" class="hidden">
                     <div id="mgmtStatsRow" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"></div>
@@ -648,7 +648,7 @@
                 <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
                     <div class="flex-1 relative">
                         <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
-                        <input type="text" id="scoopSearchInput" placeholder="Search by headline or town…"
+                        <input type="text" id="scoopSearchInput" placeholder="Search by headline or townâ€¦"
                             class="input-field w-full pl-11 pr-4 py-3 text-sm"
                             oninput="debounce(filterScoopArticles, 250)()">
                     </div>
@@ -691,7 +691,7 @@
                 <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
                     <div class="flex-1 relative">
                         <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
-                        <input type="text" id="extSearchInput" placeholder="Search by store, location, or description…"
+                        <input type="text" id="extSearchInput" placeholder="Search by store, location, or descriptionâ€¦"
                             class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterExtractionRows,250)()">
                     </div>
                     <select id="extTypeFilter" onchange="filterExtractionRows()" class="input-field px-4 py-3 text-sm">
@@ -703,7 +703,7 @@
                         <i class="fas fa-download"></i><span>Download CSV</span>
                     </button>
                 </div>
-                <div id="extLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading…</p></div>
+                <div id="extLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loadingâ€¦</p></div>
                 <div id="extEmptyState" class="text-center py-20 hidden">
                     <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-table text-3xl text-gray-600"></i></div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
@@ -725,7 +725,7 @@
                     </table>
                     <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
                         <span>Showing <span id="extRowCount" class="text-gray-300 font-semibold">0</span> records</span>
-                        <span>Updated: <span id="extLastUpdated" class="text-gray-300">—</span></span>
+                        <span>Updated: <span id="extLastUpdated" class="text-gray-300">â€”</span></span>
                     </div>
                 </div>
             </div>
@@ -768,14 +768,14 @@
                 <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
                     <div class="flex-1 relative">
                         <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
-                        <input type="text" id="restSearchInput" placeholder="Search by title, address, or date…"
+                        <input type="text" id="restSearchInput" placeholder="Search by title, address, or dateâ€¦"
                             class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterRestArticles,250)()">
                     </div>
                     <button onclick="downloadRestCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
                         <i class="fas fa-download"></i><span>Download CSV</span>
                     </button>
                 </div>
-                <div id="restLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading…</p></div>
+                <div id="restLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loadingâ€¦</p></div>
                 <div id="restEmptyState" class="text-center py-20 hidden">
                     <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-utensils text-3xl text-gray-600"></i></div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-300">No restaurant news found</h3>
@@ -821,7 +821,7 @@
                 <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
                     <div class="flex-1 relative">
                         <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
-                        <input type="text" id="restExtSearchInput" placeholder="Search by restaurant, location, or description…"
+                        <input type="text" id="restExtSearchInput" placeholder="Search by restaurant, location, or descriptionâ€¦"
                             class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterRestExtractionRows,250)()">
                     </div>
                     <select id="restExtTypeFilter" onchange="filterRestExtractionRows()" class="input-field px-4 py-3 text-sm">
@@ -833,7 +833,7 @@
                         <i class="fas fa-download"></i><span>Download CSV</span>
                     </button>
                 </div>
-                <div id="restExtLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading…</p></div>
+                <div id="restExtLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loadingâ€¦</p></div>
                 <div id="restExtEmptyState" class="text-center py-20 hidden">
                     <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-table text-3xl text-gray-600"></i></div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
@@ -856,7 +856,7 @@
                     </table>
                     <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
                         <span>Showing <span id="restExtRowCount" class="text-gray-300 font-semibold">0</span> records</span>
-                        <span>Updated: <span id="restExtLastUpdated" class="text-gray-300">—</span></span>
+                        <span>Updated: <span id="restExtLastUpdated" class="text-gray-300">â€”</span></span>
                     </div>
                 </div>
             </div>
@@ -887,7 +887,7 @@
                 <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
                     <div class="flex-1 relative">
                         <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
-                        <input type="text" id="bizSearchInput" placeholder="Search by title…"
+                        <input type="text" id="bizSearchInput" placeholder="Search by titleâ€¦"
                             class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterBizArticles,250)()">
                     </div>
                     <button onclick="downloadBizCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
@@ -927,7 +927,7 @@
                 <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
                     <div class="flex-1 relative">
                         <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
-                        <input type="text" id="bizExtSearchInput" placeholder="Search by store, location, or description…"
+                        <input type="text" id="bizExtSearchInput" placeholder="Search by store, location, or descriptionâ€¦"
                             class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterBizExtractionRows,250)()">
                     </div>
                     <select id="bizExtTypeFilter" onchange="filterBizExtractionRows()" class="input-field px-4 py-3 text-sm">
@@ -939,7 +939,7 @@
                         <i class="fas fa-download"></i><span>Download CSV</span>
                     </button>
                 </div>
-                <div id="bizExtLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading…</p></div>
+                <div id="bizExtLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loadingâ€¦</p></div>
                 <div id="bizExtEmptyState" class="text-center py-20 hidden">
                     <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-table text-3xl text-gray-600"></i></div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
@@ -961,7 +961,7 @@
                     </table>
                     <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
                         <span>Showing <span id="bizExtRowCount" class="text-gray-300 font-semibold">0</span> records</span>
-                        <span>Updated: <span id="bizExtLastUpdated" class="text-gray-300">—</span></span>
+                        <span>Updated: <span id="bizExtLastUpdated" class="text-gray-300">â€”</span></span>
                     </div>
                 </div>
             </div>
@@ -992,7 +992,7 @@
                 <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3 flex-wrap">
                     <div class="flex-1 relative min-w-48">
                         <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
-                        <input type="text" id="dailySearchInput" placeholder="Search by title…"
+                        <input type="text" id="dailySearchInput" placeholder="Search by titleâ€¦"
                             class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterDailyArticles,250)()">
                     </div>
                     <select id="dailyStatusFilter" onchange="filterDailyArticles()" class="input-field px-4 py-3 text-sm">
@@ -1040,7 +1040,7 @@
                 <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
                     <div class="flex-1 relative">
                         <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
-                        <input type="text" id="dailyExtSearchInput" placeholder="Search by store, location, or description…"
+                        <input type="text" id="dailyExtSearchInput" placeholder="Search by store, location, or descriptionâ€¦"
                             class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterDailyExtractionRows,250)()">
                     </div>
                     <select id="dailyExtTypeFilter" onchange="filterDailyExtractionRows()" class="input-field px-4 py-3 text-sm">
@@ -1052,7 +1052,7 @@
                         <i class="fas fa-download"></i><span>Download CSV</span>
                     </button>
                 </div>
-                <div id="dailyExtLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading…</p></div>
+                <div id="dailyExtLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loadingâ€¦</p></div>
                 <div id="dailyExtEmptyState" class="text-center py-20 hidden">
                     <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-table text-3xl text-gray-600"></i></div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
@@ -1075,7 +1075,7 @@
                     </table>
                     <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
                         <span>Showing <span id="dailyExtRowCount" class="text-gray-300 font-semibold">0</span> records</span>
-                        <span>Updated: <span id="dailyExtLastUpdated" class="text-gray-300">—</span></span>
+                        <span>Updated: <span id="dailyExtLastUpdated" class="text-gray-300">â€”</span></span>
                     </div>
                 </div>
             </div>
@@ -1114,7 +1114,7 @@
             <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
                 <div class="flex-1 relative">
                     <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
-                    <input type="text" id="warnSearchInput" placeholder="Search by company, city, or notes…"
+                    <input type="text" id="warnSearchInput" placeholder="Search by company, city, or notesâ€¦"
                         class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterWarnRows,250)()">
                 </div>
                 <select id="warnStateFilter" onchange="filterWarnRows()" class="input-field px-4 py-3 text-sm">
@@ -1133,7 +1133,7 @@
             <!-- Loading / empty / table states -->
             <div id="warnLoadingState" class="text-center py-20 hidden">
                 <div class="loading-spinner mx-auto mb-4"></div>
-                <p class="text-gray-400 text-sm">Loading WARN notices…</p>
+                <p class="text-gray-400 text-sm">Loading WARN noticesâ€¦</p>
             </div>
             <div id="warnEmptyState" class="text-center py-20 hidden">
                 <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
@@ -1159,7 +1159,7 @@
                 </table>
                 <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
                     <span>Showing <span id="warnRowCount" class="text-gray-300 font-semibold">0</span> notices</span>
-                    <span>Updated: <span id="warnLastUpdated" class="text-gray-300">—</span></span>
+                    <span>Updated: <span id="warnLastUpdated" class="text-gray-300">â€”</span></span>
                 </div>
             </div>
 
@@ -1220,7 +1220,7 @@
             <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
                 <div class="flex-1 relative">
                     <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
-                    <input type="text" id="companyWebSearchInput" placeholder="Search by store name, address…"
+                    <input type="text" id="companyWebSearchInput" placeholder="Search by store name, addressâ€¦"
                         class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterCompanyWebRows,250)()">
                 </div>
                 <select id="companyWebCompanyFilter" onchange="filterCompanyWebRows()" class="input-field px-4 py-3 text-sm">
@@ -1233,7 +1233,7 @@
                 </select>
                 <select id="companyWebNewFilter" onchange="filterCompanyWebRows()" class="input-field px-4 py-3 text-sm">
                     <option value="all">All Entries</option>
-                    <option value="new">New Only ✨</option>
+                    <option value="new">New Only âœ¨</option>
                     <option value="existing">Existing Only</option>
                 </select>
                 <button onclick="downloadCompanyWebCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
@@ -1244,7 +1244,7 @@
             <!-- Loading / empty / table -->
             <div id="companyWebLoadingState" class="text-center py-20 hidden">
                 <div class="loading-spinner mx-auto mb-4"></div>
-                <p class="text-gray-400 text-sm">Loading company openings…</p>
+                <p class="text-gray-400 text-sm">Loading company openingsâ€¦</p>
             </div>
             <div id="companyWebEmptyState" class="text-center py-20 hidden">
                 <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
@@ -1269,7 +1269,7 @@
                 </table>
                 <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
                     <span>Showing <span id="companyWebRowCount" class="text-gray-300 font-semibold">0</span> locations</span>
-                    <span>Updated: <span id="companyWebLastUpdated" class="text-gray-300">—</span></span>
+                    <span>Updated: <span id="companyWebLastUpdated" class="text-gray-300">â€”</span></span>
                 </div>
             </div>
 
@@ -1279,7 +1279,7 @@
 
     <footer class="relative z-10 mt-16 py-8 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-gray-500 text-sm">Built for my analysts • Data from Google News RSS</p>
+            <p class="text-gray-500 text-sm">Built for my analysts â€¢ Data from Google News RSS</p>
             <p class="text-gray-600 text-xs mt-1"><i class="fas fa-code mr-1"></i>Powered by GitHub Actions &amp; Pages</p>
         </div>
     </footer>
@@ -1307,16 +1307,16 @@
         document.head.appendChild(style);
     })();
 
-    const STORE_JSON_URL       = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/latest_news.json';
-    const SCOOP_JSON_URL       = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/ct_scoop_latest.json';
-    const REST_JSON_URL        = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_latest.json';
-    const SCOOP_EXTRACTION_URL = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/ct_scoop_extraction_latest.json';
-    const REST_EXTRACTION_URL  = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_extraction_latest.json';
-    const BIZ_JSON_URL           = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_latest.json';
-    const BIZ_EXTRACTION_URL     = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_extraction_latest.json';
+    const STORE_JSON_URL       = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/latest_news.json';
+    const SCOOP_JSON_URL       = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/ct_scoop_latest.json';
+    const REST_JSON_URL        = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/restaurant_latest.json';
+    const SCOOP_EXTRACTION_URL = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/ct_scoop_extraction_latest.json';
+    const REST_EXTRACTION_URL  = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/restaurant_extraction_latest.json';
+    const BIZ_JSON_URL           = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/businessdebut_latest.json';
+    const BIZ_EXTRACTION_URL     = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/businessdebut_extraction_latest.json';
     const DAILY_NEWS_JSON_URL    = 'docs/news_data.json';
-    const DAILY_NEWS_EXT_URL     = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/daily_news_extraction_latest.json';
-    const WARN_JSON_URL          = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/warn_latest.json';
+    const DAILY_NEWS_EXT_URL     = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/daily_news_extraction_latest.json';
+    const WARN_JSON_URL          = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/warn_latest.json';
     const COMPANY_WEB_JSON_URL   = 'docs/company_website_master.json';
 
     let storeArticles = [], filteredStoreArticles = [];
@@ -1345,12 +1345,12 @@
     const TODAY = new Date().toISOString().split('T')[0];
     const YESTERDAY = new Date(Date.now() - 86400000).toISOString().split('T')[0];
 
-    // ── Smart "New" tracking ──────────────────────────────────────────────────
+    // â”€â”€ Smart "New" tracking â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     // PREV_VISIT_DATE: what the user saw on their last session
     const PREV_VISIT_DATE = localStorage.getItem('lastVisitDate') || '1970-01-01';
     // Record today so next session knows what was already seen
     if (PREV_VISIT_DATE !== TODAY) localStorage.setItem('lastVisitDate', TODAY);
-    // Per-article seen set (URL/key → dismissed)
+    // Per-article seen set (URL/key â†’ dismissed)
     const seenSet = new Set(JSON.parse(localStorage.getItem('seenArticles') || '[]'));
 
     function markArticleSeen(key, event) {
@@ -1409,9 +1409,9 @@
         const markAllBtn = document.getElementById('markAllReadBtn');
         if (markAllBtn) markAllBtn.classList.toggle('hidden', totalNew === 0);
     }
-    // ─────────────────────────────────────────────────────────────────────────
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
-    /* ── green checkmark style constants ── */
+    /* â”€â”€ green checkmark style constants â”€â”€ */
     const DONE_STYLE   = 'background:linear-gradient(135deg,#16a34a,#15803d);box-shadow:0 4px 12px rgba(22,163,74,0.45);border:none;';
     const UNDONE_STYLE = 'background:rgba(30,41,59,0.9);border:1.5px solid rgba(255,255,255,0.1);';
 
@@ -1513,7 +1513,7 @@
         badge.classList.toggle('inline-flex', total > 0);
     }
 
-    // ══ STORE NEWS ══
+    // â•â• STORE NEWS â•â•
     async function loadDoneKeys() {
         try {
             const { data } = await _sb.from('article_marks').select('article_key').eq('is_done', true);
@@ -1593,7 +1593,7 @@
         showToast('Store News CSV downloaded!');
     }
 
-    // ── STORE SUB-TAB SWITCH ──────────────────────────────────────────────────
+    // â”€â”€ STORE SUB-TAB SWITCH â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     function switchStoreSubTab(subTab) {
         activeStoreSubTab = subTab;
         const isArticles   = subTab === 'articles';
@@ -1610,7 +1610,7 @@
         if (!isMgmt && _mgmtRefreshInterval) { clearInterval(_mgmtRefreshInterval); _mgmtRefreshInterval = null; }
     }
 
-    // ── HISTORICAL DATA ───────────────────────────────────────────────────────
+    // â”€â”€ HISTORICAL DATA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     function parseSimpleCSV(text) {
         const lines = text.trim().split('\n');
         const headers = lines[0].split(',').map(h => h.replace(/^"|"$/g, '').trim());
@@ -1835,7 +1835,7 @@
     function createStoreArticleCard(article, term = '') {
         const isOpening = article.Type === 'Opening';
         const summary = article.Summary || 'No summary available';
-        const trunc = summary.length > 180 ? summary.substring(0, 180) + '…' : summary;
+        const trunc = summary.length > 180 ? summary.substring(0, 180) + 'â€¦' : summary;
 
         let pubDate = article.Published || 'Date not available';
         try {
@@ -1851,7 +1851,7 @@
         const accentClass = isOpening ? 'card-accent-green' : 'card-accent-orange';
         const newGlowClass = articleIsNew ? ' card-new-glow' : '';
 
-        /* ── UPDATED: green style when done, grey border when undone ── */
+        /* â”€â”€ UPDATED: green style when done, grey border when undone â”€â”€ */
         const btnStyle = isDone ? DONE_STYLE : UNDONE_STYLE;
         const iconOpacity = isDone ? 'opacity-100' : 'opacity-0';
 
@@ -1862,7 +1862,7 @@
                     <div class="w-8 h-8 rounded-lg cursor-pointer flex items-center justify-center transition-all shadow-sm"
                         style="${btnStyle}"
                         onclick="toggleDoneStatus('${escapeHtml(articleKey)}', this)"
-                        title="${isDone ? 'Marked as done — click to undo' : 'Mark as done'}">
+                        title="${isDone ? 'Marked as done â€” click to undo' : 'Mark as done'}">
                         <i class="fas fa-check text-white text-xs ${iconOpacity} transition-opacity duration-200"></i>
                     </div>
                 </div>
@@ -1886,7 +1886,7 @@
             </div>`;
     }
 
-    /* ── toggleDoneStatus — synced to Supabase so all users share state ── */
+    /* â”€â”€ toggleDoneStatus â€” synced to Supabase so all users share state â”€â”€ */
     async function toggleDoneStatus(key, el) {
         const isDone = doneKeys.has(key);
         if (isDone) {
@@ -1903,16 +1903,16 @@
                 doneKeys.add(key);
                 el.style.cssText = DONE_STYLE;
                 el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-100 transition-opacity duration-200';
-                el.title = 'Marked as done — click to undo';
+                el.title = 'Marked as done â€” click to undo';
                 renderHistoricalTable();
-                showToast('Failed to save — try again', 'error');
+                showToast('Failed to save â€” try again', 'error');
             }
         } else {
             // optimistic update
             doneKeys.add(key);
             el.style.cssText = DONE_STYLE;
             el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-100 transition-opacity duration-200';
-            el.title = 'Marked as done — click to undo';
+            el.title = 'Marked as done â€” click to undo';
             renderHistoricalTable();
             try {
                 await _sb.from('article_marks').upsert({
@@ -1928,12 +1928,12 @@
                 el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-0 transition-opacity duration-200';
                 el.title = 'Mark as done';
                 renderHistoricalTable();
-                showToast('Failed to save — try again', 'error');
+                showToast('Failed to save â€” try again', 'error');
             }
         }
     }
 
-    // ══ CT SCOOP ══
+    // â•â• CT SCOOP â•â•
     async function loadScoopData() {
         try {
             document.getElementById('scoopLoadingState').classList.remove('hidden');
@@ -2034,7 +2034,7 @@
             </div>`;
     }
 
-    // ══ RESTAURANT ══
+    // â•â• RESTAURANT â•â•
     async function loadRestData() {
         try {
             document.getElementById('restLoadingState').classList.remove('hidden');
@@ -2154,7 +2154,7 @@
         showToast('Restaurant CSV downloaded!');
     }
 
-    // ══ CT SCOOP SUB-TAB ══
+    // â•â• CT SCOOP SUB-TAB â•â•
     function switchScoopSubTab(subTab) {
         activeScoopSubTab = subTab;
         toggleSubTab('scoopArticlesSubTab', 'scoopExtractionSubTab', 'subTabArticlesBtn', 'subTabExtractionBtn', subTab === 'articles');
@@ -2162,7 +2162,7 @@
         if (subTab === 'extraction' && extractionRows.length === 0) loadScoopExtractionData();
     }
 
-    // ══ CT SCOOP EXTRACTION ══
+    // â•â• CT SCOOP EXTRACTION â•â•
     async function loadScoopExtractionData() {
         try {
             document.getElementById('extLoadingState').classList.remove('hidden');
@@ -2172,7 +2172,7 @@
             const res = await fetch(SCOOP_EXTRACTION_URL + '?t=' + Date.now());
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
-            document.getElementById('extLastUpdated').textContent = data.last_updated || '—';
+            document.getElementById('extLastUpdated').textContent = data.last_updated || 'â€”';
             extractionRows = data.data || [];
             filteredExtractionRows = [...extractionRows];
             updateExtStats(filteredExtractionRows);
@@ -2224,7 +2224,7 @@
         showToast('CT Scoop Extraction CSV downloaded!');
     }
 
-    // ══ RESTAURANT SUB-TAB ══
+    // â•â• RESTAURANT SUB-TAB â•â•
     function switchRestSubTab(subTab) {
         activeRestSubTab = subTab;
         toggleSubTab('restArticlesSubTab', 'restExtractionSubTab', 'restSubTabArticlesBtn', 'restSubTabExtractionBtn', subTab === 'articles');
@@ -2232,7 +2232,7 @@
         if (subTab === 'extraction' && restExtractionRows.length === 0) loadRestExtractionData();
     }
 
-    // ══ RESTAURANT EXTRACTION ══
+    // â•â• RESTAURANT EXTRACTION â•â•
     async function loadRestExtractionData() {
         try {
             document.getElementById('restExtLoadingState').classList.remove('hidden');
@@ -2242,7 +2242,7 @@
             const res = await fetch(REST_EXTRACTION_URL + '?t=' + Date.now());
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
-            document.getElementById('restExtLastUpdated').textContent = data.last_updated || '—';
+            document.getElementById('restExtLastUpdated').textContent = data.last_updated || 'â€”';
             restExtractionRows = data.data || [];
             filteredRestExtractionRows = [...restExtractionRows];
             updateRestExtStats(filteredRestExtractionRows);
@@ -2293,7 +2293,7 @@
         showToast('Restaurant Extraction CSV downloaded!');
     }
 
-    // ══ BIZ DEBUT SUB-TAB ══
+    // â•â• BIZ DEBUT SUB-TAB â•â•
     function switchBizSubTab(subTab) {
         activeBizSubTab = subTab;
         toggleSubTab('bizArticlesSubTab', 'bizExtractionSubTab', 'bizSubTabArticlesBtn', 'bizSubTabExtractionBtn', subTab === 'articles');
@@ -2301,7 +2301,7 @@
         if (subTab === 'extraction' && bizExtractionRows.length === 0) loadBizExtractionData();
     }
 
-    // ══ BIZ DEBUT ARTICLES ══
+    // â•â• BIZ DEBUT ARTICLES â•â•
     async function loadBizData() {
         try {
             document.getElementById('bizLoadingState').classList.remove('hidden');
@@ -2401,7 +2401,7 @@
             </div>`;
     }
 
-    // ══ BIZ EXTRACTION ══
+    // â•â• BIZ EXTRACTION â•â•
     async function loadBizExtractionData() {
         try {
             document.getElementById('bizExtLoadingState').classList.remove('hidden');
@@ -2411,7 +2411,7 @@
             const res = await fetch(BIZ_EXTRACTION_URL + '?t=' + Date.now());
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
-            document.getElementById('bizExtLastUpdated').textContent = data.last_updated || '—';
+            document.getElementById('bizExtLastUpdated').textContent = data.last_updated || 'â€”';
             bizExtractionRows = data.data || [];
             filteredBizExtractionRows = [...bizExtractionRows];
             updateBizExtStats(filteredBizExtractionRows);
@@ -2462,7 +2462,7 @@
         showToast('Business Debut Extraction CSV downloaded!');
     }
 
-    // ══ DAILY NEWS SUB-TAB ══
+    // â•â• DAILY NEWS SUB-TAB â•â•
     function switchDailySubTab(subTab) {
         activeDailyNewsSubTab = subTab;
         toggleSubTab('dailyArticlesSubTab', 'dailyExtractionSubTab', 'dailySubTabArticlesBtn', 'dailySubTabExtractionBtn', subTab === 'articles');
@@ -2470,7 +2470,7 @@
         if (subTab === 'extraction' && dailyNewsExtractionRows.length === 0) loadDailyNewsExtractionData();
     }
 
-    // ══ DAILY NEWS ARTICLES ══
+    // â•â• DAILY NEWS ARTICLES â•â•
     async function loadDailyNewsData() {
         try {
             document.getElementById('dailyLoadingState').classList.remove('hidden');
@@ -2603,25 +2603,25 @@
             const statusClass = a.status === 'Opening' ? 'badge-opening' : a.status === 'Closing' ? 'badge-closing' : '';
             const statusCell = a.status
                 ? `<span class="px-2 py-0.5 rounded-full text-xs font-bold text-white ${statusClass}">${escapeHtml(a.status)}</span>`
-                : '—';
+                : 'â€”';
             const linkCell = a.link
                 ? `<a href="${escapeHtml(a.link)}" target="_blank" rel="noopener noreferrer"
                       onclick="markArticleSeen('${escapeHtml(_key)}', event)"
                       class="text-blue-400 hover:text-blue-300 transition-colors" title="${escapeHtml(a.link)}">
                       <i class="fas fa-external-link-alt"></i>
                    </a>`
-                : '—';
+                : 'â€”';
             return `<tr>
                 <td class="px-3 py-2 text-gray-500 text-xs">${i + 1}</td>
                 <td class="px-3 py-2">${statusCell}</td>
-                <td class="px-3 py-2 text-gray-300 text-xs">${escapeHtml(a.industry||'—')}</td>
-                <td class="px-3 py-2 text-gray-300 text-xs">${escapeHtml(a.region||'—')}</td>
+                <td class="px-3 py-2 text-gray-300 text-xs">${escapeHtml(a.industry||'â€”')}</td>
+                <td class="px-3 py-2 text-gray-300 text-xs">${escapeHtml(a.region||'â€”')}</td>
                 <td class="px-3 py-2 text-white text-xs leading-snug">${highlight(a.title||'', term)}${newBadge}</td>
-                <td class="px-3 py-2 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(a.source||'—')}</td>
-                <td class="px-3 py-2 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(a.date||'—')}</td>
+                <td class="px-3 py-2 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(a.source||'â€”')}</td>
+                <td class="px-3 py-2 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(a.date||'â€”')}</td>
                 <td class="px-3 py-2 text-center">${linkCell}</td>
-                <td class="px-3 py-2 text-gray-300 text-xs">${escapeHtml(a.keyword||'—')}</td>
-                <td class="px-3 py-2 text-gray-300 text-xs text-center">${a.relevance_score !== '' ? escapeHtml(String(a.relevance_score)) : '—'}</td>
+                <td class="px-3 py-2 text-gray-300 text-xs">${escapeHtml(a.keyword||'â€”')}</td>
+                <td class="px-3 py-2 text-gray-300 text-xs text-center">${a.relevance_score !== '' ? escapeHtml(String(a.relevance_score)) : 'â€”'}</td>
             </tr>`;
         }).join('');
         const _di = (col, label) => {
@@ -2647,7 +2647,7 @@
             </table>`;
     }
 
-    // ══ DAILY NEWS EXTRACTION ══
+    // â•â• DAILY NEWS EXTRACTION â•â•
     async function loadDailyNewsExtractionData() {
         try {
             document.getElementById('dailyExtLoadingState').classList.remove('hidden');
@@ -2657,7 +2657,7 @@
             const res = await fetch(DAILY_NEWS_EXT_URL + '?t=' + Date.now());
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
-            document.getElementById('dailyExtLastUpdated').textContent = data.last_updated || '—';
+            document.getElementById('dailyExtLastUpdated').textContent = data.last_updated || 'â€”';
             dailyNewsExtractionRows = data.data || [];
             filteredDailyNewsExtractionRows = [...dailyNewsExtractionRows];
             updateDailyNewsExtStats(filteredDailyNewsExtractionRows);
@@ -2709,7 +2709,7 @@
         showToast('Daily News Extraction CSV downloaded!');
     }
 
-    // ══ SHARED HELPERS ══
+    // â•â• SHARED HELPERS â•â•
     function buildExtractionRow(r, i, term, accentColor) {
         const isOpening = r.event_type === 'Opening';
         const isClosing = r.event_type === 'Closing';
@@ -2728,26 +2728,26 @@
                   class="px-2.5 py-1.5 bg-slate-700/80 hover:bg-slate-600 rounded-lg text-xs transition-colors inline-flex items-center gap-1">
                    <i class="fas fa-external-link-alt text-xs"></i>Visit
                </a>`
-            : `<span class="text-gray-600 text-xs">—</span>`;
+            : `<span class="text-gray-600 text-xs">â€”</span>`;
 
         return `
         <tr class="${noData ? 'opacity-40' : ''}">
             <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
             <td class="px-3 py-3 max-w-[140px]">
-                <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.store_name||'')}">${highlight(r.store_name||'—', term)}</span>
+                <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.store_name||'')}">${highlight(r.store_name||'â€”', term)}</span>
             </td>
             <td class="px-3 py-3 max-w-[160px]">
-                <span class="text-gray-400 text-xs line-clamp-2 block" title="${escapeHtml(r.location||'')}">${highlight(r.location||'—', term)}</span>
+                <span class="text-gray-400 text-xs line-clamp-2 block" title="${escapeHtml(r.location||'')}">${highlight(r.location||'â€”', term)}</span>
             </td>
             <td class="px-3 py-3">${typeBadge}</td>
-            <td class="px-3 py-3 text-gray-400 text-xs">${escapeHtml(r.event_date||'—')}</td>
+            <td class="px-3 py-3 text-gray-400 text-xs">${escapeHtml(r.event_date||'â€”')}</td>
             <td class="px-3 py-3 max-w-[180px]" title="${escapeHtml(r.status||'')}">
-                <span class="text-gray-400 text-xs line-clamp-2 block">${highlight(r.status||'—', term)}</span>
+                <span class="text-gray-400 text-xs line-clamp-2 block">${highlight(r.status||'â€”', term)}</span>
             </td>
             <td class="px-3 py-3 max-w-[220px]" title="${escapeHtml(r.short_description||'')}">
-                <span class="text-gray-500 text-xs line-clamp-3 block">${highlight(r.short_description||'—', term)}</span>
+                <span class="text-gray-500 text-xs line-clamp-3 block">${highlight(r.short_description||'â€”', term)}</span>
             </td>
-            <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.published_date||'—')}</td>
+            <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.published_date||'â€”')}</td>
             <td class="px-3 py-3">${linkCell}</td>
         </tr>`;
     }
@@ -2810,7 +2810,7 @@
         Promise.resolve(loader).finally(() => setTimeout(() => icon.classList.remove('spin-anim'), 500));
     }
 
-    // ══ WARN NEWS ══
+    // â•â• WARN NEWS â•â•
     async function loadWarnData() {
         try {
             document.getElementById('warnLoadingState').classList.remove('hidden');
@@ -2822,7 +2822,7 @@
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
 
-            document.getElementById('warnLastUpdated').textContent = data.last_updated || '—';
+            document.getElementById('warnLastUpdated').textContent = data.last_updated || 'â€”';
             warnRows = data.data || [];
             filteredWarnRows = [...warnRows];
 
@@ -2878,7 +2878,7 @@
         "dunkin'","dunkin donuts","earthwise pet","el bodegon supermarket",
         "el rancho supermercado","el rio bravo supermarket","el super","family dollar",
         "family dollar stores","feeders supply","fields","fiesta foods","fiesta mart",
-        "food city","food lion","foodmaxx supermarkets","fred meyer","fresco y más",
+        "food city","food lion","foodmaxx supermarkets","fred meyer","fresco y mÃ¡s",
         "friendly pets","fry's food & drug stores","gerbes super markets","giant eagle",
         "giant food","giant food stores","golf galaxy","grocery outlet","haggen",
         "harris teeter","harveys supermarket","h-e-b","hobby lobby","hobby lobby stores",
@@ -2963,7 +2963,7 @@
                 ? `<span class="badge-closing px-2 py-1 rounded-full text-xs font-bold text-white"><i class="fas fa-building-circle-xmark mr-1 text-xs"></i>Closure</span>`
                 : r.closure_type
                 ? `<span class="px-2 py-1 rounded-full text-xs bg-amber-900/40 text-amber-300 border border-amber-700/30">${escapeHtml(r.closure_type)}</span>`
-                : `<span class="text-gray-600 text-xs">—</span>`;
+                : `<span class="text-gray-600 text-xs">â€”</span>`;
             const isTracked = WARN_HIGHLIGHT_COMPANIES.has((r.company||'').toLowerCase().trim());
             const isNew = _isNew(r);
 
@@ -2974,8 +2974,8 @@
                 <tr class="warn-new-section-row">
                     <td colspan="9">
                         <span style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:800;color:#f59e0b;letter-spacing:0.08em;">
-                            <span style="font-size:1rem;">✦</span>
-                            NEW THIS RUN — ${newCount} NOTICE${newCount !== 1 ? 'S' : ''}
+                            <span style="font-size:1rem;">âœ¦</span>
+                            NEW THIS RUN â€” ${newCount} NOTICE${newCount !== 1 ? 'S' : ''}
                             <span style="font-size:0.65rem;color:#9ca3af;font-weight:500;font-style:italic;">(today &amp; yesterday)</span>
                         </span>
                     </td>
@@ -2987,19 +2987,19 @@
                 <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
                 <td class="px-3 py-3 max-w-[180px]">
                     <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.company||'')}">
-                        ${isNew ? `<span class="warn-new-badge mr-1">✦ NEW</span>` : ''}${highlight(r.company||'—', term)}
+                        ${isNew ? `<span class="warn-new-badge mr-1">âœ¦ NEW</span>` : ''}${highlight(r.company||'â€”', term)}
                     </span>
                 </td>
-                <td class="px-3 py-3 text-gray-400 text-xs">${highlight(r.city||'—', term)}</td>
+                <td class="px-3 py-3 text-gray-400 text-xs">${highlight(r.city||'â€”', term)}</td>
                 <td class="px-3 py-3">
-                    <span class="px-2 py-1 rounded-full text-xs bg-blue-900/40 text-blue-300 border border-blue-700/30">${escapeHtml(r.state||'—')}</span>
+                    <span class="px-2 py-1 rounded-full text-xs bg-blue-900/40 text-blue-300 border border-blue-700/30">${escapeHtml(r.state||'â€”')}</span>
                 </td>
-                <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.notice_date||'—')}</td>
-                <td class="px-3 py-3 text-gray-400 text-xs w-32"><div class="w-28 truncate" title="${escapeHtml(r.layoff_date||'')}">${escapeHtml(r.layoff_date||'—')}</div></td>
-                <td class="px-3 py-3 text-gray-300 text-xs font-semibold">${escapeHtml(r.employees_affected||'—')}</td>
+                <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.notice_date||'â€”')}</td>
+                <td class="px-3 py-3 text-gray-400 text-xs w-32"><div class="w-28 truncate" title="${escapeHtml(r.layoff_date||'')}">${escapeHtml(r.layoff_date||'â€”')}</div></td>
+                <td class="px-3 py-3 text-gray-300 text-xs font-semibold">${escapeHtml(r.employees_affected||'â€”')}</td>
                 <td class="px-3 py-3">${typeBadge}</td>
                 <td class="px-3 py-3 max-w-[200px]">
-                    <span class="text-gray-500 text-xs line-clamp-2 block" title="${escapeHtml(r.notes||'')}">${highlight(r.notes||'—', term)}</span>
+                    <span class="text-gray-500 text-xs line-clamp-2 block" title="${escapeHtml(r.notes||'')}">${highlight(r.notes||'â€”', term)}</span>
                 </td>
             </tr>`);
         });
@@ -3043,7 +3043,7 @@
         showToast('WARN notices CSV downloaded!');
     }
 
-    // ══ COMPANY WEBSITE ══
+    // â•â• COMPANY WEBSITE â•â•
     async function loadCompanyWebData() {
         try {
             document.getElementById('companyWebLoadingState').classList.remove('hidden');
@@ -3059,7 +3059,7 @@
             }
             const data = await res.json();
 
-            document.getElementById('companyWebLastUpdated').textContent = data.last_updated || '—';
+            document.getElementById('companyWebLastUpdated').textContent = data.last_updated || 'â€”';
             // Normalise records from either file format
             companyWebRows = (data.data || []).map(r => ({
                 is_new: false, first_seen: '', ...r
@@ -3144,7 +3144,7 @@
         const showSplit = newCount > 0 && newCount < sortedRows.length;
         const newHeader = newCount > 0
             ? `<tr><td colspan="8" class="px-3 py-2 text-xs font-semibold text-yellow-300 uppercase tracking-widest bg-yellow-500/8 border-b border-yellow-500/20">
-                   <i class="fas fa-star mr-1.5 text-yellow-400"></i>New This Run — ${newCount} location${newCount !== 1 ? 's' : ''}
+                   <i class="fas fa-star mr-1.5 text-yellow-400"></i>New This Run â€” ${newCount} location${newCount !== 1 ? 's' : ''}
                </td></tr>`
             : '';
 
@@ -3165,10 +3165,10 @@
                       class="px-2 py-1 rounded-lg text-xs bg-blue-900/40 text-blue-300 border border-blue-700/30 hover:bg-blue-800/60 transition-colors whitespace-nowrap">
                       <i class="fas fa-external-link-alt mr-1"></i>View
                    </a>`
-                : `<span class="text-gray-600 text-xs">—</span>`;
+                : `<span class="text-gray-600 text-xs">â€”</span>`;
             const statusCell = isNew
-                ? `<span class="px-2 py-0.5 rounded-full text-xs font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/40 whitespace-nowrap">✨ NEW</span>`
-                : `<span class="text-gray-600 text-xs">—</span>`;
+                ? `<span class="px-2 py-0.5 rounded-full text-xs font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/40 whitespace-nowrap">âœ¨ NEW</span>`
+                : `<span class="text-gray-600 text-xs">â€”</span>`;
             return divider + `
             <tr style="${rowBg}" class="border-t border-white/5 transition-colors ${isNew ? 'border-l-2 border-l-yellow-500/40' : ''}">
                 <td class="px-3 py-3 text-center">
@@ -3179,13 +3179,13 @@
                 <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
                 <td class="px-3 py-3 text-center">${statusCell}</td>
                 <td class="px-3 py-3">
-                    <span class="px-2 py-1 rounded-full text-xs font-semibold bg-indigo-900/40 text-indigo-300 border border-indigo-700/30">${escapeHtml(r.company||'—')}</span>
+                    <span class="px-2 py-1 rounded-full text-xs font-semibold bg-indigo-900/40 text-indigo-300 border border-indigo-700/30">${escapeHtml(r.company||'â€”')}</span>
                 </td>
                 <td class="px-3 py-3 text-xs max-w-[280px] ${isDone ? 'text-gray-600 line-through' : 'text-gray-400'}">
-                    <span class="line-clamp-2 block" title="${escapeHtml(r.address||'')}">${highlight(r.address||'—', term)}</span>
+                    <span class="line-clamp-2 block" title="${escapeHtml(r.address||'')}">${highlight(r.address||'â€”', term)}</span>
                 </td>
-                <td class="px-3 py-3 text-xs whitespace-nowrap ${isDone ? 'text-gray-600' : 'text-gray-300'}">${highlight(r.opening_date||'—', term)}</td>
-                <td class="px-3 py-3 text-xs whitespace-nowrap text-gray-500">${escapeHtml(r.first_seen||'—')}</td>
+                <td class="px-3 py-3 text-xs whitespace-nowrap ${isDone ? 'text-gray-600' : 'text-gray-300'}">${highlight(r.opening_date||'â€”', term)}</td>
+                <td class="px-3 py-3 text-xs whitespace-nowrap text-gray-500">${escapeHtml(r.first_seen||'â€”')}</td>
                 <td class="px-3 py-3">${linkCell}</td>
             </tr>`;
         }).join('');
@@ -3209,7 +3209,7 @@
         loadStoreData();
     });
 
-    // ── PERSONAL PROGRESS BANNER ─────────────────────────────────────────────
+    // â”€â”€ PERSONAL PROGRESS BANNER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     async function loadPersonalProgress() {
         const card = document.getElementById('personalProgressCard');
         if (!card || !_currentUserEmail) return;
@@ -3233,8 +3233,8 @@
                 }
             }
 
-            // Match email prefix → analyst full name
-            // Email pattern: firstName + lastNameInitial  e.g. "suryakantr" → "Suryakant Rajput"
+            // Match email prefix â†’ analyst full name
+            // Email pattern: firstName + lastNameInitial  e.g. "suryakantr" â†’ "Suryakant Rajput"
             const prefix = _currentUserEmail.split('@')[0].toLowerCase();
             const names  = Object.keys(analystMap);
             const matched =
@@ -3250,7 +3250,7 @@
                     const firstName = n.trim().split(/\s+/)[0].toLowerCase();
                     return firstName.length >= 3 && firstName.startsWith(prefix.slice(0, 6));
                 });
-            if (!matched) return; // no match — card stays hidden
+            if (!matched) return; // no match â€” card stays hidden
 
             const s = analystMap[matched];
             const p = s.assigned > 0 ? Math.round(s.done / s.assigned * 100) : 0;
@@ -3258,36 +3258,36 @@
             const seed = matched.length % 3;
 
             const HIGH = [
-                `Outstanding work! At ${p}% you're setting the benchmark for the team. Your consistency and dedication inspire everyone around you — keep this incredible momentum and finish strong!`,
-                `You're absolutely crushing it — ${s.done} of ${s.assigned} articles done at ${p}%! Your commitment to quality and speed is exactly what drives this team forward. Stay the course!`,
-                `Elite-level performance! ${p}% complete with just ${pending} article${pending !== 1 ? 's' : ''} to go. The finish line is in sight — bring it home!`,
+                `Outstanding work! At ${p}% you're setting the benchmark for the team. Your consistency and dedication inspire everyone around you â€” keep this incredible momentum and finish strong!`,
+                `You're absolutely crushing it â€” ${s.done} of ${s.assigned} articles done at ${p}%! Your commitment to quality and speed is exactly what drives this team forward. Stay the course!`,
+                `Elite-level performance! ${p}% complete with just ${pending} article${pending !== 1 ? 's' : ''} to go. The finish line is in sight â€” bring it home!`,
             ];
             const MID = [
-                `Great progress! You're at ${p}% with ${s.done} articles done. One focused session today and you'll break into the top tier — the finish line is well within reach!`,
-                `You're more than halfway there — ${p}% and counting! Channel this energy into a strong final sprint and watch yourself climb to the top of the leaderboard.`,
-                `Solid work on ${s.done} of ${s.assigned} articles! You clearly have the skills — let's push past 75% with a little extra focus today.`,
+                `Great progress! You're at ${p}% with ${s.done} articles done. One focused session today and you'll break into the top tier â€” the finish line is well within reach!`,
+                `You're more than halfway there â€” ${p}% and counting! Channel this energy into a strong final sprint and watch yourself climb to the top of the leaderboard.`,
+                `Solid work on ${s.done} of ${s.assigned} articles! You clearly have the skills â€” let's push past 75% with a little extra focus today.`,
             ];
             const LOW = [
-                `Every article counts! Your dashboard shows ${s.done} of ${s.assigned} done (${p}%). Even a few extra completions today will make a real difference — you've got this!`,
-                `The team is rooting for you! At ${p}% there's exciting progress to be made. Tackle those ${pending} pending articles and let's turn this around together — you have real potential!`,
-                `Time to shine! Your current progress is ${p}% (${s.done}/${s.assigned}). Open your queue, prioritise your articles, and let's get those numbers climbing — a strong day today changes everything!`,
+                `Every article counts! Your dashboard shows ${s.done} of ${s.assigned} done (${p}%). Even a few extra completions today will make a real difference â€” you've got this!`,
+                `The team is rooting for you! At ${p}% there's exciting progress to be made. Tackle those ${pending} pending articles and let's turn this around together â€” you have real potential!`,
+                `Time to shine! Your current progress is ${p}% (${s.done}/${s.assigned}). Open your queue, prioritise your articles, and let's get those numbers climbing â€” a strong day today changes everything!`,
             ];
 
             let borderColor, bgGlow, barColor, textColor, badgeHtml, message;
             if (p > 75) {
                 borderColor = 'border-green-500/40'; bgGlow = 'bg-green-500/5';
                 barColor = 'bg-green-500'; textColor = 'text-green-400';
-                badgeHtml = '<span class="text-xs px-2 py-0.5 rounded-full bg-green-500/15 border border-green-500/30 text-green-300 font-medium">🔥 Top Performer</span>';
+                badgeHtml = '<span class="text-xs px-2 py-0.5 rounded-full bg-green-500/15 border border-green-500/30 text-green-300 font-medium">ðŸ”¥ Top Performer</span>';
                 message = HIGH[seed];
             } else if (p > 50) {
                 borderColor = 'border-yellow-500/40'; bgGlow = 'bg-yellow-500/5';
                 barColor = 'bg-yellow-500'; textColor = 'text-yellow-400';
-                badgeHtml = '<span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/15 border border-yellow-500/30 text-yellow-300 font-medium">💪 Making Progress</span>';
+                badgeHtml = '<span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/15 border border-yellow-500/30 text-yellow-300 font-medium">ðŸ’ª Making Progress</span>';
                 message = MID[seed];
             } else {
                 borderColor = 'border-orange-500/40'; bgGlow = 'bg-orange-500/5';
                 barColor = 'bg-orange-500'; textColor = 'text-orange-400';
-                badgeHtml = '<span class="text-xs px-2 py-0.5 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-300 font-medium">⚡ Needs Boost</span>';
+                badgeHtml = '<span class="text-xs px-2 py-0.5 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-300 font-medium">âš¡ Needs Boost</span>';
                 message = LOW[seed];
             }
 
@@ -3336,7 +3336,7 @@
         }
     }
 
-    // ── MANAGEMENT DASHBOARD ─────────────────────────────────────────────────
+    // â”€â”€ MANAGEMENT DASHBOARD â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const MGMT_WHITELIST = [
         'Suryakantr@retailstat.com',
         'Ashwinn@retailstat.com',
@@ -3441,9 +3441,9 @@
         document.getElementById('mgmtActivityFeed').innerHTML = activities.map(m => {
             const art      = articlesByKey[m.article_key];
             const title    = art ? (art.Title || art.Link || m.article_key) : m.article_key.replace(/^done-/, '');
-            const analyst  = art ? (art.Analyst || '—') : '—';
-            const markedBy = m.marked_by || '—';
-            const when     = m.marked_at ? new Date(m.marked_at).toLocaleString() : '—';
+            const analyst  = art ? (art.Analyst || 'â€”') : 'â€”';
+            const markedBy = m.marked_by || 'â€”';
+            const when     = m.marked_at ? new Date(m.marked_at).toLocaleString() : 'â€”';
             return `<div class="px-4 py-3">
                 <p class="text-sm text-gray-200 font-medium truncate" title="${title}">${title}</p>
                 <div class="flex flex-wrap gap-x-4 mt-1 text-xs text-gray-500">
@@ -3473,7 +3473,7 @@
         const articlesByKey = {};
         for (const a of historicalArticles) articlesByKey['done-' + a.Link] = a;
 
-        // receivedMap[date][analyst] = count — from Date_Appended in historical CSV
+        // receivedMap[date][analyst] = count â€” from Date_Appended in historical CSV
         const receivedMap = {};
         const analystSet  = new Set();
         for (const a of historicalArticles) {
@@ -3485,7 +3485,7 @@
             receivedMap[date][analyst] = (receivedMap[date][analyst] || 0) + 1;
         }
 
-        // doneMap[date][analyst] = count — from marks.marked_at
+        // doneMap[date][analyst] = count â€” from marks.marked_at
         const doneByDate = {};
         for (const m of _mgmtMarks) {
             if (!m.is_done || !m.marked_at) continue;
@@ -3506,7 +3506,7 @@
             return true;
         }).sort((a, b) => b.localeCompare(a));
 
-        // Header — sub-label shows "Done / Rcvd" for each analyst column
+        // Header â€” sub-label shows "Done / Rcvd" for each analyst column
         document.getElementById('mgmtDailyHead').innerHTML = `
             <tr class="border-b border-white/5" style="background:#0f172a;">
                 <th class="px-4 py-3 text-left whitespace-nowrap" style="background:#0f172a;">Date</th>
@@ -3529,7 +3529,7 @@
                 const d = (doneByDate[date]  && doneByDate[date][a])  || 0;
                 const r = (receivedMap[date] && receivedMap[date][a]) || 0;
                 dayDone += d; dayRcvd += r;
-                if (d === 0 && r === 0) return `<td class="px-4 py-3 text-center text-gray-700">—</td>`;
+                if (d === 0 && r === 0) return `<td class="px-4 py-3 text-center text-gray-700">â€”</td>`;
                 return `<td class="px-4 py-3 text-center whitespace-nowrap">
                     <span class="${d > 0 ? 'text-green-400 font-semibold' : 'text-gray-500'}">${d}</span>
                     <span class="text-gray-600"> / </span>
@@ -3550,7 +3550,7 @@
 
         document.getElementById('mgmtDailyRowCount').textContent = dates.length;
         document.getElementById('mgmtDailyTotalLabel').textContent =
-            (grandDone > 0 || grandRcvd > 0) ? `Grand total — Done: ${grandDone}  /  Received: ${grandRcvd}` : '';
+            (grandDone > 0 || grandRcvd > 0) ? `Grand total â€” Done: ${grandDone}  /  Received: ${grandRcvd}` : '';
     }
 
     function applyMgmtDateFilter() { renderMgmtDailyTable(); }
@@ -3561,7 +3561,7 @@
         renderMgmtDailyTable();
     }
 
-    // ── Auth guard ───────────────────────────────────────────────────────────
+    // â”€â”€ Auth guard â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const _SUPA_URL  = "https://ffxkqaetxxpbtwvljmhv.supabase.co";
     const _SUPA_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmeGtxYWV0eHhwYnR3dmxqbWh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc0MDE5NjIsImV4cCI6MjA5Mjk3Nzk2Mn0.qwYStWgM5DKQhJX3EtC2rjwMk49aejosEJmW5b60h8U";
 
@@ -3573,7 +3573,7 @@
             window.location.replace('./login.html');
             return;
         }
-        // Show page — auth confirmed
+        // Show page â€” auth confirmed
         document.documentElement.style.visibility = 'visible';
 
         _currentUserEmail = session.user.email;
@@ -3600,10 +3600,10 @@
     }
     </script>
 
-<!-- ── AI Analyst Chat Widget ─────────────────────────────────────────── -->
+<!-- â”€â”€ AI Analyst Chat Widget â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <!--
   SETUP: Replace YOUR_GEMINI_API_KEY_HERE below with your free key from aistudio.google.com
-  This widget queries your Supabase tables directly — no backend server needed.
+  This widget queries your Supabase tables directly â€” no backend server needed.
 -->
 <style>
   @keyframes chatDot {
@@ -3658,7 +3658,7 @@
       </div>
       <div style="flex:1">
         <div style="color:#e2e8f0;font-weight:600;font-size:13px;letter-spacing:0.01em;">Analyst Assistant</div>
-        <div style="color:#64748b;font-size:11px;margin-top:1px;">Reads all 11 master CSVs · Llama 3.3 (Groq)</div>
+        <div style="color:#64748b;font-size:11px;margin-top:1px;">Reads all 11 master CSVs Â· Llama 3.3 (Groq)</div>
       </div>
       <button onclick="chatClear()" title="Clear conversation"
         style="background:none;border:none;cursor:pointer;color:#475569;font-size:11px;padding:4px 8px;
@@ -3679,7 +3679,7 @@
         <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);
                     border-radius:12px;border-top-left-radius:3px;padding:10px 13px;
                     color:#94a3b8;font-size:13px;line-height:1.55;max-width:292px;">
-          Hi! Ask me anything about your retail news data — store openings/closings, analyst coverage, restaurant chains, industry trends, and more.
+          Hi! Ask me anything about your retail news data â€” store openings/closings, analyst coverage, restaurant chains, industry trends, and more.
         </div>
       </div>
     </div>
@@ -3687,7 +3687,7 @@
     <!-- Input area -->
     <div style="padding:12px;border-top:1px solid rgba(255,255,255,0.08);background:rgba(0,0,0,0.25);
                 display:flex;gap:8px;align-items:flex-end;">
-      <textarea id="chatInput" rows="1" placeholder="Ask about store news, analysts, trends…"
+      <textarea id="chatInput" rows="1" placeholder="Ask about store news, analysts, trendsâ€¦"
         onkeydown="chatKeyDown(event)"
         oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,96)+'px'"
         style="flex:1;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);
@@ -3710,7 +3710,7 @@
 (function () {
   'use strict';
 
-  // ── API key — stored in localStorage, never in code ──────────────────────
+  // â”€â”€ API key â€” stored in localStorage, never in code â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // Each analyst enters their own free key from console.groq.com once.
   const _KEY_STORE = '_analyst_groq_key';
   function getGroqKey()   { return localStorage.getItem(_KEY_STORE) || ''; }
@@ -3724,9 +3724,9 @@
     card.id = '_groqSetup';
     card.style.cssText = 'background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.35);border-radius:12px;padding:14px;margin:4px 0;';
     card.innerHTML =
-      '<div style="color:#e2e8f0;font-weight:600;font-size:13px;margin-bottom:6px;">🔑 One-time setup</div>' +
+      '<div style="color:#e2e8f0;font-weight:600;font-size:13px;margin-bottom:6px;">ðŸ”‘ One-time setup</div>' +
       '<div style="color:#94a3b8;font-size:12px;margin-bottom:10px;">Enter your free Groq API key.<br>' +
-      'Get one at <strong style="color:#a5b4fc">console.groq.com</strong> → API Keys → Create API Key</div>' +
+      'Get one at <strong style="color:#a5b4fc">console.groq.com</strong> â†’ API Keys â†’ Create API Key</div>' +
       '<input id="_groqKeyInput" type="password" placeholder="gsk_..." style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:8px 10px;color:#e2e8f0;font-size:13px;outline:none;margin-bottom:8px;">' +
       '<button onclick="window.saveGroqKeyUI()" style="width:100%;background:linear-gradient(135deg,#6366f1,#8b5cf6);border:none;border-radius:8px;padding:8px;color:white;font-size:13px;font-weight:600;cursor:pointer;">Save Key &amp; Start</button>';
     msgs.appendChild(card);
@@ -3740,15 +3740,15 @@
     if (!key) { input.style.borderColor = '#f87171'; return; }
     saveGroqKey(key);
     document.getElementById('_groqSetup').remove();
-    appendBubble('model', '✓ Key saved. Ask me anything about your retail news data!', null);
+    appendBubble('model', 'âœ“ Key saved. Ask me anything about your retail news data!', null);
   };
 
-  // ── State ────────────────────────────────────────────────────────────────
+  // â”€â”€ State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   let _open    = false;
   let _history = [];   // [{role:'user'|'model', content:'...'}]
   let _busy    = false;
 
-  // ── CSV data fetching (reads master_file/ directly — no Supabase needed) ──
+  // â”€â”€ CSV data fetching (reads master_file/ directly â€” no Supabase needed) â”€â”€
   const STOP = new Set([
     'what','how','many','show','list','find','give','tell','much','which','from',
     'that','this','with','have','been','were','they','there','their','about',
@@ -3756,22 +3756,22 @@
     'article','articles','data','the','and','are','for','its','any','all','into',
   ]);
 
-  // All 9 master files — including extraction files
+  // All 9 master files â€” including extraction files
   const CSV_META = {
-    banner:               { file:'banner_news_master.csv',             search:['Store','Analyst','Industry','Type','Title','Summary'],              fmt:r=>`• ${r.Store} | ${r.Analyst} | ${r.Type} | ${(r.Published||'').split('T')[0]} | ${r.Title} | ${trunc(r.Summary)} | ${r.Link}`,      label:'BANNER STORE NEWS',        desc:'Columns: Store, Analyst, Industry, Type, Title, Published, Summary, Link' },
-    daily:                { file:'daily_news_master.csv',              search:['status','industry','region','title','source','keyword'],            fmt:r=>`• [${r.status}] ${r.industry} | ${r.region} | Score:${r.relevance_score} | ${r.title} | ${r.direct_link}`,                             label:'DAILY NEWS',               desc:'Columns: status, industry, region, title, source, published_date, relevance_score, direct_link' },
-    restaurant:           { file:'restaurant_master.csv',              search:['title','address'],                                                  fmt:r=>`• ${r.date} | ${r.title} | ${r.address||''} | ${r.url}`,                                                                              label:'RESTAURANT NEWS',          desc:'Columns: date, title, address, url' },
-    restaurant_ext:       { file:'restaurant_master_extraction.csv',   search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'RESTAURANT EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
-    ct_scoop:             { file:'ct_scoop_master.csv',                search:['heading'],                                                         fmt:r=>`• ${r.date} | ${r.heading} | ${r.link}`,                                                                                              label:'CT SCOOP',                 desc:'Columns: heading, date, link' },
-    ct_scoop_ext:         { file:'ct_scoop_master_extraction.csv',     search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'CT SCOOP EXTRACTION',      desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
-    daily_ext:            { file:'daily_news_master_extraction.csv',   search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'DAILY NEWS EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
-    businessdebut:        { file:'businessdebut_master.csv',           search:['title'],                                                           fmt:r=>`• ${r.date} | ${r.title} | ${r.link}`,                                                                                               label:'BUSINESS DEBUT',           desc:'Columns: title, date, link' },
-    businessdebut_ext:    { file:'businessdebut_master_extraction.csv',search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'BUSINESS DEBUT EXTRACTION',desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
-    warn:                 { file:'warn_master.csv',                      search:['state','company','city','closure_type','notes'],                   fmt:r=>`• ${r.state} | ${r.company} | ${r.city} | Notice:${r.notice_date} | Layoff:${r.layoff_date} | Affected:${r.employees_affected} | ${r.closure_type}`,  label:'WARN NOTICES',             desc:'Columns: state, company, city, notice_date, layoff_date, employees_affected, closure_type, notes' },
-    comingsoon:           { file:'company_website_master.csv',           search:['company','address'],                                               fmt:r=>`• ${r.company} | ${r.address} | Opens:${r.opening_date} | ${r.link}`,                                                                       label:'COMPANY WEBSITE – COMING SOON', desc:'Columns: company, address, opening_date, link' },
+    banner:               { file:'banner_news_master.csv',             search:['Store','Analyst','Industry','Type','Title','Summary'],              fmt:r=>`â€¢ ${r.Store} | ${r.Analyst} | ${r.Type} | ${(r.Published||'').split('T')[0]} | ${r.Title} | ${trunc(r.Summary)} | ${r.Link}`,      label:'BANNER STORE NEWS',        desc:'Columns: Store, Analyst, Industry, Type, Title, Published, Summary, Link' },
+    daily:                { file:'daily_news_master.csv',              search:['status','industry','region','title','source','keyword'],            fmt:r=>`â€¢ [${r.status}] ${r.industry} | ${r.region} | Score:${r.relevance_score} | ${r.title} | ${r.direct_link}`,                             label:'DAILY NEWS',               desc:'Columns: status, industry, region, title, source, published_date, relevance_score, direct_link' },
+    restaurant:           { file:'restaurant_master.csv',              search:['title','address'],                                                  fmt:r=>`â€¢ ${r.date} | ${r.title} | ${r.address||''} | ${r.url}`,                                                                              label:'RESTAURANT NEWS',          desc:'Columns: date, title, address, url' },
+    restaurant_ext:       { file:'restaurant_master_extraction.csv',   search:['store_name','location','event_type','short_description'],          fmt:r=>`â€¢ ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'RESTAURANT EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
+    ct_scoop:             { file:'ct_scoop_master.csv',                search:['heading'],                                                         fmt:r=>`â€¢ ${r.date} | ${r.heading} | ${r.link}`,                                                                                              label:'CT SCOOP',                 desc:'Columns: heading, date, link' },
+    ct_scoop_ext:         { file:'ct_scoop_master_extraction.csv',     search:['store_name','location','event_type','short_description'],          fmt:r=>`â€¢ ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'CT SCOOP EXTRACTION',      desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
+    daily_ext:            { file:'daily_news_master_extraction.csv',   search:['store_name','location','event_type','short_description'],          fmt:r=>`â€¢ ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'DAILY NEWS EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
+    businessdebut:        { file:'businessdebut_master.csv',           search:['title'],                                                           fmt:r=>`â€¢ ${r.date} | ${r.title} | ${r.link}`,                                                                                               label:'BUSINESS DEBUT',           desc:'Columns: title, date, link' },
+    businessdebut_ext:    { file:'businessdebut_master_extraction.csv',search:['store_name','location','event_type','short_description'],          fmt:r=>`â€¢ ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'BUSINESS DEBUT EXTRACTION',desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
+    warn:                 { file:'warn_master.csv',                      search:['state','company','city','closure_type','notes'],                   fmt:r=>`â€¢ ${r.state} | ${r.company} | ${r.city} | Notice:${r.notice_date} | Layoff:${r.layoff_date} | Affected:${r.employees_affected} | ${r.closure_type}`,  label:'WARN NOTICES',             desc:'Columns: state, company, city, notice_date, layoff_date, employees_affected, closure_type, notes' },
+    comingsoon:           { file:'company_website_master.csv',           search:['company','address'],                                               fmt:r=>`â€¢ ${r.company} | ${r.address} | Opens:${r.opening_date} | ${r.link}`,                                                                       label:'COMPANY WEBSITE â€“ COMING SOON', desc:'Columns: company, address, opening_date, link' },
   };
 
-  // Session cache — each CSV is fetched once then kept in memory
+  // Session cache â€” each CSV is fetched once then kept in memory
   const _cache = {};
 
   function parseCSV(text) {
@@ -3808,7 +3808,7 @@
   // Truncate long text to keep token count low
   function trunc(str, max=120) {
     if (!str) return '';
-    return str.length > max ? str.slice(0, max) + '…' : str;
+    return str.length > max ? str.slice(0, max) + 'â€¦' : str;
   }
 
   function filterRows(rows, kws, cols, limit=25) {
@@ -3853,10 +3853,10 @@
     const parts = await Promise.all([...keys].map(k => queryFile(k, kws)));
     const ctx = parts.filter(Boolean).join('\n\n') || 'No matching records found in the master files.';
     // Hard cap at ~28,000 chars (~7,000 tokens) to stay within Groq free tier limits
-    return ctx.length > 28000 ? ctx.slice(0, 28000) + '\n[…data truncated to fit token limit]' : ctx;
+    return ctx.length > 28000 ? ctx.slice(0, 28000) + '\n[â€¦data truncated to fit token limit]' : ctx;
   }
 
-  // ── Gemini API call ──────────────────────────────────────────────────────
+  // â”€â”€ Gemini API call â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   async function callGemini(question, dataCtx) {
     const historyText = _history.length
       ? '\n\nPrevious conversation:\n' + _history.slice(-6).map(m =>
@@ -3900,7 +3900,7 @@
     return d.choices?.[0]?.message?.content || 'No response received.';
   }
 
-  // ── UI helpers ───────────────────────────────────────────────────────────
+  // â”€â”€ UI helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function md(text) {
     return text
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -3908,7 +3908,7 @@
       .replace(/\*(.+?)\*/g, '<em>$1</em>')
       .replace(/`([^`\n]+)`/g, '<code>$1</code>')
       .replace(/^#{1,3} (.+)$/gm, '<strong style="display:block;margin-top:6px;color:#e2e8f0">$1</strong>')
-      .replace(/^[-•] (.+)$/gm, '<div style="display:flex;gap:6px;margin:2px 0"><span style="color:#818cf8;flex-shrink:0">•</span><span>$1</span></div>')
+      .replace(/^[-â€¢] (.+)$/gm, '<div style="display:flex;gap:6px;margin:2px 0"><span style="color:#818cf8;flex-shrink:0">â€¢</span><span>$1</span></div>')
       .replace(/\n\n+/g, '<br><br>')
       .replace(/\n/g, '<br>');
   }
@@ -3951,7 +3951,7 @@
     return bubble;
   }
 
-  // ── Public API (window.* — reachable from onclick attrs in HTML) ─────────
+  // â”€â”€ Public API (window.* â€” reachable from onclick attrs in HTML) â”€â”€â”€â”€â”€â”€â”€â”€â”€
   window.chatToggle = function () {
     _open = !_open;
     document.getElementById('chatPanel').classList.toggle('open', _open);
@@ -4021,6 +4021,6 @@
   };
 }());
 </script>
-<!-- ── End AI Analyst Chat Widget ──────────────────────────────────────── -->
+<!-- â”€â”€ End AI Analyst Chat Widget â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 </body>
 </html>

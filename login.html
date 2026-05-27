@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store News Dashboard — Sign In</title>
+    <title>Store News Dashboard â€” Sign In</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -30,10 +30,10 @@
             color: var(--text);
         }
 
-        /* ── Canvas particles ── */
+        /* â”€â”€ Canvas particles â”€â”€ */
         #particles { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
 
-        /* ── Orbs ── */
+        /* â”€â”€ Orbs â”€â”€ */
         .orb {
             position: fixed; border-radius: 50%;
             filter: blur(90px); opacity: 0.14;
@@ -49,7 +49,7 @@
             66%      { transform: translate(-20px,20px) scale(0.96); }
         }
 
-        /* ── Grid ── */
+        /* â”€â”€ Grid â”€â”€ */
         .grid-bg {
             position: fixed; inset: 0; z-index: 0; pointer-events: none;
             background-image:
@@ -58,7 +58,7 @@
             background-size: 40px 40px;
         }
 
-        /* ── Card wrapper ── */
+        /* â”€â”€ Card wrapper â”€â”€ */
         .card-wrap {
             position: relative; z-index: 10;
             width: 100%; max-width: 420px; padding: 1rem;
@@ -69,7 +69,7 @@
             to   { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        /* ── Animated border ── */
+        /* â”€â”€ Animated border â”€â”€ */
         .card-border {
             border-radius: 22px; padding: 1.5px;
             background: linear-gradient(135deg, rgba(99,102,241,0.5), rgba(59,130,246,0.15), rgba(139,92,246,0.4), rgba(6,182,212,0.2));
@@ -81,7 +81,7 @@
             50%      { background-position: 100% 50%; }
         }
 
-        /* ── Card ── */
+        /* â”€â”€ Card â”€â”€ */
         .card {
             background: var(--card);
             backdrop-filter: blur(28px);
@@ -98,7 +98,7 @@
             background: linear-gradient(90deg, transparent, rgba(99,102,241,0.55), transparent);
         }
 
-        /* ── Shake ── */
+        /* â”€â”€ Shake â”€â”€ */
         @keyframes shake {
             0%,100% { transform: translateX(0); }
             20%      { transform: translateX(-9px); }
@@ -108,7 +108,7 @@
         }
         .shake { animation: shake 0.42s ease; }
 
-        /* ── Logo ── */
+        /* â”€â”€ Logo â”€â”€ */
         .logo-wrap { display: flex; justify-content: center; margin-bottom: 1.4rem; }
         .logo { position: relative; width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; }
         .logo-inner {
@@ -130,7 +130,7 @@
             50%      { opacity: 0.2; transform: scale(1.06); }
         }
 
-        /* ── Heading ── */
+        /* â”€â”€ Heading â”€â”€ */
         .heading { text-align: center; margin-bottom: 1.75rem; }
         .heading h1 { font-size: 1.45rem; font-weight: 700; color: #fff; margin-bottom: 0.35rem; letter-spacing: -0.01em; }
         .heading p  { font-size: 0.83rem; color: var(--muted); min-height: 1.2em; }
@@ -138,7 +138,7 @@
         .cursor { color: #818cf8; animation: blink 1s step-end infinite; }
         @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
-        /* ── Alert ── */
+        /* â”€â”€ Alert â”€â”€ */
         .alert {
             border-radius: 10px; padding: 0.7rem 0.9rem;
             font-size: 0.81rem; margin-bottom: 1.1rem;
@@ -148,7 +148,7 @@
         .alert.error   { background: rgba(239,68,68,0.1);  border: 1px solid rgba(239,68,68,0.25);  color: #fca5a5; }
         .alert.success { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); color: #6ee7b7; }
 
-        /* ── Floating label inputs ── */
+        /* â”€â”€ Floating label inputs â”€â”€ */
         .field { position: relative; margin-bottom: 1rem; }
         .field input {
             width: 100%;
@@ -202,7 +202,7 @@
         }
         .pw-btn:hover { color: var(--text); }
 
-        /* ── Remember + Forgot row ── */
+        /* â”€â”€ Remember + Forgot row â”€â”€ */
         .extras {
             display: flex; align-items: center;
             justify-content: space-between;
@@ -237,7 +237,7 @@
         }
         .forgot-btn:hover { color: #a5b4fc; }
 
-        /* ── Primary button ── */
+        /* â”€â”€ Primary button â”€â”€ */
         .btn {
             width: 100%; padding: 0.82rem;
             border: none; border-radius: 12px;
@@ -281,7 +281,7 @@
         }
         .pop { animation: popIn 0.35s cubic-bezier(0.34,1.56,0.64,1); }
 
-        /* ── Back button ── */
+        /* â”€â”€ Back button â”€â”€ */
         .back-btn {
             background: none; border: none;
             color: var(--muted); font-size: 0.8rem;
@@ -291,7 +291,7 @@
         }
         .back-btn:hover { color: var(--text); }
 
-        /* ── View transitions ── */
+        /* â”€â”€ View transitions â”€â”€ */
         .view { animation: fadeSlideIn 0.3s ease; }
         .view.hidden { display: none; }
         @keyframes fadeSlideIn {
@@ -299,7 +299,7 @@
             to   { opacity: 1; transform: translateX(0); }
         }
 
-        /* ── Footer ── */
+        /* â”€â”€ Footer â”€â”€ */
         .footer {
             text-align: center; margin-top: 1.5rem;
             font-size: 0.72rem; color: rgba(100,116,139,0.35);
@@ -334,7 +334,7 @@
                 <p>Sign in to <span class="typed" id="typed"></span><span class="cursor">|</span></p>
             </div>
 
-            <!-- ── LOGIN VIEW ── -->
+            <!-- â”€â”€ LOGIN VIEW â”€â”€ -->
             <div class="view" id="loginView">
 
                 <div class="alert error" id="loginErr">
@@ -374,7 +374,7 @@
                 </form>
             </div>
 
-            <!-- ── FORGOT PASSWORD VIEW ── -->
+            <!-- â”€â”€ FORGOT PASSWORD VIEW â”€â”€ -->
             <div class="view hidden" id="resetView">
 
                 <button class="back-btn" id="backBtn">
@@ -387,7 +387,7 @@
                 </div>
                 <div class="alert success" id="resetOk">
                     <i class="fa-solid fa-circle-check pop" style="margin-top:1px;flex-shrink:0"></i>
-                    <span>Reset link sent — check your inbox.</span>
+                    <span>Reset link sent â€” check your inbox.</span>
                 </div>
 
                 <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1.1rem;line-height:1.65;">
@@ -416,7 +416,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-    // ── Supabase ─────────────────────────────────────────────────────────────
+    // â”€â”€ Supabase â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const SUPABASE_URL  = "https://ffxkqaetxxpbtwvljmhv.supabase.co";
     const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmeGtxYWV0eHhwYnR3dmxqbWh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc0MDE5NjIsImV4cCI6MjA5Mjk3Nzk2Mn0.qwYStWgM5DKQhJX3EtC2rjwMk49aejosEJmW5b60h8U";
     const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
@@ -427,7 +427,7 @@
         if (session) window.location.replace("./index.html");
     })();
 
-    // ── Canvas Particles ──────────────────────────────────────────────────────
+    // â”€â”€ Canvas Particles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const canvas = document.getElementById('particles');
     const ctx    = canvas.getContext('2d');
     let pts = [];
@@ -459,7 +459,7 @@
         requestAnimationFrame(draw);
     })();
 
-    // ── Typing animation ──────────────────────────────────────────────────────
+    // â”€â”€ Typing animation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const phrases = ['your analyst portal', 'retail intelligence', 'store analytics', 'market insights'];
     let pi = 0, ci = 0, del = false;
     const typedEl = document.getElementById('typed');
@@ -472,14 +472,14 @@
         setTimeout(type, del ? 48 : 82);
     })();
 
-    // ── Email validation checkmark ────────────────────────────────────────────
+    // â”€â”€ Email validation checkmark â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     ['email', 'resetEmail'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.addEventListener('input', () => el.classList.toggle('valid', emailRe.test(el.value)));
     });
 
-    // ── Password visibility toggle ────────────────────────────────────────────
+    // â”€â”€ Password visibility toggle â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     document.getElementById('pwToggle').addEventListener('click', () => {
         const pw  = document.getElementById('password');
         const eye = document.getElementById('pwEye');
@@ -488,7 +488,7 @@
         eye.className = show ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye';
     });
 
-    // ── View switch ───────────────────────────────────────────────────────────
+    // â”€â”€ View switch â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     document.getElementById('showReset').addEventListener('click', () => {
         document.getElementById('loginView').classList.add('hidden');
         document.getElementById('resetView').classList.remove('hidden');
@@ -500,7 +500,7 @@
         hide(document.getElementById('resetOk'));
     });
 
-    // ── Helpers ───────────────────────────────────────────────────────────────
+    // â”€â”€ Helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const show = el => el.classList.add('show');
     const hide = el => el.classList.remove('show');
 
@@ -528,7 +528,7 @@
         });
     });
 
-    // ── Login form ────────────────────────────────────────────────────────────
+    // â”€â”€ Login form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     document.getElementById('loginForm').addEventListener('submit', async e => {
         e.preventDefault();
         const btn  = document.getElementById('loginBtn');
@@ -562,9 +562,9 @@
         setTimeout(() => window.location.replace('./index.html'), 850);
     });
 
-    // ── Forgot password form ──────────────────────────────────────────────────
+    // â”€â”€ Forgot password form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     // After clicking the reset email link, users land on reset-password.html
-    const RESET_REDIRECT = "https://suryakantr10.github.io/banner_news_article/reset-password.html";
+    const RESET_REDIRECT = "https://dhirajm1902.github.io/banner_news_article/reset-password.html";
 
     document.getElementById('resetForm').addEventListener('submit', async e => {
         e.preventDefault();
