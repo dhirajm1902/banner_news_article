@@ -17,183 +17,433 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 Create ONE clean Markdown table with these exact column headers (in this order):
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
+🌎 Geographic filter (STRICT)
+• Only extract businesses located in the USA or Canada
+• If the article is about a business in any other country (UK, Australia, India, UAE, etc.) → DO NOT add any row to the table; add it ONLY to the Non-working list as "Outside USA/Canada"
+• If an article covers both USA/Canada locations AND international locations → extract only the USA/Canada rows, skip the rest; add the article to the Non-working list as "Outside USA/Canada (partial)"
+
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
-• If an article has zero relevant business opening or closure information, still include a row with:
+• If a USA/Canada article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
+• ❌ Never add a table row for articles outside USA/Canada — those go in the Non-working list only
 
 🚫 Strict constraints
 • ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+• ❌ No extraction of businesses outside USA or Canada
 
 📎 Final section (mandatory)
 At the very end of your response, add:
 Non-working or unusable articles List:
-• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+• Article number — Reason (paywall / no business details / duplicate / text missing / Outside USA/Canada / etc.)
 If none, write: None
 
 ✅ Articles below — extract now:
 
 
---- Article 21 ---
-URL: https://thisistucson.com/article_c0963363-5f70-449f-8d58-033d85f2b7f0.html
-Title: Stacks Book Club to open new Tucson location on Tuesday
+--- Article 51 ---
+URL: https://www.clactonandfrintongazette.co.uk/news/26117503.former-clacton-pub-will-become-convenience-store/
+Title: Former Clacton pub will become convenience store
+Status hint: Opening | Industry: Convenience Stores / Distributors
+Published: 2026-05-28 04:00:00
+
+Former Clacton pub will become convenience store Planning and development By 
+            Grace Capel Reporter Share 0 Comments Future - The Griffin in Clacton (Image: Google) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. What is the Public Notice Portal? Find, save and share Public Notices that affect you in the area. Search the Public Notice Portal What is the Public Notice Portal? What is the Public Notice Portal? The Public Notice Portal carries statutory public notices published in local newspapers and is the fastest and most effective way of finding out what is happening in YOUR neighbourhood. Search the Public Notice Portal A NEW convenience store is opening in a former Clacton pub. The pub in Old Road, which has gone by many names but was most recently the Griffin, is being turned into a convenience store. Baba Express put forward plans to open up at the former pub at the beginning of the year, and Tendring Council has now approved the plans. The shop will sell food, drink, tobacco, household items, newspapers and over-the-counter medicines. The Griffin closed in February 2020 and has remained shut ever since. The building opened as the Coach and Horses in 1874, and has since been known as Ronnie's Bar, Kaz's Bar, Hope's Bar and the Griffin. In 2009, Linda Lockert-Smith took over the establishment and gave it a major refurbishment following a fire. She reopened it as Ronnie's Bar - a live music venue named in tribute to her father and prominent jazz musician Ronnie Smith. During this era, it became well known for its live music and mid-week jam nights, though the business closed after about three years. For more information search 26/00066/FUL on Tendring Council's planning portal. Public Notice Portal is the simplest way to find out about new notices in your neighbourhood, created 
+
+--- Article 52 ---
+URL: https://www.firstcoastnews.com/article/news/community/neighbors-oppose-jacksonville-puppy-store-store/77-77a06bf1-5da9-41b3-ad6c-5e566a6c4268
+Title: Neighbors oppose new Jacksonville puppy store before it opens, store manager responds
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 21:00:00
+Published: 2026-05-28 03:52:00
 
-Facebook Twitter Bluesky WhatsApp SMS Email Facebook Twitter Bluesky WhatsApp SMS Email Print Copy article link Facebook Twitter Bluesky WhatsApp SMS Email Print Copy article link Owners Crispin and Lizzy Jeffrey-Franco sit in their new location for Stacks Book Club at 2920 East Broadway. The bookstore and cafe will open on Tuesday, May 26. Mamta Popat, Arizona Daily Star If this was the opening scene in a film instead of a simple newspaper story, the camera might quickly find a young couple slowly sipping from their glasses of wine, quietly discussing their day, clearly content to be there for a while. The surprise would come in Scene Two, when a sweep of the room reveals it to be a bookshop — not a pub or a restaurant, but a bookshop — and a perfect place to begin this real-life miniseries that will continue to unfold this week in Tucson. Meet Lizzy and Crispin Jeffrey-Franco and welcome to Stacks Book Club, which on Tuesday will open a second local location, at 2920 E. Broadway, just west of Country Club Road. Like its namesake in the Oro Valley Marketplace, the new bookstore will double as a coffee shop in the morning and triple as a beer-and-wine bar in the evening. And like the store in Oro Valley, it promises to become a busy place. “Almost since the day we opened, we’ve had customers asking if we might do something down here in Tucson,” Stacks co-owner Lizzy Jeffrey-Franco said from the new location. “They liked what we were doing — they liked coming up to our store — but for a lot of people we were just a long way away.” Consider that problem solved. Many genres and books for all ages will be available at  Stacks Book Club, 2920 E. Broadway. It's the second location for Stacks Book Club; the original is in Oro Valley. Mamta Popat, Arizona Daily Star Not only is the new Stacks store in the heart of midtown, many Tucsonans have been there before. From 1959-2006, it was the home of Austin’s Ice Cream, a much-beloved hot spot where families gathered on all our 
+Community Neighbors oppose new Jacksonville puppy store before it opens, store manager responds Bark Street Puppies is set to open Saturday on Beach Boulevard, but not everyone in Jacksonville supports having another puppy store. To stream FCN on your phone, you need the FCN app. Download the FCN app More Videos Next up in 5 Example video title will go here for this video Next up in 5 Example video title will go here for this video JACKSONVILLE, Fla. — A new pet store is at the center of a growing controversy in Jacksonville, even before opening its doors. Bark Street Puppies is set to open Saturday at Tamaya Market on Beach Boulevard. Some neighbors are pushing back, saying they don't want the store in their community. Robby Weber lives in Jacksonville and started a petition after learning about plans for a second Bark Street Puppies location. His petition calls on the property owner and leasing team to stop the store from opening, and urges city leaders to restrict the sale of puppies sourced from commercial breeders. It now has more than 3,600 signatures. "These animals can't stand up for themselves," Weber said. For Weber, the issue goes beyond one store. "There are states and there are places where this is illegal, so it really just takes people banding together and showing that we don't want this type of establishment around us," Weber said. The store manager of Bark Street Puppies, Shaun Carey, is aware of the petition and a planned protest for this weekend's grand opening. Many people opposed to the store are concerned that the puppies may be sourced from unethical breeders, but Carey says they carefully vet the breeders they work with. "We do know where our puppies come from, and they always come with all their up-to-date shots, and we always get them vet checked when we do have them," Carey said. "All the breeders we use, we've actually personally have been to all these breeders." He also says the store has been approved through Animal Care and Protective 
 
---- Article 22 ---
-URL: https://www.aol.com/articles/ruby-mexican-restaurant-opening-location-224609000.html
-Title: Ruby’s Mexican Restaurant opening new location in Tyler
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 20:50:52
+--- Article 53 ---
+URL: https://www.croatiaweek.com/sephora-split-store-opening-croatia/
+Title: Sephora opens first store in Split
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 03:47:34
 
-Michael Garcia Sun, May 24, 2026 at 10:46 PM UTC 0 TYLER, Texas ( KETK ) – Local favorite Ruby’s Mexican Restaurant is opening their fourth location in Tyler soon. Topps Pizza closed after overnight fire in Tyler The new Ruby’s will be located in south Tyler at 15902 County Road 165, near Gresham, Flint and Bullard. The new South Tyler location will serve all of Ruby’s favorites like their notorious brisket tacos, refreshing drinks and the atmosphere that many East Texans already know and love. Screenshot Ruby’s was started by Tylerite Ruby Abarca , who first started selling food out of her mother’s home when she was out of work during the COVID-19 pandemic. Beyond their three Tyler locations, Ruby’s has also expanded into Jacksonville and Longview. Advertisement An opening date for the new Ruby’s has not been announced. You can now stream KETK and FOX51 News live 24/7 on your smart TV with KETK+ , our brand-new app! No antenna, cable, or satellite needed— watch for free, anytime. Just download it on your Roku, Apple TV, or Fire TV and start streaming. Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to KETK.com | FOX51.com.
+Global beauty retailer Sephora is continuing its expansion in Croatia with the opening of a new store in Split today. The company has announced that its latest Croatian location officially opens today, on 28 May at Mall of Split, with opening events set to begin at 12 noon. To mark the occasion, Sephora has prepared special offers for early customers. The first 200 shoppers who spend more than €70 will receive an exclusive goodie bag, while the first 500 customers making purchases up to €70 will receive a €10 voucher for their next visit. The Split opening follows Sephora’s return to the Croatian market earlier this year. In April, the global beauty chain opened its first Croatian store in more than a decade at City Center one East in Zagreb, after previously closing its stores in the country years ago. With the new Split location, Sephora is continuing to strengthen its presence in Croatia’s retail sector. Customers visiting the new store can expect a modern retail concept featuring contemporary interiors, digital mirrors and interactive technology, alongside personalised beauty consultations and advice from trained beauty consultants. Sephora says its focus remains on combining innovation, creativity and personalised service, offering customers more than a traditional retail experience through a curated selection of premium beauty brands and interactive shopping features. View this post on Instagram A post shared by Sephora Hrvatska (@sephorahrvatska) The expansion comes as international retail brands continue to increase their presence in Croatia, particularly in major urban and shopping centre destinations. Sign up to receive the Croatia Week Newsletter
 
---- Article 23 ---
-URL: https://www.news10.com/community/restaurant-rundown/italian-restaurant-in-rotterdam-closing-after-nearly-30-years/
-Title: Italian restaurant in Rotterdam closing after nearly 30 years
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-26 20:45:51
+--- Article 54 ---
+URL: https://www.aol.com/articles/grocery-store-open-first-nc-154537000.html
+Title: Grocery store will open its first NC location in the Triangle. What to expect
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-28 03:31:49
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.news10.com/community/restaurant-rundown/italian-restaurant-in-rotterdam-closing-after-nearly-30-years/]
+Simone Jasper Thu, May 21, 2026 at 3:45 PM UTC 0 A new grocery store is coming to Morrisville next year. (Kinga Krzeminska/Getty Images) The Triangle is getting a new grocery store. Lotte Plaza Market — a chain that sells fruit, vegetables, meats and international foods — is coming to Morrisville. “Lotte Plaza Market was built to serve Pan-Asian communities so we’re always looking to expand and to serve communities that are growing and thriving,” Calvin Yang, head of marketing for the grocery chain, told The News & Observer in a Wednesday, May 20 email. “The median household income, the density of Asian residents, the cultural infrastructure already in place — it all makes sense for us.” The Morrisville store set to open next year. Here’s what to know about where it could open and what it’s expected to sell. When and where will the store open? An online map shows Lotte Plaza Market is coming to McCrimmon Corners , located at 4031 Davis Drive. The shopping center is in the Raleigh suburb of Morrisville and a roughly 5-mile drive southwest from the Raleigh-Durham International Airport. The store will occupy more than 48,000 square feet next to the dog-grooming business Swifthounds, real estate investment firm Westwood Financial wrote on its website. It’s not the first time a grocery store has been at the plaza. Earlier this year, Harris Teeter said it closed its McCrimmon Corners location “after careful consideration and strategic market review,” The N&O previously reported. Shoppers will have to wait for the new supermarket. Yang said the store will open “in the second half of 2027.” “Morrisville is one of the fastest growing and diverse towns in North Carolina, with Asian residents now making up nearly half the population,” Yang wrote. “The Research Triangle is also home to hundreds of companies employing tens of thousands of professionals, drawing highly educated, internationally connected families from across Asia.” The new store would be under 5 miles from Cary’s
 
---- Article 24 ---
-URL: https://www.cstoredive.com/news/stinker-stores-ceo-is-stepping-down/821143/
-Title: Stinker Stores CEO is stepping down
+--- Article 55 ---
+URL: https://www.msn.com/en-us/money/companies/pa-mall-loses-major-anchor-store-i-m-surprised-they-lasted-that-long/ar-AA24cyuK?ocid=finance-verthp-feeds&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Pa. mall loses major anchor store: 'I'm surprised they lasted that long'
 Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 20:44:21
+Published: 2026-05-28 03:23:22
 
-An article from Dive Brief Stinker Stores CEO is stepping down Nate Brazier, who assumed leadership of the retailer in 2024, said he is taking time to focus on his family “and reflect on what’s next.” Published May 26, 2026 • Updated 10 hours ago Brett Dworski Senior Reporter Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Outside a Stinker Store in Grand Junction, Colorado. Brett Dworski/C-Store Dive Listen to the article 2 min This audio is auto-generated. Please let us know if you have feedback . Dive Brief: Stinker Stores President and CEO Nate Brazier announced via LinkedIn on Tuesday that he is stepping down from the convenience retailer. Brazier, who assumed leadership of Stinker two years ago, noted that he is taking time to focus on his family “and reflect on what’s next.” His last day with Stinker was last Friday, a company spokesperson said in a statement. Stinker’s Owner and Chairperson Nancy Jones is stepping into Brazier’s role while the company works through a transition plan, the spokesperson said. Dive Insight: Although Brazier has only been Stinkers’ top executive for two years, he has been one of the most prominent faces of the company since joining in 2020. He often participated in industry events and had a significant part in Stinker’s ongoing plan to remodel many of its c-stores to feel more like — and compete with — QSRs. It’s not clear who will be leading Stinker — which has nearly 100 locations in Colorado, Idaho and Wyoming — in the wake of his exit. “Leading this organization has been one of the greatest privileges of my professional career,” Brazier said in his post. “Over the past six years, I’ve had the opportunity to work alongside an exceptional team of people who care deeply about our guests, our communities, and each other. Together we strengthened operations, expanded our footprint, built an outstanding leadership team, and continued building on a remarkable legacy.” Nate Brazier is stepping down as
+MSN
 
---- Article 25 ---
-URL: https://newleatherheadliving.wordpress.com/2026/05/26/updated-dorking-rialto-opening-soon-in-leatherhead/
-Title: Dorking Rialto opening soon in Leatherhead
+--- Article 56 ---
+URL: https://www.msn.com/en-us/money/companies/pet-supplies-plus-store-franchisee-files-chapter-11-bankruptcy/ar-AA23mBql?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Pet Supplies Plus store franchisee files Chapter 11 bankruptcy
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 03:16:14
+
+MSN
+
+--- Article 57 ---
+URL: https://www.aol.com/articles/bj-takes-costco-major-expansion-123300000.html
+Title: BJ’s takes on Costco with major expansion
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 20:43:46
+Published: 2026-05-28 02:57:47
 
-Published by Leatherhead Living – East Surrey News on 26th May 2026
+Maurie Backman Sun, April 26, 2026 at 12:33 PM UTC 0 The warehouse club space has quietly become one of the most competitive corners of retail — and one of the fastest-growing. Data from Placer.ai show just how strong the trend is. Warehouse clubs posted steady year-over-year foot traffic gains in 2025, with visits rising roughly 6% at Costco , 3.2% at Sam's Club, and nearly 6% at BJ ’s in the third quarter alone. At a time when food costs are spiking, consumers are spending more of their money on groceries and are cutting back on dining out, according to a YouGov survey . That puts companies like Costco, Sam's Club, and BJ's in a great position to capture some of those dollars. But while Costco has historically dominated the warehouse club space and Sam's Club has long been its toughest competitor, BJ's Wholesale is starting to gain momentum. And now, BJ's is moving deeper into territory long dominated by its larger rivals. BJ’s pushes aggressively into new markets BJ’s is making one of its boldest moves yet — expanding into Texas, a state that has historically been a strong market for both Costco and Sam’s Club. The company recently opened its first Texas location in Forney, marking its entry into its 22nd state and its 264th warehouse club store overall. Additional locations in the Dallas-Fort Worth area, including Grand Prairie, Fort Worth, and Waxahachie, are already in the pipeline. Related: Sam's Club just gave members a reason to ditch Costco And that’s just part of a much larger plan. BJ’s leadership recently said the company expects to open between 25 and 30 new clubs by the end of 2026. The strategy is clear. BJ's is chasing areas where there's high demand and a booming population. And Texas fits the bill. “BJ’s Wholesale Club has been delivering unbeatable value and convenience to members for over 40 years,” said Bob Eddy, CEO of BJ’s Wholesale Club, as reported by Chain Store Age . Advertisement “Launching our Texas operations is a milestone for our com
 
---- Article 26 ---
-URL: https://www.roanoke-chowannewsherald.com/news/new-grocery-store-opens-in-murfreesboro-8322c387
-Title: New grocery store opens in Murfreesboro
-Status hint: Opening | Industry: Grocery
-Published: 2026-05-26 20:40:33
-
-News May 26, 2026 New grocery store opens in Murfreesboro Contributor Taking part in a ribbon cutting on May 18 to celebrate the formal opening Juaniita Su Tienda Hispana (Your Hispanic Grocery) in Murfreesboro are, from left, Joni Saner, Cesar Ramirez, Ranulfo Rizo, Maria Meza, Yamin Rizo, Anahi Rizo, Joshua Rizo, Mari Rizo, Jay Revelle, and Trina Calderado. Submitted Photo By Sarah Davis News Correspondent MURFREESBORO – On May 18, Murfreesboro officially welcomed its newest business, Juaniita Su Tienda Hispana (Your Hispanic Grocery), with a ribbon cutting and grand opening. Located at 107 W. Main Street, the store, owned by Maria Rizo, offers familiar products to the growing Latino population in Murfreesboro and the surrounding area. Rizo says she opened it for others, and that is obvious in the name. With the store honoring her grandmother Juanita, Rizo notes that the pronoun “Su” translates “Your,” indicating it is for everyone. The grand opening ceremony began with a welcome from Daryl Williams, Executive Director of the Murfreesboro Chamber of Commerce, who enthusiastically stated that the Chamber is excited not just to welcome another business but a diverse one, and continued with the ribbon cutting officiated by Murfreesboro Town Council member Jay Revelle. Don't miss the news! Sign up so you stay in the know. Revelle thanked Rizo for her entrepreneurial spirit and recognized the sacrifice involved in opening a small business in a small town. Stating that the Town of Murfreesboro appreciates Rizo and all she done, he then assisted in cutting the ribbon and proclaimed: “I declare that on this day, May 18, 2026, Juanita Su Tienda Hispana is officially open for business.” Guests were then invited to tour the store and enjoy tacos and cupcakes in the parking lot adjacent to the store which had been set up as a picnic area. Approximately 150 people did so before the festivities wound down around 8 p.m. Of special note were the many families present with ages ra
-
---- Article 27 ---
-URL: https://www.culvercityobserver.com/story/2026/05/28/news/super-king-culver-city-now-open/16145.html
-Title: Super King Culver City Now Open
+--- Article 58 ---
+URL: https://whatnow.com/memphis/restaurants/petra-pastry-cooking-up-new-location/
+Title: Petra Pastry Cooking up New Location
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 20:40:28
+Published: 2026-05-28 02:47:14
 
-Super King Culver City Now Open - Culver City Observer Classifieds Directory Advertisers Photos About Contact Advertise Press Releases Super King Culver City Now Open May 28, 2026 0 Share Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Super King Market official open their new store in Culver City last week. grocery destination is officially here, bringing fresh produce, premium meats, global flavors, specialty ingredients, and everyday essentials all under one roof. From Mediterranean and Middle Eastern favorites to international foods from around the world, Super King Markets offers a unique shopping experience for the community. The store occupies the former Big Lots location. The Culver City Chamber of Commerce was present for the ribbon cutting to welcome Super King Markets to Culver City and look forward to seeing the community support this incredible new grocery store. Make sure to stop by and visit their location! 🙌 5587 Sepulveda Blvd, Culver City The store is open daily: 7:00 AM – 9:00 PM Most Popular Culver City Trash Collection Fees to Increase Take Metro to the LA County Fair Culver City Observer Letters Policy Letters Reader Comments (0) Add your comment Rendered 05/26/2026 23:44
+Petra Pastry (Image credit: @Petra Pastry on Facebook) SHARE A Memphis retail center is getting a taste of the sweeter side of the Middle East. Petra Pastry is preparing to bring its authentic Jordanian-Palestinian desserts to a Hacks Cross Road storefront, as evidenced by recent permitting documents. The bakery, founded by Asad Almalhi and his wife Maisaa Hassan, was issued a certificate of occupancy by the Memphis and Shelby County Division of Planning and Development on May 20. The paperwork shows that the 4205 Hacks Cross Road, suite 111 storefront will afford Petra Pastry 1,400 square feet and will have an occupant load of 9. The concept, described as “Bakery, sweets and coffee house”, already has one location open and baking at 5804 Raleigh Lagrange Road. An opening timeline is not presently available for Petra’s second home; What Now Memphis has reached out to ownership and will update readers as details emerge. Petra Pastry has become an area favorite, thanks to its warmth, hospitality and-of course-delicious menu which features “a diverse range of traditional sweets like kunafa, baklava, and basbousa.” The bakery is bound to find a whole new audience with its second home, as it continues its mission, described on the website as: “The cooking philosophy emphasizes the use of fresh, high-quality ingredients, sourced carefully to ensure each dish reflects the culinary traditions of the region. Culinary techniques are rooted in time-honored practices, blending flavors that create a memorable dining experience. As the bakery looks to the future, the vision remains focused on delivering exceptional food and service, fostering a welcoming atmosphere where guests can explore the delights of Middle Eastern delicacies.” Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 4205 Hacks Cross Rd, Memphis, TN 38125 Be the First to Know From new restaurant openings to exciting retail launches and real estate ins
 
---- Article 28 ---
-URL: https://www.iolaregister.com/community/around-town/liberty-landing-celebrates-opening
-Title: Liberty Landing celebrates opening
+--- Article 59 ---
+URL: https://news.ssbcrack.com/national-franchise-sales-managing-sale-of-50-carls-jr-locations-amid-chapter-11-proceedings/
+Title: National Franchise Sales Managing Sale of 50 Carl’s Jr. Locations Amid Chapter 11 Proceedings
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 02:43:45
+
+In Newport Beach, California, National Franchise Sales (NFS) has taken on the significant task of managing the marketing and sales process for approximately 50 Carl’s Jr. restaurant locations that are operated by Sun Gir Incorporated and its affiliated entities. This initiative is part of an ongoing Chapter 11 proceeding currently pending in the United States Bankruptcy Court for the Central District of California, specifically in the Santa Ana Division. The restaurant portfolio under consideration is exclusively based in California, with the majority of the locations situated primarily in Southern California, in addition to a smaller presence in Northern California markets. NFS’s engagement comes as part of their strategic approach to navigate complex franchise transactions, particularly in situations involving distressed assets and restructuring. NFS will play a critical role in the asset recovery and sale process, focusing on identifying qualified buyers, coordinating due diligence efforts, and ensuring the transaction proceeds in an organized manner aimed at maximizing value for all stakeholders involved. Michael Ingram, the Lead Advisor for NFS’s Asset Recovery Team, emphasized the firm’s commitment to executing a professional and efficient sale process, stating, “Our objective is to maximize value while creating opportunities for qualified operators and strategic buyers throughout California.” Further marketing materials and a Confidential Information Memorandum (CIM) are anticipated to be released this week, providing more insights into this opportunity for prospective buyers. Interested parties are encouraged to visit National Franchise Sales’ website or reach out to their advisory team for additional information. More Read Russia is ‘on the back foot,’ as ‘the dynamics of the war are shifting in Ukraine’s favour,’ EU’s foreign policy chief says Northshore elementary school principal and assistant principal arrested National Franchise Sales (NFS) is recogniz
+
+--- Article 60 ---
+URL: https://www.babushahi.com/business.php?id=221758
+Title: NSE, BSE shut today for Bakrid, other Asian markets open weak, Wall Street closes in green
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 20:35:47
+Published: 2026-05-28 02:27:00
 
-Liberty Landing’s ribbon cutting drew quite the crowd Tuesday morning, as supporters gathered to cheer on the new business. The Iola Area Chamber of Commerce organized the event. The restaurant/ax throwing venue/gun store is open seven days a week; Monday through Thursday from 7 a.m. to 9 p.m., Fridays and Saturday 7 a.m. to 10 p.m., and Sundays 7 a.m. to 2 p.m. Already a subscriber? Log in View subscription options
+NSE, BSE shut today for Bakrid, other Asian markets open weak, Wall Street closes in green - Babushahi.com May 28, 2026 11:15 PM IST Baljit Balli, Editor NEWS FLASH May 28, 2026 Punjab CM Mann inaugurates astroturf at Sant Avtar Singh Memorial Hockey Stadium in village Seechewal May 28, 2026 Top News of May 28:Punjab BJP GetsTurbaned Jatt Sikh President, CM Mann inaugurates astroturf, Trident Limited wins Gold trophy,US-Iran Truce Ends, ,Bashir Badr Passes Away, Border Demolitions,HP Forest Fires, Menstrual Hygiene Day; Watch Video May 28, 2026 J-K: Massive forest fire erupts at multiple locations in Rajouri forest division May 28, 2026 Punjab Govt launches School-based Menstrual Health Education Programmes for Girls May 28, 2026 Gurdwara Committees strengthening Sikh unity, inspiring youth through Seva: Harmeet Singh Kalka May 28, 2026 Biography of freedom fighter Dr. Thakar Singh Ikolaha presented to Punjab Governor Kataria May 28, 2026 Capt Amarinder congratulates Kewal Singh Dhillon on appointment as Punjab BJP President May 28, 2026 Capt Amarinder denies role in Kewal Dhillon’s appointment as Punjab BJP President May 28, 2026 CBI arrests Giribala Singh in Twisha Sharma death case May 28, 2026 ‘Insulting Punjab Police for Political Drama Is Dangerous’: AAP’s Baltej Pannu slams Ravneet Bittu May 28, 2026 BJP elevates Kewal Singh Dhillon to strengthen Sikh outreach in Punjab May 28, 2026 How India recovered Rs 4.32 lakh crore from bankrupt companies through Its Insolvency Law May 28, 2026 BJP gets strong Sikh face in Punjab: State Convener Dhingra congratulates Kewal Singh Dhillon May 28, 2026 ‘BJP Forced to Outsource Punjab Leadership’: Raja Warring targets party over Kewal Dhillon appointment May 28, 2026 In Ferozepur MC Polls, men outnumber women voters, all eyes on counting NSE, BSE shut today for Bakrid, other Asian markets open weak, Wall Street closes in green By : Babushahi Bureau First Published : Thursday, May 28, 2026 07:57 AM Twitter Whatsapp Send Emai
 
---- Article 29 ---
-URL: https://www.radionwtn.com/2026/05/26/tj-maxx-grand-opening-set-thursday/
-Title: TJ Maxx Grand Opening Set Thursday
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 20:33:17
+--- Article 61 ---
+URL: https://www.koranmanado.co.id/en/jcpenney-closes-ross-park-mall-store
+Title: JCPenney Closes Ross Park Mall Location in Western Pennsylvania
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 02:21:24
 
-TJ Maxx Grand Opening Set Thursday Shannon McFarlin May 26, 2026 3:32 pm Paris, Tenn.–A grand opening will be held at the new TJ Maxx store in Paris on Thursday morning, May 28. The store is located at the under-construction Paris Crossing shopping center at the intersection of Hwy. 218 and Mineral Wells Ave. TJ Maxx has been conducting hiring events for staff and the company will be holding a ribbon-cutting at the new store, followed by the grand opening at 8 a.m. Paris-Henry County Chamber Director Caleb Grissom said other stores in the shopping center are close to being ready for their openings, too, with Pet Smart, Hobby Lobby and 5 Below being stocked. In addition to TJ Maxx, Hobby Lobby, Pet Smart, and Five Below, other shops in the new center will include Aldi, Bath & Body Works, Dior Nail Salon, Rack Room Shoes, Ulta, and Burlington. The shopping center is on target for opening later this summer. The center is being developed by Brandon Buchanan. Share this posts Tweet Share LinkedIn Email Prev Previous
+JCPenney Closes Ross Park Mall Location in Western Pennsylvania Alya Pramesti Published May 28, 2026 - 09:21 6 Reads Last Update May 28, 2026 - 09:21 Share WhatsApp Smallest Font Largest Font Department store chain JCPenney announced it will permanently close its location at Ross Park Mall in Allegheny County, Pennsylvania, on Sept. 20, after failing to secure viable lease terms. The upcoming closure of the anchor store at the Ross Township retail hub follows a previous downsizing in 2019, when the department store consolidated its operations down to a single floor. Ross Park Mall, owned by Simon Property Group, ranks as the sixth largest shopping mall in Pennsylvania. "Regretfully, we are unable to continue our current lease terms for this store location and have been unable to find another suitable location in the market," said a JCPenney spokesperson in a statement sent to WTAE. The company expressed appreciation for its staff and local clientele, while noting that its broader retail operations will persist through hundreds of other brick-and-mortar storefronts as well as its digital platform. "We are grateful to our dedicated associates and the loyal customers who have shopped at this Pittsburgh, Pa., location through the years, and we hope to continue serving them throughout our nearly 650 stores nationwide and at jcpenney.com," the spokesperson added. Local shoppers sharing reactions on Reddit indicated the decision was expected, noting the brand had struggled to retain its traditional appeal after previous restructuring efforts. "After shutting down the upper floor, I’m surprised they lasted that long. Sadly, JC Penny became a shell of its former self," one person commented on Reddit. The online commentator recalled visiting the location for annual back-to-school and Black Friday shopping events in prior years. "I remember going there every year for back to school shopping, and even Black Friday shopping. Back when they use to give you a free random gift (usu
 
---- Article 30 ---
-URL: https://www.restaurantnews.com/suzu-cincinnati-japanese-restaurant-grand-opening-052626/
-Title: Suzu to Celebrate Grand Opening in Cincinnati this July
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 20:29:34
+--- Article 62 ---
+URL: https://352today.com/news/257752-bjs-wholesale-club-breaks-ground-on-forthcoming-west-ocala-location/
+Title: BJ’s Wholesale Club Breaks Ground on Forthcoming West Ocala Location
+Status hint: Opening | Industry: Grocery Wholesale
+Published: 2026-05-28 02:05:49
 
-Facebook Tweet LinkedIn Photo credit: Suzu Hospitality Chef Makoto Okuwa’s newest concept introduces modern Japanese dining, cocktails, and omakase at Madison Square Cincinnati, OH  ( RestaurantNews.com ) Suzu , the ingredient-led Japanese restaurant from Chef Makoto Okuwa and Suzu Hospitality, will open this July at Madison Square, welcoming guests into an experiential dining concept that brings Japanese tradition and craftsmanship to life through reimagined offerings. Designed as a place where food, design, and hospitality move in harmony, Suzu reflects Chef Makoto’s lifelong connection to Japanese cooking and the people who first inspired him in the kitchen. “Growing up, my mother and grandmother showed me how much care goes into preparing food for others,” said Chef Makoto. “That spirit lives in every dish we’ll serve at Suzu. We want each guest who walks through the doors to feel that sense of warmth, intention, and respect for ingredients and leave feeling that they’ve shared a remarkable experience with our chefs, staff, and the people they dined with.” Suzu offers a dynamic Japanese dining experience featuring indoor and outdoor seating, a private dining room known as the Tea Room, and a full beverage program in addition to an omakase experience. The menu celebrates the balance and simplicity that define Japanese cuisine, with shareable starters, fresh sushi, warm rice and noodle dishes, and premium Japanese grill items. The most intimate expression of Chef Makoto’s roots is Suzuné (soo-zoo-neh), a 10-seat Edo-style omakase counter where guests can experience the tradition and brilliance of Edomae sushi and Chef Makoto’s craft firsthand. Here, the chef team will highlight seasonal ingredients, precise technique, and the artistry of Japanese culinary traditions through a curated tasting experience. Suzu Fact Sheet Suzu joins Alara, Zingaro by Chef Fabio Viviani, and The Element Food Hall, cementing Madison Square as a growing dining destination in Cincinnati.
+[Could not fetch: 401 Client Error: Unauthorized for url: https://352today.com/news/257752-bjs-wholesale-club-breaks-ground-on-forthcoming-west-ocala-location/]
 
---- Article 31 ---
-URL: https://www.news10.com/video/discount-supermarket-chain-to-open-new-location-in-latham/11826222/
-Title: Discount supermarket chain to open new location in Latham
-Status hint: Opening | Industry: Grocery
-Published: 2026-05-26 20:28:48
+--- Article 63 ---
+URL: https://www.readers.id/en/jcpenney-closes-ross-park-mall
+Title: JCPenney Closes Ross Park Mall Location in Pennsylvania
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 01:55:57
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.news10.com/video/discount-supermarket-chain-to-open-new-location-in-latham/11826222/]
+JCPenney Closes Ross Park Mall Location in Pennsylvania Yoga Pratama Published May 28, 2026 - 08:55 2 Reads Last Update May 28, 2026 - 08:55 Share WhatsApp Smallest Font Largest Font The department store chain JCPenney announced this week that it will permanently close its retail location at the Ross Park Mall in Allegheny County, Pennsylvania. The company confirmed that the official date for the store closure is scheduled for September 20, 2026. Company officials stated that the decision stemmed from an inability to secure sustainable leasing agreements with the property management at the Ross Township site. Additionally, the retailer was unable to identify an alternative location within the local market to relocate the department store. "Regretfully, we are unable to continue our current lease terms for this store location and have been unable to find another suitable location in the market," a JCPenney spokesperson said in a statement to WTAE. The spokesperson expressed gratitude toward the store employees and local shoppers who frequented the Pittsburgh-area location over the years. The company plans to maintain its retail operations through its remaining digital and physical footprint. "We are grateful to our dedicated associates and the loyal customers who have shopped at this Pittsburgh, Pa., location through the years, and we hope to continue serving them throughout our nearly 650 stores nationwide and at jcpenney.com," a spokesperson said in a statement sent to WTAE. Local consumers noting the change on social media recalled that the department store had previously reduced its retail space by closing its upper floor back in 2019. Some patrons expressed nostalgia for past promotional events, such as holiday gift giveaways, while noting that recent rebranding efforts failed to retain the traditional customer base. "After shutting down the upper floor, I’m surprised they lasted that long. Sadly, JC Penny became a shell of its former self," one person commented
 
---- Article 32 ---
-URL: https://www.kansascity.com/news/business/openings-closings/article315895627.html
-Title: Chicken tender chain will open 10 locations in KC area. See where
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 20:24:41
+--- Article 64 ---
+URL: https://www.msn.com/en-us/news/us/independent-bookstore-in-overland-park-closing-moody-shop-will-replace-it/ar-AA24dH2x
+Title: Independent bookstore in Overland Park closing. 'Moody' shop will replace it
+Status hint: Closing | Industry: Books / Toys / Gaming
+Published: 2026-05-28 01:37:08
 
-Chicken Tenders at Huey Magoo’s on Zebulon Road in Macon, GA Chelsea Madden The “filet mignon of chicken” has a five-year plan for Kansas City. Florida-based chicken tender chain Huey Magoo’s aims to open 10 area locations as part of its plans to expand across the country. To start, Kansas Citians will see two Huey Magoo’s locations open this year. A restaurant in Independence will debut in September at 4049 Little Blue Parkway , then another location will open at the end of the year in Harrisonville at 2002 N. Commercial St. The chain, which started in Orlando and now has nearly 100 restaurants, is comparable to Raising Cane’s and Zaxby’s because its menu focuses on chicken tenders, though there are other chicken dishes and fast food items available. Huey Magoo’s describes itself as the “filet mignon of chicken” because the restaurant makes its chicken tenders from the tenderloin, according to the Huey Magoo’s website. A chicken tender meal comes with regular-sized tenders or smaller tender bites, a choice of chips or crinkle-cut fries, Texas toast, coleslaw and a choice of dipping sauce (Magoo’s, Spicy Magoo’s or ranch). Guests can also get grilled chicken or get their chicken tenders on a sandwich, wrap or salad. A prototype of the new Huey Magoo’s storefronts, including in Harrisonville, Missouri. Huey Magoo’s According to a press release, a franchisee named Midwest Restaurant Group is opening the 10 future Kansas City-area locations in Johnson, Wyandotte, Leavenworth and Douglas counties in Kansas and Cass, Jackson, Platte and Clay counties in Missouri. In a statement, Huey Magoo’s president and CEO Andy Howard said the organization has “experience, regional familiarity and love for our brand to amplify our presence in the Midwest.” The first two locations will be about 2,000 square feet, and the first restaurant in Independence will include a drive-thru, 26 indoor seats and 26 seats outside. The press release said the Harrisonville restaurant is one of the fir
+MSN
 
---- Article 33 ---
-URL: https://mocoshow.com/2026/05/26/goodwill-opens-newest-store-and-donation-center/
-Title: Goodwill Opens Newest Store and Donation Center
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 20:14:52
+--- Article 65 ---
+URL: https://www.msn.com/en-us/health/other/target-7-community-health-center-expanding-to-serve-more-in-the-new-river-valley/ar-AA23w0Zu
+Title: Target 7: Community Health Center expanding to serve more in New River Valley
+Status hint: Opening | Industry: Pharmaceutical / Medical
+Published: 2026-05-28 01:16:45
 
-Goodwill of Greater Washington’s new Germantown location officially opened its doors to the community this morning, Tuesday, May 26. The new store and donation center is located at 19621 Waters Road in the Waters Village Shopping Center, near the intersection of Waters Road and Wisteria Drive. Goodwill announced the opening on social media, inviting visitors to stop by and noting that the store would have “many goodies to enjoy all day long.” The Germantown location is Goodwill of Greater Washington’s first retail store and donation center in Montgomery County north of Gaithersburg. Donations had already been accepted at the site ahead of the opening. The May 26 opening is considered a soft opening, with an official grand opening celebration expected to be scheduled at a later date. Goodwill also opened a new Rockville location at the Montrose Shopping Center earlier this month. Author MCS Staff
+MSN
 
---- Article 34 ---
-URL: https://krmg.com/2026/05/26/lollipops-celebrates-grand-opening-weekend-at-new-tulsa-restaurant/
-Title: Lollipops celebrates grand opening weekend at new Tulsa restaurant
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 19:55:01
-
-Business Oil giant BP ousts chairman over ‘conduct’ by Associated Press May 26, 2026
-
---- Article 35 ---
-URL: https://www.1news.co.nz/2026/05/27/take-a-look-at-aucklands-new-under-construction-department-store/
-Title: Take a look at Auckland's new under-construction department store
+--- Article 66 ---
+URL: https://en.sedaily.com/finance/2026/05/28/lotte-department-store-opens-japanese-bag-brand-porter-at
+Title: Lotte Department Store Opens Japanese Bag Brand PORTER at Lotte World Mall
 Status hint: Opening | Industry: Department Stores
-Published: 2026-05-26 19:53:31
+Published: 2026-05-28 01:07:55
 
-Far behind the construction walls and drilling on Auckland's Queen Street, a major retail project is beginning to take shape - one that is betting people still want more from shopping than simply clicking "add to cart". BNZ Business Breakfast was given a behind-the-scenes look inside Faradays, the new department store currently under construction and set to open in August. The New Zealand-owned retail project hopes to reinvent the traditional department store model, combining fashion, food, events and experiences under one roof. Faradays creative director and co-founder Constance von Dadelszen said the project was focused on building more than just a place to shop. Faradays creative director and co-founder Constance von Dadelszen (Source: BNZ Business Breakfast) ADVERTISEMENT "What we're trying to achieve is to build a department store that our local community and New Zealanders can be proud of, being New Zealand-owned and New Zealand-run." As part of its first major brand announcement, Faradays also revealed it will bring Kim Kardashian's fashion label SKIMS to New Zealand for the first time when the store opens. Kim Kardashian's fashion label SKIMS (Source: BNZ Business Breakfast) Founded in 2019 by Kim Kardashian and Jens Grede, the brand has become one of the world's fastest-growing fashion labels. But for Faradays, SKIMS is being positioned as just the beginning. "SKIMS may be the first name revealed," von Dadelszen said, "but the names it will sit alongside are an exceptionally strong group of global brands." Work at Faradays (Source: BNZ Business Breakfast) ADVERTISEMENT The business is launching at a challenging time for the retail sector. Recent Retail NZ data showed two-thirds of retailers did not expect to hit their sales targets this quarter. But Faradays believes there is still demand for in-person experiences that online shopping cannot recreate. "Ultimately people want that feeling of experiencing something in person, especially when they're spending 
+| Summary | Save A A A Lotte Department Store will open a new store for global bag brand PORTER on the first basement floor of Lotte World Mall in Jamsil on the 29th, the company announced Tuesday. PORTER is a bag brand launched in 1962 by Yoshida Company, founded by Japanese bag artisan Kichizo Yoshida. The brand has built a strong fan base based on its "Ichishin Nyukon" philosophy, meaning "putting one's soul into every stitch," delivering high-quality craftsmanship and practical design. The new PORTER store at Lotte World Mall in Jamsil spans approximately 40 pyeong. It features a soft curved facade and arched wall design, and uses warm gray and rose color tones to differentiate it from existing PORTER stores and emphasize the space's distinct character. The store is also the first in Korea to fully adopt a new horizontal logo signage design previously used only at PORTER stores in Japan. To commemorate the store opening, PORTER will debut exclusive limited-edition products for the first time. The flagship item is the "Topaz Series" bag in "Topaz Blue," highlighting the soft texture and subtle sheen characteristic of nylon. The collection consists of five of the brand's popular styles and will be sold exclusively at the PORTER store in Lotte World Mall in Jamsil. Customers can also find a range of popular items, including the brand's signature "TANKER" series made entirely from plant-based nylon. "In addition to PORTER, we will continue to strengthen Lotte Department Store's competitiveness by presenting strategic collaborations with various global brands and differentiated content," a Lotte Department Store official said. # LotteDepartmentStore # PORTER # YoshidaPorter # LotteWorldMall # JapaneseBags # TopazSeries # RetailKorea Original reporting by Kim Kyung-taek for Seoul Economic Daily. AI-translated from Korean. Quotes from foreign sources are based on Korean-language reports and may not reflect exact original wording. View Korean original ↗ Translation Poli
 
---- Article 36 ---
-URL: https://www.binghamtonhomepage.com/news/local-news/ribbon-cutting-for-sidequest-new-owego-location/
-Title: Ribbon cutting for SideQuest new Owego location
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 19:52:20
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.binghamtonhomepage.com/news/local-news/ribbon-cutting-for-sidequest-new-owego-location/]
-
---- Article 37 ---
-URL: https://www.tallahassee.com/story/news/2026/05/26/bucees-florida-locations/90257817007/
-Title: Buc-ee's to open 1st store in this state. 4 more are coming to Florida
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 19:50:00
-
-[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.tallahassee.com/story/news/2026/05/26/bucees-florida-locations/90257817007/]
-
---- Article 38 ---
-URL: https://www.waff.com/2026/05/26/nordstrom-rack-open-huntsville-by-spring-2027/
-Title: Nordstrom Rack to open in Huntsville by Spring 2027
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 19:44:00
-
-Share Add Us On Google Add as a preferred source on Google HUNTSVILLE, Ala. ( WAFF ) - Seattle-based fashion retailer Nordstrom, Inc. announced Tuesday it plans to open a new Nordstrom Rack in Huntsville by spring 2027. Officials say the 24,000-square-foot store will be located in University Plaza, near University Drive and Old Monrovia Road. “Nordstrom Rack is a marquee addition to University Plaza and a strong signal of where Huntsville is headed,” said Miro Sutton, managing partner of Montana Property Group. “Bringing a brand of this caliber to North Alabama has been a long time coming, and we’re proud University Plaza is the home they chose.” The Huntsville location will be Alabama’s second Nordstrom Rack. “We look forward to being a part of the Huntsville community and serving our customers with an amazing offering of great brands at great prices,” said Gemma Lionello, president of Nordstrom Rack. “We’re excited to grow our footprint in the Huntsville market and introduce new customers to the Nordstrom experience.” Click Here to Subscribe on YouTube: Watch the latest WAFF 48 news, sports & weather videos on our YouTube channel! Copyright 2026 WAFF. All rights reserved.
-
---- Article 39 ---
-URL: https://www.cronista.com/en/today/dollar-general-changes-forever-breaks-with-tradition-and-extends-costcos-policy-to-its-20388-stores/
-Title: Dollar General changes forever: breaks with tradition and extends Costco's policy to its 20,388 stores
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 19:41:15
-
-Updated on May 26, 2026 7:41 PM + Follow on abre en nueva pestaña abre en nueva pestaña abre en nueva pestaña abre en nueva pestaña abre en nueva pestaña En esta noticia What changes in Dollar General stores? How does this change affect shoppers? Dollar General is changing the shopping experience in its more than 20,000 stores forever. The chain is adopting the “treasure hunt” model popularized by Costco and extending it to all of its stores in the United States. CEO Todd Vasos confirmed the new design after positive results in 2025 pilot tests. The format mirrors Costco’s logic: rotating merchandise, greater exposure to different categories, and more open spaces . Dollar General already tested it in part of its 2025 remodels and recorded a increase in sales compared with traditional projects. Currency . The dollar says goodbye: all transactions and the use of banknotes are now banned in 11 countries abre en nueva pestaña What changes in Dollar General stores? The stores will have wider aisles and reorganized merchandise so customers can discover products from different categories as they walk through the store. The goal, according to Vasos, is to create an exploratory experience on every visit . The redesign applies to the chain’s 20,388 stores nationwide. Dollar General also confirmed the addition of fresh fruits and vegetables in 7,000 stores, including: Lettuce, tomatoes, apples, and bananas Onions, potatoes, and sweet potatoes Strawberries, lemons, limes, and mixed salads Permanent closure . The country’s most popular fast-food chain is saying goodbye: more than 50 stores will lower their shutters for good abre en nueva pestaña How does this change affect shoppers? Dollar General’s redesign expands the available selection without changing its low-price profile . The addition of fresh products is especially relevant in rural and suburban areas where the chain operates as the nearest store. The distribution of products will change regularly, so customers will fin
-
---- Article 40 ---
-URL: https://www.msn.com/en-us/lifestyle/lifestyle-buzz/nyc-s-socialist-mayor-outrages-mom-and-pop-bodegas-as-he-unveils-first-city-run-grocery-store/ar-AA23zav3?ocid=st&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: NYC's socialist mayor outrages mom-and-pop bodegas as he unveils first city-run grocery store
+--- Article 67 ---
+URL: https://www.aol.com/news/foodchain-opens-grocery-store-focus-090000607.html
+Title: FoodChain opens new grocery store with a focus on local, fresh food
 Status hint: Opening | Industry: Grocery
-Published: 2026-05-26 19:22:42
+Published: 2026-05-28 00:46:13
+
+Bradlee Reed-Whalen Wed, May 27, 2026 at 9:00 AM UTC 0 Lexington nonprofit FoodChain opened its new Neighborhood Green Grocery store earlier this month, in hopes of further connecting local agriculture and food affordability to the community. FoodChain was founded in 2011 and became the home to Kentucky’s first commercial-scale indoor aquaponics farm in 2013. It has since grown into a nonprofit centered around food assistance and access to locally grown and sourced food. The new grocery store — located next to the nonprofit’s aquaponics farm and kitchen at 501 W. 6th Street — aims to increase accessibility to locally grown food by prioritizing products made in Kentucky at a fair price. Leandra Forman, a co-director of FoodChain, said she hopes the grocery store can act as a space for people to discover more nutritious food and become excited about the local food system. In the new store, chartreuse green walls sit alongside the industrial architecture of the building. Bright lights illuminate the miniature aquaponics farm that holds seedlings for sale near the front of the store. Workers organize the moving of produce while a little boy plays in a miniature-toy market in the corner of the store. Guy Mendes, 78-year-old Lexington-based photographer, checks out his groceries at the FoodChain Neighborhood Green Grocery while Walker Hancock, 47-year-old general manager of the store, highlights some locally made items for sale on Friday, May 22, 2026. (Bradlee Reed-Whalen/Lexington Herald-Leader) Forman said the grocery store is meant to provide mostly locally sourced and fresh food, alongside some non-local necessities like pasta and tomato sauce. “FoodChain’s mission is to forge links between our community and fresh food and most people connect to their food through grocery stores,” Forman said. “We have always wanted to open up a Neighborhood Green Grocery, focused especially on our neighbors and the connection between Kentucky farmers and affordability.” The grocery 
+
+--- Article 68 ---
+URL: https://whatnow.com/miami/restaurants/sushi-sake-to-open-a-south-miami-location/
+Title: Sushi Sake to Open a South Miami Location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 00:22:13
+
+Sushi Sake to Open a South Miami Location (Image credit: Sushi Sake) SHARE Sushi Sake is opening a South Miami location. The restaurant, under SS South Miami LLC , recently filed permit applications with the Florida Department of Business and Professional Regulation to open a restaurant at 5829 SW 73 Street, at the former Kiko Sushi location. An opening date has not been announced, but its Instagram account confirms the restaurant is “opening soon” . Founded in 2009 by brothers James and Argelio Aguayo , Sushi Sake is known throughout South Florida as the place to go for fresh sushi. The restaurant offers traditional Japanese sushi, sashimi, and rolls, including some innovative rolls inspired by Miami’s Latin-American culture such as the Caliente Roll with fried white fish, spicy mayo, and spring mix. The restaurant also pays homage to Miami’s sports teams with rolls named after the Dolphins, Marlins, and Miami Heat. Sushi Sake also offers a full menu of hot items like fried rice, katsu, and hibachi items. Planning a party? Sushi Sake offers party trays. The restaurant has become quite popular, and there are now more than three dozen locations throughout South Florida from Palm Beach County down to the Florida Keys. Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 5829 SW 73rd St, Miami, FL 33143 Be the First to Know From new restaurant openings to exciting retail launches and real estate insights, be the first to know what’s happening in Miami Subscribe & Stay Ahead Share This Article Facebook Copy Link Print By Laine Doss Regional Reporter Laine Doss is an award-winning food and spirits writer with nearly two decades of experience. Laine is the former food editor of Miami New Times and has contributed to Broken Palate, Eater, and more. A native New Yorker, Laine now resides in Hollywood, Florida with her rescue dogs, Luna and Dora. Previous Article South Street Partners Acquires Solé Miami Next Arti
+
+--- Article 69 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/once-popular-steakhouse-chain-now-on-life-support-shutters-pa-location/ar-AA24dlw3
+Title: Once-popular steakhouse chain now on life support shutters Pa. location
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 00:20:39
+
+MSN
+
+--- Article 70 ---
+URL: https://www.kktv.com/2026/05/28/after-failed-votes-controversial-palmer-high-street-closure-finally-passes/?outputType=amp
+Title: After failed votes, controversial Palmer High street closure finally passes
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 00:14:00
+
+Add Us On Google Add as a preferred source on Google COLORADO SPRINGS, Colo. (KKTV) -Colorado Springs City Council approved a plan Tuesday night to permanently close part of East Boulder Street near Palmer High School after previously rejecting the proposal during an earlier vote. The closure between Weber Street and Nevada Avenue is part of Palmer High’s long-term renovation project, which District 11 says will create a more connected campus and reduce the need for students to cross traffic between school facilities. The proposal passed in a 6-2 vote after additional meetings, traffic studies and community discussions led some councilmembers to change their votes. Supporters argued the closure would improve student safety and campus access, while opponents raised concerns about downtown traffic, emergency vehicle access and permanently giving up a public roadway. Councilmember Nancy Henjum, who changed her vote from no to yes, said District 11 eventually provided greater clarity on safety, parking and project plans. Meanwhile, Councilmember Dave Donelson continued opposing the measure, arguing East Boulder Street is an important route into downtown and toward Memorial Hospital as traffic continues to grow in the area. Copyright 2026 KKTV. All rights reserved.
+
+--- Article 71 ---
+URL: https://folsomtimes.com/bliss-marketplace-opening-largest-location-yet-at-folsom-premium-outlets/
+Title: Bliss Marketplace Opening Largest Location Yet At Folsom Premium Outlets
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 00:12:09
+
+Bliss Marketplace opening largest location yet at Folsom Premium Outlets Posted by Bill Sullivan | May 27, 2026 5:06 pm | Community News Rapidly growing vintage and artisan marketplace plans nearly 200 vendor booths in massive new Folsom location A rapidly growing locally owned marketplace known throughout the Sacramento region for vintage finds, handmade goods and artisan vendors is preparing to open its largest location yet at the Folsom Premium Outlets, bringing a major new retail concept to one of the city’s most visible shopping destinations. Bliss Marketplace, which operates collaborative vendor marketplaces in Rancho Cordova, Roseville and Midtown Sacramento, is expanding into a 22,000-square-foot storefront at the outlet center that could officially open to shoppers by the end of July. The new Folsom location will not only become the company’s fourth overall storefront, but also by far its largest. The space is more than double the size of Bliss Marketplace’s current largest operation in Rancho Cordova, which spans approximately 10,000 square feet. The expansion is expected to dramatically increase the company’s footprint in the region while creating what owners say will become a centerpiece destination for vintage shopping, handmade products and small-business vendors throughout the Sacramento area. The new marketplace will feature approximately 200 vendor booths selling a wide range of merchandise that includes retro furniture, collectibles, artisan jewelry, handmade décor, clothing, antiques, crafts and specialty gifts. The vendor-driven concept allows independent sellers and artisans to rent individual booth spaces while operating under the larger Bliss Marketplace umbrella. The new location will occupy a prominent space inside the Folsom Premium Outlets that has previously housed several retailers over the years, including Saks Off 5th and Falling Prices. A furniture retailer currently appears to operate within the building. According to company informa
+
+--- Article 72 ---
+URL: https://www.caribbeannationalweekly.com/travel/intercontinental-to-open-luxury-beachfront-resort-in-grenada-in-2026/
+Title: InterContinental to open luxury beachfront resort in Grenada in 2026
+Status hint: Opening | Industry: Hospitality
+Published: 2026-05-27 23:58:53
+
+Travel InterContinental to open luxury beachfront resort in Grenada in 2026 May 27, 2026 Facebook X Pinterest WhatsApp By Sheri-kae McLeod InterContinental Hotels & Resorts has announced plans to open InterContinental Grenada–La Sagesse, a new beachfront luxury resort set along La Sagesse Bay on Grenada’s southeastern coast, with an expected opening in November 2026. - Advertisement - The development will be part of IHG Hotels & Resorts’ luxury and lifestyle portfolio and is being positioned as a flagship Caribbean property aimed at blending international luxury standards with distinctly Grenadian culture, landscape, and hospitality. The resort will feature 120 guest rooms and suites, each designed with views of either the bay or the wider resort grounds. Developers say the design concept is rooted in contemporary Caribbean living, incorporating natural textures, coastal inspiration, and open spaces intended to reflect the island’s rhythm and environment. According to the company, the property is intended to offer a “sophisticated yet relaxed” interpretation of luxury travel in the Caribbean, combining high-end amenities with a strong sense of place. “Grenada is one of the Caribbean’s most captivating and naturally beautiful destinations, and InterContinental Grenada-La Sagesse has been thoughtfully designed to reflect the island’s rich culture, natural beauty, and spirit of discovery,” said George Vlachopoulos, Area General Manager. He added that the resort is intended to provide “thoughtful service and meaningful connection,” positioning it as a new benchmark for luxury tourism on the island. Dining and culinary offerings The resort will introduce five distinct dining and beverage concepts, each designed to highlight both local and international influences. Mosaic, the all-day dining restaurant, will focus on locally sourced ingredients and Caribbean cuisine with a modern interpretation. Coralie, an open-air signature restaurant, will offer a Mediterranean-inspire
+
+--- Article 73 ---
+URL: https://www.al.com/news/2026/05/new-southern-comfort-food-buffet-hoping-to-open-soon-in-homewood.html?outputType=amp
+Title: New Southern comfort food buffet hoping to open soon in Homewood
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 23:52:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.al.com/news/2026/05/new-southern-comfort-food-buffet-hoping-to-open-soon-in-homewood.html?outputType=amp]
+
+--- Article 74 ---
+URL: https://www.cairnspost.com.au/news/south-australia/aldinga-restaurant-silver-sands-beach-club-to-close/news-story/5135a5f689accc14be092c448688eb0f
+Title: ‘Time to say goodbye’: Beloved beach club to close
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-27 23:47:41
+
+‘Time to say goodbye’: Beloved beach club to close Our restaurant reviewer called this beachside gem “such an appealing destination” – now it’s closing after just four years. Sale now on Unlock this story and more with your subscription Full Digital Access What’s included Unlimited articles on app & web Subscriber-exclusive newsletters A digital version of Today’s Paper Enjoy puzzles SuperCoach Plus stats & analysis while playing Full digital access to The Courier-Mail included LIMITED TIME OFFER Pay As You Go No lock-in contract $ 1 a month for 2 months Then $35 charged monthly.* * Read the fine print Full Digital Access $1 charged monthly for a duration of 2 months, after which it automatically renews at $35 charged monthly. Renewals occur unless cancelled as per full Terms and Conditions. Each payment, once made, is non-refundable, subject to law. Not in conjunction with any other offer. New customers only. Prices after any early discounted periods may be varied as per full Terms and Conditions. See www.cairnspost.com.au/subscriptionterms for full details. 12 Month Plan Lock in & save $ 22 a month for the first 12 months ($264 min. cost). Then $22 charged monthly.* * Read the fine print Full Digital Access 12 Month Plan costs $264 (min. cost) for the first 12 months, charged as $22 every month. This automatically renews after the first 12 months to be charged as $22 (min. cost) every month. Renewals occur unless cancelled as per full Terms and Conditions. No cancellations during the first 12 months. Each payment, once made, is non-refundable, subject to law. Not in conjunction with any other offer. Prices after the first 12 months may be varied as per full Terms and Conditions. See www.cairnspost.com.au/subscriptionterms for full details. Pay As You Go $1 a month for 2 months Then $35 charged monthly.* Subscribe now Other subscription options Print + Digital Subscriptions Corporate Subscriptions Your Selection: $0 Your Selection – Change selection Today’s Total $
+
+--- Article 75 ---
+URL: https://www.vvng.com/famous-daves-victorville-grand-opening-on-may-29-to-reward-first-100-guests-with-free-ribs-for-a-year/
+Title: Famous Dave’s Victorville Grand Opening On May 29 To Reward First 100 Guests With Free Ribs For A Year
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 23:45:56
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.vvng.com/famous-daves-victorville-grand-opening-on-may-29-to-reward-first-100-guests-with-free-ribs-for-a-year/]
+
+--- Article 76 ---
+URL: https://www.msn.com/en-us/money/topstocks/38-year-old-sporting-goods-giant-sportsman-s-warehouse-closing-stores/ar-AA1XsZB1?ocid=hpmsn&cvid=69a76aef7e914204afd0618ebaa38dd5&ei=50&cvpid=f74d27f511e44b6dd181de32a2edaffb&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: 38-year-old sporting goods giant, Sportsman's Warehouse, closing stores
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-27 23:42:49
+
+MSN
+
+--- Article 77 ---
+URL: https://www.travelandtourworld.com/news/article/6xtfdp56o5f2/
+Title: Bahamas Cruise Tourism Expands as Norwegian Cruise Line Confirms September Opening for Massive Great Tides Waterpark in 2026
+Status hint: Opening | Industry: Cruise Lines
+Published: 2026-05-27 23:23:57
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/6xtfdp56o5f2/]
+
+--- Article 78 ---
+URL: https://www.theconnecticutscoop.com/all-tolland-county-posts/vernon-scoop-woof-gang-bakery-grooming-eyeing-location-at-tri-city-plaza
+Title: VERNON SCOOP: Woof Gang Bakery & Grooming eyeing location at Tri-City Plaza
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 23:09:03
+
+HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
+
+--- Article 79 ---
+URL: https://www.ragtrader.com.au/news/mossman-returns-to-myer-amid-department-store-revamp
+Title: Mossman returns to Myer amid department store revamp
+Status hint: Opening | Industry: Department Stores
+Published: 2026-05-27 23:07:19
+
+Australian fashion label Mossman is re-entering Myer, nearly a decade after its first partnership with the department store chain. Mossman co-owner Deanna Depetro said the brand first launched into Myer in 2016 before stepping away. The decision to return came after Myer presented Mossman with a detailed proposal outlining store refurbishments and changes to its buying strategy, including a shift toward what Depetro described as more contemporary brands and a focus on a younger customer demographic. “They're now really targeting Gen Z. They've re‑strategised their whole buying plan, focusing on more innovative and cooler brands,” Depetro said. On top of this, Depetro thinks the expected inclusion of Solomon Lew onto the Myer board this year can only spell good times for the retailer’s future. The partnership will begin in nine stores plus online, expanding to 12 doors for the spring/summer season, with Myer forecasting a rollout to more than 20 stores by 2027. Mossman will continue its existing wholesale relationship with David Jones alongside the Myer deal. To mark the Myer return, Mossman is hosting a launch event this week. Depetro said physical events remain an important part of the brand's strategy, allowing consumers to connect with the product and brand in a way that digital channels cannot replicate. All this comes as Myer's operating model shifts in recent years, which includes the merging in of the Just Group brands – being Just Jeans, Jay Jays, Jacqui E, Dotti and Portmans – as well as rejigs to its private labels , a ramp-up in its beauty ranges , the closure and hopeful relaunch of Sass & Bide and upgrades to its Myer One loyalty program . Beyond department stores, Mossman is also stocked through The Iconic and independent boutiques across Australia. The brand is also active in the Middle East, which Depetro said is returning to normal trading conditions, and is pursuing more opportunities in the US, which she described as a challenging market. In the M
+
+--- Article 80 ---
+URL: https://www.greenvilleadvocate.com/news/georgiana-grocery-store-set-to-open-june-1-f7e7cb43
+Title: Georgiana grocery store set to open June 1
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-27 23:02:20
+
+News May 27, 2026 Georgiana grocery store set to open June 1 Georgiana’s new grocery store opens June 1 at 10 a.m., restoring a long-missed local shopping option with a deli, meat department and expanded services. Amy Lewis The Greenville Advocate The Busy Ant Supermarket prepares for a June 1 grand opening in Georgiana. Photo courtesy of City of Georgiana | THE GREENVILLE ADVOCATE Residents in Georgiana will soon have a local grocery option again as the city prepares to welcome the Busy Ant Supermarket opening June 1 at 10 a.m. “This moment represents more than the opening of a business—it represents investment, resilience, progress and belief in our community’s future,” Mayor Nina Bonner and the City of Georgiana said in a social media post announcing the grand opening. According to a social media announcement from the city, the new grocery store, managed by Parth Patel, will include a deli, meat department and expanded services aimed at meeting community needs. Patel said the store hopes to continue many of the offerings residents previously relied on while also adding additional options over time. “The community really misses this place, so we’re just trying to bring that back,” Patel said. “We’re going to try to provide the same services that Food Giant had, but more.” Patel said the store is still completing final preparations before opening day, with some perishable items scheduled for delivery closer to the grand opening date to ensure freshness. The business plans to operate daily from 8 a.m. until 8 p.m. Don't miss the news! Sign up so you never miss a headline. City officials said the reopening comes after months of residents traveling outside the area for groceries following the previous store’s closure. The city’s announcement thanked the Patel family for investing in the community and said the project would help create jobs and support continued economic growth. Local resident Danny Black said many in the community are eager for the store to open. “We 
+
+--- Article 81 ---
+URL: https://www.shawlocal.com/ogle-county-news/2026/05/27/rochelle-salon-celebrates-grand-opening-ribbon-cutting/
+Title: Rochelle salon celebrates grand opening, ribbon cutting
+Status hint: Opening | Industry: Health / Beauty
+Published: 2026-05-27 23:00:00
+
+A grand opening and ribbon cutting were held May 22 for Salon Idyll in Rochelle . The business, located at 400 Lincoln Highway, offers a full-service salon and spa along with tanning and is owned by Mckaylee Beeter and Larissa Valdivieso. Salon Idyll opened in early December at the former Hallmark building. The event was hosted by the Rochelle Chamber of Commerce and city of Rochelle. Chamber Executive Director Tricia Herrera said she was excited by the look of the space. “Any time you can fill a space that’s vacant and turn it into such a beautiful productive space in the heart of our downtown, we’re always very appreciative of that,” Herrera said. “We congratulate you. This group of ladies here are great thinkers. They’re already thinking about how they can add services. We’re very excited about that. Congratulations and welcome to downtown Rochelle. We’re very excited to see what the future holds for you.” Rochelle Interim City Manager and City Engineer Sam Tesreau thanked the Salon Idyll owners for their commitment to Rochelle and its downtown area. He cited the city’s ongoing downtown infrastructure projects and recent reinvestment and looked to the area’s future. “The city has invested millions of dollars in the downtown area with new infrastructure over the past few years,” Tesreau said. “We’re really excited to see those improvements and new businesses coming in. We’re hopeful that as a result of that and your commitment to the city, the downtown will be successful for everyone going forward. The businesses, chamber and the city make up a triangle of partnership. We make those things work and we’re all striving to make our downtown a better place.” Valdivieso thanked those who attended the event and those who helped make it a reality. “This has taken a lot of hard work by a lot of people,” Valdivieso said. “We’re so grateful for all the friends and family that came together to help make this space come to life. It was blood, sweat and tears. We’re so excited
+
+--- Article 82 ---
+URL: https://grandeconsumo.com/en/Tous-reopens-stores-in-Amoreiras--Oeiras-Parque--and-Ubbo-with-a-new-image./
+Title: Tous reopens stores in Amoreiras, Oeiras Parque and UBBO with a new image.
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 22:51:41
+
+Non-Food Retail Tous reopens stores in Amoreiras, Oeiras Parque and UBBO with a new image. Carina Rodrigues May 27, 2026 13:07 SHARE ARTICLE Facebook Twitter LinkedIn WhatsApp Telegram Email Copy link Tous has reopened its stores in the Amoreiras Shopping Centre, Oeiras Parque and UBBO, in Portugal, with a new image and a revamped space concept. The jewelry and accessories brand states that these renovations reflect its ongoing commitment to modernizing its physical spaces and creating a more contemporary, personal shopping experience, aligned with the evolution of the Tous universe internationally. Brighter and more contemporary spaces The stores now present a brighter, more welcoming and contemporary image. The new identity combines Design Modern with elements that reflect the brand's DNA, placing jewelry and self-expression at the heart of the experience. The Tous Amoreiras store will now have a new location within the shopping center, reinforcing the brand's visibility and providing a space more aligned with this new phase of Tous in Portugal. “These reopenings represent another important step in consolidating Tous' presence in Portugal. We want to continue investing in the national market, getting ever closer to our customers through spaces that reflect the brand's evolution and provide a more inspiring, modern and personalized experience.” , says Lubélia Marques, country manager From Tous in Portugal. A brand present in more than 40 markets. With a presence in over 40 markets, Tous continues to invest in the innovation of its spaces and the strengthening of its store network, keeping pace with the transformation of retail and the new ways consumers interact with brands. Follow us on Other Non-Food items Pepco accelerates expansion in Western Europe after profits grow by more than 50%. The group that owns Pepco is reinforcing its commitment to shareholder returns and preparing to open 600 new stores in Western Europe by 2030. Dodot offers free packs to encourag
+
+--- Article 83 ---
+URL: https://whatnow.com/charlotte/retail/trader-joes-expands-charlotte-footprint-with-matthews-location/
+Title: Trader Joe’s Expands Charlotte Footprint With Matthews Location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 22:40:14
+
+Trader Joe’s is preparing to expand into Matthews with a new location (Image credit: Trader Joe’s) SHARE Trader Joe’s is planning to open a new location in Matthews , according to recent reporting by Axios Charlotte . A spokesperson for the company confirmed plans for the upcoming store but did not share an opening timeline or exact address. Axios Charlotte reported the proposed Trader Joe’s would be part of the Matthews Gateway mixed-use development off East John Street . The report also noted that town planning staff still expect the grocery chain to join the project. Public planning documents tied to the Matthews Gateway development previously referenced a grocery store space measuring roughly 13,500 square feet, according to Axios Charlotte. The Matthews location would mark Trader Joe’s fourth store serving the Charlotte market, joining existing locations in Midtown, Rea Farms, and University City. According to the company’s website , Trader Joe’s is known for its neighborhood grocery format centered on private-label products, frozen meals, snacks, produce, beverages, and prepared foods. Trader Joe’s joins several grocery brands continuing to expand across the Charlotte area, including Wegmans, Publix, Aldi, and Sprouts. Additional details regarding the Matthews store have not yet been announced. WhatNow Charlotte will provide additional updates on the Matthews location as more information becomes available. Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. Matthews, NC 28105, USA Be the First to Know From new restaurant openings to exciting retail launches and real estate insights, be the first to know what’s happening in Charlotte Subscribe & Stay Ahead Share This Article Facebook Copy Link Print Previous Article New Arts And Community Hub Planned For Plaza Midwood Leave a Comment Leave a Reply Cancel reply Other Relevant News Trader Joe’s Expands Charlotte Footprint With Matthews Location May 27
+
+--- Article 84 ---
+URL: https://www.news-herald.com/2026/05/27/simplicity-studio-moves-to-new-location-in-madison-village/
+Title: Simplicity Studio moves to new location in Madison Village
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 22:31:17
+
+Kelly DiBiase, owner of Simplicity Studio, poses for a photo inside the hair salon’s new location in Madison Village. Simplicity Studio moved to 10 W. Main St., and began providing hair services there on March 30. Simplicity Studio has been operating in Madison Village since 2016. (Bill DeBus – The News-Herald) By Bill DeBus | wdebus@news-herald.com | The News-Herald PUBLISHED: May 27, 2026 at 6:30 PM EDT Getting your Trinity Audio player ready... Kelly DiBiase made it easy for clients to find the new location of her hair salon in Madison Village. She did that by moving Simplicity Studio to a building at 10 W. Main St. from its original spot at 2 W. Main. “It’s literally three doors down,” DiBiase said. Simplicity Studio began operating at the new address on March 30. This structure previously was occupied by Main Street Retreat Massage and Wellness Center. DiBiase rented the previous space ever since she opened Simplicity Studio in 2016. She had been looking for a building to purchase for a while, and learned about the availability of 10 W. Main while walking by the structure. “I saw the Realtor putting the ‘for sale’ sign in the window,” DiBiase said. “So I ran back over to my shop and called my Realtor, and said, ‘We’ve got to go see this building.’ ” After touring the inside, DiBiase felt it would be an ideal place for her studio and decided to purchase the building. She then embarked on an ambitious project to renovate the structure’s interior. “I personally love remodeling,” DiBiase said. “So I tried to do everything I know how to do by myself — the flooring, painting, walls. All the decorating.” However, she emphasized that the renovation wasn’t a solo effort. DiBiase said she was grateful for the help she received from her boyfriend, R.J. Lukacs, as well as  family members and friends. Lukacs also is a merchant in downtown Madison Village. He owns Video Game Nirvana at 66 W. Main St. DiBiase said she and Lukacs spent a lot of time renovating the building dur
+
+--- Article 85 ---
+URL: https://www.msn.com/en-us/money/companies/wawa-closing-busy-nj-store-after-43-years/ar-AA24dz8X
+Title: Wawa closing busy NJ store after 43 years
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-27 22:25:00
+
+MSN
+
+--- Article 86 ---
+URL: https://www.telegram.com/story/business/2026/05/27/hooters-restaurant-in-shrewsbury-ma-to-close/90285090007/
+Title: Hooters to close Shrewsbury restaurant
+Status hint: Closing | Industry: Restaurants
+Published: 2026-05-27 22:21:00
+
+[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.telegram.com/story/business/2026/05/27/hooters-restaurant-in-shrewsbury-ma-to-close/90285090007/]
+
+--- Article 87 ---
+URL: https://www.krqe.com/news/national/nyc-grocery-store-passes-vote-to-boycott-israeli-products/amp/
+Title: NYC grocery store passes vote to boycott Israeli products
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-27 22:20:52
+
+Neon Sign at Night: Park Slope Food Coop Est. 1973  in green and red suspended from the front of the building against a night sky - Park Slope, Brooklyn, New York City, February 25, 2015 (Getty Images) ( NewsNation ) — A New York City-based grocery store Tuesday passed a vote to boycott Israeli products. Story continues below Community: New Mexico Rail Runner changes weekday schedule through October News: Albuquerque Police: Woman dies after being hit by vehicle in NE neighborhood Trending: Thousands of New Mexicans could be owed refunds or debt forgiveness from state The decision made by the Park Slope Food Coop comes after members voiced their dismay over Israel’s treatment of Palestinians. The vote was approved with 67% in favor and 31% against, with 2% abstaining. “Voting ‘yes’ on this boycott is voting against genocide, voting against apartheid and voting ‘yes’ to getting our coop back on the right side of history,” said Alyce Barr, who led the boycott campaign and belonged to the co-op since 1978. The coop’s possibility of joining the boycott escalated tensions last month, leading to an antisemitic outburst at a meeting. The incident also involved accusations made against Jewish members, saying they supported genocide. “The co-op used to feel like Brooklyn’s living room; now, every meeting feels like Judgment Day at noon,” said Park Slope Food Coop member Ramon Maislen. Maislen’s remarks reflect the large turnout for the vote meeting, which included 7,000 of the coop’s 15,000 members. He said the last Israeli boycott vote in 2012 only drew 2,000 attendees. Following the boycott’s approval, Joseph Szladek, the co-op’s general manager, stated that most of the paid staff had wanted the boycott put to a referendum rather than voted on at a meeting. The store’s ban will apply to a small number of products produced in Israel and Israeli products made in the occupied Palestinian territories until Israel abides by international law. The products include produce, tahin
+
+--- Article 88 ---
+URL: https://patch.com/maryland/gaithersburg/amp/34186201/ice-cream-chain-to-open-1st-md-location-in-montgomery-county-report
+Title: Ice Cream Chain To Open 1st MD Location In Montgomery County: Report
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 22:19:13
+
+Ice Cream Chain To Open 1st MD Location In Montgomery County: Report | Gaithersburg, MD Patch Sign up Gaithersburg, MD News Feed Events Local Businesses Classifieds Business Ice Cream Chain To Open 1st MD Location In Montgomery County: Report The Pittsburgh-based company is slated to open its first Maryland location in Montgomery County, according to a report. By Megan VerHelst , Patch Staff May 27, 2026 6:19 pm EDT | Updated May 27, 2026 6:43 pm EDT View original GAITHERSBURG, MD — Pittsburgh-based Millie’s Ice Cream is slated to open its first Maryland location in Montgomery County, according to a report. Millie’s plans to open the new store at 202 Ellington Blvd. in the space most recently occupied by The Crepe Shoppe before it relocated to 230 Crown Park Ave., The MoCoShow reported. Subscribe An opening date has not been announced. Millie's Ice Cream was founded in 2014 by Chad and Lauren Townsend after Chad purchased an expensive ice cream maker with one condition — it had to be paid off by the end of summer, according to the company's website. Over the last few years, Millie’s has opened scoop shop locations throughout the greater Pittsburgh area, launched a food truck, launched franchising, and began packaging pints to sell in local grocery stores. Some of the flavors on the Millie's menu include triple cookie caramel, nutty pistachio and backyard S'mores. Learn more about Millie's Ice Cream online . Are you a local business owner? Post a business listing on Patch! It’s an easy way to reach a local audience and connect with customers close to home. Go here to get started today. More from Gaithersburg, MD News | 20h Man Charged In Fatal Shooting In Bethesda Hotel Parking Lot News | 23h County Sheriffs File Lawsuit Challenging Community Trust Act See more on Patch > Sign up for free local newsletters and alerts for the Gaithersburg, MD Patch Patch.com is the nationwide leader in hyperlocal news. Visit Patch.com to find your town today. ©2026 Patch Media. All Ri
+
+--- Article 89 ---
+URL: https://www.aol.com/news/family-owned-breakfast-lunch-cafe-224037173.html
+Title: Family-owned breakfast and lunch cafe to open coffee shop in Roseville
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 22:07:28
+
+Emma Hall Thu, May 21, 2026 at 10:40 PM UTC 0 Family-owned breakfast and lunch cafe to open coffee shop in Roseville A local family-run breakfast and lunch business is branching out. Four Sisters Cafe announced on social media Thursday that its Roseville cafe will have company as the family gets ready to open Four Sisters Coffee shop. The shop arrives 14 years after sisters Gina Sanders, Tricia Cleland, Julie Geffre and Lisa Lees launched their cafe. “This coffee shop will be an extension of everything we’ve built over the years-great food and coffee, familiar faces and friendly service in a space that feels like home,” the sisters wrote online. The coffee house will be in the same shopping center as the cafe on 9050 Fairway Drive, according to the restaurant’s social media. The sisters first entered the restaurant industry as teenagers. All four worked as waitresses, and became a “package deal everywhere (they) worked,” according to their online message. The sisters went their separate ways once they went to college, but all four eventually returned to working together. Advertisement Inspired to start their own business, the four created a restaurant concept, wrote a business plan and began exploring locations, investors and leases, according to their website. The journey wasn’t easy. For eight years almost every bank denied them a business loan. Landlords and investors told them their business was “too risky,” they said. In 2012, after their father died of terminal brain cancer, the sisters temporarily suspended their ambitions to open their own restaurant. Three months later, a broker reached out, saying he had the “perfect location” for their proposed cafe. They signed a lease and Four Sisters Cafe was born. “Our restaurant means everything to us,” they wrote. “We think it’s safe to say our dad is beaming with pride from heaven.” The quartet is hiring for the new location, looking for what they describe are “friendly, outgoing, hardworking baristas who love conn
+
+--- Article 90 ---
+URL: https://www.abc4.com/news/everything-utah/chicken-salad-chick-opening-utah/
+Title: Win free food for a year during grand opening of Chicken Salad Chick in Pleasant Grove
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 21:53:34
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.abc4.com/news/everything-utah/chicken-salad-chick-opening-utah/]
+
+--- Article 91 ---
+URL: https://www2.ljworld.com/news/general-news/2026/may/27/with-summer-heat-coming-soon-local-hardware-stores-raise-funds-to-purchase-box-fans-for-lawrence-families-in-need/
+Title: With summer near, Lawrence stores raise funds to purchase fans for families
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 21:52:00
+
+With summer near, Lawrence stores raise funds to purchase fans for families photo by: Bremen Keasey/Journal-World The Ace Westlake Hardware store at 601 Kasold Drive is seen here on May 26, 2026. Before sweltering summer temperatures arrive in Lawrence, a local hardware chain is working to raise funds to provide local individuals and families in need with tools to beat the heat. The Westlake Ace Hardware stores, in partnership with The Salvation Army, are collecting donations for their annual “Fan Drive,” which raises funds to purchase new box fans to help families stay cool and safe during the summer months. Karen Lieblein, an assistant manager at the Westlake Ace Hardware store at 601 Kasold Drive, told the Journal-World that the store asks customers when they check out at the register if they would like to “round up” their total to donate, with the extra change going to the fundraiser. For example, if a customer’s total was 10.88, and they opted to round up their purchase, a total of 12 cents would go to support the drive. Last year, the fan drive raised enough funds to distribute 73 box fans across Lawrence to help families stay cool. Lieblein said that since the drive started, Westlake Ace Hardware stores have raised over $1 million nationwide, which has distributed more than 70,000 fans. photo by: Contributed Box fans are stacked on top of each other. During Ace Hardware’s annual Fan Drive last year, the hardware store raised enough money to purchase 73 fans for families in need to stay cool during the summer. In a statement, Jeremy Van Ommeren, vice president of stores for Ace Retail Group, said the fan drive shows how the small donations from each customer can create a “meaningful difference.” Lieblein said it means a lot to help local people through this fundraising effort, but the customers are “the real heroes” through their choice to give back. Along with the potential to round up, customers can also choose to donate $1 or $5 at checkout, and Lieblein sa
+
+--- Article 92 ---
+URL: https://www.msn.com/en-us/money/news/national-sports-apparel-store-chain-moving-into-west-ridge-mall/ar-AA22I6oc?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: National sports apparel store chain moving into West Ridge Mall
+Status hint: Opening | Industry: Apparel
+Published: 2026-05-27 21:37:35
+
+MSN
+
+--- Article 93 ---
+URL: https://www.aol.com/news/grocery-store-plans-open-northland-213723103.html
+Title: A new grocery store plans to open in Northland. Why NKC mayor calls it ‘historic’
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-27 21:37:23
+
+Jenna Ebbers Wed, May 27, 2026 at 9:37 PM UTC 0 North Kansas City approved plans for a Fresh Market of Northtown grocery store near Diamond Parkway, bringing jobs, walkability at the new Northland location next year. For the first time in about three decades, a full-service grocery store is coming to North Kansas City, marking the end of a years-long battle to attract a new grocer to the area and end a longtime food desert just north of the Missouri River. Fresh Market of Northtown, a branch of the locally owned World Fresh Market and El Mercado Fresco, is set to open sometime next year within the city’s One North redevelopment area near Diamond Parkway. The grocery store will feature meat counters, fresh produce, a bakery and a small restaurant. But for Mayor Jesse Smith, the announcement made during a North Kansas City Council meeting Tuesday night is about more than just opening a new business in the area. It’s about providing a long-awaited service to the community and accomplishing a goal he set out to see through when he first ran for office in 2019. And now, after seven years, Smith can finally check bringing in a full-service grocery store to North Kansas City off of his to-do list. “This is a historic moment in North Kansas City,” he told The Star. “It’s a major milestone.” Addressing a food desert with a grocery store The North Kansas City Council approved plans for the new 51,000-square-foot grocery store Tuesday night, which included the sale of around 6.8 acres of land owned by the city. Advertisement City officials have long tried to attract a grocery store to the community to address the food desert in the area, but previous deals either fell through or nothing seemed to materialize, Smith said. North Kansas City currently only has a Save A Lot, which is great for quick grocery runs or buying staples, Smith said, but Fresh Market of Northtown will offer greater variety and be more of a one-stop-shop with a meat and seafood counter, deli, bakery, flora
+
+--- Article 94 ---
+URL: https://theburn.com/2026/05/27/loudouns-new-pikes-peak-lemonade-announces-soft-opening/
+Title: Loudoun’s new Pikes Peak Lemonade announces soft opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 21:31:53
+
+The new Pikes Peak Lemonade Company retail shop in downtown Leesburg has announced it will officially start its soft opening this week. The big day is tomorrow – Thursday, May 28. Hours will be from 11 a.m. to 7 p.m. The Burn first reported that the lemonade shop brand was looking for a Loudoun location way back in the summer of 2024. That’s plenty of time to work up a big thirst. Earlier this year, we shared the news that Pikes Peak had settled on a spot at 106 South Street SE in the Market Station center. A few delays popped up along the way – as often happens with new restaurants and retail – but now opening day has finally arrived. The company, which was founded in 2015 in Colorado, specializes in lemonade and limeade concentrates in various flavors like Hibiscus, Mulberry, and Cherry Blossom.  They also offer cocktail mixes, simple syrups, and various cocoas. And, of course, they sell a variety of fresh lemonades to be consumed on the spot. The soft opening continues through the weekend with hours on Friday and Saturday from 11 a.m. to 8 p.m., and Sunday from 11 a.m. to 6 p.m. (Image at top: Pikes Peak Lemonade) Tags: downtown leesburg , market station , pikes peak lemonade
+
+--- Article 95 ---
+URL: https://nomadlawyer.org/viking-cruise-takes-mira-delivery-2026
+Title: Viking Cruise Takes Delivery of Mira Amid Historic Fleet Expansion Plans
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 21:27:34
+
+Image generated by AI Viking Mira Joins Fleet with Mediterranean and Northern Europe Itineraries Viking Cruises officially took delivery of the Viking Mira at Fincantieri's Ancona shipyard in Italy, marking a pivotal moment for the luxury cruise operator's ambitious expansion strategy. The elegant 499-stateroom vessel accommodates 998 guests and launches its inaugural season with Mediterranean and Northern Europe itineraries. This delivery represents more than a single ship addition—it signals the beginning of an unprecedented growth phase for the cruise line. The Viking Mira embodies the company's commitment to future-ready vessel design, incorporating retrofitting capabilities for next-generation propulsion systems. Guests boarding this ship experience Viking's signature small-ship luxury while supporting the cruise industry's transition toward sustainable maritime travel. Sustainable Cruising: The Hydrogen-Powered Future Arrives The most groundbreaking aspect of this cruise line's expansion involves hydrogen technology. Viking Cruise takes a leading position in environmental innovation by committing to zero-emission vessels. The Viking Libra, currently under construction, will become the world's first hydrogen-powered cruise ship upon its November 2026 delivery. Following closely behind, the Viking Astrea will join the fleet in 2027 as the second hydrogen-powered luxury cruise vessel. These ships represent a fundamental shift in maritime sustainability, eliminating traditional emissions while maintaining the premium experience discerning travelers expect. The hydrogen-powered approach addresses growing environmental concerns and positions Viking at the forefront of responsible tourism innovation. Cruise Itinerary at a Glance Aspect Details Ship Name Viking Mira Homeport Ancona, Italy (delivery) Capacity 998 passengers / 499 staterooms Inaugural Routes Mediterranean & Northern Europe Operator Viking Cruises Amenities Penthouse Jr. Suites, restaurants, wellness fac
+
+--- Article 96 ---
+URL: https://www.travelandtourworld.com/news/article/wblga27g9p5t/
+Title: Turks and Caicos Unveils US$150 Million Treasure Beach Village in Massive Caribbean Tourism Expansion Push
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 21:23:45
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/wblga27g9p5t/]
+
+--- Article 97 ---
+URL: https://www.asiae.co.kr/en/article/2026052717203963562
+Title: Lotte Department Store Opens New Porter Store at Lotte World Mall
+Status hint: Opening | Industry: Department Stores
+Published: 2026-05-27 21:00:00
+
+Industry · IT Distribution Lotte Department Store Opens New Porter Store at Lotte World Mall by Han Yeju Published 28 May.2026 06:00(KST) Share Language Text Size Print A 132-Square-Meter Space Featuring Warm Gray and Rose Tones Exclusive Sale of Five Limited-Edition Topaz Series Bags Lotte Department Store announced on May 28 that it will open a new store for the global bag brand Porter on the B1 floor of Jamsil Lotte World Mall on May 29. Porter is a bag brand introduced in 1962 by Yoshida Company, founded in 1935 by Japanese bag craftsman Kichizo Yoshida. Based on the philosophy of "putting one's soul into every single stitch," known as 'Isshinnyukon,' the brand is renowned for its excellent quality and practical design, and has built a loyal fanbase over many years. Poster for the Porter store opening on the B1 floor of Jamsil Lotte World Mall. Lotte Department Store View original image The new Porter store at Jamsil Lotte World Mall, spanning approximately 132 square meters, presents the brand's rich history and heritage with a modern reinterpretation. The store features a softly curved façade and arched wall design, setting it apart from other Porter locations by using warm gray and rose tones for a distinctive look. Additionally, it fully incorporates a new horizontal logo signage design previously used only in Porter stores in Japan. For the first time, the Jamsil Lotte World Mall Porter store will unveil exclusive limited-edition products available only at this location. To celebrate the opening, the brand is launching a new Topaz series of bags featuring "Topaz Blue" as the main color. This collection, made of nylon for a uniquely soft texture and subtle sheen, consists of five of the brand's most popular styles and will be sold exclusively at the Jamsil Lotte World Mall store. As these are limited-edition items, high customer interest is expected from the initial launch. In addition, customers can find a variety of popular items, including the signature T
+
+--- Article 98 ---
+URL: https://patch.com/massachusetts/shrewsbury/longtime-shrewsbury-eatery-close-good
+Title: Longtime Shrewsbury Eatery To Close For Good
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-27 20:54:47
+
+Restaurants & Bars Longtime Shrewsbury Eatery To Close For Good The restaurant, well known for its casual food and its all-female waitstaff, announced it would close this week. Jessie Castellano , Patch Staff Posted Wed, May  27, 2026 at 4:54 pm ET SHREWSBURY, MA —A longtime restaurant in Shrewsbury is closing its doors. Hooters announced it would close its location at Marketplace Shrewsbury on Wednesday. The restaurant at 291 Boston Turnpike opened in 2015. Hooters is well known for its casual food and its all-female waitstaff. The national eatery boasts a menu that includes hamburgers, sandwiches, steaks, seafood entrees, appetizers, and chicken wings Find out what's happening in Shrewsbury for free with the latest updates from Patch. “These decisions are never easy, and we want to sincerely thank the Shrewsbury community for years of support, memories, and loyalty," the Shrewsbury restaurant wrote in a social media post . "To all of our wonderful guests, incredible team members, and amazing Hooters Girls, thank you for being part of what made this location special.” The Shrewsbury closure comes after Hooters of America filed for Chapter 11 bankruptcy protection last spring, Patch previously reported . Plus, in 2024, dozens of Hooters locations across the nation permanently closed due to "pressure from market conditions," according to a company statement at the time. Find out what's happening in Shrewsbury for free with the latest updates from Patch. Hooters also has Massachusetts locations in Dedham, Saugus and West Springfield. It’s unclear whether those restaurants will close as well, though the Shrewsbury location said it looks forward to serving customers there. See Also: Shrewsbury Water Main Break Shuts Off Service Along Route 9 2-Car Crash In Shrewsbury Causes Partial Closure On Main Street More Than $100K Raised For Shrewsbury Woman Severely Hurt In Cambridge Crash Get more local news delivered straight to your inbox. Sign up for free Patch newsletters an
+
+--- Article 99 ---
+URL: https://www.thestreet.com/restaurants/another-vegetarian-restaurant-chain-clover-labs-closes-all-locations
+Title: After bankruptcy, vegetarian dining chain closes all locations
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-27 20:50:26
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.thestreet.com/restaurants/another-vegetarian-restaurant-chain-clover-labs-closes-all-locations]
+
+--- Article 100 ---
+URL: https://www.msn.com/en-us/travel/article/dolly-parton-is-opening-her-own-travel-stop-near-nashville/ar-AA24chKo?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Dolly Parton is opening her own travel stop near Nashville
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 20:50:21
 
 MSN

@@ -45,17 +45,18 @@ Create ONE clean Markdown table with these exact column headers (in this order):
 
 🌎 Geographic filter (STRICT)
 • Only extract businesses located in the USA or Canada
-• If the article is about a business in any other country (UK, Australia, India, UAE, etc.) → treat it as "No qualifying business found" and mark it in the Non-working list as "Outside USA/Canada"
-• If an article covers both USA/Canada locations AND international locations → extract only the USA/Canada rows, skip the rest
+• If the article is about a business in any other country (UK, Australia, India, UAE, etc.) → DO NOT add any row to the table; add it ONLY to the Non-working list as "Outside USA/Canada"
+• If an article covers both USA/Canada locations AND international locations → extract only the USA/Canada rows, skip the rest; add the article to the Non-working list as "Outside USA/Canada (partial)"
 
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
-• If an article has zero relevant business opening or closure information, still include a row with:
+• If a USA/Canada article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
+• ❌ Never add a table row for articles outside USA/Canada — those go in the Non-working list only
 
 🚫 Strict constraints
 • ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text

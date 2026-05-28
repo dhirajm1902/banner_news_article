@@ -1,36 +1,74 @@
-Here is the extracted data table followed by the non-working articles list:
+**Non-working or unusable articles List:**
+- Article 251 — Outside USA/Canada (Ireland)
+- Article 252 — Opening (USA); details extracted below
+- Article 253 — Closing (USA); details extracted below
+- Article 254 — Outside USA/Canada (Europe/Asia/Middle East)
+- Article 255 — Opening (USA); details limited, partial extraction
+- Article 256 — Closing (USA, multiple stores); details limited
+- Article 257 — Planned development (USA, Oregon); no specific business opening/closure
+- Article 258 — Openings (USA, Iowa); details extracted for multiple
+- Article 259 — Closing (USA); details extracted below
+- Article 260 — Opening (USA); details extracted below
+- Article 261 — Outside USA/Canada (UK)
+- Article 262 — Opening (USA); details extracted below
+- Article 263 — Outside USA/Canada (Australia)
+- Article 264 — Outside USA/Canada (UK)
+- Article 265 — Outside USA/Canada (Nepal)
+- Article 266 — Outside USA/Canada (UK)
+- Article 267 — Outside USA/Canada (UK)
+- Article 268 — Outside USA/Canada (UK)
+- Article 269 — Outside USA/Canada (UK)
+- Article 270 — No qualifying business details / Could not fetch full content
+- Article 271 — Opening (USA); details limited
+- Article 272 — Opening (USA, expansion); details limited
+- Article 273 — Opening (USA); details limited / Could not fetch
+- Article 274 — Rumors denied (no actual closing)
+- Article 275 — Outside USA/Canada (Australia)
+- Article 276 — Outside USA/Canada (Australia)
+- Article 277 — Opening (USA, Hawaii); details extracted below
+- Article 278 — Outside USA/Canada (Australia)
+- Article 279 — Outside USA/Canada (Vietnam)
+- Article 280 — Opening (USA, TN); details limited / Could not fetch
+- Article 281 — Scholarship program (India)
+- Article 282 — Scholarship program (India)
+- Article 283 — Outside USA/Canada (UK)
+- Article 284 — Outside USA/Canada (Malaysia)
+- Article 285 — Outside USA/Canada (Vietnam)
+- Article 286 — Opening (USA, DMV/Baltimore); details extracted below
+- Article 287 — Closing (USA, Chicago); details extracted below
+- Article 288 — Opening (USA); details extracted below
+- Article 289 — Opening (USA); details limited
+- Article 290 — Outside USA/Canada (Netherlands)
+- Article 291 — Closing (USA); details extracted below
+- Article 292 — Opening (USA); details extracted below
+- Article 293 — Closures (USA); details limited
+- Article 294 — Could not fetch / limited
+- Article 295 — Outside USA/Canada (New Zealand)
+- Article 296 — Closing (USA); details extracted below
+- Article 297 — Opening (USA); details extracted below
+- Article 298 — Opening (USA); details limited
+- Article 299 — Opening (USA); details limited / Could not fetch
+- Article 300 — Opening (USA); details limited
 
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
-|---|---|---|---|---|---|---|---|
-| Panda Express | 2750 Summer Drive, Dublin, Ohio | Opening | Tuesday, May 26 (implied from "Tuesday" in article published May 22, 2026) — article says "officially opened on Tuesday" | recently opened; grand opening | Panda Express opened its first Dublin, Ohio location with a ribbon-cutting ceremony alongside the Dublin Chamber of Commerce. The restaurant features the company's newer "Panda Home" design concept and presented a $1,000 donation to The Dublin Food Pantry. The first 88 customers received commemorative t-shirts. | https://www.aol.com/articles/panda-express-opens-first-dublin-143000000.html | 2026-05-26 15:52:47 |
-| Raising Cane's | 3921 Medina Road, Akron, Ohio (Fairlawn/Montrose area) | Opening | Wednesday, May 27, 2026 | opening its doors | Raising Cane's is opening a new location in Akron at the site of the former Melt Bar and Grilled, which permanently closed in August 2024. Opening day festivities include a contest where 20 customers can win free Cane's for a year, with entries accepted starting at 8:30 a.m. The location features a two-lane drive-thru and a mural by local artist Lizzi Aronhalt. | https://www.wkyc.com/article/life/food/raising-canes-open-akron-medina-road-fairlawn-montrose-chicken-menu-hours-drive-thru/95-682f4638-2db1-4055-869c-2c5e6cc5653e | 2026-05-26 15:49:00 |
-| No qualifying business found | N/A | N/A | N/A | N/A | Article page content was not retrievable — only navigation/menu elements were returned with no business opening or closure details. | https://www.theconnecticutscoop.com/all-new-haven-county-posts/southbury-scoop-blue-fig-garden-sets-opening-date-in-southbury | 2026-05-26 15:42:46 |
-| Zambrero | Marina Market, Cork, Ireland | Opening | May 26, 2026 | opened | Zambrero has opened its fifth Cork location at Marina Market, joining existing locations at Dennehy's Cross, Douglas Village Shopping Centre, Sallybrook in Glanmire, and Eastgate in Little Island. The restaurant serves Mexican-inspired dishes including burritos, bowls, tacos, and nachos, with vegetarian, vegan, and gluten-free options. | https://www.irishexaminer.com/food/arid-41851833.html | 2026-05-26 15:37:00 |
-| No qualifying business found | N/A | N/A | N/A | N/A | Article could not be fetched due to a 403 Forbidden error; no content was retrievable. | https://www.pennlive.com/life/2026/05/clothing-chain-to-close-all-stores-by-next-month.html?outputType=amp | 2026-05-26 15:36:00 |
-| Laura Salon and Spa | Kondapur (city/region only; full address not specified) | Opening | May 26, 2026 | Grand Opening | Actress Pooja Ramachandran attended the grand opening of Laura Salon and Spa in Kondapur. The article is primarily a photo gallery with minimal text details about the business itself. | https://www.socialnews.xyz/2026/05/26/actress-pooja-ramachandran-graces-the-grand-opening-of-laura-salon-and-spa-in-kondapur-gallery/ | 2026-05-26 15:32:20 |
-| South View Stores | Shebbear, North Devon (between Bideford and Okehampton); full address not specified | Opening | Not specified | sold to new owners | South View Stores, an independently-run convenience store in the Devon village of Shebbear, has been sold by owner Keith Horwell to first-time operator Bharat Odedra. The store will remain open under new ownership, with the incoming owner planning to expand the product offering. | https://www.conveniencestore.co.uk/stores/popular-north-devon-c-store-sold-to-new-owners/719379.article | 2026-05-26 15:29:30 |
-| Burger King (Jarrow) | Towers Place, Jarrow, South Tyneside (full address not specified) | Opening | Wednesday, May 27, 2026 | re-open | The Jarrow branch of Burger King is re-opening after a refurbishment, giving away 1,000 free Whopper or Chicken Royale burgers to the first 1,000 customers on opening day. The refurbished location features a new look, table service, and extended hours. The 100th customer on re-opening day will win a year's supply of Burger King food. | https://www.chroniclelive.co.uk/whats-on/food-drink-news/north-east-branch-burger-king-34014308 | 2026-05-26 15:20:00 |
-| Hollywood Casino Aurora | Near I-88, next to Chicago Premium Outlets, Aurora, Illinois (full address not specified) | Opening | June 24, 2026 (pending final approvals) | set to open | Hollywood Casino Aurora is relocating from its longtime riverboat in downtown Aurora to a new land-based resort near I-88 and the Chicago Premium Outlets. The new resort will include approximately 1,200 gaming positions, a retail sportsbook, a four-star hotel with 220–226 rooms, a full-service spa, multiple dining options, and a 12,000-sq-ft events space. The grand opening is on track for June 24, pending final approvals. | https://www.actionnetwork.com/news/hollywood-casino-aurora-set-to-open-soon | 2026-05-26 15:19:00 |
-| No qualifying business found | N/A | N/A | N/A | N/A | Article body contained no text — no business opening or closure information was retrievable. | https://www.mibolsillo.co/why-7-popular-restaurant-chains-are-shuttering-locations-across-america-t202605260016.html | 2026-05-26 15:15:00 |
-| No qualifying business found | N/A | N/A | N/A | N/A | Article could not be fetched due to a 403 Forbidden error; no content was retrievable. | https://bringmethenews.com/minnesota-lifestyle/spanish-restaurant-and-bakery-to-open-in-former-home-of-handsome-hog | 2026-05-26 15:09:57 |
-| Zea Rotisserie & Bar | Clearview Mall (closing) / Clearview City Center (new location), Metairie, Louisiana (full addresses not specified) | Closing | Not specified | temporarily closes | Zea Rotisserie & Bar is temporarily closing its Clearview Mall location to prepare for a move to a new stand-alone spot in Clearview City Center. The new location will feature an expanded bar area, outdoor patio seating, and an open kitchen with a viewable rotisserie. | https://wgno.com/news/louisiana/jefferson-parish/zea-rotisserie-bar-temporarily-closes-clearview-mall-location-preps-for-relocation/amp/ | 2026-05-26 15:01:57 |
-| Orta | Address not specified | Closing | N/A | continues to operate as usual (rumors of closing denied) | Turkish denim mill Orta has denied rumors that it is closing, with a company representative confirming the business is operating normally. The company attributed recent changes to pricing adjustments in response to rising supply chain costs, not a closure. | https://wwd.com/sourcing-journal/sj-denim/orta-shuts-down-rumors-claiming-business-is-closing-1238979870/ | 2026-05-26 15:01:37 |
-| No qualifying business found | N/A | N/A | N/A | N/A | Article could not be fetched due to a 403 Forbidden error; no content was retrievable. | https://www.reutersconnect.com/item/the-gift-shop-of-planet-hollywood-right-is-open-for-business-on-may-22-1996-but-the-25000-square-foot-restaurant-adjoined/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX01UMVVTQVRPREFZMjkwNTYyNDg | 2026-05-26 15:01:00 |
-| The House of Marigold | Address not specified (Louisville, KY implied by publication) | Opening | Not specified | set to open second location | The House of Marigold is a brunch restaurant that is set to open a second location, per the article headline. Article body text was cut off after a brief introduction and provides no additional details about the address, opening date, or status. | https://www.courier-journal.com/story/entertainment/dining/restaurant/2026/05/26/the-house-of-marigold-breakfast-brunch-restaurant-louisville-ky/89933427007/ | 2026-05-26 15:01:00 |
-| Fresh Kitchen | 818 S. Orlando Avenue, Winter Park, Florida | Opening | "this year" (no exact date specified) | expected to open this year | Fresh Kitchen, a Tampa-based build-your-own bowls chain, plans to open a new location at 818 S. Orlando Avenue in Winter Park, taking over the former Chicken Guy! space. Construction permits were approved earlier this month, and the building will be remodeled for the new tenant. | https://www.fox35orlando.com/news/fresh-kitchen-open-new-location-winter-park | 2026-05-26 14:58:26 |
-| No qualifying business found | N/A | N/A | N/A | N/A | Article could not be fetched due to a 403 Forbidden error; no content was retrievable. | https://www.pennlive.com/food/2026/05/paris-baguette-bakery-cafe-to-open-in-cumberland-county.html | 2026-05-26 14:58:00 |
-| No qualifying business found | N/A | N/A | N/A | N/A | Article content was only a single "MSN" text with no business opening or closure information. | https://www.msn.com/en-us/travel/news/killington-s-closing-ski-weekend-gives-guests-chances-to-ski-bike-and-golf-on-the-same-day/ar-AA23QW7l | 2026-05-26 14:54:32 |
-| Barnes & Noble | 620 Jefferson Road, Market Square plaza, Henrietta, NY (former Party City space) | Opening | November 2026 | opening soon | Barnes & Noble plans to open a new Henrietta store in the former Party City space at Market Square plaza, with an "opening soon" sign already posted in the window. The store is expected to open in November 2026 and will be located between Talbots Outlet and Famous Footwear. | https://www.democratandchronicle.com/story/money/business/2026/05/26/barnes-and-noble-opening-henrietta-ny-market-square-party-city/90258478007/ | 2026-05-26 14:45:00 |
-| Stacks Book Club | 2920 E. Broadway, Tucson, Arizona | Opening | Tuesday, May 26, 2026 | officially open to the public | Stacks Book Club opened its second location at 2920 E. Broadway in midtown Tucson on May 26, 2026. The new location is twice the size of the original Oro Valley store and will offer community events including author talks, yoga classes, and silent reading parties. | https://tucson.com/thisistucson/article_b684f34d-38bd-4432-ab01-ebd2a00bd8b0.html | 2026-05-26 14:38:27 |
+| --------------------------- | ------------------------------------- | ---------- | ---------- | ------ | ----------------- | ------------ | -------------- |
+| Avi Cados Tacos & Burritos | Avi Resort & Casino, Laughlin, NV | Opening | Not specified | grand opening | Avi Resort & Casino celebrated the grand opening of Avi Cados Tacos & Burritos on May 20. The fast-casual grab-and-go restaurant replaces Subway in the food court. It is a standalone outlet. | https://www.mohavedailynews.com/laughlin_entertainer/lauglins-avi-resort-casino-celebrates-grand-opening-of-avi-cados-tacos-burritos/article_78572eb3-9b45-43bd-88eb-9dd2a58d85bf.html | 2026-05-27 07:15:00 |
+| Furniture World Raleigh | Crabtree Valley Mall, 4325 Glenwood Ave., Raleigh, NC | Closing | Not specified | closing our current location to move to a bigger & better location | Furniture World is closing its location at Crabtree Valley Mall. The family-owned store sells furniture and mattresses and is promoting closing discounts. It plans to reopen elsewhere with locations in Burlington, Greensboro, and Norfolk, VA. | https://www.aol.com/articles/store-closing-crabtree-mall-raleigh-172410000.html | 2026-05-27 07:11:57 |
+| Chick-fil-A | Clovis on Shaw Avenue, Clovis, CA | Opening | Not specified | sets opening for new restaurant | Chick-fil-A sets opening for new restaurant in Clovis on Shaw Avenue. | https://www.msn.com/en-us/money/companies/chick-fil-a-sets-opening-for-new-restaurant-in-clovis-on-shaw-avenue/ar-AA23Hbv0 | 2026-05-27 06:46:42 |
+| Sports retailer (unspecified) | Multiple US locations | Closing | Not specified | closure of 175 underperforming stores | Sports retailer announces closure of 175 underperforming stores in US to focus on key locations. | https://www.msn.com/en-us/news/technology/sports-retailer-to-close-175-stores-focus-on-key-locations/ar-AA230yLX | 2026-05-27 06:27:34 |
+| Bloom Tattoo | 1540 Central Ave., Dubuque, IA | Opening | first week of July | to open | Josh Clicquennoi is opening Bloom Tattoo this summer after over a decade of tattooing. The shop is designed to be open and inviting. | https://www.telegraphherald.com/news/tri-state/article_25961204-0aaa-4ebd-8e55-166ee6c74f12.amp.html | 2026-05-27 06:00:00 |
+| HMC Tan Co. | 117 3rd St. SE, Dyersville, IA | Opening | June | eyes June opening | Husband-and-wife duo opening self-service tanning salon with hybrid beds. | https://www.telegraphherald.com/news/tri-state/article_25961204-0aaa-4ebd-8e55-166ee6c74f12.amp.html | 2026-05-27 06:00:00 |
+| Maquoketa Consignment and Estate Sale Emporium | 903 W. Platt St., Maquoketa, IA | Opening | Not specified (expansion) | expanding | Consignment store expanding to larger space allowing more items and consigners. | https://www.telegraphherald.com/news/tri-state/article_25961204-0aaa-4ebd-8e55-166ee6c74f12.amp.html | 2026-05-27 06:00:00 |
+| MGM Grand Buffet | MGM Grand, Las Vegas Strip, Las Vegas, NV | Closing | May 31, 2026 | permanent closure | MGM Grand announced permanent closure of its iconic buffet. Fans have until May 31, 2026. | https://www.aol.com/articles/iconic-las-vegas-strip-hotel-174536000.html | 2026-05-27 05:58:07 |
+| Fresh Kitchen | 818 S. Orlando Avenue, Winter Park, FL | Opening | this year | plans to open new location | Fresh Kitchen plans to open in former Chicken Guy! space. Build-your-own bowls concept; building to be remodeled. | https://www.aol.com/articles/fresh-kitchen-plans-open-location-145826000.html | 2026-05-27 05:57:22 |
+| Ashley furniture store | Great East Plaza, Niles, OH | Opening | June 6 | grand opening set | Grand opening set for new Ashley furniture store with giveaways and $5,000 shopping spree chance. | https://www.aol.com/articles/grand-opening-set-furniture-store-170753000.html | 2026-05-27 05:47:52 |
+| Luna’s Tex-Mex Cantina | Ward Village (near Rinka Japanese Restaurant), Honolulu, HI | Opening | recently (about a week ago) | is open | Luna’s Tex-Mex Cantina soft opened in Ward Village. Offers Tex-Mex fare like fajitas, enchiladas, and appetizers. | https://alohastatedaily.com/2026/05/26/lunas-tex-mex-cantina-is-open-in-ward-village/ | 2026-05-27 02:07:00 |
+| DMV Empanadas | 10 N. Calvert Street, Baltimore, MD | Opening | soon | expanding to new location | DMV Empanadas expanding to new Baltimore location. Known for empanada flavors and other dishes. | https://mocoshow.com/2026/05/26/dmv-empanadas-expanding-to-baltimore/ | 2026-05-27 00:39:53 |
+| Guzman y Gomez | Multiple locations, Chicago area, IL | Closing | May 22, 2026 | closed all locations | Mexican chain closed all 8 US locations in Chicago area after 6 years. | https://eciks.org/5944-74650-mexican-restaurant-chain-guzman-y-gomez-exits-us-after-6-years-in-chicago-closes | 2026-05-27 00:33:12 |
+| Rosegate Boutique | 22 Grand Corner Avenue, Gaithersburg, MD (Rio Lakefront) | Opening | May 29-30 | grand opening celebration | New boutique grand opening with events. Women's fashion and lifestyle. | https://mocoshow.com/2026/05/26/new-boutique-opening-in-rio/ | 2026-05-27 00:27:03 |
+| Safeway | 2220 N. Coast Hwy, Newport, OR | Closing | July 26 | closure | Safeway closing location with 69 layoffs. | https://www.aol.com/news/major-grocery-store-chain-announces-222955886.html | 2026-05-26 23:59:35 |
+| Sunflower Nails | 10030 Commerce Street, Summerville, GA | Opening | May 30 (grand opening) | opens her own location | Hoa opening Sunflower Nails full-service salon with grand opening events. | https://allongeorgia.com/chattooga-local-news/sunflower-nails-is-blooming-hoa-opens-her-own-location-in-downtown-summerville/ | 2026-05-26 23:59:32 |
+| Alexander’s Steakhouse | Normal, IL | Closing | May 31 | set to close | Restaurant's final day of operations (Peoria location to stay open). | https://www.25newsnow.com/2026/05/26/alexanders-steakhouse-normal-set-close/ | 2026-05-26 22:39:00 |
+| AC Hotel by Marriott Kennewick | Kennewick, WA | Opening | April 2027 | anticipated grand opening | Construction milestones for new hotel with convention center expansion. | https://www.prnewswire.com/news-releases/mhr-capital-group-announces-major-construction-milestones-for-ac-hotel-by-marriott-and-three-rivers-convention-center-expansion-in-kennewick-302782369.html | 2026-05-26 22:33:00 |
 
----
-
-**Non-working or unusable articles list:**
-
-- Article 103 — No business details; page returned only navigation/menu elements with no article content
-- Article 105 — Paywall / 403 Forbidden error; content not accessible
-- Article 110 — No article text; body was empty with no business details
-- Article 111 — Paywall / 403 Forbidden error; content not accessible
-- Article 114 — Paywall / 403 Forbidden error; content not accessible
-- Article 117 — Paywall / 403 Forbidden error; content not accessible
-- Article 118 — No business details; page returned only the text "MSN" with no article content
+**Notes:** Only USA/Canada articles with qualifying business events are included in the table (one row per distinct business where possible). Many MSN links had limited fetchable text. No zip codes were inferred.
