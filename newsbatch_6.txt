@@ -17,184 +17,441 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 Create ONE clean Markdown table with these exact column headers (in this order):
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
+🌎 Geographic filter (STRICT)
+• Only extract businesses located in the USA or Canada
+• If the article is about a business in any other country (UK, Australia, India, UAE, etc.) → DO NOT add any row to the table; add it ONLY to the Non-working list as "Outside USA/Canada"
+• If an article covers both USA/Canada locations AND international locations → extract only the USA/Canada rows, skip the rest; add the article to the Non-working list as "Outside USA/Canada (partial)"
+
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
-• If an article has zero relevant business opening or closure information, still include a row with:
+• If a USA/Canada article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
+• ❌ Never add a table row for articles outside USA/Canada — those go in the Non-working list only
 
 🚫 Strict constraints
 • ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+• ❌ No extraction of businesses outside USA or Canada
 
 📎 Final section (mandatory)
 At the very end of your response, add:
 Non-working or unusable articles List:
-• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+• Article number — Reason (paywall / no business details / duplicate / text missing / Outside USA/Canada / etc.)
 If none, write: None
 
 ✅ Articles below — extract now:
 
 
---- Article 101 ---
-URL: https://www.aol.com/articles/panda-express-opens-first-dublin-143000000.html
-Title: Panda Express opens first Dublin location with ribbon-cutting, donation
+--- Article 251 ---
+URL: https://www.msn.com/en-ie/foodanddrink/other/popular-cork-takeaway-vows-to-re-open-after-thief-captured-smashing-through-door/ar-AA23Wy9U?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Popular Cork takeaway vows to re-open after thief captured smashing through door
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 15:52:47
-
-David Rees Fri, May 22, 2026 at 2:30 PM UTC 0 Panda Express opens first Dublin location with ribbon-cutting, donation DUBLIN, Ohio ( WCMH ) — Panda Express opened its first Dublin location on Tuesday with a community celebration that included a ribbon-cutting ceremony, a charitable donation and giveaways for early customers. The restaurant, located at 2750 Summer Drive, officially opened on Tuesday and marked the occasion alongside the Dublin Chamber of Commerce. Company representatives presented a $1,000 donation to The Dublin Food Pantry during the event. The first 88 customers in line received commemorative t-shirts as part of the grand opening festivities. 4Ever Home: Quiet, gentle dog is up for adoption “Our entire Panda team is grateful to serve the Dublin community by providing new jobs and supporting local organizations through various fundraising opportunities,” said Tracy Zhen, Panda Express area coach of operations. “We hope to be a lasting part of the community and welcome all guests into our doors to try our American Chinese favorites.” The restaurant, located at 2750 Summer Drive, officially opened on Tuesday and marked the occasion alongside the Dublin Chamber of Commerce. (Courtesy Photo/Panda Express) The Dublin restaurant features Panda Express’ newer “Panda Home” design concept, which incorporates elements inspired by traditional Chinese architecture, including red lanterns, moon gate-style entryways and Chinatown-inspired signage. Advertisement The restaurant serves Panda Express menu staples including orange chicken, honey walnut shrimp and broccoli beef. Customers can also enroll in the company’s Panda Rewards loyalty program through the Panda Express app or website. When are the best times to travel in Ohio for Memorial Day weekend? Store hours are 10 a.m. to 10 p.m. Sunday through Thursday and 10 a.m. to 10:30 p.m. Friday and Saturday. Founded in 1983, Panda Express operates more than 2,500 locations worldwide. Copyright 2026 Nexstar Media, I
-
---- Article 102 ---
-URL: https://www.wkyc.com/article/life/food/raising-canes-open-akron-medina-road-fairlawn-montrose-chicken-menu-hours-drive-thru/95-682f4638-2db1-4055-869c-2c5e6cc5653e
-Title: Raising Cane’s to open new location in Akron on Wednesday: Opening day contest will give 20 customers free food for a year
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 15:49:00
-
-Food Raising Cane’s to open new location in Akron on Wednesday: Opening day contest will give 20 customers free food for a year You’ll find this new Cane’s restaurant at the same address once home to Melt Bar and Grilled at 3921 Medina Road, which closed permanently back in August of 2024. Credit: Rhea Ashlynn Photography / Raising Cane's AKRON, Ohio — Raising Cane’s is expanding in Northeast Ohio once again as the chicken chain’s newest location is opening its doors in Akron on Wednesday, May 27. You’ll find this new Cane’s restaurant just off I-77 in Summit County at the same address once home to Melt Bar and Grilled at 3921 Medina Road, which closed permanently nearly two years ago in August of 2024 . This story continues below. More in Food SUV crashes into Charleys Cheesesteaks in Parma after teen driver accidentally hits accelerator Asparagus crop concerns Donovan Mitchell shoutout gives The Breakfast Faktory in Maple Heights a playoff boost On the exterior, this new restaurant features a two-lane drive-thru. There's also a mural painted across the front of the building by local artist Lizzi Aronhalt "to celebrate the brand's personality and its connection to the community." Guests inside the restaurant, meanwhile, will find "tributes to the local culture," according to a press release from the company. This location will be open daily from 10 a.m. until 2 a.m. Raising Cane’s has multiple locations across Northeast Ohio, including North Canton, Cuyahoga Falls, Kent, Macedonia, Streetsboro, Strongsville, Middleburg Heights and Brooklyn. The chain’s menu focuses on fried chicken alongside its iconic Cane’s sauce, crinkle-cut fries, Texas toast and sweet tea. OPENING DAY HIGHLIGHTS The opening day festivities at the new Akron restaurant begin with a contest in which 20 customers (ages 13 and older) will win free Cane's for a year. Entries will be accepted starting at 8:30 a.m. until the drawing is held at 9:30 a.m. Customers must be present to win. A ribbon-cutti
-
---- Article 103 ---
-URL: https://www.theconnecticutscoop.com/all-new-haven-county-posts/southbury-scoop-blue-fig-garden-sets-opening-date-in-southbury
-Title: SOUTHBURY SCOOP: Blue Fig Garden sets opening date in Southbury!
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 15:42:46
-
-HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
-
---- Article 104 ---
-URL: https://www.irishexaminer.com/food/arid-41851833.html
-Title: Mexican restaurant Zambrero opens fifth Cork location at the Marina Market
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 15:37:00
-
-Homepage Food & Recipes Mexican restaurant Zambrero opens fifth Cork location at the Marina Market Known for its fresh, Mexican-inspired dishes and modern superfood ingredients, Zambrero offers a healthier alternative to traditional fast food Niall O'Connor, operations manager and Jess Womersley, area manager of Zambrebro. Picture: Rebecca Doody. Tue, 26 May, 2026 - 16:37 Breda Graham       Zambrero has opened its newest restaurant at Marina Market in Cork, marking the brand’s fifth location in the food capital of Ireland. The new opening joins Zambrero’s existing Cork locations at Dennehy’s Cross, Douglas Village Shopping Centre, Sallybrook in Glanmire, and Eastgate in Little Island. Known for its fresh, Mexican-inspired dishes and modern superfood ingredients, Zambrero offers a healthier alternative to traditional fast food. The menu features burritos, bowls, tacos, nachos, quesadillas, and a wide range of vegetarian, vegan, and gluten-free options, all made to order. Speaking about the brand’s expansion into Cork’s largest indoor and outdoor market, general manager Darragh Fanning said: “We’re delighted to open our fifth Zambrero location in Cork, particularly in such a landmark destination as Marina Market, which has become a real hub for social gatherings, great atmosphere and quality food. The Zambrero team at the Marina Market Cork. Picture: Rebecca Doody. “I previously visited Marina Market while holidaying in Cork, and saw first-hand the incredible energy and mix of brands it brings together, so it’s fantastic to now see Zambrero become part of that offering and bring even more choice to customers.” The new location joins more than 35 food outlets and retail stands at the Marina Market. Read More 'This is a better site': Marina Market boss on his plans for a Cork events centre Five quick and easy barbecue recipes to cook while the sun shines Taste of summer: Seven hacks from experts for the best summer barbecue “We’re also delighted to be joining such
-
---- Article 105 ---
-URL: https://www.pennlive.com/life/2026/05/clothing-chain-to-close-all-stores-by-next-month.html?outputType=amp
-Title: Clothing chain to close all stores by next month
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 15:36:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.pennlive.com/life/2026/05/clothing-chain-to-close-all-stores-by-next-month.html?outputType=amp]
-
---- Article 106 ---
-URL: https://www.socialnews.xyz/2026/05/26/actress-pooja-ramachandran-graces-the-grand-opening-of-laura-salon-and-spa-in-kondapur-gallery/
-Title: Actress Pooja Ramachandran Graces The Grand Opening Of Laura Salon And Spa In Kondapur
-Status hint: Opening | Industry: Health / Beauty
-Published: 2026-05-26 15:32:20
-
-Home » Gallery » Tollywood » Actress Pooja Ramachandran Graces The Grand Opening Of Laura Salon And Spa In Kondapur – Gallery Posted By: Harsha Vardhan May 26, 2026 Actress Pooja Ramachandran Graces The Grand Opening Of Laura Salon And Spa In Kondapur – Gallery (Photo:SocialNews.XYZ/NewsHelpline.com) Actress Pooja Ramachandran Graces The Grand Opening Of Laura Salon And Spa In Kondapur – Gallery (Photo:SocialNews.XYZ/NewsHelpline.com) Actress Pooja Ramachandran Graces The Grand Opening Of Laura Salon And Spa In Kondapur – Gallery (Photo:SocialNews.XYZ/NewsHelpline.com) Actress Pooja Ramachandran Graces The Grand Opening Of Laura Salon And Spa In Kondapur – Gallery (Photo:SocialNews.XYZ/NewsHelpline.com) Facebook Comments About Harsha Mail Like this: Like Loading…
-
---- Article 107 ---
-URL: https://www.conveniencestore.co.uk/stores/popular-north-devon-c-store-sold-to-new-owners/719379.article
-Title: Popular North Devon c-store sold to new owners
-Status hint: Opening | Industry: Convenience Stores / Distributors
-Published: 2026-05-26 15:29:30
-
-No comments South View Stores in the Devon village of Shebbear has been sold but will remain a store with its new owners. Estate agents Christie & Co. have just announced the sale of the independently-run South View Stores in North Devon. The freehold property’s appeal was boosted by an adjoining three-bedroom house, and is located in the village of Shebbear between Bideford and Okehampton in the county. After seven offers and twelve viewings, the business has been sold to a first-time operator, highlighting “continued appetite from both experienced operators and those new to the sector,” agent Matthew McFarlane from Chistie’s said. Outgoing owner, Keith Horwell, said: “It’s has been a pleasure working and operating the store for so many years. The local community have been great in supporting us and vice versa. “I’d very much like to thank all out loyal customers and staff - some of whom have been great friends for their custom. Of course, all good things come to an end and we’ve now decided to take retirement.” Incoming owner, Bharat Odedra, added: “We’re really pleased to have taken over South View Stores and very much look forward to continuing the hard work Keith and Anne have put in over the years, and hope to add and expand on the overall product offering to suit out customers’ needs.” Topics Community Staff No comments
-
---- Article 108 ---
-URL: https://www.chroniclelive.co.uk/whats-on/food-drink-news/north-east-branch-burger-king-34014308
-Title: North East branch of Burger King confirmed to re-open and give away 1,000 free burgers
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 15:20:00
-
-North East branch of Burger King confirmed to re-open and give away 1,000 free burgers A busy branch of Burger King will re-open this week and mark the occasion by giving away loads of burgers for free Simon Duke What's On Editor 16:20, 26 May 2026 View Image A Whopper from Burger King (Image: Burger King UK) If, when it comes to your takeaway go-to, you always have sights set on a Burger King, you might want to be in the vicinity of South Tyneside this week. And that's because the branch of the famous fast food chain in Jarrow is about to re-open and not only that - it will mark the occasion by giving away a THOUSAND free burgers. ‌ People stay rather loyal when it comes to where they get their fast food from, either as a treat, a cheat meal or to cure a hangover and, while some of us are of the more Maccy D's persuasion, there many people out there who think you can't go wrong with a Burger King. Well, if you fall into that category and love a freebie, cancel all plans for tomorrow, Wednesday, May 27, as Jarrow Burger King will re-open with a very tasty offer. ‌ It has been confirmed that the first 1,000 customers to arrive on the first day can get free Whopper or Chicken Royale burgers. And there's an extra incentive to get down early doors, as the 100th customer through the doors at the Towers Place restaurant on re-opening day will win a year’s supply of Burger King food. ‌ READ MORE: 12 chippies to battle for Best in North East title at English Fish and Chip awards The refurbished Jarrow branch of Burger King will not only have a new look, but also new features for customers to look forward to, like table service. It's going to be open for longer too, with the restaurant now open until 10pm from Sunday to Wednesday and 10am until 11pm between Thursday and Saturday. Article continues below The burger giveaway has been teased in a reel shared on Burger King's social media channels, with the short clip reading: ' South Shields , want a free Whopper? Head to your 
-
---- Article 109 ---
-URL: https://www.actionnetwork.com/news/hollywood-casino-aurora-set-to-open-soon
-Title: Hollywood Casino Aurora Set To Open Soon
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 15:19:00
-
-Turn your sports knowledge into winning
-                  predictions 21+ or 18+ in Certain Locations. 19+ in ON. Please Play Responsibly. Gambling Problem? Call 1-800-GAMBLER. Visit connexontario.ca or Call 1-866-531-2600 in ON. No Code Needed Home Right Arrow News Hollywood Casino Aurora Set To Open Soon Dave Grendzynski Casino Writer Download App Updated: May 26, 2026, 11:19 AM EDT Updated: May 26, 2026, 11:19 AM EDT 3 min read Credit: Pictured: Hollywood Casino Aurora in Aurora, Illinois. (Credit: Hollywood Casino) Hollywood Casino Aurora is about to enter a brand‑new chapter. After decades on its well‑known riverboat in downtown Aurora, the casino is moving to a modern, land‑based resort next to the Chicago Premium Outlets. The grand opening is still on track for June 24th, pending final approvals. With the date only weeks away, excitement is building fast. It will also open just months before a new casino in Joliet . It, too, will replace an old riverboat casino . A More Convenient Location The new Hollywood Casino Aurora will sit near I‑88. This spot is easier to reach than the old riverboat and places the casino directly across from one of the region’s busiest shopping destinations. The move is part of Illinois’ updated gaming laws, which now allow riverboat casinos to relocate onto land. For Aurora, this shift means a stronger, more competitive entertainment hub. Hollywood Casino Aurora. Image Credit: Penn Entertainment What’s Coming to the New Resort The new property isn’t just a casino — it’s a full entertainment resort designed to attract visitors from across Chicagoland. Gaming & Sportsbook Around 1,200 gaming positions, including slots and table games A retail sportsbook for in‑person sports betting Hotel & Spa A four‑star hotel with 220–226 rooms A full‑service spa for guests Dining & Bars An Italian steakhouse (such as the proposed Sorella by Giada ) An Asian noodle bar A sports bar and several casual dining spots Events & Entertainment A 12,000‑sq‑f
-
---- Article 110 ---
-URL: https://www.mibolsillo.co/why-7-popular-restaurant-chains-are-shuttering-locations-across-america-t202605260016.html
-Title: Why 7 Popular Restaurant Chains Are Shuttering Locations Across America
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-26 15:15:00
-
-
-
---- Article 111 ---
-URL: https://bringmethenews.com/minnesota-lifestyle/spanish-restaurant-and-bakery-to-open-in-former-home-of-handsome-hog
-Title: Spanish restaurant and bakery to open in former home of Handsome Hog
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 15:09:57
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://bringmethenews.com/minnesota-lifestyle/spanish-restaurant-and-bakery-to-open-in-former-home-of-handsome-hog]
-
---- Article 112 ---
-URL: https://wgno.com/news/louisiana/jefferson-parish/zea-rotisserie-bar-temporarily-closes-clearview-mall-location-preps-for-relocation/amp/
-Title: Zea Rotisserie & Bar temporarily closes Clearview Mall location, preps for relocation
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 15:01:57
-
-METAIRIE, La. ( WGNO ) — Zea Rotisserie & Bar will temporarily close its longtime Clearview Mall location as it prepares to open its new, stand-alone spot in Clearview City Center. According to Zea officials, the new location will highlight the restaurant’s approach at a “refreshed guest experience,” which will feature an expanded bar area, outdoor patio seating and open kitchen with a viewable rotisserie. The new location will reflect Zea’s evolution over its three decades in business while also staying grounded in the elevated level of hospitality guests have enjoyed, Taste Buds Management CEO Paul Hutson announced. (Courtesy: Greenleaf Architects) (Courtesy: Greenleaf Architects) (Courtesy: Greenleaf Architects) “We’re excited to welcome guests into this new space and introduce an elevated experience designed for the future of the brand while continuing to serve the Metairie community that we’ve been proud to call home for nearly 30 years,” Hutson said. In the new, refined restaurant, it will feature a “modern, upscale-casual atmosphere” with a mixture of cozy booths, dining chairs and an enhanced bar experience for guests. For more information, visit the Zea restaurant website . Stay up to date with the latest news, weather and sports by downloading the WGNO app on the Apple or Google Play stores and by subscribing to the WGNO newsletter . Latest Posts Rain chances higher again on Wednesday Packers running back Josh Jacobs arrested on domestic abuse charges Opelousas shooting: One dead, two injured Energy Department takes steps toward allowing plutonium, historically used in weapons, in nuclear fuel WATCH: 20 migrants found inside truck as driver flees
-
---- Article 113 ---
-URL: https://wwd.com/sourcing-journal/sj-denim/orta-shuts-down-rumors-claiming-business-is-closing-1238979870/
-Title: Orta Shuts Down Rumors Claiming the Business Is Closing
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 15:01:37
-
-Orta Courtesy Share this article on Facebook Share this article on X Share this article on Google Preferred Share this article on Pin It Share this article on Flipboard Share this article on Tumblr Share this article on Reddit Share this article on LinkedIn Share this article on WhatsApp Share this article on Email Print this article Share this article on Talk Share this article on Facebook Share this article on X Share this article on Google Preferred Share this article on Pin It Share this article on Flipboard Share this article on Tumblr Share this article on Reddit Share this article on LinkedIn Share this article on WhatsApp Share this article on Email Print this article Share this article on Talk Turkish denim mill Orta is shutting down, according to rumors that it is going out of business. “We can confirm that Orta continues to operate as usual,” a representative from the company told SJ Denim. “We have recently made some pricing adjustments in response to rising costs in our supply chain, and we remain fully committed to serving our customers with the same quality they have always known,” the rep continued. Rumors about the mill closing began circulating a few weeks ago. It was also widely discussed at Denim PV in Milan last week. Several representatives from other mills said they’ve heard about Orta winding down. Others said Orta employees have been searching for job opportunities; another said their company is fulfilling orders for Orta’s clients. Orta did not exhibit at Denim PV. However, the company did present its Fall/Winter 2027-2028 collection at Kingpins Amsterdam in April. Known for R&D and introducing first-to-market products, the F/W 27-28 collection features Archroma’s new wool waste-based dye solution , cashmere wool blends and an expanded range of finishes and overdyes. SJ Newsletters Receive Our Daily Newsletter & Special Offers Sign Up
-
---- Article 114 ---
-URL: https://www.reutersconnect.com/item/the-gift-shop-of-planet-hollywood-right-is-open-for-business-on-may-22-1996-but-the-25000-square-foot-restaurant-adjoined/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX01UMVVTQVRPREFZMjkwNTYyNDg
-Title: Licensable picture: The gift shop of Planet Hollywood, right, is open for business on May 22, 1996, but the 25,000-square-foot restaurant adjoined
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 15:01:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.reutersconnect.com/item/the-gift-shop-of-planet-hollywood-right-is-open-for-business-on-may-22-1996-but-the-25000-square-foot-restaurant-adjoined/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX01UMVVTQVRPREFZMjkwNTYyNDg]
-
---- Article 115 ---
-URL: https://www.courier-journal.com/story/entertainment/dining/restaurant/2026/05/26/the-house-of-marigold-breakfast-brunch-restaurant-louisville-ky/89933427007/
-Title: The House of Marigold serves colorful brunch, set to open second location
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 15:01:00
-
-RESTAURANTS The House of Marigold serves colorful brunch, set to open second location Lennie Omalza Special to The Courier Journal Updated May 26, 2026, 11:01 a.m. ET Brunch is my favorite meal of the day — and when people ask me for midmorning meal restaurant recommendations, The House of Marigold is always on my list.
-
---- Article 116 ---
-URL: https://www.fox35orlando.com/news/fresh-kitchen-open-new-location-winter-park
-Title: Fresh Kitchen plans to open new location in Winter Park
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 14:58:26
-
-The Brief Fresh Kitchen plans to open a new location in Winter Park. The restaurant will take over the former location of Chicken Guy! on South Orlando Avenue. Fresh Kitchen, the Tampa-based chain, is known for its build-you-own bowls concept. WINTER PARK, Fla. - The former Chicken Guy restaurant in Winter Park is getting a "fresh" new tenant. Fresh Kitchen, the Tampa-based chain known for its build-your-own bowls concept, is moving into the now-vacant space on South Orlando Avenue. CLICK TO DOWNLOAD THE FOX LOCAL APP What we know: The company shared a social media tease in February revealing plans for a Winter Park location, but it didn't say exactly where the restaurant would be. Fresh Kitchen revealed plans on social media to open a new location in Winter Park. (Credit: Fresh Kitchen/Facebook) Permits filed with the city show the Fresh Kitchen taking over the building at 818 S. Orlando Avenue, which was previously the spot for Chicken Guy! Chicken Guy!, a concept from celebrity chef Guy Fieri and restaurateur Robert Earl, shuttered in 2025. It still has a location at Disney Springs. SIGN-UP FOR FOX 35'S BREAKING NEWS, DAILY NEWS NEWSLETTERS According to city documents, the building will be remodeled for the new tenant. Construction work received approval to begin earlier this month. The restaurant is expected to open this year. FOX 35 has reached out to Fresh Kitchen about the new location but has not yet received a response. What is Fresh Kitchen? The company is a build-your-own bowls quick-service restaurant with a menu that offers fresh ingredients, including greens, seasoned vegetables, rice and proteins such as chicken and salmon. Fresh Kitchen has several Central Florida locations, including Lake Mary, SoDo, Waterford Lakes and Winter Garden. It has 17 locations across the state. The Source: This article was written with information from city of Winter Park permits and documents and Fresh Kitchen. Winter Park Orange County News Business Food and Drink
-
---- Article 117 ---
-URL: https://www.pennlive.com/food/2026/05/paris-baguette-bakery-cafe-to-open-in-cumberland-county.html
-Title: Paris Baguette bakery cafe to open in Cumberland County
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 14:58:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.pennlive.com/food/2026/05/paris-baguette-bakery-cafe-to-open-in-cumberland-county.html]
-
---- Article 118 ---
-URL: https://www.msn.com/en-us/travel/news/killington-s-closing-ski-weekend-gives-guests-chances-to-ski-bike-and-golf-on-the-same-day/ar-AA23QW7l?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Killington's closing ski weekend gives guests chances to ski, bike and golf on the same day
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 14:54:32
+Published: 2026-05-27 07:30:34
 
 MSN
 
---- Article 119 ---
-URL: https://www.democratandchronicle.com/story/money/business/2026/05/26/barnes-and-noble-opening-henrietta-ny-market-square-party-city/90258478007/
-Title: Barnes & Noble opening new Henrietta store in former Party City space
+--- Article 252 ---
+URL: https://www.mohavedailynews.com/laughlin_entertainer/lauglins-avi-resort-casino-celebrates-grand-opening-of-avi-cados-tacos-burritos/article_78572eb3-9b45-43bd-88eb-9dd2a58d85bf.html
+Title: Lauglin's Avi Resort & Casino celebrates grand opening of Avi Cados Tacos & Burritos
+Status hint: Opening | Industry: Hospitality
+Published: 2026-05-27 07:15:00
+
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.mohavedailynews.com/laughlin_entertainer/lauglins-avi-resort-casino-celebrates-grand-opening-of-avi-cados-tacos-burritos/article_78572eb3-9b45-43bd-88eb-9dd2a58d85bf.html]
+
+--- Article 253 ---
+URL: https://www.aol.com/articles/store-closing-crabtree-mall-raleigh-172410000.html
+Title: Store closing at Crabtree mall in Raleigh offers discounts. What we know
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-27 07:11:57
+
+Simone Jasper Tue, May 26, 2026 at 5:24 PM UTC 0 A store is moving from its space at Crabtree Valley Mall in Raleigh. (Travis Long/tlong@newsobserver.com) A store is closing its doors at Crabtree Valley Mall. Furniture World is moving out of its space at the popular Raleigh shopping center. The store — which sells sofas, dining room sets, and other household items — said it will re-open somewhere else. “After many wonderful years of serving our Raleigh community, we are closing our current location to move to a bigger & better location to serve you in the future,” Furniture World Raleigh wrote May 9 in a Facebook post. What is Furniture World? Furniture World is on the first level of Crabtree mall , near Macy’s. The store said its Raleigh showroom “features a curated selection of furniture and mattresses displayed in room settings so you can see how pieces look together.” “We’re a family-owned furniture store offering a wide selection of living room, bedroom, dining room, home office, outdoor furniture, and mattresses,” the store wrote on its website. The News & Observer noted social media posts and signs at the mall but didn’t see a specific closing date listed. As of Memorial Day weekend, the store was promoting closing-related discounts for shoppers . “This is not a test… The store is actually closing,” Furniture World Raleigh wrote Friday, May 22 in a Facebook post. Furniture World also has locations in Burlington and Greensboro as well as in Norfolk, Virginia. The store didn’t immediately share additional information with The News & Observer on Tuesday, May 26. Advertisement The N&O also has reached out to Crabtree to learn what could replace Furniture World and is awaiting a response. Other changes at Crabtree mall The closure is one of the latest shakeups at Crabtree Valley Mall , which is located at 4325 Glenwood Ave. in Raleigh. As of May 12, Urban Planet by Charlotte Russe was coming to a former Toys ‘R’ Us space at the mall. The shopping center didn’t lis
+
+--- Article 254 ---
+URL: https://www.travelandtourworld.com/news/article/mg8v55n25ofp/
+Title: Europe, Asia, and the Middle East Witness Global Hotel Alliance (GHA) Expansion with Four Premium Hotel Brands Boosting Luxury Travel Options: Everything You Need to Know
+Status hint: Opening | Industry: Hospitality
+Published: 2026-05-27 06:57:31
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/mg8v55n25ofp/]
+
+--- Article 255 ---
+URL: https://www.msn.com/en-us/money/companies/chick-fil-a-sets-opening-for-new-restaurant-in-clovis-on-shaw-avenue/ar-AA23Hbv0
+Title: Chick-fil-A sets opening for new restaurant in Clovis on Shaw Avenue
+Status hint: Opening | Industry: Restaurants
+Published: 2026-05-27 06:46:42
+
+MSN
+
+--- Article 256 ---
+URL: https://www.msn.com/en-us/news/technology/sports-retailer-to-close-175-stores-focus-on-key-locations/ar-AA230yLX
+Title: Sports retailer announces closure of 175 underperforming stores in US
+Status hint: Closing | Industry: Sporting Goods
+Published: 2026-05-27 06:27:34
+
+MSN
+
+--- Article 257 ---
+URL: https://hh-today.com/36546-2/
+Title: What’s in store for Albany riverfront lots?
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 14:45:00
+Published: 2026-05-27 06:10:47
 
-BUSINESS Barnes & Noble opening new Henrietta store in former Party City space Marcia Greenwood Rochester Democrat and Chronicle May 26, 2026, 10:45 a.m. ET Barnes & Noble plans to open a store this year in Henrietta. An “opening soon” sign has been posted in the window of the former Party City space in Market Square plaza, 620 Jefferson Road. The store will open in November 2026, according to the Barnes & Noble website. The chain, which is in the throes of a major brick-and-mortar revival , has around 700 locations nationwide. Five of them are in the Rochester market: at Pittsford Plaza, the Towne Center at Webster, The Mall at Greece Ridge, College Town and Eastview Mall. Party City closed all its stores in early 2025 after filing for Chapter 11 bankruptcy in late 2024. It now has a presence in some Staples stores. What happened to the Barnes & Noble at RIT? In 2022, Barnes & Noble closed its store at the Park Point complex at Rochester Institute of Technology in Henrietta. The location also served at the school’s bookstore. Instead, RIT partnered with a virtual bookstore company, saying students preferred having low-cost school materials delivered to them. Beyond that, ambitions for the RIT Barnes & Noble to become a community destination never materialized. The Market Square Barnes & Noble will be in between the Talbots Outlet and Famous Footwear. Reporter Marcia Greenwood covers the grocery business and consumer-focused grocery news, as well as retail development, openings and closings. Send story tips to mgreenwo@rocheste.gannett.com. Follow her on X @MarciaGreenwood. Featured Weekly Ad
+What’s in store for Albany riverfront lots? – Hasso Hering HASSO HERING A perspective from Oregon’s mid-Willamette Valley | Facebook | X | YouTube Toggle navigation HOME ABOUT CONTACT COMMENTS MAILING LIST VIDEOS ADVERTISE WEATHER What’s in store for Albany riverfront lots? Written May 26th, 2026 by Hasso Hering Comments: 10 responses. The seven-story Gordon hotel and apartment building is under construction on the Willamette riverfront in Corvallis. (Photo was taken on May 14.) On a bike ride in Corvallis this month, I came across a big construction project of the Eugene-based Obie Companies, and I wondered if the developer has a similar, though  probably smaller, project in mind for Albany as well. At the corner of First and Madison streets in Corvallis, across the street from that city’s Riverfront Park, Obie is building what has been billed as the Gordon Hotel and Gordon Residences. The project will have seven floors accommodating 75 guest rooms in the hotel portion and 92 apartments in the rest. The company’s website says the project “will offer locals and visitors the right mix of engaging social spaces, food and beverage offerings and an environment for connection.” Several broadcast outlets and the Corvallis-Albany newspaper all had stories about this project when Obie announced it in October 2024. They said the apartments would rent for market rates. But none of he stories I saw said anything about parking in downtown Corvallis. The Corvallis Gordon, named to echo a similar development in Eugene, is being advertised as opening in 2027. In Albany, Obie Companies has an option to buy, for $1,710,000, three city-owned parking lots on the south side of Water Avenue. The properties are the former Penney’s lot, the lot between the closed Eagles lodge and the Ellsworth Street Bridge, and the lot between the Ellsworth and Lyon Street bridges. Before any sale takes place, Obie and the city would have to negotiate, and the city council would have to approve, a develo
 
---- Article 120 ---
-URL: https://tucson.com/thisistucson/article_b684f34d-38bd-4432-ab01-ebd2a00bd8b0.html
-Title: Stacks Book Club opens second Tucson location this week
+--- Article 258 ---
+URL: https://www.telegraphherald.com/news/tri-state/article_25961204-0aaa-4ebd-8e55-166ee6c74f12.amp.html
+Title: Biz Buzz: Tattoo shop to open in Dubuque; Dyersville tanning salon eyes June opening; Maquoketa consignment business expanding
+Status hint: Opening | Industry: Health / Beauty
+Published: 2026-05-27 06:00:00
+
+Josh Clicquennoi is opening up Bloom Tattoo after more than a decade of tattooing in the tri-state area. Thomas Gleason ▲ Subscribers: Log in here Please subscribe to keep reading Log in Online Only - $8.95/3mo--$14.95/mo Learn More DTI Comp Grace Learn More Comp Online Subscription Learn More Online Only - $6.95/3mo--$14.95/mo Learn More Online Only - $1/4mo--$14.95/mo Learn More Online Only - $5.55/5mo--$11.11/5mo--$14.95/mo Learn More Online Only - $95.40/year--no autorenew Learn More Online Only - $0.99/10wks--$14.95/mo Learn More Online Only - $125/1year--$14.95/mo Learn More Access for Print Subscribers Learn More Online Only - $5/12mo--$14.95/mo Learn More Online Only - $3/3mo--$9/mo Learn More Online Only - $14.95/mo Learn More Online Only - $10/18mo--$14.95/mo Learn More Online Only - $12.95/12mo--$14.95/mo Learn More Online Only - $1/4mo--$10.95/8mo--$14.95/mo Learn More Online Only - $1/4mo--$12.95/8mo--$14.95/mo Learn More Online Only - $12.95/8mo--$1/3mo--$14.95/mo Learn More Online Only - $2/3mo--$12.95/9mo--$14.95/mo Learn More Online Only - $5/3mo--$12.95/12mo--$14.95/mo Learn More Online Only - $75/1year--$14.95/month Learn More Online Only - $3/3mo--$12.95/mo Learn More Print and Online - $45/3mo - $26.50/mo Learn More Online Only - $1/3mo--$13.95/mo Learn More Online Only - $5/2mo--$10/10 mo - $14.95 Learn More Online Only - $38.85/quarter Learn More Online Only - $26/6 mo - $14.95/mo Learn More Online Only - $20.22/4 mo - $14.95/mo Learn More Online Only - $5/3mo--$14.95/mo Learn More Online Only - $7/7mo--$15.50/mo Learn More Online Only - $1/4mo--$15.50/mo Learn More Online Only - $15.95/mo Learn More Online Only $7/3 months - $15.50 after Learn More Online Only - $10/month for 3 months, then $15.95 Learn More Online Only - $140/year Learn More Online Only - $8.95/3mo - $15.95/mo after Learn More Online Only - $5/week Learn More Online Only - $6.95/3mo - $15.95/mo after Learn More Online Only - $150/year Learn More Comp Subscription - Prize Win
+
+--- Article 259 ---
+URL: https://www.aol.com/articles/iconic-las-vegas-strip-hotel-174536000.html
+Title: And It's Closing Soon
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-27 05:58:07
+
+Autumn Swiers Mon, April 20, 2026 at 5:45 PM UTC 0 Panoramic view of the Las Vegas Strip - Randyandy101/Getty Images It's the end of an era. There was a time when Elvis put Las Vegas on the map as an entertainment destination, and over half a century later, hedonists are still singing "Viva Las Vegas." Central to that neon landscape were strip mall steakhouses and the institution of the Vegas buffet. Soon, however, one giant pillar in this dwindling arena will be closing its doors into the past: the MGM Grand Buffet. Earlier this month, MGM Grand announced the permanent closure of its iconic buffet. Fans have until May 31, 2026, to fill their final plates and say their farewells. The Strip has seen more than a few changes over the years, and perhaps more closures than evolutions. Casino buffets were once part of the Vegas identity; MGM's Grand Buffet has been around since the resort opened in 1993. Now, the all-you-can-eat concept that once fueled late nights in Sin City is nearly extinct, while prices are rising all over the Strip. In addition to food, buffets once served as a proprietary strategy for resorts and casinos to keep guests on-premises. Over time, however, the buffet has given way to fine dining concepts and celebrity chef restaurants. Casino.org reported that, since 2000, 75% of casino revenue has come from high-end dining and entertainment compared to just 25% from gaming; until the '80s, gaming accounted for that 75%. This phased-out buffet exeunt was further accelerated by COVID-19 closures in 2020. Further north, only two casino buffets are still standing in Atlantic City . Read more: 15 Mistakes Everyone Makes When Eating At A Steakhouse Advertisement It's the end of an era for MGM's Grand Buffet MGM Grand Buffet building on the Las Vegas Strip - Natascha Kaukorat/Shutterstock At the end of Scorsese's "Casino" (1995) , set in Las Vegas, a voiceover Robert De Niro waxed, "The town will never be the same." Now, don't go singing any premature elegies
+
+--- Article 260 ---
+URL: https://www.aol.com/articles/fresh-kitchen-plans-open-location-145826000.html
+Title: Fresh Kitchen plans to open new location in Winter Park
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 14:38:27
+Published: 2026-05-27 05:57:22
 
-Facebook Twitter Bluesky WhatsApp SMS Email Facebook Twitter Bluesky WhatsApp SMS Email Print Copy article link Facebook Twitter Bluesky WhatsApp SMS Email Print Copy article link Stacks Book Club ’s new, second location is finally opening in Tucson this week, and I personally couldn’t be more excited! The popular Oro Valley bookstore and coffee bar has been a fixture in the community for the past three years, offering a relaxed, social space for book lovers to connect or just grab a coffee and hang out. The expansion has been a long time coming, and the new location at 2920 E. Broadway will officially open to the public on Tuesday, May 26, bringing the same delicious drinks, new books and welcoming atmosphere to midtown Tucson. Owner Lizzy Jeffrey-Franco says the 2920 E. Broadway location is twice the size of the original Stacks Book Club in Oro Valley. Mamta Popat, Arizona Daily Star I’ve been eagerly awaiting the opening since it was announced late last August, and I can’t wait to stop in for a coffee and add a few new books to my shelves. Owner Lizzy Jeffrey-Franco said that the new larger space also means more opportunities for new exciting community events, so be on the lookout for event announcements over the next couple of months. Register for more free articles. Log in Sign up Back to homepage Subscriber Login Keep reading with a digital access subscription. Subscribe now “We have tons of plans for future community events and book clubs at the new location,” Jeffrey-Franco said. Some of the ideas Jeffrey-Franco said they have considered include yoga classes and silent reading parties, but if you’re anything like me, you’ll also be excited to hear that they already have author talks scheduled at the new location, so you won’t miss out on any of the literary fun. Owners Crispin and Lizzy Jeffrey-Franco sit in their new location for Stacks Book Club at 2920 East Broadway. The bookstore and cafe will open on Tuesday, May 26. Mamta Popat, Arizona Daily Star “I'm
+Ashley Carter Tue, May 26, 2026 at 2:58 PM UTC 0 The Brief Fresh Kitchen plans to open a new location in Winter Park. The restaurant will take over the former location of Chicken Guy! on South Orlando Avenue. Fresh Kitchen, the Tampa-based chain, is known for its build-you-own bowls concept. WINTER PARK, Fla. - The former Chicken Guy restaurant in Winter Park is getting a "fresh" new tenant. Fresh Kitchen, the Tampa-based chain known for its build-your-own bowls concept, is moving into the now-vacant space on South Orlando Avenue. CLICK TO DOWNLOAD THE FOX LOCAL APP What we know The company shared a social media tease in February revealing plans for a Winter Park location, but it didn't say exactly where the restaurant would be. Fresh Kitchen revealed plans on social media to open a new location in Winter Park. (Credit: Fresh Kitchen/Facebook) Permits filed with the city show the Fresh Kitchen taking over the building at 818 S. Orlando Avenue, which was previously the spot for Chicken Guy! Chicken Guy!, a concept from celebrity chef Guy Fieri and restaurateur Robert Earl, shuttered in 2025. It still has a location at Disney Springs. Advertisement SIGN-UP FOR FOX 35'S BREAKING NEWS, DAILY NEWS NEWSLETTERS According to city documents, the building will be remodeled for the new tenant. Construction work received approval to begin earlier this month. The restaurant is expected to open this year. FOX 35 has reached out to Fresh Kitchen about the new location but has not yet received a response. What is Fresh Kitchen? The company is a build-your-own bowls quick-service restaurant with a menu that offers fresh ingredients, including greens, seasoned vegetables, rice and proteins such as chicken and salmon. Fresh Kitchen has several Central Florida locations, including Lake Mary, SoDo, Waterford Lakes and Winter Garden. It has 17 locations across the state. The Source This article was written with information from city of Winter Park permits and documents and Fresh Kitchen.
+
+--- Article 261 ---
+URL: https://us.fashionnetwork.com/news/Louis-vuitton-reopens-transformed-womenswear-store-on-harrods-superbrands-floor,1835341.html
+Title: Louis Vuitton reopens transformed womenswear store on Harrods Superbrands floor
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 05:50:57
+
+By Sandra Halliday Published May 27, 2026 Reading time 2 minutes Print Text size aA+ aA- Louis Vuitton reopens transformed womenswear store on Harrods Superbrands floor By Sandra Halliday Published May 27, 2026 Louis Vuitton has opened its newly redesigned womenswear store in the heart of Harrods ’ ultra-luxury Superbrands floor. Louis Vuitton In celebration of the redesign, the store will open with an exclusive pre-launch of the Gold Mine ready-to-wear collection. Also exclusive to Harrods, there’s a pearl grey leather unique Capucines East-West Mini bag is sublimed. A one-of-a-kind hand-painted hard-sided pyramid and a special painted ‘London’ design are also solely available at the store. And this really is a ‘store’ in its own right rather than just a concession or space within a department store. The Superbrands units inside Harrods are a world apart from many other branded areas inside such stores globally, acting almost as flagships-within-a-mega-flagship and simply radiating luxury. Ads So what can we now find within the brand’s new U-shaped space? For a start, it “unites the entire Louis Vuitton womenswear offering, serving as a one-stop shopping destination” for leather goods, shoes, ready-to-wear, accessories, watches, high jewellery, fragrance and more. Louis Vuitton Style-wise the reopened boutique blends “Edwardian design [that] converses with emblematic Art Deco in a love letter to Harrods’ architectural fabric, incorporating some of the department store’s most treasured stylistic touches into the Louis Vuitton universe. “Ceiling mouldings frame intimate seating areas, while grand, golden wall panels, curved wooden portals and vaulted ceilings celebrate the diversified spaces showcased in the new store”. Clients will also find a textured plastered focal wall and ceiling wrap as they enter via leather goods and explore among vintage Murano glass sconces and pass a wood marquetry and brass table by Philippe Hurel. They then meet arched doorways that giv
+
+--- Article 262 ---
+URL: https://www.aol.com/articles/grand-opening-set-furniture-store-170753000.html
+Title: Grand opening set for new furniture store in Niles
+Status hint: Opening | Industry: Furniture / Mattress
+Published: 2026-05-27 05:47:52
+
+Patty Coller Tue, May 26, 2026 at 5:07 PM UTC 0 NILES, Ohio (WKBN) – A grand opening has been set for the new Ashley furniture store in Niles. The event is set for Saturday, June 6, at 10 a.m. at the store located at the Great East Plaza, next to Michaels. The company had said that the store will allow shoppers to visualize how pieces of furniture will look together in real home settings, with their new 7.0 design. Advertisement The grand opening will include giveaways and a chance to win a $5,000 shopping spree. Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to WKBN.com.
+
+--- Article 263 ---
+URL: https://www.express.co.uk/news/world/2210022/high-street-sports-chain-31
+Title: High street sports chain with 31 stores plunges into administration
+Status hint: Closing | Industry: Sporting Goods
+Published: 2026-05-27 05:27:00
+
+NFL jerseys at a pop-up store in Berlin (file image) (Image: Getty Images) A prominent sports retailer on the high street has gone into voluntary administration. Stateside Sports, one of Australia's largest stockists of NBA jerseys, NFL merchandise and trainer apparel, now has 31 stores under review. Article continues below ADVERTISEMENT Get the latest news from around the world and more Subscribe Invalid email We use your sign-up to provide content in ways you've consented to and to improve our understanding of you. This may include adverts from us and 3rd parties based on our understanding. You can unsubscribe at any time. Read our Privacy Policy Voluntary administration is a temporary restructuring process designed to rescue a struggling business or secure a better outcome for creditors than an immediate closure would provide. This differs from liquidation, which is the legal procedure through which a company is wound up. This typically involves selling off the firm's assets to generate funds, which are then used to settle outstanding debts owed to creditors and shareholders. Reports suggest the sports retailer will carry on trading, though the future of its physical stores and online operations remains unclear. Article continues below ADVERTISEMENT NBA basketball teams' sportswear is displayed in a store (file image) (Image: Getty Images) Antony Resnick and Henry Kwok, of advisory firm DVT Mcleods, were appointed as voluntary administrators on May 22. Article continues below ADVERTISEMENT Stateside Sports was established in 2017. The business also carries Australian sporting goods, including retro NRL jerseys, as well as globally recognised brands such as Nike, Jordan, New Era and Mitchell and Ness, 9News reported. NBA teams' hats in a store (file image) (Image: Getty Images) "While we will be focusing on changes in its operations and retail footprint as a matter of urgency, for now it is business as usual and products will continue to be sold in-store and onlin
+
+--- Article 264 ---
+URL: https://www.chesterstandard.co.uk/news/26139846.big-motoring-world-opens-large-used-car-showroom-warrington/
+Title: Largest car supermarket in the North West now open in Cheshire town
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-27 05:00:00
+
+Big Motoring World opens large showroom in Warrington Business Motoring Cheshire By 
+            Nathan Okell Chief Reporter Share 0 Comments Big Motoring World is now open in Warrington (Image: Big Motoring World) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. A NEW, flagship used car supermarket has opened its doors in a Cheshire town. Big Motoring World has launched its 11th and largest site at Winwick Quay, Warrington, which is the biggest used car supermarket in the North West. Located on Calver Park Road, just off the A49 and near junction nine of the M62, the site is expected to serve more than six million customers within a 45-minute drive. The site, formerly Syntner Select Warrington, has welcomed around 60 staff members who have transferred over from Syntner. The workforce is expected to more than double in the coming months, with ongoing recruitment for both sales and vehicle preparation roles. As the company’s flagship store, the Warrington location will eventually stock up to 1,000 vehicles on its 13-acre site. Laurence Vaughan, CEO at Big Motoring World, said: "The opening of our Warrington store will help even more people choose the right used car for them from the greatest range of vehicles, the lowest prices guaranteed, and the quality assured by our RAC Approved Dealership status. "Buying used is an increasingly popular choice for many drivers and, when paired with our excellent finance offering and new market-leading warranty package, Big Motoring World Warrington customers can be confident that they are getting the best value, choice and quality available in the UK." Big Motoring World will also support the wider Warrington community through involvement in local events such as the Stockton Health festival. Business Motoring Cheshire Share 0 Comments Get involved with the 
+
+--- Article 265 ---
+URL: https://www.prestigeonline.com/id/travel/hotels-resorts/nepal-travel-guide-best-hotels-places-attractions-2026/amp/
+Title: Travel Guide for Nepal: Best hotels and locations in the ancient kingdom
+Status hint: Opening | Industry: Hospitality
+Published: 2026-05-27 04:17:01
+
+
+
+--- Article 266 ---
+URL: https://uk.news.yahoo.com/aldi-reveals-plans-open-orpington-040000982.html
+Title: Aldi reveals when it plans to open new Orpington supermarket
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-27 04:00:00
+
+A new Aldi is coming to Orpington (Image: Peter Byrne/PA) A new Aldi store is expected to open in Orpington this summer if a change to its initial planning application is approved. Aldi is aiming to open its new branch in Farnborough Way this August, a Bromley Council report has revealed. The report, set to be reviewed at a development control committee meeting on June 1, also shows that the supermarket chain is hoping to amend one of the conditions attached to the plans' original approval in 2023. Advertisement Advertisement Advertisement Advertisement This proposed change requires Aldi to prove it has a Bronze Fleet Operator Recognition Scheme (FORS) membership before the new store can be occupied, instead of the silver-level membership required previously. FORS is a voluntary accreditation scheme which focuses on training commercial vehicle drivers in best practice to reduce collisions and ensure they have the skills to operate roadworthy vehicles. Frankie & Benny's at the site before it was demolished (Image: Google Maps) According to the council report, bronze accreditation focuses on foundational legal compliance and safety, whereas silver requires vehicles to have extra safety equipment and includes commitments to reducing environmental impacts. Advertisement Advertisement Advertisement Advertisement Under the proposed amendment, a commitment to bronze would be needed for the new haulier, due in June 2027, while proof of silver membership would then be required within two years of the Aldi opening. Transport for London (TfL) has no objection to this, the report reveals, as it "recognises the difficulty that the applicant may have in achieving FORS Silver level by the date of opening". However, Farnborough Village Society (FVS) and seven residents objected to the proposal, citing the "health and safety risks" on the A21 where the store is located, and raising "significant concern" about HGV movements entering and exiting the site. The committee is recommended 
+
+--- Article 267 ---
+URL: https://www.wiltshiretimes.co.uk/news/26139721.marlborough-salon-collapses-liquidation-closure/
+Title: Popular town centre salon collapses into liquidation after shock closure
+Status hint: Closing | Industry: Health / Beauty
+Published: 2026-05-27 04:00:00
+
+Marlborough salon collapses into liquidation after closure Beauty Business Leisure Marlborough By 
+            Jason Hughes Reporter Share 0 Comments 3 Skip to next photo 1 / 1 Show caption 1 / 1 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. A popular town centre beauty salon in Wiltshire has collapsed into liquidation after closing suddenly. Rejuvenesce Beauty Salon closed its premises at Hughenden Yard, just off Marlborough High Street, at the end of January. On Tuesday, May 26, the firm passed a resolution to voluntarily wind the company up and Stephen Mark Powell and Simon Lowes, both of BTG Begbies Traynor LLP, were appointed joint liquidators. They have been appointed by members of the company and its creditors. In May, the salon remained disused several months after its closure and signs notifying customers that all appointments had been cancelled were still in place. Full access to all of our articles online and on the app, fewer adverts, a better reading experience, exclusive competitions and more - all for less than the price of a cup of coffee. ☕️ Subscribe now! - https://t.co/AQ9XF2gcO2 pic.twitter.com/bYvsD2lw5e — Gazette & Herald (@wiltsgazette) April 13, 2026 Read more Huge crowds flood town for festival as beloved event cancelled Popular cafe at tourist attraction closes as temperatures soar Investigation ongoing as man seriously injured in glider crash They said: “It is with great sadness that we announce the permanent closure of Rejuvenesce Beauty Salon. “All appointments have been cancelled. We apologise for any disruption this may cause. “Thank you for your support and loyalty throughout the years.” Rejuvenesce had operated in Marlborough for many years and the closure was described by shoppers as a “huge loss” for the town centre. The Facebook page dedicated 
+
+--- Article 268 ---
+URL: https://www.gazetteandherald.co.uk/news/26139471.protest-plans-new-chippenham-convenience-store/
+Title: Neighbours protest against plans for new convenience store in town
+Status hint: Opening | Industry: Convenience Stores / Distributors
+Published: 2026-05-27 04:00:00
+
+Protest against plans for new Chippenham convenience store Planning and development Chippenham By 
+            Jason Hughes Reporter Share 0 Comments 2 Skip to next photo 1 / 1 Show caption 1 / 1 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. What is the Public Notice Portal? Find, save and share Public Notices that affect you in the area. Search the Public Notice Portal What is the Public Notice Portal? What is the Public Notice Portal? The Public Notice Portal carries statutory public notices published in local newspapers and is the fastest and most effective way of finding out what is happening in YOUR neighbourhood. Search the Public Notice Portal Neighbours have protested against plans for a new convenience store in a Wiltshire town. At the end of April, plans were submitted to change the use of the former ATS Euromaster tyre-fitting workshop, on Cocklebury Road in Chippenham, to a convenience shop. The planning application, submitted by Antony Benedict, does not specify who would operate the new store. However, a premises licence has already been granted for “a brand new Budgens convenience store with off licence” at the site. The garage has been closed for some time and the plans could bring the building back into use and create six full-time and eight part-time jobs. Some neighbours are opposed to the new store, which would open 10am to 11pm, Monday to Saturday, and 11am to 10pm on Sundays. Full access to all of our articles online and on the app, fewer adverts, a better reading experience, exclusive competitions and more - all for less than the price of a cup of coffee. ☕️ Subscribe now! - https://t.co/AQ9XF2gcO2 pic.twitter.com/bYvsD2lw5e — Gazette & Herald (@wiltsgazette) April 13, 2026 Jo Huband said: “I am baffled over why this is needed. “We are within five minutes w
+
+--- Article 269 ---
+URL: https://www.theargus.co.uk/news/26140212.sale-fashion-store-quiz-closing-eastbourne/
+Title: Sussex town affected by closure of high-street fashion brand
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-27 04:00:00
+
+Fashion retailer Quiz to close in The Beacon Eastbourne Leisure Shopping By 
+            Emily Elliott Reporter Share 0 Comments A lady walking past a shop with 'store closing' signs in the window. (Image: PA) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. Thirty-seven high street shops are set to close as part of a nationwide shutdown of a fashion brand, including a branch in a Sussex town. Quiz, the fashion retailer known for its occasion wear and party dresses, will close all 37 of its remaining stores by the end of June after falling into administration. Among the locations facing closure is the store in The Beacon, Eastbourne. Administrators said they would implement a phased closure over the coming weeks, with plans for all 37 remaining stores to be shut by June. A lady walking past a shop with 'store closing' signs in the window. (Image: PA) Read more Update: Road reopened after lorry crashed into tree Riverfront homes next to town's harbour could be coming as site up for sale The Sussex districts with most and least retired people It has already shut three of its stores in recent days, in Castlecourt Belfast, Leeds and Romford. A full list of stores facing closure includes locations in Aberdeen, Cardiff, Derby, Leicester, Manchester, Norwich, Sheffield, Watford, and more. Shops that have not yet closed will continue to trade as normal as part of a ‘final clearance push’, with some stock marked 60 per cent to 80 per cent off. Quiz have published a statement on its website saying: "All remaining stock must be cleared. "This includes evening wear, casual styles, shoes, and accessories. "Please note that due to the nature of the sale, all purchases are final." Leisure Shopping Share 0 Comments Get involved with the news Send your news & photos
+
+--- Article 270 ---
+URL: https://www.abc4.com/video/after-school-mariachi-program-expanding-to-full-fall-class/11827803/
+Title: After-school Mariachi program expanding to full Fall class
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 03:24:32
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.abc4.com/video/after-school-mariachi-program-expanding-to-full-fall-class/11827803/]
+
+--- Article 271 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/opening-date-announced-for-charlotte-s-first-wegmans/ar-AA23Ki7T
+Title: Opening date announced for Charlotte’s first Wegmans
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 03:24:22
+
+MSN
+
+--- Article 272 ---
+URL: https://www.msn.com/en-us/money/companies/buc-ee-s-is-expanding-to-new-states-here-s-where/ar-AA22WfTI?ocid=finance-verthp-feeds
+Title: Buc-ee’s is expanding to new states. Here’s where
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 03:24:21
+
+MSN
+
+--- Article 273 ---
+URL: https://www.keloland.com/news/your-money-matters/breaking-burrito-restaurant-opening-soon/
+Title: Breaking Burrito restaurant opening soon
+Status hint: Opening | Industry: Restaurants
+Published: 2026-05-27 03:18:51
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.keloland.com/news/your-money-matters/breaking-burrito-restaurant-opening-soon/]
+
+--- Article 274 ---
+URL: https://www.msn.com/en-us/money/companies/orta-shuts-down-rumors-claiming-the-business-is-closing/ar-AA2472Uw
+Title: Orta shuts down rumors claiming the business is closing
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-27 02:11:46
+
+MSN
+
+--- Article 275 ---
+URL: https://travelweekly.com.au/nominations-for-nsw-tourism-awards-2026-closing-soon/
+Title: Nominations for NSW Tourism Awards 2026 closing soon
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-27 02:07:55
+
+The 2025 NSW Tourism Awards. SHARE Time is running out to enter this year’s NSW Tourism Awards, with nominations set to close on 12 June 2026. The annual awards recognise and celebrate the diverse range of visitor experiences, operators and destinations driving the state’s tourism success. They are New South Wales’ only nationally accredited tourism awards, presented by the NSW Tourism Association and supported by the Australian Tourism Industry Council. The NSW Tourism Awards are open to all tourism businesses within the state, with categories ranging from tourist attractions, tour and transport, festivals and events to food, wine, accommodation and more. Once registered, entrants have until 12 August to finalise their award submissions. Finalists will be announced on 6 October, with winners to be announced at a gala ceremony to be held in November. The NSW Tourism Association also offers an Entrant Support Program with weekly interactive webinars, a draft review service and a mentor program. New for 2026, the NSW Tourism Awards Mentor Program provides personalised feedback to make the process less daunting. Find out more about NSW Tourism Awards nominations HERE . Key dates Nominations close: 12 June Entrant Support Program: Weekly from 16 June Business Standards close: 26 June Draft submissions close: 29 July Final submissions close: 12 August – 5pm AEST Finalists announced: 6 October NSW Tourism gala event: 9 November Share Latest News Federal Budget delivers tax relief, now businesses must reconcile travel expenses right May 28, 2026 Viking helps bring ancient treasures to the shores of Sydney May 28, 2026 CATO and ATIA roadshow takes merger pitch direct to members May 28, 2026 Dreamworld brings snow, ice skating and Christmas cheer to Queensland May 28, 2026
+
+--- Article 276 ---
+URL: https://www.goldcoastbulletin.com.au/news/gold-coast/nonnas-harbour-town-announces-permanent-closure-after-21-years-of-trading/news-story/f668e01fde941afc8fd4c677e3e398cf
+Title: ‘End of an era’: Gold Coast Italian restaurant’s shock closure
+Status hint: Closing | Industry: Restaurants
+Published: 2026-05-27 02:07:55
+
+‘End of an era’: Gold Coast Italian restaurant’s shock closure After more than two decades of serving up delicious pasta and pizzas, the owners of Nonna’s Restaurant in Harbour Town have announced their permanent closure. Sale now on Unlock this story and more with your subscription Full Digital Access What’s included Unlimited articles on app & web Subscriber-exclusive newsletters A digital version of Today’s Paper Enjoy puzzles SuperCoach Plus stats & analysis while playing Full digital access to The Courier-Mail included LIMITED TIME OFFER Pay As You Go No lock-in contract $ 1 a month for 2 months Then $35 charged monthly.* * Read the fine print Full Digital Access $1 charged monthly for a duration of 2 months, after which it automatically renews at $35 charged monthly. Renewals occur unless cancelled as per full Terms and Conditions. Each payment, once made, is non-refundable, subject to law. Not in conjunction with any other offer. New customers only. Prices after any early discounted periods may be varied as per full Terms and Conditions. See www.goldcoastbulletin.com.au/subscriptionterms for full details. 12 Month Plan Lock in & save $ 22 a month for the first 12 months ($264 min. cost). Then $22 charged monthly.* * Read the fine print Full Digital Access 12 Month Plan costs $264 (min. cost) for the first 12 months, charged as $22 every month. This automatically renews after the first 12 months to be charged as $22 (min. cost) every month. Renewals occur unless cancelled as per full Terms and Conditions. No cancellations during the first 12 months. Each payment, once made, is non-refundable, subject to law. Not in conjunction with any other offer. Prices after the first 12 months may be varied as per full Terms and Conditions. See www.goldcoastbulletin.com.au/subscriptionterms for full details. Pay As You Go $1 a month for 2 months Then $35 charged monthly.* Subscribe now Other subscription options Print + Digital Subscriptions Corporate Subscriptions Your Se
+
+--- Article 277 ---
+URL: https://alohastatedaily.com/2026/05/26/lunas-tex-mex-cantina-is-open-in-ward-village/
+Title: Luna’s Tex-Mex Cantina is open in Ward Village
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 02:07:00
+
+Luna’s Tex-Mex Cantina opened about a week ago in Ward Village; it’s located near Rinka Japanese Restaurant. The eatery is still in its soft opening phase, and is still making changes to its menu. Tex-Mex fare differs from traditional Mexican cuisine; it’s known for dishes like chips and queso, fajitas and cheese enchiladas. Luna’s Tex-Mex Cantina soft opened recently in Ward Village. Photo by Kelli Shiroma Braiotta (Aloha State Daily Staff) The eatery offers popular Tex-Mex dishes, including fajitas and enchiladas. Photo by Kelli Shiroma Braiotta (Aloha State Daily Staff) Popular appetizers include ceviche ($17), elotes ($15), and chips and guac ($12). The ceviche features a mix of fresh ‘ahi and shrimp, along with tomatoes, onions and cilantro. We’re told the tortilla chips and dips are made in-house. Elote ($15). Photo by Kelli Shiroma Braiotta (Aloha State Daily Staff) The elotes ($15) comprise corn ribs drizzled with chili lime aioli and are dusted with cotija cheese and tajin. Each piece boasts an umami flavor with a slight kick, thanks to the tajin. Chips and guac ($12). Photo by Kelli Shiroma Braiotta (Aloha State Daily Staff) Entrées consist of fajitas, taco plates and enchiladas. Fajitas feature a choice of steak ($38 regular, $68 large); chicken breast ($32 regular, $52 large); and steak and chicken combos ($36 regular, $62 large). Diners can add shrimp for an additional charge ($9 for three). We’re told the regular portion is a medium size, while the large portion is designed to serve three people. Fajitas are delivered on sizzling skillets; tortillas, rice, beans, guacamole, pico, sour cream, salsa and cheese are served on the side. Fajita and taco party packs, along with margaritas to-go, will eventually be available. Fajitas come with rice, beans, guacamole, pico, sour cream, salsa and cheese on the side. Photo by Kelli Shiroma Braiotta (Aloha State Daily Staff) Taco plates come with rice and beans. The baja fish tacos ($26) feature lightly battered m
+
+--- Article 278 ---
+URL: https://www.broadsheet.com.au/brisbane/food-and-drink/article/pici-new-farm-opening-september-2026
+Title: Pici, a Neighbourhood Italian Spot From an Ex-Otto Head Chef, Will Open in New Farm Soon
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 01:57:33
+
+Subscribe Login Subscribe Login Subscribe Login Coming Soon: Pici, a Neighbourhood Italian Restaurant in New Farm From an Ex-Otto Head Chef Photo: Fergus Hurst Star chef Will Cowper is teaming up with the operators behind The Fish Factory to open a casual pasta spot in the former Gerties space. Words by Elliot Baker · Updated on 27 May 2026 · Published on 27 May 2026 Read later In 2016, Will Cowper moved from Sydney to lead the launch of Fink Group’s Otto Brisbane. After a decade as head chef there, he has stepped away to open his own Italian restaurant, Pici, named after the hand-rolled Tuscan pasta. “When I first moved up to Brisbane, I didn’t know any suppliers or anyone. It was literally starting from the ground up,” he says. “Now, I feel like I have those connections, and I’ve established myself. I feel like [opening this restaurant] should be a lot easier.” He won’t be doing it alone. Cowper’s wife Gianna Cowper – whom he met in the Otto kitchen, where she worked as the pastry chef – will also be involved in the new venture, alongside Andrew and Andrea Solomon, the operators behind Morningside seafood retailer The Fish Factory. “Andrew had been a really close friend over the years,” Cowper says. “He said to me, ‘Look, I’ve bought this place – what do you think?’ It evolved from there.” In September, Pici will take over the former Gerties site on the corner of Brunswick and Barker streets, which closed earlier this year after 32 years of operation. Interior design duties have been handed to Alkot Studio, the team behind stunning venues like Pilloni , Bar Rocco and Emme. “[Gerties was] an institution, but the place was almost falling apart,” Cowper says. “It was tired, [so] what’s going to happen is an incredible change.” Due to the building’s heritage status, the exterior will receive only a minor refresh, but inside it will be entirely reshaped. The upstairs space will remain as a bar, while the wall between the venue’s lower level and Hellbound will be knocke
+
+--- Article 279 ---
+URL: https://www.mk.co.kr/en/business/12058573
+Title: BBQ, a chicken franchise, will open a store in the core business district of Ho Chi Minh City, the l..
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 01:54:36
+
+detail * It has been translated using AI A new store in Vietnam's largest economic city Attracts local young consumers and family customers with a K-food menu that combines chicken and Korean food 사진 확대 BBQ recently opened the 'BBQ Pansilong Branch' on Pansilong Street, a representative F&B business district in the Phuan area of Ho Chi Minh City, Vietnam. [Genesis BBQ Group] BBQ, a chicken franchise, will open a store in the core business district of Ho Chi Minh City, the largest economic city in the south, following Hanoi in northern Vietnam. Based on major Vietnamese inter-Korean bases, it plans to expand local customer contact points and strengthen its targeting in the Southeast Asian market. According to Genesis BBQ Group on the 27th, the 'BBQ Pansilong branch' store will enter Pansilong Street, a representative food and beverage (F&B) business district in the Phunewon area of Ho Chi Minh City, Vietnam. It is a casual dining restaurant with 94 seats on a scale of about 317 square meters (about 96 pyeong). Ho Chi Minh City is Vietnam's largest economic city and a representative consumer market. As the proportion of the young population is high and the culture of eating out and delivery is growing rapidly, it is attracting attention as a major base for global F&B brands and overseas franchises. It is also a place where financial, commercial, manufacturing, logistics, trade, tourism and service industries, as well as IT and start-up industries, grow rapidly. Among them, Pansilong Street has grown into a representative "hot place business district" in Ho Chi Minh City in recent years with a large number of cafes, brunch, and various restaurant brands. Unlike traditional tourist-centered commercial districts, it is a lifestyle premium F&B commercial district formed based on local consumption power, and it is known that there is abundant demand for young customers and office workers who are sensitive to trends. A BBQ official said, "We are looking forward to the influ
+
+--- Article 280 ---
+URL: https://mshale.com/ba13b2ca/79080a238kxPxPz-HUk
+Title: Sevierville, TN Grand Opening Walkthrough Tour
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 01:37:34
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://mshale.com/ba13b2ca/79080a238kxPxPz-HUk]
+
+--- Article 281 ---
+URL: https://www.dtnext.in/news/tamilnadu/dt-next-campus-applications-open-for-eastman-powerup-eduskill-programme-here-is-how-you-can-apply
+Title: Applications open for Eastman Powerup Eduskill Programme; here is how you can apply
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 01:30:00
+
+Tamil Nadu DT Next Campus | Applications open for  Eastman Powerup Eduskill Programme; here is how you can apply Open to students enrolled in full-time B.Tech, M.Tech, MBA/PGDM, or Polytechnic diploma programs at recognised government or private institutions in India. Representative Image DT NEXT Bureau Updated on : 27 May 2026, 1:30 am Copied Follow Us CHENNAI: The Eastman Powerup Eduskill Scholarship Programme 2026-27, an initiative by Eastman Auto and Power Limited (EAPL), is now open for applications. The programme supports engineering, diploma, and management students from financially constrained backgrounds by providing access to industry-relevant certification courses and financial assistance of up to Rs 20,000, disbursed in a milestone-based manner upon course completion. Eligibility: Open to students enrolled in full-time B.Tech, M.Tech, MBA/PGDM, or Polytechnic diploma programs at recognised government or private institutions in India. Eligible B.Tech students may be from lateral entry, 3rd/4th year, or the graduating batch of 2026, while M.Tech/MBA/PGDM applicants must be in the 2nd year or graduating batch of 2026. Applicants must belong to relevant streams/specialisations, including Electrical, Electronics, Mechanical, Sales, or Marketing, depending on the scholarship category. Note: Priority will be given to girls, PwD students, students from single- parent households, orphaned students, and students from Tier-2 and Tier-3cities. Prizes & Rewards: Selected candidates will receive financial aid of up to Rs 20,000, disbursed in a milestone-based manner upon successful completion of four approved certification courses. Last Date to Apply: July 4 Application mode: Online applications only Short Url: www.b4s.in/dtnt/EPSP2 Diploma Polytechnic Eastman Powerup Eduskill Show Comments Related Stories No stories found.
+
+--- Article 282 ---
+URL: https://www.dtnext.in/news/tamilnadu/dt-next-campus-applications-open-for-chanakya-merit-cum-means-scholarship-here-is-how-you-can-apply
+Title: Applications open for Chanakya Merit cum Means Scholarship; here is how you can apply
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 01:30:00
+
+Tamil Nadu DT Next Campus | Applications open for Chanakya Merit cum Means Scholarship; here is how you can apply Application is open to students enrolled in an undergraduate programme at Chanakya University Representative Image for Scholarship DT NEXT Bureau Updated on : 27 May 2026, 1:30 am Copied Follow Us CHENNAI: The Chanakya Merit cum Means Scholarship 2026-27, offered by Chanakya University, Bengaluru, is now open for applications. The scholarship aims to support deserving undergraduate students through fee waivers based on academic merit and financial background. Eligibility: Application is open to students enrolled in an undergraduate programme at Chanakya University. Applicants must have secured 85% or more in Class 10 and 12 examinations, along with 50% and above in the Chanakya Scholarship Eligibility Test (CSET). The total annual family income of the applicant should not exceed Rs 8 lakh. Prizes & Rewards: Up to 100% fee waiver. Last Date to Apply: June 30 Application mode: Online applications only Short URL: www.b4s.in/dtnt/CUAM6 Scholarship DT Next Campus Show Comments Related Stories No stories found.
+
+--- Article 283 ---
+URL: https://aboutmanchester.co.uk/new-aldi-food-store-for-salford-quays-opening-28th-may/
+Title: New Aldi Food Store for Salford Quays opening 28th May
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-27 01:16:43
+
+Home Latest community news New Aldi Food Store for Salford Quays opening 28th May Latest community news Facebook Twitter Google+ Pinterest WhatsApp Screenshot Aldiwill be opening its new Salford Quays store, at the corner of Trafford Road and Phoebe Street, at 8am on Thursday 28th May. The site,previously occupied by a Morrisons food store, has been vacant for several years and will now be brought back into use for the local community. Customers are also invited to attend the grand opening of the store by BritishBronze Medallist Lewis Richardson, and other local guests. The first 30 customers will receive a free bag of fresh fruit and vegetables from Aldi’s award-winning Super 6 range. The new store opens following engagement between Aldi and Salford City Council’s Skills and Work team with the store underscoring Aldi’s commitment to supporting growth and regeneration in Salford and protecting access to essential services for local residents. The proposals will also contribute to the significant investment planned for Ordsall and Salford Quays, ensuring residents can continue to access a low-cost, high-quality discount retailer for years to come. In line with Aldi’s ongoing commitment to being a good neighbour, recruitment for these roles has been targeted at the local community, recognising the role food stores play as community hubs, and the importance of community-driven employment. Josh Cropper, Real Estate Manager for Aldi, said: “The speed with which we’ve been able to get on-site at Trafford Road is a testament to what we can achieve when we work in collaboration with local authorities to deliver investment and create new, well-paid jobs in local communities across the country. “We’re excited to have completed work at site and our store team look forward to welcoming the first customers through the door on Thursday 28th May.” Paul Dennett, City Mayor of Salford, said: “This new Aldi store on a previously derelict site is great news for our city. It brings sig
+
+--- Article 284 ---
+URL: https://www.travelandtourworld.com/news/article/baj6hm3kt6z0/
+Title: Malaysia Reignites Penang Tourism Glory As Legendary Hotel Equatorial Penang Returns With Luxury Reinvention And Massive MICE Expansion By 2027
+Status hint: Opening | Industry: Hospitality
+Published: 2026-05-27 01:11:14
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/baj6hm3kt6z0/]
+
+--- Article 285 ---
+URL: https://en.sedaily.com/finance/2026/05/27/bbq-expands-into-southern-vietnam-with-ho-chi-minh-city
+Title: BBQ Expands into Southern Vietnam with Ho Chi Minh City Store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 00:47:30
+
+| Summary | Save A A A BBQ opened a store in Phan Xich Long, a leading F&B district in Ho Chi Minh City's Phu Nhuan area, Vietnam. Photo courtesy of Genesis BBQ BBQ has opened a new store in a prime commercial district of Ho Chi Minh City, Vietnam, expanding its footprint from the country's north to the south as it broadens its regional presence. Genesis BBQ Group announced Thursday that it recently opened "BBQ Phan Xich Long" on Phan Xích Long Street, a leading food and beverage district in Ho Chi Minh City's Phu Nhuan area. The store is a Casual Dining Restaurant (CDR)-format outlet spanning approximately 317 square meters (about 96 pyeong) with 94 seats. The menu features signature chicken offerings such as Golden Pride Chicken, Secret Sauce Chicken (seasoned chicken), and Soy Garlic Chicken, alongside a variety of Korean dishes including tteokbokki, kimchi fried rice, dolsot bibimbap, sotteok-sotteok, and cheese balls. The combination of chicken and Korean food menus is designed to let local consumers experience the breadth of Korean culinary culture. Phan Xích Long Street is regarded as one of Ho Chi Minh City's premier hotspot districts. Cafes, brunch venues, and diverse dining brands have flocked to the area in recent years, forming a lifestyle-oriented premium F&B district built on strong local purchasing power. The street draws a wealth of trend-sensitive young customers and office workers, with steady inflows of local middle-class consumers, young shoppers, and families. By advancing into Ho Chi Minh City following its earlier entry into Hanoi and other northern regions, BBQ plans to accelerate its expansion across Southeast Asia. "Ho Chi Minh City is one of the markets where competition among local young consumers and global dining brands is most intense," a BBQ official said. "Building on key footholds in both northern and southern Vietnam, we plan to broaden our touchpoints with local customers and strengthen our push into the Southeast Asian market." B
+
+--- Article 286 ---
+URL: https://mocoshow.com/2026/05/26/dmv-empanadas-expanding-to-baltimore/
+Title: DMV Empanadas Expanding to Baltimore
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 00:39:53
+
+DMV Empanadas at 560 N. Frederick Ave. in the Gaithersburg Square shopping center has announced plans to open a new location soon at 10 N. Calvert Street in Baltimore. The restaurant was previously located at 113 E. Diamond Ave. in Olde Towne Gaithersburg before relocating to its current Gaithersburg Square location. DMV Empanadas is known for offering more than 25 empanada flavors, including bacon and cheese, cheeseburger, and Old Bay shrimp varieties. According to an Instagram post, the new Baltimore location will also serve dishes including Chicken Milanese, Broaster Chicken, and Lomo Saltado. DMV Empanadas has also become a longtime presence at farmers markets throughout the DMV region. According to the restaurant’s website, the business offers a variety of empanadas and Latin American dishes for breakfast, lunch, and dinner, with menu options ranging from shrimp and pork empanadas to other traditional favorites. Author Patrick Herron
+
+--- Article 287 ---
+URL: https://eciks.org/5944-74650-mexican-restaurant-chain-guzman-y-gomez-exits-us-after-6-years-in-chicago-closes
+Title: Mexican restaurant chain Guzman y Gomez exits US after 6 years in Chicago, closes all locations
+Status hint: Opening | Industry: Restaurants
+Published: 2026-05-27 00:33:12
+
+© Mexican restaurant chain Guzman y Gomez exits US after 6 years in Chicago, closes all locations Share this post Post on Facebook Post on Flipboard Share on LinkedIn Post on Reddit Share on Telegram Share on X Send through Whatsapp Show summary Hide summary 🔥 Quick Facts How Guzman y Gomez Built Its US Presence What Went Wrong: Market Penetration Challenges The Broader Pattern: The “Graveyard” of Australian Chains Financial Impact and Market Reaction Consequences for Employees and Legal Challenges What This Reveals About International Expansion Strategy Will Guzman y Gomez Return to the US Market? Sources Guzman y Gomez , the Australian fast-casual Mexican chain founded by Steven Marks and Robert Hazan , abruptly closed all 8 US locations across the Chicago area on May 22, 2026 , ending its 6-year expansion into the American market. The company—which had invested approximately $115 million into the US venture—cited poor financial performance as the reason for the immediate exit. The closure underscores a pattern of failed international expansion attempts by Australian restaurant chains in a highly competitive US market dominated by established players like Chipotle and Taco Bell . 🔥 Quick Facts All 8 US restaurants closed across Chicago area on May 22, 2026 $115 million invested in failed US expansion over 6 years Stock surge of 20% following US exit announcement Company continues operating 240+ locations in Australia, Japan, and Singapore Class action lawsuit filed by workers over sudden termination How Guzman y Gomez Built Its US Presence Guzman y Gomez , founded in Sydney in 2006 , established itself as a premium fast-casual competitor to Chipotle with fresh ingredients and customizable bowls and burritos. The chain expanded successfully across Australia, Japan, and Singapore , eventually operating over 200 locations globally . International success prompted the company to target the US market in 2020 , focusing initially on the Chicago area—a region with establ
+
+--- Article 288 ---
+URL: https://mocoshow.com/2026/05/26/new-boutique-opening-in-rio/
+Title: New Boutique Opening at Rio
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 00:27:03
+
+Rosegate Boutique has announced its grand opening celebration will take place May 29 and 30 from 12 pm to 6 pm. The new boutique is located at 22 Grand Corner Avenue in Gaithersburg at the former site of Bluemercury at Rio Lakefront. According to the boutique’s announcement, the two-day celebration will feature swag bags, drinks, snacks, shopping, and other activities for visitors. Rosegate Boutique also operates a location in Charleston, West Virginia, and previously had a store in Fairfax, Virginia. “Rosegate Boutique is a women’s fashion and lifestyle boutique offering stylish clothing, shoes, accessories, gifts, Mackenzie Childs and other home décor. We curate unique pieces that help women feel confident, fashionable, and inspired every day.” Bluemercury operated at Rio for more than a decade before closing the location. The beauty retailer continues to serve Montgomery County through several other area stores, including locations at Bethesda Row, Cabin John Village (Potomac), Pike & Rose (North Bethesda), and Wildwood Shopping Center (Bethesda) View this post on Instagram A post shared by Rosegate (@rosegate_md) Author Patrick Herron
+
+--- Article 289 ---
+URL: https://www.msn.com/en-us/money/news/discount-supermarket-chain-to-open-new-location-in-latham/vi-AA247H1A
+Title: Discount supermarket chain to open new location in Latham
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-27 00:22:15
+
+MSN
+
+--- Article 290 ---
+URL: https://www.msn.com/en-us/travel/news/italian-restaurant-in-rotterdam-closing-after-nearly-30-years/ar-AA247n52
+Title: Italian restaurant in Rotterdam closing after nearly 30 years
+Status hint: Closing | Industry: Restaurants
+Published: 2026-05-27 00:22:15
+
+MSN
+
+--- Article 291 ---
+URL: https://www.aol.com/news/major-grocery-store-chain-announces-222955886.html
+Title: Major grocery store chain announces closure, 69 layoffs on Oregon Coast
+Status hint: Closing | Industry: Grocery
+Published: 2026-05-26 23:59:35
+
+Amanda Rhoades Tue, May 26, 2026 at 10:29 PM UTC 0 Major grocery store chain announces closure, 69 layoffs on Oregon Coast PORTLAND, Ore. ( KOIN ) — Layoffs are planned as a major grocery store plans to shutter one of its locations on the Oregon Coast. Sixty-nine Safeway employees will lose their jobs when the store located at 2220 N. Coast Hwy in Newport, Oregon closes on July 26. Fatal dirt bike crash in Oregon Dunes National Recreation Area Details were shared in a Worker Adjustment and Retraining Notification filed on May 26. Impacted workers include 38 all-purpose clerks, 6 courtesy clerks, 4 persons in charge, 2 pharmacy technicians, 2 meat cutters, a pharmacist and more. Close Thanks for signing up! Advertisement Watch for us in your inbox. Subscribe Now KOIN Breaking News Alerts SIGN UP NOW Some employees may continue working at the location after it closes to the public, and others will have the opportunity to continue their employment at other locations, according to the notice. There are no other Safeway stores located in Newport and the workers are part of a union. Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to KOIN.com.
+
+--- Article 292 ---
+URL: https://allongeorgia.com/chattooga-local-news/sunflower-nails-is-blooming-hoa-opens-her-own-location-in-downtown-summerville/
+Title: Hoa Opens Her Own Location in Downtown Summerville
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-26 23:59:32
+
+Chattooga Local News Sunflower Nails is Blooming — Hoa Opens Her Own Location in Downtown Summerville by AllOnGeorgia May 26, 2026 There is something remarkable about a sunflower. Young sunflowers spend their days tracking the sun across the sky, turning east to west, following the light, always reaching toward warmth. And on the cloudy days when the sun is hidden, or in the quiet of the night when the world goes still, they do something even more beautiful. They turn toward each other. It is hard to think of a more fitting name for what Hoa has built in Summerville. The sunflower has always been Hoa’s favorite flower. So, when the time came to name her business, the choice was not just easy. It was perfect. In Vietnamese, Hoa means flower. She did not just name her salon after her favorite flower, a sunflower. And in a way, she named it after herself. Most of her clients know her simply as Flower, and for the past two years, she has quietly been growing something inside Trendsetters Salon, building a loyal following one client at a time and earning the kind of trust that cannot be rushed. Now it is her turn to plant something of her own. Sunflower Nails is officially opening its doors at 10030 Commerce Street in Summerville, and Hoa did not just move into a space. She reimagined it. The location has been redesigned from the ground up, reflecting the warmth, creativity, and attention to detail that her clients have come to expect every time they sit down in her chair. The new space is equipped with three pedicure chairs, three nail tables, and one lash chair, a full-service salon built to serve the community that has supported her from the beginning. The Grand Opening The community is invited to celebrate with Hoa at the official Grand Opening on Saturday, May 30, beginning at 2:00 PM at 10030 Commerce Street in Summerville. There will be finger food and refreshments, and a ribbon-cutting ceremony will also take place on Friday, May 29, at 11:30 am. Mark your calend
+
+--- Article 293 ---
+URL: https://www.mibolsillo.co/news/jcpenney-accelerates-90-off-sales-due-to-massive-store-closures-this-summer-20260526-0042.html
+Title: JCPenney Accelerates 90% Off Sales Due to Massive Store Closures This Summer
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-26 23:56:00
+
+
+
+--- Article 294 ---
+URL: https://mshale.com/0c3340e8/1b648ee7eZptwvjKjk4
+Title: Snap Back (Official Video) Acapulco Restaurant Closing Locations (1482M89qQi)
+Status hint: Closing | Industry: Restaurants
+Published: 2026-05-26 23:52:39
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://mshale.com/0c3340e8/1b648ee7eZptwvjKjk4]
+
+--- Article 295 ---
+URL: https://www.mindfood.com/article/what-to-shop-when-skims-launches-at-luxe-new-auckland-department-store/
+Title: What to Shop When SKIMS Launches At Luxe New Auckland Department Store
+Status hint: Opening | Industry: Department Stores
+Published: 2026-05-26 23:13:40
+
+Seaside Treasures Recreated In New Zoe & Morgan Jewellery Collection
+
+--- Article 296 ---
+URL: https://www.25newsnow.com/2026/05/26/alexanders-steakhouse-normal-set-close/
+Title: Alexander’s Steakhouse in Normal set to close
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-26 22:39:00
+
+Share Add Us On Google Add as a preferred source on Google NORMAL ( 25News Now ) - It is the end of an era for Normal’s Alexander’s Steakhouse, as business owners announced the restaurant’s final day of operations. According to an online post , company leaders said the steakhouse’s last day open will be May 31, provided the restaurant is sufficiently staffed. This latest closure announcement follows the closure of Champaign’s Alexander’s Steakhouse in 2022. “Serving this community for more than four decades has been one of our greatest honors. We’re incredibly proud of the memories made, the celebrations shared, and the relationships built. To our guests and our dedicated team members — thank you for being the heart of Alexander’s Steakhouse Normal,” the post read. That said, the Peoria location is expected to stay open. You can watch 25News - any newscast, anywhere - streaming LIVE on 25NewsNow.com , our 25News mobile app , and on our WEEK 25News SmartTV streaming app . Learn more about how you can get connected to 25News streaming live news here . Copyright 2026 WEEK. All rights reserved.
+
+--- Article 297 ---
+URL: https://www.prnewswire.com/news-releases/mhr-capital-group-announces-major-construction-milestones-for-ac-hotel-by-marriott-and-three-rivers-convention-center-expansion-in-kennewick-302782369.html
+Title: MHR Capital Group Announces Major Construction Milestones for AC Hotel by Marriott and Three Rivers Convention Center Expansion in Kennewick
+Status hint: Opening | Industry: Hospitality
+Published: 2026-05-26 22:33:00
+
+KENNEWICK, Wash. , May 26, 2026 /PRNewswire/ -- MHR Capital Group today announced significant construction progress on the new AC Hotel by Marriott Kennewick, with the project's structural framing and roofing now complete. The upscale hospitality development remains on schedule for an anticipated grand opening in April 2027. The project is being developed in close collaboration with the City of Kennewick and the Kennewick Public Facilities District as part of a coordinated investment in the region's hospitality and convention infrastructure. Continue Reading AC Hotel by Marriott - Kennewick, WA In addition to the hotel development, the expansion of the Three Rivers Convention Center — which is directly connected to the AC Hotel, remains on track for completion by December 2026. Together, the projects are expected to significantly enhance Kennewick's ability to attract larger conferences, corporate events, tourism activity, and regional gatherings. "We are extremely pleased with the progress being made and the strong partnership that continues to drive this development forward," said Kamran Hasan, CEO of MHR Capital Group. "The collaboration between MHR Capital Group along with its investment partners, the City of Kennewick, and the Kennewick Public Facilities District reflects a shared vision for long-term economic growth and expanded opportunities for the Tri-Cities community." Construction crews are currently advancing exterior façade work, interior systems installation, and site development activities. Once completed, the AC Hotel by Marriott will feature the sophisticated contemporary design, premium accommodations, and guest-focused amenities that define the AC Hotels brand. The combined hotel and convention center expansion project is expected to generate substantial economic benefits for the region through increased tourism, expanded event capacity, job creation, and enhanced hospitality offerings for both business and leisure travelers. For additional inform
+
+--- Article 298 ---
+URL: https://www.msn.com/en-us/travel/news/popular-gas-station-sushi-spot-outgrows-gas-station-moves-restaurant-to-new-location/ar-AA248dJw
+Title: Popular gas station sushi spot outgrows gas station, moves restaurant to new location
+Status hint: Opening | Industry: Restaurants
+Published: 2026-05-26 22:27:49
+
+MSN
+
+--- Article 299 ---
+URL: https://www.wwlp.com/news/local-news/hampden-county/chef-jiang-chinese-cuisine-in-springfield-celebrates-grand-opening/
+Title: Chef Jiang Chinese Cuisine in Springfield celebrates grand opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-26 22:25:01
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.wwlp.com/news/local-news/hampden-county/chef-jiang-chinese-cuisine-in-springfield-celebrates-grand-opening/]
+
+--- Article 300 ---
+URL: https://www.waff.com/video/2026/05/26/nordstrom-rack-open-huntsville-by-spring-2027/?outputType=amp
+Title: Nordstrom Rack to open in Huntsville by Spring 2027
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-26 22:18:00
+

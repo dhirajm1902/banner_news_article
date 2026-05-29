@@ -17,183 +17,443 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 Create ONE clean Markdown table with these exact column headers (in this order):
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
+🌎 Geographic filter (STRICT)
+• Only extract businesses located in the USA or Canada
+• If the article is about a business in any other country (UK, Australia, India, UAE, etc.) → DO NOT add any row to the table; add it ONLY to the Non-working list as "Outside USA/Canada"
+• If an article covers both USA/Canada locations AND international locations → extract only the USA/Canada rows, skip the rest; add the article to the Non-working list as "Outside USA/Canada (partial)"
+
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
-• If an article has zero relevant business opening or closure information, still include a row with:
+• If a USA/Canada article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
+• ❌ Never add a table row for articles outside USA/Canada — those go in the Non-working list only
 
 🚫 Strict constraints
 • ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+• ❌ No extraction of businesses outside USA or Canada
 
 📎 Final section (mandatory)
 At the very end of your response, add:
 Non-working or unusable articles List:
-• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+• Article number — Reason (paywall / no business details / duplicate / text missing / Outside USA/Canada / etc.)
 If none, write: None
 
 ✅ Articles below — extract now:
 
 
---- Article 81 ---
-URL: https://www.fox5vegas.com/2026/05/26/clark-county-open-pediatric-clinic-foster-children/
-Title: Clark County to open pediatric clinic for foster children
+--- Article 201 ---
+URL: https://iol.co.za/business-report/companies/2026-05-27-proudly-south-african-backs-khoi-techs-retail-expansion-into-wearable-tech-market/
+Title: Proudly South African backs Khoi Tech’s retail expansion into wearable tech market
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 16:54:00
+Published: 2026-05-27 13:46:53
 
-Share Add Us On Google Add as a preferred source on Google LAS VEGAS ( FOX5 ) — Clark County Family Services and FirstMed Health & Wellness will hold a grand opening on Thursday for a new pediatric clinic that will provide comprehensive health services to the approximately 3,600 children in Clark County foster care. The clinic offers a full range of pediatric services under one roof, including primary care, dental services, and behavioral health. Behavioral health services encompass adolescent psychiatry and mental health therapy. MORE ON FOX5: Nevada’s first standalone children’s hospital moves forward in southwest Las Vegas The grand opening is scheduled for Thursday, May 28, from 2 to 3 p.m. at Child Haven. The event is by invitation only and closed to the general public. FirstMed Health & Wellness is a federally qualified health center that operates nonprofit community healthcare clinics providing mental health and preventive and primary health care services to individuals and families in Southern Nevada. Copyright 2026 KVVU. All rights reserved.
+Business Report Companies Proudly South African backs Khoi Tech’s retail expansion into wearable tech market Ashley Lechman | Published 1 day ago 3 min Soweto based wearable tech company Khoi Tech has opened its first experiential retail store in partnership with Telkom, highlighting the rise of locally produced technology. Image: Supplied. Soweto founded wearable technology company Khoi Tech has launched its first experiential retail store in partnership with Telkom , marking a significant milestone for locally produced consumer technology and South African entrepreneurship. The new store, located at The Hub at Telkom’s headquarters in Centurion, will provide customers with an immersive and hands on experience of Khoi Tech ’s range of locally manufactured wearable technology devices. The experiential retail model is designed to deepen consumer engagement by allowing visitors to interact directly with products, explore their functionality and better understand the innovation behind locally developed technology. Khoi Tech’s move into physical retail also reflects growing demand for South African made products and highlights the importance of partnerships and buy local initiatives in helping small businesses scale and access broader markets. Proudly South African Chief Executive Officer Eustace Mashimbye said the company’s growth story demonstrates the strength of local innovation and entrepreneurship. “The exponential growth of Khoi Tech from the proverbial garage to the world stage reaffirms the abundance of innovation and entrepreneurship in South Africa,” said Mashimbye. He said the company’s expansion also illustrates how supporting micro, small and medium enterprises can unlock broader economic opportunities. “It showcases how support for MSMEs can unlock their growth and enable them to blaze a trail both locally and globally in an industry that has, until now, been dominated by multinational conglomerates,” he said. Mashimbye added that retaining intellectual p
 
---- Article 82 ---
-URL: https://kiss951.com/2026/05/26/jonas-brothers-family-restaurant-closes-las-vegas-location/
-Title: Jonas Brothers’ Family Restaurant Closes Las Vegas Location
+--- Article 202 ---
+URL: https://hot975fm.com/new-buffet-fargo-north-dakota/
+Title: New Buffet Restaurant Replacing Former Mexican Village Location in Fargo
 Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 16:53:39
+Published: 2026-05-27 13:44:44
 
-Human Interest Jonas Brothers’ Family Restaurant Closes Las Vegas Location The Jonas family’s Las Vegas restaurant has closed its doors. Nellie’s Southern Kitchen closed its doors forever after service on May 25. The restaurant is co-owned by the Jonas Brothers’… Randi Moultrie Published May 26, 2026 12:53 PM EDT INGLEWOOD, CALIFORNIA – SEPTEMBER 06: (L-R) Joe Jonas, Nick Jonas, and Kevin Jonas perform on stage during Jonas Brothers: JONAS20 Greetings From Your Hometown Tour at Intuit Dome on September 6, 2025 in Inglewood, California. (Photo by Amy Sussman/Getty Images for Live Nation) (Photo by Amy Sussman/Getty Images for Live Nation) Share this story The Jonas family's Las Vegas restaurant has closed its doors. Nellie's Southern Kitchen closed its doors forever after service on May 25. The restaurant is co-owned by the Jonas Brothers' parents, Denise and Kevin Jonas Sr. The closing was made official in an announcement by MGM Resorts International. "We are grateful to our dedicated staff and loyal guests who filled that space with so many unforgettable moments over the years. As our lease approached its expiration, we made a strategic decision about where to focus our long-term efforts," Manolis Alpogianis, a spokesperson for the restaurant, told PEOPLE . "We invite everyone to visit our founding location in Belmont, NC, now celebrating a decade of great food and Southern hospitality." The Las Vegas location opened in June 2022. The Jonas Brothers and their entire family were there to celebrate the grand opening. Nellie's Southern Kitchen is named after Kevin Sr.'s late grandmother. The first location opened in Belmont, NC, in 2016. The restaurant serves Southern dishes such as Chicken N' Dumplin's, fried chicken, collard greens, mac and cheese, and more. The recipes are Jonas' family recipes passed down through generations. Both restaurant locations include a small stage, as music is a big part of their family traditions. Clearly, seeing where the Jonas Brothers
+New Buffet Opening in This North Dakota City Andi Ahne Andi Ahne Published: May 27, 2026 Google Maps Share on Facebook Share on Twitter While there are tons of great restaurants to eat out at throughout North Dakota, we don't have a lot of buffet options in the state. Well, good news foodies, a new buffet is opening soon in Fargo, and will occupy the old Mexican Village building at 3155 45th Street. (Also Read: New Nail Salon Opening Soon In North Bismarck) As I'm sure you remember, after 50 years in business, the owners of Mexican Village made the decision to close the restaurant. This was back in 2024; since then, the people of Fargo have been anxiously waiting to see what new eatery would take over the space. Now we know.  According to Inforum, a restaurant called Phoenix Sun will soon open in the location. Phoenix Sun will offer all kinds of Asian cuisine: sushi, pho, Chinese food, hibachi, seafood, salads and many desserts like ice cream. According to the restaurant's website, they will offer top tier ingredients in the food. For years, we've been dedicated to crafting a top-tier dining experience for our guests in Fargo, ND. Our talented chefs craft each dish using the finest local ingredients. The owners have not yet revealed an opening date, but the establishment is set to open this year (2026). 10 Perfectly Splendid Date-Night Restaurants In Bisman Here are a few restaurants that are perfect for your next date night. Gallery Credit: Andi Ahne LOOK: The top burger restaurant chains in America Stacker gathered YouGov Ratings to rank the top 20 burger restaurant chains in America, according to customers in the third quarter of 2024. Gallery Credit: Stacker Filed Under : Bismarck , Mandan , North Dakota Categories : Articles , Local News , Newsletter
 
---- Article 83 ---
-URL: https://www.the-sun.com/money/16413276/jonas-brothers-las-vegas-nellies-kitchen-closing/
-Title: Jonas Brothers' family inspired Vegas restaurant to close forever after four years of serving 'special recipes'
+--- Article 203 ---
+URL: https://www.kob.com/news/top-news/ymca-finally-opens-location-on-west-side/
+Title: YMCA finally opens location on West Side
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 13:44:36
+
+YMCA finally opens location on West Side Griffin Rushton | KOB YMCA opens new West Side location in Albuquerque They told us this third Albuquerque location was close to 30 years in the making. ALBUQUERQUE, N.M. — There’s a new place to work out on Albuquerque’s West Side as a brand new YMCA is opening near Cottonwood Mall. This location has been more than 30 years in the making to expand across the Rio Grande. The wait will finally be over with the new Westside Family YMCA hosting a grand opening this weekend. The Westside Family YMCA will be providing a new place for people to break a sweat and give some extra help with the kids. “The West Side community has been asking for a YMCA and we wanted to deliver,” executive director Christopher Martinez said. “We’re so much more than a gym. We’re really about being a community anchor, a community hub, a community gathering space.” The new location is tucked away in a strip mall near Coors and Alameda but it provides the full gym experience. “We have all of our cardio equipment, everything from your elliptical trainers, your treadmills,” KOB 4 was told. There are also two studio spaces for things like yoga and cycling classes among other forms of exercise. “We’re looking for our members to tell us what they want. Right now, we have tai chi, yoga… We’re going to have Zumba body pump cycle, so you name it, we’re going to have it here on site,” Martinez said. The Westside YMCA will also have child care options. “We actually provide care for six weeks and up, so we even take the little infants. We have a separate infant area for those kiddos and then all the way up to eight years old can be in our kid zone,” Martinez said. “We’re going to be opening a couple of classrooms here on site in the West Side. “Starting in August, you can expect to see some universal pre-K on-site as well.” The YMCA is a nonprofit organization, which means money is never a barrier. “We don’t turn anyone away for the inability to pay. So what we encou
+
+--- Article 204 ---
+URL: https://finance.yahoo.com/markets/stocks/articles/fast-growing-coffee-giant-plans-133000597.html
+Title: Fast-growing coffee giant plans California expansion with multiple locations
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 13:30:00
+
+Fast-growing coffee giant plans California expansion with multiple locations Brian Gallagher Wed, May 27, 2026 at 7:00 PM GMT+5:30 3 min read SBUX A rising coffee competitor that is giving Starbucks and Dunkin’ Donuts a run for their money will be expanding westward in the very near future. 7 Brew Coffee – a chain based in Rogers, Arkansas and has been rapidly expanding – is planning to open its first three stores in California. Two proposals have been filed to open 7 Brew shops in Visalia, California, one at 2800 N. Dinuba Blvd. and the other at 3627 S. Mooney Blvd. 7 Brew Coffee – a chain based in Rogers, Arkansas and has been rapidly expanding – is planning to open its first three stores in California. The chain also filed a design review application in Roseville, California for a 911-square-foot stand at 10201 Fairway Drive, via Sacramento Bee . Another shop in Clovis, California is in the works, with a 910-square-foot shop with dual drive-thru is being eyed for a lot on the corner of Shaw and Clovis avenues, via Your Central Valley . All of these plans have not been finalized by the various cities as of yet, and it’s unclear which of these stores would be the first to open for business in the Golden State. 7 Brew was founded by Ron Crume, with the first store opening in Rogers, Arkansas in 2017, and in under a decade, it has expanded quite rapidly. Another shop in Clovis, California is in the works, with a 910-square-foot shop with dual drive-thru is being eyed for a lot on the corner of Shaw and Clovis avenues, via Your Central Valley. 7brew.com It grew to seven stands by 2020, the same year the brand was purchased by an entrepreneurial group dedicated to, “offering an unmatched experience spreading kindness and positivity with speed and customized handcrafted drinks.” The name 7 Brew was derived from their 7 Originals brews – Blondie (Vanilla + Caramel Breve), Sweet & Salty (Salted Caramel + White Chocolate Breve), Cinnamon Roll (Brown Sugar Cinnamon + White 
+
+--- Article 205 ---
+URL: https://whatnow.com/new-york/retail/a-fast-growing-luxury-jewelry-brand-opened-a-stunning-madison-avenue-flagship/
+Title: A Fast-Growing Luxury Jewelry Brand Opened a Stunning Madison Avenue Flagship
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 13:29:27
+
+Exterior of MARLI’s new store in Manhattan  (Image credit: prnewswire.com) SHARE MARLI has expanded its New York footprint with a new Madison Avenue flagship. The new store marks the brand’s second location in the region, bringing its global footprint to 16 stores. The boutique brings immersive interiors and new collections for shoppers. MARLI New York Opens Second Manhattan Flagship on Madison Avenue MARLI New York opened a new location on Manhattan’s Madison Avenue earlier this month. The 2,418-square-foot store is situated at 785 Madison Avenue between East 66th and East 67th streets. The new flagship features a blend of modern architecture and a more personalized shopping experience. It allows customers to connect with the brand’s collections and design philosophy. The space also honors the founder and creative director, Maral Artinian, and her connection with New York City. Design details throughout the space draw inspiration from the New York City skyline. It incorporates Indiana limestone, a material used in several iconic New York landmarks. In a statement, Artinian said opening on Madison Avenue represents an important milestone for the brand. “The flagship is more than a boutique; it’s an embodiment of the MARLI spirit, a space where design, emotion, and individuality come together to create meaningful experiences,” she added. The boutique is open Monday to Saturday from 10 am to 6 pm and Sunday from 12 pm to 5 pm. View this post on Instagram A Store Designed as an Experience Inside the new MARLI store (Image Credit: prnewswire.com) The new store features a modern design inspired by Art Deco. It resembles the style of many jewelry collections of the brand. Visitors can explore signature collections including Cleo, Avenues, Tip-Top, and EMPIRE. The store also offers MARLI’s new watches. The boutique’s interior design is created by Artinian and the architecture firm Aranda\Lasch. The firm has worked with MARLI before. Past projects include stores in Geneva, 
+
+--- Article 206 ---
+URL: https://www.harianbasis.co/en/nordstrom-rack-expands-huntsville-retail
+Title: Nordstrom Rack Expands Footprint With New Huntsville Retail Location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 13:24:56
+
+Nordstrom Rack Expands Footprint With New Huntsville Retail Location Sophia Brown Published May 27, 2026 - 20:24 Last Update May 27, 2026 - 20:24 Share WhatsApp Seattle-based fashion retailer Nordstrom, Inc. announced on Tuesday it plans to open a new Nordstrom Rack in Huntsville by Spring 2027. Smallest Font Largest Font Seattle-based retailer Nordstrom Inc. announced on Tuesday, May 26, 2026, that it will open its second Alabama Nordstrom Rack location in Huntsville . The upcoming 24,000-square-foot facility will be situated at University Plaza near University Drive and Old Monrovia Road, positioned in the same shopping center as Best Buy. The off-price retail division offers up to 70% off on-trend apparel, accessories, beauty products, home decor, and shoes, while also providing online order pickup, returns, and alterations. Currently, the only operating Nordstrom Rack in the state is located at The Summit Shopping Center in Birmingham. The planned launch in the spring of 2027 follows a recent influx of major brand openings in the Huntsville area, including IKEA, L.L. Bean, The LEGO Store, Madewell, and Crocs. "We look forward to being a part of the Huntsville community and serving our customers with an amazing offering of great brands at great prices," said Gemma Lionello, president of Nordstrom Rack. The executive expressed enthusiasm regarding the company's regional expansion and the opportunity to introduce local shoppers to the brand. "We’re excited to grow our footprint in the Huntsville market and introduce new customers to the Nordstrom experience." said Gemma Lionello, president of Nordstrom Rack. Property managers view the arrival of the high-caliber brand as a positive indicator for the economic development of North Alabama. "Nordstrom Rack is a marquee addition to University Plaza and a strong signal of where Huntsville is headed," said Miro Sutton, managing partner of Montana Property Group. The property management firm noted that securing the promin
+
+--- Article 207 ---
+URL: https://www.cstoredive.com/news/former-seven-i-ceo-dies-at-93/821161/
+Title: C-Store Dive
+Status hint: Closing | Industry: Convenience Stores / Distributors
+Published: 2026-05-27 13:24:36
+
+An article from Former Seven & i CEO dies at 93 Toshifumi Suzuki, who had been serving as an honorary advisor of the company, passed away on May 18 from heart failure, the company announced on Monday. Published May 27, 2026 Jessica Loder Senior Editor Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Brett Dworski/C-Store Dive Listen to the article 2 min This audio is auto-generated. Please let us know if you have feedback . Toshifumi Suzuki, who served as Seven & i Holding’s first CEO, died on May 18 of heart failure, according to an obituary released by the company . He was 93 years old. “Mr. Suzuki's more than 50 years of leadership and innovation were fundamental to our Group's development and growth,” said Seven & i holdings in a LinkedIn post on Monday. “After launching 7-Eleven in Japan in 1973, he set new standards in retail distribution and made convenience stores part of the national infrastructure. “ Suzuki had been involved in 7-Eleven’s global development for decades. After joining retailer Ito-Yokado in 1963, he was among the leaders who brought 7-Eleven to Japan in the 1970s via a licensing agreement with The Southland Corporation, which owned the 7-Eleven brand. He was then named president of 7-Eleven Japan in 1978. After The Southland Corporation was purchased out of bankruptcy by Ito-Yokado in 1991, Suzuki was named vice chairman of that company as well, according to his obituary. He was then named chairman of the board for 7-Eleven’s North American business in 2003. In 2005, when Seven & i Holdings was founded by Ito-Yokado to contain all of its business, the company named Suzuki as its first CEO. He would continue in that role for more than a decade, stepping down in 2016 after a clash with shareholders. He was succeeded by Ryuichi Isaka. Suzuki was named honorary advisor when he left the CEO role, according to his obituary. Recommended Reading 7-Eleven parent company appoints new CEO, plans US IPO By Jessica Loder 
+
+--- Article 208 ---
+URL: https://www.freep.com/story/entertainment/dining/2026/05/27/patty-press-smashburgers-bloomfield-township-restaurant-location/90274854007/
+Title: Patty & Press Smashburgers to open Bloomfield Township location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 13:24:00
+
+DINING Patty & Press Smashburgers to open Bloomfield Township location Susan Selasky Detroit Free Press May 27, 2026 Updated May 28, 2026, 8:09 a.m. ET Subscribe to hear this story After a recent grand opening celebration of Patty & Press Smashburgers in Shelby Township, the burger joint's owners announced an expansion with another – and larger – metro Detroit location. A Patty & Press flagship store is scheduled to open later this year at 42983 Woodward Ave. in Bloomfield Township. This location is a former Zoup! Spot. At more than 1,700 square feet, this new spot will accommodate 24 seats for dining in, compared to eight seats at its carryout-heavy Shelby Township location.
+
+--- Article 209 ---
+URL: https://www.readers.id/en/nordstrom-rack-expands-huntsville-alabama
+Title: Nordstrom Rack Expands to Huntsville with New University Plaza Store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 13:21:40
+
+Nordstrom Rack Expands to Huntsville with New University Plaza Store Hendra Setiawan Published May 27, 2026 - 20:21 2 Reads Last Update May 27, 2026 - 20:21 Share WhatsApp Seattle-based fashion retailer Nordstrom, Inc. announced on Tuesday it plans to open a new Nordstrom Rack in Huntsville by Spring 2027. Smallest Font Largest Font Seattle-based fashion retailer Nordstrom, Inc. announced on Tuesday, May 26, 2026, plans to launch a new Nordstrom Rack location in Huntsville, Alabama, scheduled to open in the spring of 2027, according to reports from rocketcitynow.com, waff.com, and hvilleblast.com. The department store will establish a 24,000-square-foot facility at University Plaza, a retail center off University Drive and Mid City Drive. The complex is owned by Montana Property Group and managed by Colliers International, expanding Nordstrom's footprint as its second location within Alabama alongside its existing Birmingham site. Company leadership indicated that the new venue will take over an area currently utilized by Office Depot. The retail site will position the brand next to Best Buy and two doors down from HomeGoods, offering customers up to 70% discounts on apparel, accessories, beauty products, home decor, and shoes. The expansion aligns with a broader retail influx in the Huntsville area. According to hvilleblast.com, the city has recently attracted several major brands, including IKEA, L.L. Bean, The LEGO Store, Madewell, and Crocs over the past year. Gemma Lionello, president of Nordstrom Rack, expressed optimism regarding the company's regional growth and consumer engagement strategy. "We look forward to being a part of the Huntsville community and serving our customers with an amazing offering of great brands at great prices," said Gemma Lionello, president of Nordstrom Rack. "We're excited to grow our footprint in the Huntsville market and introduce new customers to the Nordstrom experience." The facility will integrate digital retail features along
+
+--- Article 210 ---
+URL: https://www.koranmanado.co.id/en/nordstrom-rack-opens-huntsville-location
+Title: Nordstrom Rack Expands Retail Footprint with New Huntsville Location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 13:08:59
+
+Nordstrom Rack Expands Retail Footprint with New Huntsville Location Lily Foster Published May 27, 2026 - 20:08 5 Reads Last Update May 27, 2026 - 20:08 Share WhatsApp Seattle-based fashion retailer Nordstrom, Inc. announced on Tuesday it plans to open a new Nordstrom Rack in Huntsville by Spring 2027. Smallest Font Largest Font Seattle-based fashion retailer Nordstrom, Inc. announced on Tuesday, May 26, 2026, that it plans to expand its retail presence in Alabama by opening a new Nordstrom Rack location in Huntsville by spring 2027. The upcoming 24,000-square-foot facility will be situated within University Plaza, a popular high-density shopping center positioned off University Drive and Mid City Drive, just west of Old Monrovia Road. The property is currently owned by Montana Property Group, while Colliers International manages and oversees the leasing operations for the site. The expansion introduces the second Nordstrom Rack storefront to the state of Alabama, joining an existing location at The Summit Shopping Center in Birmingham. Company officials confirmed the new facility will occupy a commercial space currently utilized by an Office Depot, positioning the discount retailer adjacent to Best Buy and two doors down from HomeGoods. Gemma Lionello, president of Nordstrom Rack, highlighted the brand's long-term corporate growth strategy and its customer service expectations for the North Alabama market region. "We look forward to being a part of the Huntsville community and serving our customers with an amazing offering of great brands at great prices," said Gemma Lionello, president of Nordstrom Rack. The leadership team emphasized that the expansion will provide local shoppers with direct access to the wider Nordstrom ecosystem, including specialized digital storefront features. "We're excited to grow our footprint in the Huntsville market and introduce new customers to the Nordstrom experience." said Gemma Lionello, president of Nordstrom Rack. Customers visi
+
+--- Article 211 ---
+URL: https://www.rustourismnews.com/2026/05/27/the-luce-hotel-set-to-open-on-st-pete-beach-this-june/
+Title: The Luce Hotel Set To Open On St. Pete Beach This June
+Status hint: Opening | Industry: Hospitality
+Published: 2026-05-27 13:08:40
+
+The Luce, a newly reimagined beachfront hotel on Florida ’s Gulf Coast, is preparing to welcome guests to St. Pete Beach starting 11 June. Now part of Marriott’s Tribute Portfolio, the 200-room property combines boutique coastal design, large-scale resort amenities and a distinctly Floridian atmosphere aimed at both leisure travellers and local visitors. New Tribute Portfolio Hotel Opens On St. Pete Beach The Luce has been transformed from a long-standing St. Pete Beach boutique hotel into a fully redesigned lifestyle resort operated by Crescent Hotels & Resorts and owned by LCP and Safanad. The hotel features 200 accommodations, including bungalow-style studio suites and poolside lanai rooms designed around indoor-outdoor living. Design elements throughout the property draw inspiration from retro Florida aesthetics, Sunken Gardens and Gulf Coast beach culture, blending flamingo-pink tones, rattan textures and modern stone finishes. Beachfront Dining And Social Spaces Highlight Resort Experience At the centre of the property is Sundrop, a coastal-inspired indoor-outdoor restaurant and bar serving daily brunch and dinner alongside pool and beach service. The menu features Gulf seafood towers, oysters, Wagyu steak, lobster rolls, citrus-forward cocktails and brunch dishes including lemon mascarpone pancakes and burrata avocado toast. The hotel also plans to open Baby Turtle Beach Club in autumn 2026, offering casual coastal dining directly on the beach and pool deck. Largest Pool On St. Pete Beach The Luce will feature what the property describes as the largest swimming pool on St. Pete Beach, combined with private beach access and complimentary loungers. :contentReference[oaicite:8]{index=8} A dedicated Beach Butler service will assist guests with seating, charging stations and curated amenity boxes containing beach essentials such as sunscreen and cooling mist sprays. Additional programming includes live DJ sessions, yoga classes, lawn games, sunset social events, p
+
+--- Article 212 ---
+URL: https://www.hotelmanagement.net/development/my-place-hotels-plans-midwest-expansion-10-property-agreement
+Title: My Place Hotels plans Midwest expansion with 10-property agreement
+Status hint: Opening | Industry: Hospitality
+Published: 2026-05-27 13:03:12
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.hotelmanagement.net/development/my-place-hotels-plans-midwest-expansion-10-property-agreement]
+
+--- Article 213 ---
+URL: https://www.bizjournals.com/houston/news/2026/05/27/sprouts-webster-baybrook-gateway-grand-opening.html
+Title: Sprouts Farmers Market to open Webster store near Baybrook Mall this week
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 13:00:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/houston/news/2026/05/27/sprouts-webster-baybrook-gateway-grand-opening.html]
+
+--- Article 214 ---
+URL: https://www.wearegreenbay.com/local5live/popular-food-truck-hot-biddys-expanding-to-year-round-restaurant/
+Title: Popular food truck “Hot Biddy’s” expanding to year-round restaurant
 Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 16:52:48
+Published: 2026-05-27 12:59:22
 
-Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Comment now A LAS Vegas restaurant with star-studded roots closed its doors this weekend. The closure is that latest of a number of changes to hit the Sin City Strip . Sign up for the Money newsletter Thank you! 3 Nellie’s Southern Kitchen is owned by Denise and Kevin Jonas Sr. (Photo by Denise Truscello/Getty Images for Nellie’s Southern Kitchen) Credit: Getty 3 The couple are the parents of pop sensations the Jonas Brothers (Photo by Axelle/Bauer-Griffin/FilmMagic) Credit: Getty Advertisement Nellie’s Southern Kitchen, owned by the Jonas Brothers’ parents Denise and Kevin Jonas Sr., served its final guests on Monday, May 25. The closure was announced through a statement MGM Resorts International published on May 15. “We are grateful to our dedicated staff and loyal guests who filled that space with so many unforgettable moments over the years,” Manolis Alpogianis, a spokesperson for the restaurant, told PEOPLE in an email. “As our lease approached its expiration, we made a strategic decision about where to focus our long-term efforts.” Read more on Food and Drink LIGHTS OUT Farewell to popular 55-year-old Chinese restaurant as it closes for good WIDE AWAKE Say hello to popular energy drink store as new location swings open doors The 11,000-square-foot restaurant opened in the District by the MGM Grand Garden Arena on June 4, 2022. At the time, the Jonas Brothers were performing in Las Vegas residency shows. The pop sensations joined their parents and younger brother Franklin at the grand opening of the restaurant. Named after Kevin Sr.’s late grandmother, Nellie’s Southern Kitchen serves up southern comfort food reminiscent of the meals he ate growing up at his grandparents’ house. Advertisement Most read in Money GONE SON Goodwill shoppers have less than a week before store permanently closes UN-LUCKY PENNY Say goodbye forever to JCPenney as ‘dead mall’ store to permanently close 
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.wearegreenbay.com/local5live/popular-food-truck-hot-biddys-expanding-to-year-round-restaurant/]
 
---- Article 84 ---
-URL: https://www.longislandpress.com/2026/05/26/kuku-korean-roslyn-opens/
-Title: KuKu Korean Cuisine opens Roslyn Heights location
+--- Article 215 ---
+URL: https://www.edp24.co.uk/news/26142560.queues-itaewon-korean-supermarket-norwich-reopens/
+Title: Excited customers queue for reopening of Korean supermarket after expansion
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-27 12:50:00
+
+Queues as Itaewon Korean Supermarket in Norwich reopens Business By 
+            Phoebe Ozanne What's On Specialist Share 0 Comments 8 Skip to next photo 1 / 1 Show caption 1 / 1 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. Dozens of excited customers queued outside a Korean supermarket ahead of its reopening. Shoppers were lined up by Itaewon Korean Supermarket, based in Castle Quarter in Norwich, from 10.30am on Wednesday as the store prepared to open its doors after its expansion. It has taken a neighbouring unit to offer a wider range of Asian products, fresh ingredients, drinks and snacks in a more spacious setting. Loren Thorpe and Jordan Lau were the first in the queue (Image: Phoebe Ozanne) Loyal customers, Loren Thorpe and Jordan Lau, were at the front of the queue excited to see the new products on offer. "I feel like it's one of the best Asian markets in Norwich," Mr Lau said. Ms Thorpe added: "We are happy they are expanding and it is nice to see them growing more." Nine-year-old Alaska Hubbard was also waiting with enthusiasm in the line, curious to know what was in the goodie bags. Nine-year-old Alexa Hubbard waiting in the queue for the reopening of Itaewon Korean Supermarket (Image: Savanah Gray) The goodie bags at the event (Image: Phoebe Ozanne) "I really like the shop," she explained. "It is my favourite style of food and ramen is my favourite so I am excited to see what they have." The newly expanded store opened at midday, with the first 100 customers receiving a goodie bag worth more than £10. Each goodie bag included popular Korean treats such as Ramune Japanese soda, Samyang Carbonara noodles, Shin Toomba noodles and freshly made onigiri prepared daily in store. The store also unveiled "Moya Gachapon," featuring 18 Japanese capsule toy machines inspired b
+
+--- Article 216 ---
+URL: https://www.wbrc.com/video/2026/05/27/fire-damages-storage-trailers-outside-love-lady-thrift-store/?outputType=amp
+Title: Fire damages storage trailers outside Love Lady Thrift Store
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 16:51:21
+Published: 2026-05-27 12:49:00
 
-Local News KuKu Korean Cuisine opens Roslyn Heights location By Larissa Fuentes Comments Posted on May 26, 2026 KuKu Korean Cuisine opened its first restaurant on Long Island. Larissa Fuentes Kuku Korean Cuisine, a Queens-based restaurant known for blending traditional Korean cooking with modern techniques, opened a new location in Roslyn Heights, expanding its presence to Long Island. The restaurant, located at 96 Mineola Ave., is co-owned by James Chen and chef Chris Pak, who founded the brand after building a partnership rooted in years of friendship and shared restaurant experience. The new location continues their effort to introduce a broad range of authentic Korean dishes while maintaining a strong emphasis on culinary heritage. Kuku Korean Cuisine offers a menu centered on traditional Korean staples, including bibimbap, bulgogi, spicy pork with kimchi, and a variety of chicken dishes such as wings, tenders and poppers. One featured dish is Thai chili chi-bap, which pairs fried chicken coated in Thai chili sauce with rice and toppings including spicy mayonnaise and pickled vegetables. Chen and Pak launched their first restaurant in Long Island City in 2021 after years of familiarity that began when Chen was a frequent customer at a restaurant where Pak worked as a chef. Their collaboration grew over time into a business partnership, with Chen overseeing operations and Pak leading the kitchen. Long Island City served as the original home of the brand, where the two developed their concept before expanding into Nassau County. Pak, the head chef, is credited with shaping the restaurant’s culinary identity. He focuses on preserving traditional Korean cooking methods while incorporating subtle creative adjustments to classic dishes, aiming to balance authenticity with innovation. His approach emphasizes careful preparation and flavor layering, with dishes designed to highlight both familiar and evolving aspects of Korean cuisine. Chen has said the Roslyn Heights e
 
---- Article 85 ---
-URL: https://dailyhive.com/calgary/francas-calgary
-Title: Beloved Calgary Italian restaurant is closing its doors after more than 20 years
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-26 16:45:00
 
-@francasyyc/Instagram When one door closes, another opens, and that’s certainly true for Calgary’s restaurant scene. Case in point: a well-known Italian restaurant is set to close this week, and we already have the details on what’s coming next. Franca’s , the Edmonton Trail spot which has been open for over 20 years, will be closing soon, with its final dinner service set to take place on Saturday, May 30. While the spot opened in 2002, it was recently taken over by new owners, Jennifer and John Banister. “We were honoured to live in the world of Franca’s, even if just for a short time,” the Banisters said. View this post on Instagram A post shared by FRANCA’S (@francasyyc) “We also have loved sharing in your special occasions, holidays, and memory-making. Thank you for making this time so very special.” While many will be sad to see Franca’s go, the owners also shared the exciting news that the space would very soon be home to a brand-new restaurant, Petalo. Petalo, which means petal in Italian, will be featuring “fresh, light, vibrant” contemporary Italian cuisine, with influences from the Mediterranean. As well as a new menu, the former Franca’s space will be transformed with new textiles, greenery, lighting, and a brand-new bar with seating. Petalo is slated to open mid-June, so there’s not too long to wait. Franca’s Address: 3811 Edmonton Trl. NE # 100, Calgary Instagram Still hungry? Discover Dished Calgary on TikTok You might also like: Kraft Dinner just launched a mac and cheesecake across Canada — here's how to get one Calgary's first-ever hot dog festival kicks off this week – here are the restaurants taking part New chef-driven wine bar set to open in Calgary this summer
-
---- Article 86 ---
-URL: https://hoyendelaware.com/wisp-bookshop-announces-grand-opening-celebration-in-downtown-middletown/
-Title: Wisp Bookshop Announces Grand Opening Celebration in Downtown Middletown
+--- Article 217 ---
+URL: https://www.eadt.co.uk/news/26141203.construction-underway-mildenhall-college-academy/
+Title: Construction begins to expand college
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 16:44:18
+Published: 2026-05-27 12:30:00
 
+Construction underway at Mildenhall College Academy Planning and development Mildenhall By 
+            Freddie Trevanion Reporter Share 0 Comments Construction underway at Mildenhall College Academy (Image: Submitted: Lorelei Cruz) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. What is the Public Notice Portal? Find, save and share Public Notices that affect you in the area. Search the Public Notice Portal What is the Public Notice Portal? What is the Public Notice Portal? The Public Notice Portal carries statutory public notices published in local newspapers and is the fastest and most effective way of finding out what is happening in YOUR neighbourhood. Search the Public Notice Portal Work has begun to build seven new classrooms and a dining area at a Suffolk college. The project to expand Mildenhall College Academy will also include new office spaces on each floor and new toilets. The work carried out by Concertus and contractor Pentaco Construction is due to complete in spring 2027. A temporary car park and alterations to the existing school have already been made, allowing the foundation works to progress safely. Jamie Silverton Webb, contracts manager at Pentaco Construction, said: “A fantastic milestone reached at Mildenhall as we officially marked the start of works with a groundbreaking ceremony for the new school extension. "It was great to welcome representatives from the client team, along with teachers and staff, to the site to celebrate the beginning of this exciting project. "With works now underway, we look forward to delivering a high-quality new learning environment that will benefit both students and staff for years to come.” Read more Academy taking steps forward in latest inspection report Supermarket rejected over threat to 'town centre's vitality' New care home to be 
 
-
---- Article 87 ---
-URL: https://www.crainsnewyork.com/real-estate/commercial/cny-stout-nyc-14k-nomad-location-20260526/
-Title: Gastropub chain Stout inks sizable lease for new NoMad location
+--- Article 218 ---
+URL: https://www.aol.com/articles/trader-joe-set-open-25-040400000.html
+Title: Trader Joe’s set to open 25 new stores across 14 states this year
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 16:44:00
+Published: 2026-05-27 12:28:38
 
-Commercial Real Estate Gastropub chain Stout inks sizable lease for new NoMad location Gift Article Share Expand Stout NYC will move into 14,000 square feet of space at 373 Park Ave. South by the end of this year. (CoStar) By Julian Nazar May 26, 2026  12:44 PM EDT Featured Stories Commercial Real Estate Overseas lenders swallow big losses in Brooklyn’s tallest office tower A big Canadian pension fund and EB-5 investors took big losses at 1 Willoughby Square. AE By Aaron Elstein Residential Real Estate John Paulson hands $30 million Upper East mansion to ex-wife CJ By C. J. Hughes Politics & Policy How Ken Griffin falls out of love with a city, what’s lost and whether NYC is next JG By Jack Grieve JP By John Pletz Commercial Real Estate Paramount Group falls off of largest property managers list By Julian Nazar
+Jasmine Fernández Thu, May 21, 2026 at 4:04 AM UTC 0 Trader Joe’s is expanding with 25 new locations across 14 states, adding to its previously announced pipeline of future stores, the company said Wednesday. The California-based grocery chain announced that nine additional stores are currently in development, bringing the total number of upcoming openings to more than two dozen. Specific opening dates have not yet been determined, though locations have been selected. “We are proud to be joining the neighborhood, and to continue our commitment to providing nourishment to the surrounding communities through our Neighborhood Shares program,” the company said in a statement. The ongoing expansion follows recent data from the American Customer Satisfaction Index, which named Trader Joe’s America’s favorite grocery store, earning a customer satisfaction score of 86 points to edge out rival supermarket chains Publix and Costco. The retailer, known for its affordable prices, private-label products and popular canvas tote bags, operates more than 600 locations nationwide after adding nearly 100 stores between 2023 and 2024. The expansion follows recent data from the American Customer Satisfaction Index, which named Trader Joe’s America’s favorite grocery store (Getty Images) The nine newly announced development sites span eight states: Arizona Phoenix Florida Sarasota Illinois Advertisement Chicago Massachusetts Quincy Michigan Farmington Hills New York Syracuse Yonkers Ohio University Heights Utah West Jordan An additional 16 locations remain on the company's list of upcoming store openings. These include sites in: Tucson, Arizona Anaheim Hills and Paso Robles, California Orlando and West Palm Beach, Florida Johns Creek, Georgia Oswego, Illinois Merriam, Kansas Lafayette, Mandeville, and New Orleans, Louisiana Reading, Massachusetts West Orange, New Jersey Herriman, Utah Seattle and Spokane Valley, Washington In an episode of the “Inside Trader Joe’s” podcast, marketing ex
 
---- Article 88 ---
-URL: https://www.msn.com/en-us/money/companies/acapulco-mexican-restaurant-chain-shuts-169-locations-1-remains/ar-AA237bVG?ocid=finance-verthp-feeds&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Acapulco Mexican restaurant chain shuts 169 locations, 1 remains
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-26 16:37:05
-
-MSN
-
---- Article 89 ---
-URL: https://www.msn.com/en-us/money/companies/smoothie-king-to-open-in-cumberland-county/ar-AA246xNd
-Title: Smoothie King to open in Cumberland County
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 16:34:49
-
-MSN
-
---- Article 90 ---
-URL: https://insidethemagic.net/2026/05/disneys-jonas-brothers-confirm-final-closure-last-day-of-operation-yesterday-ad1/
-Title: Disney’s Jonas Brothers Confirm Final Closure, Last Day of Operation Yesterday
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 16:33:52
-
-Home » Entertainment Credit: Disney The Jonas family is saying goodbye to Las Vegas, at least from a culinary standpoint. Credit: Disney Nellie’s Southern Kitchen, the Southern comfort food restaurant co-owned by the Jonas Brothers’ parents Denise and Kevin Jonas Sr., is closing its Las Vegas location after service on May 25. The closure was confirmed in a May 15 statement from MGM Resorts International, first obtained by Neon. The restaurant has operated for four years inside the District by the MGM Grand Garden Arena, and its closing marks the end of what was genuinely one of the more personal celebrity restaurant ventures in recent memory. Nellie’s was not just a Jonas Brothers branding exercise. It was a family project rooted in something real. The restaurant was named after Kevin Sr.’s late great-grandmother, whose recipes have been passed down through generations of the Jonas family. The original location opened in Belmont, North Carolina, Kevin Sr.’s hometown, in 2016. The Las Vegas location followed in June 2022, with the Jonas Brothers joining their parents and younger brother Franklin to celebrate the grand opening during a period when the Brothers were performing residency shows at MGM Grand Garden Arena. The announcement of the closure acknowledged what the space had meant while framing the decision as a practical one. Manolis Alpogianis, a spokesperson for the restaurant, told PEOPLE: “We are grateful to our dedicated staff and loyal guests who filled that space with so many unforgettable moments over the years. As our lease approached its expiration, we made a strategic decision about where to focus our long-term efforts. We invite everyone to visit our founding location in Belmont, NC, now celebrating a decade of great food and Southern hospitality.” What Made Nellie’s Different Credit: Disney The story behind Nellie’s Southern Kitchen is the kind that makes a restaurant feel like more than just a restaurant. Kevin Sr. has spoken publicly about growin
-
---- Article 91 ---
-URL: https://journalrecord.com/2026/05/26/hawaiian-bros-opens-norman-location-grand-giveaways/
-Title: Hawaiian Bros opens Norman location with grand opening giveaways
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 16:32:42
-
-
-
---- Article 92 ---
-URL: https://www.homepagenews.com/retail-articles/four-new-stores-propel-bjs-wholesale-club-expansion-strategy/
-Title: Four New Stores Propel BJ’s Wholesale Club Expansion Strategy
-Status hint: Opening | Industry: Grocery Wholesale
-Published: 2026-05-26 16:29:53
-
-BJ’s Gets Boost From Home To Beat Wall Street in Q1 May 22, 2026 Home products were a positive contributor to...
-
---- Article 93 ---
-URL: https://www.kctv5.com/2026/05/26/popular-chicken-chain-announces-opening-10-kansas-city-area-locations/?outputType=amp
-Title: Popular chicken chain announces opening of 10 Kansas City-area locations
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 16:23:00
-
-Add Us On Google Add as a preferred source on Google KANSAS CITY, Mo. (KCTV) - A new fast food chain announced it plans to expand into the Kansas City metro. Huey Magoo’s said it will open 10 locations in the Kansas City over the next five years. The first location is expected to open in September north of Interstate 70 on Little Blue Parkway in Independence. “As Huey Magoo’s continues to grow its reach across the country, we’ve had our eye on Kansas City as a key market to introduce our handcrafted chicken tenders to a new fanbase,” Andy Howard, President and CEO of Huey Magoo’s, said. “Midwest Restaurant Group has the experience, regional familiarity, and love for our brand to amplify our presence in the Midwest.” ALSO READ: Oceans of Fun gives explanation after frustrating guests opening weekend Huey Magoo’s said it is known for its “Filet Mignon of Chicken®" tenders. The chain’s menu also includes Grilled Chicken Bites with dips and sides as part of a sandwich, wrap, or salad. Huey Magoo’s has locations in 12 states and plans to open its 100th location later this year. Copyright 2026 KCTV. All rights reserved. Join The Conversation Comments 0 We want to hear what you think . Create a free account to share your thoughts . Read our community guidelines here .
-
---- Article 94 ---
-URL: https://www.yoursun.com/arcadia/local-events/?_evDiscoveryPath=/event/3652294-the-honey-baked-ham-company-celebrates-venice-grand-opening-with-giveaways
-Title: The Honey Baked Ham Company ® Celebrates Venice Grand Opening with Giveaways
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 16:22:19
-
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.yoursun.com/arcadia/local-events/?_evDiscoveryPath=/event/3652294-the-honey-baked-ham-company-celebrates-venice-grand-opening-with-giveaways]
-
---- Article 95 ---
-URL: https://www.packagingdive.com/news/cstores-convenience-food-packaging-innovations/820943/
-Title: Prepared food surge in c-stores brings packaging innovations
+--- Article 219 ---
+URL: https://www.westsiderag.com/2026/05/27/openings-ghemo-a-convenience-store-as-yet-unnamed-sushi-konata
+Title: Openings & Closings: Lily’s Roasters; Ghemo; a Convenience Store (as Yet Unnamed); Sushi Konata
 Status hint: Opening | Industry: Convenience Stores / Distributors
-Published: 2026-05-26 16:08:15
+Published: 2026-05-27 12:22:01
 
-An article from Prepared food surge in c-stores brings packaging innovations As convenience stores offer more fresh food, their packaging needs shift. Packaging companies are exploring forms that maintain food quality, offer versatility and minimize storage space. Published May 26, 2026 By Shefali Kapadia Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google A Pilot travel center. Pilot launched a new foodservice program this year, just one example of growth in the convenience stores market for packaging suppliers. Courtesy of Pilot Travel Centers Listen to the article 9 min This audio is auto-generated. Please let us know if you have feedback . Convenience stores are no longer just a spot to grab an energy drink and a bag of chips. The retailers are increasingly becoming an outlet for prepared meals and fresh food – even sushi – while still maintaining grab-and-go convenience. For packaging suppliers, the c-store sector presents a growing opportunity to supply innovative designs that maintain freshness and extend shelf life, while simultaneously helping c-stores boost their branding. “This is a very attractive channel and category for packaging businesses to be looking at,” said Thilo Henkes, managing director, partner and leader of the global packaging practice at L.E.K. Consulting. Prepared foods make up an increasing share of sales in convenience stores. Foodservice — which includes prepared foods, dispensed beverages and commissary items — led in-store sales in 2025, totaling 28.5%, according to the National Association Of Convenience Stores . That’s up from just under 12% in 2005. Prepared foods such as pizza, chicken, burgers, sandwiches and salads are the largest segment at nearly 74% of foodservice sales, an increase from more than 66% in 2021. “Food and beverage has never been more important in a c-store than it is now,” said Farley Kaiser, senior director of culinary innovation at McLane Fresh, the foodservice program of distrib
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.westsiderag.com/2026/05/27/openings-ghemo-a-convenience-store-as-yet-unnamed-sushi-konata]
 
---- Article 96 ---
-URL: https://www.the-sun.com/money/16412897/mon-kou-chinese-polynesian-restaurant-closed-attleboro-massachusetts/
-Title: Farewell to popular Chinese restaurant as 55-year-old location closes its doors for good
+--- Article 220 ---
+URL: https://www.aol.com/articles/okana-resort-fully-open-first-225609000.html
+Title: OKANA Resort is fully open for its first summer in Oklahoma City
+Status hint: Closing | Industry: Hospitality
+Published: 2026-05-27 12:19:47
+
+Brandy McDonnell, The Oklahoman Updated Sat, May 23, 2026 at 1:48 PM UTC 0 Even if the Memorial Day weekend weather remains overcast, the summertime outlook seems sunny in Oklahoma City's Horizons District . That's because it's the first summer that one of the fledgling entertainment district's anchor attractions, the OKANA Resort & Indoor Waterpark , is fully ready to take the plunge. For the first time since the $400 million OKANA Resort hosted its grand opening in February 2025, every restaurant, venue and attraction — from the much-anticipated Boardwalk to all 14 dining outlets — is now open and operating for the entire summer season. That includes OKANA Beach , the resort's sprawling outdoor waterpark, which is now open for its 2026 run. “This summer is what we’ve been building toward,” said OKANA Managing Director Gerson Velasquez in an email. “With every restaurant open, The Boardwalk welcoming guests, and an extraordinary lineup of daily programming and special events, 2026 is the year OKANA becomes the complete destination we always envisioned.” Plus, OKANA has been named one of Time's "The World's Greatest Places of 2026 ." It was featured as one of the top "Places to Stay" around the globe, alongside resorts in India, New Zealand and Switzerland. OKANA Beach opened full time to the public on May 24, 2025. What can visitors find at OKANA Beach? Built by the Chickasaw Nation on the Oklahoma River near downtown OKC, OKANA features an 11-story, 404-room hotel, plus a 100,000-square-foot indoor waterpark boasting a slew of slides, a family entertainment center, retail shops and more. The 4 1/2-acre Outdoor Waterpark includes the fourth-largest pool in the nation, along with signature attractions like The Drop-off plunge pool body slides, Bounce Bay’s overwater inflatable obstacle course and Zip & Dip, where adventurers can zipline and jump into the water. The seasonal outdoor oasis also encompasses a white sand beach, 36 private cabanas and Cabana Cove, an adu
+
+--- Article 221 ---
+URL: https://www.indianretailer.com/franchisetv/archives/news/kfc-opens-new-dine-and-delivery-outlet-noida
+Title: KFC Opens New Dine-In and Delivery Outlet in Noida
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 12:14:55
+
+Retail KFC Opens New Dine-In and Delivery Outlet in Noida BY - Franchise TV Bureau 27 May, 2026
+            / 166 / 4 MIN READ Quick service restaurant chain KFC India has expanded its presence in the National Capital Region with the opening of a new outlet at Spectrum@Metro Phase 2 in Sector 75, Noida. The launch comes as retail and mixed-use developments continue to strengthen their food and beverage portfolios to increase consumer engagement and footfall. The new KFC outlet is situated on the ground floor of Tower B and covers nearly 3,500 sq. ft. The addition further enhances the food and dining offerings at Spectrum@Metro Phase 2 and is expected to attract visitors from Noida and surrounding residential areas. Spectrum@Metro Phase 2 has been developed as a mixed-use destination integrating retail, dining, entertainment, and leisure experiences. Supported by improving connectivity and rising residential development in the region, the project has been expanding its tenant mix with established food and lifestyle brands to meet evolving consumer demand. The inclusion of KFC forms part of the development’s broader strategy to strengthen its experiential retail positioning as food and beverage brands continue to play a larger role in commercial real estate projects. Industry observers point out that restaurants and quick service brands remain critical for driving repeat visits and increasing customer dwell time in malls and mixed-use centres, particularly in urban markets such as Noida, where competition among retail destinations continues to grow. Ajendra Singh, Vice President, Spectrum@Metro, said, “We are delighted to welcome KFC to Spectrum Metro Phase 2. The addition of such an iconic global brand aligns with our vision of creating a dynamic and engaging destination for visitors. As consumer preferences continue to evolve towards experiential retail and dining, we remain focused on bringing renowned brands that enhance the overall experience and add greater valu
+
+--- Article 222 ---
+URL: https://www.msn.com/en-in/lifestyle/whats-hot/us-memorial-holiday-2026-ikea-supermarket-opening-closing-times-are-stores-open-or-closed-today-may-25-check-full-schedule-here/ar-AA241zBQ?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: US Memorial Holiday 2026: Ikea supermarket opening & closing times
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-27 12:12:39
+
+MSN
+
+--- Article 223 ---
+URL: https://www.bizjournals.com/twincities/news/2026/05/27/asia-mall-in-blaine-set-to-open-soon-with.html
+Title: Asian shopping center opens this week in former Blaine furniture store
+Status hint: Opening | Industry: Furniture / Mattress
+Published: 2026-05-27 12:12:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/twincities/news/2026/05/27/asia-mall-in-blaine-set-to-open-soon-with.html]
+
+--- Article 224 ---
+URL: https://www.croatiaweek.com/pozega-zlatni-lug-hotel-opening-continental-tourism/
+Title: Croatia’s continental tourism gets boost with opening of first major hotel in Požega
+Status hint: Opening | Industry: Hospitality
+Published: 2026-05-27 12:11:15
+
+(Photo: Požega-Slavonia County) A new chapter in the development of continental tourism in Croatia began this week with the official opening of the Zlatni Lug Hotel in Požega. The €4 million investment marks the opening of the first hotel of this capacity in the city and is being seen as an important step forward for tourism and economic development in Požega and the wider Požega-Slavonia County. The project was realised with support from Croatia’s National Recovery and Resilience Plan and includes not only hotel accommodation but also facilities aimed at supporting active and sustainable tourism. These include sports grounds and amenities designed to attract guests throughout the year. The opening ceremony was attended by representatives of national, regional and local government, along with project partners, business representatives and guests. (Photo: Požega-Slavonia County) In a symbolic gesture, the ribbon-cutting ceremony was carried out by the youngest members of the Pandžić family, highlighting the family’s long-standing connection to the project, which has been developing over several decades. Hotel owner Thomas Heinz Pandžić said the opening was the result of years of work, dedication and family vision. He thanked everyone involved in the project and paid special tribute to his family, with whom he began the Zlatni Lug story in 1994. (Photo: Požega-Slavonia County) “We can proudly say today that we have created a project that will remain for future generations and contribute to the development of our region,” Pandžić said. Leo Pandžić, manager of Zlatni Lug, said the hotel represents more than just a new tourism investment. He said the aim was to create a space where guests could experience the authenticity of Slavonia and feel welcomed throughout their stay. With a total capacity of 106 beds, the hotel significantly expands accommodation options in Požega and is expected to support further tourism and business growth in the area. (Photo: Požega-Slavonia C
+
+--- Article 225 ---
+URL: https://www.northantstelegraph.co.uk/news/people/rushden-lakes-confirms-permanent-closure-of-restaurant-but-centre-in-advanced-talks-with-a-new-occupier-8642930
+Title: Rushden Lakes confirms permanent closure of restaurant, but centre 'in advanced talks with a new occupier'
 Status hint: Closing | Industry: Restaurants
-Published: 2026-05-26 16:07:36
+Published: 2026-05-27 12:01:00
 
-Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Comment now A LONGSTANDING neighborhood Chinese restaurant has served up its final platters to hungry customers, closing its doors permanently. The Chinese food restaurant’s last day was scheduled for this Sunday, but its 55-year run in the community came to an end earlier than expected. Sign up for the Money newsletter Thank you! Mon Kou, a popular Chinese Polynesian eatery on Route 1 in Attleboro, Massachusetts – roughly 35 miles southwest of Boston – has been a fan-favorite since 1971. The family-owned establishment, well known for its Polynesian-themed dining room and tropical drinks , unfortunately is no longer. Advertisement The Mon Kou family previously announced that the beloved Washington Street restaurant would be closing down on May 31 due to retirement. “This decision was not made lightly, and it comes with a mix of emotions — gratitude for the countless memories, pride in the meals we’ve shared, and sadness in saying goodbye,” the family wrote in a post, as reported by CBS News . Read More on Money ON THE GRILLE Olive Garden's upscale 'sister chain' restaurant permanently closes May 31 FOOD FALLOUT Nation's 3 top diners to close over 250 spots – the first wave is underway However, much to the surprise of fans, the Massachusetts Chinese restaurant suddenly moved up its closure date from May 31 to May 8. The Mon Kou family shared the news on its website , explaining that the restaurant simply could not keep up with the surge in orders since the closure was initially announced. “The incredible response and volume of orders we’ve received in recent weeks have made it difficult for our team to continue operating at the level of care and consistency we strive for,” said the restaurant. “As a result, we have made the difficult decision to move our closing date earlier than originally announced. Our final day of service is Friday, May 8th, 2026.” Most read in Money UN-LUCKY PENN
+Rushden Lakes confirms permanent closure of restaurant, but centre 'in advanced talks with a new occupier' By William Carter Published 27th May 2026, 13:01 BST Updated 27th May 2026, 13:12 BST Rushden Lakes has confirmed that Chi in the complex’s West Terrace has closed, with a new occupier potentially taking on the space soon. Chi at Rushden Lakes opened its doors to the public on Wednesday, December 16, 2020, finding a space next to Nandos and offering contemporary pan-Asian food, and though it braved the pandemic, and lasted some years after, it has now closed permanently. There has been a quick turnover of outlets, Jurassic Grill opened in 2023, but closed in January 2024  – and has since been replaced by Popeyes. Advertisement Hide Ad Advertisement Hide Ad While the ‘Chi’ unit currently remains vacant, bosses at the shopping complex say there could soon be a new occupier in the space. Rushden Lakes Donna French, Centre Manager at Rushden Lakes said: "We can confirm that Chi has now permanently closed. Whilst it is disappointing when a business closes, we are in advanced talks with a new occupier. Rushden Lakes continues to offer a diverse mix of retail and hospitality offerings, and we are pleased to confirm Rushden Lakes will soon return to being fully let." Advertisement Hide Ad The Rushden Lakes Chi outlet was the brand’s fifth in England , with other branches in Cambridge , Watford, Norwich and Basingstoke, however closures have meant only three remain, in Basingstoke, Bristol, and Northampton . Continue Reading Related topics: Rushden Lakes England Cambridge
 
---- Article 97 ---
-URL: https://352today.com/news/257752-big-mans-cafe-closes-14th-street-location-in-ocala-over-memorial-day-weekend/
-Title: Big Man’s Cafe Closes 14th Street Location in Ocala Over Memorial Day Weekend
+--- Article 226 ---
+URL: https://www.huntingdondailynews.com/news/business/resort-opening-celebrated/image_9098a49f-8312-4472-9809-f9800054bfaa.html
+Title: Resort opening celebrated
+Status hint: Opening | Industry: Hospitality
+Published: 2026-05-27 12:00:00
+
+Facebook Twitter WhatsApp SMS Email Print Copy article link Save The Huntingdon County Chamber of Commerce hosted a ribbon-cutting ceremony May 16 at the Greene Hills Manor Resort & Campground near the village of Barree in Porter Township. Among those taking part in the ceremony were, from the left, Mike Simone, Jonathon Zook, John Stoltzfus, Jake Stoltzfus, Lonnie Smith and Matt Price. Submitted photo As featured on Page A7 Facebook Twitter WhatsApp SMS Email Print Copy article link Save × Post a comment as anonymous × Report × Watch this discussion. Stop watching this discussion. (0)comments Welcome to the discussion. Log In Keep it Clean. Please avoid obscene, vulgar, lewd,
+racist or sexually-oriented language. PLEASE TURN OFF YOUR CAPS LOCK. Don't Threaten. Threats of harming another
+person will not be tolerated. Be Truthful. Don't knowingly lie about anyone
+or anything. Be Nice. No racism, sexism or any sort of -ism
+that is degrading to another person. Be Proactive. Use the 'Report' link on
+each comment to let us know of abusive posts. Share with Us. We'd love to hear eyewitness
+accounts, the history behind an article. Post a comment Watch this discussion. Stop watching this discussion. 76° Mostly Cloudy Huntingdon, PA (16652) Today Sun and clouds mixed. High 77F. Winds NNW at 10 to 20 mph.. Tonight Clear skies. Low 48F. Winds NW at 10 to 15 mph. Updated: May 28, 2026 @ 1:43 pm Full Forecast Today's Ads 88352_1_JV Trust 0528 88352_1_JV Trust 0528 88349_1_Memory Anniversary Leonard 1x5 0528 88349_1_Memory Anniversary Leonard 1x5 0528 86425_1_Brumbaugh Lumber 2x2 0630 86425_1_Brumbaugh Lumber 2x2 0630 Heath-Anderson Heath-Anderson Featured Businesses Find a local business Latest e-Edition The Daily News To view our latest e-Edition click the image on the left. Latest News Commissioners back 911 surcharge increase Saltillo mill has new owner School musicals receive honors Community center hosts financial courses Bellwood discusses locomotive, America250 events MUA
+
+--- Article 227 ---
+URL: https://www.majorcadailybulletin.com/news/did-you-know/2026/05/27/142725/supermarket-giant-opens-first-next-generation-store-mallorca.html
+Title: Supermarket giant opens first next-generation store in Mallorca
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-27 11:49:00
+
+News | Did you know Supermarket giant opens first next-generation store in Mallorca The Mallorca opening forms part of Mercadona’s wider rollout which is expected to replace older formats between 2026 and 2033 The supermarket has been redesigned to make shopping more intuitive. | Photo: MDB Digital MDB Digital 27/05/2026 13:49 F T W G M 0 Spanish supermarket giant Mercadona has opened its first next-generation store in Mallorca , with the new-look supermarket launching in Sant Llorenç des Cardassar following an investment of more than €3 million. The revamped concept focuses heavily on fresh produce, energy efficiency and faster shopping, as the retailer continues modernising stores across Spain. The supermarket has been redesigned to make shopping more intuitive , moving away from the traditional department layout in favour of a process-based system aimed at improving customer flow and reducing waiting times. Mercadona says the changes will also help staff work more efficiently during restocking and day-to-day operations. Related news Supermarket giant plans massive online expansion in Mallorca More related news One of the biggest additions is a new central preparation hub where fresh food is cut, cooked and packaged in one area. The company says the setup improves quality control while increasing shelf space for fresh products. It also claims the redesign can cut water use by up to 40% and reduce energy consumption by around 10%. The store also introduces new technology aimed at streamlining operations, including digital management tools and upgraded refrigeration systems designed to reduce cold air loss and improve sustainability. Mercadona says the use of CO₂ refrigeration will help lower the store’s environmental impact. The Mallorca opening forms part of Mercadona’s wider rollout of the “Tienda 9” model, which is expected to replace older formats between 2026 and 2033 as part of a multi-billion-euro investment programme. The new store also includes a customer 
+
+--- Article 228 ---
+URL: https://www.tallahassee.com/story/entertainment/restaurants/2026/05/27/tallahassee-tijuana-flats-closes-its-mahan-drive-location-for-good/90266423007/
+Title: Tallahassee Tijuana Flats closes its Mahan Drive location for good
 Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 16:04:49
+Published: 2026-05-27 11:43:00
 
-[Could not fetch: 401 Client Error: Unauthorized for url: https://352today.com/news/257752-big-mans-cafe-closes-14th-street-location-in-ocala-over-memorial-day-weekend/]
+[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.tallahassee.com/story/entertainment/restaurants/2026/05/27/tallahassee-tijuana-flats-closes-its-mahan-drive-location-for-good/90266423007/]
 
---- Article 98 ---
-URL: https://whatnow.com/los-angeles/restaurants/mama-canela-planning-grand-opening-in-glendora-this-summer/
-Title: Mama Canela Planning Grand Opening In Glendora This Summer
+--- Article 229 ---
+URL: https://92moose.fm/barkada-filipino-bowls-opening-portland-maine/
+Title: Barkada Sets Opening Date To May 30 After Successful Soft Opening Serving Filipino Flavors To Portland, Maine
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 16:04:06
+Published: 2026-05-27 11:27:36
 
-Mama Canela (Image credit: Mama Canela) SHARE When Paloma Ramos and her husband moved to Glendora about six years ago, they began to detect a gap in the market for a good date night spot in the area. “When we moved there, there was a family-friendly date-night restaurant missing,” Ramos told What Now Los Angeles. “So when we would go out, we would have to go Downtown LA, which is really far, or Pasadena or Claremont. So we thought: why don’t we do our own thing?” Now, the pair is looking to fill the void in the market by venturing into restaurant entrepreneurship themselves with the opening of Mama Canela this summer. Located in Glendora Village, the spot will open at 147 N. Glendora Ave. , with a grand opening planned for July 31. Mama Canela will feature a Tex-Mex menu, drawing on Ramos’s husband’s roots in Texas and her own family’s experience operating Mexican restaurants in the San Gabriel Valley when she was growing up. The restaurant will have an upscale atmosphere that is versatile throughout the evening. In the early evenings, customers can expect an upbeat, family-friendly atmosphere with live music, and the space will transition into a more subtle date-night cocktail spot later in the evening. “We want people to feel like they’ve been there before — like it feels like home,” Ramos said. “We want to help our community make great memories.” While the full menu is still forthcoming, highlights will include fajitas, homemade flour tortillas and craft cocktails. The grand opening at the end of July will feature a celebration along with live mariachi music, courtesy of Mariachi Los Camperos. Ramos hopes this opening will be just the beginning for the brand. The team hopes to expand in the coming years. “We do have big goals,” Ramos said. “This is our baby, our start-up. We definitely want to expand in Southern California and see our restaurant and logo in a lot more cities.” Love our content? Add WhatNow as a preferred source on Google to see more of our truste
+Barkada Sets Opening Date To May 30 After Successful Soft Opening Serving Filipino Flavors To Portland, Maine Allyssa Marson Allyssa Marson Published: May 27, 2026 barkadamaine via Instagram Share on Facebook Share on Twitter For a lot of Portland food lovers, the wait is finally over. After building excitement through its food truck and teasing locals with what Filipino flavors could bring to the city, Barkada is officially opening in the Old Port on Saturday, May 30. The new fast-casual restaurant at 425 Fore Street, in the former Paper Tiger space, just wrapped up a friends and family soft opening this past weekend, and from everything I heard, it was an absolute hit. barkadamaine via Instagram barkadamaine via Instagram loading... People are already buzzing about the food, especially the lumpia. Crispy, packed with flavor, and impossible to eat just one, they quickly became one of the stars of the weekend. The ube piña colada slush also had people talking, bringing a fun and colorful twist that perfectly matched the energy of the space. And then there was the Lechón, which completely delivered and left guests raving. The menu focuses on customizable bowls and bold Filipino flavors, giving Portland something that feels both new and exciting. Chefs Nicole and Ben Bowers have created something that feels special, and there’s real excitement surrounding Barkada’s arrival. Filipino food and flavor have officially made their way to Portland, and judging by the response from the soft opening, people are more than ready to dig in. 10 Most Popular Sushi Restaurants in Portland, Maine, According to Yelp These are the highest-rated sushi restaurants in Portland, Maine, according to the review site Yelp . This list is from April of 2026. Gallery Credit: Chris Sedenka Top 20 Portland, Maine, Pizza Joints According to Yelp Reviews These are the highest rated pizza joints in Portland, Maine according to the review site Yelp . This list comes from April of 2026. Gallery Credit:
 
---- Article 99 ---
-URL: https://www.01net.it/magnolia-soap-bath-co-selects-square-to-power-its-50-location-retail-franchise/
-Title: Magnolia Soap & Bath Co. Selects Square to Power Its 50+ Location Retail Franchise
+--- Article 230 ---
+URL: https://www.bizjournals.com/jacksonville/news/2026/05/27/cook-out-jax-beach.html
+Title: Cook Out plans late May opening for first Jacksonville burger restaurant
+Status hint: Opening | Industry: Restaurants
+Published: 2026-05-27 11:08:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/jacksonville/news/2026/05/27/cook-out-jax-beach.html]
+
+--- Article 231 ---
+URL: https://www.bizjournals.com/southflorida/news/2026/05/27/new-porsche-dealership-north-miami.html
+Title: New Porsche dealership in Miami, speakeasy restaurant joins Hollywood and pet franchise to expand (Photos)
+Status hint: Opening | Industry: Restaurants
+Published: 2026-05-27 11:03:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/southflorida/news/2026/05/27/new-porsche-dealership-north-miami.html]
+
+--- Article 232 ---
+URL: https://www.nbc4i.com/news/local-news/columbus/columbus-hot-chicken-joint-to-open-new-location-near-gahanna-and-new-albany/amp/
+Title: Columbus hot chicken joint to open new location near Gahanna and New Albany
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 16:00:00
+Published: 2026-05-27 11:00:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.01net.it/magnolia-soap-bath-co-selects-square-to-power-its-50-location-retail-franchise/]
+COLUMBUS, Ohio ( WCMH ) – A Columbus-based hot chicken restaurant plans to open a new location near Gahanna and New Albany. The former Subway at 5352 N. Hamilton Road is slated to become an Overdose Hot Chicken, according to signage posted on the building. The North Hamilton Road eatery will mark Overdose Hot Chicken’s second location. The concept’s first location opened in the Hilltop neighborhood at 3260 W. Broad St. in July 2024. NBC4 reached out to the business for more information but has not yet heard back. The Columbus Dispatch reported last week that a restaurant representative indicated it would open within the next two months. Overdose Hot Chicken’s menu features chicken tenders and sliders with varying spice levels. It also offers burgers, including a triple burger, and a double burger with bacon and onion rings. Loaded fries with fried chicken or beef are available as well. Side options include coleslaw, jalapeno poppers, French fries, fried pickles, popcorn chicken and fried mushrooms. The Hilltop eatery is open Monday through Saturday from 11 a.m. to 9 p.m. and Sunday from noon to 8 p.m.
 
---- Article 100 ---
-URL: https://chicagoreader.com/community-calendar-event-listings/?_evDiscoveryPath=/event/3652009-roanoke-hospitality-opens-la-bella-trattoria-on-rush-in-streeterville-now-open
-Title: Roanoke Hospitality Opens La Bella Trattoria on Rush in Streeterville Now Open
+--- Article 233 ---
+URL: https://www.themainewire.com/2026/05/southern-maines-version-of-cheers-closing-in-wake-of-menu-cutbacks/
+Title: Southern Maine’s Version Of ‘Cheers’ Closing In Wake Of Menu Cutbacks
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-27 10:37:16
+
+Share Facebook Twitter LinkedIn Email A popular longtime downtown Biddeford speakeasy that recently trimmed its menu is shutting its doors. The first inkling of Mulligans closing first broke on BiddefordBuzz.com , which confirmed the rumor shortly after its initial speculative report. The Lincoln Street restaurant/bar shut down its kitchen six months ago in what patrons predicted was the beginning of the end. The establishment that calls itself a “classic American restaurant” has been in business nearly 30 years. “We did everything we could to keep it going,” manager Jake DeLois, son of owner Joe DeLois, told the Biddeford Gazette . “But there were so many things working against us – things we had no control over.” After a great year in 2019, the COVID pandemic that halted public gatherings brought with it a loss of clientele from which the restaurant never recovered, DeLois said. Competition from upscale dining along with a street construction project and the city cutting parking spaces also contributed to its demise. The bar’s last day is May 31. “It’s going to be a bit harder to find a place where everyone knows your name in Biddeford,” the Gazette said. “Mulligan’s will be missed.”
+
+--- Article 234 ---
+URL: https://www.comingsoon.net/tv/news/2139170-perfect-match-season-4-winners-finale-netflix-revealed?amp
+Title: Perfect Match Winners Open Up Following Emotional Season 4 Finale
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 15:54:45
+Published: 2026-05-27 10:32:20
 
-Event listings Chicago community calendar Comprehensive Chicago events listings from a wide variety of event organizers and sources—including Reader readers. Find shows, concerts, festivals, and community events happening today, this weekend, or in the future. Use the “Create an event” button below or click here to submit your event listing .
+Bill Skarsgård & Colman Domingo’s Acclaimed Crime Movie Out on Netflix Today Bill Skarsgård and Colman Domingo‘s highly rated crime drama movie has finally found a streaming home. As of today, the… Movies 26 minutes ago
+
+--- Article 235 ---
+URL: https://armaghi.com/news/lidl-sets-sights-on-building-huge-new-store-in-coalisland/301106
+Title: Lidl sets sights on building huge new store in Coalisland
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 10:29:44
+
+Lidl sets sights on building huge new store in Coalisland If approved, it is expected the new store would create scores of jobs, both during construction and when up and running by Richard Burden May 27, 2026 Lidl is hoping to open a huge new store in Coalisland , Armagh I can exclusively reveal. The new supermarket – boasting floorspace of close to 25,000 sq ft – has been earmarked for an expansive site on the Washingbay Road. If approved, it is expected the outlet would create scores of new jobs, both during construction and when up and running. Such is the scale of the plans, it has been classed as a ‘major’ development. With that, a pre-application notice as required has been submitted to Mid-Ulster District Council signalling the retailer’s intent. This will afford the chance for public feedback which, when received, would allow for responses to be considered ahead of the submission of an application seeking full approval to proceed. While little detail is known at this stage, full plans are to be made available via a dedicated website, due to be launched around the middle of the month and to remain online until late July. And a public drop-in event is being scheduled at the office of Coalisland-based Clarman Architects at the end of June. For now, the plan put forward involves the demolition of existing buildings at the site at 4 Washingbay Road. This would make way for the construction of a “discount foodstore”, with Lidl to be the future tenant. The plans also include access, parking, landscaping and associated siteworks. Residents and businesses within 90 metres of the proposed development site – as well as local councillors – will be written to and advised of plans when the website goes live in June. News of Lidl’s intention to open in Coalisland comes after the launch last year of a new larger relocated store – including in-house café – in nearby Dungannon. Work is also still ongoing on the site of the former filling station at Rushmere in Craigavon, with
+
+--- Article 236 ---
+URL: https://www.ktlo.com/2026/05/27/indoor-walking-track-pickleball-and-basketball-courts-open-at-new-community-center/
+Title: Indoor walking track, pickleball and basketball courts open at new community center
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 10:26:50
+
+U2 joins Shane MacGowan tribute album
+
+--- Article 237 ---
+URL: https://vogueadria.com/victorias-secret-opens-store-at-galerija-belgrade/
+Title: Victoria’s Secret opens its largest regional store for its first anniversary
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 10:22:37
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://vogueadria.com/victorias-secret-opens-store-at-galerija-belgrade/]
+
+--- Article 238 ---
+URL: https://wexfordweekly.com/2026/05/27/young-wexford-business-owner-expands-gym-facilities-into-new-location/lifestyle/
+Title: Young Wexford business owner expands gym facilities into new location
+Status hint: Opening | Industry: Gyms / Fitness
+Published: 2026-05-27 10:12:55
+
+A young Wexford business owner has expanded his gym facilities and offerings into a brand-new location… Jordan Scanlon, more commonly known as ‘Jay’, launched Screwloose Fitness just three years ago at the upstairs of the Naomh Eanna GAA Complex in Clonatin, Gorey. Here, Screeloose Fitness run class-based training including HYROX-style classes, Tryka classes, Strength & Conditioning sessions, and general fitness classes for all levels. “I started Screwloose Conditioning when I was 22 years old, and now at 25, I honestly never thought I’d be able to get to the point where the gyms are at today. What started as a small idea and passion for fitness has grown into two locations with an amazing community behind us.” he told Wexford Weekly. Only recently, Screwloose has expanded into another new location in the local community. Jay has since expanded and opened their second location in Courtown above the Courtown Hibs Football Club. Before progressing into the Gorey gym, he tested the waters by renting a small room in a gym in Courtown. Now, Screwloose has launched a brand new Hybrid Fitness area alongside classes in their new fully equipped Courtown gym. “As a young local business owner, I’m incredibly proud of how far things have come in a short space of time,” he told Wexford Weekly. Across both gyms, which is continuing to go from strength to strength, Screwloose now has over 120 members showing their rapid rise across the community. “We take great pride in making sure we have the community feel across both gyms where we know everyones name! And I’m proud to say we are still growing,” he said. Despite being aged just 22 when starting the business initially, Jay did not view age as a complete block in the road. Now aged 25 still full with enthusiasm and a continued eagerness to improve, the young businesss owner reflected on his upbringing, along with his time in business to date, speaking about some of the challenges he faced: “If I’m being honest, one challenge I fac
+
+--- Article 239 ---
+URL: https://www.msn.com/en-us/travel/news/nc-s-newest-casino-is-now-open-3-things-to-know-before-you-go/ar-AA23OfYD
+Title: NC’s newest casino is now open. 3 things to know before you go
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 10:10:36
+
+MSN
+
+--- Article 240 ---
+URL: https://www.timesunion.com/business/article/north-elm-home-millerton-closing-22270741.php
+Title: Hudson Valley furniture store closing after 11 years in business
+Status hint: Closing | Industry: Furniture / Mattress
+Published: 2026-05-27 10:05:12
+
+Owners of North Elm Home, John Scutieri and Cindy Dunleavy, stand in their furniture store showroom in Millerton, which is closing in the coming months. The two say that closing the store is “bittersweet.” “It went by so quick. It really feels like we just got started,” Scutieri said. Lilli Iannella/Times Union MILLERTON — After serving thousands of customers over 11 years in Millerton , furniture store North Elm Home is closing. Its owners, Cindy Dunleavy and John Scutieri, said they’ll officially close the store when their stock, which is diminishing by the day, runs out or by the end of July when their lease is up. The business partners announced a closing sale in late April, with stock marked down by 20% to 50%. Advertisement Article continues below this ad Once Dunleavy and Scutieri close the store — which sits in a two-story, 12,000-square-foot weathered barn on Route 22 along the border of Connecticut in northern Dutchess County — they’ll enjoy retirement with friends and family. The two say it’s “bittersweet” to be closing. “It went by so quick. It really feels like we just got started,” said Scutieri, who served as the village’s mayor for three terms before starting his furniture business with Dunleavy. “It’s been a great business, it’s been a great location and we’ve met a lot of great people. People trusted us. We really just want to say thank you.” The exterior of North Elm Home, which sits at 5938 North Elm Ave. in Millerton. The two-story, 12,000-square-foot building has been listed by Elyse Harney Real Estate. Lilli Iannella/Times Union Dunleavy and Scutieri decided to open their own furniture store in 2015 after working together at Riley’s Furniture in Millerton, which closed in 2018 . Their vision was to create a store with more “current” furniture offerings and “one-of-a-kind” furniture, including antiques, Dunleavy said. They decided to open at 5938 North Elm Ave., where the former Johnson’s Antiques store was located for nearly 40 years, Dunleavy
+
+--- Article 241 ---
+URL: https://www.newsobserver.com/news/business/article315893086.html
+Title: Store leaves Crabtree mall for another Raleigh shopping center. What we know
+Status hint: Opening | Industry: Retail REITs
+Published: 2026-05-27 10:00:00
+
+A Crabtree Valley Mall store is moving to another Triangle retail hub. This file photo is from 2020. bcain@newsobserver.com Key Takeaways Key Takeaways AI-generated summary reviewed by our newsroom. Read our AI Policy. Premium Stitches closed its Crabtree Valley Mall store on Saturday, May 23. The store in an Instagram post said it plans to re-open at Triangle Town Center. Recently, choices for shoppers have changed at the two Raleigh malls. A clothing store left Crabtree Valley Mall — and is moving to another Raleigh shopping center. Premium Stitches in an Instagram post said its last day at Crabtree was Saturday, May 23. The storefront was on the first level of the popular mall, near Macy’s. Now, fans of Premium Stitches will have to drive roughly 10 miles northeast to Triangle Town Center. Here’s what we know about the move and other recent changes at the two malls. View this post on Instagram A post shared by PS.Raleigh (@ps.raleigh) What is Premium Stitches? Premium Stitches sells clothing , shoes and accessories, photos show. On social media, the store didn’t share a reason for the move or reveal when the relocated store will welcome customers. “New location @triangletowncenter will be posted soon, so stay updated,” the store wrote May 18 on Instagram. Premium Stitches and Triangle Town Center didn’t immediately respond to requests for additional information on Tuesday, May 26. The News & Observer also asked Crabtree what will replace the store and is waiting to hear back. A new clothing store is coming to Triangle Town Center in Raleigh.                                                                                            Travis Long tlong@newsobserver.com Other changes at local malls The move of Premium Stitches isn’t the only change shoppers will notice at Raleigh malls. A wave of recent openings and closings has hit Crabtree, located at 4325 Glenwood Ave. This month, Furniture World said it would leave the mall , and Urban Planet by Charlotte Russe pl
+
+--- Article 242 ---
+URL: https://www.lancs.live/news/lancashire-news/major-furniture-retailer-set-first-34014115
+Title: Major furniture retailer set for first Preston store at retail park
+Status hint: Opening | Industry: Furniture / Mattress
+Published: 2026-05-27 09:25:28
+
+Major furniture retailer set for first Preston store at retail park The vacant unit is currently surrounded by scaffolding, suggesting works are already underway Comments News Paul Faulkner Local democracy reporter 06:00, 27 May 2026 View Image The former Villeroy and Boch store, on Queens Shopping Park A nationwide furniture retailer is set to open its first store in Preston , according to planning documents. ‌ Chair and sofa specialists HSL have submitted an application to Preston City Council seeking permission to install new signage at a unit on Queens Shopping Park. ‌ The prominent building fronts the A59, at the junction of London Road and Stanley Street, and was previously occupied by the Villeroy and Boch bathroom showroom. ‌ The unit is now vacant and is currently surrounded by scaffolding, suggesting works are already underway as part of the changeover. Yorkshire-based HSL has been trading for more than 55 years and operates over 50 stores across the UK, including two existing Lancashire branches in Blackpool and Burnley . The company, applying under its registered name High Seat Limited, is seeking approval to replace nine signs around the building. ‌ Planning permission is not required for the change of use, as both the former and proposed occupiers fall within the same retail use class. Villeroy and Boch had operated from the site for more than six years following redevelopment of part of The Range garden centre, which remains open next door. In recent months, Queens Shopping Park has seen a number of changes, including the opening of a Greggs drive-thru. Article continues below Plans have also been approved for a new gym operated by The Gym Group, on a plot previously earmarked for retail use since 2018, which was never developed. Subscribe to our daily newsletter LANCS LIVE NEWS and get all the biggest stories from across Lancashire direct to your inbox
+
+--- Article 243 ---
+URL: https://www.msn.com/en-us/money/companies/h-e-b-closing-north-austin-store-after-40-years-ahead-of-lease-expiring/ar-AA23QOou?uxmode=ruby&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: H-E-B closing North Austin store after 40 years ahead of lease expiring
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-27 09:02:41
+
+MSN
+
+--- Article 244 ---
+URL: https://www.postandcourier.com/business/retail/hungry-howies-charleston-south-carolina-pizza-restaurant/article_d01b1ae8-5efe-464e-ba42-73574aecb17f.html
+Title: Michigan pizza chain hungry for first Lowcountry location in Goose Creek
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 09:00:00
+
+Facebook Twitter WhatsApp SMS Email [+] Add Post and Courier News on Google Hungry Howie’s, a pizza chain out of Michigan, is opening its fifth South Carolina location in Goose Creek. Hungry Howie’s/Provided Facebook Twitter WhatsApp SMS Email Print Copy article link Save GOOSE CREEK — A Michigan pizza chain is looking to get a cut of the competitive Lowcountry pizza scene. Hungry Howie's, which describes itself as the originators and registered trademark owner of “Flavored Crust Pizza” announced a new location in Goose Creek on its website . The restaurant at 134 Saint James Ave. will open mid-July, according to the company. It will be the chain’s fifth in the Palmetto State. Hungry Howie's opened eight new restaurants in 2025, according to the company. In an annual update last year, Steve Jackson, the CEO of Hungry Howie’s, said the Michigan pizza chain “continued its growth trajectory, signing new development agreements and opening stores in key markets … with both new and existing franchisees." The deal included a single-store agreement for the greater Charleston area. The company said it evolved over the last 50 years from a 1,000-square-foot burger joint in Taylor, Mich., about 20 miles from where Domino’s got its start, to a carry-out and delivery chain with more than 500 locations in 21 states. It has three restaurants in the Myrtle Beach area and one in Greenville. The company's signature eight pizza crust options include various cheeses and flavors such as sesame, ranch and garlic herb. The pizza itself comes in several makes, be it flatbread, Detroit-style or deep dish pizza, among others. The chain also carries other menu items, including wings, sandwiches and salads. Hungry Howie’s is the latest in a line of new spots to eat at in Goose Creek. Sunrise Bistro opened at 216 St. James Ave. in February and La Braza Miniera opened May 14 at 408 Red Bank Road. Eggs Up Grill is scheduled to open later this year at Highway 52 and St. James Avenue. TOUS les JOUR
+
+--- Article 245 ---
+URL: https://wexfordweekly.com/2026/05/27/wexford-waterford-bridge-to-close-to-facilitate-roadworks/wexford-news/
+Title: Wexford-Waterford bridge to close to facilitate roadworks
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 08:56:06
+
+Roadworks are set to begin on the bridge linking Wexford-Waterford… Additional roadworks will begin tonight on the Rose Kennedy Bridge in County Wexford. Motorists are being advised to expect delays and diversions over the coming weeks as repair works get underway on the N25 Rose Fitzgerald Kennedy Bridge. The bridge will be fully closed overnight on Wednesday, May 27 from 8pm to 4am and Thursday, May 28 from 8pm to 4am. Diversions will be in place going through New Ross town. Essential works at pier four of the bridge commenced on Monday and there’s a combination of daytime lane restrictions and overnight full bridge closures planned as part of the project. The works are scheduled to continue over a three-week period and are expected to be completed by Wednesday, June 10. Jason Redmond From Gorey, Jason is the owner of Wexford Weekly. He is also a post-primary English and History teacher. Author’s articles Next Previous Read also: May 28, 2026 The Clovelly to expand into new third Wexford location May 28, 2026 World famous rugby referee to visit Wexford May 28, 2026 Live music across County Wexford pubs this Friday, Saturday and Sunday May 28, 2026 View inside this stunning million euro property in County Wexford Remember to submit your news to Wexford Weekly! To advertise on our socials or website, email our team at info@wexfordweekly.com Related
+
+--- Article 246 ---
+URL: https://www.aol.com/articles/miniso-planning-store-warren-county-203349000.html
+Title: Miniso planning store in Warren County
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 08:53:23
+
+Carlos Mathis Fri, May 15, 2026 at 8:33 PM UTC 0 Miniso planning store in Warren County DEERFIELD TOWNSHIP, Ohio ( WDTN ) — An international gift shop is working to open a store in Warren County. Records obtained by WDTN.com show Miniso, a pop culture retail company, wants to open a location at the Deerfield Towne Center at 5705 Deerfield Blvd. in Deerfield Township. A mobile phone store previously occupied the space, situated next door to Whole Foods Market. Shoppers will be able to select from mystery boxes, imported snacks, plushies, licensed IP merchandise and more once the store opens. Advertisement According to the company’s website , the chain operates over 7,700 stores across 112 global markets. The website also shows it has reached 1 billion in-store customers. This outlet previously reported Miniso opened its first Dayton-area location in 2024 at the Mall at Fairfield Commons in Beavercreek. 2 NEWS is working to learn when the store could open. Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to WDTN.com.
+
+--- Article 247 ---
+URL: https://www.tricountyindependent.com/story/news/local/2026/05/27/boxed-loaded-open-route-6-wayne-county/90222173007/
+Title: Boxed & Loaded open for business on Route 6 in Wayne County
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 08:43:00
+
+LOCAL Boxed & Loaded open for business on Route 6 in Wayne County Peter Becker Tri-County Independent May 27, 2026, 4:43 a.m. ET Boxed & Loaded, a business in the commercial district along Route 6 in Indian Orchard, Wayne County, that opened last year, held its official ribbon cutting ceremony on May 22.
+
+--- Article 248 ---
+URL: https://www.inkl.com/news/china-galeries-lafayette-closes-beijing-store-after-13-years
+Title: French luxury retailer Galeries Lafayette shuts Beijing store 13 years after opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-27 08:32:58
+
+Get all your news in one place. 100's of premium titles. One app. Start reading Get all your news in one place. 100's of premium titles. One news app. Start reading Euronews Nathan Joubioux French luxury retailer Galeries Lafayette shuts Beijing store 13 years after opening Galeries Lafayette China Beijing Luxury French luxury department store Galeries Lafayette closed its first flagship store in China on Wednesday, 27 May, thirteen years after it opened. The retailer cited falling sales in recent years as the reason for the closure. While the luxury market experienced strong growth in the mid-2010s, notably thanks to the rise of the middle class, the Covid-19 pandemic and China’s property crisis proved to be a turning point, abruptly curbing China’s domestic consumption and forcing the sector to adapt to new economic realities. “We have seen a decade of growth in the luxury sector in China. Over the years, the Chinese consumer has matured a great deal. They now understand luxury consumption and brands much better. They have become familiar with this world, and their tastes have become more refined and sophisticated,” explains Lisa Nan, an editor at Jing Daily. “If we look at today’s young consumers, we can see that they may no longer be attracted solely by brands, but rather by immersive pop-up stores and the many marketing initiatives in China,” she adds. Lisa Nan goes on to say that the French retailer had already announced its intention to reassess its entire property portfolio in China. “I therefore think this decision had more to do with an internal choice, as the locations of those sites were fairly unfavourable,” she says, before adding: “As for the retail sector, it is true that it faces a major challenge in China, and this applies not only to Galeries Lafayette but also to Lane Crawford.” Presence in China remains strong On Tuesday, the day before the closure, a steady stream of customers wandered through to take advantage of the final offers, while employ
+
+--- Article 249 ---
+URL: https://instoremag.com/neighbors-fight-five-story-jewelry-store-planned-for-fort-lauderdale-boulevard/
+Title: Neighbors Fight Five-Story Jewelry Store Planned for Fort Lauderdale Boulevard
+Status hint: Opening | Industry: Jewelry & Accessories
+Published: 2026-05-27 08:08:11
+
+Rendering of the five-story Weston Jeweler branch. PHOTO COURTESY OF WESTON JEWELERS Share Tweet A plan to build a five-story luxury watch and jewelry store on Fort Lauderdale’s Las Olas Boulevard cleared a unanimous commission vote last week despite vocal opposition from residents who say the project is too big for its surroundings, the Sun-Sentinel reported . Weston Jewelers, a family-owned retailer carrying Rolex and other luxury brands, plans to open at 1117 E. Las Olas Blvd. as soon as December 2027, according to the paper. Nearly 80 people signed up to speak at the meeting, with opponents arguing the 74-foot building would overwhelm the neighborhood, worsen parking and alter the character of the area. “The fact that it’s so big changes the feeling of the community,” the Sun-Sentinel quoted resident J.K. McCrea as saying. “It doesn’t fit in with the community.” Weston’s owner Ed Dikes defended the project, telling the commission. “We are not a large outside corporation coming into Fort Lauderdale. We are a local family business.” A second and final commission vote is scheduled for June 2. Advertisement Related Topics: jewelry stores in Florida Latest News Top INSTORE Staff Since launching in 2002, INSTORE has won 89 international journalism awards for its publication and website. Contact INSTORE's editors at [email protected] . click to Comment ( Comment ) Up Next Gray & Sons Reports Rise in Sophisticated Counterfeit Watches Among 2025 Trade-In Submissions Don't Miss New Digital Platform Seeks to Be the ‘Robinhood’ of Household Jewelry Collections Advertisement SPONSORED VIDEO 97 Years of Family History, One Right Decision: How Malloves Jewelers Found the Right Partner to Close with Grace Marc Levin’s grandfather Max founded Malloves Jewelers in Middletown, CT, in 1928. Nearly a century later, Marc — the third-generation owner — knew it was time to retire. He’d watched friends and fellow jewelers navigate store closings with Wilkerson’s help, and their recommen
+
+--- Article 250 ---
+URL: https://mshale.com/ac23c822/84a0d8a6BQ5Fo4_ZhPQ
+Title: EPISODE 15 Acapulco Restaurant Closing Locations (F7VZDOyJ2y)
+Status hint: Closing | Industry: Restaurants
+Published: 2026-05-27 07:43:38
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://mshale.com/ac23c822/84a0d8a6BQ5Fo4_ZhPQ]

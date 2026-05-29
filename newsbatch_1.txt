@@ -17,183 +17,436 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 Create ONE clean Markdown table with these exact column headers (in this order):
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
+🌎 Geographic filter (STRICT)
+• Only extract businesses located in the USA or Canada
+• If the article is about a business in any other country (UK, Australia, India, UAE, etc.) → DO NOT add any row to the table; add it ONLY to the Non-working list as "Outside USA/Canada"
+• If an article covers both USA/Canada locations AND international locations → extract only the USA/Canada rows, skip the rest; add the article to the Non-working list as "Outside USA/Canada (partial)"
+
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
-• If an article has zero relevant business opening or closure information, still include a row with:
+• If a USA/Canada article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
+• ❌ Never add a table row for articles outside USA/Canada — those go in the Non-working list only
 
 🚫 Strict constraints
 • ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+• ❌ No extraction of businesses outside USA or Canada
 
 📎 Final section (mandatory)
 At the very end of your response, add:
 Non-working or unusable articles List:
-• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+• Article number — Reason (paywall / no business details / duplicate / text missing / Outside USA/Canada / etc.)
 If none, write: None
 
 ✅ Articles below — extract now:
 
 
 --- Article 1 ---
-URL: https://www.gazettelive.co.uk/news/teesside-news/marton-middlesbrough-council-lidl-booze-34013984
-Title: Lidl applies for booze licence at Middlesbrough store yet to be given go-ahead to build
+URL: https://www.superiortelegram.com/business/new-housing-option-opening-soon-in-former-superior-school
+Title: New housing option opening soon in former Superior school
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 23:02:00
+Published: 2026-05-28 11:36:41
 
-Lidl applies for booze licence at Middlesbrough store yet to be given go-ahead to build The proposed store would be located on the site of the former Marton Hotel and Country Club Comments News Daniel Hodgson Local Democracy Reporter 00:02, 27 May 2026 Lidl wants to build a store at the Marton Country Club site which was ravaged by fire in 2019 (Image: Teesside Live) Lidl has applied to Middlesbrough Council for a premises licence. The company is seeking permission to sell alcohol at a proposed store in Marton that is yet to be given the green light by the planning department. ‌ If the planned Stokesley Road store gets the go-ahead from the council and successfully acquires a premises licence, then alcoholic drinks could be sold at the store on a daily basis from 7am to 11pm, on the condition that beverages are consumed off the premises. Anyone wishing to make a representation should do so by June 18, 2026. ‌ The store is being proposed on the site of the former Marton Hotel and Country Club, which went up in flames back in 2019 , two years after closing down . It was reported in 2024 that Lidl would be launching a public consultation over plans to build a store on the derelict site. ‌ Proposed Lidl site (May 2026) (Image: Daniel Hodgson) ‌ This booze bid is the latest development to occur since the beginning of 2026, with permission being sought back in February for groundworks on the site, prior to a decision being made on the discount supermarket chain's wider plans for a new store. There are currently two branches of Lidl in Middlesbrough , one on Newport Road and the other on Cargo Fleet Lane. By the end of this year, it is possible that two news stores will be approved in the town, as the company is currently seeking permission to not only build a store in the south of the town - in Marton - but another on the site of the former Northern School of Art - on the corner of Green Lane and Roman Road - in Linthorpe . Did you know you can make Teesside Live a prefer
+Logan Nelson, property manager, looks up toward the skylight in an apartment inside the former Lake Superior Elementary School in Superior on Tuesday, May 26. Jed Carlson / Duluth Media Group By Shelley Nelson Today at 6:33 AM Listen Comments Share Share this article News Reporting News Reporting Based on facts, either observed and verified firsthand by the reporter, or reported and verified from knowledgeable sources. The Trust Project What is this? SUPERIOR — A flurry of activity once again filled the halls and classrooms of the former Lake Superior Elementary School this week. However, the students that roamed the halls over nearly four decades have been replaced by construction workers putting the finishing touches on the new Lake Superior Apartments. ADVERTISEMENT As early as June 15, the halls will fill again with residents moving into the efficiency, studio, and one- and two-bedroom apartments that now fill the gymnasium and former classrooms — 50 new living spaces in all. “We pretty much rebuilt the entire school,” said Logan Nelson, property manager for Vision Inc., which will manage the property. Lake Superior Apartments, seen May 26, is almost ready to open. Jed Carlson / Duluth Media Group The school opened its doors in 1985 and closed in June 2024 as district leaders looked to cut expenses. The building was sold to Ryan Nelson, chief executive officer of P&R Companies, in August 2024. Since then, new windows and doors have been added, and skylights were added to the roof to add natural light in units where adding windows wasn’t possible. “It was actually a really cool compromise,” Nelson said of the skylights. “People seem to be enjoying them quite a bit. There’s a lot more people that want the skylight units than the window units. Where else can you stargaze in your apartment?” All of the units include a washer, dryer and dishwasher. Each apartment is unique, with the exception of the efficiency units, Nelson said. “There’s really not a ton of options 
 
 --- Article 2 ---
-URL: https://www.news-press.com/story/life/food/2026/05/26/sweet-tomatoes-grand-opening-date-set-for-fort-myers-florida/90256676007/
-Title: Sweet Tomatoes' grand opening set in Fort Myers, Florida. What to know
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 22:59:00
+URL: https://travelhost.com/cruises/norwegian-cruise-line-great-tides-waterpark-opening-date
+Title: Norwegian Cruise Line island waterpark set for late summer opening
+Status hint: Opening | Industry: Cruise Lines
+Published: 2026-05-28 11:07:00
 
-FOOD Sweet Tomatoes' grand opening set in Fort Myers, Florida. What to know Robyn George Fort Myers News-Press & Naples Daily News Updated May 26, 2026, 7:24 p.m. ET The Sweet Tomatoes salad buffet in Fort Myers will have its grand opening on June 1. This is the second location to reopen in the country after the chain closed all 97 restaurants in 2020. The restaurant is located at its original site and has seen over 1,000 guests daily during its soft opening. It’s official. On June 1, Sweet Tomatoes will hold a grand opening for its Fort Myers location. It comes exactly two weeks after the beloved salad buffet restaurant began its wildly successful soft opening (running through May 30). “Well, our ‘soft’ open hasn't been too soft,” Marlee Lossing, Sweet Tomatoes' director of corporate affairs, said via email. “We have been serving over 1,000 guests per day the past few days. We've been beyond blessed by the Fort Myers and surrounding communities showing up in full force to support our comeback.” Sweet Tomatoes in same space And it’s not only local customers who have been showing up. “We've seen guests travel over 6 hours just to visit us,” Lossing added. They’re all heading to 14080 S. Tamiami Trail, between Volkswagen of Fort Myers and Lexus. It’s the same space Sweet Tomatoes occupied from 1997 until closing — along with all of the chain’s 97 locations — in 2020 when the pandemic hit. “I spoke to many guests over the past few days who told me how they used to visit the restaurant often prior to 2020, and now they're back and ready to pick up where they left off,” Lossing wrote. The Fort Myers location is only the second in the country to reopen (the first was in Tucson, Arizona, in April 2024). What to expect at Sweet Tomatoes After it officially opens on June 1, hours at Sweet Tomatoes will be from 10:30 a.m. to 9 p.m. Monday through Saturday and 10:30 a.m. to 8 p.m. Sunday. It will be closed on Sunday, May 31, in preparation for the grand opening. Pricing for th
+[Could not fetch: 403 Client Error: Forbidden for url: https://travelhost.com/cruises/norwegian-cruise-line-great-tides-waterpark-opening-date]
 
 --- Article 3 ---
-URL: https://www.travelandtourworld.com/news/article/s505ewwefg43/
-Title: The Harborvale Appoints Heinrich von Puschendorf as General Manager Ahead of July 2026 Lakefront Opening in Vermont, US
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 22:55:46
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/s505ewwefg43/]
-
---- Article 4 ---
-URL: https://www.25newsnow.com/2026/05/26/alexander-steakhouse-normal-set-close/
-Title: Alexander Steakhouse in Normal set to close
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 22:39:00
-
-Share Add Us On Google Add as a preferred source on Google NORMAL ( 25News Now ) - It is the end of an era for Normal’s Alexander’s Steakhouse, as business owners announced the restaurant’s final day of operations. According to an online post , company leaders said the steakhouse’s last day open will be May 31, provided the restaurant is sufficiently staffed. This latest closure announcement follows the closure of Champaign’s Alexander’s Steakhouse in 2022. “Serving this community for more than four decades has been one of our greatest honors. We’re incredibly proud of the memories made, the celebrations shared, and the relationships built. To our guests and our dedicated team members — thank you for being the heart of Alexander’s Steakhouse Normal,” the post read. That said, the Peoria location is expected to stay open. You can watch 25News - any newscast, anywhere - streaming LIVE on 25NewsNow.com , our 25News mobile app , and on our WEEK 25News SmartTV streaming app . Learn more about how you can get connected to 25News streaming live news here . Copyright 2026 WEEK. All rights reserved.
-
---- Article 5 ---
-URL: https://finance.yahoo.com/economy/articles/mhr-capital-group-announces-major-223300277.html
-Title: MHR Capital Group Announces Major Construction Milestones for AC Hotel by Marriott and Three Rivers Convention Center Expansion in Kennewick
-Status hint: Opening | Industry: Hospitality
-Published: 2026-05-26 22:33:00
-
-This is a paid press release. Contact the press release distributor directly with any inquiries. MHR Capital Group Announces Major Construction Milestones for AC Hotel by Marriott and Three Rivers Convention Center Expansion in Kennewick PR Newswire Wed, May 27, 2026 at 4:03 AM GMT+5:30 2 min read KENNEWICK, Wash. , May 26, 2026 /PRNewswire/ -- MHR Capital Group today announced significant construction progress on the new AC Hotel by Marriott Kennewick, with the project's structural framing and roofing now complete. The upscale hospitality development remains on schedule for an anticipated grand opening in April 2027. AC Hotel by Marriott - Kennewick, WA The project is being developed in close collaboration with the City of Kennewick and the Kennewick Public Facilities District as part of a coordinated investment in the region's hospitality and convention infrastructure. In addition to the hotel development, the expansion of the Three Rivers Convention Center — which is directly connected to the AC Hotel, remains on track for completion by December 2026. Together, the projects are expected to significantly enhance Kennewick's ability to attract larger conferences, corporate events, tourism activity, and regional gatherings. "We are extremely pleased with the progress being made and the strong partnership that continues to drive this development forward," said Kamran Hasan, CEO of MHR Capital Group. "The collaboration between MHR Capital Group along with its investment partners, the City of Kennewick, and the Kennewick Public Facilities District reflects a shared vision for long-term economic growth and expanded opportunities for the Tri-Cities community." Construction crews are currently advancing exterior façade work, interior systems installation, and site development activities. Once completed, the AC Hotel by Marriott will feature the sophisticated contemporary design, premium accommodations, and guest-focused amenities that define the AC Hotels brand. The combi
-
---- Article 6 ---
-URL: https://www.basenor.com/blogs/news/tesla-superchargers-are-now-open-in-colombia
-Title: Tesla Superchargers Are Now Open in Colombia
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 22:11:45
-
-Share Tesla has officially switched on its first Supercharger stations in Colombia, with locations now open in both Bogotá and Medellín. The launch marks Tesla's entry into the Colombian charging infrastructure market, following vehicle sales that began in November 2025 and first deliveries in late January 2026. Source: @TeslaCharging — May 26, 2026 The Bogotá station is located at Andino Shopping Mall (Cra. 11 #82-71) with 4 stalls, while Medellín's station at Unicentro Shopping Mall (Cra 66B #34A-76) offers 8 stalls. Both sites deliver up to 325 kW of peak charging power and operate 24/7. Pricing is set at 1,300 Colombian Pesos (COP) per kWh, with standard Tesla congestion fees applying once a session ends or the battery reaches 80% — a five-minute grace period is included before fees kick in. Source: @SawyerMerritt — May 26, 2026 Supercharger Voting is also now live for Colombia, letting owners nominate and vote for the next wave of locations. Bogotá was itself a winner from the Q1 2026 voting round, so the system has already proven it works in-market. Colombia's energy regulator (Creg) is separately expected to publish its EV charging infrastructure roadmap by June 2026, which could accelerate the broader rollout further. For Colombian Tesla owners, the network is small but the foundation is solid — two major cities covered, fast hardware in place, and a community-driven expansion mechanism already running. The next expansion sites will depend on how owners vote in the coming cycles. Marcus Reed Lead Editor — Tesla & FSD Marcus covers Tesla's software releases, FSD rollouts, and OTA changes. Background in automotive engineering. Based in Austin. Sources verified at publish time. Spotted an inaccuracy? Email editorial@basenor.com . Tags: Charging , Tesla news Stay in the Loop Join 27,000+ Tesla owners who get our tips first — plus 10% OFF Shop Tesla Accessories — Free USA Shipping Keep Reading SpaceX Starship V3 Makes Its Debut: What the Latest NSF Update Covers 
-
---- Article 7 ---
-URL: https://www.wfmz.com/features/eat-sip-shop/spreading-like-crazy-couple-bringing-restaurant-chain-s-1st-pa-location-to-airport-center/article_e08a40a3-aaf5-4527-be6d-9dea45cf92f3.html
-Title: 'Spreading like crazy': Couple bringing restaurant chain’s 1st Pa. location to Airport Center
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 21:57:00
-
-Facebook Twitter WhatsApp LinkedIn SMS Email airport center 12.jpg Show more Show less Advertisement Advertisement Advertisement Facebook Twitter WhatsApp LinkedIn SMS Email Print Copy article link Save Facebook Twitter WhatsApp LinkedIn SMS Email Print Copy article link Save HANOVER TWP., Pa. – A new location of a rapidly growing, national restaurant chain is coming soon to a prominent shopping center in Lehigh County, and the husband-and-wife operators have plans to open additional locations throughout the Lehigh Valley. The first Pennsylvania location of Chicken Salad Chick, serving full-flavored, Southern-style chicken salad made from scratch and served from the heart, is expected to open in mid- to late July at 942 Airport Center Road in Hanover Township, according to franchisee Amanda Greenford, who’s operating the new restaurant with her husband, Ernest Greenford. A Chicken Salad Chick location is coming soon to the Airport Center in Hanover Township, Lehigh County. Ryan Kneller The soon-to-be-renovated space in the Airport Center previously housed a Buff City Soap location, which closed last year . Amanda was born and raised in Alabama, where Chicken Salad Chick originated and locations are prevalent, and she and her family missed the brand’s food after moving to the Allentown area from the South a little more than three years ago. “When I lived down there, I was obsessed with Chicken Salad Chick,” Amanda told 69 News. “When my husband tried it, he loved it, and our kids also became obsessed with it. We went there probably two to three times a week. So, when we moved up here, we were suddenly like, ‘There’s no Chicken Salad Chick up here!’ And then we started thinking, ‘We could be the first people to bring it to this area.’” Ernest and Amanda Greenford, franchisees of the forthcoming Chicken Salad Chick location in Hanover Township, Lehigh County, are pictured here with their children. Courtesy Chicken Salad Chick Allentown Amanda has many years of experien
-
---- Article 8 ---
-URL: https://sjcitizen.com/drew-brees-backed-chain-set-to-open-this-week-in-st-johns-county-with-unique-giveaway/
-Title: Drew Brees backed chain set to open this week in St. Johns County with unique giveaway
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 21:51:02
-
-A fast-growing slider chain backed by former NFL quarterback Drew Brees is set to officially open its newest St. Johns County location this week. Smalls Sliders will celebrate its grand opening Friday, May 29, at 10 a.m. near the Beachwalk area along County Road 210 across from Fountains at St. Johns. The restaurant operates out of the brand’s signature compact shipping container-style building, known as a “Can,” and specializes in cheeseburger sliders, waffle fries and milkshakes. Smalls specializes in sliders. (Smalls) To mark the opening, the company announced the first 100 guests to make a purchase Friday morning will receive a pair of exclusive orange slide shoes. The St. Johns location is being developed by DPC Sliders, a franchise group that has continued expanding the brand across Florida with locations in Ocala, Tallahassee and Fort Walton Beach. Smalls Sliders was founded by restaurateur and former LSU basketball player Brandon Landry and has attracted investment from Brees, the former New Orleans Saints quarterback who helped lead the franchise to a Super Bowl championship. Brees and Landry also partnered on Walk-On’s Sports Bistreaux, which operates at Durbin Park in St. Johns County. The company also said the new St. Johns restaurant plans to partner with Ducks Unlimited, a nonprofit focused on wetlands conservation.
-
---- Article 9 ---
-URL: https://www.msn.com/en-us/money/realestate/publix-makes-it-official-new-central-kentucky-location-announced/ar-AA247u7e?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Publix makes it official: New Central Kentucky location announced
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 21:46:06
+URL: https://www.msn.com/en-us/money/companies/mexican-food-chain-abruptly-closing-every-us-restaurant/ar-AA24bJPW?cvid=6a182037030f4cdb8aa1ce2321f962b8&ocid=hpmsn
+Title: Mexican food chain abruptly closing every US restaurant
+Status hint: Closing | Industry: Restaurants
+Published: 2026-05-28 11:03:31
 
 MSN
 
---- Article 10 ---
-URL: https://www.mynbc5.com/article/el-gato-cantina-essex-junction-closes/71414312
-Title: Popular Mexican restaurant to close Essex Junction location, teases new location coming soon
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 21:44:00
+--- Article 4 ---
+URL: https://www.furnituretoday.com/furniture-retailer/broad-river-opens-stores-in-4-states-in-may/
+Title: Broad River opens stores in 4 states in May
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 11:02:06
 
-El Gato Cantina to close Essex Junction location, teases new location coming soon El Gato Cantina El Gato Cantina SOURCE: El Gato Cantina Updated: 5:44 PM EDT May 26, 2026 Editorial Standards ⓘ Michael Cusanelli Digital Content Manager Advertisement El Gato Cantina to close Essex Junction location, teases new location coming soon Updated: 5:44 PM EDT May 26, 2026 Editorial Standards ⓘ Michael Cusanelli Digital Content Manager El Gato Cantina is closing its Essex Junction location, with owners teasing a new location for the business in the coming weeks.El Gato is a prominent restaurant on Park Street, and is situated next to On Tap Bar & Grill.In a social media post, the business said their last day at the Essex Junction location will be Sunday, May 31.Officials said they plan to announce more about their upcoming move to a "new and exciting location" soon.El Gato recently opened a location in Jeffersonville at the former Red Leaf Gluten-Free Brewing space. ESSEX JUNCTION, Vt. — El Gato Cantina is closing its Essex Junction location, with owners teasing a new location for the business in the coming weeks. El Gato is a prominent restaurant on Park Street, and is situated next to On Tap Bar & Grill. Advertisement In a social media post, the business said their last day at the Essex Junction location will be Sunday, May 31. Officials said they plan to announce more about their upcoming move to a "new and exciting location" soon. El Gato recently opened a location in Jeffersonville at the former Red Leaf Gluten-Free Brewing space. Weather Information Latest Forecast ° F FEELS LIKE No weather data available HOURLY DAILY RADAR TRAFFIC Sponsored by Make MyNBC5 a preferred source on Google Add Preferred Source Share Copy Link Copy {copyShortcut} to copy Top Picks Scripps National Spelling Bee kicks off this week. Can you spell the last 5 winning words? 'The goal is to stay': NASA gives update on its plans for a permanent moon base Eight states have enacted new congressional 
+
+
+--- Article 5 ---
+URL: https://www.plymouthherald.co.uk/whats-on/fashion-beauty/gallery/eager-shoppers-queue-boots-beauty-10987368
+Title: Eager shoppers queue as Boots Beauty opens first South West store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 10:59:00
+
+Eager shoppers queue as Boots Beauty opens first South West store It's one of only two branches in the UK Bookmark Share What's On By Katie Timms Regional Head of Content Paul Gillis 11:59, 28 MAY 2026 Bookmark Outside the new Boots Beauty store on opening morning (Image: PAUL GILLIS / Reach Plc) Hundreds of shoppers queued to set foot in the first Boots Beauty store in the South West - and the second ever in the UK. The brand new beauty-only concept store opened at Bristol's Cabot Circus today (Thursday, May 28), with shoppers in with a chance of winning prizes to mark the occasion. Eager customers who waited outside the huge 11,000 sq ft store were treated to live performances from DJ YUKI, complimentary matcha drinks and ice cream - and even a selfie photobooth. Shoppers also have the chance to try their luck on the Boots Beauty Fruit Machine – a 'spin to win' attraction where each result unlocks a different prize, ranging from a goodie bag to product minis. The distinctive store boasts a host of unique experiences for shoppers, including the eagerly anticipated P.Louise 'shop-in-a-shop', offering the chance to get hold of P. Louise products exclusively available at Boots. There's also a P.Louise lip oil creation station, where visitors can immerse themselves in a taste of the P. Louise Empire, selecting their own lip oil fragrance and charms. Making its debut in the new store is a K&J Beauty Airlines station positioned at the front, where customers can discover the latest Korean and Japanese skincare brands and products, including Medicube, Dr Melaxin, Anua, Biodance and Dr Jart+. Boots reports that "one Korean skincare product is sold every eleven seconds". Visitors can also grab a ticket and attempt to crack open a mystery suitcase packed with goodies. Successfully unlocking the combination could see you walk away with more than £200 worth of products. Another enticing in-store offering is a complimentary skin scanning service, through which customers can disc
+
+--- Article 6 ---
+URL: https://www.warringtonguardian.co.uk/news/26145961.tj-hughes-store-golden-square-suffers-temporary-closure/
+Title: TJ Hughes store in flagship Golden Square unit suffers temporary closure
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 10:55:18
+
+TJ Hughes store in Golden Square suffers temporary closure Business Leisure Shopping Warrington By 
+            Nathan Okell Chief Reporter Share 0 Comments 2 Skip to next photo 1 / 1 Show caption 1 / 1 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. A STORE occupying a flagship unit in Golden Square has closed temporarily. Customers have been shocked to see the shutters remain closed at TJ Hughes in Warrington town centre over recent days. The department store moved into the former Debenhams unit in Golden Square Shopping Centre in October 2024. Large queues formed for the official opening, which saw the large unit brought back into use for the first time since Debenhams closed in 2021. A sign attached to the shutters reads: “Due to technical issues, this store will not be open today. We will re-open as soon as possible.” TJ Hughes was approached for more details about the temporary closure. Shutters remain closed at the TJ Hughes store in Golden Square Shopping Centre In response, COO Jason Harmer said: “Unfortunately, due to unforeseen circumstances, our Warrington store is temporarily unable to trade. “I would like to apologise to our customers and colleagues for the disruption and thank them for their patience and understanding while we are trying to rectify the situation and re-open for trade as soon as possible. “The issue only relates to our site in Warrington, and all of our other sites continue to operate as normal.” TJ Hughes formerly had a store on Sankey Street, but this closed with other stores in 2011, before the chain returned in 2024. The brand moved to Warrington after closing its store in neighbouring Widnes, formerly located at Green Oaks Shopping Centre. It brands itself as being a ‘provider of designer brands and quality goods at discounted prices’, and it als
+
+--- Article 7 ---
+URL: https://wpdh.com/hudson-valley-furniture-store-closing/
+Title: Millerton, NY Furniture Store to Close, Owners Retiring
+Status hint: Closing | Industry: Furniture / Mattress
+Published: 2026-05-28 10:46:42
+
+Hudson Valley Furniture Store to Close, Owners Retiring Boris Boris Published: May 28, 2026 Google Maps Share on Facebook Share on Twitter Another longtime Hudson Valley business is preparing to close its doors. A locally owned furniture store that has welcomed customers for over a decade has announced it is closing for good. northelmhome.com/Canva northelmhome.com/Canva loading... The good news is that the closure isn't due to financial issues or the economy. North Elm Home in Millerton will be closing this summer after owners Cindy Dunleavy and John Scutieri decided to retire rather than renew the store’s lease. The furniture and home decor shop opened in 2015 inside a rustic barn-style building along Route 22 in northern Dutchess County. Over the past 11 years, it has become known for its mix of reclaimed furniture, antiques, home accents, and handcrafted goods that aren't usually available at the giant chain furniture stores. Google Maps Google Maps loading... Long History of Selling Furniture Before opening North Elm Home, Dunleavy and Scutieri worked together at another longtime local furniture business, Riley’s Furniture. When they launched their own store, they focused on creating a showroom filled with pieces customers wouldn’t typically find anywhere else in the Hudson Valley. According to the store’s website, North Elm Home specialized in “casual, comfortable living” with a mix of modern farmhouse, industrial and rustic styles. The shop also featured accessories, gifts and one-of-a-kind items sourced from artisans and vendors across the Northeast. The owners said they spent years traveling to furniture markets and hand-picking inventory themselves, helping give the store its distinct personality. Google Maps Google Maps loading... Store Owners Choose Retirement Over Renewing Lease North Elm Home says the decision to close was tied to retirement and the expiration of the store’s lease, not because the business was struggling financially. The store is curre
+
+--- Article 8 ---
+URL: https://www.gloucestershirelive.co.uk/whats-on/fashion-beauty/huge-new-boots-beauty-store-10987242
+Title: Huge new Boots store opens at Cabot Circus with unusual twist
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 10:30:26
+
+What's On Huge new Boots Beauty store is officially open in Bristol's Cabot Circus It is the first of its kind outside of London bristolpost Bookmark Share What's On By Katie Timms Regional Head of Content 11:30, 28 MAY 2026 Bookmark Hundreds joined the line to celebrate the opening of the new Boots Beauty this morning (Image: PAUL GILLIS / Reach Plc) The brand new Boots Beauty store has officially opened in Bristol's Cabot Circus today - and shoppers have the chance to get their hands on prizes. In a twist from the usual Boots offering, the sprawling 11,000 sq ft concept store is the brand's second ever beauty-only store and the first outside of London. Today only, customers will benefit from exclusive discounts and the opportunity to try their luck on the Boots Beauty Fruit Machine with any £20 purchase – a 'spin to win' attraction where each result unlocks a different prize, ranging from a goodie bag to product minis. Those waiting in the queue will also be treated to complimentary matcha drinks and ice cream, alongside a live DJ performance. The distinctive store boasts a host of unique experiences for shoppers, including the eagerly anticipated P.Louise 'shop-in-a-shop', with the opportunity to browse P. Louise products exclusive to Boots . There is also a P.Louise lip oil creation station, which allows shoppers to experience a small part of the P. Louise Empire and choose their own lip oil fragrance and charms. There is also a section for mystery boxes, which are popular on the P.Louise website and TikTok Shop. Making its debut in the new store is a K&J Beauty Airlines station at the front of the shop , which offers the chance to learn about the newest Korean and Japanese skincare brands and products, such as Medicube, Dr Melaxin, Anua, Biodance and Dr Jart+. Boots says "one Korean skincare product is sold every eleven seconds". Visitors can also take a ticket to try to unlock the suitcase, which is filled with goodies. Anyone who manages to crack the code can
+
+--- Article 9 ---
+URL: https://www.greenqueen.com.hk/clover-food-lab-meat-free-vegetarian-restaurant-closing-bankruptcy/
+Title: Meat-Free Restaurant Clover Food Lab to Close All Locations After 17 Years
+Status hint: Closing | Industry: Restaurants
+Published: 2026-05-28 10:19:18
+
+Meat-Free Restaurant Clover Food Lab to Close All Locations After 17 Years Vegan Dining Green Business Vegan By Anay Mridul Published on May 28, 2026 Last updated May 28, 2026 Courtesy: Clover Food Lab 4 Mins Read US meatless restaurant chain Clover Food Lab is closing all its 11 locations this week, after failing to find a buyer for the distressed business. After nearly two decades in operation, Cambridge-based vegetarian stalwart Clover Food Lab is shutting its doors. The fast-casual chain will close its 11 remaining locations this week, two-and-a-half years after emerging from bankruptcy and two months after it first warned of this fate . At the end of March, the business filed a Worker Adjustment and Retraining Notification (WARN) Act letter with the state of Massachusetts, announcing that all 182 employees would be affected if the business didn’t find a new buyer by the end of May. Companies with 50+ employees are legally required to file a WARN notice before mass layoffs or closure, and provide workers with 60 days’ notice. In the document, Clover Food Labs said some employees will continue to work for a limited time to wind down the restaurant chain. Its efforts to save the business were eventually unsuccessful. “For 17 years, we have championed local farms and served tens of thousands across Greater Boston,” Clover Food Lab CEO Julia Wrin Piper wrote in a statement to customers. “We’re deeply saddened to share this news – for our employees, New England farmers, and you, our guests and supporters,” she added. How Clover Food Lab got here Courtesy: Clover Food Lab Clover Food Lab began as a food truck run by Ayr Muir, a graduate from the Massachusetts Institute of Technology (MIT) and Harvard University, with a spotlight on sustainability. Aside from its meat-free philosophy, its trucks were retrofitted cargo vehicles that partly ran on recycled vegetable oil, and its cutlery was fully compostable. The concept evolved into brick-and-mortar locations, a meal bo
+
+--- Article 10 ---
+URL: http://www.pontefractandcastlefordexpress.co.uk/lifestyle/family-and-parenting/ready-to-bowl-new-entertainment-venue-tenpin-wakefield-ready-for-grand-opening-tomorrow-8644314
+Title: Ready to bowl: New entertainment venue Tenpin Wakefield ready for grand opening tomorrow
+Status hint: Opening | Industry: Experiential
+Published: 2026-05-28 10:15:00
+
+Ready to bowl: New entertainment venue Tenpin Wakefield ready for grand opening tomorrow By Leanne Clarke Published 28th May 2026, 11:15 BST Tenpin, a major new indoor entertainment venue, is set to officially open its doors tomorrow (Friday, May 29). Located at Trinity Walk shopping centre, Tenpin Wakefield has been designed as a vibrant, year-round destination for those local to the city. Created with the Wakefield community at its heart, the new venue will offer families, friends, sports teams and social groups a wide range of high quality activities under one roof. Advertisement Hide Ad Advertisement Hide Ad The new development includes 24 modern bowling lanes, alongside two private karaoke rooms, a thrilling laser tag arena, three immersive escape rooms and interactive darts. Tenpin is set to officially open its doors tomorrow (Friday) Guests will also be able to enjoy pool tables, a fully equipped arcade and pair the activities with a refreshment from an on-site cocktail bar, where sports fans can enjoy TNT Sports and Sky Sports . The venue also benefits from plenty of parking and convenient public transport nearby, making it easier for the whole family to enjoy. The impressive new site marks an exciting addition to Tenpin’s growing portfolio of locations across the UK. With more than 20 years of experience in bowling and leisure, Tenpin is committed to creating a welcoming and inclusive space for people of all ages to come together, have fun and leave eager to come back. Advertisement Hide Ad Advertisement Hide Ad Marc Couget, Regional Manager from Tenpin said: “We are incredibly excited to open the doors to Tenpin Wakefield this Friday. The new development includes 24 modern bowling lanes, alongside two private karaoke rooms, a thrilling laser tag arena, three immersive escape rooms and interactive darts. "Wakefield is a fantastic city with a real sense of community and we wanted to create a venue that reflects that by bringing people together in a fun and w
 
 --- Article 11 ---
-URL: https://www.insideindianabusiness.com/articles/bjs-wholesale-club-to-open-portage-location
-Title: BJ’s Wholesale Club to open Portage location
-Status hint: Opening | Industry: Grocery Wholesale
-Published: 2026-05-26 21:42:49
+URL: https://www.aol.com/news/viral-popup-bagels-opening-garden-143246935.html
+Title: Viral PopUp Bagels opening in Garden City Center. Here's when
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 10:14:08
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.insideindianabusiness.com/articles/bjs-wholesale-club-to-open-portage-location]
+Catherine Messier, USA TODAY NETWORK - New England Tue, May 26, 2026 at 2:32 PM UTC 0 A viral bagel shop is popping up in Rhode Island this week. On Friday, May 29, PopUp Bagels is opening a new storefront in Cranston's Garden City Center , marking the shop's first location in Rhode Island. The Connecticut-based chain is known for its "grip, rip, and dip" model, allowing customers to enjoy fresh small-batch bagels right out of the bag. Rather than sliced and toasted, PopUp Bagels are meant to be ripped and dipped into a schmear of one of the shop's house-made cream cheeses, with weekly rotating specials including unique choices like vodka sauce cream cheese, cake batter cream cheese and elote cream cheese. To celebrate their arrival in the Ocean State, PopUp Bagels will host a grand opening celebration, complete with coffee milk cream cheese. Here's what to know. Advertisement How to PopUp Bagels' grand opening in Rhode Island According to a post on Instagram , PopUp Bagels will host a grand opening celebration from 7-11 a.m. on Friday, May 29. Guests can enjoy hot, fresh bagels with a limited-edition coffee milk schmear, as well as refreshments from La Colombe and Natalie's Orchid Island Juice . If you plan to attend, be sure to line up early – new PopUp Bagel locations often see long lines. Regular business hours following the grand opening have not yet been announced. New places to eat: Snack shacks to neighborhood vibes mean new places to dine across RI Where is RI's PopUp Bagels located? PopUp Bagels, known for the "Grip, Rip and Dip" method of eating its freshly baked bagels, is coming to Garden City Center in Cranston, Rhode Island. Rhode Island's first and only PopUp Bagels is located at 75 Hillside Road inside Garden City Center. The bagel business is set to open between Gap and Evereve , in the space that was once Yankee Candle. This article originally appeared on The Providence Journal: PopUp Bagels is opening in RI at Garden City Center. What to know
 
 --- Article 12 ---
-URL: https://www.travelandtourworld.com/news/article/yf6sowgwxqwz/
-Title: Cygnett Inn Motihari to Open a New Hotel with Banquets and Pool by Year‑End in Bihar
-Status hint: Opening | Industry: Hospitality
-Published: 2026-05-26 21:33:38
+URL: https://www.straitstimes.com/singapore/local-eatery-old-school-delights-at-esplanade-to-permanently-close-on-june-8
+Title: Local eatery Old School Delights at Esplanade to close on June 8
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 10:07:59
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/yf6sowgwxqwz/]
+Local eatery Old School Delights at Esplanade to close on June 8 Sign up now: Get ST's newsletters delivered to your inbox The popular local restaurant expressed its gratitude for its customers over the years. PHOTO: SCREENGRAB FROM OLD SCHOOL DELIGHTS/FACEBOOK Ann Chen Published May 28, 2026, 04:52 PM Updated May 28, 2026, 09:45 PM Listen SINGAPORE – Popular local restaurant Old School Delights, located on the second floor of Esplanade Mall, will cease operations on June 8 . June 7 will be the last day customers may dine at the restaurant. In announcing the news in a Facebook post on May 25, the eatery said the decision had been made with a heavy heart. Speaking to The Straits Times, the restaurant’s owner Koh Choon Chye cited falling footfall as the main reason behind the difficult decision. “Since tourism recovered after the Covid-19 pandemic and Singapore’s currency strengthened, more locals began spending school holidays and long weekends overseas instead of in Singapore,” the 55-year-old said. Furthermore, many musicals and concerts that used to be held at The Esplanade have shifted to Marina Bay Sands, which has contributed to the decreasing footfall, he added. Road closures due to special events such as the Formula One race also affected the restaurant’s business significantly, as The Esplanade becomes more difficult to access during these periods, Mr Koh added. “All in all, earnings have become too inconsistent across different months and running the restaurant is no longer financially feasible,” he said. In its Facebook post on May 25 , the restaurant said: “For the past few years, we have had the privilege of welcoming families, friends, students, office workers and many families through our doors.” It went on to express its gratitude to all customers who have dined there, as well as anyone who has recommended the eatery to others. Old School Delights first opened in Upper Thomson Road in 2010 and expanded to Esplanade Mall in 2017. The old outlet was mov
 
 --- Article 13 ---
-URL: https://www.thestreet.com/restaurants/iconic-seafood-chain-closes-more-locations-after-bankruptcy-exit-red-lobster
-Title: Iconic seafood chain closes more locations after bankruptcy exit
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-26 21:32:43
+URL: https://www.jsonline.com/story/money/business/2026/05/28/kwik-trip-first-nebraska-store-locations/90277089007/
+Title: Kwik Trip eyes expansion into Nebraska
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 10:06:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.thestreet.com/restaurants/iconic-seafood-chain-closes-more-locations-after-bankruptcy-exit-red-lobster]
+BUSINESS Kwik Trip eyes expansion into Nebraska Francesca Pica Milwaukee Journal Sentinel May 28, 2026, 5:06 a.m. CT Kwik Trip is eyeing expansion to a new state as it continues building stores across the Midwest. The La Crosse-based convenience store chain wants to open its first Nebraska locations in the near future, Kwik Trip spokesperson Ben Leibl told the Milwaukee Journal Sentinel. The company is looking at potential store locations in the Cornhusker State, Leibl said, but there is currently no timeline for selection. “Kwik Trip is always looking to expand and build new stores in communities where it makes sense for us to do that. Nebraska has a lot of potential, and we are excited to do our due diligence and find locations where we can build new stores and offer our services in those communities,” he said. Founded in Eau Claire in 1965, Kwik Trip has grown to 38,000 employees and more than 900 locations across seven states, and it shows no signs of slowing down. The company opens around 30 to 40 new stores annually, including its first North Dakota location in November 2025. Kwik Trip has stores in Wisconsin, Minnesota and Michigan’s Upper Peninsula. It also operates under the name Kwik Star in Iowa, Illinois, North Dakota and South Dakota to avoid confusion with another regional convenience store chain. The company plans to open more stores in Iowa, northern Minnesota and northwestern Illinois in the next few years, Leibl said. It’s also considering opening a third distribution center. Kwik Trip supplies most of its products from the company’s 140-acre food production and distribution campus in La Crosse. In November 2025, Kwik Trip opened a second distribution center in DeForest to serve southeast Wisconsin stores. The convenience store chain has developed a passionate following in the Upper Midwest. The Kwik Trip Enthusiast Facebook group is 165,000 strong. Couples have taken wedding photos at Kwik Trip. Particularly devoted fans race to visit as many stor
 
 --- Article 14 ---
-URL: https://kyssfm.com/missoula-jersey-mikes-opening/
-Title: Jersey Mike’s Finally Announces Opening Date
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 21:32:08
+URL: https://www.axios.com/local/charlotte/2026/05/28/wine-bar-restaurant-postino-opening-in-plaza-midwood
+Title: All-day restaurant and wine bar Postino expanding to Plaza Midwood
+Status hint: Opening | Industry: Restaurants
+Published: 2026-05-28 09:54:54
 
-Missoula’s New Jersey Mike’s Has an Opening Date Ace Sauerwein Ace Sauerwein Published: May 26, 2026 Credit: Ace Sauerwein Share on Facebook Share on Twitter Here's some good news for you, Missoula foodies. We're about to get a new sub shop. Or at least, we’re getting a second location of an old, familiar favorite. Second Missoula Jersey Mike's Set To Open The Jersey Mike’s on Brooks Street has been under construction for a while now, but it finally has an opening date. I spotted a banner outside the new storefront announcing that the grand opening is 8 days away. Jersey Mike's on Brooks Street. Credit: Ace Sauerwein Jersey Mike's on Brooks Street. Credit: Ace Sauerwein loading... READ MORE: 3 Stunning Valleys Just a Day's Drive Away From Missoula I was never the strongest at math, but by my college graduation calculations, that puts the grand opening on Wednesday, June 3. This will be the second Jersey Mike's in Missoula, joining the original on North Reserve near REI and Coldstone Creamery. This Jersey Mike's is located at 2810 Brooks Street. Jersey Mike's website also says there is a location in development at 1001 E Broadway St, which is at the East Gate Shopping Center with the Albertson's and the Montana Ace, but I haven't seen any evidence of it. Get our free mobile app Other Missoula Food News Jersey Mike's opening up comes as a couple of other Brooks Street fast food restaurants are temporarily closed. The Taco Bell on Brooks is undergoing renovations, while the KFC and A&W are getting a completely new building. READ MORE: Details on Missoula's Taco Bell, KFC, and A&W A few weeks ago, the Missoulian reported that Wing Stop applied for a permit to operate in Missoula, too. Missoula's Farmer's Markets 2025 Gallery Credit: Chris Wolfe Filed Under : Missoula Montana , social post Categories : Missoula News
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.axios.com/local/charlotte/2026/05/28/wine-bar-restaurant-postino-opening-in-plaza-midwood]
 
 --- Article 15 ---
-URL: https://redmondspokesman.com/2026/05/26/55-redmond-community-hosts-clubhouse-grand-opening/
-Title: 55+ Redmond community hosts clubhouse grand opening
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 21:31:01
+URL: https://www.kentucky.com/news/business/article315897515.html
+Title: Publix expands across Kentucky with new grocery store plans: A look at locations
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-28 09:50:00
 
-
+The first Publix grocery store opened in 1930 in Winter Haven, Florida, with the chain eventually expanding to 1,435 locations across the Southeast. After 94 years, Publix finally found its way to the Bluegrass State, opening in Louisville in 2024. Kentucky now has six Publix locations with more on the way, including a new Nicholasville location announced on May 26, the Lexington Herald-Leader previously reported . Here’s a rundown of where you can find Publix stores in the Lexington area and across Kentucky. Publix stores open in Lexington Publix at Citation Point off of Georgetown Road was the first location to come to Lexington in March 2025, according to Publix. A newer location, Publix at The Fountains at Palomar , on the Northwest corner of Man o’ War Boulevard and Harrodsburg Road, followed shortly after. Publix stores coming soon to the Lexington area Off of Tates Creek Road, near Chevy Chase, Publix at Romany was announced, making it the third Publix to be opened in Lexington. The opening date has not been announced. Work is underway for the planned site of a new Publix grocery store across from Brannon Crossing near the Fayette and Jessamine county line along Nicholasville Road on Friday, May 15, 2026.                                                                                            Ryan C. Hermens rhermens@herald-leader.com Publix in Central Kentucky A bit west of Lexington in Elizabethtown, Publix at The Shops at Pear Orchard, on the corner of Pear Orchard Road and Ring Road, is set to open between July and September of this year. In Georgetown, Publix at Elkhorn Village Center off of Frankfort Road was announced to open in 2027. South of Lexington, new locations have been announced in Somerset, Richmond and Nicholasville: In Somerset, Publix will be on the corner of Jefferson Drive and Highway 27. No opening date has been announced. In Richmond, Publix at The Farms at Barnes Mill on Goggins Lane and Barnes Mill Road. No opening date has been an
 
 --- Article 16 ---
-URL: https://nwitimes.com/news/local/article_6f370079-aa70-4feb-a9d3-130317720429.html
-Title: BJ’s Wholesale Club, a Costco rival, to open this year in Portage
-Status hint: Opening | Industry: Grocery Wholesale
-Published: 2026-05-26 21:30:00
+URL: https://www.travelandtourworld.com/news/article/zc6giolksy3j/
+Title: Finland’s Largest Ski Resort Levi Announces Landmark Expansion to Strengthen Lapland Tourism Appeal
+Status hint: Opening | Industry: Hospitality
+Published: 2026-05-28 09:46:21
 
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://nwitimes.com/news/local/article_6f370079-aa70-4feb-a9d3-130317720429.html]
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/zc6giolksy3j/]
 
 --- Article 17 ---
-URL: https://www.aol.com/articles/popular-gas-station-sushi-spot-211243365.html
-Title: Popular Gas Station Sushi Spot Outgrows Gas Station, Moves Restaurant to New Location
+URL: https://www.manilatimes.net/2026/05/28/tmt-newswire/globenewswire/chop-steakhouse-bar-opens-brand-new-south-surrey-location-marking-20th-restaurant-in-chops-20th-year/2353421/amp
+Title: Chop Steakhouse & Bar Opens Brand-New South Surrey Location, Marking 20th Restaurant in Chop’s 20th Year
 Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 21:27:28
+Published: 2026-05-28 09:46:12
 
-Bailey Richards Tue, May 26, 2026 at 9:12 PM UTC 0 Bayou Fresh Seafood &amp; Deli&apos;s old gas station location<br>Credit: Google Maps NEED TO KNOW A beloved gas station sushi spot in Jasper, Ala. moved out of the gas station after years of business The owner of the restaurant, Bayou Fresh Seafood & Deli, explained the decision to move to a larger, standalone spot The seafood spot reopened at the new location in February after a two-month hiatus and renovation Beyond its food, Bayou Fresh Seafood & Deli is known and loved for, well, the fact that it is served out of an Alabama gas station. Now, the popular spot is headed to a new building — petrol not included. This year, the restaurant once housed in a Marathon gas station in Jasper, Alabama — and often included in the discussion of the best gas station restaurants in the South — took a massive step, moving from its longtime home on North Walston Bridge Road to a new, larger standalone location. The local business first announced the news of its relocation and upsizing on social media in late 2025. Its longtime owner, Zhu Jianjun, also shared more insight in a May interview with AL.com . “We had enough business, so we tried a little bigger,” Jianjun, who bought the seafood spot back in 2012, told the outlet. PEOPLE reached out to Bayou Fresh Seafood & Deli for comment but did not receive an immediate response. Bayou Fresh Seafood & Deli served customers its signature hushpuppies, grouper, sushi rolls and more from its original location for the last time on Christmas Eve, according to Facebook . “TODAY IS THE DAY!!!” the business wrote in the Dec. 24, 2025 post. “Today will be our last day open for at least 2 weeks, come get your bayou fix before we close for the holidays and grand re-opening at our new location!!!” Advertisement Bayou Fresh Seafood &amp; Deli&apos;s old location<br>Credit: Google Maps In January, the business shared an update on the move, writing, “New location. New look. Same great food. We've o
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.manilatimes.net/2026/05/28/tmt-newswire/globenewswire/chop-steakhouse-bar-opens-brand-new-south-surrey-location-marking-20th-restaurant-in-chops-20th-year/2353421/amp]
 
 --- Article 18 ---
-URL: https://www.dallasnews.com/food/restaurant-news/article/why-trump-invest-kura-sushi-dallas-restaurants-22277347.php
-Title: President Trump invested in sushi restaurant with 7 locations in D-FW
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 21:26:07
+URL: https://www.wisconsinrapidstribune.com/story/money/2026/05/28/how-storm-damage-will-impact-opening-of-wisconsin-rapids-pizza-ranch-restaurant/90288859007/
+Title: Storm knocks down walls at WI Rapids Pizza Ranch, delaying opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 09:31:02
 
-Kura Revolving Sushi Bar sells sushi and sashimi that's delivered throughout the restaurant on a conveyor belt. President Donald Trump invested between $1 million and $5 million in the company recently. Courtesy of Kura Sushi President Donald Trump invested between $1 million and $5 million in Kura Sushi USA , a conveyor belt sushi chain with seven locations in Dallas-Fort Worth. According to Bloomberg , the investment was part of a list of financial disclosures that included transactions with major corporations like Nvidia and Amazon. The investment "stirred surprise in Japan," Bloomberg said, "with people speculating on X whether Trump had actually ever eaten raw fish and rice." Advertisement Article continues below this ad Some have wondered if the investment was a mistake. Was Kura confused with Fujikura , a tech company, Fast Company asked? It isn't clear. News reports show the investments were made by a third-party broker. When news broke that Trump had put money into the company, Kura Sushi USA Inc. saw a 5% bump. The stock held steady since last week, and the company is worth about $670 million. Kura is growing in Texas, with 16 restaurants across the state and two others coming soon. In D-FW, Kura sells sushi in Carrollton, Denton , Euless, Fort Worth, Frisco, McKinney and Plano. According to state documents, the restaurant group is putting $1.5 million into the construction of a new Kura in Arlington near Interstate 20. Advertisement Article continues below this ad Dallas News Logo Don't let Google decide who you trust. Make Dallas News a preferred source so your search results prioritize writing by actual people, not AI. Add Preferred Source Related: Popular conveyor-belt sushi chain to open another North Texas location
+MONEY Storm knocks down walls at WI Rapids Pizza Ranch, delaying opening A May 27 storm hit the Pizza Ranch construction site in Wisconsin Rapids, knocking down walls. The owners shared an update with a Daily Tribune reporter Wednesday. Caitlin Shuda Wisconsin Rapids Daily Tribune May 28, 2026, 4:20 a.m. CT WISCONSIN RAPIDS – Pizza Ranch is still on track to open in a few months after a May 27 storm hit the construction site Wednesday evening. Owners Gary and Angie Hall told a Daily Tribune reporter Wednesday they had been out to the site near Home Depot within a few hours of the storm’s passing and took photos of the damage, including fallen walls and wooden beams blown into the interior space. They had already connected with insurance, and they said the damage was limited and the storm is delaying the project by two weeks.
 
 --- Article 19 ---
-URL: https://www.restaurantnews.com/taco-johns-expanding-footprint-fargo-north-dakota-052626/
-Title: Taco John’s Expanding Footprint in Fargo
+URL: https://www.wfmj.com/news/local-news/niles/niles-opening-new-riverside-park-with-ribbon-cutting/article_62b6ed49-d3be-47cc-8b87-911e48dcaa82.html
+Title: Niles opening new Riverside Park with ribbon cutting
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 21:15:03
+Published: 2026-05-28 09:30:50
 
-Facebook Tweet LinkedIn Fargo-based Pentex Restaurant Group Builds on Momentum with New South University Drive Restaurant Opening Next Month St. Louis Park, MN  ( RestaurantNews.com ) Taco John’s ® is continuing its growth in Fargo with a second area restaurant opening in late June at 2253 S. University Dr. The new location builds on the successful return of Taco John’s to the market earlier this year, with both brought by locally-based Pentex Restaurant Group, the brand’s largest franchisee. Following the enthusiastic response of its first Fargo restaurant, Pentex is moving quickly to meet demand and bring Taco John’s signature West-Mex ™ menu closer to more fans across the city. “Fargo has shown us how strong its appetite for Taco John’s is, and we’re excited to bring a second location to the community,” said Heather Neary, Taco John’s President and CEO. “Pentex Restaurant Group has deep roots in this city and a long history with our brand, making them the ideal partner to continue growing in the region.” The new location will offer Taco John’s full menu of fan favorites featuring bold West-Mex flavors, including its iconic Potato Olés® and award-winning Taco Bravo *, at a convenient new location along one of Fargo’s busiest corridors. The University location will serve guests daily with convenient hours from breakfast through late night, further solidifying Taco John’s renewed presence in Fargo. The restaurant will be open from 6 a.m. to 10 p.m. daily, with drive-thru hours extending until 11 p.m. Breakfast will be served daily until 11 a.m. “For us, this second location is about more than growth – it’s about showing our long-term commitment to Fargo,” said Brett Itterman, Chief Executive Officer of Pentex Restaurant Group. “The response to our first restaurant made it clear that this community was ready for Taco John’s return in a big way. We’re proud to keep building, hiring locally, and serving guests delicious food at a great value.” Pentex Restaurant Group o
+Facebook Twitter WhatsApp SMS Email Facebook Twitter WhatsApp SMS Email Print Copy article link Save Facebook Twitter WhatsApp SMS Email Print Copy article link Save NILES — The city of Niles will officially open its new Riverside Park today during a grand opening and ribbon-cutting ceremony. The event is scheduled for noon at the park site located near the Mahoning River. Riverside Park sits at the corner of First Street and Brown Street. The new public space features a canoe and kayak launch area designed to encourage water recreation and boost economic development in the downtown area. The property also includes a nature-play playground, a pavilion with storage space, a restroom facility, and paved parking. The park is one of the two main components of the $3.5 million Downtown Riverfront Revitalization Project. The other piece of the initiative is the Niles Public Square, located downtown at the former site of the Robbins Theater. The state of Ohio funded the entire revitalization development through the Appalachian Community Grant Program, which is managed by the Governor's Office of Appalachia and the Ohio Department of Development. Local leaders began planning the downtown transformation project in 2022. City officials stated that the main goals of the development are to increase downtown traffic, encourage small-scale events, and better connect the city to the local riverfront. The initiative fits into a larger regional plan by the Eastgate Regional Council of Governments to improve riverfront spaces in the Mahoning Valley following the removal of several river dams. Mayor Steve Mientkiewicz will lead the noon ceremony. He will be joined by Niles City Council members, city planner Bianca Rozenblad, and other local officials. Representatives from the state government, Eastgate Regional Council of Governments, MS Consultants, and Integra Excavating are also scheduled to attend. Construction on the park began in mid-2025. Organizers have invited all members of 
 
 --- Article 20 ---
-URL: https://theshelbyreport.com/2026/05/26/wegmans-sets-oct-14-as-grand-opening-for-first-charlotte-store/
-Title: Wegmans Sets Oct. 14 As Grand Opening For First Charlotte Store
+URL: https://www.charlotteobserver.com/news/business/article315829044.html
+Title: West Charlotte River District continues expansion mode with latest housing addition
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 21:11:22
+Published: 2026-05-28 09:12:00
 
-Share via: LinkedIn Facebook Twitter Wegmans will enter the Charlotte, North Carolina, market Oct. 14 when it opens a store at 11550 North Community House Road in the Ballantyne neighborhood. “We’ve put a lot of care into hiring and training our new team, and we’re looking for more enthusiastic candidates to join us before opening day,” said Patrick McGuinness, store manager. “Construction on the new store is well under way, and we’re thrilled to begin the countdown to Oct. 14 when we will welcome the community through our doors.” The Ballantyne store will employ about 450 people in full‑ and part‑time positions. The former are available throughout the store, including positions in sushi, pizza, restaurant foods, deli, cheese, seafood and bakery. Part‑time jobs, including cashiers, are also open. Those interested may apply online at jobs.wegmans.com/ballantyne or call 980‑467‑7333 for more information. Wegmans offers benefits to both full‑ and part‑time employees, including flexible scheduling, career development opportunities and tuition assistance through its employee scholarship program. The Ballantyne store will feature traditional Wegmans departments, including restaurant foods (sushi, pizza, chef‑made salads, sandwiches), a produce department with hundreds of fruits and vegetables, and a wide variety of seafood, meat, bakery, deli and cheese options. The store also will offer a large selection of wine and beer. Wegmans has been named one of the “100 Best Companies to Work For” by Fortune for 29 consecutive years, ranking fifth in 2026. The family‑owned chain operates 114 stores along the East Coast and celebrated its 100th anniversary in 2016. [ RELATED: Wegmans Releases 2025 Impact Report, Highlights $96.3M In Giving ] For More Wegmans News, View Our Wegmans News Page More Wegmans News Shelby Team The Shelby Report delivers complete grocery news and supermarket insights nationwide through the distribution of five monthly regional print and digital editions. S
+Townhome rentals are the next wave of housing options coming to West Charlotte’s River District . About 158 single-family attached units will be built on 31 acres at 8000 Dixie River Road in Charlotte’s new neighborhood, according to a land development construction plan permit filed with the city in mid-May. The units are part of Crescent Communities’ line of townhome rentals, Harmon, said a spokeswoman for the River District developer. The townhomes will have two-, three- and four-bedroom floorplans. The community will offer a clubhouse, pool and other amenities. The River District in West Charlotte is continuing to take shape. New townhome rentals are on the horizon. Here, a segment of the three-mile Forge Village Trail Loop, a walking and bicycle path, opened in May.                                                                                            Courtesy of Crescent Communities The townhomes will be market-rate rentals, which are below the monthly payment for homeownership, Crescent Communities said. It’s another way to bring people to the River District who may not be interested in homeownership or apartment living. The plans are still in the preliminary stages and a construction start date isn’t available. But the permit marks the continued growth of the $6 billion, 1,400-acre mixed-use redevelopment district from vacant land to a new neighborhood. About the Charlotte River District The River District is on the west side of the airport and Interstate 485 near the Catawba River. Development plans began in 2016 and since then it’s added houses, trolls, retail centers and people. May has been a busy month for the district. NOVEL River District , the 318-unit, seven-building multifamily development, held its grand opening this month. A segment of the three-mile Forge Village Trail Loop, a new walking and bicycle trail connecting Westrow and Basswood, also opened this month. And Charlotte City Council approved over $17.6 million in design and construction
+
+--- Article 21 ---
+URL: https://www.msn.com/en-us/lifestyle/lifestyle-buzz/nyc-s-socialist-mayor-outrages-mom-and-pop-bodegas-as-he-unveils-first-city-run-grocery-store/ar-AA23zav3?ocid=OLCONUA
+Title: NYC's socialist mayor outrages mom-and-pop bodegas as he unveils first city-run grocery store
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-28 09:11:45
+
+MSN
+
+--- Article 22 ---
+URL: https://www.delmarvanow.com/story/money/business-review/2026/05/28/salisbury-sets-7-brew-opening-date-welcomes-rar-loses-jimmy-johns/90282791007/
+Title: Salisbury's 7 Brew sets opening date, Jimmy John's closes, and more
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 09:08:00
+
+BUSINESS REVIEW Salisbury's 7 Brew sets opening date, Jimmy John's closes, and more Olivia Minzola Salisbury Daily Times May 28, 2026, 5:08 a.m. ET A new 7 Brew Drive-Thru Coffee location is set to open in Salisbury on June 8, 2026. RAR Brewing has opened a new location on South Salisbury Boulevard. The Jimmy John's sandwich shop in Sea Gull Square has permanently closed. There's big business news all around for the City of Salisbury, Maryland, this May, just weeks before the summer season hits the Eastern Shore. Here's a look at which brewery has opened, which coffee shop is coming soon and which popular sandwich shop has closed permanently. 7 Brew Drive-Thru Coffee Salisbury's first 7 Brew Drive-Thru Coffee location is gearing up for its grand opening on June 8, 2026. The fast-growing American chain, best known for its customizable menu of coffees, energy drinks and sodas, was founded in 2017 in Arkansas. 7 Brew's new spot will be located at 1503 South Salisbury Boulevard, replacing the former Atlantic Union Bank site. 7 Brew currently operates over 700 locations across the country, and said it,"cannot wait to officially open" its doors in Salisbury. RAR Brewing 1315 S. Salisbury Blvd . RAR Brewing's newest location, also referred to as Chessie's Campus, is now open for business at 1315 South Salisbury Blvd. The brewery was founded in 2013 by Chris Brohawn and J.T. Merryweather in Cambridge, Maryland. RAR Brewing has moved in to the space previously occupied by Voodoo Brewing Co., which closed less than a year after its grand opening. The shopping center also houses Rise Up Coffee, The Twist Indian Grill, Arlo Scarlett Salon and Crimson Coward. Jimmy John's 1306 S Salisbury Blvd., Ste. 168 The Salisbury location of popular sandwich and gourmet sub shop Jimmy John's has closed after signage was removed from the building, located at 1306 South Salisbury Boulevard, Ste. 168 in the Sea Gull Square shopping center. Fast-casual chain restaurant Jimmy John's was founded 
+
+--- Article 23 ---
+URL: https://www.starnewsonline.com/story/news/local/2026/05/28/7-eleven-opens-second-location-in-leland-nc/90277222007/
+Title: A rebrand gives Leland another 24-hour convenience store
+Status hint: Opening | Industry: Convenience Stores / Distributors
+Published: 2026-05-28 09:04:00
+
+LOCAL A rebrand gives Leland another 24-hour convenience store Savanna Tenenoff Wilmington StarNews May 28, 2026, 5:04 a.m. ET A former BP gas station in Leland has rebranded and reopened as the town's second 7-Eleven location. The new store is located at 1012 Grandiflora Drive and officially opened on May 14. Several other 7-Eleven stores are planned or under review for Brunswick and New Hanover counties. The town of Leland now has a second 7-Eleven after a gas station recently rebranded. Brunswick County's newest 7-Eleven convenience store is officially open with plans to hold a grand opening on June 5. The former BP station at 1012 Grandiflora Drive in Leland, across from the Shoppes at Westgate entrance , rebranded and reopened as a 7-Eleven on May 14, according to the 7-Eleven website. The new location is roughly a mile from the only operating Leland location off New Pointe Boulevard. The 24-hour convenience store chain is also looking to open another store in northern Brunswick along U.S. 74/76 , at 2075 Andrew Jackson Highway, near the Interstate 140 overpass and Navassa town limits. If approved and built, the location will accompany the only two currently operating 7-Eleven in the county and serve as northern Brunswick's third location. As of May 27, the proposal is under review by the county planning department. A pre-construction zoning permit has also been issued for plans to construct a 7-Eleven at 2128 Timber Oak Lane SE, Bolivia, near the Sunset Harbor community. What food and beverages are sold at 7-Eleven? The company is well-known for being the world's first convenience store and its Slurpee and Big Gulp drinks. Besides the regular convenience store snack selection of sodas and snacks, 7-Eleven offers hot foods, bakery items, beverages, hot coffee and fuel services. Some hot foods served at 7-Eleven stores include bone-in and boneless chicken wings, pizza, mini tacos, potato wedges and chicken nuggets. What other 7-Eleven stores are opening in the W
+
+--- Article 24 ---
+URL: https://www.newsherald.com/story/entertainment/dining/2026/05/28/national-coffee-chain-opens-a-location-in-panama-city-florida-7-brew/90278882007/
+Title: Fast growing coffee chain opens another Bay County store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 09:04:00
+
+DINING Fast growing coffee chain opens another Bay County store DeonTay Smith Panama City News Herald May 28, 2026, 5:04 a.m. ET PANAMA CITY — 7 Brew Coffee has announced the opening of a new location at 2105 Martin Luther King Jr. Blvd. The coffee stand was dropped on-site in Panama City in March. According to an email sent to the News Herald, at the ribbon cutting ceremony, 7 Brew Panama City presented a $6,800 check to Feeding the Gulf Coast to celebrate joining the community. The business officially opened on May 4.
+
+--- Article 25 ---
+URL: https://www.charlotteobserver.com/charlottefive/c5-food-drink/article315904945.html
+Title: Scoop: Steph and Ayesha Curry team up on 3 restaurants opening in uptown Charlotte
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 09:00:00
+
+Hometown power couple Stephen and Ayesha Curry and Michelin-starred restaurateur Michael Mina are teaming up to bring three new luxury dining options to uptown Charlotte late this year. Multi-phase renovations are under way at The Ritz-Carlton, Charlotte . By winter, the premium hotel will debut three experience-led concepts, according to a news release and interviews given exclusively to CharlotteFive ahead of Thursday’s announcement: Bourbon Steak , an award-winning steakhouse from Mina , who leads The MINA Group and served as a guest judge during Restaurant Wars on the Charlotte-filmed season of “Top Chef.” That restaurant was previously announced and is slated to open in late winter 2026. The Eighth Rule , an intimate, bourbon-forward cocktail lounge and social dining destination from four-time NBA champion and Olympian Stephen Curry. It’s also targeting a late winter opening. Sweet July Cafe , a lifestyle-forward café from founder Ayesha Curry , a two-time New York Times bestselling cookbook author regularly seen on Food Network . Sweet July is moving toward a July opening. The collaboration marks a homecoming for the Currys — who met while growing up in Charlotte and visit regularly — and solidifies their ties with the The MINA Group , which operates the original location of The Eighth Rule in San Francisco and pairs with Sweet July at the Regent Santa Monica Beach . “The partnerships that we’re entering into with Michael Mina and Ayesha and Steph Curry are not just exciting for The Ritz-Carlton, Charlotte — I think they are super exciting for Charlotte as a whole,” general manager Karen Ayad told CharlotteFive. “They are going to bring some incredible culinary and beverage creativity, energy and experiences that will lend themselves to that growing scene in Charlotte,” she added. That evolution is exactly what helped solidify this partnership in Charlotte, Mina told CharlotteFive, noting that Bourbon Steak is selective about opening new locations. ”You can se
+
+--- Article 26 ---
+URL: https://www.msn.com/en-us/money/companies/sudbury-eatery-closing-as-vegetarian-chain-shuts-down/ar-AA24cIOX?gemSnapshotKey=GM45997B84-snapshot-40&ocid=snydhp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Sudbury eatery closing as vegetarian chain shuts down
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 08:41:51
+
+MSN
+
+--- Article 27 ---
+URL: https://www.msn.com/en-us/money/companies/chipotle-competitor-pulls-out-of-us-after-closing-locations/ss-AA242scX?ocid=finance-verthp-feeds
+Title: Chipotle competitor pulls out of US after closing locations
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 08:41:20
+
+MSN
+
+--- Article 28 ---
+URL: https://www.travelandtourworld.com/news/article/p30yc3iselt8/
+Title: Norwegian Cruise Line Announces September 2026 Opening of Great Tides Waterpark in the Bahamas
+Status hint: Opening | Industry: Cruise Lines
+Published: 2026-05-28 08:32:11
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/p30yc3iselt8/]
+
+--- Article 29 ---
+URL: https://www.connectcre.ca/stories/new-food-world-plus-grocery-store-coming-to-mississauga/
+Title: New Food World Plus Grocery Store Coming to Mississauga
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-28 08:32:03
+
+Canada CRE News In Your Inbox. Sign up for Connect emails to stay informed with CRE stories that are 150 words or less. Ontario + Retail | May 27, 2026 By: Monte Stewart New Food World Plus Grocery Store Coming to Mississauga A new 176,339-square-foot Food West Plus multicultural grocery and retail destination is preparing to open in Mississauga, Ont. The development site is located at 50 Matheson Blvd. E. The project’s developer JDas says the outlet will transforn one of the Greater Toronto Area’s largest retail spaces into what its developer JDass describes as a first-of-its-kind shopping experience. The upcoming new store will occupy an approximately 13.9-acre site at the corner of Hurontario Street and Matheson Boulevard and is being positioned as one of the largest multicultural grocery stores in the GTA. The store will feature groceries and products representing communities from across Canada and around the world, including Caribbean, Eastern European, Middle Eastern, South Asian and East Asian cultures. Plans also include halal and kosher butcher counters, an expanded organic produce offering, fresh seafood, meat and deli departments, wholesale and catering operations, and a variety of prepared food concepts. Additional features will include fresh juice and sushi bars, a dessert parlour, a live food section, a café, a fresh flower boutique, an outdoor patio and what the company says will be a candy aisle spanning 1,000 feet. “Food World Plus is a global experience built for every culture, every family, and every community that calls Mississauga home,” said Preet Dass, the retailer’s CEO. “We set out to build a destination where people feel seen, represented, and at home, where the ingredients you grew up with are finally within reach. This is the result of years of listening to this community, and we cannot wait for Mississauga to make it its own.” The property will front four streets, include approximately 1,100 parking spaces and will be about a 15-minute w
+
+--- Article 30 ---
+URL: https://www.taiwannews.com.tw/en/news/6371727
+Title: Taiwan Legislative Yuan aims to choose new site by early 2028
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 08:21:00
+
+Taiwan lawmakers to review dementia care bills this week May. 26, 2026 11:50
+
+--- Article 31 ---
+URL: https://www.northjersey.com/story/news/bergen/teaneck/2026/05/28/rumba-cubana-restaurant-opening-new-teaneck-nj-location/90275132007/
+Title: Popular Cuban restaurant to open second location in Bergen County
+Status hint: Opening | Industry: Restaurants
+Published: 2026-05-28 08:06:00
+
+TEANECK Popular Cuban restaurant to open second location in Bergen County Amanda Wallace NorthJersey.com Updated May 28, 2026, 8:31 a.m. ET Rumba Cubana, a popular New Jersey-based chain, will soon be operating a second Bergen County location when it opens its doors in Teaneck this summer. As detailed on its website, Rumba Cubana is "a celebration of Cuban culture, flavor, and hospitality." Founded in 2009 by Alan and Nairelys Lopez, the chain currently operates six locations around North Jersey including in Guttenberg, Clifton, Jersey City, Rochelle Park, North Bergen, and Haledon.
+
+--- Article 32 ---
+URL: https://www.the-sun.com/money/16420504/jcpenney-pittsburgh-pennsylvania-store-closing-mall/
+Title: Shoppers say bye forever to JCPenney as anchor store to close after nearly 40yrs
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 08:01:55
+
+Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Comment now SHOPPERS have been left stunned after JCPenney confirmed another long-running store will shut its doors for good. The department store giant is pulling the plug on one of its mall anchor locations after nearly four decades, sparking fears over the future of yet another retail hotspot. Sign up for the Money newsletter Thank you! JCPenney is closing a long-running store at Ross Park Mall after nearly four decades (stock) Credit: Getty The closure is due to an inability to continue current lease terms and find a new location Credit: Getty Advertisement The retailer confirmed its store at Ross Park Mall, in Pittsburgh, will officially close on September 20. A spokesperson said: “Regretfully, we are unable to continue our current lease terms for this store location and have been unable to find another suitable location in the market.” The branch, located in Ross Township in Allegheny County, PA, has been a fixture at the shopping center for years and was one of the mall’s major anchor stores. JCPenney also thanked staff and loyal customers in a wider statement shared with local outlets. Read more on JCPenney UN-LUCKY PENNY Say goodbye forever to JCPenney as ‘dead mall’ store to permanently close PENNY SPENT Liquidation sales reach 90% as JCPenney store confirms May 24 closure “We are grateful to our dedicated associates and the loyal customers who have shopped at this Pittsburgh, Pa., location through the years, and we hope to continue serving them throughout our nearly 650 stores nationwide and at jcpenney.com,” the spokesperson added. Many shoppers said the store had been struggling for years after downsizing to a single floor back in 2019. One former shopper wrote on Reddit: “After shutting down the upper floor, I’m surprised they lasted that long. Sadly, JC Penny became a shell of its former self. “I remember going there every year for back to school shopping, and even Bla
+
+--- Article 33 ---
+URL: https://www.breakingtravelnews.com/news/article/norwegian-cruise-line-reveals-grand-opening-date-for-great-tides-waterpark/
+Title: NORWEGIAN CRUISE LINE® REVEALS GRAND OPENING DATE FOR GREAT TIDES WATERPARK
+Status hint: Opening | Industry: Cruise Lines
+Published: 2026-05-28 07:52:55
+
+Norwegian Cruise Line® (NCL), the innovator in global cruise travel, today announced that the highly anticipated Great Tides Waterpark at Great Stirrup Cay, the Company’s private island in the Bahamas, will take place on Sept. 4, 2026, during Norwegian Luna’s seven-day Caribbean sailing. Beginning today, all guests sailing to Great Stirrup Cay on or after Sept. 4, 2026 can purchase day passes* to Great Tides Waterpark and personalize their ideal island day with seamless, advance booking. Elevating the experience even further, guests can reserve private cabanas for up to six guests, which includes admission into the waterpark and offers shaded comfort just steps from the park’s signature Tidal Tower featuring jaw-dropping slides—perfect for relaxing between thrills. Additionally, the waterpark experience extends beyond the 19 exhilarating slides with three all-new food trucks serving a dynamic lineup of dining. “Great Stirrup Cay continues to evolve as the premier private island destination in the Bahamas, and we’re excited to officially open Great Tides Waterpark on Sept. 4, 2026,” said Marc Kazlauskas, president of Norwegian Cruise Line. “With the best activities for families and for every type of traveler—from high-energy slides to laid-back lagoon experiences—guests can purchase their day passes ahead and lock in an unforgettable day on the most spectacular private island in the Caribbean beginning tomorrow.” Spanning nearly six acres, Great Tides Waterpark will deliver a bold, family-friendly adventure across immersive attractions for all ages. At its center will stand the 170-foot Tidal Tower, featuring the Breakwater Blasters—industry-first water coasters with downhill drops and uphill blasts within an inner tube—alongside the Whitewater Dash with two body slides; Rapid Mat Racers featuring two mat slides; and a selection of tube slides, Tropic Storm and Tropic Spiral, with spirals and spins for an adrenaline rush. Additional highlights will include Cliffside 
+
+--- Article 34 ---
+URL: https://www.msn.com/en-us/money/companies/after-bankruptcy-clover-labs-vegetarian-dining-chain-closes-all-locations/ar-AA24diBb?gemSnapshotKey=GM45997B84-snapshot-40&ocid=backredirect2VLP&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: After bankruptcy, Clover Labs vegetarian dining chain closes all locations
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 07:44:22
+
+MSN
+
+--- Article 35 ---
+URL: https://www.msn.com/en-ph/foodanddrink/foodnews/this-once-popular-italian-chain-restaurant-is-down-to-just-9-locations-nationwide/ar-AA22W34c?ocid=Peregrine&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: This once-popular Italian chain restaurant is down to just 9 locations nationwide
+Status hint: Closing | Industry: Restaurants
+Published: 2026-05-28 07:01:12
+
+MSN
+
+--- Article 36 ---
+URL: https://www.andnowuknow.com/shop-talk/tt-supermarket-open-san-jose-thursday-june-18-tina-lee-comments/anuk-staff/104784
+Title: T&T Supermarket to Open in San Jose on Thursday, June 18; Tina Lee Comments
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-28 06:50:38
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.andnowuknow.com/shop-talk/tt-supermarket-open-san-jose-thursday-june-18-tina-lee-comments/anuk-staff/104784]
+
+--- Article 37 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/kosher-supermarket-closing-3-years-after-opening-in-bergen-county/ar-AA24cBST
+Title: Kosher supermarket closing 3 years after opening in Bergen County
+Status hint: Closing | Industry: Grocery
+Published: 2026-05-28 06:32:45
+
+MSN
+
+--- Article 38 ---
+URL: https://www.msn.com/en-us/travel/news/capital-one-dinner-parties-expanding-to-hard-to-book-restaurants-in-the-michelin-guide/ar-AA24dxaG
+Title: Capital One dinner parties expanding to hard-to-book restaurants in the Michelin Guide
+Status hint: Opening | Industry: Restaurants
+Published: 2026-05-28 06:32:44
+
+MSN
+
+--- Article 39 ---
+URL: https://www.westernadvocate.com.au/story/9255543/bathursts-third-kfc-opens-its-doors-along-mitchell-highway/
+Title: New store, new menu items: Bathurst's third KFC opens doors at Robin Hill
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-28 06:04:37
+
+FREE Zinger burgers, Pepsi Max, cake and merchandise all marked the opening of Bathurst's third KFC location, which officially welcomed its first customers on Thursday, May 28.
+
+--- Article 40 ---
+URL: https://whatnow.com/houston/retail/johnston-and-murphy-is-opening-its-third-greater-houston-region-store/
+Title: Johnston and Murphy is Opening Its Third Greater Houston Region Store
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 06:01:44
+
+Johnston and Murphy is expected to open in the First Colony Mall.  (Image credit: Johnston and Murphy Facebook) SHARE Johnston & Murphy is embarking on opening another retail and factory outlet in the Greater Houston region. According to a recently filed permit , the new footwear store is expected to open in the First Colony Mall at 16535 Southwest Fwy, Space 360 . The permit further details that construction on the new Johnston and Murphy is slated to start next month and wrap up by the end of July . If all goes well with permitting and the estimated $583,000 construction project, the new Johnston and Murphy storefront should be open before the end of summer . The 2,000 square-foot space is getting a host of renovations, including a full electrical remodel of the existing tenant space within the enclosed mall. The brand’s products are currently being sold at the Dillard’s department store inside the mall. Though this is only the third location in the Greater Houston area, Johnston and Murphy comes with a long history. The brand was founded by William J. Dudley in Newark, New Jersey, in 1850. Famous as “Shoemaker to the Presidents,” the brand has crafted custom footwear for every U.S. president starting with Millard Fillmore. Today, as part of Genesco , it operates from Nashville, Tennessee. What Now Houston reached out to Genesco’s Vice President of Store Planning and Construction, Clayton Graves , to find out more details about the upcoming addition to the First Colony Mall. Graves was also listed as the tenant on the permit. Unfortunately, we did not hear back from Graves by the time of this publication. The brand operates more than 170 retail Johnston and Murphy stores across the United States, with products also sold in over 3,000 specialty and department stores globally. There are 6 standalone retail and factory outlet locations in Texas, two of which are in Houston. Johnston and Murphy is best known for classic, high-quality men’s footwear , including dress s
+
+--- Article 41 ---
+URL: https://www.andnowuknow.com/quick-dish/bjs-wholesale-club-accelerates-growth-new-locations-kentucky-florida-and/anuk-staff/104785
+Title: BJ’s Wholesale Club Accelerates Growth with New Locations in Kentucky, Florida and Indiana; Bill Werner Comments
+Status hint: Opening | Industry: Grocery Wholesale
+Published: 2026-05-28 05:54:31
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.andnowuknow.com/quick-dish/bjs-wholesale-club-accelerates-growth-new-locations-kentucky-florida-and/anuk-staff/104785]
+
+--- Article 42 ---
+URL: https://www.msn.com/en-us/money/companies/six-states-are-getting-new-locations-of-this-popular-convenience-store/ar-AA23TFVe?gemSnapshotKey=GM67E91CF8-snapshot-3&uxmode=ruby&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Six states are getting new locations of this popular convenience store
+Status hint: Opening | Industry: Convenience Stores / Distributors
+Published: 2026-05-28 05:25:58
+
+MSN
+
+--- Article 43 ---
+URL: https://www.essexlive.news/news/essex-news/update-aldi-reveals-new-supermarket-10985569
+Title: Update as Aldi reveals when new supermarket set to open near A127
+Status hint: Opening | Industry: Grocery
+Published: 2026-05-28 05:13:35
+
+Update as Aldi reveals when new supermarket set to open near A127 Residents and shoppers have welcomed the new store which is expected to create about 40 new jobs News Matthew Critchell Local democracy reporter 06:00, 28 May 2026 View Image Plans for Aldi in Rayleigh (Image: Aldi/The Harris Partnership/Vector DC) Aldi has shared an update as they revealed the exact date a new supermarket is set to open in Essex. The supermarket giant is taking over two empty units at the Weir Retail Park, in Stadium Way, Rayleigh, just off the A127, next to the Smyths Toys Superstore. ‌ It comes after the chain got planning permission for changes to the former shops. The former shop sites were used by Carpet Right and Argos. Residents and shoppers have welcomed the new store, expected to open in September with 40 new jobs. ‌ Leanne Wright, 34, said: “I love Aldi and it’s just what we need here. I am sure it will be so busy and popular. We don't have one very close by so it’s a good addition. This part of the retail park does need work and some upgrades. ‌ "It is also shows confidence in the area and is good for jobs and the economy too. I also think it helps the other big supermarket names to keep their prices lower, it will be a good competitor to Sainsbury’s.” Last August, plans were submitted on behalf of the supermarket chain for changes to the building and site, including a new mezzanine floor, trolley bays, and changes to the car park. Article continues below An Aldi spokesperson said: “Construction for our new Rayleigh store is progressing well as we move towards opening in September this year. This will create up to 40 jobs for the community and enable local people to shop and save closer to home.”
+
+--- Article 44 ---
+URL: https://e.vnexpress.net/news/business/companies/french-luxury-department-store-galeries-lafayette-shutters-beijing-flagship-branch-after-13-years-5078918.html
+Title: French luxury department store Galeries Lafayette shutters Beijing flagship branch after 13 years
+Status hint: Closing | Industry: Department Stores
+Published: 2026-05-28 04:54:07
+
+French luxury department store Galeries Lafayette shutters Beijing flagship branch after 13 years - VnExpress International The most read Vietnamese newspaper Follow us on Edition: International | Vietnamese Home News Politics Education Environment Traffic Crime Brainteaser Business DataSpeaks Property Billionaires Markets Companies Economy Money Quiz Tech Tech news Enterprises Personalities Vietnam innovation Challenge hub Travel Places Food Guide Visa Puzzle Life Trend Arts Celebrities Vogue Love Wellness Sports Football Boxing Marathon Tennis Golf Other sports Trivia World Perspectives Readers' Views VnE-GO Premium Contact Us © Copyright 1997 VnExpress.net. All rights reserved. Business DataSpeaks Property Billionaires Companies Markets Economy Money Quiz Copy link Most Read 1. Vingroup, controlled by Southeast Asia’s richest man Pham Nhat Vuong, hires Youtuber as CEO of film studio 2. Southeast Asia's second largest economy welcomes over 13 million tourists in 5 months 3. Neymar arrives at Brazil national team training camp via $13M 'Batmobile' helicopter 4. Meet the Tulane math department chair who joins Fields Medalist Ngo Bao Chau to mentor Vietnam's PhDs 5. Vietnam's 6-day heatwave breaks multiple May temperature records as Hanoi hits 41.1 C 6. 12yo Vietnamese-American graduates top of US college class with perfect GPA 7. For first time in recorded history, China has more people over 65 than children 8. Vietnam's former health minister gets 6-year prison term for causing state loss 9. Which is Southeast Asia's happiest city? 10. World's 8th richest billionaire Jensen Huang offers to pay for everyone to be first in line at Taiwan food stall French luxury department store Galeries Lafayette shutters Beijing flagship branch after 13 years By AFP &nbspMay 27, 2026 | 08:54 pm PT Get VnExpress first in Google Search See more of the news you trust. Make VnExpress a preferred source to prioritise our updates in your Google search results French luxury department sto
+
+--- Article 45 ---
+URL: https://www.aol.com/articles/independent-bookstore-overland-park-closing-182858000.html
+Title: Independent bookstore in Overland Park closing. ‘Moody’ shop will replace it
+Status hint: Opening | Industry: Books / Toys / Gaming
+Published: 2026-05-28 04:37:29
+
+Noelle Alviz-Gransee Wed, May 27, 2026 at 6:28 PM UTC 0 Work continued on the Overland Park Farmers Market pavilion and the Clock Tower Landing, a $34 million project underway in downtown Overland Park in April. Ink and Page is nearby, but will soon close. (Tammy Ljungblad/tljungblad@kcstar.com) A downtown Overland Park independent bookstore is closing next month after five years in business. Ink and Page Book Boutique, a new and used bookstore at 7942 Santa Fe Drive, will be closing so owner Erin Olivia can spend more time with her family, she said in a February post in which she announced she would not renew her lease. “I love so much about this shop. I’m proud of what I’ve built and of this growing community. The timing is incredibly bittersweet with the new farmer’s market pavilion almost finished,” Olivia said. “ We have made it through 18 months of construction and there are so many great things right around the corner. That makes this decision really hard.” Readers won’t be left without an independent bookstore, though. In a post Wednesday, Olivia announced that another woman-owned independent book store is slated to take over the space. The new store, The Inked Page, has a similar name but a totally different personality. “Our vibe? Color-drenched yet cozy, eccentric yet warm. A little mysterious. A little sexy. A little playful. Practical Magic meets Midwest emo,” said The Inked Page in an Instagram post. Advertisement Hours at Ink and Page Book Boutique will be unusual for the next few weeks, according to Olivia’s post. Customers with loyalty points, store credit or gift cards are asked to use them by June 13. After that, Olivia will assess inventory for liquidation sale plans. The shop will still accept popular used fiction titles in excellent condition through May, but is no longer taking kids’ books or nonfiction, according to the post. The Inked Page, which has a tentative opening for late July, said it will be a place for the weirdos, emos, witchy and
+
+--- Article 46 ---
+URL: https://www.kidderminstershuttle.co.uk/news/26143143.new-jollyes-pets-superstore-open-kidderminster-branch/
+Title: Brand-new pet store set to open on retail park this week
+Status hint: Opening | Industry: Pet Care
+Published: 2026-05-28 04:27:00
+
+New Jollyes Pets Superstore to open Kidderminster branch Business Kidderminster By 
+            Lauren Chaloner Senior reporter Share 0 Comments Jollyes Pets is opening its new store on Crossley Retail Park (Image: Jollyes Pets) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. A brand-new pet store is set to open its doors this week. Residents are being reminded that the new Jollyes Pets Superstore will be opening on Crossley Retail Park on Friday (May 29). There will be fun, games and some special guests. In a post on social media, Jollyes Pets Superstore said: "Calling all Kidderminster pet parents. Your new Jollyes Pets Superstore opens this Friday (May 29). "Join us for our paw-some opening day, with fun & games plus some fur-bulous special guests. Get your paws on some tail-wagging prizes too. "We can't wait to see furry and human faces. When are you having a sniff around?" According to Jollyes, the new Kidderminster store will have a full range of raw frozen pet food, which is 'very popular with owners', and customers will also be able to click and collect or make use of Jollyes' exclusive ‘Zoomies’ partnership with Uber Eats to get essentials delivered to their door. Jollyes Pets property director, Warren Bester said: "We’re on a mission to make high-quality pet care accessible to all, investing in range development alongside our commitment to low prices, as we deliver great value every day." The new Jollyes Pets store will be its 122nd location with the opening set to take place at 10am on Friday (May 29). The Mayor of Kidderminster, Councillor Shazu Miah, will officially be cutting the ribbon. There will be music and the opportunity to win a prize and pick up a goody bag. The new store has created eight roles and will be run by manager Adam Kerr. The celebrations will continue into th
+
+--- Article 47 ---
+URL: https://www.aol.com/articles/department-store-candy-counter-probably-150000000.html
+Title: The Department Store Candy Counter You Probably Forgot About
+Status hint: Opening | Industry: Department Stores
+Published: 2026-05-28 04:23:02
+
+Holly Tishfield Sun, May 24, 2026 at 3:00 PM UTC 0 A close-up on someone scooping candy from buckets into a red and white striped bag - Pixinoo/Getty Images Department stores today may be synonymous with overpriced merchandise and empty, winding aisles, but back in their prime, you could buy just about anything. Fancy dresses for your cousin's wedding, bed sheets for the guest room, and a brand new six-piece set of pots and pans for your neighbor? Yep, available all at one store. Other than selling mail-order homes and elegant dinnerware, people tend to forget that Sears also had a pretty popular candy counter. Long before any Sears locations had a department store restaurant , the retailer had a famous candy counter that used to sell bulk confections by weight. That counter was perhaps every child's favorite excuse to join their parents on a trip to the gigantic department store. "Every time we went to Sears, first stop [was] the candy counter," said one reminiscent user on Facebook . Another Reddit user said they remember that their "dad would ALWAYS get [them] those chocolate stars with the white sprinkles at the Sears candy counter," lamenting on the good ol' days. Read more: 15 Old-School Diner Foods That You Don't See On Menus Anymore Advertisement Sears' candy counter was the talk of the town Two people behind the counter of a vintage Sears candy counter - Vintage Recipes/Facebook The candy counters at Sears were situated in different departments, depending on the store, but all were arranged as glass counters with a wide variety of candies and a friendly cashier ready to measure any number of confections. Customers remember buying Swedish Fish, chocolates, peanut candies, licorice, hard candies, and soft candies, too. Sears was also well-known for selling warm nuts and popcorn beside the candy counter — a fitting arrangement, considering that popcorn was sometimes eaten as a breakfast cereal way back in the day. Sears often advertised the sweet treats at its
+
+--- Article 48 ---
+URL: https://www.aol.com/articles/shakes-smiles-king-inside-owl-224614000.html
+Title: Shakes, Smiles & The King: Inside Owl Drug Store in Coleman
+Status hint: Opening | Industry: Drug Retailers
+Published: 2026-05-28 04:13:25
+
+Heather Easley Wed, May 27, 2026 at 10:46 PM UTC 0 Shakes, Smiles & The King: Inside Owl Drug Store in Coleman COLEMAN, Texas ( KTAB/KRBC ) – Tucked along Commercial Avenue in downtown Coleman sits a place where the burgers are stacked high, the soda fountain still flows, and every customer feels like family. For this week’s episode of Bite of West Texas , Heather Easley visited Owl Drug Store, a longtime Coleman staple that has been serving the community since 1923. The historic drugstore and soda fountain is considered one of the oldest continuously operating soda fountains in Texas. A San Angelo Classic: The Legacy of The Original Henry’s Owned by Cathy Allen and her family, Owl Drug is more than just a pharmacy. Inside, customers will find a bustling grill, an old-fashioned soda fountain, a gift shop filled with Texas treasures, and walls lined with decades’ worth of memories donated by community members. From antique decor and vintage memorabilia to Elvis photos, nearly every corner of the store tells a story. Allen explained that many of the items displayed throughout the restaurant were given by longtime customers who wanted to leave a piece of themselves behind. The restaurant’s nostalgic atmosphere keeps both locals and travelers coming through the doors. Employee Michelle, who has worked at Owl Drug for nearly 30 years, said she’s watched generations of families return time and time again. “It’s the people,” Michelle said. “I get to know them, and I see them every time they come through.” Of course, no visit to Owl Drug would be complete without the food. Advertisement During the episode, Easley sampled the restaurant’s famous “Piggy Burger” – a towering burger topped with ham and bacon – along with hand-spun fountain drinks and a classic Coke float. Other customer favorites include the Owl Burger and the “Owlvis Burger,” named after Elvis Presley, who reportedly visited the store in 1955. Allen shared that the heart of Owl Drug has always been creating a 
+
+--- Article 49 ---
+URL: https://hypebeast.com/2026/5/tokyu-hands-shibuya-store-closing-after-48-years-news
+Title: Beloved DIY Store Tokyu Hands To Close Its Iconic Shibuya Location After 48 Years
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-28 04:02:45
+
+Tokyu Hands Fashion 13 Hrs ago 396 Views 0 Comments Comments Save Summary Hands, the beloved Japanese DIY and lifestyle retailer originally known as Tokyu Hands, will permanently close its flagship Shibuya location in November 2026 The iconic store has been a fixture in the bustling district for 48 years, having first opened its doors in September 1978 at the height of Japan’s DIY boom The company cited the expiration of the property’s lease as the primary reason for the upcoming closure For nearly half a century, it has been the ultimate destination for craft supplies, stationary, and the sheer joy of getting lost. However, the retail landscape in Tokyo is shifting once again. Hands—the popular DIY and lifestyle store originally known as Tokyu Hands —has officially announced that it will be permanently closing its iconic Shibuya location in November. The departure brings a close to an incredible 48-year run, serving as a nostalgic blow to locals and tourists who have frequented the quirky, multi-level building for decades. The Shibuya location first opened its doors in September 1978, just two years after the company was founded. At the time, Japan was experiencing a massive boom in do-it-yourself hobbies, largely influenced by a growing desire for simple, creative living. While the retailer was acquired by home improvement giant Cainz in 2022 and rebranded simply as “Hands,” the Shibuya outpost maintained its deeply unique, encyclopedic charm. For first-time visitors, navigating the Shibuya store was famously a chaotic rite of passage. Rather than standard floors, the building was designed with a baffling array of lettered sections, specific staircases, and half-mezzanine levels. Instead of viewing this as a flaw, the company embraced it. In their official media release announcing the closure, Hands described the confusing layout as a deliberate symbol of the “joy of getting lost” while shopping—a sentiment that perfectly captured the store’s adventurous spirit. W
+
+--- Article 50 ---
+URL: https://www.stratford-herald.com/news/plans-to-open-ivy-restaurant-in-stratford-include-carving-up-9467729/
+Title: Plans to open Ivy restaurant in Stratford include carving up Debenhams into five units
+Status hint: Opening | Industry: Restaurants
+Published: 2026-05-28 04:00:15
+
+Plans to open Ivy restaurant in Stratford include carving up Debenhams into five units By Stratford News Editor - news@stratford-herald.com Published: 05:00, 28 May 2026 | Updated: 07:16, 28 May 2026 Work to convert the former Debenhams store in Stratford into an Ivy restaurant will also see the rest of the building turned into smaller units. The Ivy revealed in February that it was pushing ahead with plans to open in Stratford despite being part of the 148-bed Hilton hotel scheme which collapsed in July last year. The Ivy will occupy part of three floors - the rest of the building will be made into smaller units. Work on the interior of the building is already under way but the latest plans submitted to Stratford District Council reveal a wider refurbishment scheme of the building, which has been closed since April 2020. According to the planning documents prepared on behalf of the owners of Bell Court, Blue Coast Stratford LLP, the Ivy would occupy around 916 square metres over three floors. The ground, facing the High Street and Taskers Way, and first floors would contain dining areas and back-of-house facilities, while the second floor would house plant equipment. The wider Debenhams building would be divided up – the section facing Wood Street will be a standalone commercial unit with residential accommodation above. A small section of the building – a ground-floor extension on Taskers Way – will also be demolished. The remainder of the building would be converted into three units – two on the ground floor with entrances on Taskers Way and the third on the first floor with a small entrance on Taskers Way leading to stairs to the first floor. Proposed works include new shopfronts, fascias and entrances along High Street and Taskers Way, as well as upgrades to lighting and public areas. Existing upper floors would see lighter-touch refurbishment work, including repairs and redecoration. According to the documents, the flexible unit sizes have been designed to acc
