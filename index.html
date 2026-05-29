@@ -531,7 +531,7 @@
                 <div id="histTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
                     <table class="w-full text-sm text-left data-table">
                         <thead><tr>
-                            <th class="px-3 py-3 w-10 text-center">âœ“</th>
+                            <th class="px-3 py-3 w-10 text-center">✓</th>
                             <th class="px-3 py-3 w-10 text-center">#</th>
                             <th class="px-4 py-3 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="toggleHistSort()">
                                 Date <i id="histSortIcon" class="fas fa-sort-down text-indigo-400 ml-1"></i>
@@ -1233,7 +1233,7 @@
                 </select>
                 <select id="companyWebNewFilter" onchange="filterCompanyWebRows()" class="input-field px-4 py-3 text-sm">
                     <option value="all">All Entries</option>
-                    <option value="new">New Only âœ¨</option>
+                    <option value="new">New Only ✨</option>
                     <option value="existing">Existing Only</option>
                 </select>
                 <button onclick="downloadCompanyWebCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
@@ -2974,7 +2974,7 @@
                 <tr class="warn-new-section-row">
                     <td colspan="9">
                         <span style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:800;color:#f59e0b;letter-spacing:0.08em;">
-                            <span style="font-size:1rem;">âœ¦</span>
+                            <span style="font-size:1rem;">✦</span>
                             NEW THIS RUN — ${newCount} NOTICE${newCount !== 1 ? 'S' : ''}
                             <span style="font-size:0.65rem;color:#9ca3af;font-weight:500;font-style:italic;">(today &amp; yesterday)</span>
                         </span>
@@ -2987,7 +2987,7 @@
                 <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
                 <td class="px-3 py-3 max-w-[180px]">
                     <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.company||'')}">
-                        ${isNew ? `<span class="warn-new-badge mr-1">âœ¦ NEW</span>` : ''}${highlight(r.company||'—', term)}
+                        ${isNew ? `<span class="warn-new-badge mr-1">✦ NEW</span>` : ''}${highlight(r.company||'—', term)}
                     </span>
                 </td>
                 <td class="px-3 py-3 text-gray-400 text-xs">${highlight(r.city||'—', term)}</td>
@@ -3167,7 +3167,7 @@
                    </a>`
                 : `<span class="text-gray-600 text-xs">—</span>`;
             const statusCell = isNew
-                ? `<span class="px-2 py-0.5 rounded-full text-xs font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/40 whitespace-nowrap">âœ¨ NEW</span>`
+                ? `<span class="px-2 py-0.5 rounded-full text-xs font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/40 whitespace-nowrap">✨ NEW</span>`
                 : `<span class="text-gray-600 text-xs">—</span>`;
             return divider + `
             <tr style="${rowBg}" class="border-t border-white/5 transition-colors ${isNew ? 'border-l-2 border-l-yellow-500/40' : ''}">
@@ -3277,17 +3277,17 @@
             if (p > 75) {
                 borderColor = 'border-green-500/40'; bgGlow = 'bg-green-500/5';
                 barColor = 'bg-green-500'; textColor = 'text-green-400';
-                badgeHtml = '<span class="text-xs px-2 py-0.5 rounded-full bg-green-500/15 border border-green-500/30 text-green-300 font-medium">ðŸ”¥ Top Performer</span>';
+                badgeHtml = '<span class="text-xs px-2 py-0.5 rounded-full bg-green-500/15 border border-green-500/30 text-green-300 font-medium">🔥 Top Performer</span>';
                 message = HIGH[seed];
             } else if (p > 50) {
                 borderColor = 'border-yellow-500/40'; bgGlow = 'bg-yellow-500/5';
                 barColor = 'bg-yellow-500'; textColor = 'text-yellow-400';
-                badgeHtml = '<span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/15 border border-yellow-500/30 text-yellow-300 font-medium">ðŸ’ª Making Progress</span>';
+                badgeHtml = '<span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/15 border border-yellow-500/30 text-yellow-300 font-medium">💪 Making Progress</span>';
                 message = MID[seed];
             } else {
                 borderColor = 'border-orange-500/40'; bgGlow = 'bg-orange-500/5';
                 barColor = 'bg-orange-500'; textColor = 'text-orange-400';
-                badgeHtml = '<span class="text-xs px-2 py-0.5 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-300 font-medium">âš¡ Needs Boost</span>';
+                badgeHtml = '<span class="text-xs px-2 py-0.5 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-300 font-medium">⚡ Needs Boost</span>';
                 message = LOW[seed];
             }
 
@@ -3724,7 +3724,7 @@
     card.id = '_groqSetup';
     card.style.cssText = 'background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.35);border-radius:12px;padding:14px;margin:4px 0;';
     card.innerHTML =
-      '<div style="color:#e2e8f0;font-weight:600;font-size:13px;margin-bottom:6px;">ðŸ”‘ One-time setup</div>' +
+      '<div style="color:#e2e8f0;font-weight:600;font-size:13px;margin-bottom:6px;">🔑 One-time setup</div>' +
       '<div style="color:#94a3b8;font-size:12px;margin-bottom:10px;">Enter your free Groq API key.<br>' +
       'Get one at <strong style="color:#a5b4fc">console.groq.com</strong> â†’ API Keys â†’ Create API Key</div>' +
       '<input id="_groqKeyInput" type="password" placeholder="gsk_..." style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:8px 10px;color:#e2e8f0;font-size:13px;outline:none;margin-bottom:8px;">' +
@@ -3740,7 +3740,7 @@
     if (!key) { input.style.borderColor = '#f87171'; return; }
     saveGroqKey(key);
     document.getElementById('_groqSetup').remove();
-    appendBubble('model', 'âœ“ Key saved. Ask me anything about your retail news data!', null);
+    appendBubble('model', '✓ Key saved. Ask me anything about your retail news data!', null);
   };
 
   // â”€â”€ State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
