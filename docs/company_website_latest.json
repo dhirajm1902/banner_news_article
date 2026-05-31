@@ -1,5 +1,5 @@
 {
-  "last_updated": "May 28, 2026 14:59 UTC",
+  "last_updated": "May 31, 2026 10:29 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -207,6 +207,12 @@
     },
     {
       "company": "Burlington",
+      "address": "Oregon",
+      "opening_date": "",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
       "address": "Pennsylvania",
       "opening_date": "",
       "link": ""
@@ -214,6 +220,12 @@
     {
       "company": "Burlington",
       "address": "Tennessee",
+      "opening_date": "",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "Texas",
       "opening_date": "",
       "link": ""
     },
@@ -267,27 +279,9 @@
     },
     {
       "company": "Five Below",
-      "address": "251 N Broadway, Pennsville, NJ, 08070",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/nj/pennsville/251-n-broadway/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "2500 S Center Street, Marshalltown, IA, 50158",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ia/marshalltown/2500-s-center-street/coming-soon"
-    },
-    {
-      "company": "Five Below",
       "address": "2204 E Hillside Dr, Broken Arrow, OK, 74012",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/ok/broken-arrow/2204-e-hillside-dr/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "1649 N Expwy, Griffin, GA, 30223",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ga/griffin/1649-n-expwy/coming-soon"
     },
     {
       "company": "Five Below",
@@ -303,15 +297,45 @@
     },
     {
       "company": "Five Below",
-      "address": "14 Litchfield Plz, Litchfield, IL, 62056",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/il/litchfield/14-litchfield-plz/coming-soon"
-    },
-    {
-      "company": "Five Below",
       "address": "1155 Buck Creek Road, Simpsonville, KY, 40067",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/ky/simpsonville/1155-buck-creek-road/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "2897 Oak Valley Dr, Ann Arbor, MI, 48103",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/mi/ann-arbor/2897-oak-valley-dr/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "1809 E Sherman Blvd, Muskegon, MI, 49444",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/mi/muskegon/1809-e-sherman-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "1939 Mineral Wells Ave, Paris, TN, 38242",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/tn/paris/1939-mineral-wells-ave/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "251 N Broadway, Pennsville, NJ, 08070",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/nj/pennsville/251-n-broadway/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "2500 S Center Street, Marshalltown, IA, 50158",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ia/marshalltown/2500-s-center-street/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "14 Litchfield Plz, Litchfield, IL, 62056",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/il/litchfield/14-litchfield-plz/coming-soon"
     },
     {
       "company": "Five Below",
@@ -339,24 +363,6 @@
     },
     {
       "company": "Five Below",
-      "address": "2897 Oak Valley Dr, Ann Arbor, MI, 48103",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/mi/ann-arbor/2897-oak-valley-dr/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "1809 E Sherman Blvd, Muskegon, MI, 49444",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/mi/muskegon/1809-e-sherman-blvd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "1939 Mineral Wells Ave, Paris, TN, 38242",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/tn/paris/1939-mineral-wells-ave/coming-soon"
-    },
-    {
-      "company": "Five Below",
       "address": "380 E 525 N, Harrisville, UT, 84404",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/ut/harrisville/380-e-525-n/coming-soon"
@@ -378,12 +384,6 @@
       "address": "Verrado Marketplace, 1405 North Verrado Way, Buckeye, AZ 85396, Arizona",
       "opening_date": "Now Open!",
       "link": "https://www.homegoods.com/store-details/Buckeye-AZ-85396/1219"
-    },
-    {
-      "company": "HomeGoods",
-      "address": "Coastal Centre, 1218 Cottage Lane, Conway, SC 29526, South Carolina",
-      "opening_date": "Now Open!",
-      "link": "https://www.homegoods.com/store-details/Conway-SC-29526/1222"
     },
     {
       "company": "HomeGoods",
@@ -412,7 +412,7 @@
     {
       "company": "Homesense",
       "address": "Scottsdale Center, 210 S. Promenade Blvd, Rogers, AR 72758, Rogers, AR",
-      "opening_date": "May 28, 2026",
+      "opening_date": "",
       "link": "https://www.google.com/maps?saddr&daddr=210 S. Promenade Blvd+Rogers,AR+72758"
     },
     {
@@ -420,12 +420,6 @@
       "address": "Lake Nona West Retail Center, 6023 Lake Nona Blvd, Lake Nona, FL 32827, Lake Nona, FL",
       "opening_date": "",
       "link": "https://www.google.com/maps?saddr&daddr=6023 Lake Nona Blvd+Lake Nona,FL+32827"
-    },
-    {
-      "company": "Homesense",
-      "address": "Marketplace at Mill Creek, 1705 Mall of Georgia Blvd Suite 400, Buford, GA 30519, Buford, GA",
-      "opening_date": "",
-      "link": "https://www.google.com/maps?saddr&daddr=1705 Mall of Georgia Blvd Suite 400+Buford,GA+30519"
     },
     {
       "company": "Jersey Mike's",
@@ -741,6 +735,12 @@
     },
     {
       "company": "Jersey Mike's",
+      "address": "2200 W. Broadway, Council Bluffs, IA 51501-3627",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-IA"
+    },
+    {
+      "company": "Jersey Mike's",
       "address": "415 Community Drive, North Liberty, IA 52317-6703",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-IA"
@@ -867,6 +867,12 @@
     },
     {
       "company": "Jersey Mike's",
+      "address": "5466 St. Croix Trail, North Branch, MN 55056-4204",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-MN"
+    },
+    {
+      "company": "Jersey Mike's",
       "address": "6 Parkway Lane, Petal, MS 39465-3035",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MS"
@@ -930,6 +936,12 @@
       "address": "531 US-22, White House Station (White Station), NJ 08889",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-NJ"
+    },
+    {
+      "company": "Jersey Mike's",
+      "address": "2240 E Lohmam, La Cruces, NM 88011",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-NM"
     },
     {
       "company": "Jersey Mike's",
@@ -1233,7 +1245,7 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "TBD @ NWQ US Highway 290 & FM 973, Manor, TX 786539",
+      "address": "11910 E US 290, Manor, TX 78653",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
     },
@@ -1314,6 +1326,12 @@
       "address": "209 Pennsylvania Avenue SE, Washington, DC 20003-1107",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-DC"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "754 US Hwy 202",
+      "opening_date": "June 4, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-bridgewater-towne-center"
     },
     {
       "company": "Chick-fil-A",
@@ -1458,12 +1476,6 @@
       "address": "9111 E 40th Ave",
       "opening_date": "April 16, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-runway-35-south"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "4735 Mobile Highway",
-      "opening_date": "April 16, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-mobile-hwy"
     },
     {
       "company": "Wawa",
@@ -2253,12 +2265,6 @@
     },
     {
       "company": "Marshalls",
-      "address": "1610 Church St, Conway, South Carolina",
-      "opening_date": "Now Open!",
-      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1661&ref=grandOpenings"
-    },
-    {
-      "company": "Marshalls",
       "address": "900 DeKalb Plaza Blvd, Fort Payne, Alabama",
       "opening_date": "April 23, 2026",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1653&ref=grandOpenings"
@@ -2296,31 +2302,31 @@
     {
       "company": "TJ Maxx",
       "address": "1428 W. Airline Hwy, LaPlace",
-      "opening_date": "May 28, 2026",
+      "opening_date": "Now Open!",
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1683&ref=grandOpenings"
     },
     {
       "company": "TJ Maxx",
       "address": "283 Platinum Ave, Staten Island",
-      "opening_date": "May 28, 2026",
+      "opening_date": "Now Open!",
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=165&ref=grandOpenings"
     },
     {
       "company": "TJ Maxx",
       "address": "1384 Rombach Ave, Wilmington",
-      "opening_date": "May 28, 2026",
+      "opening_date": "Now Open!",
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1485&ref=grandOpenings"
     },
     {
       "company": "TJ Maxx",
       "address": "1935 Mineral Wells Ave, Paris",
-      "opening_date": "May 28, 2026",
+      "opening_date": "Now Open!",
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1695&ref=grandOpenings"
     },
     {
       "company": "TJ Maxx",
       "address": "2607 Decherd Blvd, Winchester",
-      "opening_date": "May 28, 2026",
+      "opening_date": "Now Open!",
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1687&ref=grandOpenings"
     },
     {
@@ -2415,6 +2421,12 @@
     },
     {
       "company": "Hobby Lobby",
+      "address": "400 Mill Avenue SE in New Philadelphia",
+      "opening_date": "May 29, 2026",
+      "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-new-philadelphia-ohio"
+    },
+    {
+      "company": "Hobby Lobby",
       "address": "231 Mall Drive in Murrells Inlet",
       "opening_date": "April 17, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-murrells-inlet-south-carolina"
@@ -2478,12 +2490,6 @@
       "address": "2100 Centreville Road in Herndon",
       "opening_date": "February 04, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-herndon-virginia"
-    },
-    {
-      "company": "Hobby Lobby",
-      "address": "3040 E",
-      "opening_date": "February 02, 2026",
-      "link": "https://newsroom.hobbylobby.com/new-stores/relocation-of-store-in-farmington-new-mexico"
     },
     {
       "company": "Ulta Beauty",
