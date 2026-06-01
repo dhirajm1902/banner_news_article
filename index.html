@@ -1142,17 +1142,17 @@
                 <h3 class="text-xl font-semibold mb-2 text-gray-300">No WARN notices found</h3>
                 <p class="text-gray-500 text-sm">Run warn.py to generate data, or adjust your filters.</p>
             </div>
-            <div id="warnTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
-                <table class="w-full text-sm text-left data-table">
+            <div id="warnTableContainer" class="hidden overflow-hidden rounded-2xl border border-white/5 fade-in">
+                <table class="w-full text-sm text-left data-table table-fixed">
                     <thead><tr>
-                        <th class="px-3 py-3 w-10">#</th>
-                        <th class="px-3 py-3 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('company')">Company <span id="warnSort_company"></span></th>
-                        <th class="px-3 py-3 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('city')">City <span id="warnSort_city"></span></th>
-                        <th class="px-3 py-3 w-28 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('state')">State <span id="warnSort_state"></span></th>
-                        <th class="px-3 py-3 w-32 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('notice_date')">Notice Date <span id="warnSort_notice_date"></span></th>
-                        <th class="px-3 py-3 w-32 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('layoff_date')">Layoff Date <span id="warnSort_layoff_date"></span></th>
-                        <th class="px-3 py-3 w-28 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('employees_affected')">Employees <span id="warnSort_employees_affected"></span></th>
-                        <th class="px-3 py-3 w-28 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('closure_type')">Type <span id="warnSort_closure_type"></span></th>
+                        <th class="px-3 py-3 w-8">#</th>
+                        <th class="px-3 py-3 w-[18%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('company')">Company <span id="warnSort_company"></span></th>
+                        <th class="px-3 py-3 w-[12%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('city')">City <span id="warnSort_city"></span></th>
+                        <th class="px-3 py-3 w-[12%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('state')">State <span id="warnSort_state"></span></th>
+                        <th class="px-3 py-3 w-[10%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('notice_date')">Notice Date <span id="warnSort_notice_date"></span></th>
+                        <th class="px-3 py-3 w-[10%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('layoff_date')">Layoff Date <span id="warnSort_layoff_date"></span></th>
+                        <th class="px-3 py-3 w-[9%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('employees_affected')">Employees <span id="warnSort_employees_affected"></span></th>
+                        <th class="px-3 py-3 w-[10%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('closure_type')">Type <span id="warnSort_closure_type"></span></th>
                         <th class="px-3 py-3">Notes</th>
                     </tr></thead>
                     <tbody id="warnTableBody"></tbody>
@@ -2985,20 +2985,20 @@
             rows.push(`
             <tr class="${isTracked ? 'warn-highlight' : ''}">
                 <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
-                <td class="px-3 py-3 max-w-[180px]">
-                    <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.company||'')}">
+                <td class="px-3 py-3">
+                    <span class="font-medium text-white text-xs line-clamp-2 block" title="${escapeHtml(r.company||'')}">
                         ${isNew ? `<span class="warn-new-badge mr-1">✦ NEW</span>` : ''}${highlight(r.company||'—', term)}
                     </span>
                 </td>
-                <td class="px-3 py-3 text-gray-400 text-xs">${highlight(r.city||'—', term)}</td>
+                <td class="px-3 py-3 text-gray-400 text-xs break-words">${highlight(r.city||'—', term)}</td>
                 <td class="px-3 py-3">
                     <span class="px-2 py-1 rounded-full text-xs bg-blue-900/40 text-blue-300 border border-blue-700/30">${escapeHtml(r.state||'—')}</span>
                 </td>
-                <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.notice_date||'—')}</td>
-                <td class="px-3 py-3 text-gray-400 text-xs w-32"><div class="w-28 truncate" title="${escapeHtml(r.layoff_date||'')}">${escapeHtml(r.layoff_date||'—')}</div></td>
+                <td class="px-3 py-3 text-gray-400 text-xs">${escapeHtml(r.notice_date||'—')}</td>
+                <td class="px-3 py-3 text-gray-400 text-xs">${escapeHtml(r.layoff_date||'—')}</td>
                 <td class="px-3 py-3 text-gray-300 text-xs font-semibold">${escapeHtml(r.employees_affected||'—')}</td>
                 <td class="px-3 py-3">${typeBadge}</td>
-                <td class="px-3 py-3 max-w-[200px]">
+                <td class="px-3 py-3">
                     <span class="text-gray-500 text-xs line-clamp-2 block" title="${escapeHtml(r.notes||'')}">${highlight(r.notes||'—', term)}</span>
                 </td>
             </tr>`);
