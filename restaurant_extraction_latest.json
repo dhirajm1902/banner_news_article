@@ -1,13 +1,933 @@
 {
-  "last_updated": "2026-05-29",
+  "last_updated": "2026-06-01",
   "data": [
+    {
+      "store_name": "Xi'an Famous Foods",
+      "location": "12031 Rockville Pike, North Bethesda, MD 20852",
+      "event_type": "Opening",
+      "event_date": "Late September 2026",
+      "status": "under construction",
+      "short_description": "Xi'an Famous Foods is opening its first company-owned Maryland location at 12031 Rockville Pike in North Bethesda, which will be 1,718 sq ft. The location is currently under construction, with the store manager stating a target of late September for customer readiness. CEO Jason Wang confirmed the expansion as a milestone for the 20-year-old, family-owned business.",
+      "article_link": "https://whatnow.com/washington-dc/restaurants/xian-famous-foods-plans-maryland-debut/",
+      "published_date": "May 30, 2026"
+    },
+    {
+      "store_name": "Sana'a Café (27 Drumm St location)",
+      "location": "27 Drumm St, San Francisco, CA 94111",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "set to open",
+      "short_description": "Sana'a Café has announced plans to open 11 new locations across California, with several Bay Area storefronts already secured. Its newest confirmed location is set to be at 27 Drumm St in the Financial District, with additional San Francisco locations planned for 388 Market St and 689 Townsend St. No opening timelines have been disclosed.",
+      "article_link": "https://whatnow.com/san-francisco/restaurants/sanaa-cafe-to-open-multiple-locations-across-san-francisco/",
+      "published_date": "May 30, 2026"
+    },
+    {
+      "store_name": "Sana'a Café (388 Market St location)",
+      "location": "388 Market St, San Francisco, CA (zip code not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "planned",
+      "short_description": "Sana'a Café has announced plans to open 11 new locations across California, with several Bay Area storefronts already secured. 388 Market St is one of the planned San Francisco locations alongside 27 Drumm St and 689 Townsend St. No opening timelines have been disclosed.",
+      "article_link": "https://whatnow.com/san-francisco/restaurants/sanaa-cafe-to-open-multiple-locations-across-san-francisco/",
+      "published_date": "May 30, 2026"
+    },
+    {
+      "store_name": "Sana'a Café (689 Townsend St location)",
+      "location": "689 Townsend St, San Francisco, CA (zip code not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "planned",
+      "short_description": "Sana'a Café has announced plans to open 11 new locations across California, with several Bay Area storefronts already secured. 689 Townsend St is one of the planned San Francisco locations alongside 27 Drumm St and 388 Market St. No opening timelines have been disclosed.",
+      "article_link": "https://whatnow.com/san-francisco/restaurants/sanaa-cafe-to-open-multiple-locations-across-san-francisco/",
+      "published_date": "May 30, 2026"
+    },
+    {
+      "store_name": "Goop Kitchen (405 Howard St location)",
+      "location": "405 Howard St, Suite 130, San Francisco, CA 94105",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "signed a lease",
+      "short_description": "Goop Kitchen has signed a lease for space at 405 Howard St in San Francisco's Financial District, occupying just under 2,000 sq ft in Suite 130 for a sit-down dining outpost. The company is also preparing a location at 5333 Adeline St in Oakland, though opening timelines for either location remain unclear. Co-founded by Gwyneth Paltrow in 2021, the concept emphasizes clean eating with organic and sustainably sourced ingredients.",
+      "article_link": "https://whatnow.com/san-francisco/restaurants/goop-kitchen-plans-expansion-into-the-bay-area/",
+      "published_date": "May 30, 2026"
+    },
+    {
+      "store_name": "Goop Kitchen (5333 Adeline St location)",
+      "location": "5333 Adeline St, Oakland, CA (zip code not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "preparing",
+      "short_description": "Goop Kitchen is preparing a location at 5333 Adeline St in Oakland, in addition to its signed lease at 405 Howard St in San Francisco. Timelines for both locations remain unclear. The concept launched in 2021 as a delivery-only brand before expanding into brick-and-mortar.",
+      "article_link": "https://whatnow.com/san-francisco/restaurants/goop-kitchen-plans-expansion-into-the-bay-area/",
+      "published_date": "May 30, 2026"
+    },
+    {
+      "store_name": "Old Caz Brewing Company",
+      "location": "90 S E St, Suite 200, Santa Rosa, CA 95404",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "expansion might take place this year",
+      "short_description": "A California ABC license application associated with Old Caz Brewing Company signals a potential second location at 90 S E St, Suite 200, in Santa Rosa. No opening date has been confirmed, though the licensing activity suggests the expansion could occur this year. Founded in Rohnert Park, Old Caz has built a following with craft beers and a community-focused experience.",
+      "article_link": "https://whatnow.com/san-francisco/restaurants/old-caz-brewing-company-eyes-second-location-in-petaluma/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Nantasket Sweets By Swedes",
+      "location": "115 Charles St, Boston, MA 02114",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "opening soon",
+      "short_description": "Owner Maria Stolt has announced plans to open a second Nantasket Sweets By Swedes location at 115 Charles St in Boston's Beacon Hill neighborhood. The new shop will feature the same Swedish pick-and-mix candy selection, handcrafted chocolates, and seasonal treats as the original Hull location near Nantasket Beach. No specific opening date has been announced beyond \"this summer.\"",
+      "article_link": "https://whatnow.com/boston/restaurants/swedish-candy-favorite-nantasket-sweets-by-swedes-heads-to-beacon-hill/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Wine Folks",
+      "location": "967 N. Academy Ave, New Braunfels, TX (zip code not specified)",
+      "event_type": "Opening",
+      "event_date": "June 2026 (unconfirmed)",
+      "status": "set to open",
+      "short_description": "Wine Folks, a locally owned wine bar and bottle shop run by husband-and-wife duo Danielle and Jason Grantham, is preparing to open at 967 N. Academy Ave in New Braunfels. Danielle Grantham stated the team is aiming for a June opening, though it has not yet been confirmed. The spot will offer beer, wine, provisions, a retail section, and a bar and lounge area.",
+      "article_link": "https://whatnow.com/san-antonio/restaurants/wine-folks-to-open-new-wine-bar-and-bottle-shop-in-new-braunfels/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Dar Rafiki's",
+      "location": "687-719 South Main St, Academy Plaza, Haverhill, MA 01835",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "construction is actively underway",
+      "short_description": "Dar Rafiki's is currently renovating a new space at 687-719 South Main St in the Academy Plaza in Bradford/Haverhill for its second location. Chef-owner Lhoussine Rafiq said the new space will be larger with expanded seating, designed for a more spacious sit-down experience. No official opening date has been announced.",
+      "article_link": "https://whatnow.com/boston/restaurants/dar-rafikis-to-open-second-bakery-cafe-at-haverhills-academy-plaza/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "The Breakfast Club at Midtown",
+      "location": "1428 Haight St, San Francisco, CA (zip code not specified)",
+      "event_type": "Opening",
+      "event_date": "Late Summer 2026",
+      "status": "construction is steadily progressing",
+      "short_description": "The Breakfast Club at Midtown is preparing to open its first San Francisco location at 1428 Haight Street later this summer, per franchisee Timothy Guess. An official opening date has not been finalized, and the timeline is subject to completion of renovations and required inspections. The brand currently operates locations in San Jose, Campbell, Livermore, Castro Valley, and other South Bay and East Bay communities.",
+      "article_link": "https://whatnow.com/san-francisco/restaurants/the-breakfast-club-at-midtown-to-open-its-first-san-francisco-location/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Palak's (unnamed restaurant)",
+      "location": "Billerica, Massachusetts (exact address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "currently under construction",
+      "short_description": "Chef and entrepreneur Palak Patel has announced plans to open a new Indian restaurant in Billerica, though the name, exact address, and opening timeline have not been disclosed. Patel confirmed to What Now Boston that the restaurant is currently under construction, with additional details to be released as the project progresses. She previously operated Palak's Creations, a catering and tiffin service, which she recently closed to focus on this new brick-and-mortar venture.",
+      "article_link": "https://whatnow.com/boston/restaurants/indian-chef-and-entrepreneur-teases-billerica-restaurant/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Mike's Pastry",
+      "location": "1 Harborside Drive, Terminal C, East Boston, MA 02128",
+      "event_type": "Opening",
+      "event_date": "Later in 2026",
+      "status": "opening later this year",
+      "short_description": "Mike's Pastry is opening a new location in Terminal C at Boston Logan International Airport, marking the bakery's fifth location and its first inside an airport. The Logan outpost will offer grab-and-go items including cannoli, lobster tails, cookies, cheesecake slices, and a full espresso bar. The expansion was announced by MarketPlace Development, which manages the airport's concessions program.",
+      "article_link": "https://whatnow.com/boston/restaurants/iconic-north-end-bakery-mikes-pastry-expanding-to-boston-logan-international-airport-this-year/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Dolan Uyghur Restaurant",
+      "location": "Arlington, VA (exact address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening soon",
+      "short_description": "Owner Hamid Kerim announced via Facebook that Dolan Uyghur Restaurant is opening its fifth location in Arlington, Virginia, and is currently hiring waitstaff. No specific address or opening date has been provided, and the information is not yet reflected on the company's website. Dolan Uyghur currently operates locations in Chantilly, Falls Church, Rockville, and Washington, DC.",
+      "article_link": "https://whatnow.com/washington-dc/restaurants/dolan-uyghur-restaurant-readies-fifth-location/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Mike's Red Tacos",
+      "location": "Orange County and Los Angeles, CA (specific addresses not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "plans to open 18 new restaurants",
+      "short_description": "San Diego-based Mike's Red Tacos has signed a franchise agreement with restaurant ownership group JM Foods to open 18 new locations across Orange County and Los Angeles. Specific locations and opening timelines have not yet been announced. The brand specializes in beef birria and first gained popularity as a food truck before expanding into brick-and-mortar restaurants.",
+      "article_link": "https://whatnow.com/orange-county/restaurants/mikes-red-tacos-plans-orange-county-expansion/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Bacio di Latte",
+      "location": "7922 E Pacific Coast Hwy, Suite A207, Newport Beach, CA 92657",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "may be in development",
+      "short_description": "A plan review filed with the Orange County Health Care Agency indicates that Bacio di Latte may be developing a new location at 7922 E Pacific Coast Highway, Suite A207, in Newport Beach. The brand has not yet announced an official opening date. Bacio di Latte already operates several Southern California locations, including existing Newport Beach outposts at Fashion Island and Westcliff Plaza.",
+      "article_link": "https://whatnow.com/orange-county/restaurants/bacio-di-latte-plans-new-newport-beach-location/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "The Eighth Rule",
+      "location": "201 E Trade St, Charlotte, NC 28202",
+      "event_type": "Opening",
+      "event_date": "Late Winter 2026",
+      "status": "planned for",
+      "short_description": "The Eighth Rule, a bourbon-forward cocktail lounge created by NBA star Stephen Curry in partnership with The MINA Group, is planned for The Ritz-Carlton Charlotte at 201 E. Trade St. The concept is expected to open in late winter 2026 as part of the hotel's ongoing renovation project. The Charlotte location would be The Eighth Rule's second location, joining its existing spot inside The Westin St. Francis in San Francisco.",
+      "article_link": "https://whatnow.com/charlotte/restaurants/the-eighth-rule-eyes-late-winter-2026-debut-at-the-ritz-carlton-charlotte/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Grandioso",
+      "location": "1227 Grand Ave, Phoenix, AZ 85007",
+      "event_type": "Opening",
+      "event_date": "July 15, 2026 (likely)",
+      "status": "targeting a summer opening",
+      "short_description": "Restaurateur Justin Piazza is planning Grandioso at 1227 Grand Ave in Phoenix, targeting a July 1 opening but citing July 15 as the more likely date. The neighborhood bar and pizza concept will feature four pizza styles — New York, Roman taglio, Detroit, and tavern — alongside a full bar, baked wings, and panino-style sandwiches. The project was identified through an Arizona liquor license application.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/grandioso-planning-mid-july-opening-on-grand-avenue/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Fresh Monkee (Sarasota – Fruitville Rd)",
+      "location": "5045 Fruitville Road, Unit 153, Sarasota, FL 34232",
+      "event_type": "Opening",
+      "event_date": "June 1, 2026",
+      "status": "set to soft open June 1",
+      "short_description": "Fresh Monkee franchisee Magda Reyes is soft opening the brand's first Sarasota location at 5045 Fruitville Road, Unit 153 on June 1, with 50% off shakes through June 5. The shake franchise, founded by Judy Flynn, currently has five Florida locations open with eight more in progress statewide. Reyes plans to open additional Fresh Monkee locations in the area after this debut.",
+      "article_link": "https://whatnow.com/tampa/restaurants/new-franchisee-soft-opens-first-of-three-fresh-monkee-locations-in-sarasota/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Foxtail Coffee Co.",
+      "location": "468 Quay Commons, Suite G, Sarasota, FL 34236",
+      "event_type": "Opening",
+      "event_date": "Mid-June 2026",
+      "status": "waiting to get certificate of occupancy",
+      "short_description": "Franchisee Adrian Lojo is opening a new Foxtail Coffee Co. location at 468 Quay Commons, Suite G, within The Quay, a 14-acre waterfront development in downtown Sarasota. Lojo is awaiting a certificate of occupancy and predicts a mid-June opening, making this his third Foxtail location. The café will serve espresso-based drinks, cold brew, and the brand's full coffee menu.",
+      "article_link": "https://whatnow.com/tampa/restaurants/foxtail-coffee-opening-at-the-quay/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Fresh Monkee (Lakeland)",
+      "location": "5257 US Hwy 98 S, Lakeland, FL 33812",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "preparing for its debut",
+      "short_description": "Fresh Monkee is preparing to open a new location at 5257 US Hwy 98 S in Lakeland, joining the Highland City Town Center retail center anchored by Publix. No opening date has been specified. The brand currently has 13 locations either open or in progress across Florida as part of a broader national expansion.",
+      "article_link": "https://whatnow.com/tampa/restaurants/fresh-monkee-bringing-truly-healthy-shakes-to-lakeland/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Mi Tradición Bakery (Cameron Rd – new location)",
+      "location": "5403 Cameron Rd, Suite 100, Austin, TX (zip code not specified)",
+      "event_type": "Opening",
+      "event_date": "Late June 2026",
+      "status": "targeting a late June opening",
+      "short_description": "Mi Tradición Bakery is opening a new location at 5403 Cameron Rd, Suite 100, targeting a late June opening per owner Jesus \"Chuy\" Guevara. The Cameron Road store is positioned between established Hispanic neighborhoods and the Mueller area, and will feature the bakery's signature Mexican baked goods alongside tortas, tacos, and quesadillas. This is one of two simultaneous expansion projects for the family-owned Austin bakery.",
+      "article_link": "https://whatnow.com/austin/restaurants/mi-tradicion-bakery-prepares-new-store-and-relocation/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Mi Tradición Bakery (Research Blvd – relocation)",
+      "location": "8828 Research Blvd, Austin, TX (zip code not specified)",
+      "event_type": "Opening",
+      "event_date": "Second week of July 2026 (pending approvals)",
+      "status": "expected to begin operating during the second week of July",
+      "short_description": "Mi Tradición Bakery is relocating its longtime Research Boulevard operation into a newly constructed building at 8828 Research Blvd, with the move expected during the second week of July pending final city approvals. The relocation is part of a broader effort to grow the business while preserving its traditional Mexican baked goods. Owner Guevara has been in baking since 2009, with training at the Culinary Institute of America and prior experience at Central Market and Mandola's.",
+      "article_link": "https://whatnow.com/austin/restaurants/mi-tradicion-bakery-prepares-new-store-and-relocation/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Koi Sushi & Thai",
+      "location": "Orange Park Mall, 1910 Wells Rd, Orange Park, FL 32073",
+      "event_type": "Opening",
+      "event_date": "Winter 2026",
+      "status": "opening this winter",
+      "short_description": "Koi Sushi & Thai is expanding to a second location at the Orange Park Mall this winter, per confirmation from co-owner Yuyun Cao. The menu will differ slightly from the original Ponte Vedra Beach location at 10870 US-1, though details have not yet been shared. The restaurant offers Japanese and Thai cuisine including sushi, specialty rolls, Thai curries, and handcrafted cocktails.",
+      "article_link": "https://whatnow.com/jacksonville/restaurants/koi-sushi-expanding-to-second-location/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Cafecito on Park",
+      "location": "1088 Park Blvd, San Diego, CA 92101",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "set to open (no exact opening date announced)",
+      "short_description": "Cafecito, a South Bay-based Hispanic-inspired coffee shop, is preparing to open a new downtown San Diego location called Cafecito on Park near San Diego City College. The new shop will move into the former Smarts Cafe space and will offer espresso drinks, pastries, and quick bites. An exact opening date has not been announced.",
+      "article_link": "https://whatnow.com/san-diego/restaurants/cafecito-opening-new-location-near-sdcc/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Beignets and Brew",
+      "location": "348 Elden St, Herndon, VA 20170",
+      "event_type": "Opening",
+      "event_date": "June 20 (year not specified in article, context is 2026)",
+      "status": "opening its doors on June 20",
+      "short_description": "Beignets and Brew, a New Orleans-inspired beignet and coffee chain, is opening a new franchise location at Herndon Centre spanning 1,500 square feet with seating for up to 24 guests. The franchisee Travis Loan is also under construction in Springfield and has leases signed in Fredericksburg. The Herndon location is set to open on June 20.",
+      "article_link": "https://whatnow.com/washington-dc/restaurants/beignets-and-brew-to-sweeten-herndon-centre/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Nobu Restaurant (Bellevue)",
+      "location": "889 Ave Sq NE, Bellevue, WA 98004",
+      "event_type": "Opening",
+      "event_date": "2027",
+      "status": "anticipated to open in 2027",
+      "short_description": "Nobu is planning its first Pacific Northwest restaurant at Avenue Bellevue, occupying approximately 10,000 square feet within the mixed-use project. The restaurant will be part of the newly announced Nobu Residences Bellevue concept, marking the first completed Nobu-branded residential development in the United States. The opening is anticipated for 2027.",
+      "article_link": "https://whatnow.com/seattle/restaurants/nobu-restaurant-planned-for-bellevue-as-part-of-nobu-residences/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Poulet Rouge",
+      "location": "1355 Kingston Rd, Pickering, ON L1V 1B8, Canada",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "preparing to open (no exact opening timeline confirmed)",
+      "short_description": "Poulet Rouge, a Quebec-based fast-casual grilled chicken bowl restaurant, is preparing to open in the food court at The Shops at Pickering City Centre, replacing the former Caribbean Hotpot space. An exact opening timeline has not yet been confirmed. The menu will feature build-your-own bowls with grilled chicken, fresh bases, toppings, and signature sauces.",
+      "article_link": "https://whatnow.com/toronto/restaurants/poulet-rouge-opening-at-the-shops-at-pickering-city-centre-food-court/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Parker's Kitchen",
+      "location": "1020 FL-16, St. Augustine, FL 32084",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "plans for a new location",
+      "short_description": "Parker's Kitchen, a Savannah-based restaurant-and-gas-station brand, has submitted paperwork for a new location in St. Augustine, its first St. Johns County outpost. The new location will be across from The Shoppes at Mission Trace and will serve Southern comfort food. No opening timeline has been announced.",
+      "article_link": "https://whatnow.com/jacksonville/restaurants/parkers-kitchen-headed-to-st-augustine/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "The Layover",
+      "location": "10271 Calumet Ave, Dyer, IN 46311",
+      "event_type": "Opening",
+      "event_date": "First week of September (year not specified in article, context is 2026)",
+      "status": "under construction; hoping to open in the first week of September",
+      "short_description": "The Layover is a new air travel-themed cocktail bar and small plates concept from chef Jay Ruff, planned for 10271 Calumet Avenue in St. John, Indiana. The bar is currently under construction and Ruff is hoping to open in the first week of September. The menu is divided into categories including carry-on, layovers, first class, and final call.",
+      "article_link": "https://whatnow.com/chicago/restaurants/the-layover-cocktail-bar-flying-into-st-john-across-state-lines-this-fall/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "OAKBERRY Açaí – Windsor (Devonshire Mall)",
+      "location": "Devonshire Mall, Windsor, ON (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "expected to roll out through summer 2026",
+      "short_description": "OAKBERRY Açaí, a Brazilian fast-casual açaí bowl brand, is planning four new Ontario locations as part of a broader 2026 Canadian expansion led by Snowbank Brands. The Windsor location is planned for Devonshire Mall, with many Canadian openings expected to roll out through summer 2026.",
+      "article_link": "https://whatnow.com/toronto/restaurants/oakberry-acai-planning-ontario-expansion-with-four-new-locations/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "OAKBERRY Açaí – London (Masonville Mall)",
+      "location": "Masonville Mall, London, ON (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "expected to roll out through summer 2026",
+      "short_description": "OAKBERRY Açaí is planning a new Ontario location at Masonville Mall in London as part of its 2026 Canadian expansion. Snowbank Brands, the Canadian rights holder, is targeting more than 40 stores across Canada by end of 2026. Many openings are expected through summer 2026.",
+      "article_link": "https://whatnow.com/toronto/restaurants/oakberry-acai-planning-ontario-expansion-with-four-new-locations/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "OAKBERRY Açaí – Hamilton (Lime Ridge Mall)",
+      "location": "Lime Ridge Mall, Hamilton, ON (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "expected to roll out through summer 2026",
+      "short_description": "OAKBERRY Açaí is planning a new Ontario location at Lime Ridge Mall in Hamilton as part of its 2026 Canadian expansion. The brand operates roughly 1,000 locations globally and is expanding across multiple Canadian provinces. Many openings are expected to roll out through summer 2026.",
+      "article_link": "https://whatnow.com/toronto/restaurants/oakberry-acai-planning-ontario-expansion-with-four-new-locations/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "OAKBERRY Açaí – Ottawa (Bayshore Mall)",
+      "location": "Bayshore Mall, Ottawa, ON (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "expected to roll out through summer 2026",
+      "short_description": "OAKBERRY Açaí is planning a new Ontario location at Bayshore Mall in Ottawa as part of its 2026 Canadian expansion. The concept offers build-your-own açaí bowls, smoothies, and matcha lattes in a quick-service format. Many Canadian openings are expected through summer 2026.",
+      "article_link": "https://whatnow.com/toronto/restaurants/oakberry-acai-planning-ontario-expansion-with-four-new-locations/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Cut Club",
+      "location": "612 Stewart St, Seattle, WA 98101",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "proposed; no opening timeline announced",
+      "short_description": "A new application filed with the Washington State Liquor and Cannabis Board lists Cut Club at 612 Stewart St, the former Miller's Guild restaurant space near Hotel Max in downtown Seattle. The applicants are Melissa Emiko Gerber and Travis Gerber, and the license filing includes spirits, beer and wine restaurant lounge, catering, and premixed cocktails and wine to-go. No menu, formal description, or opening timeline has been announced.",
+      "article_link": "https://whatnow.com/seattle/restaurants/cut-club-concept-proposed-for-downtown-seattle/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Neighborhood Munch (food truck)",
+      "location": "1712 Ogilvie Park Ln, Jacksonville, FL 32246",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "launching soon",
+      "short_description": "Neighborhood Munch is a new food truck from Chef Paul Neighbors, with submitted plan review documents placing it at 1712 Ogilvie Park Lane, the address of East Coast Commissary, a licensed commissary kitchen for food trucks in Jacksonville. No menu details or exact opening date were available at time of publication.",
+      "article_link": "https://whatnow.com/jacksonville/restaurants/neighborhood-munch-looks-to-be-pulling-into-jacksonville/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Bludorn Hospitality Group (unnamed concept)",
+      "location": "239 E Grayson St, San Antonio, TX 78215",
+      "event_type": "Opening",
+      "event_date": "Fall (year not specified in article, context is 2026)",
+      "status": "set to welcome a new restaurant this fall",
+      "short_description": "Bludorn Hospitality Group, led by chef Aaron Bludorn, will open its sixth restaurant and first location outside of Houston in the historic Boehler's Liberty Saloon building in San Antonio's Pearl District. The upcoming concept will bring Gulf Coast–inspired hospitality to the space and more details are expected in the coming months. No name for the concept has been announced.",
+      "article_link": "https://whatnow.com/san-antonio/restaurants/bludorn-hospitality-group-to-open-first-san-antonio-restaurant/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Unnamed concept (Chef Coskun Abik)",
+      "location": "7505 Melrose Ave, Los Angeles, CA 90046",
+      "event_type": "Opening",
+      "event_date": "End of June (year not specified in article, context is 2026)",
+      "status": "aiming for an opening at the end of June",
+      "short_description": "Chef Coskun Abik, known for Blind Butcher in San Francisco, has confirmed a new restaurant concept is heading to 7505 Melrose Ave. in Los Angeles, per a recent ABC filing. The concept name, menu, and design have not yet been publicly confirmed. The chef and his team are aiming for an end-of-June opening.",
+      "article_link": "https://whatnow.com/los-angeles/restaurants/san-francisco-chef-bringing-restaurant-to-los-angeles/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Dark Horse Espresso Bar – College Street",
+      "location": "941 College St, Toronto, ON M6H 1A6, Canada",
+      "event_type": "Opening",
+      "event_date": "Not specified (before King West location)",
+      "status": "expected to open before the King West location",
+      "short_description": "Dark Horse Espresso Bar is preparing to open a new cafe at 941 College Street near Dovercourt, moving into the former Starbucks space across from the YMCA. The College and Dovercourt cafe is expected to open before the King West location. The menu will include espresso drinks, seasonal coffees, matcha beverages, and house blends.",
+      "article_link": "https://whatnow.com/toronto/restaurants/dark-horse-espresso-bar-expanding-with-two-new-toronto-cafes/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Dark Horse Espresso Bar – King West (West House)",
+      "location": "West House, Bathurst and Wellington, Toronto, ON (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "August 2026",
+      "status": "currently targeting an August 2026 debut",
+      "short_description": "Dark Horse Espresso Bar is also opening a second new location inside the Hines-developed West House project at Bathurst and Wellington in King West, Toronto. This location is currently targeting an August 2026 debut. The company plans to grow from 17 to 23 Ontario locations by end of 2026.",
+      "article_link": "https://whatnow.com/toronto/restaurants/dark-horse-espresso-bar-expanding-with-two-new-toronto-cafes/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Bang'n Bagel Company",
+      "location": "13423 Beach Blvd, Jacksonville, FL 32246",
+      "event_type": "Opening",
+      "event_date": "May 30 (grand opening; year not specified in article, context is 2026)",
+      "status": "grand opening on May 30; already soft-opened",
+      "short_description": "Bang'n Bagel Company, a new scratch-made bagel concept, has already soft-opened and will celebrate its grand opening on May 30 at 13423 Beach Blvd in Jacksonville. The brand is a partnership between Mark DeBiase, Augie DeBiase, and Drew Maider, a team with experience operating more than 24 Jersey Mike's locations in Florida. Additional locations are in the works in Nocatee and St. Johns.",
+      "article_link": "https://whatnow.com/jacksonville/restaurants/bangn-bagel-company-opens-in-jacksonville-expansion-in-store/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Jade Dumpling & Noodle",
+      "location": "1018 Old St. Augustine Rd, Suite 105, Jacksonville, FL 32257",
+      "event_type": "Opening",
+      "event_date": "August (year not specified in article, context is 2026)",
+      "status": "working toward an opening this August",
+      "short_description": "Jade Dumpling & Noodle is a new restaurant serving dumplings and noodles planned for Suite 105 at Old St. Augustine Plaza in Jacksonville, confirmed by co-owner Chang Zou. The restaurant is working toward an August opening, with menu details still under wraps.",
+      "article_link": "https://whatnow.com/jacksonville/restaurants/new-dumpling-spot-joining-old-st-augustine-plaza/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Newk's Eatery (Phoenix expansion)",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "exploring growth in the Valley through franchise development",
+      "short_description": "Newk's Eatery is exploring a Phoenix-area franchise expansion that could bring up to 20 locations to the market over coming years, according to Phoenix Business Journal. No franchise agreements, site addresses, or opening timelines have been announced. The brand's menu centers around sandwiches, wraps, salads, soups, and pizza.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/newks-eatery-plans-phoenix-expansion-with-up-to-20-locations/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Cono Gelato",
+      "location": "932 College St, Toronto, ON M6H 1A4, Canada",
+      "event_type": "Opening",
+      "event_date": "Mid-July (year not specified in article, context is 2026)",
+      "status": "scheduled to open in mid-July",
+      "short_description": "Cono Gelato is a new gelato shop from former Canis chefs Jeff Kang and Tosh Agassiz, set to open at 932 College Street in Toronto in mid-July. The shop will offer 12 rotating in-house gelato flavors, brown butter waffle cones, gelato cakes, and waffle ice cream sandwiches. A front window will allow customers to watch the waffle cones being made.",
+      "article_link": "https://whatnow.com/toronto/restaurants/cono-gelato-to-debut-in-toronto-this-summer/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Saolea",
+      "location": "140 W 4th St, New York, NY 10012",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "planning to open (awaiting additional details)",
+      "short_description": "Nop Shusang and a team are planning to open Saolea, a modern Thai-American concept, at 140 W 4th St in the former Red Bamboo space, which had served vegan food there for 24 years. The restaurant will feature modern preparations of classic Thai dishes along with a curated wine list, and ownership is seeking a beer and wine license. Additional details are still awaited.",
+      "article_link": "https://whatnow.com/new-york/restaurants/thai-restaurateur-planning-west-village-spot-in-former-red-bamboo/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Red Bamboo",
+      "location": "140 W 4th St, New York, NY 10012",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "closed (after 24 years)",
+      "short_description": "Red Bamboo, a vegan restaurant, had been serving food at 140 W 4th St for 24 years before closing. The space is now being taken over by a new modern Thai-American concept called Saolea. No specific closing date is mentioned in the article.",
+      "article_link": "https://whatnow.com/new-york/restaurants/thai-restaurateur-planning-west-village-spot-in-former-red-bamboo/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Fresh Kitchen – Winter Park",
+      "location": "818 S Orlando Ave, Winter Park, FL 32789",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "preparing to launch",
+      "short_description": "Fresh Kitchen, a Tampa-based fast-casual restaurant chain, is preparing to open at 818 S Orlando Ave in Winter Park, in the former Guy Fieri's Chicken Guy space. The company plans to invest hundreds of thousands of dollars to transform the interior with a new design concept not yet seen in its other Orlando-area locations. No opening date has been announced.",
+      "article_link": "https://whatnow.com/orlando/restaurants/tampa-based-fresh-kitchen-replacing-former-chicken-guy-in-winter-park/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Sombra Restaurant",
+      "location": "Suite 101, 21803 IH 10 W, San Antonio, TX 78257",
+      "event_type": "Opening",
+      "event_date": "Not specified (construction completion listed as July 17, 2026)",
+      "status": "construction listed as a renovation and alteration project; work expected to begin May 18 and reach completion by July 17, 2026",
+      "short_description": "Sombra Restaurant is a new concept from chef Diego Gonzalez planned for Suite 101 at Dominion Crossing II in San Antonio, filed with the Texas Department of Licensing and Regulation. The project involves a $250,000 renovation of approximately 2,500 square feet, with construction expected to begin May 18, 2026 and reach completion by July 17, 2026. No menu details, design information, or opening timeline have been announced.",
+      "article_link": "https://whatnow.com/san-antonio/restaurants/new-concept-sombra-restaurant-heads-to-san-antonios-dominion-crossing/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Deepwell",
+      "location": "185 N Main St, Mooresville, NC 28115",
+      "event_type": "Opening",
+      "event_date": "Late summer or fall 2026",
+      "status": "expected to open in late summer or fall 2026",
+      "short_description": "Deepwell is a new New Orleans-inspired steakhouse concept from Joe and Katy Kindred and corporate chef Craig Deihl, planned for a historic Main Street building in downtown Mooresville. The restaurant will feature an in-house dry-aging program with Wagyu beef sourced from North Carolina-based W8 Ranch, with dinner service planned. Full menu details have not yet been released.",
+      "article_link": "https://whatnow.com/charlotte/restaurants/kindred-team-bringing-deepwell-steakhouse-to-downtown-mooresville/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Cañonita",
+      "location": "5947 Lake Nona Blvd, Orlando, FL 32827",
+      "event_type": "Opening",
+      "event_date": "Late 2026",
+      "status": "opening in late 2026",
+      "short_description": "Tavistock Development is investing $4.5 million in a new Mexican restaurant called Cañonita at Lake Nona West. It will occupy a 9,321 sq ft space and is the first restaurant announced for the development. It is part of the Tavistock Restaurant Collection.",
+      "article_link": "https://whatnow.com/orlando/restaurants/opening-at-lake-nona-west-canonita/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Henry's Cuban Cafe #5",
+      "location": "5600 N Harbor City Blvd #4, Melbourne, FL 32940",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening soon",
+      "short_description": "Henry's Cuban Cafe is planning a fifth location in Melbourne, FL based on recently submitted plan review documents. The paperwork was submitted by Valdes Kitchen Inc. and lists a restaurant called \"Henry's Cuban Cafe #5\" at the North Harbor City Boulevard address.",
+      "article_link": "https://whatnow.com/orlando/restaurants/henrys-cuban-cafe-plans-melbourne-location/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "HB Protein Smoothies",
+      "location": "Gilbert, AZ (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "preparing to expand",
+      "short_description": "HB Protein Smoothies is expanding to Gilbert, AZ through local franchisees Michael and Samantha Marquez. The brand offers over 75 high-protein smoothie flavors and is supported by franchise development company Fransmart. An address and opening timeline have not yet been announced.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/hb-protein-smoothies-expanding-to-gilbert/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Holy Grounds",
+      "location": "1200 Deltona Blvd, Suite 6, Deltona, FL 32725",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "in progress",
+      "short_description": "Plan review documents submitted by ADC Hospitality Group LLC show a new restaurant project called Holy Grounds in Suite 6 of a Deltona Boulevard retail center. Opening timeline and menu details have not yet been confirmed.",
+      "article_link": "https://whatnow.com/orlando/restaurants/holy-grounds-planned-for-deltona/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Brew Bird Creative Cafe",
+      "location": "5550 Douglas Blvd, Suite D-110, Granite Bay, CA 95746",
+      "event_type": "Opening",
+      "event_date": "End of June 2026 (target, unconfirmed)",
+      "status": "targeting an end-of-June opening",
+      "short_description": "Brew Bird Creative Cafe, a Sacramento-based specialty coffee and paint-your-own pottery concept, is expanding to Granite Bay. The general manager confirmed the location is targeting an end-of-June opening, though no official date has been confirmed.",
+      "article_link": "https://whatnow.com/sacramento/restaurants/brew-bird-creative-cafe-is-expanding-to-granite-bay-with-a-new-location/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Fast Times Pizzeria",
+      "location": "18750 Willamette Dr, Suite A, West Linn, OR 97068",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening a second location",
+      "short_description": "Fast Times Pizzeria plans to open a second location in West Linn, taking over the space previously occupied by Old Backyard Burgers Company. No opening date has been announced.",
+      "article_link": "https://whatnow.com/portland/restaurants/fast-times-pizzeria-is-opening-a-second-location-in-west-linn/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Old Backyard Burgers Company",
+      "location": "18750 Willamette Dr, Suite A, West Linn, OR 97068",
+      "event_type": "Closing",
+      "event_date": "September 2025",
+      "status": "shut its doors",
+      "short_description": "Old Backyard Burgers Company shut its doors last September at 18750 Willamette Drive in West Linn. The space is being taken over by Fast Times Pizzeria.",
+      "article_link": "https://whatnow.com/portland/restaurants/fast-times-pizzeria-is-opening-a-second-location-in-west-linn/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Maison 1",
+      "location": "518 NE 20th Ave, Suite 3-B, Portland, OR 97232",
+      "event_type": "Opening",
+      "event_date": "Around September 2026",
+      "status": "opening will be around September",
+      "short_description": "Maison 1 is an elevated coffee atelier concept coming to Portland's Kerns neighborhood inside the Denizen Apartments complex. The menu will feature specialty coffee, house-made pastries, and breakfast and brunch dishes.",
+      "article_link": "https://whatnow.com/portland/restaurants/maison-1-planning-coffee-atelier-in-portlands-kerns-neighborhood/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Honeygrow",
+      "location": "3100 Fairlane Dr, Allen Park, MI 48101",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "in the works",
+      "short_description": "A new Honeygrow location is in early development stages at the Fairlane Drive Outlots in Allen Park. Details on the opening timeline have not yet been released.",
+      "article_link": "https://whatnow.com/detroit/restaurants/honeygrow-cooking-up-new-location-at-upcoming-allen-park-development/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "AnF Gyros & Grill",
+      "location": "Kissimmee, FL (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "preparing for an expansion",
+      "short_description": "AnF Gyros & Grill is preparing to expand to Kissimmee, FL. The specific address for the new location has not yet been revealed, and the owner was not immediately available for comment.",
+      "article_link": "https://whatnow.com/orlando/restaurants/anf-gyros-grill-opening-kissimmee-location/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "HAGS",
+      "location": "334 Bowery, New York, NY 10012",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "planned",
+      "short_description": "HAGS restaurant is planning to move from its current location at 163 1st St. to a larger space at 334 Bowery, doubling its seating capacity to 48 guests. The new location will offer à la carte options and the owners are seeking a full liquor license upgrade.",
+      "article_link": "https://whatnow.com/new-york/restaurants/queer-friendly-fine-dining-spot-moving-to-a-bigger-east-village-space/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Basil Pizza Napoletana",
+      "location": "Orlando, FL (Address not specified — operating from Orlando Caterers and Commissary)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "coming soon",
+      "short_description": "Basil Pizza Napoletana is a new food truck launching operations from Orlando Caterers and Commissary. The owner has not yet confirmed service areas or menu details.",
+      "article_link": "https://whatnow.com/orlando/restaurants/new-food-truck-bringing-neapolitan-pizza-to-orlando/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Let's Toast",
+      "location": "100 E Camelback Rd #164, Phoenix, AZ (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "May 16, 2026",
+      "status": "debuted its permanent Uptown Plaza location on May 16",
+      "short_description": "Let's Toast opened its permanent Uptown Plaza location on May 16 after three years as a pop-up. The concept specializes in Korean-inspired sandwiches built on house-made shokupan bread.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/lets-toast-eyes-expansion-following-uptown-opening/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Roxanne",
+      "location": "607 S 2nd St., Philadelphia, PA 19147",
+      "event_type": "Opening",
+      "event_date": "End of June 2026 (targeted)",
+      "status": "once again accepting reservations",
+      "short_description": "Roxanne, a Michelin-recognized Philadelphia restaurant, is accepting reservations again through Resy for end of June following a shutdown in April over licensing issues. The health department accepted the restaurant's plan of review application but has not yet conducted a health inspection.",
+      "article_link": "https://whatnow.com/philadelphia/restaurants/michelin-recognized-roxanne-eyes-reopening-after-licensing-shutdown/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Cordial Cocktail Club (formerly The Bottle Shop)",
+      "location": "237 King Ave, Columbus, OH 43201",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "set to open its doors",
+      "short_description": "Cordial Cocktail Club is the rebrand of The Bottle Shop at 237 King Ave in Columbus, reflecting a renewed focus on crafted cocktails at accessible price points. The opening will feature a new Indian-inspired cocktail menu, a vinyl DJ, and a food truck.",
+      "article_link": "https://whatnow.com/columbus/restaurants/cordial-cocktail-club-to-open-in-columbus-following-rebrand-from-the-bottle-shop/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Bayou Brew Coffee Co.",
+      "location": "2830 Macedonia Rd, Suite C, Powder Springs, GA 30127",
+      "event_type": "Opening",
+      "event_date": "August 2026 (target)",
+      "status": "targeting an August opening",
+      "short_description": "Bayou Brew Coffee Co. is a Louisiana-inspired coffee concept planned by Jonie Paden for a 1,400-square-foot space in Powder Springs, GA. The menu will feature chicory coffee, beignets, Boudin balls, and other New Orleans-inspired items.",
+      "article_link": "https://whatnow.com/atlanta/restaurants/bayou-brew-coffee-co-bringing-flavors-of-louisiana-to-powder-springs/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "7 Brew",
+      "location": "1701 Visions Ave, Jonesboro, AR 72405",
+      "event_type": "Opening",
+      "event_date": "June 22, 2026",
+      "status": "grand opening on Monday, June 22",
+      "short_description": "7 Brew is opening its second Jonesboro location at 1701 Visions Avenue on the Hilltop, with a grand opening set for June 22. The celebration will run all week with free small coffees offered at three hour-long time blocks each day.",
+      "article_link": "https://whatnow.com/memphis/restaurants/new-7-brew-counts-down-to-hilltop-opening/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Bibibop",
+      "location": "East Lansing, MI (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "under construction",
+      "short_description": "Bibibop is expanding to East Lansing for its first Michigan location, currently under construction with no confirmed address or opening date. The chain is already hiring for all positions at the new location.",
+      "article_link": "https://whatnow.com/detroit/restaurants/bibibop-expanding-to-east-lansing-to-make-michigan-debut/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Birista House",
+      "location": "1129 Coker St, Irving, TX 75062",
+      "event_type": "Opening",
+      "event_date": "Not specified (construction projected September 2026, completion June 2027)",
+      "status": "still several months away from opening",
+      "short_description": "Birista House, a Hyderabad-cuisine restaurant, plans to open its second U.S. location at 1129 Coker St. in Irving, TX. The project is in early development stages with construction projected to begin in September 2026.",
+      "article_link": "https://whatnow.com/dallas/restaurants/birista-house-to-open-second-location-in-texas/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Creations Coffee Co.",
+      "location": "137 N Main St, Walnut Cove, NC 27052",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "entering a new chapter",
+      "short_description": "Creations Coffee Co. has undergone an ownership transition in Walnut Cove, with Justin and Ashley Duncan taking over the faith-based coffee shop. The new owners plan to continue the community-focused mission while investing in the business's future growth.",
+      "article_link": "https://whatnow.com/charlotte/restaurants/creations-coffee-co-brewing-up-growth-in-walnut-cove/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Sweet July Café",
+      "location": "201 E Trade St, Charlotte, NC 28202",
+      "event_type": "Opening",
+      "event_date": "July 2026 (target)",
+      "status": "targeting a July debut",
+      "short_description": "Sweet July Café, a concept from Ayesha Curry's Sweet July lifestyle brand, is set to open at The Ritz-Carlton Charlotte in July. The café will offer coffee, baked goods, smoothies, and menu items inspired by Curry's Jamaican heritage.",
+      "article_link": "https://whatnow.com/charlotte/restaurants/sweet-july-cafe-eyes-july-debut-at-the-ritz-carlton-charlotte/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Five Iron Golf",
+      "location": "609 Ryan St, Lake Charles, LA 70601",
+      "event_type": "Opening",
+      "event_date": "Late November 2026 (before Christmas)",
+      "status": "set to open",
+      "short_description": "Five Iron Golf is preparing to open a new location in Lake Charles, Louisiana, at the former Blue Dog Café site. The space will feature a full restaurant and bar, 10 golf simulators, and virtual sports and games. Owner Michael Boyer describes it as a one-of-a-kind atmosphere for all ages in Downtown Lake Charles.",
+      "article_link": "https://whatnow.com/new-orleans/restaurants/five-iron-golf-brings-food-fun-and-virtual-sports-to-lake-charles/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Peaky Peak Coffee and Charcuterie",
+      "location": "1075 Bannock St, Denver, CO 80204",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "preparing to open",
+      "short_description": "Peaky Peak Coffee and Charcuterie is planning a second location at 1075 Bannock Street in Denver's Modera Golden Triangle, occupying a 1,644-square-foot space with capacity for more than 70 people. The concept is owned by Tracy and Quy Nguyen and specializes in authentic Vietnamese coffee sourced directly from farmers in Vietnam. No opening date has been announced.",
+      "article_link": "https://whatnow.com/denver/restaurants/peaky-peak-coffee-and-charcuterie-plans-second-location-in-denver/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Ometeo",
+      "location": "50 Peabody St, Nashville, TN 37201",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "preparing to open",
+      "short_description": "Ometeo, a modern Tex-Mex concept from Washington, D.C.-based Long Shot Hospitality, is preparing to open at 50 Peabody Street in Nashville's South Bank neighborhood. The restaurant will be part of the Peabody Union mixed-use development and will emphasize live-fire cooking and ingredients sourced from the South and the Gulf Coast. No opening date has been announced.",
+      "article_link": "https://whatnow.com/nashville/restaurants/ometeo-sets-sights-on-nashville-debut-at-peabody-union/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Abyssinia (at Queen Sheba Ethiopian Restaurant & Bar location)",
+      "location": "4808 Central Ave, Charlotte, NC 28205",
+      "event_type": "Remodel",
+      "event_date": "Not specified",
+      "status": "potential rebranding or operational change indicated by permit filing",
+      "short_description": "A recently approved ABC Inspection Zoning Permit filed under the name \"Abyssinia\" indicates potential changes at the address currently occupied by Queen Sheba Ethiopian Restaurant & Bar. Additional zoning, use, and signage permits were submitted on May 15 by Noah Mesgane, who operates Queen Sheba. No formal announcement regarding the plans has been made.",
+      "article_link": "https://whatnow.com/charlotte/restaurants/abyssinia-filing-hints-at-changes-for-existing-queen-sheba-location/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "La Victoria Cocina Mexicana",
+      "location": "2519 Fairview Rd, Raleigh, NC 27608",
+      "event_type": "Opening",
+      "event_date": "October or November 2026 (pending permit approvals)",
+      "status": "targeting an October or November opening",
+      "short_description": "La Victoria Cocina Mexicana is preparing to expand into Raleigh with a new restaurant at 2519 Fairview Road, marking the second location for the concept, which currently operates in Cary. The restaurant is operated by JalMex Hospitality Group co-owner Salvador Alvarez and serves authentic Mexican dishes and Tex-Mex favorites. The opening is pending permit approvals.",
+      "article_link": "https://whatnow.com/charlotte/restaurants/family-oriented-la-victoria-cocina-mexicana-expanding-to-raleigh/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Sho Pizza Bar",
+      "location": "54 White Bridge Pike, Nashville, TN 37205",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "targeting a space",
+      "short_description": "Sho Pizza Bar is planning a second Nashville-area location targeting a space at 54 White Bridge Pike in West Nashville, according to the Nashville Scene. The Tokyo-inspired neo-Neapolitan pizza concept was founded by Mary Carlisle Gambill, Ben Gambill, and chef Sean Brock, and debuted in East Nashville's Riverside Village. No opening timeline has been announced.",
+      "article_link": "https://whatnow.com/nashville/restaurants/sho-pizza-bar-eyes-west-nashville-expansion/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Tanhuo Yanji BBQ",
+      "location": "524 6th Ave S, Seattle, WA 98104",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "planned",
+      "short_description": "Tanhuo Yanji BBQ is planned for 524 6th Ave S in Seattle, according to licensing information from the Washington State Liquor and Cannabis Board. The proposed location previously housed Shanghai Garden, a longtime casual Chinese restaurant. No opening timeline or menu details have been announced.",
+      "article_link": "https://whatnow.com/seattle/restaurants/tanhuo-yanji-bbq-planned-for-seattle/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Petite Lucie",
+      "location": "301 Milam St, Houston, TX 77002 (Market Square Park)",
+      "event_type": "Opening",
+      "event_date": "May 30, 2026",
+      "status": "soft open May 30",
+      "short_description": "Petite Lucie, a French-inspired café, bakery, and garden bar from Culinary Matters, will soft open on May 30 at Market Square Park in Downtown Houston. The concept is designed to offer a relaxed, Parisian-inspired atmosphere with an indoor-outdoor layout, open daily from 7 a.m. to 9 p.m. The project was designed by Gensler.",
+      "article_link": "https://whatnow.com/houston/restaurants/a-new-all-day-french-inspired-cafe-and-garden-bar-concept-is-set-to-open-in-downtown-houston/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Chim Chim Thai",
+      "location": "13802 N Scottsdale Rd #130, Scottsdale, AZ 85254",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "planned",
+      "short_description": "Chim Chim Thai is planned for 13802 N Scottsdale Rd #130 in Scottsdale, according to Arizona Department of Liquor Licenses and Control records, with ownership listed under Kin Wah Lum and Chim Chim Group LLC. Site plans show a full-service restaurant layout with a main dining room, kitchen, and an outdoor patio. No opening timeline or menu details have been publicly announced.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/chim-chim-thai-planned-for-scottsdale/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Atomic Wings",
+      "location": "2112 N High St, Columbus, OH 43201",
+      "event_type": "Opening",
+      "event_date": "Ahead of fall 2026 college football season",
+      "status": "targeting an opening ahead of the upcoming college football season",
+      "short_description": "Atomic Wings is preparing to open its first Ohio location at 2112 N. High St. near the Ohio State University campus in Columbus. The Buffalo-inspired chicken wing chain is currently in the design and planning stages, targeting an opening before the college football season begins. The restaurant will serve fresh, never-frozen halal chicken wings with approximately 15 sauces.",
+      "article_link": "https://whatnow.com/columbus/restaurants/buffalo-inspired-atomic-wings-plans-first-ohio-location-near-osu/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Osteria Gilberto",
+      "location": "1224 W Webster Ave, Chicago, IL 60614",
+      "event_type": "Opening",
+      "event_date": "July 2026",
+      "status": "aiming for a July opening date",
+      "short_description": "A liquor license application was recently submitted for Osteria Gilberto, an Italian concept coming to 1224 W Webster Avenue in Lincoln Park. Owner Sergio Barbone, who also owns Bakehouse Chicago, is aiming for a July opening but has not yet released further details about the restaurant. Social media pages are planned to be created as the opening approaches.",
+      "article_link": "https://whatnow.com/chicago/restaurants/new-osteria-gilberto-italian-concept-in-the-works-for-lincoln-park/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Le Petit Comptoir Wine & Cheese",
+      "location": "1 Atlantic Ave, Marblehead, MA 01945",
+      "event_type": "Opening",
+      "event_date": "July 2026 (tentative)",
+      "status": "tentatively targeting a July 2026 opening",
+      "short_description": "Le Petit Comptoir Wine & Cheese is slated to open beside Marblehead House of Pizza at 1 Atlantic Ave in Marblehead, with owner Alex Lewis currently hiring ahead of the opening. The concept will feature small plates, charcuterie boards, grilled cheeses, and wine, and is designed as a welcoming space for all ages. The timeline is still dependent on final preparations and hiring efforts.",
+      "article_link": "https://whatnow.com/boston/restaurants/le-petit-comptoir-wine-cheese-to-debut-as-inclusive-gathering-space-in-marblehead-this-summer/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "The Laureate (boutique hotel & restaurant)",
+      "location": "167 Laurens St SW, Aiken, SC 29801",
+      "event_type": "Opening",
+      "event_date": "Fall 2026 (groundbreaking); opening date not specified",
+      "status": "will break ground this fall",
+      "short_description": "A new boutique hotel, The Laureate, will break ground this fall in downtown Aiken, incorporating the historic Farmers and Merchants Bank Building at 167 Laurens St. The development will include a four-story structure with 84 rooms, suites, and extended-stay residences, as well as a lobby bar, garden courtyard, restaurant, and bar in the historic bank building. The restaurant is still finalizing its menu and name.",
+      "article_link": "https://whatnow.com/charleston/restaurants/new-boutique-hotel-to-break-ground-in-downtown-aiken-this-fall/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "El Camaron Peludo",
+      "location": "20 Cornelia St, New York, NY 10014",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening (no timeline announced)",
+      "short_description": "El Camaron Peludo, a seafood-centric restaurant, is planned for 20 Cornelia St. in the West Village, from restaurateur Giovanni Cervantes, founder of Taqueria Ramirez and Carnitas Ramirez. The small space will feature primarily bar seating for 12 guests and table seating for 4, with a proposed menu including shrimp aguachile, tuna tostada, and sardine tacos. The owners are currently seeking a beer and wine license through Community Board 2.",
+      "article_link": "https://whatnow.com/new-york/restaurants/taqueria-ramierz-founder-opening-seafood-spot-in-the-west-village/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Baby Jane",
+      "location": "500 Brickell Ave #105e, Miami, FL 33131",
+      "event_type": "Closing",
+      "event_date": "May 30, 2026",
+      "status": "set to close",
+      "short_description": "Baby Jane, a cocktail house and noodle bar operating for a decade at 500 Brickell Avenue, is set to close on May 30, 2026, following unsuccessful lease extension negotiations. The venue was founded by Jason Odio and Roman Jones in 2016 and became known for its live music, craft cocktails, and Asian-inspired menu. The announcement surprised the local community, with many regulars sharing farewell messages on social media.",
+      "article_link": "https://whatnow.com/miami/restaurants/longtime-brickell-bar-set-for-closure-after-lease-negotiation-breakdown/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Southern Star Brewing Company",
+      "location": "3525 N Frazier St, Conroe, TX 77303",
+      "event_type": "Closing",
+      "event_date": "June 28, 2026",
+      "status": "will close permanently on June 28, 2026",
+      "short_description": "Southern Star Brewing Company, an independent craft brewery founded in 2008 and operating in Conroe for nearly two decades, announced it will permanently close on June 28, 2026. The company did not share a reason for the closure but noted the journey was about people, memories, and community. The taproom will continue to operate as normal through the final weeks before closing.",
+      "article_link": "https://whatnow.com/houston/restaurants/historic-texas-craft-brewery-known-for-first-canned-beer-milestone-is-closing/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "The Lucky Spot",
+      "location": "1431 Stockton St, San Francisco, CA 94133",
+      "event_type": "Opening",
+      "event_date": "Not specified (recently opened)",
+      "status": "officially open",
+      "short_description": "The Lucky Spot, a new neighborhood bar from Highfield Hospitality, is officially open at 1431 Stockton Street in North Beach, San Francisco. The concept is the second from owner Barry John Walsh, following For The Record in the Marina, and is designed as an easygoing gathering place with an approachable cocktail program. The space features decor inspired by San Francisco's neighborhoods, sports history, and local culture.",
+      "article_link": "https://whatnow.com/san-francisco/restaurants/highfield-hospitality-opens-the-lucky-spot-in-north-beach/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Upside",
+      "location": "59 NW 28th St, Miami, FL 33127",
+      "event_type": "Opening",
+      "event_date": "June 5, 2026",
+      "status": "set to open on June 5",
+      "short_description": "Upside, a music-driven cocktail destination, is set to open on June 5 in Wynwood's Arts District at 59 NW 28th St. The venue will combine live music programming, visually driven interiors, and a cocktail-focused menu, with a culinary program led by Executive Chef Pablo Lamon, a Top Chef Season 16 competitor. The space is designed to transition from daytime gatherings into late-night experiences.",
+      "article_link": "https://whatnow.com/miami/restaurants/a-high-energy-music-driven-cocktail-concept-is-headed-to-wynwood/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "House Rules",
+      "location": "3071 Rancho Dr, Las Vegas, NV 89102",
+      "event_type": "Opening",
+      "event_date": "Sometime in 2026",
+      "status": "coming soon",
+      "short_description": "House Rules, an adult arcade and entertainment restaurant, is set to debut in the Rancho Charleston neighborhood of Las Vegas at 3071 S Rancho Dr, across from Area15. The concept originated as \"Lane Park\" in Scottsdale in 2023 and was rebranded in 2024 to offer a high-energy, upscale social gaming experience with a scratch-kitchen menu. The opening is anticipated sometime this year, per a City of Las Vegas permit.",
+      "article_link": "https://whatnow.com/las-vegas/restaurants/house-rules-is-coming-to-las-vegas/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Clutch Sports Bar (Location 1)",
+      "location": "1020 W Nasa Parkway, Suite 132, Houston, TX (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "Before end of summer 2026",
+      "status": "expected to open before the end of summer",
+      "short_description": "Clutch Sports Bar is expected to open in the Point Nasa Shopping Center at 1020 W Nasa Parkway, Suite 132, with construction slated to start next month and wrap up at the end of August. The brand previously permanently closed its Washington Avenue location last year following noise and security complaints. Sundown Entertainment is reviving the concept at two new Houston-area locations.",
+      "article_link": "https://whatnow.com/houston/restaurants/clutch-sports-bar-is-coming-back/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Clutch Sports Bar (Location 2)",
+      "location": "1201 St Emanuel Street, Houston, TX (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "set to open soon",
+      "short_description": "Clutch Sports Bar's second new location will be in the East Downtown area at 1201 St Emanuel Street, with no timeline announced. Sundown Entertainment announced plans to revive the Clutch Bar concept at two new Houston-area locations following the permanent closure of its Washington Avenue location. Further details are expected to be revealed as summer winds down.",
+      "article_link": "https://whatnow.com/houston/restaurants/clutch-sports-bar-is-coming-back/",
+      "published_date": "May 29, 2026"
+    },
     {
       "store_name": "Greek Heaven",
       "location": "6010 W Craig Rd 120, Las Vegas, NV 89130",
       "event_type": "Opening",
-      "event_date": "Not specified (sometime this year)",
+      "event_date": "Sometime this year (2026)",
       "status": "anticipated to open",
-      "short_description": "Greek Heaven is expected to open in the former Cafe Peru space in Centennial Hills, Northwest Las Vegas. The concept is led by Noushin Zareh and Bijan Ketabi, per a City of Las Vegas permit. No online presence or menu details are currently available.",
+      "short_description": "Greek Heaven is set to open in the former Cafe Peru space in Centennial Hills, Northwest Las Vegas. The owners are Noushin Zareh and Bijan Ketabi, per a City of Las Vegas permit. No online presence or social media for the new eatery exists at time of publication.",
+      "article_link": "https://whatnow.com/las-vegas/restaurants/greek-heaven-to-open-in-northwest-las-vegas/",
+      "published_date": "May 29, 2026"
+    },
+    {
+      "store_name": "Cafe Peru",
+      "location": "6010 W Craig Rd 120, Las Vegas, NV 89130",
+      "event_type": "Closing",
+      "event_date": "2026 (exact date not specified)",
+      "status": "closed this year",
+      "short_description": "Cafe Peru vacated its space at 6010 W Craig Rd 120 in Centennial Hills, Las Vegas. The restaurant has since relocated to 10090 S. Eastern Ave. in Henderson.",
       "article_link": "https://whatnow.com/las-vegas/restaurants/greek-heaven-to-open-in-northwest-las-vegas/",
       "published_date": "May 29, 2026"
     },
@@ -15,19 +935,19 @@
       "store_name": "Wonder Food Hall (Spring)",
       "location": "6625 Spring Stuebner Rd, Spring, TX (zip not specified)",
       "event_type": "Opening",
-      "event_date": "Winter 2026 (estimated)",
+      "event_date": "Winter 2026 (construction Sept–Nov 2026)",
       "status": "expected to open by this winter",
-      "short_description": "Wonder, a \"fast-fine\" food and delivery concept, filed a permit to open at Grand Parkway Marketplace II in Spring, TX. Construction is slated to start in September and wrap in November on a 3,160 sq-ft space. The location will be one of two Greater Houston debuts for the New York-based chain.",
+      "short_description": "Wonder, a New York-based \"fast-fine\" food hall concept, filed a permit to open a 3,160 sq ft location at Grand Parkway Marketplace II in Spring, TX. Construction is estimated at approximately $1 million and is slated to begin in September and conclude in November.",
       "article_link": "https://whatnow.com/houston/restaurants/wonder-food-hall-is-coming-to-spring/",
       "published_date": "May 29, 2026"
     },
     {
       "store_name": "Wonder Food Hall (Washington Ave/Heights)",
-      "location": "107 Yale Street, Houston, TX (zip not specified)",
+      "location": "107 Yale Street, Washington Avenue corridor, Houston, TX (zip not specified)",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "expected to open (permit filed)",
-      "short_description": "Wonder filed a permit for a second Greater Houston location at 107 Yale Street in the Washington Avenue corridor near the Heights. This will be part of Wonder's Texas debut alongside the Spring location. No construction timeline was specified for this location.",
+      "status": "expected to open (per recently filed permit)",
+      "short_description": "A second Greater Houston Wonder Food Hall location is planned for 107 Yale Street in the Washington Avenue corridor near the Heights, per a recently filed permit. Both Houston-area locations will mark Wonder's Texas debut.",
       "article_link": "https://whatnow.com/houston/restaurants/wonder-food-hall-is-coming-to-spring/",
       "published_date": "May 29, 2026"
     },
@@ -37,905 +957,61 @@
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "definitive agreement to acquire",
-      "short_description": "Fertitta Entertainment has signed a definitive agreement to acquire Caesars Entertainment in an all-cash transaction valued at approximately $17.6 billion. Fertitta Entertainment is also taking on approximately $11.9 billion of Caesars' outstanding debt. No operational opening or closing event was described.",
+      "short_description": "Fertitta Entertainment has signed a definitive agreement to acquire Caesars Entertainment in an all-cash transaction valued at approximately $17.6 billion, also assuming roughly $11.9 billion of Caesars' outstanding debt. Fertitta Entertainment, founded by Tilman Fertitta in 1986, also owns Golden Nugget Hotels & Casinos and Landry's.",
       "article_link": "https://whatnow.com/las-vegas/restaurants/caesars-entertainment-is-bought-by-houston-based-fertitta-entertainment/",
       "published_date": "May 29, 2026"
     },
     {
       "store_name": "Wingstop",
-      "location": "12230 W Lake Houston Pkwy, Suite 165, Houston, TX 77044",
+      "location": "12230 W. Lake Houston Pkwy, Suite 165, Houston, TX 77044",
       "event_type": "Opening",
-      "event_date": "Fall 2026 (estimated)",
-      "status": "should open by this fall",
-      "short_description": "Wingstop filed a permit to open at W. Lake Village, with construction slated to start mid-July and wrap mid-September on a 1,352 sq-ft space. The location is being developed by franchisee group GSR Group, run by Rahul Agrawal. The $250,000 construction project includes demolition, new walls, floors, ceiling finishes, and new equipment.",
+      "event_date": "Fall 2026 (construction mid-July to mid-September)",
+      "status": "anticipated to open…by this fall",
+      "short_description": "Wingstop filed a permit to open a 1,352 sq ft location in W. Lake Village, operated by franchisee group GSR Group under Rahul Agrawal. Construction involves demolition, new walls, floors, ceiling finishes, and new equipment with a budget of $250,000.",
       "article_link": "https://whatnow.com/houston/restaurants/wingstop-is-opening-a-location-in-w-lake-village/",
       "published_date": "May 29, 2026"
-    },
-    {
-      "store_name": "Bourbon Street Grill",
-      "location": "1245 Worcester St., Suite 2006, Natick, MA 01760",
-      "event_type": "Opening",
-      "event_date": "Mid-April 2025",
-      "status": "recently opened",
-      "short_description": "Bourbon Street Grill, a Cajun-inspired fast-casual concept, officially opened in the Natick Mall food court, replacing Cajun Cafe. The restaurant is operated by Tuo \"Todd\" Xiao and Xing, and the pre-opening process took approximately six months. The menu features Cajun and Creole flavors prepared using grilling, wok cooking, and frying techniques.",
-      "article_link": "https://whatnow.com/boston/restaurants/bourbon-street-grill-brings-cajun-inspired-flavors-to-natick/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Laurel",
-      "location": "1500 E Olive Way, Seattle, WA 98122",
-      "event_type": "Closing",
-      "event_date": "June 6, 2026",
-      "status": "scheduled to close June 6",
-      "short_description": "Laurel, a cocktail bar on Capitol Hill, is scheduled to close June 6 as owner Kate Opatz prepares to reshape the space into a new concept. Opatz has not yet publicly shared details about the new concept or its opening timeline. Laurel opened in spring 2025 as a coffee and cocktail destination in the former Crumble & Flake bakery space.",
-      "article_link": "https://whatnow.com/seattle/restaurants/laurel-owner-preparing-new-concept-for-capitol-hill/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "GoodMart",
-      "location": "5130 Ballard Ave NW, Seattle, WA 98107",
-      "event_type": "Opening",
-      "event_date": "Not announced",
-      "status": "opening timeline has not yet been announced",
-      "short_description": "GoodMart, a market and dining counter concept from Local Tide chef Victor Steinbrueck, is planned for the former Kathy Casey Food Studios space in Old Ballard. Construction is reportedly underway with Dovetail as general contractor and Heliotrope Architects leading design. No official opening timeline has been announced.",
-      "article_link": "https://whatnow.com/seattle/restaurants/local-tide-chef-planning-goodmart-for-old-ballard/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Kaiya",
-      "location": "3300 Newport Blvd, Newport Beach, CA 92663",
-      "event_type": "Opening",
-      "event_date": "July 2026",
-      "status": "set to open in July",
-      "short_description": "Kaiya, an intimate 12-seat omakase Japanese cuisine concept, is set to open inside the Lido House boutique hotel in Newport Beach in July. The project involves executive chef partner Riley Huddleston and chef Brian Kim. No menu details have yet been announced.",
-      "article_link": "https://whatnow.com/orange-county/restaurants/new-restaurant-kaiya-headed-to-newport-beach-this-summer/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Jack's Family Restaurant",
-      "location": "6480 Winchester Rd, Memphis, TN 38115",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "pending (subdivision application)",
-      "short_description": "Jack's Family Restaurant has filed a subdivision application with the Memphis and Shelby County Division of Planning and Development for a new location at 6480 Winchester Road. The application status is listed as \"pending\" as of May 28, and must receive approval before construction can begin. No definitive opening timeline has been provided.",
-      "article_link": "https://whatnow.com/memphis/restaurants/jacks-family-restaurant-plans-new-location/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Pilar Coffee Bar",
-      "location": "7100 Fairway Dr, Palm Beach Gardens, FL 33418",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "No official opening date has been announced",
-      "short_description": "PBC Cafe Stuart filed permit applications with the Florida Department of Business and Professional Regulation to open a Pilar Coffee Bar at 7100 Fairway Drive. No official opening date has been announced. The shop is known for coffees made with mountain-grown beans from Brazil and Colombia and also offers pastries, sandwiches, and chocolate drinks.",
-      "article_link": "https://whatnow.com/miami/restaurants/pilar-coffee-bar-is-coming-to-palm-beach-gardens/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Mabel's Bakery (College Street)",
-      "location": "College Street, Toronto, ON (exact address not specified)",
-      "event_type": "Opening",
-      "event_date": "Early June 2026",
-      "status": "scheduled to open in early June",
-      "short_description": "Mabel's Bakery is preparing to open a new location on College Street in Toronto, moving into the longtime home of Riviera Bakery, which operated for roughly 50 years before closing. The new location will offer a mix of Mabel's Bakery items alongside select classic Riviera Bakery products. Founder Lorraine Hawley confirmed the transition and renovation plans in a letter posted at the storefront.",
-      "article_link": "https://whatnow.com/toronto/restaurants/mabels-bakery-opening-new-site-on-college-street/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Smoothie King",
-      "location": "830 S Military Trail, Suite A, West Palm Beach, FL (scraper address: Deerfield Beach, FL 33442)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "blending soon",
-      "short_description": "Big Boy Eats LLC filed permit applications to open a Smoothie King at 830 S. Military Trail, Suite A, in West Palm Beach. The Smoothie King website confirms the location will be \"blending soon,\" though no exact opening date has been announced. The chain was founded in 1973 and operates more than 1,300 locations worldwide.",
-      "article_link": "https://whatnow.com/miami/restaurants/smoothie-king-is-coming-to-west-palm-beach/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Hungry AF Eats & Catering",
-      "location": "3364 Poplar Ave, Memphis, TN 38111",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "certificate of occupancy issued; opening timeline not yet available",
-      "short_description": "Hungry AF Eats & Catering has received a certificate of occupancy from the Memphis and Shelby County Division of Planning and Development for a new 2,300 sq-ft restaurant at 3364 Poplar Avenue. The restaurant will have an occupant load of 45 and offer both dine-in and takeout service. No opening timeline has been announced.",
-      "article_link": "https://whatnow.com/memphis/restaurants/hungry-af-eats-catering-preparing-to-fill-rumbling-memphis-tummies/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "La Rotonde",
-      "location": "3968 Fifth Ave, San Diego, CA 92103",
-      "event_type": "Opening",
-      "event_date": "Summer 2026",
-      "status": "expected to open in summer 2026",
-      "short_description": "La Rotonde, a coffee, music, and wine-focused concept developed by Valle Hospitality Group LLC, is preparing to open in the former Makai Sushi space in Hillcrest. No exact opening date or menu details have been announced. The concept appears to be a hybrid space combining daytime coffee service with an evening wine component and music.",
-      "article_link": "https://whatnow.com/san-diego/restaurants/la-rotonde-coming-to-hillcrest-this-summer/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "AGO Coffee Bar & Community Space",
-      "location": "317 Dundas St W, Toronto, ON M5T 1G4, Canada",
-      "event_type": "Opening",
-      "event_date": "November 2026 (scheduled completion)",
-      "status": "scheduled for completion in November 2026",
-      "short_description": "The Art Gallery of Ontario is adding a new coffee bar and redesigned community retail space to its Toronto location, backed by the RBC Foundation Community Spaces Grant. Construction is expected to begin June 2026 and will introduce a coffee bar, additional seating, public washrooms, and a maker space within a 5,068 sq-ft retail area. The refreshed space will remain accessible without museum admission.",
-      "article_link": "https://whatnow.com/toronto/restaurants/ago-adding-new-coffee-bar-and-community-space/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Infusion Lab",
-      "location": "4638 Mission Blvd, San Diego, CA 92109",
-      "event_type": "Opening",
-      "event_date": "Late June or early July 2026",
-      "status": "planned opening timeframe is late June or early July 2026",
-      "short_description": "Infusion Lab, a specialty dessert and coffee shop co-founded by Baran Aydin and Aselin Bay, is preparing to open in Pacific Beach next to the now-closed Copper Top Coffee & Donuts. The shop will offer espresso drinks, matcha, ube beverages, sandwiches, house-made cookies, and European-inspired desserts. The founders plan to develop a lifestyle brand tied to the cafe, including branded merchandise.",
-      "article_link": "https://whatnow.com/san-diego/restaurants/infusion-lab-preparing-to-open-in-pacific-beach/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "La Sponda",
-      "location": "4 Grove Isle Dr, Miami, FL 33133",
-      "event_type": "Opening",
-      "event_date": "Summer 2026",
-      "status": "opening summer 2026",
-      "short_description": "La Sponda, an Italian coastal restaurant by Gioia Hospitality Group, is opening at Vita at Grove Isle in Coconut Grove, overlooking Biscayne Bay. The restaurant will be open for brunch, lunch, and dinner and will feature interiors by MBDS Design Studio. No specific opening date or menu details have been released.",
-      "article_link": "https://whatnow.com/miami/restaurants/la-sponda-opening-in-coconut-grove/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Red Robin",
-      "location": "2697 Tittabawassee Rd, Saginaw, MI 48604",
-      "event_type": "Opening",
-      "event_date": "Around November 2026",
-      "status": "hoping to open the restaurant around November",
-      "short_description": "Red Robin franchise Ansara Restaurant Group announced a new location at 2697 Tittabawassee Road in Saginaw, replacing Logan's Roadhouse at the address. CEO Victor Ansara told What Now Detroit the target opening is around November. The location is just north of Fashion Square Mall.",
-      "article_link": "https://whatnow.com/detroit/restaurants/red-robin-heading-north-to-saginaw-targeting-fall-opening/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Trap Wingz (Camp Creek)",
-      "location": "3755 Carmia Dr SW #430, Atlanta, GA 30331",
-      "event_type": "Opening",
-      "event_date": "Within approximately 2 months of May 28, 2026",
-      "status": "should open in the next two months",
-      "short_description": "Trap Wingz is expanding with a new location at Camp Creek Marketplace, with owner Damico Green stating the location should open within the next two months. The menu will feature wings, smashburgers, sandwiches, sides, and seafood items including salmon bites and fish po'boys. The brand already has existing locations along Piedmont Road and Martin Luther King Jr. Drive.",
-      "article_link": "https://whatnow.com/atlanta/restaurants/trap-wingz-adding-two-locations-this-year/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Trap Wingz (Cobb County)",
-      "location": "4725 S Atlanta Rd SE, Atlanta, GA 30339",
-      "event_type": "Opening",
-      "event_date": "Within approximately 4 months of May 28, 2026",
-      "status": "about four months out from opening",
-      "short_description": "Trap Wingz is planning a second new location in Cobb County at 4725 S. Atlanta Rd SE, approximately four months out from opening. This is part of owner Damico Green's broader expansion plan that also includes scouting locations in Gwinnett and Tucker. No additional details about this location's menu or buildout have been provided.",
-      "article_link": "https://whatnow.com/atlanta/restaurants/trap-wingz-adding-two-locations-this-year/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Manjul",
-      "location": "1206 N 4th St, Columbus, OH 43201",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "official opening date has not yet been announced",
-      "short_description": "Manjul, a New York-based concept combining specialty coffee with curated fashion retail, is preparing to open its first Ohio location in Columbus at the 4th & 5th Apartments development in Weinland Park. Construction is underway, though no official opening date has been announced. The brand debuted in New York City's SoHo neighborhood in early 2025.",
-      "article_link": "https://whatnow.com/columbus/restaurants/new-york-coffee-and-fashion-concept-manjul-expands-to-columbus/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Club Fortune North",
-      "location": "2757 Las Vegas Blvd N, North Las Vegas, NV 89030",
-      "event_type": "Opening",
-      "event_date": "Summer 2026",
-      "status": "under construction, slated to be completed this year with a summer opening in mind",
-      "short_description": "Club Fortune North is a rebrand of the former Poker Palace casino in North Las Vegas, purchased by Reno-based Truckee Gaming for $20 million after the Poker Palace closed in October. Construction is currently underway and a summer 2026 opening is anticipated. The new casino will feature quick bites, a bar, and a full slot floor.",
-      "article_link": "https://whatnow.com/las-vegas/restaurants/club-fortune-north-to-open-in-former-poker-palace-casino-in-nlv/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Slice House by Tony Gemignani",
-      "location": "1780 S Victoria Ave, Unit E, Ventura, CA 93003",
-      "event_type": "Opening",
-      "event_date": "July 2026",
-      "status": "set to open",
-      "short_description": "Fast-casual pizza franchise Slice House by Tony Gemignani will open a new location in the Montalvo Square Shopping Center in Ventura in July 2026. The location will seat 35 customers indoors plus an outdoor patio, operating daily from 11 a.m. to 9 p.m. (10 p.m. Friday–Saturday). It is the franchise's seventh location under operator Vinny Margott, who also runs units across Ventura and Los Angeles Counties.",
-      "article_link": "https://whatnow.com/los-angeles/restaurants/slice-house-by-tony-gemignani-opening-ventura-location-this-summer/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Zio Al's Pizza & Pasta",
-      "location": "8888 Metropark Dr, Shenandoah, TX 77385",
-      "event_type": "Opening",
-      "event_date": "2026 (exact date not specified)",
-      "status": "inching towards opening",
-      "short_description": "Zio Al's Pizza & Pasta is expanding to Shenandoah's Metropark Square, with signage already displayed on the building. An opening is expected this year pending permitting and construction, though an exact date has not been revealed. The Dallas-Fort Worth–founded chain, established in 2010, now has a dozen locations.",
-      "article_link": "https://whatnow.com/houston/restaurants/zio-als-pizza-and-pasta-to-open-in-shenandoah/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Kilwins Ice Cream (The Loop location)",
-      "location": "The Loop, Chicago, IL (Address not specified)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "planned",
-      "short_description": "Kilwins Ice Cream franchisees Jackie and Janel Jackson are planning an additional shop in The Loop in Chicago. A location recently debuted in Burr Ridge. No opening date or specific address was provided.",
-      "article_link": "https://whatnow.com/chicago/restaurants/restaurant-owners-and-what-now-partners-network-at-latest-chicago-accelerate-event/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "EMei Restaurant (Rittenhouse Square / Walnut St.)",
-      "location": "2007–2011 Walnut St., Philadelphia, PA 19103",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "eyes possible expansion",
-      "short_description": "Owner Dan Tsao purchased a 17,600-square-foot property at 2007–2011 Walnut St., originally intending it as a flagship EMei location, but now has concerns about oversaturation. A pop-up for FIFA World Cup and America's 250th anniversary visitors is also being considered for the space this summer. No confirmed opening type or date has been announced.",
-      "article_link": "https://whatnow.com/philadelphia/restaurants/emei-restaurant-owner-eyes-possible-rittenhouse-expansion/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "EMei Restaurant (East Passyunk)",
-      "location": "East Passyunk, Philadelphia, PA (Address not specified)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "opening",
-      "short_description": "Owner Dan Tsao is opening an EMei Restaurant in East Passyunk in the former Marra's space. No address or opening date was provided. This is one of three EMei locations currently in development.",
-      "article_link": "https://whatnow.com/philadelphia/restaurants/emei-restaurant-owner-eyes-possible-rittenhouse-expansion/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "EMei Restaurant (Ardmore)",
-      "location": "Ardmore, PA — former John Henry's pub (Address not specified)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "opening",
-      "short_description": "Owner Dan Tsao is opening an EMei Restaurant in a suburban Ardmore location in the former John Henry's pub space. No specific address or opening date was provided. This is one of three EMei locations currently in development.",
-      "article_link": "https://whatnow.com/philadelphia/restaurants/emei-restaurant-owner-eyes-possible-rittenhouse-expansion/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Curated Coffee Books & Plants",
-      "location": "332 Ormond St. SE, Suite 104, Atlanta, GA 30315",
-      "event_type": "Opening",
-      "event_date": "2026 (exact date not specified)",
-      "status": "expected to open sometime this year",
-      "short_description": "Curated Coffee Books & Plants, a mobile espresso bar and coffee cart concept founded in 2023, is transitioning to a permanent brick-and-mortar location in Grant Park. The team has received keys to the new space. Further details remain largely unknown.",
-      "article_link": "https://whatnow.com/atlanta/restaurants/curated-coffee-books-plants-plans-transition-to-brick-and-mortar/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Cerebral Brewing (Parker Taproom)",
-      "location": "20117 E Main Street, Parker, CO 80138",
-      "event_type": "Opening",
-      "event_date": "Mid-2027",
-      "status": "plans to open next year",
-      "short_description": "Cerebral Brewing plans to open a new 4,200-square-foot taproom in Downtown Parker, Colorado, expected by mid-2027. The Denver-based independent brewery, established in 2015, currently has taprooms in West Highland, Congress Park, and Aurora. The new location will offer beer, food, and community gathering space.",
-      "article_link": "https://whatnow.com/denver/restaurants/cerebral-brewing-expands-with-new-parker-taproom/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Boardwalk Tavern",
-      "location": "23 Old Stagecoach Rd, Bailey, CO 80421",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "no opening date yet",
-      "short_description": "Boardwalk Tavern is a new Coney Island Boardwalk–themed concept coming to Bailey, Colorado, per a recent Liquor License filing. Owner Alec Crisafulli says excitement is already building, though no opening date has been set. The tavern aims to attract both tourists and locals as a neighborhood gathering spot.",
-      "article_link": "https://whatnow.com/denver/restaurants/boardwalk-tavern-set-to-debut-in-bailey-colorado/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Seoul Stop (2nd location)",
-      "location": "6275 Siegen Ln, Baton Rouge, LA 70809",
-      "event_type": "Opening",
-      "event_date": "Not specified (expected June but delayed)",
-      "status": "no clear opening date yet",
-      "short_description": "Seoul Stop is preparing a larger second Baton Rouge location at 6275 Siegen Lane, a 6,000-square-foot space that will expand on the original store's Korean snacks, kimbap, and drinks concept. General Manager Minho Kim confirmed the space will include a Korean Deli, expanded retail, K-Beauty, and K-Pop merchandise. While a June opening was anticipated, more work still needs to be done.",
-      "article_link": "https://whatnow.com/new-orleans/restaurants/seoul-stop-expanding-with-even-bigger-location-in-baton-rouge/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Vasco's Peri Peri (Naperville)",
-      "location": "3124 Route 59, Naperville, IL 60564",
-      "event_type": "Opening",
-      "event_date": "July 2026",
-      "status": "under construction",
-      "short_description": "Vasco's Peri Peri is opening its fourth location at 3124 Route 59 in the Wheatland Marketplace shopping center in Naperville, with owner Samir Ajmeri hoping to debut in July. The restaurant serves Portuguese- and Indian-inspired fried chicken, pitas, wraps, bowls, and platters. Ajmeri will personally own this location, which follows existing units in Schaumburg, Lombard, and Arlington Heights.",
-      "article_link": "https://whatnow.com/chicago/restaurants/vascos-peri-peri-known-for-fried-chicken-and-pitas-finds-new-suburb/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Buitoni Spaghetti Bar",
-      "location": "528 Commonwealth Ave, Boston, MA 02215",
-      "event_type": "Opening",
-      "event_date": "Spring 2027",
-      "status": "slated to debut",
-      "short_description": "Tuscan Brands founder Joe Faro announced plans to open Buitoni Spaghetti Bar at 528 Commonwealth Ave in Kenmore Square, the former home of Blue Ribbon Brasserie and Eastern Standard. The concept, debuting spring 2027, draws inspiration from the original Buitoni Spaghetti Bar that operated in Times Square in the 1940s–1950s, focusing on handmade pasta, elevated comfort dishes, a bar program, and a late-night atmosphere.",
-      "article_link": "https://whatnow.com/boston/restaurants/tuscan-brands-bringing-vintage-inspired-buitoni-spaghetti-bar-to-kenmore-square-next-spring/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Bafang Dumpling (San Gabriel)",
-      "location": "140 W. Valley Blvd, Unit 102-103, San Gabriel, CA 91776",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "opening",
-      "short_description": "Taiwanese dumpling chain Bafang Dumpling has announced a new location coming to Tawa Gateway in San Gabriel. The chain, known for fast-casual potstickers, dumplings, and noodles, operates over 1,000 locations across Asia and has existing Southern California locations. An opening timeline has not yet been shared.",
-      "article_link": "https://whatnow.com/los-angeles/restaurants/bafang-dumpling-opening-new-location-in-san-gabriel/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Sushi Fukami",
-      "location": "1128 SW Alder Street, Portland, OR (zip not specified)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "firm opening date has not yet been announced",
-      "short_description": "Celebrated Portland omakase concept Sushi Fukami is graduating from pop-up to permanent with a new ~700-square-foot downtown location near Multnomah Whiskey Library, in the former Lil' Shalom space. Chef Cody Auger leads the project, building on his acclaimed sushi career at Hokusei, Fukami Sushiya, and Nimblefish. No firm opening date has been announced.",
-      "article_link": "https://whatnow.com/portland/restaurants/one-of-portlands-most-beloved-sushi-concepts-is-getting-a-permanent-home/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Hawaiian Bros Island Grill (Downtown Atlanta)",
-      "location": "112 Courtland St NE, Atlanta, GA 30303",
-      "event_type": "Opening",
-      "event_date": "2027 (based on permitting)",
-      "status": "plans to roll out locations next year",
-      "short_description": "Hawaiian Bros Island Grill is planning a Downtown Atlanta location at 112 Courtland St., per a recent permit filing, joining an existing Georgia location in Decatur. Nashville-based franchise group MRCO inked a 34-unit deal to expand the brand into West Central Georgia, North Carolina, and North Alabama. Original 2026 rollout plans appear to have shifted to 2027 based on permitting.",
-      "article_link": "https://whatnow.com/atlanta/restaurants/hawaiian-bros-planning-new-location-downtown/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Little Tart Bakeshop (Candler Park)",
-      "location": "1643 McLendon Ave. NE, Atlanta, GA 30307",
-      "event_type": "Opening",
-      "event_date": "Fall 2026",
-      "status": "expected to open this fall",
-      "short_description": "The Little Tart Bakeshop team is opening its fourth location in Candler Park at 1643 McLendon Ave. NE, in the former bridal shop Kelly's Closet space. The location will open alongside a new sister concept, Midi, in the neighboring retail unit. Both are expected to open this fall.",
-      "article_link": "https://whatnow.com/atlanta/restaurants/little-tart-team-planning-sister-concept-in-candler-park/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Midi",
-      "location": "1643 McLendon Ave. NE (neighboring unit), Atlanta, GA 30307",
-      "event_type": "Opening",
-      "event_date": "Fall 2026",
-      "status": "expected to open this fall",
-      "short_description": "Midi is a new sandwich and wine concept from Little Tart founder Sarah O'Brien, inspired by Parisian cafes, set to debut in Candler Park alongside the new Little Tart location. The menu will feature sandwiches made with homemade bread and local ingredients, salads, small bites, a wine and cocktail program, and soft serve. Both Midi and the new Little Tart are expected to open this fall.",
-      "article_link": "https://whatnow.com/atlanta/restaurants/little-tart-team-planning-sister-concept-in-candler-park/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Nantucket's Meat & Fish Market (Charleston)",
-      "location": "616 Coleman Blvd, Mt. Pleasant, SC 29464",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "official opening date has not yet been announced",
-      "short_description": "Nantucket's Meat & Fish Market is expanding into the Charleston area with a new location at 616 Coleman Blvd in Mount Pleasant. The family-owned shop will offer prime meats, fresh seafood, prepared foods, a wood-fired pizza oven, and a wine bar. The company is currently hiring for multiple positions, and no official opening date has been announced.",
-      "article_link": "https://whatnow.com/charleston/restaurants/nantuckets-meat-fish-market-to-expand-into-charleston/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Tequileros Taqueria (Fullerton)",
-      "location": "2720 Nutwood Ave, Fullerton, CA 92831",
-      "event_type": "Opening",
-      "event_date": "June 2026",
-      "status": "will debut in June",
-      "short_description": "Tequileros Taqueria is opening a new Fullerton location at 2720 Nutwood Ave, announced via Instagram, as part of the brand's ongoing California expansion. Owner Edgar Gomez also confirmed plans to expand to Rancho Cucamonga, Davis, Patterson, Turlock, and possibly Chino Hills and Newport by end of 2026, though no addresses or exact timelines were provided for those. Founded as a single taco truck in Lodi in 2021, the brand now has multiple brick-and-mortar locations across the state.",
-      "article_link": "https://whatnow.com/orange-county/restaurants/tequileros-taqueria-to-open-multiple-orange-county-locations-in-2026/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "SAYO Japanese Restaurant",
-      "location": "2255 Peachtree Rd NE, Suite F, Atlanta, GA 30309",
-      "event_type": "Opening",
-      "event_date": "June or July 2026",
-      "status": "aiming for an opening in either June or July",
-      "short_description": "SAYO Japanese Restaurant will open this summer in the former STARFISH space in Peachtree Hills, with a menu featuring nigiri, sashimi, rolls including A5 Wagyu and bluefin tuna, and chef tastings. Owner Karen Halim made cosmetic changes to the 2,121-square-foot, 50-seat space. Hours will be 11:30 a.m.–2:30 p.m. and 5–10 p.m. Tuesday–Friday, and 12–9 p.m. Saturday–Sunday.",
-      "article_link": "https://whatnow.com/atlanta/restaurants/sayo-japanese-restaurant-opening-this-summer/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Cheeky",
-      "location": "151 Meeting St., Suite 150, Charleston, SC 29401",
-      "event_type": "Opening",
-      "event_date": "Fall 2026",
-      "status": "aims for a fall 2026 reveal",
-      "short_description": "Cheeky is a new seafood-focused restaurant from The Neighborhood Dining Group (which also operates Husk, Minero, and Delaney Oyster Bar), set to open at 151 Meeting St. in downtown Charleston. The 3,500-square-foot space will feature indoor dining, an expansive bar, open-air windows, and an outdoor patio overlooking Meeting St. No official opening date has been announced.",
-      "article_link": "https://whatnow.com/charleston/restaurants/cheeky-to-open-in-downtown-charleston-this-fall-bolder-louder-livelier/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Brass Monkey Bread Co.",
-      "location": "Corner of S. 20th St. & Dickinson St., Philadelphia, PA (zip not specified)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "preparing to open first brick-and-mortar",
-      "short_description": "Brass Monkey Bread Co. is a sourdough bakery founded by former Kensington schoolteacher Zach Posnan, debuting its first brick-and-mortar at the corner of S. 20th and Dickinson St. in Philadelphia's Point Breeze neighborhood. Posnan built the brand through pop-ups and wholesale operations after pivoting from teaching. No opening date was specified in the article.",
-      "article_link": "https://whatnow.com/philadelphia/restaurants/former-kensington-schoolteacher-turned-sourdough-baker-prepares-to-open-first-brick-and-mortar/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Oklava Café",
-      "location": "945 Market St Floor 2, San Francisco, CA 94103",
-      "event_type": "Opening",
-      "event_date": "Late June/Early July 2026",
-      "status": "slated to debut",
-      "short_description": "Oklava Café is opening a second San Francisco location at Saluhall Food Hall, expanding beyond its original coffee shop format to include flatbreads, bowls, cooked meat dishes, and salads alongside its existing Turkish desserts and coffee offerings. The owner cited San Francisco's improving restaurant scene and proximity to IKEA as factors in choosing the location.",
-      "article_link": "https://whatnow.com/san-francisco/restaurants/oklava-cafe-to-debut-second-san-francisco-location-with-expanded-turkish-menu/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Slice Deli",
-      "location": "1563 S Commerce St, Las Vegas, NV 89102",
-      "event_type": "Opening",
-      "event_date": "Before end of summer 2026",
-      "status": "construction is currently underway",
-      "short_description": "Slice Deli is a new Italian-American to-go concept planned for the Downtown Las Vegas Arts District at The Distrikt shopping complex, led by Andrew and Vincent DeLillo. The menu will feature pizza, pasta, Italian hero sandwiches, salads, and catering services.",
-      "article_link": "https://whatnow.com/las-vegas/restaurants/slice-deli-to-bring-a-taste-of-italy-to-the-valley/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Playa Bowls",
-      "location": "2735 Town Center Blvd N, Unit R, Sugar Land, TX 77479",
-      "event_type": "Opening",
-      "event_date": "August 2026",
-      "status": "construction has not yet started",
-      "short_description": "Playa Bowls is bringing a new location to Sugar Land Town Square, with franchisee Aliyah Slater planning a grand opening event with balloons, a DJ, shirt giveaways, and free bowls for the first 50 guests. This will be one of the first brick-and-mortar Playa Bowls locations in Sugar Land, part of a broader 64-unit franchise commitment for the Greater Houston region.",
-      "article_link": "https://whatnow.com/houston/restaurants/playa-bowls-to-open-in-the-sugar-land-town-square/",
-      "published_date": "May 28, 2026"
-    },
-    {
-      "store_name": "Petra Pastry",
-      "location": "4205 Hacks Cross Rd, Suite 111, Memphis, TN 38125",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "certificate of occupancy issued May 20",
-      "short_description": "Petra Pastry, a Jordanian-Palestinian bakery founded by Asad Almalhi and Maisaa Hassan, is preparing to open a second Memphis location at 4205 Hacks Cross Road after receiving a certificate of occupancy on May 20. The 1,400-square-foot space will serve traditional sweets like kunafa, baklava, and basbousa alongside coffee.",
-      "article_link": "https://whatnow.com/memphis/restaurants/petra-pastry-cooking-up-new-location/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Eat Restaurant Partners Sports Bar (unnamed)",
-      "location": "Diamond District, next to CarMax Park ballfield, Richmond, VA (Address not specified)",
-      "event_type": "Opening",
-      "event_date": "Construction to begin 2027, complete 2028",
-      "status": "construction is on deck to begin in 2027",
-      "short_description": "Eat Restaurant Partners is developing an as-yet-unnamed sports bar and grill as part of a 67-acre mixed-use development in Richmond's Diamond District, occupying approximately 5,000 square feet of a 20,000-square-foot retail building adjacent to CarMax Park's main centerfield entrance. The group previously launched concepts including Wong's Tacos, Lucky Asian Fusion, and Boulevard Burger & Brew.",
-      "article_link": "https://whatnow.com/washington-dc/restaurants/new-sports-bar-from-eat-restaurant-partners-planned-for-virginia/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Sushi by Bou",
-      "location": "1800 Presidents St, Suite B, Reston, VA 20190",
-      "event_type": "Opening",
-      "event_date": "Late 2026",
-      "status": "aiming to open late this year",
-      "short_description": "Sushi by Bou is opening its first Virginia location at the Hyatt Regency hotel in Reston Town Center after applying for a liquor license with the Virginia ABC Authority. The concept offers three omakase tiers—Signature, Boūgie, and Boū Reserve—in a speakeasy-style sushi counter format.",
-      "article_link": "https://whatnow.com/washington-dc/restaurants/sushi-by-bou-bringing-incomparable-omakase-dining-to-reston/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Piola",
-      "location": "221 SW 1st Ave, CU102, Fort Lauderdale, FL 33301",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "coming soon",
-      "short_description": "Piola, an Italian restaurant founded in Italy in the 1980s, is opening a Las Olas-area Fort Lauderdale location after FL & CM Food LLC filed permit applications with the Florida DBPR. The restaurant is known for thin-crust pizzas, meatballs, and salads, and also offers vegan cheese and gluten-free crust options.",
-      "article_link": "https://whatnow.com/miami/restaurants/piola-to-open-fort-lauderdale-restaurant/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Sushi Sake",
-      "location": "5829 SW 73rd St, Miami, FL 33143",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "opening soon",
-      "short_description": "Sushi Sake is opening a South Miami location at the former Kiko Sushi site, filed under SS South Miami LLC with the Florida DBPR. Founded in 2009 by brothers James and Argelio Aguayo, the restaurant offers traditional Japanese sushi alongside Miami Latin-American inspired rolls and a full hot food menu.",
-      "article_link": "https://whatnow.com/miami/restaurants/sushi-sake-to-open-a-south-miami-location/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Solé Miami",
-      "location": "17315 Collins Ave, Sunny Isles Beach, FL 33160",
-      "event_type": "No qualifying business found — acquisition/ownership change only",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "South Street Partners acquired Solé Miami, a 249-key condo hotel managed by Noble House Resorts. Plans focus on upgrading guest rooms and common areas; no opening or closure event is described.",
-      "article_link": "https://whatnow.com/miami/restaurants/south-street-partners-acquires-sole-miami/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Finish Your Champagne",
-      "location": "1084 N Delaware Ave, Philadelphia, PA 19125",
-      "event_type": "Opening",
-      "event_date": "Late summer 2026 (targeted)",
-      "status": "official opening date has not yet been announced",
-      "short_description": "Finish Your Champagne is a new upscale party brunch concept from Hi-Def Hospitality, planned for Philadelphia's Northern Liberties neighborhood with a modern saloon-inspired interior featuring collapsing garage doors and a central rectangular bar. The concept will offer elevated brunch fare, mimosas, champagne, and live entertainment including DJs, dancers, and live musicians.",
-      "article_link": "https://whatnow.com/philadelphia/restaurants/finish-your-champagne-brings-upscale-party-brunch-concept-to-philly-its-an-experience/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Taste Taco Bar",
-      "location": "300 South Street, Philadelphia, PA (no zip code mentioned)",
-      "event_type": "Opening",
-      "event_date": "June 2026",
-      "status": "set to open this June",
-      "short_description": "Taste Taco Bar is a new concept from Hi-Def Hospitality set to open at 300 South Street in Philadelphia in June, mentioned as an additional project in the same article covering Finish Your Champagne. It is described as an offshoot of the group's existing Taste Cheesesteak Bar concept.",
-      "article_link": "https://whatnow.com/philadelphia/restaurants/finish-your-champagne-brings-upscale-party-brunch-concept-to-philly-its-an-experience/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Edley's Bar-B-Que",
-      "location": "330 Franklin Rd, Brentwood, TN 37027",
-      "event_type": "Opening",
-      "event_date": "By end of 2026",
-      "status": "expected to open by the end of the year",
-      "short_description": "Edley's Bar-B-Que is opening its 12th location at the former McAlister's Deli space in Brentwood Place, a roughly 3,800-square-foot restaurant expected to bring around 50 jobs to the area. Founded in Nashville in 2011 by Will Newman, the brand is known for slow-smoked barbecue and Southern comfort food.",
-      "article_link": "https://whatnow.com/nashville/restaurants/edleys-bar-b-que-fires-up-plans-for-new-brentwood-restaurant/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Little Nest Coffee Roasters",
-      "location": "21003 Mack Ave, Grosse Pointe Woods, MI 48236",
-      "event_type": "Opening",
-      "event_date": "~30 days from publication (approx. late June 2026)",
-      "status": "hoping to launch in around 30 days",
-      "short_description": "Little Nest Coffee Roasters is a new coffee shop planned for downtown Grosse Pointe Woods, owned by Jason Spencer, who has been working on the concept for a year. The café will focus on small-batch, in-house roasted coffee with drinks like lattes and teas, but will not initially offer pastries or baked goods.",
-      "article_link": "https://whatnow.com/detroit/restaurants/little-nest-coffee-roasters-to-help-build-community-in-grosse-pointe-woods/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Netflix House",
-      "location": "3747 S Las Vegas Blvd, Las Vegas, NV 89109",
-      "event_type": "Opening",
-      "event_date": "2027",
-      "status": "construction is currently underway",
-      "short_description": "Netflix House is under construction at the BLVD Las Vegas mixed-use complex on the Las Vegas Strip, spanning over 100,000 square feet and set to open in 2027. The permanent, year-round entertainment venue will feature immersive experiences based on shows like Squid Game, Stranger Things, and Wednesday, along with themed dining, VR/escape rooms, and a merchandise shop.",
-      "article_link": "https://whatnow.com/las-vegas/restaurants/netflix-house-construction-underway-on-las-vegas-strip/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Chubby Cattle BBQ",
-      "location": "1905 Taylor Rd, Roseville, CA 95661",
-      "event_type": "Opening",
-      "event_date": "Spring 2027",
-      "status": "expecting to open in Spring 2027",
-      "short_description": "Chubby Cattle BBQ, a Los Angeles-based chain known for all-you-can-eat wagyu beef and robot servers, is opening its first Sacramento-area location in the former Tahoe Joe's steakhouse space in Roseville. The 7,100-square-foot space will undergo a full renovation and will operate as the BBQ format of the Chubby Group's three dining concepts.",
-      "article_link": "https://whatnow.com/sacramento/restaurants/chubby-cattle-bbq-is-opening-its-first-sacramento-location-in-roseville/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Brassica",
-      "location": "15820 Southwest Fwy, Sugar Land, TX 77478",
-      "event_type": "Opening",
-      "event_date": "Fall 2026, at latest winter 2026",
-      "status": "should open by this fall, at the latest winter",
-      "short_description": "Brassica, an Ohio-based fast-casual Mediterranean chain, is opening its second Greater Houston location in Sugar Land's Lake Pointe Village, with construction on the $950,000 project slated to begin next month and wrap in early November. The 49,976-square-foot space will include exterior renovations, a patio, a full commercial kitchen, and an interior dining room.",
-      "article_link": "https://whatnow.com/houston/restaurants/brassica-to-build-950000-new-eatery-in-greater-houston/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Desserts By Clément (Del Mar location)",
-      "location": "Address not specified",
-      "event_type": "Opening",
-      "event_date": "Early summer 2026",
-      "status": "expected to open in early summer 2026",
-      "short_description": "Desserts By Clément, a French bakery known for hyper-realistic molded desserts and pastries, is planning a Del Mar location with an exact address not yet publicly announced. The new store is expected to mirror the Pacific Beach flagship, offering pastries, breads, sandwiches, coffee drinks, and specialty desserts.",
-      "article_link": "https://whatnow.com/san-diego/restaurants/desserts-by-clement-planning-new-locations-in-del-mar-and-vista/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Desserts By Clément (Vista location)",
-      "location": "Address not specified",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "in development",
-      "short_description": "A Vista location for Desserts By Clément is also in development, with no address or opening timeline publicly announced. It is expected to offer the same menu as the Pacific Beach flagship.",
-      "article_link": "https://whatnow.com/san-diego/restaurants/desserts-by-clement-planning-new-locations-in-del-mar-and-vista/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Matsu",
-      "location": "626 S Tremont St, Oceanside, CA (no zip code mentioned)",
-      "event_type": "Closing",
-      "event_date": "May 31, 2026",
-      "status": "set to close on May 31",
-      "short_description": "Matsu, a modern Japanese fine-dining restaurant, is closing its current Oceanside location on May 31 to relocate within the city, with chef-owner William Eick actively searching for a new space. Farewell dinners are being held in the final weeks, and the brand has confirmed it will continue operating after relocating.",
-      "article_link": "https://whatnow.com/san-diego/restaurants/matsu-to-relocate-after-closing-at-end-of-the-month/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Julian Beer Company (new concept, unnamed)",
-      "location": "Address not specified",
-      "event_type": "Opening",
-      "event_date": "Summer 2026",
-      "status": "targeting an opening sometime in Summer 2026",
-      "short_description": "Julian Beer Company is developing a second, as-yet-unnamed fast-casual concept in Julian focused on smash burgers, beef tallow fries, and beer, with the exact address not yet publicly revealed. The project has reportedly been in development since summer 2025 and is separate from the existing brewery and restaurant at 2307 Main Street.",
-      "article_link": "https://whatnow.com/san-diego/restaurants/julian-beer-company-planning-new-concept-in-julian/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Silk Way Family Restaurant",
-      "location": "507 S 6th St, Philadelphia, PA 19147",
-      "event_type": "Closing",
-      "event_date": "June 1, 2026",
-      "status": "closing",
-      "short_description": "Silk Way Family Restaurant, which serves Central Asian and Kazakh cuisine in Queen Village, is closing on June 1, less than a year after soft-opening in 2024. The restaurant, owned by Olzhas Karymsakov and his family, did not provide a specific reason for the closure but thanked the community for its support.",
-      "article_link": "https://whatnow.com/philadelphia/restaurants/philadelphia-restaurant-serving-central-asian-cuisine-to-close-june-1/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Coastal Tea Cafe",
-      "location": "27 S 5th St, Fernandina Beach, FL 32034",
-      "event_type": "Opening",
-      "event_date": "October 1, 2026 (goal)",
-      "status": "opening date hasn't been set in stone yet",
-      "short_description": "Coastal Tea Cafe is a new tea house and café planned for a little yellow house in Fernandina Beach, owned by Tonya Blanchford, offering 25 hot tea flavors, rotating iced teas, coffee, breakfast, lunch, and pastries. The interior will feature comfortable seating, a book nook with used books for sale in partnership with the local library, and an outdoor patio.",
-      "article_link": "https://whatnow.com/jacksonville/restaurants/coastal-tea-cafe-opening-in-fernandino-beach-this-fall/",
-      "published_date": "May 27, 2026"
-    },
-    {
-      "store_name": "Sweetgreen",
-      "location": "1200 El Paseo de Saratoga, San Jose, CA 95129",
-      "event_type": "Opening",
-      "event_date": "May 19, 2026",
-      "status": "set to open",
-      "short_description": "Sweetgreen is opening a new 2,406 sq. ft. Saratoga + Campbell location in West San Jose on May 19, 2026. The restaurant will serve signature salads, warm bowls, and protein plates using produce sourced from California farms. Preview events with complimentary meals were scheduled for May 15 and 16.",
-      "article_link": "https://whatnow.com/san-francisco/restaurants/a-healthy-food-chain-is-expanding-its-bay-area-footprint-with-a-new-opening/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Pita & Pie",
-      "location": "1900 N. Highland Ave., Suite 6B, Los Angeles, CA 90068",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "seeking ABC license",
-      "short_description": "Pita & Pie has filed for an ABC license at 1900 N. Highland Ave., Suite 6B in Hollywood. No website, social media, menu, or opening timeline has been announced. The concept is attributed to Amer Nackoud per the permit filing.",
-      "article_link": "https://whatnow.com/los-angeles/restaurants/pita-pie-files-permit-for-new-restaurant/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Espadas de Brazil",
-      "location": "1507 Chestnut St, Bastrop, TX 78602",
-      "event_type": "Opening",
-      "event_date": "Late spring 2026",
-      "status": "expected to open in late spring",
-      "short_description": "Austin food truck Espadas de Brazil is opening a brick-and-mortar Brazilian steakhouse in Bastrop at a space formerly occupied by Stem & Stone. Owner Robinson Figueiredo announced hiring for the new location and posted a \"coming soon\" update on social media.",
-      "article_link": "https://whatnow.com/austin/restaurants/espadas-de-brazil-opening-brazilian-steakhouse-in-bastrop/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Seaviche Tacos & Bowls",
-      "location": "32500 Gratiot Ave, Roseville, MI 48066",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "signed a lease",
-      "short_description": "Seaviche Tacos & Bowls has signed a lease for a third Metro Detroit location at 32500 Gratiot Avenue in Roseville. Owner Evan Shina does not have an opening date at this time. The Mexican seafood concept already operates locations in Detroit and White Lake.",
-      "article_link": "https://whatnow.com/detroit/restaurants/seaviche-tacos-and-bowls-acquires-third-location-in-roseville/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "KP's Kitchen and Bar (Bellaire)",
-      "location": "5427 Bissonnet St #400, Houston, TX 77081",
-      "event_type": "Closing",
-      "event_date": "May 31, 2026",
-      "status": "closing on 5/31",
-      "short_description": "KP's Kitchen and Bar is closing its Bellaire location on May 31, 2026, after the owner decided to refocus on the original Spring Valley location. Owner Kerry Pauly cited a desire to return to hands-on hospitality rather than managing two locations. The Spring Valley location will remain open.",
-      "article_link": "https://whatnow.com/houston/restaurants/upscale-neighborhood-bistro-shutting-down-bellaire-outpost-spring-valley-remains-open/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Jaggers",
-      "location": "1915 Hampton Inn Ct, Winston-Salem, NC 27103",
-      "event_type": "Opening",
-      "event_date": "Later 2026",
-      "status": "plans pointing to a later 2026 opening",
-      "short_description": "Jaggers, the burger-and-shake chain operated by Texas Roadhouse, is preparing to open in the former Twin Peaks space near Hanes Mall Boulevard in Winston-Salem. The Winston-Salem location adds to existing North Carolina locations in Fayetteville, Greenville, and Jacksonville.",
-      "article_link": "https://whatnow.com/charlotte/restaurants/jaggers-eyes-former-twin-peaks-space-for-winston-salem-debut/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Ike's Café & Grill",
-      "location": "724 Cherokee St NE, Marietta, GA 30060",
-      "event_type": "Opening",
-      "event_date": "May 8, 2026",
-      "status": "recently opened",
-      "short_description": "Ike's Café & Grill opened its newest 3,200 sq. ft. Marietta location on May 8, 2026, with a ribbon-cutting and community celebration. The African-inspired full-service restaurant serves breakfast, lunch, and dinner and features both indoor and outdoor seating.",
-      "article_link": "https://whatnow.com/atlanta/restaurants/a-family-owned-african-inspired-restaurant-brand-expands-with-a-new-marietta-opening/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Harvey's Deli",
-      "location": "27252 Katy Fwy, Suite 400, Katy, TX 77494",
-      "event_type": "Closing",
-      "event_date": "May 13, 2026",
-      "status": "closed",
-      "short_description": "Harvey's Deli, a family-owned sandwich shop in Katy, announced its sudden closure on social media on May 13, 2026, after five years in business. Owners Tierra and Ted Tyman cited the struggling economy and extreme overhead costs as reasons for closing.",
-      "article_link": "https://whatnow.com/houston/restaurants/katy-sandwich-shop-known-for-east-coast-style-subs-shuts-down/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Esther Rum",
-      "location": "Columbus, OH (select locations; address not specified)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "recently launched",
-      "short_description": "Esther Rum, a women-owned premium spirits brand co-founded by Margaret Kerr-Jarrett and Emunah Winer, has launched in select Columbus locations. The Colombian-imported rum is bottled locally at Echo Spirits in Columbus and is designed to appeal to tequila drinkers with its smooth, reposado-like flavor profile.",
-      "article_link": "https://whatnow.com/columbus/restaurants/women-owned-esther-rum-expands-across-columbus-with-bold-new-approach-to-premium-rum/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Ted's Hot Dogs",
-      "location": "2700 E. Germann Rd, Chandler, AZ 85286",
-      "event_type": "Opening",
-      "event_date": "May 23, 2026",
-      "status": "grand opening on May 23, 2026",
-      "short_description": "Ted's Hot Dogs is opening its new Chandler location on May 23, 2026, featuring a retro-inspired design, outdoor patio, indoor gathering spaces, a walk-up ice cream window, and the brand's first drive-thru. Two days of grand opening festivities will include giveaways, free hot dogs for the first 100 customers, and free ice cream.",
-      "article_link": "https://whatnow.com/phoenix/restaurants/a-1920s-era-restaurant-chain-is-expanding-with-a-new-phoenix-area-location/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Asian Box",
-      "location": "100 Corte Madera Town Center, Corte Madera, CA 94925",
-      "event_type": "Opening",
-      "event_date": "Fall 2026",
-      "status": "set to open this Fall",
-      "short_description": "Vietnamese fast-casual chain Asian Box is set to open at 100 Corte Madera Town Center in Corte Madera this fall, per the brand's Instagram. Founded in 2011 by Chad Newton and chef Gracie Nguyen, the concept offers 100% gluten-free, customizable Vietnamese-inspired street food made with sustainably sourced ingredients.",
-      "article_link": "https://whatnow.com/san-francisco/restaurants/asian-box-coming-to-corte-madera-this-fall/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Ristobar",
-      "location": "2300 Chestnut St, San Francisco, CA 94123",
-      "event_type": "Closing",
-      "event_date": "May 25, 2026",
-      "status": "closing on May 25",
-      "short_description": "Ristobar, a 22-year-old Italian restaurant in San Francisco's Marina District, is closing on May 25, 2026 (Memorial Day). No specific reason for closure was shared, though the space will continue under new use as Eria Marina, an events venue, through a partnership with Eria Events.",
-      "article_link": "https://whatnow.com/san-francisco/restaurants/a-22-year-old-italian-restaurant-in-san-francisco-is-nearing-its-final-service/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Sushi Kobashi",
-      "location": "211 7th Ave, New York, NY 10011",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "looks ready to wow guests",
-      "short_description": "Sushi Kobashi, led by chef Gang Lin formerly of Michelin Star-winning Yoshino, is planning to open an eight-seat omakase restaurant at 211 7th Ave. in Chelsea. The experience will start at $250 per guest and incorporate Chinese ingredients, with a focus on premium sake.",
-      "article_link": "https://whatnow.com/new-york/restaurants/michelin-pedigreed-omakase-spot-coming-to-chelsea/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Clarke & Moore Kitchen and Bar",
-      "location": "201 8th Ave, New York, NY 10011",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "planning",
-      "short_description": "The team behind Manhattan gastropubs Grove Street Social and Grand Street Social is planning Clarke & Moore Kitchen and Bar for 201 8th Ave. in Chelsea. The two-floor concept will include a 49-seat ground-floor restaurant and a 74-person private event space on the second floor; no opening date has been announced.",
-      "article_link": "https://whatnow.com/new-york/restaurants/prolific-gastropub-team-planning-another-concept-in-chelsea/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Mack Allen's",
-      "location": "4400 Post Oak Park Dr (5POP tower), Houston, TX 77027",
-      "event_type": "Opening",
-      "event_date": "July 2026",
-      "status": "set to open in July 2026",
-      "short_description": "Mack Allen's is a new 16,000 sq. ft. luxury fine-dining restaurant set to open in July 2026 as an anchor tenant at the 5POP office tower in Houston's River Oaks/Uptown area. The New American menu will feature prime beef, wagyu, seafood, and oysters, alongside three private dining rooms and a botanical garden-inspired patio.",
-      "article_link": "https://whatnow.com/houston/restaurants/mack-allens-to-debut-in-early-summer-as-a-new-river-oaks-area-luxury-dining-destination/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Lou Malnati's Pizzeria",
-      "location": "805 S. State St, Chicago, IL 60605",
-      "event_type": "Remodel",
-      "event_date": "Not specified",
-      "status": "expansion completed",
-      "short_description": "Lou Malnati's South Loop location completed an approximately 2,400 sq. ft. expansion, bringing the total space to over 8,400 sq. ft. The update adds a full-service bar, additional dining room seating, and a private events space for up to 50 guests, all completed while the restaurant remained open.",
-      "article_link": "https://whatnow.com/chicago/restaurants/lou-malnatis-completes-south-loop-restaurant-expansion/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Stäge Kitchen & Bar",
-      "location": "110 Campus Way, Dunwoody, GA 30346",
-      "event_type": "Opening",
-      "event_date": "May 15, 2026",
-      "status": "opening its doors",
-      "short_description": "Stäge Kitchen & Bar is opening its second location at 110 Campus Way in Dunwoody on May 15, 2026, inside the Element Hotel by Westin at Campus 244. After five years in Peachtree Corners, the globally inspired fusion restaurant is expanding into one of metro Atlanta's growing mixed-use business hubs.",
-      "article_link": "https://whatnow.com/atlanta/restaurants/a-high-energy-fusion-restaurant-is-taking-over-space-inside-campus-244/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Churp",
-      "location": "3121–3201 Edwards Mill Rd, Raleigh, NC 27612",
-      "event_type": "Opening",
-      "event_date": "Late summer or early fall 2026",
-      "status": "targeting a late-summer or early-fall opening",
-      "short_description": "Churp, a new fast-casual healthy bowl concept from Happy + Hale founder Tyler Helikson, is preparing to open at Olde Raleigh Village on Edwards Mill Road. The menu will focus on customizable bowls and a dedicated kids' bento box-style menu; an exact date and full menu details have not yet been announced.",
-      "article_link": "https://whatnow.com/charlotte/restaurants/churp-to-bring-healthy-bowl-concept-to-raleigh/",
-      "published_date": "May 15, 2026"
-    },
-    {
-      "store_name": "Gig's Gourmet Baked Potato",
-      "location": "Near 87th St and Cottage Grove, Chicago, IL (address not specified)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "now operating",
-      "short_description": "Gig's Gourmet Baked Potato is a new food truck and catering operation on Chicago's South Side, founded by chef Gig McFadden after nearly 20 years in high-end kitchens. The truck operates Tuesday through Saturday from 11 a.m. to 5 p.m. near 87th Street and Cottage Grove, serving gourmet loaded baked potatoes and comfort-food staples.",
-      "article_link": "https://whatnow.com/chicago/restaurants/chicago-chef-perfects-the-gourmet-baked-potato/",
-      "published_date": "May 14, 2026"
-    },
-    {
-      "store_name": "C.R. Chicks",
-      "location": "3316 SE Federal Highway, Suite A, Stuart, FL 34997",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "No official opening date has been announced",
-      "short_description": "C.R. Chicks has filed permit applications to open a new location at Wedgewood Commons Shopping Center in Stuart, FL. No official opening date has been announced; this follows a previously announced Boynton Beach location expected to open Fall 2026.",
-      "article_link": "https://whatnow.com/miami/restaurants/c-r-chicks-is-opening-in-stuart/",
-      "published_date": "May 14, 2026"
-    },
-    {
-      "store_name": "Tio Lucho's",
-      "location": "675 N Highland Ave NE Suite 6000, Atlanta, GA 30306",
-      "event_type": "N/A – Event",
-      "event_date": "May 28, 2026",
-      "status": "Hosting recurring dinner event",
-      "short_description": "Tio Lucho's is hosting its Wine vs. Beer dinner event on May 28, 2026, featuring a five-course Peruvian American dinner paired with both wine and beer selections. The one-night interactive event is held in partnership with podcast A Cork in the Road and presented by James Beard semifinalist Chef Arnaldo Castillo. Tickets are $100 per person and reservations are available via OpenTable.",
-      "article_link": "https://whatnow.com/atlanta/restaurants/a-popular-atlanta-dinner-series-brings-back-its-wine-vs-beer-showdown-this-month/",
-      "published_date": "May 26, 2026"
-    },
-    {
-      "store_name": "Changan Kitchen",
-      "location": "2851 E Eastland Center Dr, Suite 5, West Covina, CA 91791",
-      "event_type": "Opening",
-      "event_date": "Sometime in June 2026",
-      "status": "awaiting final inspections; hoping to open sometime next month",
-      "short_description": "Changan Kitchen is expanding to Eastland Center in West Covina, marking its sixth location. The restaurant specializes in Chinese noodle dishes and is awaiting final inspections before opening. An exact opening date has not yet been confirmed.",
-      "article_link": "https://whatnow.com/los-angeles/restaurants/changan-kitchen-expanding-to-west-covina/",
-      "published_date": "May 26, 2026"
-    },
-    {
-      "store_name": "Cozy Soup 'n' Burger",
-      "location": "739 Broadway, New York, NY 10003",
-      "event_type": "Closing",
-      "event_date": "June 21, 2026",
-      "status": "set to close",
-      "short_description": "Cozy Soup 'n' Burger, open for 54 years, announced its permanent closure via Instagram, citing rising costs and declining business following the pandemic. The owner acknowledged financial challenges made it impossible to continue operations. The restaurant will close on June 21, 2026.",
-      "article_link": "https://whatnow.com/new-york/restaurants/popular-nyc-restaurant-nears-final-days-after-50-year-run/",
-      "published_date": "May 26, 2026"
-    },
-    {
-      "store_name": "Mama Canela",
-      "location": "147 N Glendora Ave, Glendora, CA 91741",
-      "event_type": "Opening",
-      "event_date": "July 31, 2026",
-      "status": "grand opening planned for July 31",
-      "short_description": "Mama Canela is a new Tex-Mex restaurant opening in Glendora Village, founded by Paloma Ramos and her husband to fill a gap in the local date-night dining market. The restaurant will feature fajitas, homemade flour tortillas, craft cocktails, and live music. A grand opening celebration with live mariachi music is planned for July 31.",
-      "article_link": "https://whatnow.com/los-angeles/restaurants/mama-canela-planning-grand-opening-in-glendora-this-summer/",
-      "published_date": "May 26, 2026"
     }
   ],
   "non_working": [
     {
-      "identifier": "Article 3",
-      "reason": "Caesars Entertainment) — No qualifying restaurant opening or closure event; article covers a corporate acquisition/ownership change only. Row included with best available data per instructions, but flagged as not a standard opening/closing event."
+      "identifier": "None — all 20 articles contained qualifying business opening information and were successfully extracted. Note: Article 4 (Old Caz Brewing Company) is titled \"Eyes Second Location In Petaluma\" but the address and article body reference Santa Rosa, CA — the data extracted reflects what was stated in the article text only.",
+      "reason": ""
     },
     {
-      "identifier": "Article 11",
-      "reason": "Mabel's Bakery) — Exact street address (house number and street) for the College Street location not provided in article text; zip code also not specified."
+      "identifier": "None — all 20 articles contained qualifying business opening or closure information and were extractable.",
+      "reason": ""
     },
     {
-      "identifier": "Article 24",
-      "reason": "No qualifying business opening or closure: The article covers a networking event (Chicago Accelerate) at Hopsmith Tavern. While Kilwins' planned Loop location is briefly mentioned, it is a secondary reference with no address or date; a row was created for that mention. The article itself is primarily an event recap with no actionable opening/closing data."
+      "identifier": "> **Notes:**",
+      "reason": ""
     },
     {
-      "identifier": "Article 49",
-      "reason": "No qualifying opening or closure: article covers a real estate acquisition (South Street Partners purchasing Solé Miami resort); no new business opening or permanent closure is described."
+      "identifier": "> - Article 27 (OAKBERRY Açaí) contained four distinct Ontario locations and was split into four separate rows accordingly.",
+      "reason": ""
+    },
+    {
+      "identifier": "> - Article 32 (Dark Horse Espresso Bar) contained two distinct locations and was split into two rows.",
+      "reason": ""
+    },
+    {
+      "identifier": "> - Article 37 (Saolea/Red Bamboo) contained both an opening (Saolea) and a closure (Red Bamboo) and was split into two rows.",
+      "reason": ""
+    },
+    {
+      "identifier": "> - Article 34: The scraper address header shows \"11018 Old St Augustine Rd\" but the article body text specifies \"1018 Old St. Augustine Rd, Suite 105\" — the article body address was used as it is more specific and directly confirmed in the text.",
+      "reason": ""
     },
     {
       "identifier": "None",
       "reason": ""
     },
     {
-      "identifier": "Article 81",
-      "reason": "No qualifying opening or closing event; article covers a recurring dinner event at an existing restaurant with no new opening or closure information."
+      "identifier": "None",
+      "reason": ""
+    },
+    {
+      "identifier": "Article 83",
+      "reason": "No traditional opening or closure of a retail/restaurant location; this is a corporate acquisition/ownership change article with no new store opening or permanent closure event. Row included with best available fields, but flagged as not a standard opening/closing event."
     }
   ]
 }
