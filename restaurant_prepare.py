@@ -118,36 +118,39 @@ def main():
     print(f"✓  {total} new articles  →  {total_batches} new batch file(s)\n")
 
     # ── Shift existing output files up to make room for new batches ────────────
+    batches_dir = Path("batches")
+    batches_dir.mkdir(exist_ok=True)
+
     if total_batches > 0:
         existing_outputs = sorted(
-            [p for p in Path(".").glob(f"{BATCH_PREFIX}_*{OUTPUT_SUFFIX}")
-             if p.stem.replace(f"{BATCH_PREFIX}_", "").replace(OUTPUT_SUFFIX.replace(".md",""), "").isdigit()],
-            key=lambda p: int(p.stem.split("_")[1]),
+            [p for p in batches_dir.glob(f"{BATCH_PREFIX}_*{OUTPUT_SUFFIX}")
+             if p.stem.replace(f"{BATCH_PREFIX}_", "").replace("_output", "").isdigit()],
+            key=lambda p: int(p.stem.replace(f"{BATCH_PREFIX}_", "").replace("_output", "")),
             reverse=True,
         )
         for p in existing_outputs:
-            n = int(p.stem.split("_")[1])
-            p.rename(p.parent / f"{BATCH_PREFIX}_{n + total_batches}{OUTPUT_SUFFIX}")
+            n = int(p.stem.replace(f"{BATCH_PREFIX}_", "").replace("_output", ""))
+            p.rename(batches_dir / f"{BATCH_PREFIX}_{n + total_batches}{OUTPUT_SUFFIX}")
         if existing_outputs:
             print(f"  Shifted {len(existing_outputs)} output file(s) up by {total_batches}")
 
         # Discard files beyond rolling cap
         discarded = 0
-        for p in Path(".").glob(f"{BATCH_PREFIX}_*{OUTPUT_SUFFIX}"):
-            parts = p.stem.split("_")
-            if len(parts) >= 2 and parts[1].isdigit() and int(parts[1]) > MAX_OUTPUT_KEEP:
+        for p in batches_dir.glob(f"{BATCH_PREFIX}_*{OUTPUT_SUFFIX}"):
+            n_str = p.stem.replace(f"{BATCH_PREFIX}_", "").replace("_output", "")
+            if n_str.isdigit() and int(n_str) > MAX_OUTPUT_KEEP:
                 p.unlink()
                 discarded += 1
         if discarded:
             print(f"  Discarded {discarded} old output file(s) beyond limit of {MAX_OUTPUT_KEEP}")
 
-        # Create ALL placeholder output files upfront
+        # Create ALL placeholder output files upfront in batches/
         print("\nCreating output placeholders upfront...")
         for b in range(total_batches):
-            placeholder = Path(f"{BATCH_PREFIX}_{b + 1}{OUTPUT_SUFFIX}")
+            placeholder = batches_dir / f"{BATCH_PREFIX}_{b + 1}{OUTPUT_SUFFIX}"
             if not placeholder.exists():
                 placeholder.write_text("", encoding="utf-8")
-                print(f"  + {placeholder.name}  (ready for extraction)")
+                print(f"  + batches/{placeholder.name}  (ready for extraction)")
         print()
 
     batch_files = []
