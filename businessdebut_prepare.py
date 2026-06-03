@@ -20,7 +20,7 @@ from bs4 import BeautifulSoup
 
 BATCH_SIZE       = 20
 MAX_CHARS        = 2000
-MAX_OUTPUT_KEEP  = 10
+MAX_OUTPUT_KEEP  = 5    # keep only the 5 most recent output files
 BATCH_PREFIX     = "bizdbatch"
 OUTPUT_SUFFIX    = "_output.md"
 

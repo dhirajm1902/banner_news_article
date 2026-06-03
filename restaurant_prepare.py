@@ -21,7 +21,7 @@ from bs4 import BeautifulSoup
 
 BATCH_SIZE       = 20
 MAX_CHARS        = 2000
-MAX_OUTPUT_KEEP  = 10   # discard shifted output files beyond this number
+MAX_OUTPUT_KEEP  = 5    # keep only the 5 most recent output files
 BATCH_PREFIX     = "batch"          # batch_1.txt, batch_2.txt …
 OUTPUT_SUFFIX    = "_output.md"
 
