@@ -18,8 +18,11 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-BATCH_SIZE = 20
-MAX_CHARS  = 2000
+BATCH_SIZE       = 20
+MAX_CHARS        = 2000
+MAX_OUTPUT_KEEP  = 10
+BATCH_PREFIX     = "bizdbatch"
+OUTPUT_SUFFIX    = "_output.md"
 
 EXTRACTION_PROMPT = """\
 You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
@@ -92,10 +95,53 @@ def main():
 
     raw = json.loads(src_path.read_text(encoding="utf-8"))
     articles = raw.get("data", []) if isinstance(raw, dict) else raw
-    total = len(articles)
-    total_batches = (total + BATCH_SIZE - 1) // BATCH_SIZE
 
-    print(f"✓  {total} articles found  →  {total_batches} batch file(s) to create\n")
+    # Filter out already-processed URLs
+    done_path = Path("businessdebut_extraction_latest.json")
+    done_urls = set()
+    if done_path.exists():
+        done_data = json.loads(done_path.read_text(encoding="utf-8"))
+        done_urls = {r.get("article_link", "") for r in done_data.get("data", [])}
+        done_urls |= {r.get("identifier", "") for r in done_data.get("non_working", [])}
+        print(f"✓  {len(done_urls)} already-processed URLs loaded from extraction JSON")
+    articles = [a for a in articles if a.get("link", a.get("url", "")) not in done_urls]
+
+    total         = len(articles)
+    total_batches = (total + BATCH_SIZE - 1) // BATCH_SIZE
+    print(f"✓  {total} new articles  →  {total_batches} new batch file(s)\n")
+
+    # ── Shift existing output files up to make room for new batches ────────────
+    if total_batches > 0:
+        existing_outputs = sorted(
+            [p for p in Path(".").glob(f"{BATCH_PREFIX}_*{OUTPUT_SUFFIX}")
+             if p.stem.replace(f"{BATCH_PREFIX}_", "").isdigit()],
+            key=lambda p: int(p.stem.split("_")[1]),
+            reverse=True,
+        )
+        for p in existing_outputs:
+            n = int(p.stem.split("_")[1])
+            p.rename(p.parent / f"{BATCH_PREFIX}_{n + total_batches}{OUTPUT_SUFFIX}")
+        if existing_outputs:
+            print(f"  Shifted {len(existing_outputs)} output file(s) up by {total_batches}")
+
+        # Discard files beyond rolling cap
+        discarded = 0
+        for p in Path(".").glob(f"{BATCH_PREFIX}_*{OUTPUT_SUFFIX}"):
+            parts = p.stem.split("_")
+            if len(parts) >= 2 and parts[1].isdigit() and int(parts[1]) > MAX_OUTPUT_KEEP:
+                p.unlink()
+                discarded += 1
+        if discarded:
+            print(f"  Discarded {discarded} old output file(s) beyond limit of {MAX_OUTPUT_KEEP}")
+
+        # Create ALL placeholder output files upfront
+        print("\nCreating output placeholders upfront...")
+        for b in range(total_batches):
+            placeholder = Path(f"{BATCH_PREFIX}_{b + 1}{OUTPUT_SUFFIX}")
+            if not placeholder.exists():
+                placeholder.write_text("", encoding="utf-8")
+                print(f"  + {placeholder.name}  (ready for extraction)")
+        print()
 
     batch_files = []
 
@@ -103,7 +149,7 @@ def main():
         batch   = articles[b * BATCH_SIZE : (b + 1) * BATCH_SIZE]
         b_start = b * BATCH_SIZE + 1
         b_end   = b_start + len(batch) - 1
-        filename = f"bizdbatch_{b + 1}.txt"
+        filename = f"{BATCH_PREFIX}_{b + 1}.txt"
 
         print(f"── Batch {b + 1}/{total_batches}  (articles {b_start}–{b_end}) ──")
 

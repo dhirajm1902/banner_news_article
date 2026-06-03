@@ -60,6 +60,31 @@ def main():
         print("No articles found.")
         return
 
+    # ── Rotate output files in batches/ so previous extractions are preserved ──
+    batches_dir = Path("batches")
+    batches_dir.mkdir(exist_ok=True)
+    MAX_KEEP = 5
+
+    existing = sorted(
+        [p for p in batches_dir.glob("ct_scoop_batch*_output.md")
+         if p.stem.replace("ct_scoop_batch", "").replace("_output", "").isdigit()],
+        key=lambda p: int(p.stem.replace("ct_scoop_batch", "").replace("_output", "")),
+        reverse=True,
+    )
+    for p in existing:
+        n = int(p.stem.replace("ct_scoop_batch", "").replace("_output", ""))
+        if n + 1 > MAX_KEEP:
+            p.unlink()
+        else:
+            p.rename(batches_dir / f"ct_scoop_batch{n + 1}_output.md")
+    if existing:
+        print(f"  Shifted {len(existing)} CT Scoop output file(s) up")
+
+    # Create blank placeholder for this run's output
+    placeholder = batches_dir / "ct_scoop_batch1_output.md"
+    placeholder.write_text("", encoding="utf-8")
+    print(f"  + batches/ct_scoop_batch1_output.md  (ready for extraction)\n")
+
     print(f"Fetching {len(articles)} article(s)...\n")
     blocks = []
     for i, art in enumerate(articles, 1):
@@ -77,7 +102,7 @@ def main():
     out_path = Path("ct_scoop_articles_ready.txt")
     out_path.write_text(output, encoding="utf-8")
     print(f"\n✓ Article text saved to {out_path}")
-    print("  → Paste the contents into Claude with your extraction prompt.")
+    print("  → Paste into Claude, then save response to batches/ct_scoop_batch1_output.md")
 
 
 if __name__ == "__main__":
