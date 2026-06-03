@@ -1061,15 +1061,15 @@
                 <div id="dailyExtTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
                     <table class="w-full text-sm text-left data-table table-fixed">
                         <thead><tr>
-                            <th class="px-3 py-3 w-12">#</th>
-                            <th class="px-3 py-3 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="sortDailyExtTable('store_name')">Store / Business <i id="sort-dailyext-store" class="fas fa-sort text-gray-600 ml-1"></i></th>
-                            <th class="px-3 py-3 cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyExtTable('location')">Location <i id="sort-dailyext-location" class="fas fa-sort text-gray-600 ml-1"></i></th>
-                            <th class="px-3 py-3 w-28 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="sortDailyExtTable('event_type')">Event Type <i id="sort-dailyext-type" class="fas fa-sort text-gray-600 ml-1"></i></th>
-                            <th class="px-3 py-3 w-36">Event Date</th>
-                            <th class="px-3 py-3 w-40">Status</th>
-                            <th class="px-3 py-3">Description</th>
-                            <th class="px-3 py-3 w-32 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="sortDailyExtTable('published_date')">Published Date <i id="sort-dailyext-date" class="fas fa-sort-down text-gray-400 ml-1"></i></th>
-                            <th class="px-3 py-3 w-20">Link</th>
+                            <th class="px-3 py-3 w-8">#</th>
+                            <th class="px-3 py-3 w-[15%] cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyExtTable('store_name')">Store / Business <i id="sort-dailyext-store" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-3 py-3 w-[13%] cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyExtTable('location')">Location <i id="sort-dailyext-location" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-3 py-3 w-[9%] cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyExtTable('event_type')">Event Type <i id="sort-dailyext-type" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-3 py-3 w-[9%]">Event Date</th>
+                            <th class="px-3 py-3 w-[12%]">Status</th>
+                            <th class="px-3 py-3 w-[22%]">Description</th>
+                            <th class="px-3 py-3 w-[11%] cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyExtTable('published_date')">Published Date <i id="sort-dailyext-date" class="fas fa-sort-down text-gray-400 ml-1"></i></th>
+                            <th class="px-3 py-3 w-[9%]">Link</th>
                         </tr></thead>
                         <tbody id="dailyExtTableBody"></tbody>
                     </table>
@@ -2773,23 +2773,27 @@
 
         return `
         <tr class="${noData ? 'opacity-40' : ''}">
-            <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
-            <td class="px-3 py-3 max-w-[140px]">
-                <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.store_name||'')}">${highlight(r.store_name||'—', term)}</span>
+            <td class="px-3 py-2 text-gray-600 text-xs font-semibold">${i+1}</td>
+            <td class="px-3 py-2 overflow-hidden">
+                <span class="font-medium text-white text-xs line-clamp-2 block" title="${escapeHtml(r.store_name||'')}">${highlight(r.store_name||'—', term)}</span>
             </td>
-            <td class="px-3 py-3 max-w-[160px]">
+            <td class="px-3 py-2 overflow-hidden">
                 <span class="text-gray-400 text-xs line-clamp-2 block" title="${escapeHtml(r.location||'')}">${highlight(r.location||'—', term)}</span>
             </td>
-            <td class="px-3 py-3">${typeBadge}</td>
-            <td class="px-3 py-3 text-gray-400 text-xs">${escapeHtml(r.event_date||'—')}</td>
-            <td class="px-3 py-3 max-w-[180px]" title="${escapeHtml(r.status||'')}">
+            <td class="px-3 py-2">${typeBadge}</td>
+            <td class="px-3 py-2 text-gray-400 text-xs overflow-hidden">
+                <span class="line-clamp-2 block">${escapeHtml(r.event_date||'—')}</span>
+            </td>
+            <td class="px-3 py-2 overflow-hidden" title="${escapeHtml(r.status||'')}">
                 <span class="text-gray-400 text-xs line-clamp-2 block">${highlight(r.status||'—', term)}</span>
             </td>
-            <td class="px-3 py-3 max-w-[220px]" title="${escapeHtml(r.short_description||'')}">
-                <span class="text-gray-500 text-xs line-clamp-3 block">${highlight(r.short_description||'—', term)}</span>
+            <td class="px-3 py-2 overflow-hidden" title="${escapeHtml(r.short_description||'')}">
+                <span class="text-gray-500 text-xs line-clamp-2 block">${highlight(r.short_description||'—', term)}</span>
             </td>
-            <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.published_date||'—')}</td>
-            <td class="px-3 py-3">${linkCell}</td>
+            <td class="px-3 py-2 text-gray-400 text-xs overflow-hidden">
+                <span class="line-clamp-2 block">${escapeHtml(r.published_date||'—')}</span>
+            </td>
+            <td class="px-3 py-2">${linkCell}</td>
         </tr>`;
     }
 
