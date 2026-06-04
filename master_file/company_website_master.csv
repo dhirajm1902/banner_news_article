@@ -28,11 +28,11 @@ company,address,opening_date,link,is_new,first_seen,Date_Appended
 ALDI,"1045 South Gilbert Road, Mesa, AZ 85204",5/21/2026,https://info.aldi.us/stores/l/az/mesa/1045-south-gilbert-road/fo39,False,,2026-05-18
 ALDI,"1151 Ross Clark CIR Suite 100, Dothan, AL 36301",5/28/2026,https://info.aldi.us/stores/l/al/dothan/1151-ross-clark-cir-suite-100/fp33,False,,2026-05-18
 ALDI,"181 Blackford Way, St. Augustine, 32086",5/21/2026,https://info.aldi.us/stores/l/fl/st-augustine/181-blackford-way/ft02,False,,2026-05-18
-ALDI,"2000 North Locust Avenue, Lawrenceburg, 38464",6/18/2026,https://info.aldi.us/stores/l/tn/lawrenceburg/2000-north-locust-avenue/fm89,True,2026-06-01,2026-06-01
+ALDI,"2000 North Locust Avenue, Lawrenceburg, 38464",6/18/2026,https://info.aldi.us/stores/l/tn/lawrenceburg/2000-north-locust-avenue/fm89,False,2026-06-01,2026-06-01
 ALDI,"2057 S Byron Butler Pkwy. Ste 1, Perry, FL 32348-5521",5/28/2026,https://info.aldi.us/stores/l/fl/perry/2057-south-byron-butler-parkway/fp42,False,2026-05-28,2026-05-28
-ALDI,"311 West 42nd Street, New York, 10036",6/19/2026,https://info.aldi.us/stores/l/ny/new-york/311-west-42nd-street/ft33,True,2026-06-01,2026-06-01
+ALDI,"311 West 42nd Street, New York, 10036",6/19/2026,https://info.aldi.us/stores/l/ny/new-york/311-west-42nd-street/ft33,False,2026-06-01,2026-06-01
 ALDI,"4478 Market Street, Marianna, 32446",5/21/2026,https://info.aldi.us/stores/l/fl/marianna/4478-market-st/fp54,False,,2026-05-18
-ALDI,"777 North Market Street, Jacksonville, 32202",6/18/2026,https://info.aldi.us/stores/l/fl/jacksonville/777-north-market-street/ft17,True,2026-06-01,2026-06-01
+ALDI,"777 North Market Street, Jacksonville, 32202",6/18/2026,https://info.aldi.us/stores/l/fl/jacksonville/777-north-market-street/ft17,False,2026-06-01,2026-06-01
 ALDI,"944 Bichara Boulevard, Lady Lake, 32159",6/11/2026,https://info.aldi.us/stores/l/fl/lady-lake/944-bichara-boulevard/ft25,False,2026-05-25,2026-05-25
 Burlington,"10311 Highway 45 North, Texas",07/03,,False,,2026-05-18
 Burlington,"10515 N Mopac Expy Bldg 1, Texas",07/10,,False,,2026-05-18
@@ -91,11 +91,12 @@ Chick-fil-A,1015 Vinehaven Drive NE,"May 1, 2026",https://www.chick-fil-a.co
 Chick-fil-A,10890 NW 41 St,"May 21, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-west-doral,False,,2026-05-18
 Chick-fil-A,14266 E Colonial Dr,"May 21, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-avalon-park,False,,2026-05-18
 Chick-fil-A,1600 Durham Road,"April 16, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-roxboro,False,,2026-05-18
+Chick-fil-A,1900 NE Miami Court,"June 2, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-wynwood-delivery,True,2026-06-04,2026-06-04
 Chick-fil-A,193 Covenant Drive,"May 7, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-batesville,False,,2026-05-18
 Chick-fil-A,2060 Southfield Rd,"May 21, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-lincoln-park,False,,2026-05-18
 Chick-fil-A,2100 Treelight Way,"April 9, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-wendell,False,,2026-05-18
 Chick-fil-A,260 Tingle Drive,"April 23, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-i-85-and-julian,False,,2026-05-18
-Chick-fil-A,27264 Maple Valley Black Diamond Rd,"June 4, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-maple-valley-hwy-and-271-st,True,2026-06-01,2026-06-01
+Chick-fil-A,27264 Maple Valley Black Diamond Rd,"June 4, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-maple-valley-hwy-and-271-st,False,2026-06-01,2026-06-01
 Chick-fil-A,2885 Allison-Bonnett Memorial Drive,"May 21, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-hueytown,False,,2026-05-18
 Chick-fil-A,2977 Market Drive,"May 7, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-east-cartmill,False,,2026-05-18
 Chick-fil-A,3425 Bienville Blvd,"April 23, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-ocean-spring,False,,2026-05-18
@@ -177,7 +178,7 @@ Homesense,"Marketplace at Mill Creek, 1705 Mall of Georgia Blvd Suite 400, Bufor
 Homesense,"Pinnacle Hills Promenade, 210 S Promenade Boulevard, Rogers, AR 72758, Rogers, AR","May 28, 2026","https://www.google.com/maps?saddr&daddr=210 S Promenade Boulevard+Rogers,AR+72758",False,,2026-05-18
 Homesense,"Scottsdale Center, 210 S. Promenade Blvd, Rogers, AR 72758, Rogers, AR","May 28, 2026","https://www.google.com/maps?saddr&daddr=210 S. Promenade Blvd+Rogers,AR+72758",False,2026-05-22,2026-05-22
 Jersey Mike's,"1 Gateway Road, Geneseo, NY 14454",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,,2026-05-18
-Jersey Mike's,"1 South River Road, Bedford, NH 03110-6775",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NH,True,2026-06-01,2026-06-01
+Jersey Mike's,"1 South River Road, Bedford, NH 03110-6775",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NH,False,2026-06-01,2026-06-01
 Jersey Mike's,"1001 E Broadway, Missoula, MT 59802-4914",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MT,False,,2026-05-18
 Jersey Mike's,"1010 Sperry Avenue, Patterson, CA 95363-9296",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CA,False,,2026-05-18
 Jersey Mike's,"10118 North Main Street, Archdale, NC 27263",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NC,False,,2026-05-18
@@ -198,7 +199,8 @@ Jersey Mike's,"11299 US-98, Inlet Beach, FL 32461-9628",In Development,https://w
 Jersey Mike's,"1156 W Maple Avenue, Mundelein, IL 60060-1409",In Development,https://www.jerseymikes.com/locations/coming-soon/US-IL,False,,2026-05-18
 Jersey Mike's,"1170 US Highway 287, Broomfield, CO 80020-7079",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CO,False,,2026-05-18
 Jersey Mike's,"11910 E US 290, Manor, TX 78653",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,False,2026-05-31,2026-05-31
-Jersey Mike's,"13117 Kingston Pike, Farragut, TN 37934-1008",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TN,True,2026-06-01,2026-06-01
+Jersey Mike's,"1201 Dutchman's Creek Drive, Brunswick, MD 21716-9771",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MD,True,2026-06-04,2026-06-04
+Jersey Mike's,"13117 Kingston Pike, Farragut, TN 37934-1008",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TN,False,2026-06-01,2026-06-01
 Jersey Mike's,"1319 Saxon Drive, New Smyrna Beach, FL 32169-3160",In Development,https://www.jerseymikes.com/locations/coming-soon/US-FL,False,,2026-05-18
 Jersey Mike's,"13465 Camino Canada, El Cajon, CA 92021-8814",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CA,False,,2026-05-18
 Jersey Mike's,"135 West Road (Rt. 83), Ellington, CT 06029-5725",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CT,False,,2026-05-18
@@ -215,6 +217,7 @@ Jersey Mike's,"160 Fairview Avenue, Hudson, NY 12534-1267",In Development,https:
 Jersey Mike's,"1617 Georgesville Square Drive, Columbus, OH 43228-3689",In Development,https://www.jerseymikes.com/locations/coming-soon/US-OH,False,,2026-05-18
 Jersey Mike's,"16220 Marketplace Boulevard, Bowie, MD 20716",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MD,False,,2026-05-18
 Jersey Mike's,"165 Levittown Parkway, Levittown, PA 19055-2464",In Development,https://www.jerseymikes.com/locations/coming-soon/US-PA,False,,2026-05-18
+Jersey Mike's,"16605 SE 362nd Ave, Sandy, OR 97055-9289",In Development,https://www.jerseymikes.com/locations/coming-soon/US-OR,True,2026-06-04,2026-06-04
 Jersey Mike's,"1661 Estero Blvd., Ft Myers Beach, FL 33931-2846",In Development,https://www.jerseymikes.com/locations/coming-soon/US-FL,False,,2026-05-18
 Jersey Mike's,"1709 W Nursery Road, Linthicum Heights, MD 21090",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MD,False,,2026-05-18
 Jersey Mike's,"171 E Park Avenue, Long Beach, NY 11561-3522",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,,2026-05-18
@@ -236,7 +239,7 @@ Jersey Mike's,"2132 Topside Road, Louisville, TN 37777-4145",In Development,http
 Jersey Mike's,"21841 Three Notch Road, Lexington Park, MD 20653-5524",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MD,False,,2026-05-18
 Jersey Mike's,"2200 W. Broadway, Council Bluffs, IA 51501-3627",In Development,https://www.jerseymikes.com/locations/coming-soon/US-IA,False,2026-05-31,2026-05-31
 Jersey Mike's,"2240 E Lohmam, La Cruces, NM 88011",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NM,False,2026-05-31,2026-05-31
-Jersey Mike's,"2240 E Lohmam, Las Cruces, NM 88001-8418",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NM,True,2026-06-01,2026-06-01
+Jersey Mike's,"2240 E Lohmam, Las Cruces, NM 88001-8418",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NM,False,2026-06-01,2026-06-01
 Jersey Mike's,"2248 Coffeen Ave, Sheridan, WY 82801-6213",In Development,https://www.jerseymikes.com/locations/coming-soon/US-WY,False,2026-05-22,2026-05-22
 Jersey Mike's,"237-245 North Winton Road, Rochester, NY 14610-1229",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,,2026-05-18
 Jersey Mike's,"2430 US Highway 27, Clermont, FL 34714-9117",In Development,https://www.jerseymikes.com/locations/coming-soon/US-FL,False,2026-05-28,2026-05-28
@@ -248,7 +251,7 @@ Jersey Mike's,"27615 US Highway 27, Leesburg, FL 34748-9396",In Development,http
 Jersey Mike's,"279 E Fairmount Avenue, Jamestown, NY 14701",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,,2026-05-18
 Jersey Mike's,"28 W Adams Street, Detroit, MI 48226-1609",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MI,False,,2026-05-18
 Jersey Mike's,"2810 Brooks Street, Missoula, MT 59801",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MT,False,,2026-05-18
-Jersey Mike's,"2810 Brooks Street, Missoula, MT 59801-7718",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MT,True,2026-06-01,2026-06-01
+Jersey Mike's,"2810 Brooks Street, Missoula, MT 59801-7718",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MT,False,2026-06-01,2026-06-01
 Jersey Mike's,"2924 US Highway 70 W, Goldsboro, NC 27530-9619",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NC,False,,2026-05-18
 Jersey Mike's,"3022 Fairlane Drive, Allen Park, MI 48101",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MI,False,,2026-05-18
 Jersey Mike's,"3065 Clairemont Drive, San Diego, CA 92117-6974",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CA,False,,2026-05-18
@@ -271,6 +274,7 @@ Jersey Mike's,"365 Revolution Drive, Somerville, MA 02145-1553",In Development,h
 Jersey Mike's,"369 S Lower Sacramento Road, Lodi, CA 95242-3324",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CA,False,,2026-05-18
 Jersey Mike's,"370 Patterson Drive, Morgantown, WV 26505-3270",In Development,https://www.jerseymikes.com/locations/coming-soon/US-WV,False,2026-05-19,2026-05-19
 Jersey Mike's,"370 Patteson Drive, Morgantown, WV 26505-3270",In Development,https://www.jerseymikes.com/locations/coming-soon/US-WV,False,2026-05-22,2026-05-22
+Jersey Mike's,"37463 Lion Drive, Selbyville, DE 19975-3631",In Development,https://www.jerseymikes.com/locations/coming-soon/US-DE,True,2026-06-04,2026-06-04
 Jersey Mike's,"383 Patterson Drive, Morgantown, WV 26505-3270",In Development,https://www.jerseymikes.com/locations/coming-soon/US-WV,False,,2026-05-18
 Jersey Mike's,"40 Highlands Mall Drive, Natrona Heights (Township name Harrison), PA 15065-1972",In Development,https://www.jerseymikes.com/locations/coming-soon/US-PA,False,,2026-05-18
 Jersey Mike's,"415 Community Drive, North Liberty, IA 52317-6703",In Development,https://www.jerseymikes.com/locations/coming-soon/US-IA,False,,2026-05-18
@@ -314,7 +318,7 @@ Jersey Mike's,"791 South 930 West, Payson, UT 84651-3250",In Development,https:/
 Jersey Mike's,"80 Laurel Street, Christiansburg, VA 24073",In Development,https://www.jerseymikes.com/locations/coming-soon/US-VA,False,,2026-05-18
 Jersey Mike's,"8230 N Highway 41, Post Falls, ID 83854",In Development,https://www.jerseymikes.com/locations/coming-soon/US-ID,False,,2026-05-18
 Jersey Mike's,"840 Lexington Street, Waltham, MA 02452",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MA,False,,2026-05-18
-Jersey Mike's,"853 W. SH 71, Bastrop, TX 78602",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,True,2026-06-01,2026-06-01
+Jersey Mike's,"853 W. SH 71, Bastrop, TX 78602",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,False,2026-06-01,2026-06-01
 Jersey Mike's,"855 Omaha Street, Rapid City, SD 57701-2655",In Development,https://www.jerseymikes.com/locations/coming-soon/US-SD,False,,2026-05-18
 Jersey Mike's,"879 State Route 13, Cortland, NY 13045-3525",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,,2026-05-18
 Jersey Mike's,"9055 S Eastern Avenue, Las Vegas, NV 89123-4856",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NV,False,,2026-05-18
@@ -340,6 +344,7 @@ Jersey Mike's,"SEC Winding Way & Manzanita Ave, Carmichael, CA 95608",In Develop
 Jersey Mike's,"SEQ Highway 7 & 50th, Brighton, CO 80601",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CO,False,,2026-05-18
 Jersey Mike's,"TBD @ Dalton& North Goliad Street, Rockwall, TX 75087",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,False,,2026-05-18
 Jersey Mike's,"TBD @ E LaSalle Drive, Bismarck, ND 58503",In Development,https://www.jerseymikes.com/locations/coming-soon/US-ND,False,,2026-05-18
+Jersey Mike's,"TBD @ N Loop 1604 E, San Antonio, TX 78266",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,True,2026-06-04,2026-06-04
 Jersey Mike's,"TBD @ NEC Ferrari Ranch Road & Lincoln Boulevard, Lincoln, CA 95648",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CA,False,,2026-05-18
 Jersey Mike's,"TBD @ NWC Claribel & Oakdale, Riverbank, CA 95367",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CA,False,,2026-05-18
 Jersey Mike's,"TBD @ NWQ US Highway 290 & FM 973, Manor, TX 786539",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,False,,2026-05-18
