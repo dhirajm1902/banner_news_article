@@ -1,28 +1,41 @@
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 |---|---|---|---|---|---|---|---|
-| Kindred Resort | Keystone, Colorado (River Run Village base area) | Opening | May 7, 2026 | opened to the public on Thursday, May 7, 2026 | Kindred Resort opened on May 7, 2026 as Keystone, Colorado's first luxury hotel and the newest addition to the RockResorts collection. The ski-in/ski-out development features 107 guest rooms, 95 luxury residences, and private club access in the River Run Village base area. The property is centered around a "Campfire Luxury" concept built around connection, community, and seamless mountain access. | https://www.snowsportsnews.com/newsrepository/2026/may/first-luxury-hotel-in-keystone-now-open-introducing-campfire-luxury-to-colorado/ | 2026-05-11 23:03:59 |
-| Ramen Danbo | 3982 Main St., Vancouver, BC | Opening | Not specified | announcing new location | Ramen Danbo announced it will open a new location at 3982 Main St. in Vancouver's Riley Park-Little Mountain neighbourhood. The restaurant, known for its Fukuoka-style Tonkatsu ramen, currently operates four other provincial locations plus outposts in Seattle and New York. No opening date has been shared. | https://dailyhive.com/vancouver/ramen-danbo-main-street-vancouver | 2026-05-11 19:51:00 |
-| Pet Supplies Plus | 8809 Lakeview Pkwy., Rowlett, Texas | Opening | May 16–17, 2026 (Grand Opening celebration) | now open | Pet Supplies Plus opened at 8809 Lakeview Pkwy. in Rowlett, Texas, owned by local franchise partners Todd McEvoy and Alan Mann, marking their second DFW-area location after opening in Euless in March. The store offers pet essentials, grooming, self-pet wash stations, and carry-out assistance. A grand opening celebration is scheduled for May 16 and 17, 2026. | https://www.prnewswire.com/news-releases/local-restaurant-veterans-host-grand-opening-for-their-second-pet-supplies-plus-location-in-rowlett-may-16-and-may-17-302768592.html | 2026-05-11 19:03:00 |
-| Raffaeles Pizza | Address not specified | Closing | May 30, 2026 | set to close on May 30 | Raffaeles Pizza, a Valley-area restaurant specializing in New York-style and Sicilian slices and pies, is set to close on May 30. It is one of five Valley restaurants mentioned in the article as closing in May. No street address was provided in the article text. | https://www.phoenixnewtimes.com/food-drink/phoenix-restaurants-closing-in-may-how-to-get-a-final-taste-40666308/ | 2026-05-11 17:42:35 |
-| Serrano's Mexican Food | 1964 E. McKellips Road, Mesa, Arizona | Closing | Not specified | closing (owners posted a closing announcement) | Serrano's Mexican Food, a family-owned Mexican restaurant at its McKellips Road location for over 34 years, announced it is closing this month. The owners cited a steady decline in business, rising operating costs, and ongoing road construction in front of the restaurant as contributing factors. A closing announcement was posted to the restaurant's social media pages. | https://www.phoenixnewtimes.com/food-drink/phoenix-restaurants-closing-in-may-how-to-get-a-final-taste-40666308/ | 2026-05-11 17:42:35 |
+| Rivers Casino Portsmouth Hotel | Portsmouth, VA (address not specified) | Opening | Not specified | plans to open | Article could not be fetched (timeout); title indicates Rivers Casino Portsmouth's $65 million hotel plans to open before Boyd's Norfolk Resort. | https://www.casino.org/news/rivers-casino-portsmouths-65-million-hotel-plans-open/ | 2026-05-11 18:37:26 |
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page; no article content loaded. Title references a struggling movie theater chain filing Chapter 11 and possibly closing. | https://www.msn.com/en-us/money/companies/struggling-movie-theater-chain-files-chapter-11-may-close/ar-AA1X9hqQ | 2026-05-11 13:06:18 |
+| Residence Inn by Marriott Riverwalk | San Antonio, TX (address not specified) | Opening | Summer 2026 | highly anticipated summer 2026 grand opening | Article could not be fetched (403 error); title indicates Residence Inn by Marriott Riverwalk in San Antonio has appointed senior staff ahead of its summer 2026 grand opening. | https://www.travelandtourworld.com/news/article/san-antonios-latest-luxury-destination-residence-inn-by-marriott-riverwalk-appoints-corina-lathan-as-general-manager-and-marcia-caballero-as-director-of-sales-ahead-of-its-highly-anticipated/ | 2026-05-12 18:00:37 |
+| Raising Cane's | Jonesboro, AR (address not specified) | Opening | Not specified | grand opening celebrated | Article could not be fetched (401 error); title indicates Raising Cane's celebrated a grand opening of its Jonesboro restaurant. | https://jonesbororightnow.com/news/268862-raising-canes-celebrates-grand-opening-of-jonesboro-resturaunt/ | 2026-05-12 17:25:42 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article could not be fetched (403 error); title references a southern convenience store chain filing for bankruptcy with 20 locations' futures unclear. | https://www.mlive.com/business/2026/05/southern-convenience-store-chain-files-for-bankruptcy-future-of-20-locations-unclear.html | 2026-05-12 16:26:00 |
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page; no article content loaded. Title references Eagles Investments Group c-store chain filing Chapter 11 bankruptcy. | https://www.msn.com/en-us/money/companies/eagles-investments-group-c-store-chain-files-for-chapter-11-bankruptcy/ar-AA22QPo4 | 2026-05-12 13:28:03 |
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page; no article content loaded. Title references a Colorado-born green chili restaurant opening a new location. | https://www.msn.com/en-us/foodanddrink/foodnews/colorado-born-green-chili-restaurant-opening-new-location/ar-AA21yB7O | 2026-05-12 13:18:06 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article could not be fetched (403 error); title references a beloved national diner chain shuttering 50 stores. | https://www.pennlive.com/news/2026/05/beloved-national-diner-chain-in-60-years-shutters-50-stores-updates-menu.html | 2026-05-12 09:00:00 |
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page; no article content loaded. Title references a 138-year-old grocery store filing for bankruptcy. | https://www.msn.com/en-us/money/companies/138-year-old-grocery-store-staple-files-for-bankruptcy/ar-AA1HQddu | 2026-05-12 02:54:54 |
+| Kindred Resort | River Run Village base area, Keystone, CO (address not specified) | Opening | May 7, 2026 | recently opened; opened May 7, 2026 | Kindred Resort opened to the public on May 7, 2026 as Keystone, Colorado's first luxury hotel and newest addition to the RockResorts collection. The ski-in/ski-out development features 107 guest rooms and 95 luxury residences in the River Run Village base area. | https://www.snowsportsnews.com/newsrepository/2026/may/first-luxury-hotel-in-keystone-now-open-introducing-campfire-luxury-to-colorado/ | 2026-05-11 23:03:59 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article could not be fetched (403 error); title references a vegetarian burger and shawarma restaurant opening in Brampton (Canada). | https://www.insauga.com/vegetarian-burger-and-shawarma-restaurant-now-open-in-brampton/ | 2026-05-11 19:58:41 |
+| Ramen Danbo (Main Street) | 3982 Main St., Vancouver, BC, Canada (zip not specified) | Opening | Not specified | opening soon; preparation underway; opening date not yet announced | Ramen Danbo announced a new location at 3982 Main St. in Vancouver's Riley Park-Little Mountain neighbourhood, with preparations described as "well underway." An opening date has not yet been shared. | https://dailyhive.com/vancouver/ramen-danbo-main-street-vancouver | 2026-05-11 19:51:00 |
+| Pet Supplies Plus | 8809 Lakeview Pkwy., Rowlett, TX (zip not specified) | Opening | May 16–17, 2026 (Grand Opening) | grand opening May 16 and 17, 2026 | Pet Supplies Plus opened a new location at 8809 Lakeview Pkwy. in Rowlett, TX, with a grand opening celebration on May 16 and 17. The store is owned by Todd McEvoy and Alan Mann, their second Pet Supplies Plus location in the greater DFW area after opening their first in Euless in March 2026. | https://www.prnewswire.com/news-releases/local-restaurant-veterans-host-grand-opening-for-their-second-pet-supplies-plus-location-in-rowlett-may-16-and-may-17-302768592.html | 2026-05-11 19:03:00 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article could not be fetched (403 error); title references a Colombian Marina restaurant holding a grand opening in Middle River, MD. | https://nottinghammd.com/2026/05/11/colombian-marina-restaurant-to-hold-grand-opening-in-middle-river/ | 2026-05-11 18:12:21 |
+| Serrano's Mexican Food | 1964 E. McKellips Road, Mesa, AZ (zip not specified) | Closing | May 2026 (exact date not specified) | closing this month | Serrano's Mexican Food, which served customers at its McKellips Road location for over 34 years, announced it will close this month. Owners cited a steady decline in business, rising operating costs, and ongoing road construction in front of the restaurant as factors. | https://www.phoenixnewtimes.com/food-drink/phoenix-restaurants-closing-in-may-how-to-get-a-final-taste-40666308/ | 2026-05-11 17:42:35 |
+| Raffaeles Pizza | Address not specified (Phoenix/Valley area, AZ) | Closing | May 30, 2026 | set to close May 30, 2026 | Raffaeles Pizza, which specializes in New York-style and Sicilian slices and pies, is set to close on May 30. The article groups it among Valley restaurants closing in May. | https://www.phoenixnewtimes.com/food-drink/phoenix-restaurants-closing-in-may-how-to-get-a-final-taste-40666308/ | 2026-05-11 17:42:35 |
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page; no article content loaded. Title references a Covington pizza restaurant expanding to downtown Cincinnati. | https://www.msn.com/en-us/foodanddrink/foodnews/covington-pizza-restaurant-expanding-to-downtown-cincinnati/ar-AA22lK9r | 2026-05-11 17:12:34 |
 
 ---
 
-**Non-working or unusable articles list:**
+**Non-working or unusable articles List:**
 
-- **Article 1** — Could not fetch (read timeout)
-- **Article 2** — MSN wrapper only; no article body content returned
-- **Article 3** — Could not fetch (403 Forbidden)
-- **Article 4** — Could not fetch (401 Unauthorized)
-- **Article 5** — Could not fetch (403 Forbidden)
-- **Article 6** — MSN wrapper only; no article body content returned
-- **Article 7** — MSN wrapper only; no article body content returned
-- **Article 8** — Outside USA/Canada (Harrow Leisure Centre, UK)
-- **Article 9** — Could not fetch (403 Forbidden)
-- **Article 10** — Outside USA/Canada (Indian Hotels Company Limited, India)
-- **Article 11** — Outside USA/Canada (Keio Plaza Hotel, Japan)
-- **Article 12** — MSN wrapper only; no article body content returned
-- **Article 14** — Could not fetch (403 Forbidden)
-- **Article 16** — Outside USA/Canada (Awaji Island, Japan)
-- **Article 18** — Could not fetch (403 Forbidden)
-- **Article 20** — MSN wrapper only; no article body content returned
+- **Article 1** — Timeout error; title-only extraction used.
+- **Article 2** — MSN shell page; no content.
+- **Article 3** — Paywall/403 error; title-only extraction used.
+- **Article 4** — 401 error; title-only extraction used.
+- **Article 5** — Paywall/403 error; no content.
+- **Article 6** — MSN shell page; no content.
+- **Article 7** — MSN shell page; no content.
+- **Article 8** — Outside USA/Canada (Harrow Leisure Centre, London, UK — ladies-only gym).
+- **Article 9** — Paywall/403 error; no content.
+- **Article 10** — Outside USA/Canada (Mumbai, India — Indian Hotels Company / IHCL; expansion in India).
+- **Article 11** — Outside USA/Canada (Japan — Keio Plaza Hotel and Sapporo Grand Hotel).
+- **Article 12** — MSN shell page; no content.
+- **Article 14** — Paywall/403 error; title indicates Brampton, Canada location — no content available. Row not added due to no details.
+- **Article 16** — Outside USA/Canada (Awaji Island, Japan — hotel wing opening).
+- **Article 18** — Paywall/403 error; no content.
+- **Article 19 (partial)** — Article covers multiple Phoenix-area closures; two rows extracted (Serrano's and Raffaeles). Additional closing businesses mentioned in article (3 unnamed "two spots mid-May, three more end of month") lacked enough detail to extract separately per the strict constraints.
+- **Article 20** — MSN shell page; no content.

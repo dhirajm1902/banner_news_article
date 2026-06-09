@@ -1,11 +1,71 @@
-**Non-working or unusable articles List:**
-• Article 352 — Outside USA/Canada
-• Article 353 — No qualifying business found (voting polls, not retail/restaurant)
-• Article 354 — Outside USA/Canada
-
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
-| --------------------------- | ------------------------------------- | ---------- | ---------- | ------ | ----------------- | ------------ | -------------- |
-| Chef Flavas | Stage Road, Bartlett, TN | Closing | Not specified | a 'total loss' after fire | Chef Flavas' Bartlett location was destroyed in an overnight fire and is a total loss. The downtown Memphis location is still open. No one was hurt. | https://www.fox13memphis.com/news/chef-flavas-location-in-bartlett-a-total-loss-after-fire-city-official-says/article_9d79df57-b154-445e-a32d-7f8aa6780287.html | 2026-05-26 11:58:00 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+|---|---|---|---|---|---|---|---|
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page; no article content loaded. Title references NC's newest casino now open. | https://www.msn.com/en-us/travel/news/nc-s-newest-casino-is-now-open-3-things-to-know-before-you-go/ar-AA23OfYD | 2026-05-27 10:10:36 |
+| North Elm Home | 5938 North Elm Ave., Millerton, NY (zip not specified) | Closing | By end of July 2026 (when stock runs out or lease expires) | closing; closing sale underway with stock marked down 20–50% | North Elm Home, a furniture store in Millerton, NY, is closing after 11 years when its stock runs out or by end of July when its lease expires. Owners Cindy Dunleavy and John Scutieri announced a closing sale in late April with stock marked down 20–50%. | https://www.timesunion.com/business/article/north-elm-home-millerton-closing-22270741.php | 2026-05-27 10:05:12 |
+| Premium Stitches (Crabtree Valley Mall) | 4325 Glenwood Ave. (first level, near Macy's), Raleigh, NC (zip not specified) | Closing | May 23, 2026 | closed; last day May 23, 2026 | Premium Stitches closed its Crabtree Valley Mall location on May 23, 2026. The store announced on Instagram it plans to reopen at Triangle Town Center in Raleigh, roughly 10 miles northeast. | https://www.newsobserver.com/news/business/article315893086.html | 2026-05-27 10:00:00 |
+| Premium Stitches (Triangle Town Center) | Triangle Town Center, Raleigh, NC (address not specified) | Opening | Not specified | new location posting coming soon; re-opening at Triangle Town Center | Premium Stitches announced via Instagram it will reopen at Triangle Town Center in Raleigh after closing its Crabtree Valley Mall location. No specific address or opening date was provided. | https://www.newsobserver.com/news/business/article315893086.html | 2026-05-27 10:00:00 |
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page; no article content loaded. Title references H-E-B closing a North Austin store after 40 years. | https://www.msn.com/en-us/money/companies/h-e-b-closing-north-austin-store-after-40-years-ahead-of-lease-expiring/ar-AA23QOou | 2026-05-27 09:02:41 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article could not be fetched (403 error); title references crypto firms and automakers looking to open banks — not a retail or restaurant business. | https://www.nytimes.com/2026/05/27/business/bank-charters-fintech-crypto.html | 2026-05-27 09:02:15 |
+| Bowers Ace Hardware | 118 Spears Creek Church Road, Elgin, SC (zip not specified) | Opening | June 13, 2026 | grand opening June 13, 2026 | Bowers Ace Hardware will hold a grand opening from 9 a.m. to 2 p.m. on June 13, 2026 at 118 Spears Creek Church Road in Elgin, SC, within the new Pontiac Towne Center shopping complex. The 12,000-square-foot freestanding store includes a 4,000-square-foot garden center and will be the fifth Bowers Ace Hardware in South Carolina. | https://www.thestate.com/news/local/article315893689.html | 2026-05-27 09:00:00 |
+| Hungry Howie's | 134 Saint James Ave., Goose Creek, SC (zip not specified) | Opening | Mid-July 2026 | set to open mid-July 2026 | Hungry Howie's, a Michigan-based pizza chain, will open its fifth South Carolina location at 134 Saint James Ave. in Goose Creek in mid-July 2026. The restaurant is the chain's first in the greater Charleston area under a single-store franchise agreement. | https://www.postandcourier.com/business/retail/hungry-howies-charleston-south-carolina-pizza-restaurant/article_d01b1ae8-5efe-464e-ba42-73574aecb17f.html | 2026-05-27 09:00:00 |
+| Miniso | 5705 Deerfield Blvd., Deerfield Township (Warren County), OH (zip not specified) | Opening | Not specified | planning to open; opening date not yet announced | Miniso, a pop culture retail company, is planning to open a location at Deerfield Towne Center at 5705 Deerfield Blvd. in Deerfield Township, OH, in a space next to Whole Foods Market. The chain operates over 7,700 stores globally; a specific opening date had not yet been determined. | https://www.aol.com/articles/miniso-planning-store-warren-county-203349000.html | 2026-05-27 08:53:23 |
+| Boxed & Loaded | 1114 Texas Palmyra Highway, Indian Orchard, Wayne County, PA (zip not specified) | Opening | 2025 (opened last year; ribbon cutting May 22, 2026) | recently opened; official ribbon cutting May 22, 2026 | Boxed & Loaded, a shipping, mailbox, business services, and printing business on Route 6 in Indian Orchard, Wayne County, held its official ribbon cutting ceremony on May 22, 2026. The business opened last year and is located next to the Alpine market at 1114 Texas Palmyra Highway. | https://www.tricountyindependent.com/story/news/local/2026/05/27/boxed-loaded-open-route-6-wayne-county/90222173007/ | 2026-05-27 08:43:00 |
+| Weston Jewelers | 1117 E. Las Olas Blvd., Fort Lauderdale, FL (zip not specified) | Opening | As soon as December 2027 | planned for December 2027; commission vote cleared | Weston Jewelers, a family-owned luxury watch and jewelry retailer, received unanimous commission approval to build a five-story location at 1117 E. Las Olas Blvd. in Fort Lauderdale. A second and final commission vote is scheduled for June 2; the store plans to open as soon as December 2027. | https://instoremag.com/neighbors-fight-five-story-jewelry-store-planned-for-fort-lauderdale-boulevard/ | 2026-05-27 08:08:11 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article could not be fetched (403 error); title references Acapulco restaurant closing locations but no content available. | https://mshale.com/ac23c822/84a0d8a6BQ5Fo4_ZhPQ | 2026-05-27 07:43:38 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article could not be fetched (403 error); title references a Grand Rapids non-alcoholic cocktail bar grand opening. | https://www.mlive.com/galleries/P5UHWDBQUFBVLEQRL6EOF63WQ4/ | 2026-05-27 07:00:00 |
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page (en-gb); no article content loaded. Title references an iconic chain closing a second department store after 132 years. | https://www.msn.com/en-gb/money/other/iconic-chain-closes-second-department-store-this-year-after-132-years-in-business/ar-AA24hMPu | 2026-05-27 07:00:00 |
+| Gordon Hotel and Gordon Residences (Corvallis) | Corner of First and Madison streets, Corvallis, OR (zip not specified) | Opening | 2027 | advertised as opening in 2027; under construction | Obie Companies is building the seven-story Gordon Hotel and Gordon Residences at the corner of First and Madison streets in Corvallis, OR, across from the city's Riverfront Park. The project will include 75 hotel guest rooms and 92 apartments and is advertised as opening in 2027. | https://hh-today.com/36546-2/ | 2026-05-27 06:10:47 |
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page; no article content loaded. Title references Buc-ee's expanding to new states. | https://www.msn.com/en-us/money/companies/buc-ee-s-is-expanding-to-new-states-here-s-where/ar-AA22WfTI | 2026-05-27 03:24:21 |
+| Breaking Burrito | Address not specified | Opening | Not specified | opening soon | Article could not be fetched (403 error); title indicates Breaking Burrito restaurant is opening soon. No further details available. | https://www.keloland.com/news/your-money-matters/breaking-burrito-restaurant-opening-soon/ | 2026-05-27 03:18:51 |
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page; no article content loaded. Title references Raising Cane's opening a new Summit County location. | https://www.msn.com/en-us/travel/news/raising-cane-s-to-open-new-summit-county-location/ar-AA247eNQ | 2026-05-27 03:08:53 |
+| Callahan's Family Dining | Starlight Square, Cassopolis Street, Elkhart, IN (address not specified) | Opening | Not specified | opening at new location | Article could not be fetched (403 error); title indicates well-known Elkhart restaurant Callahan's Family Dining is opening at a new location at Starlight Square on Cassopolis Street. | https://wsbt.com/news/local/well-know-elkhart-restaurant-callahans-family-dining-opening-new-location-starlight-square-cassopolis-street | 2026-05-27 02:37:10 |
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page; no article content loaded. Title references Orta shutting down closure rumors — not a confirmed opening or closing event. | https://www.msn.com/en-us/money/companies/orta-shuts-down-rumors-claiming-the-business-is-closing/ar-AA2472Uw | 2026-05-27 02:11:46 |
+| Casey's General Store | 1736 N. Washington Street, Junction City, KS (zip not specified) | Opening | Not specified (recently opened) | recently opened | Casey's General Store opened a new location at 1736 N. Washington Street in Junction City, KS, offering freshly prepared food including made-from-scratch pizza, fuel, and everyday essentials. The ribbon cutting was held with Ann Mitchell, District Manager, officiating. | https://jcpost.com/posts/cf2507d5-3a79-443a-84a5-bc32f0a94dc4 | 2026-05-27 01:20:52 |
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page; no article content loaded. Title references a discount supermarket chain opening in Latham, NY. | https://www.msn.com/en-us/money/news/discount-supermarket-chain-to-open-new-location-in-latham/vi-AA247H1A | 2026-05-27 00:22:15 |
+| No qualifying business found | N/A | N/A | N/A | N/A | MSN shell page; no article content loaded. Title references an Italian restaurant in Rotterdam closing after nearly 30 years — outside USA/Canada. | https://www.msn.com/en-us/travel/news/italian-restaurant-in-rotterdam-closing-after-nearly-30-years/ar-AA247n52 | 2026-05-27 00:22:15 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article body returned no content; title references JCPenney store closures and 90% off sales. No specific location details available. | https://www.mibolsillo.co/news/jcpenney-accelerates-90-off-sales-due-to-massive-store-closures-this-summer-20260526-0042.html | 2026-05-26 23:56:00 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article could not be fetched (403 error); title references Acapulco restaurant closing locations but no content available. | https://mshale.com/0c3340e8/1b648ee7eZptwvjKjk4 | 2026-05-26 23:52:39 |
 
-The table includes one row per article in the order given, following all strict extraction rules from the provided text only.
+---
+
+**Non-working or unusable articles List:**
+
+- **Article 351** — Outside USA/Canada (Wexford/Gorey/Courtown, Ireland — Screwloose Fitness gym).
+- **Article 352** — MSN shell page; no content.
+- **Article 355** — Outside USA/Canada (Preston, Lancashire, UK — HSL furniture store).
+- **Article 356** — MSN shell page; no content.
+- **Article 357** — Paywall/403 error; article is about bank charter applications — not a retail/restaurant business.
+- **Article 360** — Outside USA/Canada (County Wexford, Ireland — road/bridge closure); not a retail/restaurant business.
+- **Article 363** — Outside USA/Canada (Beijing, China — Galeries Lafayette). Duplicate of Article 209.
+- **Article 365** — Paywall/403 error; no content available.
+- **Article 366** — MSN shell page (en-ie); Outside USA/Canada (Cork, Ireland — takeaway).
+- **Article 367** — Paywall/403 error; title-only extraction used. Row not added due to no location details.
+- **Article 368** — MSN shell page (en-gb); no content. Likely Outside USA/Canada.
+- **Article 369** — Paywall/403 error; Outside USA/Canada (Europe, Asia, Middle East — hotel brands).
+- **Article 370 (partial)** — Gordon Hotel extracted (Corvallis, OR — USA). Albany riverfront lots mentioned but no confirmed opening/closure.
+- **Article 371** — Outside USA/Canada (Harrods, London, UK — Louis Vuitton store).
+- **Article 372** — Outside USA/Canada (Australia — Stateside Sports administration).
+- **Article 373** — Outside USA/Canada (San Juan, Trinidad and Tobago); also no article content.
+- **Article 374** — Outside USA/Canada (Warrington, Cheshire, UK — Big Motoring World).
+- **Article 375** — Paywall/403 error; Outside USA/Canada (Jeddah, Saudi Arabia — Raffles hotel).
+- **Article 376** — Outside USA/Canada (Nepal travel guide); also no article content.
+- **Article 377** — Outside USA/Canada (Orpington, UK — Aldi supermarket).
+- **Article 378** — Outside USA/Canada (Chippenham, Wiltshire, UK — Budgens convenience store).
+- **Article 379** — Outside USA/Canada (Marlborough, Wiltshire, UK — Rejuvenesce Beauty Salon).
+- **Article 380** — Outside USA/Canada (Eastbourne, Sussex, UK — Quiz fashion retailer).
+- **Article 381** — Paywall/403 error; article is about an after-school music program — not a retail/restaurant business.
+- **Article 383** — Paywall/403 error; title-only extraction used (no location details available).
+- **Article 385** — Paywall/403 error; title-only extraction used.
+- **Article 386** — MSN shell page; no content. Not a confirmed closure.
+- **Article 387** — Outside USA/Canada (NSW, Australia — tourism awards); not a retail/restaurant business.
+- **Article 388** — Outside USA/Canada (Gold Coast, Queensland, Australia — Nonna's Restaurant). Behind paywall.
+- **Article 389** — Outside USA/Canada (New Farm, Brisbane, Australia — Pici restaurant).
+- **Article 390** — Outside USA/Canada (Ho Chi Minh City, Vietnam — BBQ franchise).
+- **Article 391** — Outside USA/Canada (India — scholarship programme); not a retail/restaurant business.
+- **Article 392** — Outside USA/Canada (India — scholarship programme); not a retail/restaurant business.
+- **Article 394** — Outside USA/Canada (Salford Quays, Manchester, UK — Aldi store).
+- **Article 395** — Paywall/403 error; Outside USA/Canada (Penang, Malaysia — Hotel Equatorial).
+- **Article 396** — Outside USA/Canada (Ho Chi Minh City, Vietnam — BBQ franchise). Duplicate of Article 390.
+- **Article 398** — MSN shell page; Outside USA/Canada (Rotterdam, Netherlands — Italian restaurant).
+- **Article 399** — No article content; JCPenney store closures — no specific location details available.
+- **Article 400** — Paywall/403 error; Acapulco restaurant closures — no content available.
