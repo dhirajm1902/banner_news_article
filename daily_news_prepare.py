@@ -43,29 +43,22 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 Create ONE clean Markdown table with these exact column headers (in this order):
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
-🌎 Geographic filter (STRICT)
-• Only extract businesses located in the USA or Canada
-• If the article is about a business in any other country (UK, Australia, India, UAE, etc.) → DO NOT add any row to the table; add it ONLY to the Non-working list as "Outside USA/Canada"
-• If an article covers both USA/Canada locations AND international locations → extract only the USA/Canada rows, skip the rest; add the article to the Non-working list as "Outside USA/Canada (partial)"
-
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
-• If a USA/Canada article has zero relevant business opening or closure information, still include a row with:
+• If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
-• ❌ Never add a table row for articles outside USA/Canada — those go in the Non-working list only
 
 🚫 Strict constraints
 • ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
-• ❌ No extraction of businesses outside USA or Canada
 
 📎 Final section (mandatory)
 At the very end of your response, add:
 Non-working or unusable articles List:
-• Article number — Reason (paywall / no business details / duplicate / text missing / Outside USA/Canada / etc.)
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
 If none, write: None
 
 ✅ Articles below — extract now:
@@ -157,6 +150,18 @@ def main():
     print(f"✓  {total} new articles  (generated: {generated})")
     print(f"✓  {total_batches} batch file(s) to create\n")
 
+    # ── Create ALL placeholder _output.md files UPFRONT before fetching starts ──
+    # This lets you paste extracted content into any md file immediately,
+    # without waiting for the txt fetch loop to reach that batch number.
+    if total_batches > 0:
+        print("Creating all output placeholders upfront...")
+        for b in range(total_batches):
+            placeholder = Path(f"newsbatch_{b + 1}_output.md")
+            if not placeholder.exists():
+                placeholder.write_text("", encoding="utf-8")
+                print(f"  + newsbatch_{b + 1}_output.md  (ready for your extraction)")
+        print()
+
     batch_files = []
 
     for b in range(total_batches):
@@ -189,14 +194,8 @@ def main():
 
         content = EXTRACTION_PROMPT + "\n\n" + "\n\n".join(blocks)
         Path(filename).write_text(content, encoding="utf-8")
-
-        # Create blank placeholder output file so all slots are visible immediately
-        out_placeholder = filename.replace(".txt", "_output.md")
-        if not Path(out_placeholder).exists():
-            Path(out_placeholder).write_text("", encoding="utf-8")
-
         batch_files.append(filename)
-        print(f"  ✓ Saved → {filename}  (blank {out_placeholder} created)\n")
+        print(f"  ✓ Saved → {filename}\n")
 
     print("=" * 60)
     print("NEXT STEPS")

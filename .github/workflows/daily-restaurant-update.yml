@@ -65,8 +65,9 @@ jobs:
           else
             git commit -m "chore: daily restaurant update $(date -u '+%Y-%m-%d %H:%M UTC')"
             for i in 1 2 3 4 5; do
-              git pull --rebase origin main && git push origin main && break
+              git pull --rebase -X theirs origin main && git push origin main && break
               echo "Push attempt $i failed, retrying in 15s..."
+              git rebase --abort 2>/dev/null || true
               sleep 15
             done
           fi

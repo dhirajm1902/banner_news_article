@@ -1061,15 +1061,15 @@
                 <div id="dailyExtTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
                     <table class="w-full text-sm text-left data-table table-fixed">
                         <thead><tr>
-                            <th class="px-3 py-3 w-12">#</th>
-                            <th class="px-3 py-3 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="sortDailyExtTable('store_name')">Store / Business <i id="sort-dailyext-store" class="fas fa-sort text-gray-600 ml-1"></i></th>
-                            <th class="px-3 py-3 cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyExtTable('location')">Location <i id="sort-dailyext-location" class="fas fa-sort text-gray-600 ml-1"></i></th>
-                            <th class="px-3 py-3 w-28 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="sortDailyExtTable('event_type')">Event Type <i id="sort-dailyext-type" class="fas fa-sort text-gray-600 ml-1"></i></th>
-                            <th class="px-3 py-3 w-36">Event Date</th>
-                            <th class="px-3 py-3 w-40">Status</th>
-                            <th class="px-3 py-3">Description</th>
-                            <th class="px-3 py-3 w-32 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="sortDailyExtTable('published_date')">Published Date <i id="sort-dailyext-date" class="fas fa-sort-down text-gray-400 ml-1"></i></th>
-                            <th class="px-3 py-3 w-20">Link</th>
+                            <th class="px-3 py-3 w-8">#</th>
+                            <th class="px-3 py-3 w-[15%] cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyExtTable('store_name')">Store / Business <i id="sort-dailyext-store" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-3 py-3 w-[13%] cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyExtTable('location')">Location <i id="sort-dailyext-location" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-3 py-3 w-[9%] cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyExtTable('event_type')">Event Type <i id="sort-dailyext-type" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-3 py-3 w-[9%]">Event Date</th>
+                            <th class="px-3 py-3 w-[12%]">Status</th>
+                            <th class="px-3 py-3 w-[22%]">Description</th>
+                            <th class="px-3 py-3 w-[11%] cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyExtTable('published_date')">Published Date <i id="sort-dailyext-date" class="fas fa-sort-down text-gray-400 ml-1"></i></th>
+                            <th class="px-3 py-3 w-[9%]">Link</th>
                         </tr></thead>
                         <tbody id="dailyExtTableBody"></tbody>
                     </table>
@@ -1142,17 +1142,17 @@
                 <h3 class="text-xl font-semibold mb-2 text-gray-300">No WARN notices found</h3>
                 <p class="text-gray-500 text-sm">Run warn.py to generate data, or adjust your filters.</p>
             </div>
-            <div id="warnTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
-                <table class="w-full text-sm text-left data-table">
+            <div id="warnTableContainer" class="hidden overflow-hidden rounded-2xl border border-white/5 fade-in">
+                <table class="w-full text-sm text-left data-table table-fixed">
                     <thead><tr>
-                        <th class="px-3 py-3 w-10">#</th>
-                        <th class="px-3 py-3 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('company')">Company <span id="warnSort_company"></span></th>
-                        <th class="px-3 py-3 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('city')">City <span id="warnSort_city"></span></th>
-                        <th class="px-3 py-3 w-28 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('state')">State <span id="warnSort_state"></span></th>
-                        <th class="px-3 py-3 w-32 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('notice_date')">Notice Date <span id="warnSort_notice_date"></span></th>
-                        <th class="px-3 py-3 w-32 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('layoff_date')">Layoff Date <span id="warnSort_layoff_date"></span></th>
-                        <th class="px-3 py-3 w-28 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('employees_affected')">Employees <span id="warnSort_employees_affected"></span></th>
-                        <th class="px-3 py-3 w-28 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('closure_type')">Type <span id="warnSort_closure_type"></span></th>
+                        <th class="px-3 py-3 w-8">#</th>
+                        <th class="px-3 py-3 w-[18%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('company')">Company <span id="warnSort_company"></span></th>
+                        <th class="px-3 py-3 w-[12%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('city')">City <span id="warnSort_city"></span></th>
+                        <th class="px-3 py-3 w-[12%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('state')">State <span id="warnSort_state"></span></th>
+                        <th class="px-3 py-3 w-[10%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('notice_date')">Notice Date <span id="warnSort_notice_date"></span></th>
+                        <th class="px-3 py-3 w-[10%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('layoff_date')">Layoff Date <span id="warnSort_layoff_date"></span></th>
+                        <th class="px-3 py-3 w-[9%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('employees_affected')">Employees <span id="warnSort_employees_affected"></span></th>
+                        <th class="px-3 py-3 w-[10%] cursor-pointer select-none hover:text-white" onclick="sortWarnTable('closure_type')">Type <span id="warnSort_closure_type"></span></th>
                         <th class="px-3 py-3">Notes</th>
                     </tr></thead>
                     <tbody id="warnTableBody"></tbody>
@@ -1338,6 +1338,22 @@
     let warnSortCol = 'notice_date', warnSortDir = 'desc';
     let companyWebRows = [], filteredCompanyWebRows = [];
     let activeTab = 'store', activeScoopSubTab = 'articles';
+
+    // ── 2026 date filter helper ───────────────────────────────────────────────
+    const CUTOFF_YEAR = 2026;
+    function is2026Plus(dateStr) {
+        if (!dateStr) return false;
+        const s = String(dateStr).trim();
+        if (!s || s === '—' || s === 'N/A' || s === 'Not specified') return true; // keep undated
+        try { return new Date(s).getFullYear() >= CUTOFF_YEAR; } catch { return true; }
+    }
+
+    // ── Lazy-render page size ─────────────────────────────────────────────────
+    const PAGE_SIZE = 50;
+    let warnVisible      = PAGE_SIZE;
+    let dailyVisible     = PAGE_SIZE;
+    let dailyExtVisible  = PAGE_SIZE;
+    let histVisible      = PAGE_SIZE;
     let activeStoreSubTab = 'articles';
     let activeRestSubTab = 'articles', activeBizSubTab = 'articles';
     let activeDailyNewsSubTab = 'articles';
@@ -1542,6 +1558,7 @@
             Object.keys(data.data || {}).forEach(analyst => {
                 (data.data[analyst] || []).forEach(a => storeArticles.push({ ...a, Analyst: analyst }));
             });
+            storeArticles = storeArticles.filter(a => is2026Plus(a.Published || a.published || ''));
 
             const sel = document.getElementById('analystFilter');
             const analysts = [...new Set(storeArticles.map(a => a.Analyst))].sort();
@@ -1642,9 +1659,10 @@
             const res = await fetch('master_file/banner_news_master.csv?t=' + Date.now());
             if (!res.ok) throw new Error('fetch failed');
             const text = await res.text();
-            historicalArticles = parseSimpleCSV(text);
+            historicalArticles = parseSimpleCSV(text).filter(a => is2026Plus(a.Date_Appended || a.Published || ''));
             populateHistFilters();
             filteredHistoricalArticles = [...historicalArticles];
+            histVisible = PAGE_SIZE;
             sortHistoricalArticles();
             updateHistStats();
             renderHistoricalTable();
@@ -1689,6 +1707,7 @@
         const storeF   = document.getElementById('histStoreFilter').value;
         const typeF    = document.getElementById('histTypeFilter').value;
         const doneF    = document.getElementById('histDoneFilter').value;
+        histVisible = PAGE_SIZE;
         filteredHistoricalArticles = historicalArticles.filter(a => {
             const ms     = !term || ['Store','Analyst','Title','Summary'].some(k => (a[k] || '').toLowerCase().includes(term));
             const isDone = localStorage.getItem(histDoneKey(a)) === 'true';
@@ -1726,7 +1745,7 @@
         empty.classList.add('hidden');
         tableC.classList.remove('hidden');
         document.getElementById('histRowCount').textContent = filteredHistoricalArticles.length;
-        tbody.innerHTML = filteredHistoricalArticles.map((a, i) => {
+        tbody.innerHTML = filteredHistoricalArticles.slice(0, histVisible).map((a, i) => {
             const isOpening = a.Type === 'Opening';
             const badgeCls = isOpening
                 ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
@@ -1759,6 +1778,14 @@
                 <td class="px-4 py-3 text-xs leading-snug max-w-xs">${link}</td>
             </tr>`;
         }).join('');
+        // Load More button for historical
+        let histLM = document.getElementById('histLoadMoreRow');
+        if (histLM) histLM.remove();
+        if (histVisible < filteredHistoricalArticles.length) {
+            const tr = document.createElement('tr'); tr.id = 'histLoadMoreRow';
+            tr.innerHTML = `<td colspan="8" class="py-4 text-center"><button onclick="histVisible+=50;renderHistoricalTable()" class="px-5 py-2 rounded-xl text-xs font-semibold bg-slate-700 hover:bg-slate-600 text-gray-300 transition-colors">Load more (${filteredHistoricalArticles.length - histVisible} remaining)</button></td>`;
+            tbody.appendChild(tr);
+        }
     }
 
     function downloadHistoricalCSV() {
@@ -1950,7 +1977,7 @@
                 heading: item.heading || item.Heading || '',
                 date:    item.date    || item.Date    || '',
                 link:    item.link    || item.Link    || ''
-            }));
+            })).filter(a => is2026Plus(a.date));
             filteredScoopArticles = scoopArticles;
             updateScoopStats(filteredScoopArticles);
             renderScoopArticles();
@@ -2045,7 +2072,7 @@
             const res = await fetch(REST_JSON_URL + '?t=' + Date.now());
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
-            restArticles = Array.isArray(data) ? data : (data.data || []);
+            restArticles = (Array.isArray(data) ? data : (data.data || [])).filter(a => is2026Plus(a.date || a.Date || a.published_date || ''));
             filteredRestArticles = [...restArticles];
             sortRestData();
             updateRestStats(filteredRestArticles);
@@ -2316,7 +2343,7 @@
                 title: item.title || item.Title || '',
                 date:  item.date  || item.Date  || '',
                 link:  item.link  || item.Link  || ''
-            }));
+            })).filter(a => is2026Plus(a.date));
             filteredBizArticles = bizArticles;
             updateBizStats(filteredBizArticles);
             renderBizArticles();
@@ -2492,7 +2519,8 @@
                 source:         item.source   || '',
                 keyword:        item.keyword  || '',
                 relevance_score: item.relevance_score != null ? item.relevance_score : ''
-            }));
+            })).filter(a => is2026Plus(a.date));
+            dailyVisible = PAGE_SIZE;
             filteredDailyNewsArticles = dailyNewsArticles;
             populateDailyArticleFilters();
             updateDailyNewsStats(filteredDailyNewsArticles);
@@ -2596,7 +2624,7 @@
         }
         document.getElementById('dailyEmptyState').classList.add('hidden');
         container.classList.remove('hidden');
-        const rows = filteredDailyNewsArticles.map((a, i) => {
+        const rows = filteredDailyNewsArticles.slice(0, dailyVisible).map((a, i) => {
             const _key = a.link || '';
             const _isNew = isNew(a.date, _key);
             const newBadge = _isNew ? `<span class="badge-new ml-1"><i class="fas fa-bolt" style="font-size:0.5rem"></i>NEW</span>` : '';
@@ -2629,6 +2657,8 @@
             const icon = active ? (dailySortDir === 'asc' ? 'fa-sort-up text-gray-400' : 'fa-sort-down text-gray-400') : 'fa-sort text-gray-600';
             return `<th class="px-3 py-3 whitespace-nowrap cursor-pointer hover:text-gray-300 transition-colors" onclick="sortDailyTable('${col}')">${label} <i id="sort-daily-${col}" class="fas ${icon} ml-1"></i></th>`;
         };
+        const loadMoreBtn = dailyVisible < filteredDailyNewsArticles.length
+            ? `<div class="py-4 text-center"><button onclick="dailyVisible+=50;renderDailyNewsArticles()" class="px-5 py-2 rounded-xl text-xs font-semibold bg-slate-700 hover:bg-slate-600 text-gray-300 transition-colors">Load more (${filteredDailyNewsArticles.length - dailyVisible} remaining)</button></div>` : '';
         container.innerHTML = `
             <table class="w-full text-sm text-left data-table">
                 <thead><tr>
@@ -2644,7 +2674,7 @@
                     <th class="px-3 py-3 whitespace-nowrap text-center">Score</th>
                 </tr></thead>
                 <tbody>${rows}</tbody>
-            </table>`;
+            </table>${loadMoreBtn}`;
     }
 
     // â•â• DAILY NEWS EXTRACTION â•â•
@@ -2658,7 +2688,8 @@
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
             document.getElementById('dailyExtLastUpdated').textContent = data.last_updated || '—';
-            dailyNewsExtractionRows = data.data || [];
+            dailyNewsExtractionRows = (data.data || []).filter(r => is2026Plus(r.published_date || r.Date_Appended || ''));
+            dailyExtVisible = PAGE_SIZE;
             filteredDailyNewsExtractionRows = [...dailyNewsExtractionRows];
             updateDailyNewsExtStats(filteredDailyNewsExtractionRows);
             renderDailyNewsExtractionTable();
@@ -2684,6 +2715,7 @@
             const ms = !term || ['store_name','location','short_description','status'].some(k => (r[k]||'').toLowerCase().includes(term));
             return ms && (type === 'all' || r.event_type === type);
         });
+        dailyExtVisible = PAGE_SIZE;
         sortDailyExtData();
         updateDailyNewsExtStats(filteredDailyNewsExtractionRows);
         renderDailyNewsExtractionTable();
@@ -2699,8 +2731,17 @@
         }
         document.getElementById('dailyExtEmptyState').classList.add('hidden');
         container.classList.remove('hidden');
-        tbody.innerHTML = filteredDailyNewsExtractionRows.map((r, i) => buildExtractionRow(r, i, term, 'blue')).join('');
+        const dailyExtSlice = filteredDailyNewsExtractionRows.slice(0, dailyExtVisible);
+        tbody.innerHTML = dailyExtSlice.map((r, i) => buildExtractionRow(r, i, term, 'blue')).join('');
         document.getElementById('dailyExtRowCount').textContent = filteredDailyNewsExtractionRows.length;
+        // Load More
+        let dailyExtLM = document.getElementById('dailyExtLoadMoreRow');
+        if (dailyExtLM) dailyExtLM.remove();
+        if (dailyExtVisible < filteredDailyNewsExtractionRows.length) {
+            const tr = document.createElement('tr'); tr.id = 'dailyExtLoadMoreRow';
+            tr.innerHTML = `<td colspan="12" class="py-4 text-center"><button onclick="dailyExtVisible+=50;renderDailyNewsExtractionTable()" class="px-5 py-2 rounded-xl text-xs font-semibold bg-slate-700 hover:bg-slate-600 text-gray-300 transition-colors">Load more (${filteredDailyNewsExtractionRows.length - dailyExtVisible} remaining)</button></td>`;
+            tbody.appendChild(tr);
+        }
     }
 
     function downloadDailyExtractionCSV() {
@@ -2732,23 +2773,27 @@
 
         return `
         <tr class="${noData ? 'opacity-40' : ''}">
-            <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
-            <td class="px-3 py-3 max-w-[140px]">
-                <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.store_name||'')}">${highlight(r.store_name||'—', term)}</span>
+            <td class="px-3 py-2 text-gray-600 text-xs font-semibold">${i+1}</td>
+            <td class="px-3 py-2 overflow-hidden">
+                <span class="font-medium text-white text-xs line-clamp-2 block" title="${escapeHtml(r.store_name||'')}">${highlight(r.store_name||'—', term)}</span>
             </td>
-            <td class="px-3 py-3 max-w-[160px]">
+            <td class="px-3 py-2 overflow-hidden">
                 <span class="text-gray-400 text-xs line-clamp-2 block" title="${escapeHtml(r.location||'')}">${highlight(r.location||'—', term)}</span>
             </td>
-            <td class="px-3 py-3">${typeBadge}</td>
-            <td class="px-3 py-3 text-gray-400 text-xs">${escapeHtml(r.event_date||'—')}</td>
-            <td class="px-3 py-3 max-w-[180px]" title="${escapeHtml(r.status||'')}">
+            <td class="px-3 py-2">${typeBadge}</td>
+            <td class="px-3 py-2 text-gray-400 text-xs overflow-hidden">
+                <span class="line-clamp-2 block">${escapeHtml(r.event_date||'—')}</span>
+            </td>
+            <td class="px-3 py-2 overflow-hidden" title="${escapeHtml(r.status||'')}">
                 <span class="text-gray-400 text-xs line-clamp-2 block">${highlight(r.status||'—', term)}</span>
             </td>
-            <td class="px-3 py-3 max-w-[220px]" title="${escapeHtml(r.short_description||'')}">
-                <span class="text-gray-500 text-xs line-clamp-3 block">${highlight(r.short_description||'—', term)}</span>
+            <td class="px-3 py-2 overflow-hidden" title="${escapeHtml(r.short_description||'')}">
+                <span class="text-gray-500 text-xs line-clamp-2 block">${highlight(r.short_description||'—', term)}</span>
             </td>
-            <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.published_date||'—')}</td>
-            <td class="px-3 py-3">${linkCell}</td>
+            <td class="px-3 py-2 text-gray-400 text-xs overflow-hidden">
+                <span class="line-clamp-2 block">${escapeHtml(r.published_date||'—')}</span>
+            </td>
+            <td class="px-3 py-2">${linkCell}</td>
         </tr>`;
     }
 
@@ -2823,7 +2868,8 @@
             const data = await res.json();
 
             document.getElementById('warnLastUpdated').textContent = data.last_updated || '—';
-            warnRows = data.data || [];
+            warnRows = (data.data || []).filter(r => is2026Plus(r.notice_date || ''));
+            warnVisible = PAGE_SIZE;
             filteredWarnRows = [...warnRows];
 
             // Populate state dropdown dynamically
@@ -2859,6 +2905,7 @@
             const matchType  = type  === 'all' || (r.closure_type||'').toLowerCase().includes(type);
             return matchTerm && matchState && matchType;
         });
+        warnVisible = PAGE_SIZE;
         updateWarnStats(filteredWarnRows);
         renderWarnTable();
     }
@@ -2955,9 +3002,11 @@
         const newCount = (warnSortCol === 'notice_date' && warnSortDir === 'desc')
             ? sorted.filter(_isNew).length : 0;
 
-        let bannerInserted = false;
-        const rows = [];
-        sorted.forEach((r, i) => {
+        const visible = sorted.slice(0, warnVisible);
+        // re-run banner logic only on visible slice
+        const visRows = [];
+        let visBannerInserted = false;
+        visible.forEach((r, i) => {
             const isClosure = (r.closure_type||'').toLowerCase().includes('clos');
             const typeBadge = isClosure
                 ? `<span class="badge-closing px-2 py-1 rounded-full text-xs font-bold text-white"><i class="fas fa-building-circle-xmark mr-1 text-xs"></i>Closure</span>`
@@ -2965,45 +3014,31 @@
                 ? `<span class="px-2 py-1 rounded-full text-xs bg-amber-900/40 text-amber-300 border border-amber-700/30">${escapeHtml(r.closure_type)}</span>`
                 : `<span class="text-gray-600 text-xs">—</span>`;
             const isTracked = WARN_HIGHLIGHT_COMPANIES.has((r.company||'').toLowerCase().trim());
-            const isNew = _isNew(r);
-
-            // Insert the "NEW THIS RUN" banner before the first new row (only when default sort)
-            if (warnSortCol === 'notice_date' && warnSortDir === 'desc' && isNew && !bannerInserted) {
-                bannerInserted = true;
-                rows.push(`
-                <tr class="warn-new-section-row">
-                    <td colspan="9">
-                        <span style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:800;color:#f59e0b;letter-spacing:0.08em;">
-                            <span style="font-size:1rem;">✦</span>
-                            NEW THIS RUN — ${newCount} NOTICE${newCount !== 1 ? 'S' : ''}
-                            <span style="font-size:0.65rem;color:#9ca3af;font-weight:500;font-style:italic;">(today &amp; yesterday)</span>
-                        </span>
-                    </td>
-                </tr>`);
+            const isNew2 = _isNew(r);
+            if (warnSortCol === 'notice_date' && warnSortDir === 'desc' && isNew2 && !visBannerInserted) {
+                visBannerInserted = true;
+                visRows.push(`<tr class="warn-new-section-row"><td colspan="9"><span style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:800;color:#f59e0b;letter-spacing:0.08em;"><span style="font-size:1rem;">✦</span>NEW THIS RUN — ${newCount} NOTICE${newCount !== 1 ? 'S' : ''}<span style="font-size:0.65rem;color:#9ca3af;font-weight:500;font-style:italic;">(today &amp; yesterday)</span></span></td></tr>`);
             }
-
-            rows.push(`
-            <tr class="${isTracked ? 'warn-highlight' : ''}">
+            visRows.push(`<tr class="${isTracked ? 'warn-highlight' : ''}">
                 <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
-                <td class="px-3 py-3 max-w-[180px]">
-                    <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.company||'')}">
-                        ${isNew ? `<span class="warn-new-badge mr-1">✦ NEW</span>` : ''}${highlight(r.company||'—', term)}
-                    </span>
-                </td>
-                <td class="px-3 py-3 text-gray-400 text-xs">${highlight(r.city||'—', term)}</td>
-                <td class="px-3 py-3">
-                    <span class="px-2 py-1 rounded-full text-xs bg-blue-900/40 text-blue-300 border border-blue-700/30">${escapeHtml(r.state||'—')}</span>
-                </td>
-                <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.notice_date||'—')}</td>
-                <td class="px-3 py-3 text-gray-400 text-xs w-32"><div class="w-28 truncate" title="${escapeHtml(r.layoff_date||'')}">${escapeHtml(r.layoff_date||'—')}</div></td>
+                <td class="px-3 py-3"><span class="font-medium text-white text-xs line-clamp-2 block" title="${escapeHtml(r.company||'')}">${isNew2 ? `<span class="warn-new-badge mr-1">✦ NEW</span>` : ''}${highlight(r.company||'—', term)}</span></td>
+                <td class="px-3 py-3 text-gray-400 text-xs break-words">${highlight(r.city||'—', term)}</td>
+                <td class="px-3 py-3"><span class="px-2 py-1 rounded-full text-xs bg-blue-900/40 text-blue-300 border border-blue-700/30">${escapeHtml(r.state||'—')}</span></td>
+                <td class="px-3 py-3 text-gray-400 text-xs">${escapeHtml(r.notice_date||'—')}</td>
+                <td class="px-3 py-3 text-gray-400 text-xs">${escapeHtml(r.layoff_date||'—')}</td>
                 <td class="px-3 py-3 text-gray-300 text-xs font-semibold">${escapeHtml(r.employees_affected||'—')}</td>
                 <td class="px-3 py-3">${typeBadge}</td>
-                <td class="px-3 py-3 max-w-[200px]">
-                    <span class="text-gray-500 text-xs line-clamp-2 block" title="${escapeHtml(r.notes||'')}">${highlight(r.notes||'—', term)}</span>
-                </td>
+                <td class="px-3 py-3"><span class="text-gray-500 text-xs line-clamp-2 block" title="${escapeHtml(r.notes||'')}">${highlight(r.notes||'—', term)}</span></td>
             </tr>`);
         });
-        tbody.innerHTML = rows.join('');
+        // Load More button
+        if (warnVisible < sorted.length) {
+            visRows.push(`<tr id="warnLoadMoreRow"><td colspan="9" class="py-4 text-center">
+                <button onclick="warnVisible+=50;renderWarnTable()" class="px-5 py-2 rounded-xl text-xs font-semibold bg-slate-700 hover:bg-slate-600 text-gray-300 transition-colors">
+                    Load more (${sorted.length - warnVisible} remaining)
+                </button></td></tr>`);
+        }
+        tbody.innerHTML = visRows.join('');
 
         document.getElementById('warnRowCount').textContent = filteredWarnRows.length;
         _updateWarnSortIcons();
