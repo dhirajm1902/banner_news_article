@@ -17,432 +17,426 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 Create ONE clean Markdown table with these exact column headers (in this order):
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
-🌎 Geographic filter (STRICT)
-• Only extract businesses located in the USA or Canada
-• If the article is about a business in any other country (UK, Australia, India, UAE, etc.) → DO NOT add any row to the table; add it ONLY to the Non-working list as "Outside USA/Canada"
-• If an article covers both USA/Canada locations AND international locations → extract only the USA/Canada rows, skip the rest; add the article to the Non-working list as "Outside USA/Canada (partial)"
-
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
-• If a USA/Canada article has zero relevant business opening or closure information, still include a row with:
+• If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
-• ❌ Never add a table row for articles outside USA/Canada — those go in the Non-working list only
 
 🚫 Strict constraints
 • ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
-• ❌ No extraction of businesses outside USA or Canada
 
 📎 Final section (mandatory)
 At the very end of your response, add:
 Non-working or unusable articles List:
-• Article number — Reason (paywall / no business details / duplicate / text missing / Outside USA/Canada / etc.)
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
 If none, write: None
 
 ✅ Articles below — extract now:
 
 
 --- Article 101 ---
-URL: https://triblive.com/lifestyles/food-drink/goodlander-taproom-closing-voodoo-investors-wiped-out-the-abbey-files-bankruptcy/
-Title: Goodlander taproom closing, Voodoo investors wiped out, The Abbey files bankruptcy
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-27 20:45:54
+URL: https://www.the-sun.com/money/16465966/laynes-chicken-fingers-grand-opening-lubbock-texas/
+Title: Raising Cane's rival opens new store June 15 with 'free chicken for a year'
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 18:58:30
 
-The Abbey on Butler Street in Pittsburgh’s Lawrenceville neighborhood has filed for bankruptcy. (File) Multiple Pittsburgh area establishments are either closing their doors for good or facing uncertain futures. Here is a look at the three latest food and drink spots causing flux in the local hospitality scene. Goodlander Cocktail Brewery Goodlander announced the closure of its taproom, Goodlander Cocktail Brewery, in Pittsburgh’s Larimer neighborhood, effective June 6. The decision comes just ahead of the taproom’s fifth anniversary. “Our goal from day one was to create drinks to delight and satisfy, to leave as light an environmental footprint as possible, and to welcome everyone through our doors,” the brewery wrote in a social media post announcing the closure on Tuesday. “We are filled with gratitude towards our customers, our excellent local vendors, and our wholesale partners all around the ‘Burgh. Thank you for supporting our operation all this time.” The post noted that “this is not a goodbye — it’s a see you later,” with plans to announce future steps soon. Based in Pittsburgh, Goodlander produces craft cocktails, spirits and non-alcoholic beverages, offering wholesale distribution and catering. Goodlander Cocktail Brewery opened on Hamilton Avenue in May 2021. Billed as Pittsburgh’s first craft cocktail brewery — a hybrid of a craft beer brewery and a cocktail bar — the taproom specialized in low-waste, highball-style drinks. Before closing, the taproom will host a series of final events, including an anniversary celebration on May 31. TribLive could not immediately reach a Goodlander representative on Wednesday. Voodoo Brewing Co. Voodoo Brewing Co. notified a group of crowdfunding investors that their ownership shares will be effectively worthless after an upcoming asset sale. In an email first released by the news platform Breweries in PA on Tuesday, Voodoo Brewing Co. board chairman and CEO Matthew Rachocki announced the company is selling all its ope
+Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Comment now RAISING Cane’s fans will want to visit one of the brand’s rivals once it opens up a new store in just a few days. Customers have the chance to get free food for a year if they visit, but their timing will be key. Sign up for the Money newsletter Thank you! The rapid expansion of a Raising Cane’s rival continues with the opening of its 50th store Credit: Getty Layne’s Chicken Fingers is undergoing a rapid and sudden expansion after first opening in 1994 Credit: Facebook/Layne's Chicken Fingers Advertisement Layne’s Chicken Fingers is set to open its 50th location in Lubbock, Texas on Saturday per a press release from the company. The upcoming store will be the first in Lubbock and comes as the brand undergoes a rapid national expansion after more than 30 years in business. To celebrate the 50th location’s opening, the restaurant is offering free Layne’s chicken for a year to the first 50 dine-in customers who eat at the restaurant. Then, for the rest of its opening week, 50 additional customers will be surprised with winning free chicken for a full year . Read More Raising Cane's News RAISING HIGHER Booming chicken chain to open 9 locations - first wave starts May 4 RAISE UP Raising Cane's confirms rapid expansion after replacing Red Lobster restaurant Yet another opportunity to win free chicken for a year is also coming through the “How You Layne’s” social media contest. Fans are being urged to show off their favorite orders, sauces, hacks, and restaurant traditions on Instagram and TikTok. Fifty winners will be selected from these entries to win free chicken for a year, “because a milestone this epic deserves a celebration everyone can be part of” per the press release. “This opening means a lot to use,” said CEO Garret Reed in the press release. Advertisement Most read in Money SHUT DOWN Olive Garden sister chain closes all locations - 14 will become other eateries CLOS
 
 --- Article 102 ---
-URL: https://www.eveningsun.com/story/money/business/2026/05/27/hanovers-second-planet-fitness-location-coming-to-north-point-plaza/90282326007/
-Title: Hanover's north side will get its own Planet Fitness location in 2026
+URL: https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-plan-b-burger-bar-closing
+Title: MILFORD SCOOP: Plan B Burger Bar closing
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 20:42:00
-
-BUSINESS Hanover's north side will get its own Planet Fitness location in 2026 Harrison Jones Hanover Evening Sun May 27, 2026, 4:42 p.m. ET Hanover is set to get the area's second Planet Fitness location in a north Hanover storefront, according to the business. On the website of national gym chain Planet Fitness, the business shared a new "Hanover (North)" gym location, with the address of 1150 Carlisle Street in Penn Township. The new location is within the North Point Plaza, a strip mall on Carlisle Street, which sits directly on the municipal line between Penn Township and Hanover Borough. According to the real estate listing for the spaces at the North Point Plaza by Pomegranate Real Estate, Planet Fitness will occupy the 14,335-square-foot former space that formerly housed a Joann Fabrics and Crafts store. Joann Fabrics closed its doors at the Carlisle Street location in 2025 as the chain of fabrics navigated bankruptcy filings. "We are coming soon," Planet Fitness shared on their website. "Our brand new location will feature state-of-the-art equipment, the PF Black Card Spa, clean locker rooms, and super friendly team members." Planet Fitness opened their first Hanover location at 781 Baltimore Street in Penn Township in 2009, newspaper records show. Harrison Jones is the Hanover reporter for the Evening Sun. Reach him at hjones@usatodayco.com . Featured Weekly Ad
-
---- Article 103 ---
-URL: https://www.thetelegraph.com/news/article/jersey-mikes-alton-opens-illinois-metro-east-22278975.php
-Title: Jersey Mike’s Subs opens new Alton location to packed lunch crowd
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 20:40:17
-
-The Jersey Mike's Subs location at 1750 Homer M. Adams Parkway in Alton, Illinois, is open for business on May 27, 2026. Ivy Lyons/The Telegraph The new Jersey Mike’s Subs location in Alton officially opened on Wednesday, drawing a packed lunchtime crowd as community members stopped in to grab sandwiches and check out the restaurant’s newest Illinois location. Balloons and signs decorated the restaurant's exterior throughout the day, while members of the Alton Police Department, nearby employees, and local residents filled the building during the noon rush. Advertisement Article continues below this ad Behind the counter, employees shared recommendations for their favorite menu items, with several saying sandwiches ordered “Mike’s Way” were the best choice for first-time customers. The Alton opening at 1750 Homer M. Adams Parkway is the latest expansion by franchise owners Mike Lanman and Alex Gowin, who have opened additional Jersey Mike’s Subs locations across Central and Southern Illinois in recent years, including restaurants in Edwardsville and Terre Haute, Indiana. According to City of Alton records, the property is owned by DM Reality and Investment Company in O’Fallon, Illinois. Ahead of opening, the site underwent mechanical and electrical renovations to convert the former T-Mobile storefront into a restaurant space. The restaurant will operate daily from 10 a.m. to 9 p.m. Advertisement Article continues below this ad The Jersey Mike's Subs location at 1750 Homer M. Adams Parkway in Alton, Illinois, is open for business on May 27, 2026. Ivy Lyons/The Telegraph
-
---- Article 104 ---
-URL: https://www.aol.com/articles/giant-stairs-nowhere-opening-soon-220020592.html
-Title: Giant stairs to nowhere opening soon in Southern California city
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 20:37:08
-
-Bianca Zalben Thu, May 21, 2026 at 10:00 PM UTC 0 The city of Santa Clarita is soon cutting the ribbon on a massive expansion of David March Park, and the centerpiece of the project is a grueling outdoor 116-step exercise staircase — that leads to nothing. While most people try to avoid an extra flight of stairs, the health-obsessed residents of this suburban enclave are treating the new vertical climb like the Holy Grail of cardio. Social media previews and drone footage have already sparked excitement among locals who are eager to turn up their workout regimen. “New way to get my steps,” one person commented on Instagram. Santa Clarita Central Park boasts a172-step staircase. Instagram/@CityofSantaClarita The staircase sits atop the newly renovated David March Park, which was named after Los Angeles County Sheriff Deputy David March, who was killed in the line of duty in 2002.  Instagram/@cityofsantaclarita Residents in Santa Clarita are working up a sweat with a set of stairs installed at Santa Clarita Central Park. The staircase sits atop the newly renovated David March Park, which was named after Los Angeles County Sheriff Deputy David March, who was killed in the line of duty in 2002. After construction began in 2024 it was closed off in August 2025 to complete the 8-acre expansion of the park, which includes a lit basketball court, a baseball field with shaded stands, two new parking lots, a picnic pavilion and more. Advertisement “The City’s second exercise staircase, featuring 116 steps and scenic views, will provide a unique fitness challenge for residents,” noted a press release from the city of Santa Clarita . It comes in response to the immense popularity seen with the 172-step Central Park staircase nearby. “There are people using them all day long,” one Yelp reviewed wrote online. “Such a great thing.” “All I got to say is I feel sorry for the people who live right next to that park I’m sure the city didn’t think about how cuz busy its gonna be cuz th
-
---- Article 105 ---
-URL: https://www.travelandtourworld.com/news/article/obe679q5whe3/
-Title: USA Travel Buzz: Norwegian Cruise Line Sets September 4, 2026 Grand Opening for Great Tides Waterpark in the Bahamas
-Status hint: Opening | Industry: Cruise Lines
-Published: 2026-05-27 20:35:13
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/obe679q5whe3/]
-
---- Article 106 ---
-URL: https://www.travelmarketreport.com/cruises/articles/norwegian-cruise-line-sets-opening-date-for-great-tides-waterpark
-Title: Norwegian Cruise Line Sets Opening Date for Great Tides Waterpark
-Status hint: Opening | Industry: Cruise Lines
-Published: 2026-05-27 20:31:06
-
-Photo: Norwegian Cruise Line Norwegian Cruise Line’s new, six-acre Great Tides Waterpark on Great Stirrup Cay will officially open on September 4, 2026. The grand opening will take place during Norwegian Luna’s seven-day Caribbean cruise departing from Miami on August 29, 2026, which features calls on Puerto Plata, St. Thomas, and Tortola, before culminating at Great Stirrup Cay. Norwegian announced on Wednesday that day passes and private cabana reservations for the waterpark will go on sale starting May 28. The park was revealed last summer as part of a larger transformation for Great Stirrup Cay. “Great Stirrup Cay continues to evolve as the premier private island destination in the Bahamas, and we’re excited to officially open Great Tides Waterpark on Sept. 4, 2026,” said Marc Kazlauskas, president of Norwegian Cruise Line. “With the best activities for families and for every type of traveler—from high-energy slides to laid-back lagoon experiences—guests can purchase their day passes ahead and lock in an unforgettable day on the most spectacular private island in the Caribbean beginning tomorrow.” When it opens, it will feature 19 waterslides, including the 170-foot Tidal Tower. The tower will house eight slides, including two uphill-and-downhill water coasters, high-speed racing slides, spiraling tube slides, and body slides. Great Tides Waterpark will also feature an over 800-foot dynamic river with an accelerated current, a 9,000-square-foot splash zone for children, and Cliffside Cove, which features the cruise industry’s first cliffside jump platforms. More than just sailings out Miami will feature Great Stirrup Cay and Great Tides. Seasonal departures available from Northeast hubs like New York and Philadelphia, alongside Florida homeports in Miami, Port Canaveral, Tampa, and Jacksonville, will all give guests a chance to experience the island.
-
---- Article 107 ---
-URL: https://www.msn.com/en-us/money/companies/acapulco-mexican-restaurant-chain-shuts-169-locations-1-remains/ar-AA237bVG?gemSnapshotKey=GM76765E2D-snapshot-4&uxmode=ruby&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Acapulco Mexican restaurant chain shuts 169 locations, 1 remains
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-27 20:30:15
-
-MSN
-
---- Article 108 ---
-URL: https://www.wcvb.com/article/clover-food-labs-closing-restaurants-boston-cambridge/71422924
-Title: Clover Food Labs to close, affecting about 170 employees
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-27 20:30:00
-
-Clover Food Labs will close all restaurants and delivery operations, affecting about 170 employees Clover Food Labs will close all restaurants and delivery operations, affecting about 170 employees MAYBE ANOTHER CHANCE FOR RAIN ON MONDAY. BEN JESSICA SATURDAY. IT’S ROUGH. ALL RIGHT DAVID, THANK YOU. CLOVER FOOD LAB OFFICIALLY CLOSING ALL ITS RESTAURANTS AND MEAL BOX DELIVERY SERVICES. THE CEO SAYS TOMORROW WILL BE THE LAST DAY OF OPERATIONS. THE CAMBRIDGE BASED VEGETARIAN FAST FOOD CHAIN OPENED MORE THAN 17 YEARS AGO. RECENTLY, THOUGH, IT HAD BEEN STRUGGLING FINANCIALLY AND LOOKING FOR A BUYER Updated: 4:30 PM EDT May 27, 2026 Editorial Standards ⓘ Phil Tenser Digital Media Manager Advertisement Clover Food Labs will close all restaurants and delivery operations, affecting about 170 employees Updated: 4:30 PM EDT May 27, 2026 Editorial Standards ⓘ Phil Tenser Digital Media Manager Clover Food Labs will close all of its vegetarian restaurants and meal box delivery operations this week after months of financial struggles, the company confirmed in a statement to WCVB.Clover CEO Julia Wrin Piper said Thursday will be the Greater Boston company’s final day of operations, according to a message sent to customers Wednesday. The closure follows earlier warnings that the company was seeking a buyer in an attempt to stay in business and prevent layoffs. “For 17 years, we have championed local farms and served tens of thousands across Greater Boston,” Piper said in the statement. “We’re deeply saddened to share this news—for our employees, New England farmers, and you, our guests and supporters.”Piper said Clover had struggled with rising operating expenses tied to inflation and post-pandemic business pressures, according to the customer message. The company said ingredient costs have increased between 30% and 50% over the past two years while delivery, packaging and supply expenses also rose.“Our current situation isn’t a unique story,” Piper said in the statement. “In the be
-
---- Article 109 ---
-URL: https://communityimpact.com/houston/sugar-land-missouri-city/dining/2026/05/27/firehouse-subs-now-open-in-the-shops-at-vicksburg/
-Title: Firehouse Subs now open in the Shops at Vicksburg
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 20:28:00
-
-Firehouse Subs now open in the Shops at Vicksburg | Community Impact | Houston Firehouse Subs now open in the Shops at Vicksburg Trending now Government 8 of the nation’s fastest-growing cities are in Texas, census data ... Development Grand Parkway expansion, new businesses announced: 5 trending stories in the ... Events 8 events to honor Memorial Day in Greater Houston Election See voting results for several May 26 runoff races in Fort ... Election What to know before heading to the polls for Texas’ May ... Election UPDATE: Paxton wins GOP nomination for US Senate, will face Talarico ... Dining Cajun seafood, Chinese cuisine: 6 dining options in the Greater Houston ... Business Pickleball facilities, BBQ restaurant among 10 projects filed in Sugar Land Election See who won the runoff races for US House districts 7, ... Election UPDATE: Sens. Johnson, Middleton advance to November ballot in Texas AG ... Dining Firehouse Subs now open in the Shops at Vicksburg By Aubrey  Howell | 3:48 PM May 27, 2026 CDT Updated 3:48 PM May 27, 2026 CDT Firehouse Subs offers a selection of specialty subs or customers can personalize their own. (Courtesy Firehouse Subs) Firehouse Subs offers a selection of specialty subs or customers can personalize their own. (Courtesy Firehouse Subs) The Missouri City location is owned by local franchisees Saadat Khan and his wife. (Courtesy Firehouse Subs) Florida-based Firehouse Subs has opened its doors in the Shops at Vicksburg in Missouri City. On the menu The counter-service restaurant offers a variety of hot specialty sub sandwiches as well as salads, according to its website. The eatery also has a hot sauce bar featuring 13 unique options. Zooming out The franchise founded by firefighters Chris and Robin Sorensen has grown to over 1,200 locations, per its website. Opened May 25 10040 Hwy. 6, Ste. 400, Missouri City www.firehousesubs.com By Aubrey  Vogel Editor Aubrey joined Community Impact as a reporter in February 2024, where she covers g
-
---- Article 110 ---
-URL: https://www.naplesnews.com/story/entertainment/dining/2026/05/27/new-chick-fil-a-now-open-in-naples-florida/90142009007/
-Title: Now open: New Chick-Fil-A debuts in Naples near Golden Gate
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 20:17:00
-
-[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.naplesnews.com/story/entertainment/dining/2026/05/27/new-chick-fil-a-now-open-in-naples-florida/90142009007/]
-
---- Article 111 ---
-URL: https://www.restaurantnews.com/mountain-mikes-pizza-mckinney-texas-052726/
-Title: Mountain Mike’s Pizza Opens Second McKinney Location, Expanding Dallas-Fort Worth Presence
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 20:16:02
-
-Facebook Tweet LinkedIn Mountain Mike’s Pizza Opens McKinney, Texas, Restaurant Leading Family-Style Pizza Chain Accelerates Texas Growth with New Collin County Restaurant Irvine, CA  ( RestaurantNews.com ) Mountain Mike’s Pizza , a leading family-style pizza chain for nearly 50 years, and home of the legendary crispy, curly pepperoni®, massive 20-inch Mountain-sized pizzas and dough made fresh daily, is now open in McKinney, Texas. The opening marks the brand’s second location in McKinney, 14th in Texas and continued expansion across the Dallas-Fort Worth metroplex as Mountain Mike’s strengthens its presence throughout the state. The restaurant is locally owned and operated by franchisee family Steve, Kelly and Adam Zeigler, who own Mountain Mike’s locations in Lewisville and Melissa. For nearly five decades, Mountain Mike’s Pizza has delighted guests with “Pizza the Way it Oughta Be!®” and is rapidly expanding into new markets across the country. McKinney residents can enjoy the brand’s signature pizza experience at the new Mountain Mike’s, whether dining in, carrying out or via delivery. “Nearly four years ago, we opened Mountain Mike’s first location in Texas after we recognized an opportunity to bring a family-friendly dining destination that prioritizes premium ingredients and community connection to our home state,” said Steve Zeigler. “This location is especially meaningful, as my family has called McKinney home for nearly 30 years, and we’re honored to open a Mountain Mike’s where our family and neighbors can gather around fantastic pizza and celebrate any occasion for years to come.” The spacious 2,600-square-foot Mountain Mike’s Pizza in McKinney features the welcoming, family-friendly atmosphere for which the brand is known. Boasting eight big-screen televisions, the McKinney restaurant is bound to be a go-to destination for sports fans, no matter which team guests root for. The McKinney restaurant also includes an all-you-can-eat pizza and salad weekday
-
---- Article 112 ---
-URL: https://www.msn.com/en-us/travel/article/dolly-parton-is-opening-a-new-roadside-travel-stop-next-month/ar-AA24deaY
-Title: Dolly Parton is opening a new roadside travel stop next month
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 20:07:14
-
-MSN
-
---- Article 113 ---
-URL: https://www.streetinsider.com/PRNewswire/CHICKEN+SALAD+CHICK+TO+OPEN+FIRST+UTAH+RESTAURANT/26557638.html
-Title: CHICKEN SALAD CHICK TO OPEN FIRST UTAH RESTAURANT
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-27 20:04:50
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.streetinsider.com/PRNewswire/CHICKEN+SALAD+CHICK+TO+OPEN+FIRST+UTAH+RESTAURANT/26557638.html]
-
---- Article 114 ---
-URL: https://www.bizjournals.com/birmingham/news/2026/05/27/new-cafe-opening-in-hoover.html
-Title: New 'luxury' cafe opening in Hoover
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 20:00:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/birmingham/news/2026/05/27/new-cafe-opening-in-hoover.html]
-
---- Article 115 ---
-URL: https://www.jacksonville.com/story/news/2026/05/27/cook-out-florida-locations-how-many-jacksonville-when-open-new-opening-fast-food-restaurant/90274538007/
-Title: Florida's third Cook Out opening soon. Where it is, Florida locations
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 19:55:23
-
-[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.jacksonville.com/story/news/2026/05/27/cook-out-florida-locations-how-many-jacksonville-when-open-new-opening-fast-food-restaurant/90274538007/]
-
---- Article 116 ---
-URL: https://www.bisnow.com/houston/news/retail/h-e-b-plans-new-mi-tienda-store-in-southwest-houston-134748
-Title: H-E-B Plans New Mi Tienda Store In Southwest Houston
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 19:51:28
-
-News H-E-B Plans New Mi Tienda Store In Southwest Houston Houston Retail View count: Houston Retail May 27, 2026 | 5:23 p.m. ET Maddy McCarty, Houston Texas grocery chain H-E-B plans to open a new store in Southwest Houston, according to a filing with the Texas Department of Licensing and Regulation. Google Maps H-E-B's Mi Tienda at 3800 E. Little York Road in Houston The filing proposes a 99K SF Mi Tienda store at 7140 Southwest Freeway to open around March 2028, according to Realty News Report , though such filings are often preliminary and subject to change. Mi Tienda is the San Antonio-based H-E-B’s Latino-focused grocery store. The proposed new location would be its third. The first Mi Tienda opened in the Pasadena area in 2006, and the second opened in Northeast Houston in 2011, per Realty News Report. The new Mi Tienda store would add to PlazAmericas Mall , the 850K SF Baker Katz -owned marketplace and shopping center formerly known as Sharpstown Mall. The filing indicates construction will start in February and cost about $24M. Meanwhile, H-E-B confirmed to the Houston Chronicle it is under contract for a 6-acre site near 2600 Canal St. in Houston’s East End , though the company said it does not have specific plans for the site. It is working through the due diligence process, though, and looking for growth opportunities throughout the Houston area. H-E-B now operates 455 stores throughout Texas and Mexico under the H-E-B, Central Market, Mi Tienda and Joe V’s Smart Shop brands. The chain’s arrival in the Dallas-Fort Worth area in 2022 set off a chain reaction, with stores now in or planned for well over a dozen suburbs , plus North Dallas. H-E-B also confirmed in January it plans to open a second store in Lubbock. Last week, the company announced it would invest $700M to expand its supply chain operations, creating 720 jobs by 2028 and more than 1,200 full-time jobs over the next decade. The chain is also shuttering at least one store. The smaller, older Sp
-
---- Article 117 ---
-URL: https://www.aol.com/articles/amc-closure-leaves-salina-without-195714000.html
-Title: AMC closure leaves Salina without a movie theater
-Status hint: Opening | Industry: Movie Theatres
-Published: 2026-05-27 19:48:58
-
-Aniyah Robinson Sat, May 16, 2026 at 7:57 PM UTC 0 AMC closure leaves Salina without a movie theater Editor’s note: The video above aired on May 5. WICHITA, Kan. (KSNW) — Storm damage at Salina’s Central Mall is forcing a major tenant to shut its doors indefinitely. On Friday, the mall announced that AMC Theaters made the “difficult decision to discontinue its operations in Salina,” after a hailstorm in April caused extensive damage to the building . In light of this situation, the Central Mall said it’s currently in talks with three different theater companies that have shown interest in the Salina market. “While we are saddened that Salina is currently without a movie theater, we want the community to know that we are fully committed to bringing theater entertainment back to the Central Mall,” the mall wrote in a Facebook post . Advertisement KDHE orders Kansas mall to stay closed during repair An AMC spokesperson provided the following statement to KSN: During the severe storms in April, the roof above AMC Salina 10 experienced significant failure, resulting in extensive water intrusion and major damage throughout multiple areas of the theatre. After evaluation and discussion with the property owner, AMC made the difficult decision to not renew its lease, which ends this month, and has permanently ceased operations at AMC Salina 10. We are grateful to our Salina-area guests for their years of support and for allowing us to be part of so many memorable moviegoing experiences. New roofing was completed over the theater this week. The mall said cleanup and restoration efforts for the interior of the theatre are still underway. For more Kansas news, click here . Keep up with the latest breaking news by downloading our mobile app and signing up for our news email alerts . Sign up for our Storm Track 3 Weather app by clicking here . To watch our shows live on our website, click here . Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be publ
-
---- Article 118 ---
-URL: https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-new-tenants-open-at-the-shops-at-stone-bridge
-Title: CHESHIRE SCOOP: New tenants open at The Shops at Stone Bridge
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 19:43:57
+Published: 2026-06-07 18:55:58
 
 HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
 
---- Article 119 ---
-URL: https://communityimpact.com/houston/lake-houston-humble-kingwood/business/2026/05/27/five-below-officials-celebrate-march-opening-of-new-humble-location/
-Title: Five Below officials celebrate March opening of new Humble location
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 19:39:00
+--- Article 103 ---
+URL: https://www.msn.com/en-us/money/companies/times-square-location-joins-list-of-shuttering-red-lobster-restaurants/ar-AA24uxrI?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Times Square location joins list of shuttering Red Lobster restaurants
+Status hint: Closing | Industry: Restaurants
+Published: 2026-06-07 18:30:34
 
-Five Below officials celebrate March opening of new Humble location | Community Impact | Houston Five Below officials celebrate March opening of new Humble location Trending now Government 8 of the nation’s fastest-growing cities are in Texas, census data ... Development Grand Parkway expansion, new businesses announced: 5 trending stories in the ... Election See election results for Harris County judge, district clerk Events 8 events to honor Memorial Day in Greater Houston Election What to know before heading to the polls for Texas’ May ... Election Q&A: Meet the Democratic runoff candidates for Harris County district clerk Election UPDATE: Paxton wins GOP nomination for US Senate, will face Talarico ... Dining Cajun seafood, Chinese cuisine: 6 dining options in the Greater Houston ... Election See who won the runoff races for US House districts 7, ... Election UPDATE: Sens. Johnson, Middleton advance to November ballot in Texas AG ... Business Five Below officials celebrate March opening of new Humble location By Wesley Gardner | 2:42 PM May 27, 2026 CDT Updated 2:42 PM May 27, 2026 CDT Five Below, which is located in the Atascocita Commons shopping center in Humble, opened in March. (Courtesy Five Below) Five Below, which is located in the Atascocita Commons shopping center in Humble, opened in March. (Courtesy Five Below) Officials with Five Below celebrated an early March opening of their new location in Humble, store officials confirmed. Five Below, which is located in the retail space previously occupied by Party City in the Atascocita Commons shopping center, offers a variety of items at affordable prices including fitness items, beauty products, pet supplies, candy and snacks, home essentials and home tech items. Opened in early March 6705 FM 1960 E., Humble www.fivebelow.com By Wesley Gardner General Assignment Reporter Wesley Gardner is a general assignment reporter covering Houston ISD, Humble ISD and Klein ISD. He joined Community Impact in May 2021 af
+MSN
+
+--- Article 104 ---
+URL: https://www.wafb.com/2026/06/07/sammys-grill-highland-road-location-set-close/
+Title: Sammy’s Grill Highland Road location set to close
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-07 18:21:00
+
+Comment 0 Share Add Us On Google Add as a preferred source on Google BATON ROUGE, La. (WAFB) - Sammy’s Grill on Highland Road in Baton Rouge is set to close it’s doors. According to a post on social media, the location’s last day in business will be on Sunday, June 14. “As our lease has come to an end, the property owners have chosen to move in a different direction,” the social media post said. “We respect their decision, are grateful for the many years we called Highland home, and are excited for what comes next.” The owners of Sammy’s Grill said they are searching for a new home and will continue to welcome customers at the restaurant’s location in Prairieville. According to the restaurant, Sammy’s Grill has been on Highland Road since 1988. The restaurant’s Prairieville location is at 37306 Perkins Road. Click here to report a typo. Please include the headline. Click here to subscribe to our WAFB 9 News daily digest and breaking news alerts delivered straight to your email inbox. Watch the latest WAFB news and weather now. Join The Conversation Comments 0 We want to hear what you think . Create a free account to share your thoughts . Read our community guidelines here .
+
+--- Article 105 ---
+URL: https://www.wbrz.com/news/sammy-s-grill-on-highland-road-announces-closure-as-it-searches-for-new-location/
+Title: Sammy's Grill on Highland Road announces closure as it searches for new location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 18:12:59
+
+Sammy's Grill on Highland Road announces closure as it searches for new location 1 day 11 hours 28 minutes ago Sunday, June 07 2026 Jun 7, 2026 June 07, 2026 1:11 PM June 07, 2026 in News Source: WBRZ By: WBRZ Staff Share: BATON ROUGE — Sammy's Grill on Highland Road announced the closure of the location on Sunday afternoon. "As our lease has come to an end, the property owners have chosen to move in a different direction," the restaurant said in a social media post. "We respect their decision, are grateful for the many years we called Highland home, and are excited for what comes next." The restaurant known for its crawfish has been a Baton Rouge and LSU tradition since 1988. While the Highland location will close its doors on June 14, the restaurant says it's actively searching for a new home. The Prairieville location will continue serving customers in the meantime. Trending News BRPD arrests former Take 5 Oil Change employee after he allegedly broke into business, stole cash from safe Man attacked by alligator after fleeing during DWI investigation "Thank you for nearly 40 years of memories. Stay tuned for updates on our future location—we’re not done yet." Report a Typo
+
+--- Article 106 ---
+URL: https://brooklynbridgeparents.com/restaurants-bars-bakeries-supermarkets-and-cafes-that-opened-closed-in-brooklyn-in-may-26/
+Title: Restaurants, bars, bakeries, supermarkets and cafés that opened & closed in Brooklyn in May ’26
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-07 17:40:20
+
+From a riverfront raw bar to a local pizzeria, Brooklyn’s culinary landscape is kicking off the summer season with an exciting wave of new openings. Whether you are looking for a creative cocktail spot in East Williamsburg, a fresh Japanese experience in Park Slope, or a traditional German meal in Bay Ridge, this month’s roundup highlights spots across the borough to enjoy with family and friends. Brooklynites can also look forward to a new soccer bar in Greenpoint and a Chinese-American restaurant in Park Slope opening in June. Café Bar J.F. | Williamsburg Café Bar J.F. opened at 50 Withers Street on May 13th. This spacious South American tavern offers a warm and approachable environment for local gatherings, focusing on great service and a shared love for the community. Bar Susanne | Williamsburg Bar Susanne, located across from Domino Park, opened in mid-May for its first seating. This riverfront raw bar boasts fresh seafood with stunning views. They are located next door to their sister location Cafe Susanne , an all day cafe with coffee and cocktails. Last Crumb | Williamsburg The internet’s favorite cookies just opened their first retail location at 144 N 8th Street, where they are baked fresh daily. Come try them any day from 11:00am-10:00pm. Unique flavors include Donkey Kong (banana cream pie), The Floor is Lava (chocolate lava), and We’re Onto To You Doughboy (cinnamon roll). Kinda Nice | East Williamsburg Kinda Nice is a new women-owned cocktail located at 168 Borinquen Place. Try their Kinda Peachy Cocktail with mezcal, peach, and cilantro or their Greek Salad Martini – their most popular cocktail! The Caesar Salad Deviled Eggs are already a customer favorite. The Sparrow | South Williamsburg The Sparrow is the latest restaurant from the team behind Citroën in Greenpoint, and stepping into it feels like a glamorous trip back in time, boasting a beautiful Art Deco decor seamlessly paired with playful accents. Unwind with a selection from their exceptional
+
+--- Article 107 ---
+URL: https://hoodline.com/2026/06/vermin-scare-briefly-shutters-beverly-wilshire-s-posh-dining-rooms/
+Title: Beverly Wilshire Briefly Closed After Vermin Citations
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-07 17:35:49
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://hoodline.com/2026/06/vermin-scare-briefly-shutters-beverly-wilshire-s-posh-dining-rooms/]
+
+--- Article 108 ---
+URL: https://www.the-sun.com/money/16465789/steak-n-shake-policy-change-affects-all-stores/
+Title: Steak ‘n Shake just made a major policy change that affects all stores
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 17:33:26
+
+Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook 1 comment 1 BURGER giant Steak ‘n Shake has dropped a bombshell policy change that will hit every store – and customers will taste the difference. The fast-food chain revealed it is ripping up its current supply and switching all its beef to pasture-raised cattle in a dramatic overhaul. Sign up for the Money newsletter Thank you! In a May 12 social media post, the company declared: “Starting June 1, we’re doing things better at Steak n Shake all our beef will come straight from pasture-raised cattle. “This beef will be 100 per cent grass-fed and grass-finished, making us the only American burger joint serving the healthiest kind of beef.” Advertisement The shock move is part of a wider push to reinvent the brand – and cash in on the booming demand for “cleaner” eating. Bosses are aligning the chain with Health and Human Services Secretary Robert F. Kennedy Jr.’s “Make America Healthy Again” drive, doubling down on a strategy that could reshape its entire menu – and its bottom line. READ MORE IN MONEY NEWS BURGER BRAWL Burger King heats up rivalry with Wendy's by making a change to favorite item MAKE WAY Red Robin takes over popular steakhouse location & promises barbecue burgers In a striking corporate shake-up, the firm has even created a brand new executive role: Chief “Make America Healthy Again” (MAHA) Officer. Michael Boes – a developer of the 2025–2030 Dietary Guidelines for Americans and former senior adviser within the Office of the Assistant Secretary of Health – has been handed the job. The role is described as “a new executive role dedicated to advancing nutritional integrity, ingredient transparency, and the long-term health of Steak n Shake customers,” according to the company’s news release. Chairman and CEO Sardar Biglari said: “Appointing a Chief MAHA Officer is a sign of our continued commitment to make Steak ’n Shake the great differentiator in fast food . Most read
+
+--- Article 109 ---
+URL: https://www.msn.com/en-us/travel/tripideas/saracen-casino-resort-announces-grand-opening-of-new-hotel/ar-AA24RkDA?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Saracen Casino Resort announces grand opening of new hotel
+Status hint: Opening | Industry: Hospitality
+Published: 2026-06-07 17:05:31
+
+MSN
+
+--- Article 110 ---
+URL: https://www.aol.com/articles/spring-time-where-grab-bite-100447000.html
+Title: These Detroit restaurants are opening just in time for spring. What's new
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-07 16:46:14
+
+Eric Guzmán and Susan Selasky, Detroit Free Press Updated Fri, May 1, 2026 at 4:29 PM UTC 0 These Detroit restaurants are opening just in time for spring. What's new Spring is a time for new beginnings and fresh starts, and that's no different for the restaurant industry across Michigan. Across metro Detroit, several seasonal favorites reopen. In late March, longtime pizza chain Buddy's changed hands and is now under new ownership. A group of local investors bought the chain from private investment firm CapitalSpring. While other new restaurants and bars debuted across metro Detroit, some establishments shuttered in the wake of rising costs or concept changes. Here's a list of metro Detroit restaurants that recently reopened, debuted or said goodbye. Reopenings Downtown Street Eats For those in downtown Detroit, spring signals the return of the Downtown Street Eats food truck season at Cadillac Square. Now in its 14 th year, 80 food trucks and carts are ready to serve more than 2,500 people every weekday from 11 a.m. to 3 p.m. The Downtown Street Eats season runs through mid-October. For information and lineup of this season's food trucks, go to downtowndetroit.org . Bob Jo's Frozen Custard Warm weather and ice cream are synonymous with one another. Bob Jo's Frozen Custard in Wyandotte reopened on April 10 for its 79 th year and is open daily from noon to 10 p.m. Find current flavors on Bob Jo's Frozen Custard Facebook page . 4071 Fort St., Wyandotte. Gino's Surf This lakefront restaurant, bar and entertainment spot is now open for the season in Harrison Township under new management, according to its Facebook page. Located on Jefferson Avenue with views of Lake St. Clair, Gino's Surf boasts a new chef and a new menu, plus live bands. 37400 Jefferson Ave., Harrison Township; 586-999-9201 or ginossurfmi.com Mike's on the Water Located on the Nautical Mile in St. Clair Shores, Mike's on the Water is now open. Now in its 16 th season,, Mike's menu offers various seafoo
+
+--- Article 111 ---
+URL: https://www.thestreet.com/retail/global-retailer-inditex-zara-closes-106-stores
+Title: Global retailer closes 106 stores despite rising sales
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-07 16:44:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.thestreet.com/retail/global-retailer-inditex-zara-closes-106-stores]
+
+--- Article 112 ---
+URL: https://www.aol.com/news/austins-paramount-theatre-hosts-free-175701479.html
+Title: Austin's Paramount Theatre hosts free open house before 11-month closure
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-07 16:26:20
+
+Brianna Caleri Updated Fri, June 5, 2026 at 6:37 PM UTC 0 The Paramount Theatre is showing off its well-preserved fire curtain as guests visit to say goodbye for the next 11 months. | Photo courtesy of the Paramount Theatre Austin's landmark Paramount Theatre will be closing this summer for 11 months to complete a sweeping restoration , which will renew paint and other decor, update the electrical system, replace seating and more. Austinites will bye for now in a historic "last call" open house and happy hour Monday, June 15. Since historical artifacts are the topic of the hour, the Paramount is taking the opportunity to reveal "its most treasured hidden artifact," a press release says. It's a hand-painted fire curtain from 1915, the year the Paramount was established . As the name suggests, fire curtains do indeed separate the stage and audience in the event of a fire. They were often painted to depict a scene, and the Paramount's has survived so long because it was discovered hanging from the rafters in darkness in 1974 — no light or other elemental exposure for more than 50 years. The release estimates that it is most likely the oldest original fire curtain in the United States. Since it is an open house, anyone can attend for free and check out the space in its state of natural wear after 110 years. However, history buffs shouldn't worry too much about things looking different when the space reopens, since this restoration seeks to preserve rather than rework the space. It'll even add a ballroom lounge based on original blueprints from the early 20th century. Some work is already in progress, giving visitors a chance to see the effort that goes into such a meticulous project. Advertisement The Paramount is committing to the nostalgic bit to offer drinks at long-gone prices. Guests will also have a chance to buy merch — the release doesn't say this, but merch sales are almost always a big relief for businesses that have to temporarily close. A more overt funding 
+
+--- Article 113 ---
+URL: https://www.the-sun.com/money/16465521/longhorn-steakhouse-dress-code-employees-non-slip-shoes/
+Title: LongHorn Steakhouse mandates ‘strict shoe policy’ for all locations
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 16:23:25
+
+Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook 2 comments 2 LONGHORN Steakhouse has an important footwear policy in effect for all locations. If ignored, it could put the safety of both employees and diners at risk. Sign up for the Money newsletter Thank you! LongHorn Steakhouse may have a casual dress code for diners, but that isn’t the case for employees Credit: Alamy Some staff members are required to wear non-slip shoes while on shift at the steakhouse chain Credit: Getty Advertisement The beloved steakhouse chain may not enforce a dress code for diners, but that isn’t the case for employees. LongHorn Steakhouse enforces this dress code “to ensure a professional appearance and maintain hygiene standards,” according to its official website. The exact position an employee has in the restaurant can also impact what their dress code expectations are. For example, kitchen staff must ensure their adherence to safety regulations, which includes wearing appropriate uniforms and protective gear. Read More LongHorn Steakhouse DINER CHANGE All Longhorn Steakhouse & Olive Garden in state face unprecedented $13.73 rule LAST ORDERS Famous dish vanished from LongHorn Steakhouse menu -where can you still get it? But the restaurant’s policies demand that front-of-house staff wear non-slip shoes at all times. The LongHorn Steakhouse website doesn’t provide a specific reason for this, but ensuring the safety of both diners and employees is likely a key factor. If employees aren’t wearing non-slip shoes, they could trip and fall while carrying drinks or hot food throughout the restaurant. This could result in the employee injuring themselves, another staff member, or even a guest by spilling food and drink on them . Advertisement Most read in Money SHUT DOWN Olive Garden sister chain closes all locations - 14 will become other eateries CLOSING TIME Major bank shuts down 75 local branches for good leaving fewer options for you STEAK SALUTATIONS L
+
+--- Article 114 ---
+URL: https://www.theconnecticutscoop.com/all-hartford-county-posts/rocky-hill-scoop-brew-lab-cafe-sets-opening-date-in-rocky-hill
+Title: ROCKY HILL SCOOP: Brew Lab Cafe sets opening date in Rocky Hill
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 15:45:58
+
+HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
+
+--- Article 115 ---
+URL: https://www.shiksha.com/news/boards-final-reminder-cbse-12th-revaluation-portal-closing-soon-parliamentary-committee-seeks-answer-from-board-blogId-232311
+Title: Final Reminder! CBSE 12th Revaluation Portal Closing Soon; Parliamentary Committee Seeks Answer from Board
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-07 15:31:33
+
+Trending : AIBE 21 Answer Key 2026 Live MAH CET 2026 Result Second Attempt Live JoSAA 2026 Mock Allotment Live MHT CET Result 2026 Live CUET UG 2026 Answer Key LIVE MET 2026 Seat Allotment LIVE NIPER JEE 2026 Admit Card Live MH CET 5-year LLB Result 2026 Live CBSE 10th Second Board Result 2026 Live RRB NTPC 2026 Admit Card Live NDA 2 Application 2026 Last Date Live / News / Boards / Final Reminder! CBSE 12th Revaluation Portal Closing Soon; Parliamentary Committee Seeks Answer from Board Final Reminder! CBSE 12th Revaluation Portal Closing Soon; Parliamentary Committee Seeks Answer from Board Keep Me Notified Final Reminder! CBSE 12th Revaluation Portal Closing Soon; Parliamentary Committee Seeks Answer from Board Edit Article 1 min read Comment Share FOLLOW US Prefer Shiksha.com Keep Me Notified Call 8585951111 Got Doubts? Anangsha Patra Deputy Manager – Editorial New Delhi, Updated on Jun 7, 2026 21:01 IST CBSE 12th Revaluation portal will close today at 11.59 pm. Students who have not applied yet should hurry up & apply for revaluation & verification. The Parliamentary committee has asked the board to submit written answers regarding OSM issues. CBSE faced criticism after issuing blank CBSE Class 12 marksheets and mismatched answer scripts. CBSE 12th Revaluation portal will close today at 11.59 pm. Students who have not applied yet should hurry up & apply for revaluation & verification. The Parliamentary committee has asked the board to submit written answers regarding OSM issues. CBSE faced criticism after issuing blank CBSE Class 12 marksheets and mismatched answer scripts. CBSE 12th Revaluation Portal Closing Soon CBSE 12th Revaluation portal will close today at 11.59 pm. Students who are yet to apply for revaluation should hurry up and apply for revaluation and verification. The fee for revaluation is INR 25, while it is INR 100 for verification. Students can apply either or revaluation or verification or both. The process is completely online. CBSE through a
+
+--- Article 116 ---
+URL: https://www.msn.com/en-us/money/companies/a-beloved-vegetarian-restaurant-chain-is-closing-all-of-its-locations-joining-the-list-of-retailers-to-shutter-under-the-weight-of-suffocating-costs/ar-AA24mVW0
+Title: A beloved vegetarian restaurant chain is closing all of its locations, joining the list of retailers to shutter under the weight of suffocating costs
+Status hint: Closing | Industry: Restaurants
+Published: 2026-06-07 15:05:28
+
+MSN
+
+--- Article 117 ---
+URL: https://www.the-sun.com/money/16465298/new-in-n-out-location-portland-oregon-traffic-plan/
+Title: In-N-Out soon opening 'long-awaited' location with traffic control plan laid out
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 14:43:12
+
+Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Comment now A PROMISED In-N-Out location in a major US city seems set to open any day now. The city and establishment have already confirmed a traffic plan for dealing with the expected influx in traffic from the restaurant’s opening . Sign up for the Money newsletter Thank you! The long awaited In-N-Out location seems finally set to open Credit: Getty It will occupy what was once the parking lot of a Barnes & Noble in Hillsboro, Oregon’s Tanasbourne Town Center Credit: AFP or licensors Advertisement The new burger joint is set to open in the Tanasbourne Town Center in Hillsboro, Oregon, part of the Portland Metropolitan Area, in what was once the parking lot of a Barnes & Noble . With construction complete, the business is set to open any day now according to local outlet The Oregonian . But the highly-anticipated restaurant’s opening will also cause an immediate and sustained influx of traffic to the area. This hurdle was one of the last the restaurant needed to cross before opening, and has officially done so with the introduction of a new traffic plan. Read More In-N-Out News KEEP IT FRESH The exact reason why In-N-Out diners will never add online ordering or pickup 6-7 TERROR In-N-Out makes change - diners told to pay attention to their order numbers Hillsboro officials approved the plan in the last week of May after ensuring it addressed “safety, access, and flow and minimizes impacts to other businesses and travelers,” per city spokesperson Cindy Dauer. The new traffic plan starts with ensuring experienced employees are staffed at the restaurant in order to minimize traffic build up and expedite turnover. Once the store’s drive-thru has a queue of more than eight cars, staff will start approaching cars and taking orders on handheld devices. If the queue exceeds 29 cars, store traffic control personnel will help direct traffic. Advertisement Most read in Money SHUT DOWN Olive G
+
+--- Article 118 ---
+URL: https://www.travelandtourworld.com/news/article/5ohpmwb960qq/
+Title: Caribbean Cruise Industry Faces Major Shakeup as Norwegian Cruise Line Eliminates Norwegian Viva’s San Juan Deployment, Cancels Hundreds of Days of Scheduled Sailings, and Shifts Focus to Miami and Bahamas Expansion
+Status hint: Opening | Industry: Cruise Lines
+Published: 2026-06-07 14:42:22
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/5ohpmwb960qq/]
+
+--- Article 119 ---
+URL: https://www.aol.com/news/columbia-location-growing-restaurant-chain-100000965.html
+Title: A Columbia location of this growing restaurant chain is planned near USC’s arena
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-07 14:42:07
+
+Chris Trainor Wed, June 3, 2026 at 10:00 AM UTC 0 The Gateway 737 development near Colonial Life Arena in Columbia has student housing, restaurants and more. (Chris Trainor/chtrainor@thestate.com) A growing restaurant chain known for acai bowls, smoothies, cold brew coffee and more is planning a new shop in a popular development right next to the University of South Carolina's basketball arena. Playa Bowls, which has locations in numerous states, is planning a shop at 737 Gadsden St. Unit 103 in Columbia, according to City of Columbia public records. That's on the first floor of the Gateway 737 development near Colonial Life Arena. City records indicate Playa Bowls filed permits in May for renovations at 737 Gadsden. A city building permit was on the door when a reporter briefly went by Monday. The planned Playa Bowls would be located between a Domino's Pizza and a Chick-fil-A in the Gateway 737 development. Advertisement Playa Bowls hinted at its plans for a Columbia location in a December 2025 post on Instagram , noting at the time that its shop would be "right by campus." The Gateway 737 student housing tower in Columbia features more than 900 beds across 311 apartments in the 650,000-square-foot facility. It features a two-story fitness center, a rooftop lounge and a resort-style pool. Additional businesses along the first floor include a Roxanne's Market and a Knowledge Perk coffee shop. Playa Bowls has locations in states across the U.S., with a heavy concentration in the Northeast. Current South Carolina locations include spots in Charleston, Summerville and Mt. Pleasant. The Playa Bowls menu includes acai bowls , pitaya bowls, oatmeal, smoothies, juices, cold brew coffee and more.
 
 --- Article 120 ---
-URL: https://www.bizjournals.com/pittsburgh/news/2026/05/27/jc-penney-at-ross-park-mall-announces-closure.html
-Title: JCPenney at Ross Park Mall announces upcoming closure
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-27 19:35:00
+URL: https://www.aol.com/news/outside-charlotte-family-run-furniture-145459841.html
+Title: Outside Charlotte, a family-run furniture store is closing after nearly 80 years
+Status hint: Closing | Industry: Furniture / Mattress
+Published: 2026-06-07 14:14:12
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/pittsburgh/news/2026/05/27/jc-penney-at-ross-park-mall-announces-closure.html]
+Catherine Muccigrosso Thu, June 4, 2026 at 2:54 PM UTC 0 Biggerstaff Furniture, a family-owned business that has spanned four generations, is closing its doors after 78 years in Gastonia, west of Charlotte. (Biggerstaff Furniture) After nearly eight decades of furnishing homes in the Charlotte region , a local retail fixture is preparing to dim its lights for the last time. Biggerstaff Furniture , a family-owned business that has spanned four generations, is closing its doors after 78 years at 1701 W. Franklin Blvd., Gastonia, west of Charlotte. Details on the closing date and the number of workers the store has were not immediately available Thursday. Biggerstaff's closure follows a trend of long-standing, family-owned furniture businesses closing across the country as owners retire amid changing retail landscape, as Furniture Today reported in April. Owner Ray Biggerstaff announced his retirement, signaling the end of an era for the company founded in 1948 by his grandfather, Raymond Biggerstaff. "It has been a privilege to serve multiple generations of families," Ray Biggerstaff said in a statement shared with The Charlotte Observer on Thursday. "We are incredibly thankful for the support, friendships and memories that have defined our journey." Advertisement A liquidation sale is underway on living room and dining sets, mattresses and home accessories. Biggerstaff Furniture officials weren't immediately available for comment Thursday. About Biggerstaff Furniture The store originally opened on Franklin Boulevard in a different spot, just 300 yards from where it is today. Over the years, the business transitioned from Raymond to his son, Bob, then to his grandson, Robert. In 2008, the fourth generation joined when Robert's son, Bobby, entered the family business. In 2014, the furniture store moved into its 15,000-square-foot showroom that once served as a church building. The store carries brands like Bassett, Kincaid, Sealy and Vaughan-Bassett. "We will always ch
 
 --- Article 121 ---
-URL: https://amp.marca.com/en/lifestyle/us-news/2026/05/27/one-of-the-most-prominent-asian-food-chains-in-the-united-states-is-being-forced-to-file-for-bankruptcy-its-locations-remain-open.html
-Title: One of the most prominent Asian food chains in the United States is being forced to file for bankruptcy: its locations remain open
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-27 19:25:21
+URL: https://www.msn.com/en-us/money/companies/del-taco-exploring-plans-to-reopen-columbus-phenix-city-locations/ar-AA1WOzIp?ocid=finance-verthp-feeds
+Title: Del Taco exploring plans to reopen Columbus, Phenix City locations
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-07 13:29:17
 
-US News One of the most prominent Asian food chains in the United States is being forced to file for bankruptcy: its locations remain open The sector has experienced difficult years due to the pandemic or inflation 6a1713f1ca408 CONNOR REID 27/05/2026
-        -
-        14:25 CDT Compartir en Facebook Compartir en Twitter Compartir en Telegram Compartir en Whatsapp There are various chains of Asian restaurants throughout the world . Well, recently, a very well-known one in the United States has had to file for bankruptcy. It should be emphasized that the sector has gone through difficult years due to the pandemic or inflation. This is the Asian restaurant chain that has had to close several locations in the United States The difficult economic situation affecting the restaurant industry has led the popular Thai restaurant chain Thai Wisdom LLC and its subsidiary TWB Edmonds LLC to file for bankruptcy. The headquarters of both chains is in Kirkland, Washington. They filed the petition with the United States Bankruptcy Court for the Western District of Washington on May 26, listing assets worth up to $50,000 and liabilities between $500,000 and $1 million, as reflected in the submitted documentation. It should be emphasized that they did not explain the reason for their bankruptcy. Among the debtor's main creditors are BHG , with a debt close to $180,000; Rapid Finance , with a debt exceeding $119,000; or the Washington State Department of Revenue , with a debt of more than $53,000. Thai Wisdom was founded in 2017 and continues to operate at its establishments . They have three types of stores : the informal full-service Thai Wisdom Kirkland and Thai Wisdom Lonuge Edmonds, and one for takeout and delivery, Thai Wisdom Capitol Hill, in Seattle. Among their most prominent chains, they also have nine Shari "s locations in California, Idaho, and Washington . In addition, they also own the Coco "s chain with more than 78 years of history located in Mission Hills and Redland
+MSN
 
 --- Article 122 ---
-URL: https://www.msn.com/en-us/money/companies/pizza-chain-shuts-down-all-us-locations-and-files-for-bankruptcy-after-50-years/ss-AA23gT8X?ocid=widgetstore
-Title: Pizza chain shuts down all US locations and files for bankruptcy after 50 years
+URL: https://www.the-sun.com/money/16465104/bahama-breeze-locations-shut-down-converted-olive-garden/
+Title: Olive Garden sister chain closes all locations
 Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-27 19:21:11
+Published: 2026-06-07 13:27:57
 
-MSN
+Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Comment now A BELOVED chain restaurant has shut down all 28 of its remaining locations for good. Half of them will be converted into other restaurants that are part of the Olive Garden family. Sign up for the Money newsletter Thank you! 4 The Olive Garden family of chain restaurants is losing a major name with all 28 remaining locations closing down or converting Credit: Alamy 4 Bahama Breeze’s remaining 28 locations are set to be either shut down or converted into Olive Gardens and more Credit: Alamy Advertisement Bahama Breeze began shuttering each and every one of its remaining 28 locations in April, according to Lehigh Valley Live . The island-themed eatery first announced this move in February, and half of the 28 restaurants saw their last day open come on April 5. The remaining 14 locations are set to become other restaurants across the next 12 to 18 months, specifically being replaced by others in the Olive Garden chain family . This includes the Italian eatery itself and LongHorn Steakhouse among others, though exact numbers of how many will become each aren’t available at this time. Read More Restaurant Closures ICON CLOSES Top chef closes flagship restaurant after 25 years as fans mourn loss MAMMA MIA! Olive Garden rival down to last 38 restaurants after 'customer confusion' “The company believes the conversion locations are great sites that will benefit several of the brands in the portfolio,” said Darden Restaurants, the owner of the Olive Garden family chains, in a press release. “Going forward, the primary focus will continue to be on supporting team members, including placing as many as possible in roles within the Darden portfolio.” A majority of the brand’s restaurants are located in Florida, with five of the 15 Sunshine State franchises closing down and the remaining 10 being converted. All Delaware, Michigan, and Pennsylvania restaurants will be fully shutdown. Adv
 
 --- Article 123 ---
-URL: https://www.wsmv.com/2026/05/27/edleys-bbq-announces-new-brentwood-location/
-Title: Edley’s BBQ announces new Brentwood location
+URL: https://www.msn.com/en-us/money/companies/publix-opens-newest-florida-store-with-3-others-coming-in-june/ar-AA24VwPW
+Title: Publix opens newest Florida store with 3 others coming in June
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 19:20:00
-
-Comment 0 Share Add Us On Google Add as a preferred source on Google BRENTWOOD, Tenn. (WSMV) - Edley’s BBQ announced Tuesday that it will be opening a new location in Brentwood later this year. The new location will be located in the former McCallister’s restaurant next to Chick-Fil-A. “For the last 10 years, we’ve been patiently waiting for the right spot in Brentwood and we are excited to announce that we are going into the McCallister’s location,” the restaurant said in a post on Instagram. View this post on Instagram A post shared by Edley’s Bar-B-Que (@edleysbbq) Edley’s said that the new location would be opening at the end of 2026 but did not share an exact date. Those interested in keeping up with updates about the new location can subscribe to the restaurant’s email. Copyright 2026 WSMV. All rights reserved. Join The Conversation Comments 0 We want to hear what you think . Create a free account to share your thoughts . Read our community guidelines here .
-
---- Article 124 ---
-URL: https://www.fox19.com/2026/05/27/world-renowned-japanese-chef-open-first-midwest-restaurant-cincinnati/
-Title: World-renowned Japanese chef to open first Midwest restaurant in Cincinnati
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-27 19:19:00
-
-Share Add Us On Google Add as a preferred source on Google Videos above are FOX19 NOW’s top stories. CINCINNATI (WXIX) - A celebrity chef and restaurateur has plans to open a Japanese restaurant in Cincinnati this summer, bringing new, yet traditional flavors to the city. Owner and Chef Makoto Okuwa has restaurants all over the world from Miami to Sao Paulo to Madrid. Now he is ready to bring his cuisine to the Midwest. Suzu, located at Madison Square in Madisonville, is set to open in July, making it the first Makoto brick-and-mortar in the Midwest. The restaurant’s central theme is all about balance, walking the line between tradition and modernity. Customers will be sure to see that in Suzu’s cuisine and interior spaces. Suzu will offer customers a signature Japanese experience with its 150-guest indoor and 70-guest outdoor dining options. Traditional seating options include dining in the suzuné, a 10-seat Edo-style omakase counter, or inside the tea room, which can be booked for intimate gatherings. “We want each guest who walks through the doors to feel that sense of warmth, intention, and respect for ingredients and leave feeling that they’ve shared a remarkable experience with our chefs, staff, and the people they dined with,” said Makoto. Suzu is more than Cincinnati’s newest Japanese restaurant. It is also a reflection of Chef Makoto’s childhood and culture. “Growing up, my mother and grandmother showed me how much care goes into preparing food for others,” he said. “That spirit lives in every dish we’ll serve at Suzu.” Those dishes include sushi, rice and noodle options, and Japanese grill items. Watch more FOX19 NOW videos For more than 25 years, Makoto has honed his skills and has since become a Master of Modern Japanese cuisine and Edomae-style sushi. His career started when he was a teenager in his hometown of Nagoya, Japan, about about 215 miles (346 kilometers) from Tokyo. At 15, he trained under master sushi chefs, later working for world-renowned M
-
---- Article 125 ---
-URL: https://www.pembrokepinesflnews.com/news/local/article315907449.html
-Title: Brazilian acai shop with 600+ stores globally to make its way to Pembroke Pines
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 19:10:27
-
-Oakberry Acai will open a Pembroke Pines store at 15999 Pines Blvd., according to the brand’s website. Edwin Criz Unsplash A refreshing health food eatery is making its way to Pembroke Pines. Brazil-based Oakberry Acai is setting up shop at 15999 Pines Blvd.,  inside west Pines’ Westfork Plaza, and will bring antioxidant-packed bowls, smoothies, snacks and drinks. The store will replace the former I Heart Mac & Cheese restaurant that closed in early 2025. The southwest Broward locale’s  opening date has not been announced as of May 27, though the new store is listed under “ Coming Soon ” on Oakberry’s website. The acai chain also passed its food licensing inspection without issue, according to a May 12 Florida Department of Business & Professional Regulation report. View this post on Instagram A post shared by OAKBERRY USA (@oakberryusa) What to expect from Oakberry’s Pembroke Pines store? The franchise only serves ac ai-based products, claiming it is “on a journey to make acaí known and appreciated all over the globe,” and tailors many of its offerings to its “health-conscious” customers. What is acai? Oakberry describes it as “a small, dark purple berry that grows in rainforests in Brazil,” and is rich in antioxidants, potassium, calcium, vitamin E, Omega 6 and 9, and proteins. The chains most popular menu items are acai bowls and smoothies topped with varying combinations of chia seed pudding, peanut butter, granola, berries, nuts, bananas and  standout ingredients such as matcha and whey protein. It also weaves the purple berry ingredient into protein bars and a canned kombucha drink sold in stores. Want to try Oakberry ahead of its Pembroke Pines grand opening? The chain operates 600 stores across 35 countries and has several stores across South Florida . Here’s where you can try  Oakberry Acai in Miami-Dade and Broward: Miami Beach, 100 Collins Ave. Brickell, 701 S. Miami Ave. Wynwood, 2619 NW Second Ave. Doral, 3535 NW 83rd Ave. Miami Modern District, 6912 Bi
-
---- Article 126 ---
-URL: https://www.macon.com/living/food-drink/article315771664.html
-Title: Historic Fincher’s Barbecue opens its new Warner Robins location, draws a crowd
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 19:05:07
-
-Fincher’s Barbecue co-owner Jake Fincher completes orders with kitchen staff at the new Warner Robins location, Friday, May 15, 2026. The new location on South Armed Forces Boulevard across from Robins Air Force Base replaces the former Davis Drive restaurant. Katie Tucker The Telegraph Warner Robins Fincher’s Barbecue was doing  brisk business opening day May 15 at its new Warner Robins location. “Finally, happy to be here,” said co-owner Jake Fincher as he worked alongside his brother and co-owner Doug Fincher fixing up barbecue plates and burgers. “We’re excited, and we’re expecting big things.” Customers on opening day of the new Fincher’s Barbecue on Friday, May 15, 2026 in Warner Robins, Georgia. The new restaurant is off South Armed Forced Boulevard, across the street from Robins Air Force Base.                                                                                            Katie Tucker The Telegraph Known for its uniquely flavored, pulled and chopped pork, Brunswick stew and signature sauce, Fincher’s Barbecue opened its first restaurant at 3497 Houston Avenue in Macon that remains in operation today. The generational family-business has two other locations in Macon, with the new Warner Robins restaurant replacing its former location on Davis Drive. The move to 102 South Armed Forces Blvd., across from Robins Air Force Base, is expected to boost business for the already popular barbecue and catering brand. The “Pig” pulled pork sandwich served with fries from Fincher’s Barbecue on South Armed Forces Boulevard in Warner Robins.                                                                                            Katie Tucker The Telegraph “Been eating Fincher’s forever and ever,” said Terry Mock, who works for the Houston County Water Department and was having lunch with friend and co-worker Eric Hester. “The barbecue is great. I always get the ‘Super Pig’ and fries.” As a kid, Mock’s whole family ate  at Fincher’s Barbecue every Friday night,
-
---- Article 127 ---
-URL: https://www.wdbj7.com/2026/05/27/presbyterian-community-center-celebrates-grand-opening-new-building-with-ribbon-cutting-community-celebration/
-Title: Presbyterian Community Center celebrates grand opening of new building with ribbon-cutting, community celebration
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 19:00:00
-
-Share Add Us On Google Add as a preferred source on Google ROANOKE, Va. (WDBJ) - For many Roanoke families, the Presbyterian Community Center (PCC) has long been a trusted resource for support, stability and youth development. That work is expanding with the opening of PCC’s new 15,000-square-foot building, which will serve two of the organization’s core programs: Emergency Services, including the food pantry and financial aid services, and Pathways for Youth, PCC’s after-school program. As part of the expansion, UnitedHealthcare is sponsoring the “Care Corner”, a dedicated space for parents and students currently enrolled in Pathways for Youth. The Care Corner will provide access to on-site laundry facilities, hygiene products and other wellness-related supplies. UnitedHealthcare’s support will also extend to food programming for participating Pathways families and a healthy food and cooking initiative in partnership with local organizations. Presbyterian Community Center will celebrate the grand opening of its new building with a community open house, ribbon cutting and Pathways for Youth ceremony on Friday, May 29. The new facility will support PCC’s Emergency Services program, including food pantry and financial aid services, as well as its Pathways for Youth after-school program. Here @ Home sat down with Executive Director Nicole Jennings to talk about the Center and the upcoming Ribbon Cutting. WHEN: Friday, May 29, 2025 Open House 10:30 a.m. - 6 p.m. (open to public) Ribbon Cutting: 12:30 p.m. - 1:30 p.m. · Remarks from community and civic leaders: -Bev Fitzpatrick, Chairman, Presbyterian Community Center -Mayor Joseph Cobb, City of Roanoke -Nicole Jennings, Executive Director, Presbyterian Community Center · Photo ops, interviews available. · Guided tours of the new space to follow. Kona Ice Refreshments 4:00 p.m. Pathways for Youth Ceremony in Gym for UnitedHealthcare: 5:00 p.m. - 6:00 p.m. · Remarks from community and civic leaders: o Welcome - Bev Fitzpa
-
---- Article 128 ---
-URL: https://www.caribjournal.com/2026/05/27/norwegian-cruise-line-great-tides-waterpark/
-Title: Norwegian Cruise Line Just Revealed the Opening Date for Its New Bahamas Waterpark, With a 170-Foot Tower, 19 Slides and a Lazy River
-Status hint: Opening | Industry: Cruise Lines
-Published: 2026-05-27 18:41:18
-
-Norwegian Cruise Line Just Revealed the Opening Date for Its New Bahamas Waterpark, With a 170-Foot Tower, 19 Slides and a Lazy River By: Caribbean Journal Staff - May 27th, 2026 What the new Great Tides Waterpark will look like. Norwegian Cruise Line has finally set a date for one of the most highly anticipated debuts in Caribbean cruise travel: the grand opening of the Great Tides Waterpark at Great Stirrup Cay , the line’s private island in the Bahamas . The sprawling new waterpark will officially open on Sept. 4 , with the inaugural day taking place during Norwegian Luna’s seven-day Caribbean sailing from Miami , Caribbean Journal has learned. It’s a major moment for the Bahamas cruise scene — and for Great Stirrup Cay, which has been undergoing one of the most extensive private island transformations in the cruise industry. Beginning this week, guests booked on sailings to Great Stirrup Cay on or after Sept. 4, 2026 can purchase day passes to the Great Tides Waterpark in advance , allowing travelers to lock in their spot before they even board the ship. For those who want to elevate the experience, Norwegian is also offering private cabanas accommodating up to six guests. The cabanas include waterpark admission and are positioned just steps from the park’s centerpiece — the towering Tidal Tower — offering shaded comfort between trips down the slides. A Six-Acre Waterpark in the Bahamas Spanning nearly six acres , Great Tides Waterpark is designed to be a destination unto itself, with 19 slides and a roster of attractions aimed at every kind of traveler — from thrill-seekers to families with small children. At the heart of the park is the 170-foot Tidal Tower , an imposing structure that will house some of the waterpark’s most ambitious rides. Chief among them are the Breakwater Blasters , billed by Norwegian as industry-first water coasters that combine downhill drops with uphill blasts, all experienced from inside an inner tube. The Tidal Tower will also featu
-
---- Article 129 ---
-URL: https://obj.ca/philippe-leclerc-voluntary-departure-now-opening-restaurant/
-Title: Civil servant Philippe Leclerc took voluntary departure. Now he’s opening a restaurant
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-27 18:41:16
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://obj.ca/philippe-leclerc-voluntary-departure-now-opening-restaurant/]
-
---- Article 130 ---
-URL: https://www.msn.com/en-us/money/companies/list-of-new-bj-s-wholesale-club-locations-opening-in-florida/ar-AA248ysG?ocid=finance-verthp-feeds
-Title: List of new BJ's Wholesale Club locations opening in Florida
-Status hint: Opening | Industry: Grocery Wholesale
-Published: 2026-05-27 18:37:32
+Published: 2026-06-07 13:18:58
 
 MSN
 
---- Article 131 ---
-URL: https://www.msn.com/en-us/money/companies/popeyes-chain-closes-more-locations-no-bankruptcy/ar-AA22Mrsu?ocid=finance-verthp-feeds&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Popeyes chain closes more locations, no bankruptcy
+--- Article 124 ---
+URL: https://www.msn.com/en-us/news/us/new-raising-canes-restaurant-opening-in-lynnwood-wa/ar-AA24FUqT
+Title: New Raising Cane's restaurant opening in Lynnwood, WA
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-07 13:10:08
+
+MSN
+
+--- Article 125 ---
+URL: https://www.aol.com/news/alley-kat-announces-permanent-closure-003419383.html
+Title: Alley Kat announces permanent closure
 Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-27 18:32:03
+Published: 2026-06-07 13:06:09
+
+Kenzie Hagood Thu, June 4, 2026 at 12:34 AM UTC 0 Alley Kat announces permanent closure PINEY FLATS, Tenn. (WJHL) — The owner of Alley Kat, Angie Clowers, announced that the restaurant will close. Clowers said after several challenges, she has decided to close the business to focus on her family, health and next chapter. She said it was not an easy decision. Advertisement The social media post is below; the full post can be viewed here . Alley Kat has been so much more than a restaurant to me. It has been a dream, an adventure, and a place where I've had the privilege of meeting so many wonderful people. I am incredibly grateful to every customer who supported us, shared our posts, recommended us to friends, attended our events, and allowed us to be part of this community. To my employees, thank you for your hard work, dedication, and friendship. I couldn't have asked for a better team. We will be open one final day this Saturday while supplies last. I would love the opportunity to see many of you one last time, say thank you in person, and celebrate the memories we've created together. While I am stepping away, I believe there is still opportunity here for the right person. The restaurant equipment, food trailer, and business assets are available, and the landlord is willing to work with a qualified new tenant. If you are interested in learning more, please feel free to reach out to me directly. From the bottom of my heart, thank you for your support, kindness, and friendship over the years. I will always be grateful for this community and the memories we've shared. Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to WJHL | Tri-Cities News & Weather.
+
+--- Article 126 ---
+URL: https://www.thestreet.com/retail/casino-operator-maverick-closes-two-more-locations-in-chapter-11
+Title: Casino operator closes two more locations in Chapter 11
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-07 13:01:04
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.thestreet.com/retail/casino-operator-maverick-closes-two-more-locations-in-chapter-11]
+
+--- Article 127 ---
+URL: https://www.tradingview.com/news/gurufocus:bb78dffb8094b:0-sprouts-new-stores-still-justify-a-growth-premium/
+Title: Sprouts' New Stores Still Justify a Growth Premium
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 12:27:27
+
+Sprouts' New Stores Still Justify a Growth Premium 4 min read SFM Investors now have lower expectations for Sprouts Farmers Markets SFM , but they might have reduced their expectations too much. It now looks like Sprouts will report much weaker results in 2026 than it did in 2025. Consumers are concerned about high grocery prices, and wealthier shoppers are shopping at dollar stores to save money. So, Sprouts doesn't expect strong comps in the short term, but it is still planning to keep building new stores. In Q1 2026, Sprouts said it opened 6 stores in the first quarter and it plans to open more than 40 stores in 2026. The company had 477 stores at the beginning of the year, so if its store count rises to 517 stores by the end of the year, that's an 8.4% annual growth rate. Sprouts' guidance calls for flat comps and overall revenue growth in the 4.5% to 6.5% range in 2026, which is lower than that, though. And the company also posted -1.7% comps in Q1 2026. But while Sprouts might post weak comps in the short term, its business model still makes it a very profitable grocery store. Sprouts can sell health food for relatively high prices because its customers are willing to pay extra to avoid unhealthy ingredients. Its merchandise is more highly curated than the food at traditional grocery stores, and Sprouts also stocks products from new health-food brands that aren't available elsewhere. As a result, Sprouts has relatively high gross margins for a grocery store, but it's also worth comparing this store to other stores using other efficiency metrics. Sprouts Comes Out Ahead on Profit Per Square Foot It might be helpful to compare Sprouts to another health-food store, Natural Grocers (NGVC), as well as the traditional grocery store Kroger (KR). All three of these stores have provided their annual 10-K reports for 2025, so here are links to the reports for Sprouts, Natural Grocers, and Kroger, respectively. Sales per square foot is one way to measure a grocery store'
+
+--- Article 128 ---
+URL: https://www.denverpost.com/2026/06/07/romance-bookstore-cafe-englewood-opening/
+Title: She read 400 romance novels after losing her parents. Now Colorado native is opening a romance-only bookstore and cafe
+Status hint: Opening | Industry: Books / Toys / Gaming
+Published: 2026-06-07 12:00:50
+
+Meg Garcia-Jahrman, owner of Good Girl Cafe and Bookstore, poses for portraits inside the soon-to-be romance novel bookstore in Englewood on Thursday, June 4, 2026. What started as a dream is becoming a reality for her and her husband as they expect to open their doors on July 11. (Photo by Harmon Dobson/The Denver Post) By Jessica Alvarado Gamez | jalvarado@denverpost.com PUBLISHED: June 7, 2026 at 6:00 AM MDT Getting your Trinity Audio player ready... After losing both of her parents in consecutive years, Meg Garcia-Jahrman found solace in romance novels and coffee shops. She read more than 400 books as she navigated her grief, often spending hours tucked away in local cafes where she could escape into stories of hope, resilience and happily-ever-afters. Now, the 29-year-old Morrison native is preparing to open Good Girl Cafe and Bookstore along South Broadway in Englewood, a romance-only bookstore and coffee shop inspired by the two things she credits with helping her survive some of the most difficult years of her life. Meg Garcia-Jahrman, owner of Good Girl Cafe and Bookstore, poses for portraits inside the soon-to-be romance novel bookstore in Englewood on Thursday, June 4, 2026. (Photo by Harmon Dobson/The Denver Post) Expected to open this summer at 2807 S. Broadway, Good Girl joins a growing wave of romance-focused businesses emerging amid the genre’s surging popularity, creating what Garcia-Jahrman hopes will become a gathering place for readers and anyone seeking community. But for her, the project is also deeply personal. Sitting outside on the patio of Corvus Coffee Roasters along South Broadway, with clear frame glasses and a Makeshift Crafts baseball cap, Garcia-Jahrman warmly recalled her mother, Lynette, whose passion for reading, especially romance novels, brought her great joy, and her father, Stephen, whose dedication to supporting small businesses and local entrepreneurs left a lasting impact on those around him. Both parents died unexpectedly f
+
+--- Article 129 ---
+URL: https://patch.com/connecticut/across-ct/popular-pizzeria-set-close-owners-tease-something-new-will-be-coming-ct
+Title: Popular Pizzeria Set To Close, Owners Tease Something New Will Be Coming: CT Business News
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 12:00:38
+
+Business & Tech Popular Pizzeria Set To Close, Owners Tease ‘Something New Will Be Coming’: CT Business News Prominent Restaurant Closing/ Chick-Fil-A Plans Approved After Initial Rejection/ Shopping Destination To Offer 4 New Restaurants & More... Vincent Salzo , Patch Staff Posted Sun, Jun  7, 2026 at 8:00 am ET There was plenty of business news across Connecticut. If you missed any of it on your local Patch, here's a roundup of some of the most-read stories. Popular CT Pizzeria Set To Close, Owners Tease 'Something New Will Be Coming' The owners announced the popular pizzeria is set to close soon. >>>Read More. Prominent Restaurant To Close, Owners Cite Several Reasons The eatery will close for good this weekend, the owners announced. >>>Read More. Find out what's happening in Across Connecticut for free with the latest updates from Patch. Reversal: Chick-Fil-A Plans Approved For Site After Initial Rejection: Report The reversal seemed to come out of nowhere. >>>Read More. Major Shopping Destination To Offer 4 New Restaurants Officials at the shopping hotspot announced a lease for a major restaurant chain, one of four eateries expected to open this year and next. >>>Read More. Find out what's happening in Across Connecticut for free with the latest updates from Patch. New, Popular Restaurant Listed For Shopping Center A property listing shows the restaurant as coming soon to a Hazard Avenue plaza with several major tenants. >>>Read More. Other top business stories: New Consignment Shop Opens In Newtown Bethel Could Soon Welcome New Family-Owned Business Popular Fast-Food Chain Seeks Approval For New Danbury Location Several Retailers Opening At Foxwoods Outlet Mall This Summer Tropical Smoothie Cafe Opens New Oxford Location New Eatery Coming To Familiar East Granby Spot New Med Spa/Wellness Center Opens In Historic Farmington Neighborhood Popular Dessert Chain Planning First Danbury Location: Report Are you a local business owner? Post a business listing on Patc
+
+--- Article 130 ---
+URL: https://www.mlive.com/news/flint/2026/06/fire-destroys-lapeer-area-store-city-nears-data-center-moratorium-and-more-flint-area-news.html
+Title: Fire destroys Lapeer-area store, city nears data center moratorium and more Flint-area news
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-07 12:00:00
+
+By Dylan Goetz | dgoetz@mlive.com FLINT, MI – A Lapeer Township convenience store was destroyed in an overnight fire this week. In other Flint-area news, the city of Flint is nearing an agreement to declare a moratorium on data centers after a report that a development group is under contract to buy 200 acres of land at the old Buick City site. Here are five Flint-area stories you may have missed. Overnight fire destroys Lapeer Township convenience store An overnight fire caused significant damage at Slaterville Market, located at 2602 Imlay City Road in Lapeer Township. The blaze broke out due to an electrical issue involving a transformer around 10:31 p.m. on Wednesday, June 3. Read Dylan Goetz’s story here. The first building constructed by Ashley Capital at the old Buick City site in Flint is shown in this photo provided by the Racer Trust. Photo provided by the RACER Trust Flint moves closer to data center moratorium after report of potential Buick City project The city of Flint could declare a moratorium on data centers next week after a report that a development group is under contract to buy 200 acres of land at the old Buick City site. The Flint City Council gave initial approval on Wednesday, June 3, for the temporary prohibition, but officials said no redevelopment plans have been filed and key players in the proposed development reported by Crain’s Detroit did not immediately comment. Read Ron Fonger’s story here. Shibam Restaurant, owned by Yemeni entrepreneurs and helmed by a Palestinian chef Kamel Alkhdour, offers a unique mix of traditional Yemeni dishes with Palestinian and other Middle Eastern influences, making it a must-visit for food lovers seeking an authentic dining experience. (Photos by Fuad Shalhout and provided Shibam Restaurant) Shibam Restaurant closes its doors in Genesee County Shibam Restaurant in Mt. Morris Township has closed its door after nearly two years. “Goodbye isn’t just a word when a place has become home,” a Sunday, May 31,
+
+--- Article 131 ---
+URL: https://www.msn.com/en-us/money/companies/walmart-is-delivering-restaurant-meals-from-some-stores-with-expansion-to-come/ar-AA24R92H?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Walmart is delivering restaurant meals from some stores, with expansion to come
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-07 11:58:25
 
 MSN
 
 --- Article 132 ---
-URL: https://www.sunherald.com/entertainment/restaurants/article315895416.html
-Title: Lobster and shrimp rolls soon will be found at new Mississippi Coast location
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 18:23:00
-
-Key Takeaways Key Takeaways AI-generated summary reviewed by our newsroom. Read our AI Policy. Salty Jax will close its Crave Food Hall location on Sunday, May 31. Owners Ngoc Nguyen and Lu Duong will open a new restaurant in D’Iberville. Salty Jax will keep its food truck running across South Mississippi while relocating. Ocean Springs Seafood fans have just a few more days to get their fill of lobster and shrimp rolls at Salty Jax Seafood Co. in Ocean Springs before the restaurant moves to a new location in South Mississippi. Their last day at Crave is Sunday, May 31. In February , owners Ngoc Nguyen and Lu Duong moved from the food truck they operated since 2022 to a location inside Crave Food Hall at OS 1515 on Government Springs in Ocean Springs. Along with their loyal fans, who had followed the food truck from place to place, the restaurant gained a new legion of customers, who many days sold them out of seafood dishes and their creamy lobster bisque and clam chowder. The idea of opening at Crave was to try to get the feel of a sit-down restaurant and see how it might differ from the food truck, Duong said. Now they’ve refined their goals. Working behind the scenes on something bigger and stand-alone, they announced this week they will open a new restaurant in D’Iberville. The exact location and opening date haven’t been disclosed yet. Until then, their food truck will continue to operate across South Mississippi, stopping at Gautier, Diamondhead, Pascagoula and other towns across the Coast, with their location posted each day on social media. Seafood North and South The ultimate goal, Duong said, is to grow into fast casual chain in Southern beach towns like Destin, Florida. Restaurants and seafood shacks selling lobster rolls are common in other seaside towns along the East Coast, but are rare in South Mississippi. Lobster rolls on the menu at the Salty Jax Seafood Co. may be the reasons it was voted by Sun Herald readers as best food truck on the Coast. The
-
---- Article 133 ---
-URL: https://www.travelandtourworld.com/news/article/5k9ve37m1p8o/
-Title: Canada Witness its Hotel Market Poised for Strong Summer 2026, Driving Hospitality Sector Growth, Tourism Expansion and Supporting Long-Term Sustainable Development
-Status hint: Opening | Industry: Hospitality
-Published: 2026-05-27 18:19:48
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/5k9ve37m1p8o/]
-
---- Article 134 ---
-URL: https://www.jacksonville.com/story/entertainment/dining/2026/05/27/chick-fil-a-opening-new-north-jacksonville-restaurant-on-may-29/90265755007/
-Title: Chick-fil-A sets opening of once-controversial Jacksonville restaurant
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-27 18:12:30
-
-[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.jacksonville.com/story/entertainment/dining/2026/05/27/chick-fil-a-opening-new-north-jacksonville-restaurant-on-may-29/90265755007/]
-
---- Article 135 ---
-URL: https://www.msn.com/en-us/sports/other/sec-commissioner-greg-sankey-blames-big-ten-for-college-football-playoff-expansion/ar-AA246vyW?cvid=6a16dc7f7b0f48fe8462bd773bac8522&ocid=apus&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: SEC commissioner Greg Sankey blames Big Ten for College Football Playoff expansion
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 18:09:23
+URL: https://www.msn.com/en-us/news/us/park-place-cinemas-cuts-the-ribbon-for-re-opening/ar-AA24XeFo
+Title: Park Place Cinemas cuts the ribbon for re-opening
+Status hint: Opening | Industry: Movie Theatres
+Published: 2026-06-07 10:34:22
 
 MSN
 
---- Article 136 ---
-URL: https://stpeterising.com/home/new-social-fitness-gym-the-yard-gym-opening-this-summer-in-the-grand-central-district
-Title: New social-fitness gym The Yard Gym opening this summer in the Grand Central District
-Status hint: Opening | Industry: Gyms / Fitness
-Published: 2026-05-27 18:00:00
+--- Article 133 ---
+URL: https://www.eatthis.com/restaurant-chains-best-open-faced-roast-beef-sandwiches/
+Title: 5 Restaurant Chains With the Best Open-Faced Roast Beef Sandwiches, According to Diners
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-07 10:33:49
 
-View fullsize The Yard Gym will open next month in the Grand Centrl District | St PEte Rising A new social-fitness gym is preparing to open in the Grand Central District. The Yard Gym , a fitness club focused on strength training, conditioning, and team-based fitness classes, will open next month at 2060 1st Avenue South in the former Grayspeed Cycles space. The St. Pete franchise is owned by local resident Taylor Dove, who says the gym is targeting a grand opening on Saturday, June 13th. The 3,264-square-foot facility will include two air-conditioned workout spaces dedicated to The Yard’s signature training programs. One area, called RIG, focuses on strength training with barbells, dumbbells, kettlebells, and resistance equipment, while the other area, called TURF, is geared toward conditioning workouts using sleds, cardio equipment, bodyweight exercises, and functional training movements. The gym will also offers PAYDAY and GAMEDAY classes, which blend strength and conditioning with team-oriented and competitive workouts. View fullsize Owner of The Yard Gym St. Pete, Taylor Dove, and her mother | Tisa Cassidy Photography Founded in Australia in 2020 by husband-and-wife duo Tiarne and Daniel Bova, The Yard has expanded across the U.S. with locations in states including California and Texas. St. Pete’s location will be the company’s first in Florida, with a second gym in West Palm Beach on the way. Dove, who has worked in the fitness industry for roughly a decade, said she was inspired to open her own gym after seeing others in the industry launch their own concepts. “When I applied to be a franchisee at The Yard, I didn’t really know where it was going to lead, but I felt a strong pull toward it,” Dove said. “I went out to California, tried the workout, and thought, ‘Yeah, this is it. This is what St. Pete needs.’” Dove said she spent the past two years working toward opening the gym locally. Last fall, she signed a lease for the Grand Central District property and
+5 Restaurant Chains With the Best Open-Faced Roast Beef Sandwiches, According to Diners Shutterstock These chains serve hearty open-faced roast beef sandwiches with gravy. By Leah Groth June 7, 2026 Some people prefer a traditional roast beef sandwich , while others appreciate the novelty of an open-faced version, so overstuffed and big that it needs to be eaten with a knife and fork. This makes it not-so-convenient to be served in a fast-food environment, so most places serving the specialty item are sit-down. Where can you enjoy the best open-faced roast beef sandwiches? Here are 5 restaurant chains with the best open-faced roast beef sandwiches, according to diners. Bob Evans Bob Evans The Double Cheese Pot Roast Dip is an open-faced hit with diners, featuring the chain’s signature slow-roasted pot roast, caramelized onions, melted American cheese, and real provolone cheese on grilled sourdough bread “served with homestyle beef gravy for dipping,” the chain writes. The meal “is really good,” a Facebooker writes. Roy Rogers Roy Rogers The Roy Rogers roast beef sandwich is a great fast-food option, made with slow-roasted, top-round USDA Choice beef, sliced to order, drizzled with au jus, and served on a buttery Kaiser roll. “Underrated fast food. We lost ours in the 90s, still stop if I’m near one. Great mashed potatoes too!” a Redditor says . Another agrees that “a roast beef with cheese is heaven.” Charlie the Butcher Charlie The Butcher 6254a4d1642c605c54bf1cab17d50f1e Charlie the Butcher ‘s Hot Beef & Gravy plate is another fan favorite: a sandwich with slow-roasted beef and beef gravy, served open-faced or as a regular sandwich with layers of rich gravy, plus two sides. The Beef On Weck sandwich is another popular choice, served open-faced with slow-roasted beef on an old-fashioned kummelweck roll, topped with a kosher dill pickle and Broadway Market Horseradish Village Inn Village Inn The Knife & Fork Hot Roast Beef at the Village Inn is another diner favorit
+
+--- Article 134 ---
+URL: https://www.belfastlive.co.uk/news/northern-ireland/mcdonalds-confirm-closure-city-centre-34079497
+Title: McDonald's confirm temporary closure of City Centre location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 10:03:00
+
+Oops. Our website is temporarily delivering an degraded response in your location. We are working hard to get it back online.
+
+--- Article 135 ---
+URL: https://949whom.com/ixp/698/p/mall-plaza-petco-south-portland-maine/
+Title: 10 Businesses Including Petco Could Close in South Portland, ME
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 10:00:38
+
+[Could not fetch: HTTPSConnectionPool(host='949whom.com', port=443): Read timed out. (read timeout=15)]
+
+--- Article 136 ---
+URL: https://patch.com/pennsylvania/doylestown/bucks-grocery-store-acquires-new-jersey-market
+Title: Bucks County Grocery Store Acquires New Jersey Market
+Status hint: Opening | Industry: Grocery
+Published: 2026-06-07 09:44:22
+
+Business & Tech Bucks County Grocery Store Acquires New Jersey Market Here are some of the business stories making news across Bucks County: Jeff Werner , Patch Staff Posted Sun, Jun  7, 2026 at 5:44 am ET | Updated Mon, Jun  8, 2026 at 12:44 pm ET (Jeff Werner/Patch) BUCKS COUNTY, PA — Bucks County-based McCaffrey's Market has announced the acquisition of independently-owned Pennington Quality Market in Pennington, New Jersey, bringing the number of its stores to nine, including the Simply Fresh Market in Doylestown. In other business news around the county, a new Clusters Handcrafted Popcorn store has opened its doors. A new UPS store also celebrated the grand opening of a new location on Saturday. And a new barbershop has opened in the heart of Doylestown Borough. Check out these business stories making news in Bucks County: Find out what's happening in Doylestown for free with the latest updates from Patch. McCaffrey's Acquires NJ Grocery Store Bucks County-based McCaffrey' Market will be expanding its network of stores later this month to include a new location in New Jersey. McCaffrey's has acquired Pennington Quality Market, which has been owned and operated by the Rothwell family for the past 45 years. "We are honored to welcome Pennington Quality Market into the McCaffrey's family. PQM has built an outstanding reputation, and we look forward to building on that strong reputation," said Jim McCaffrey IV. "Our goal is to continue delivering the high quality products, service, community focus that customers have come to expect." Pennington Market is slated to close on June 13 and reopen on June 15 as McCaffrey's. (Jeff Werner/Patch) Find out what's happening in Doylestown for free with the latest updates from Patch. Clusters Opens New Store In Bucks Co. A new specialty snack food store has opened its doors at the Village at Newtown Shopping Center. Clusters Handcrafted Popcorn, which has stores in nearby New Hope and at Peddler’s Village in Lahaska, has brough
 
 --- Article 137 ---
-URL: https://www.nbcboston.com/news/local/mikes-pastry-boston-logan-airport/3955938/
-Title: Cannoli to go, anyone? Mike's Pastry to open at Boston's Logan airport
+URL: https://www.leaderlive.co.uk/news/26172728.rudys-reveals-opening-date-new-chester-pizzeria/
+Title: Rudy's reveals opening date for new Chester location
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 17:53:38
+Published: 2026-06-07 08:10:57
 
-Food & Drink Cannoli to go, anyone? Mike's Pastry to open at Boston's Logan airport The new outlet will offer such popular items found at the North End location as cannoli, cheesecake and lobster tails, while also selling ready-to-go items and espresso drinks. By Boston Restaurant Talk • Published May 27, 2026 • Updated on May 27, 2026 at 7:46 pm BOOKMARKER NBC Universal, Inc. Bringing Boston’s great cannoli on a trip is getting a whole lot easier — Mike’s Pastry is opening a new location at Logan airport. [This story first appeared on Boston Restaurant Talk.] A landmark Boston pastry shop that has been expanding to a few locations of late is expanding once again, and this location will be geared toward travelers. Stream NBC10 Boston news for free, 24/7, wherever you are. WATCH HERE According to a press release, Mike's Pastry is planning to open at Logan Airport, moving into a space at Terminal C and having hours from 5 a.m. to 10 p.m., seven days a week. The new outlet will offer such popular items found at the North End location as cannoli, cheesecake and lobster tails, while also selling ready-to-go items, including a full espresso bar as well. If all goes as planned, the new location of Mike's will open at Logan later this year. Air Ventures Air Ventures A rendering of the Mike's Pastry location planned for Boston Logan International Airport. The website for Mike's Pastry (which also has locations in Cambridge's Harvard Square, Somerville's Assembly Row and TD Garden in Boston) can be found at mikespastry.com . ( Follow Marc on Bluesky at @marchurboston.bsky.social ) Local In-depth news coverage of the Greater Boston and New England area. Brookline 12 minutes ago Worker burned during fire, explosions at Brookline dive shop Massachusetts 12 minutes ago Gov. Healey announces $25M for new MIT quantum computing lab [A related post from our sister site (Boston's Hidden Restaurants): List of Restaurant Closings and Openings in the Boston Area ] Please help keep Boston
+Rudy's reveals opening date for new Chester pizzeria Business Food and drink Jobs and careers Leisure By 
+            Matthew Dougherty Reporter Share 0 Comments 2 Skip to next photo 1 / 1 Show caption 1 / 1 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. THE highly anticipated opening is almost here. Rudy’s Pizza Napoletana has announced that it will fire up the pizza oven and officially open the doors to its new Chester pizzeria on Saturday, June 13, from 12pm. Bookings for the opening are now live. To celebrate the launch, Rudy’s will host a special charity evening in support of partner,  SHARE Chester, with all proceeds from the event donated directly to the organisation. Transforming the former Carluccio’s unit in Bridge Street, the 4600 sq. ft restaurant, set across two floors, will have space for over 170 guests. Taking place on Saturday 13th June from 5pm-8pm, the opening night charity event will welcome locals to experience the brand-new restaurant while supporting SHARE Chester’s work helping people across the city experiencing homelessness and financial hardship. All proceeds from the evening, including funds raised through an on-site raffle, will be donated directly to the charity. OTHER NEWS: Cheshire Fire and Rescue Service call at Chester property Cheshire Oaks eye care clinic helps thousands in first year GALLERY: It’s Roman Day at Chester Races Guests who reserve a table for the event will also receive a complimentary sharing garlic bread. Rudy's has revealed the opening date for its new Chester restaurant. (Image: Rudy's Pizza Napoletana) Spots for the charity evening are available to book here . The opening marks Rudy’s first site in Chester and its 39th restaurant to date. Since opening its first location in Manchester’s Ancoats in 2015, Rudy’s has grown into on
 
 --- Article 138 ---
-URL: https://dallasinnovates.com/sliders-slide-in-white-castle-to-open-first-texas-location-in-the-colony/
-Title: Sliders Slide In: White Castle To Open First Texas Location in The Colony
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 17:51:09
+URL: https://www.msn.com/en-us/money/companies/nj-store-and-bank-closures-surge-as-big-chains-pull-back/ar-AA24y5Re
+Title: NJ store and bank closures surge as big chains pull back
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-07 07:58:53
 
-Sliders Slide In: White Castle To Open First Texas Location in The Colony » Dallas Innovates Sliders Slide In: White Castle To Open First Texas Location in The Colony On June 2, White Castle will hold a groundbreaking ceremony for the Grandscape restaurant location—complete with spatula shovels and a ceremonial "sprinkling of the onions" on the future grill site. by David Seeley • May 27, 2026 Rendering of White Castle location in The Colony [Image: White Castle] by David Seeley • May 27, 2026 White Castle—a 105-year-old Ohio-based chain known for selling burgers “by the sack”—has announced plans to open its first-ever Texas location at Grandscape in The Colony. On June 2, White Castle will hold a groundbreaking ceremony for the location at 4520 Destination Drive— complete with spatula shovels and a ceremonial “sprinkling of the onions” on the future grill site. The brand’s famous sliders will be served once the digging is finished. The groundbreaking will feature remarks by White Castle leadership—including fourth-generation members of the brand’s founding family—along with appearances by elected officials, development partners, and local “cravers” of White Castle’s offerings. The brand’s leaders appearing at the event will include CMO Jamie Richardson, Chief People Officer John Kelley, Corporate Relations Manager Erin Shannon. Also on hand will be Chris Shaffery, SVP of restaurant operations and operation services, and Mike Guinan, VP of restaurant operations. Kelley and Shannon’s great-grandfather founded White Castle in 1921. Don’t miss what’s next. Subscribe to Dallas Innovates. Track Dallas-Fort Worth’s business and innovation landscape with our curated news in your inbox Tuesday-Thursday. R E A D   N E X T Apply Now: Opportunities for North Texas Innovators You'll find deadlines coming up for a new accelerator program; and many more opportunities. Arlington’s Founders Arena and Austin’s Texas Venture Alliance To Launch Texas ‘Innovation Operating System’ The 
+MSN
 
 --- Article 139 ---
-URL: https://www.sarasotamagazine.com/news-and-profiles/2026/05/hexrock-climbing-gym-sarasota
-Title: Sarasota’s First Climbing Gym Is Opening To The Public
-Status hint: Opening | Industry: Gyms / Fitness
-Published: 2026-05-27 17:43:48
+URL: https://rutherfordsource.com/summer-pop-up-spritz-bar-is-now-open-at-the-fairlane-hotel/
+Title: Summer Pop Up Spritz Bar is Now Open at the Fairlane Hotel
+Status hint: Opening | Industry: Hospitality
+Published: 2026-06-07 07:45:15
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.sarasotamagazine.com/news-and-profiles/2026/05/hexrock-climbing-gym-sarasota]
+Davidson County Eat & Drink Local Living Nashville Facebook X Email Copy URL photo by Victoria Quirk Fairlane Hotel, the 79-key retro-chic boutique hotel located in the heart of Downtown Nashville, has opened CAPRIcious, a summertime spritz rooftop pop-up bar. Perched atop the Fairlane Hotel, CAPRIcious captures the spirit of a carefree European summer with sparkling spritzes, sun-soaked cocktails, coastal-inspired bites, and golden-hour rooftop views above downtown. Inspired by leisurely afternoons and late-night aperitivos, it’s a place to sip slowly, linger a little longer, and toast to warm nights in the city. More Local Living News “There is no better way to celebrate summer in Nashville than at our summertime spritz bar,” said Fairlane Hotel General Manager Bill Simmons. “Fairlane has become known for its seasonal pop-ups, and our team is excited to introduce CAPRIcious to hotel guests and locals. It’s a great spot to enjoy the beautiful summer weather with friends, sip a cocktail before dinner at Modern Love, or to wind down after a night on Broadway.” Transporting guests to the elegant glamour of the Italian coast, the beverage menu at CAPRIcious offers a variety of summer-inspired spritzes and frozen beverages, including the classic Aperol Spritz or Campari Spritz, and creative options, including a Frozen Strawberry Spritz and the Espolon Spritz Rita with Espolon blanco, grand marnier, lime, agave, and prosecco. Specialty cocktails will include The Italian Cowboy with Nashville barrel bourbon, Campari, sweet vermouth, and blackberry; and Amalfi Ice with Nashville barrel vodka, lemon wine, fresh lemon, and tangerine. Groups will love the playful Tower of Spritz, which features six pours of Aperol, Campari, or frozen strawberry spritzes. Complementing the refreshing cocktail list, CAPRIcious serves a selection of shareable Italian-inspired small plates such as Caprese Salad, a Cheese and Charcuterie board, and Italian meatballs. Inspired by the sun-drenched g
 
 --- Article 140 ---
-URL: https://www.reutersconnect.com/item/raising-canes-restaurant-leader-seneca-cook-cuts-the-ribbon-during-the-grand-opening-of-raising-canes-in-gainesville-fl-on/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX01UMVVTQVRPREFZMjkwNjYzNzA
-Title: Licensable picture: Raising Cane's restaurant leader Seneca Cook cuts the ribbon during the grand opening of Raising Cane's in Gainesville, FL on
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/wichitas-newest-breakfast-restaurant-quietly-opened-today/ar-AA24Am1s
+Title: Wichita's newest breakfast restaurant quietly opened today
 Status hint: Opening | Industry: Restaurants
-Published: 2026-05-27 17:41:00
+Published: 2026-06-07 07:14:20
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.reutersconnect.com/item/raising-canes-restaurant-leader-seneca-cook-cuts-the-ribbon-during-the-grand-opening-of-raising-canes-in-gainesville-fl-on/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX01UMVVTQVRPREFZMjkwNjYzNzA]
+MSN
 
 --- Article 141 ---
-URL: https://www.travelandtourworld.com/news/article/ljt6596f6q69/
-Title: Celestyal Cancels Arabian Gulf Winter 2026-27, While Doubling Down on Mediterranean Tourism Expansion: What You Need to Know
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/chicago-favorite-portillos-sets-june-opening-for-first-san-antonio-area-location/ar-AA23BNWD
+Title: Chicago favorite Portillo's sets June opening for first San Antonio-area location
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 17:39:35
+Published: 2026-06-07 07:01:15
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/ljt6596f6q69/]
+MSN
 
 --- Article 142 ---
-URL: https://www.tennessean.com/story/entertainment/music/2026/05/27/dolly-parton-opening-date-tennessean-travel-stop-near-nashville/90276053007/
-Title: Dolly Parton's first travel stop is opening just an hour away from Nashville. Here's when
+URL: https://nomadlawyer.org/lebanon-second-airport-combats-travel-chaos-2026
+Title: Breaking Airline News: Lebanon Battles Travel Chaos by Aggressively Expanding Aviation Defense with Second International Airport
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 17:39:00
+Published: 2026-06-07 06:51:50
 
-MUSIC Dolly Parton's first travel stop is opening just an hour away from Nashville. Here's when Diana Leyva Nashville Tennessean Updated May 27, 2026, 12:39 p.m. CT Dolly Parton is opening a new travel stop in Middle Tennessee this summer. The location will be approximately 60 miles south of Nashville off Interstate 65. Visitors can expect dining options like barbecue, a full-service restaurant, and coffee from Dolly's Cup of Ambition. This story has been updated to include additional information. Road trip stops in Tennessee are about to get a glamorous upgrade. Dolly Parton is launching a one-of-a-kind travel stop featuring food, merchandise and in true Parton fashion, coffee from Dolly's Cup of Ambition. The Tennessean Travel Stop is set to open June 24 in Cornersville, about 60 miles south of Nashville off Interstate 65 at Exit 22. According to an online statement, the space is "built on the belief that every traveler deserves comfort, good food, and a genuine welcome." Visitors will be able to relax, browse exclusive merchandise and enjoy a range of dining options, including barbecue from DLY BBQ, fresh coffee and a full-service sit-down restaurant. The location will also feature a custom mural honoring Cornersville and a replica tour bus inspired by Parton's own. Here's everything to know. What will Dolly's Tennessean Travel Stop look like? The partnership between Parton and Tennessean Travel Stop was announced Nov. 17. The Cornersville location will serve as the brand’s flagship, the Knoxville News Sentinel previously reported. The collaboration blends Tennessean Travel Stop's legacy of service with Parton's cultural influence. “I have spent the bulk of my life on the road, and more specifically on a bus. All the years spent visiting greasy spoon cafes, truck stops and roadside pit stops have given me an understanding of what travelers desire on the road,” Parton said in a news release. While design details have not yet been released, the revamped travel stop
+Image representing Lebanon's massive operational strategy aggressively combating global travel chaos with critical new airport infrastructure. Breaking Airline News: Lebanon Battles Travel Chaos by Aggressively Expanding Aviation Defense with Second International Airport To aggressively protect international tourists and corporate expatriates from a catastrophic wave of complicated, capacity-constrained transit nightmares and severe operational disruptions, aviation authorities alongside the Lebanese government have violently executed a massive strategic logistical shift on June 7, 2026, aggressively preparing to open the nation's second international airport to completely bypass terrifying travel chaos tearing through the Middle East. In a highly terrifying and completely chaotic era for commercial aviation, legacy transit corridors are actively collapsing under a massive wave of sudden travel chaos that is severely crippling traditional connecting networks worldwide. Delivering highly urgent, breaking airline news , travel authorities have officially confirmed a massive operational defense centralized in northern Lebanon designed to protect global travelers. Plagued by the historical threat of sudden flight cancellations , agonizing inbound congestion, and terrifying logistical vulnerabilities, modern passengers are fiercely demanding secure, alternative transit options. Effective immediately, the massive Lebanese aviation market witnessed a strategic fortification. By aggressively executing proactive infrastructure rehabilitation, massive authorities have instantly established a terrifyingly efficient network response designed to bypass massive airport disruptions . This ensures innocent travelers no longer suffer through excruciating gridlock caused by relying on a single hub, successfully navigating a massive crisis that mathematically guarantees severe logistical friction by aggressively landing the Prime Minister’s plane at René Mouawad Airport (KYE), marking
 
 --- Article 143 ---
-URL: https://okcfox.com/news/local/hawaiian-bros-to-open-new-location-in-norman-grand-opening-restaurant-oklahoma
-Title: Hawaiian Bros opens new location in Norman
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 17:37:10
+URL: https://www.aol.com/articles/downtown-del-mar-restaurant-track-080048000.html
+Title: New downtown Del-Mar Restaurant on track to open by Memorial Day weekend
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-07 06:07:16
 
-
+M. Alan Scott, Sault Ste. Marie News Mon, May 11, 2026 at 8:00 AM UTC 0 The Del-Mar Restaurant will open later this month, filling a building on Ashmun Street that has been empty since shortly after the COVID-19 pandemic started. Owners and long-time Sault Ste. Marie residents Brent and Lynde Blair are close to opening the Italian American-style restaurant. The couple purchased the two-story building in 2024 and have been renovating it for nearly two years. The second story includes apartments that are fully occupied by renters. The basement will be used as an event space, seating up to 120 people for the restaurant. The Del-Mar Restaurant is located at 229 Ashmun St. in Sault Ste. Marie. More: Local family buys historic Delmar building in Sault Ste. Marie "We gutted everything but the walls," Lynde Blair said. She is eager to open by Memorial Day weekend at the latest. "I'll go crazy if we don't open by then," she added with a laugh. "It's been a long time coming." The Del-Mar Restaurant is located at 229 Ashmun St. in Sault Ste. Marie. Just about everything in the restaurant is new, from the kitchen to heating, air conditioning, wiring, windows and doors. The Blairs renovated a 50-foot bar in the lowest level for the event space. The couple said the full building, including the basement, includes about 14,000 square feet. Advertisement Brent will be the lead chef and run the back of The Del-Mar Restaurant, while Lynde will oversee the front of the restaurant and be the face to patrons. The owners have hired about 30 employees for the restaurant, which will be open from 11 a.m. to 9 p.m. seven days a week. The Del-Mar Restaurant in Sault Ste. Marie offers an array of pasta dishes, along with upscale American fare and seafood. "We thought there was a need in the (Sault Ste. Marie) area, especially downtown, for this type of restaurant," Lynde said. "We want to help bring more life to downtown." The Del-Mar Restaurant will serve an array of pasta dishes, from ravioli
 
 --- Article 144 ---
-URL: https://au.finance.yahoo.com/news/mexican-restaurant-chain-shutters-8-173652327.html
-Title: Mexican restaurant chain shutters all 8 Chicago locations
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-27 17:36:52
+URL: http://www.msn.com/en-us/news/us/list-here-s-where-new-raising-cane-s-restaurants-are-opening-soon/ar-AA1KDEXv?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: List: Here’s where new Raising Cane’s restaurants are opening soon
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-07 05:57:17
 
-Mexican restaurant chain shutters all 8 Chicago locations Mexican restaurant chain shutters all 8 Chicago locations · USA TODAY Hannah Hudnall, USA TODAY NETWORK Wed 27 May 2026 at 11:06 pm GMT+5:30 1 min read Former employees with Guzman Y Gomez launched a class action lawsuit after the Mexican food chain shuttered all eight of its U.S. locations. The restaurants were all located in the Chicago metro area. The suit, filed with Chicago firm Haseeb Legal, claims the chain closed the restaurants without the 60 day notice required by federal and Illinois law. Read more: In Spirit Airlines shutdown, more than 350 O'Hare workers lost their jobs Mexican restaurant chain exits US The chain announced the closures to the public on its website and social media, saying the move was effective May 22. "After six years of burritos and big dreams in Chicagoland, we've made the difficult decision to close our US restaurants," part of the message reads. "If you're ever in Australia, Singapore or Japan, come find us – we'll have your favs waiting for you." Terms and Privacy Policy Privacy dashboard
+MSN
 
 --- Article 145 ---
-URL: https://www.gainesville.com/picture-gallery/news/local/2026/05/27/raising-canes-opens-a-new-restaurant-on-archer-road-in-gainesville/90278695007/
-Title: Raising Cane's celebrates opening of second Gainesville restaurant
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-27 17:29:00
+URL: https://www.aol.com/articles/official-opening-ribbon-cutting-set-185448000.html
+Title: Official opening and ribbon cutting set for Peoria’s Golf Learning Center
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 05:16:10
 
-[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.gainesville.com/picture-gallery/news/local/2026/05/27/raising-canes-opens-a-new-restaurant-on-archer-road-in-gainesville/90278695007/]
+Josh Seabaugh Fri, May 15, 2026 at 6:54 PM UTC 0 Official opening and ribbon cutting set for Peoria’s Golf Learning Center PEORIA, Ill. (WMBD) — The Peoria Park District will officially celebrate the opening of the Golf Learning Center with a ribbon-cutting. The event will take place at noon on Tuesday, May 19 and will be at the center at 7815 N. Radnor Road, said park district spokeswoman Emily Cahill. The ceremony will include remarks from state and local officials, community partners and Peoria Park District leadership. Golf Learning Center in full swing, now open to public Advertisement Cahill said the event marks the completion of the Golf Learning Center's transformation into a year-round recreation and entertainment district. The $6.5 million project was supported in part through grants totaling $4.75 million from the Illinois Department of Commerce and Economic Opportunity. The park district funded the remaining project investment. The center combines golf instruction, recreation, entertainment, dining and community gathering spaces into a single multi-use facility. Cahill said features of the facility include: The Bays, a two-level interactive driving range experience Tech-enabled indoor golf simulators Fairways, full-service bar and restaurant The Range & Loop, a traditional driving range and short course Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to CIProud.com.
 
 --- Article 146 ---
-URL: https://www.travelandtourworld.com/news/article/why0s1f6rr8t/
-Title: Norwegian Cruise Line Reveals Official Opening Date for Massive New Private Island Waterpark in the Bahamas
-Status hint: Opening | Industry: Cruise Lines
-Published: 2026-05-27 17:27:36
+URL: https://www.aol.com/articles/popular-barbecue-chain-quietly-shuts-232241000.html
+Title: Popular Barbecue Chain Quietly Shuts Down Locations Across the Country Following Chapter 11 Bankruptcy Filing
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-07 03:33:29
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/why0s1f6rr8t/]
+Chiara Kim Tue, April 28, 2026 at 11:22 PM UTC 0 Smokey Bones seems to have shut down all of its locations on April 28 with no prior notice Credit: AP Photo/Peter Cosgrove NEED TO KNOW Smokey Bones locations in multiple states closed on April 28 with employees reportedly being informed of the permanent closure the same day The chain's website says that all of the locations of the restaurant are closed each day of the week The company filed for Chapter 11 bankruptcy in January 2026 to restructure its finances after closing 15 underperforming locations in 2025 Smokey Bones restaurants are quietly shutting down across the country. On April 28, locations of the popular barbecue chain quietly shut down in Pennsylvania, New York, Michigan, Illinois, Ohio and Rhode Island, according to reporting by multiple local outlets. An employee at the Mentor, Ohio, location confirmed to PEOPLE that the location closed, effective April 28. The chain's Warwick, R.I., location shut down on April 28, per a sign left in the window of the establishment, Go Local Prov reported. "We regret to announce that this location has permanently closed its doors as of Tuesday, April 28th," the sign read. No one has answered the store's phone, per the outlet. Smokey Bones seemingly closed all of its locations on April 28, 2025 Credit: Jeffrey Greenberg/Universal Images Group via Getty The Smokey Bones in Colonie, N.Y., permanently closed on April 28, as confirmed by an employee reached by phone at the location, according to N ews 10 . The employee told the outlet that fellow staffers found out about the closure that morning. The restaurant chain also closed its last remaining Michigan location on April 28, per the manager of the store, who said he was notified that morning, the Lansing State Journal reported. Three Smokey Bones locations closed in Pennsylvania, per confirmations from employees at the stores, the Trib Live reported. The employees told the outlet they were informed of the closures the mo
 
 --- Article 147 ---
-URL: https://www.kansascity.com/news/business/article315907982.html
-Title: Popular grocery store will open new location in the Northland. What to expect
-Status hint: Opening | Industry: Grocery
-Published: 2026-05-27 17:26:00
+URL: https://www.aol.com/articles/h-e-b-mid-cities-033241000.html
+Title: H-E-B Mid-cities is now open to shoppers. Here’s what you can get
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 02:45:41
 
-Editor’s note: This story has been updated to correctly reflect the ownership of the grocery store. A previous version of the story stated it was a branch of a popular southeastern grocery store branch called The Fresh Market. Plans for a brand new, full-service grocery store in North Kansas City moved forward Tuesday evening, making the city one step closer to accomplishing a years-long goal of bringing a new grocer to the area. The North Kansas City Council approved development plans this week to build the more than 51,000-square-foot grocery store, named Fresh Market of Northtown, equipped with meat counters, fresh produce and a small restaurant, within the city’s One North development area near Diamond Parkway. The move will allow the city to finally address community members' long-standing requests for a new grocery store, according to Mayor Jesse Smith. “It’s the number one thing people ask for,” Smith said during the meeting. When will Fresh Market of Northtown open? The grocery store, expected to open in 2027, will feature a meat and seafood counter, deli, bakery, floral department, liquor store, quick-service food options and a restaurant or café. The site will also have more than 250 parking spaces and a sleek, modern look, according to Paul Guastello Jr., a local developer working on the project. “It’s not a small market or something where you can’t get everything that you would want,” Guastello said. “You’ll be able to go to the store and do all of your shopping. You won’t have to leave the city to go anywhere else.” The city currently owns the 6.8 acres of land where Fresh Market of Northtown will be built, which will be sold to the grocery store company. The new Fresh Market will be a branch of the locally owned World Fresh Market and El Mercado Fresco . The store is expected to bring in a projected $20 million in annual sales tax revenue and around 100 new jobs, according to Guastello. It will also promote walkability, attract people to the city to do
+Fousia Abdullahi Wed, May 20, 2026 at 3:32 AM UTC 0 The Mid-Cities H-E-B will open to customers on Wednesday at 6 a.m. at 2105 Rio Grande Boulevard in Euless and had a ribbon cutting ceremony on Tuesday ahead of the grand opening. The store is also near Bedford and Colleyville, where residents are eagerly awaiting the grand opening. The grocer had purchased the land around 12 years ago and is one of only 50 stores that have a True Texas Barbecue. The H-E-B mascot H-E-Buddy greets guests at the ribbon cutting ceremony for the new Mid-Cities H-E-B on Tuesday, May 19, 2026, in Bedford and Euless. (Amanda McCoy/FORT WORTH STAR-TELEGRAM) Juan-Carlos Ruck, executive vice president, North West Food and Drug operations, said that Wednesday morning will be the moment of truth for everyone who has been working toward that happening. According to Ruck, the store also has a new hot food option where shoppers can buy tamales, rotisserie chicken, crawfish and shrimp and freshly baked cookies and more. This new option along with the pick-up meals are designed for busy families on the go. Guests look at the options for grab-and-go meals at the new Mid-Cities H-E-B on Tuesday, May 19, 2026. The popular Texas grocery store opened to the public on May 20. (Amanda McCoy/FORT WORTH STAR-TELEGRAM) Fresh produce at the new Mid-Cities H-E-B on Tuesday, May 19, 2026. (Amanda McCoy/FORT WORTH STAR-TELEGRAM) "Our intention is to continue, and so we've been blessed with great success so far, and we've continued to have aggressive growth plans," Ruck said. "And the ones we've announced, the stores that are currently in construction, you all know about, and ideally will continue to grow here in North Texas and all over Texas ." The grocer broke ground on the 126,000-square-foot store in November 2024 at the corner of Cheek-Sparger Road and Rio Grande Boulevard, down the street from Glade Park's shopping center off of State Highway 121. Shoppers can get their fuel, sushi, fresh fruits, cakes, cha
 
 --- Article 148 ---
-URL: https://www.news10.com/community/restaurant-rundown/capital-region-coffee-chain-opens-fifth-location-in-downtown-albany/amp/
-Title: Capital Region coffee chain opens fifth location in downtown Albany
+URL: https://www.bendigoadvertiser.com.au/story/9287392/white-hills-apco-new-store-draws-1000-people-on-opening-day
+Title: Cars lined up on the Midland Highway for the grand opening of this business
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-27 17:23:47
+Published: 2026-06-07 02:32:36
 
-ALBANY, N.Y. ( NEWS10 ) — A local coffee chain opened its fifth location in the Capital Region on Wednesday. Stacks Espresso Bar is now located at 90 State Street in Albany. Stacks first announced its plans to open the new shop in 2024. The business takes over the former Stagecoach Coffee space, sitting on the ground floor of the 15-story, multi-use building and steps away from the New York State Capitol and downtown warehouse district. “With this new location at 90 State Street, our focus is on creating a true community gathering space for the growing professional and residential population, as well as for visitors experiencing everything downtown has to offer,” said owner Tyler Wrightson. “We’re looking forward to bringing even more exceptional coffee to downtown.” Each Stacks location highlights different brewing methods as well as different coffee regions and beans. The State Street menu will focus on making coffee through contemporary techniques and sustainable practices, according to the business. “Small businesses like Stacks create community gathering spaces, support foot traffic, contribute to our local economy, and help shape the experience visitors have when they spend time in Albany,” Albany Mayor Dorcey Applyrs said. Stacks Espresso Bar first opened in the Capital Region in 2014. The business has other locations on Lark Street , Broadway, in the Market Block Building in Troy and in the New York State Museum . For more restaurant news, make sure to check out the Restaurant Rundown category under the Community tab on the NEWS10 website. Read the latest from NEWS10: Town of Colonie announces Pruyn House’s 2026 Summer Concerts in the Barn lineup Cohoes man receives Academic Achievement Award at NYSP graduation The Mother Road: Exploring the legacy of Route 66 5 things to know as launch day approaches for Trump accounts Cedar Point guest gets lifetime ban from Six Flags parks for roller coaster stunt NEWS10 is the Capital Region’s local news leader!
+White Hill's latest business venture is proving to be a success with more than 1000 people through the door on the first day.
 
 --- Article 149 ---
-URL: https://www.wbur.org/news/2026/05/27/massachusetts-vegetarian-restaurant-clover-closes
-Title: Mass.-based vegetarian restaurant chain Clover to shut down
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-27 17:22:49
+URL: https://www.aol.com/articles/colorado-first-taco-bell-cantina-173249000.html
+Title: Colorado’s first Taco Bell Cantina is now open
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-07 01:08:41
 
-Support WBUR The Clover Food Lab, on Cambridge Street, Cambridge, Mass. (Robin Lubbock/WBUR) Clover Food Lab, a restaurant chain of veggie-focused eats around Greater Boston, will close all 11 of its locations Thursday, ending its 17-year run. Around 170 employees will lose their jobs. Clover filed a layoff notice to the state in March, saying the company was at risk of closing in late May. The fast-casual company blamed the "hangover effects" of  COVID and inflation for its closure. The company said their ingredients cost 30 to 50% more today than two years ago. "Our current situation isn’t a unique story," the company said in a memo to customers. "In the best of times, restaurants are a tough business: margins are thin, building new restaurants is expensive, and our industry is the most exposed to macroeconomic forces." Clover started as an MIT food truck by founder Ayr Muir and expanded to brick-and-mortar restaurants over the years, selling signature dishes like chickpea fritters and mushroom popper sandwiches. The vegetarian eatery bought ingredients from local farmers and ran a subscription-based meal box delivery service to customers. Clover filed for Chapter 11 bankruptcy in 2023 , citing low sales, high rent and lack of funding following the pandemic. Later in 2024, the company exited bankruptcy with a goal to open 50 new restaurants across New England. As part of the reorganization, Clover shut down restaurants in Boston's Copley Square and Somerville's Assembly Row, and ended its lease on a 40,000 square foot facility in Hyde Park that was originally planned to produce food for its meal box delivery business. "At Clover, we’ve raised prices some, of course, but there is a limit—every one of you is likely thinking about how you save and spend right now too," the company said in the memo.
+Maddie Rhodes Mon, May 11, 2026 at 5:32 PM UTC 0 Colorado’s first Taco Bell Cantina is now open DENVER ( KDVR ) — Colorado's first Taco Bell Cantina, with the fast-food chain's unique menu, is now open at the Denver International Airport. Taco Bell Cantina is just like the popular fast-food chain Taco Bell, except these select stores have a unique menu, slightly different store design and alcoholic drinks. There are only about 60 locations across the world, and now, there's one in Colorado. Taco Bell Cantina to open first Colorado locations: Here's where On Thursday, DIA said Taco Bell Cantina had a soft opening. It's set to hold an official ribbon-cutting later in June. This comes after the chain announced in October that Colorado's very first Taco Bell Cantinas would be opening in Denver and at the airport. Advertisement Taco Bell Cantina now open (KDVR) The cantina was set to open at the airport in mid-April and ultimately opened in Concourse A near Gate 46 shortly after the expected opening date. Meanwhile, Mission Yogurt, Inc. hasn't said where the Denver location will be or when it will open. While the cantina is now open as the only Taco Bell at DIA, since it closed its previous location in the airport, it isn't serving the full menu just yet. A sign outside the cantina said alcohol is "coming soon." DIA said it's projected to start serving alcohol later this summer. Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to FOX31 Denver.
 
 --- Article 150 ---
-URL: https://whatnow.com/san-diego/restaurants/matsu-to-relocate-after-closing-at-end-of-the-month/
-Title: Matsu to Relocate After Closing at End of the Month
+URL: https://www.aol.com/articles/national-cowboy-museums-route-66-101544000.html
+Title: National Cowboy Museum's Route 66 exhibit is closing soon
 Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-27 17:17:52
+Published: 2026-06-07 00:43:03
 
-Storefront of current Matsu space (Image credit: Matsu) SHARE Matsu , a modern Japanese fine-dining restaurant, is preparing to close its Oceanside location at 626 South Tremont Street and relocate within the city of Oceanside. The restaurant’s current space is set to close on May 31 , according to an Instagram announcement. Chef-owner William Eick is actively searching for a new location that better aligns with the concept’s long-term direction. While an exact reopening timeline has not been announced, the restaurant has confirmed on Instagram that it will continue to operate after relocating. Farewell dinners will be held in the final weeks of service, and customers can expect a transition rather than a permanent closure of the brand. Matsu first began as a series of intimate tasting dinners in 2019 at Mission Avenue Bar & Grill before opening its standalone restaurant in Oceanside in 2021. The concept quickly built a reputation in North County for its seasonal Japanese-influenced tasting menus. The restaurant focuses on Southern California ingredients, foraging, and detailed plating, with a strong emphasis on chef-driven dining experiences. The name Matsu comes from the matsutake mushroom, and the restaurant has been widely recognized as one of Oceanside’s more ambitious tasting menu concepts. It later expanded with a casual offshoot called Naegi, which featured items such as karaage and katsu sandwiches. Over time, Matsu developed a following for its evolving seasonal menus and collaborative dinners. The restaurant has also hosted notable culinary collaborations, including a 2025 dinner with chef Dominique Crenn of Atelier Crenn. Matsu has been part of a broader discussion around the challenges facing independent fine dining in California, including rising rent, labor costs, and overall operating pressures affecting small restaurant groups. Chef William Eick shared a message on Instagram reflecting on the closure, saying, “While this location may be closing, Mat
+Brandy McDonnell, The Oklahoman Updated Fri, May 1, 2026 at 2:11 PM UTC 0 Standing in the galleries of the National Cowboy & Western Heritage Museum, David Davis isn't exaggerating when he says "the entire reason we're here is because of Route 66." "The National Cowboy Hall of Fame — which is what we used to be called — we are placed here specifically because of Route 66 ," said Davis, the museum's chief curatorial officer. "We are intrinsically tied to Route 66 ... and we're still on Route 66." In the summer of 1953, Kansas City businessman Chester A. Reynolds revealed his dream project: To establish a National Cowboy Hall of Fame . Less than two years later, nearly 50 cities and towns throughout the West had placed bids in hopes of being chosen as the location. "Colorado Springs, Dodge City and Oklahoma City were the last three choices," said Pat Fitzgerald , president and CEO of the National Cowboy & Western Heritage Museum. "Oklahoma City ... they were really smart back then, as well. They did two things: One, they said, 'We're going to donate the land,' and two, (they said), 'You're going to be on the most iconic road in the United States, which is Route 66. '" When the National Cowboy Museum opened at long last in 1965, its front doors faced a bustling stretch of one of the most famous roadways in the world. It's fitting, then, that the National Cowboy & Western Heritage Museum — now affectionately known as "The Cowboy" — has been celebrating the 100th birthday of Route 66 in 2026 with the sprawling original exhibition "Route 66: From Trails to Truck Stops ." But time is running out to see the showcase of classic cars, historic photographs and vintage signs celebrating this year's Mother Road centennial . Route 66: From Trails to Truck Stops is reaching the end of the road Sunday, May 3, as it closes to make way for the installation of the museum's 54th annual Prix de West Exhibition & Sale , one of the premier Western fine art shows in the country. “Route 66:

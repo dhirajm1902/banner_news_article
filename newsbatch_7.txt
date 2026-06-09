@@ -17,430 +17,106 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 Create ONE clean Markdown table with these exact column headers (in this order):
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
-🌎 Geographic filter (STRICT)
-• Only extract businesses located in the USA or Canada
-• If the article is about a business in any other country (UK, Australia, India, UAE, etc.) → DO NOT add any row to the table; add it ONLY to the Non-working list as "Outside USA/Canada"
-• If an article covers both USA/Canada locations AND international locations → extract only the USA/Canada rows, skip the rest; add the article to the Non-working list as "Outside USA/Canada (partial)"
-
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
-• If a USA/Canada article has zero relevant business opening or closure information, still include a row with:
+• If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
-• ❌ Never add a table row for articles outside USA/Canada — those go in the Non-working list only
 
 🚫 Strict constraints
 • ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
-• ❌ No extraction of businesses outside USA or Canada
 
 📎 Final section (mandatory)
 At the very end of your response, add:
 Non-working or unusable articles List:
-• Article number — Reason (paywall / no business details / duplicate / text missing / Outside USA/Canada / etc.)
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
 If none, write: None
 
 ✅ Articles below — extract now:
 
 
 --- Article 301 ---
-URL: https://www.tampabay.com/news/florida/2026/05/26/five-story-jewelry-store-fort-lauderdale/
-Title: Despite outcry, Florida city says yes to 5-story jewelry store
-Status hint: Opening | Industry: Jewelry & Accessories
-Published: 2026-05-26 22:04:41
+URL: https://hickoryrecord.com/news/local/business/article_db51c27c-82f1-409c-a481-3f28d48b160a.html
+Title: Ribbon cutting, grand opening held at The Beauty Vault in Bethlehem
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-05 10:00:00
 
-
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://hickoryrecord.com/news/local/business/article_db51c27c-82f1-409c-a481-3f28d48b160a.html]
 
 --- Article 302 ---
-URL: https://www.msn.com/en-us/money/realestate/publix-makes-it-official-new-central-kentucky-location-announced/ar-AA247u7e?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Publix makes it official: New Central Kentucky location announced
+URL: https://www.dispatch.com/story/entertainment/events/2026/06/05/central-ohio-folk-festival-moves-to-new-venue-in-lockbourne/90280461007/
+Title: Central Ohio Folk Festival moves to new date, new location
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 21:46:07
+Published: 2026-06-05 10:00:00
 
-MSN
+EVENTS Central Ohio Folk Festival moves to new date, new location Belinda M. Paschal Columbus Dispatch June 5, 2026, 6:00 a.m. ET The Central Ohio Folk Festival is moving to a new date and location for its 29th year. It will now be held the first weekend in June at the new Bank Run Metro Park, 1570 Rohr Road, Lockbourne. In addition to a change of date, the Central Ohio Folk Festival will give attendees a change of scenery when it returns for the 29th year. Instead of its usual early May at Highbanks Metro Park in Lewis Center, the fest will move to the first weekend in June at the newly opened Bank Run Metro Park in Lockbourne. The new event site offers an outdoor stage, a vaulted-ceiling pavilion that seats 300 and an abundance of open green space to accommodate the growing event, which showcases national and regional touring acts, as well as local artists. The festival will be anchored by a headliner concert featuring the Tray Wellington Band. Known for his role in the Black reclamation of banjo music, Wellington infuses traditional bluegrass with jazz, blues and hip-hop. The award-winning North Carolinian received the Steve Martin Banjo Prize in 2024 for his novel approach to bluegrass. Those planning to check out the concert from the lawn should bring blankets or chairs. Festivalgoers can also enjoy live performances in five open jam tents or make their own music by participating in community songs and drum circles. Family-friendly fun will be plentiful, with a broad variety of kids’ crafts, performances and storytelling, and the popular instrument petting zoo. Musicians – and anyone who’s simply curious – can take part in workshops for different skill levels to learn everything from Irish rebel songs to the fundamentals of flatpicking guitar. Details : The Central Ohio Folk Festival will take place from 10:30 a.m. to 10 p.m. June 6 and 10:30 a.m. to 5:30 p.m. June 7, at Bank Run Metro Park, 1570 Rohr Road, Lockbourne. One general-admission ticket covers both d
 
 --- Article 303 ---
-URL: https://cabinradio.ca/291430/news/yellowknife/lil-avas-pizza-and-pasta-opens-new-location-in-hay-river/
-Title: Lil Ava’s Pizza and Pasta opens new location in Hay River
+URL: https://www.newsfilecorp.com/release/300309/Happy-Belly-Food-Groups-Heal-Wellness-QSR-Announces-the-Grand-Opening-of-Its-Newest-Location-in-Woodstock-Ontario
+Title: Happy Belly Food Group's Heal Wellness QSR Announces the Grand Opening of Its Newest Location in Woodstock, Ontario
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 21:43:45
+Published: 2026-06-05 10:00:00
 
-Lil Ava’s Pizza and Pasta opens new location in Hay River Aastha Sethi · Updated: May 26, 2026 Wednesday May 27, 2026 at 5:55am MT Lil Ava's Pizza and Pasta in Hay River. Photo: Submitted Share After finding success in Inuvik, Lil Ava’s Pizza and Pasta has expanded to Hay River and the company plans to keep growing. John Sebastian, who also oversees operations in Inuvik, said he wanted to open a restaurant in Hay River to provide residents with another accessible pizza option as the community continues to grow. “We felt like there was a space for something fresh that people could actually enjoy locally,” he told Cabin Radio. “We have already been operating in Inuvik for a few years now and that experience showed us how strong community support is in the North which actually encouraged us to continue growing here.” Inside Lil Ava’s Pizza and Pasta in Hay River. Photo: Submitted Lil Ava’s opened in Inuvik in late 2023 and there are a dozen locations in total across Canada . Advertisement. Advertisement. The Hay River restaurant officially opened on May 20 at 910 Mackenzie Highway. Lil Ava’s operates under GK Holdings, a parent company with businesses in the food service transportation, retail and cannabis industries. The compamny also owns the Inuvik Liquor Store. Sebastian said the biggest challenge opening the Hay River restaurant has been transportation and supply logistics, considering much of the restaurant’s equipment is brought in from Alberta. But Sebastian said the effort was worth it because the response from residents during the opening week exceeded expectations. A scene from Lil Ava’s store opening in Hay River. Photo: Submitted In its opening week, Sebastian said Lil Ava’s has been serving between 100 and 200 customers daily. He said many residents have stopped by simply to welcome the business to the community. Advertisement. Advertisement. “Seeing the store come together, opening doors for the first time and seeing the people’s response has been really
+Toronto, Ontario--(Newsfile Corp. - June 5, 2026) - Happy Belly Food Group Inc. (CSE: HBFG) (OTCQB: HBFGF) (" Happy Belly " or the " Company "), a leading consolidator of emerging restaurant brands, is pleased to announce the grand opening of its newest Heal Wellness (" Heal ") restaurant location this Saturday, June 6 th , 2026, at 860 Dundas St, Unit 2, Woodstock, Ontario. This location further advances Heal's disciplined, asset-light growth strategy as the brand continues to expand across Ontario's high-growth urban and suburban markets. Heal Wellness is a fast-growing quick-service restaurant (" QSR ") brand specializing in fresh smoothie bowls, açaí bowls, and smoothies, built around clean ingredients and a better-for-you lifestyle. Happy Belly 1 To view an enhanced version of this graphic, please visit: https://images.newsfilecorp.com/files/6625/300309_907235442462992a_002full.jpg Woodstock serves as a regional hub in Southwestern Ontario, benefiting from its strategic location along the Highway 401 corridor and its role as a growing employment and retail center. The city's expanding residential developments, established retail nodes, and increasing focus on wellness-oriented lifestyles provide a compelling backdrop for Heal's smoothie and smoothie bowl products. This location offers strong visibility, accessibility, and proximity to daily-use retail, positioning Heal to capture consistent demand throughout the day. "Opening Heal in Woodstock marks another meaningful milestone in our Ontario expansion strategy," said Sean Black, Chief Executive Officer of Happy Belly Food Group. "This location reflects our continued focus on expanding Heal into strong, community-oriented markets with favorable demographic and traffic fundamentals. Woodstock benefits from steady population growth, a growing commercial base, and a well-balanced mix of residents, commuters, and families seeking convenient, health-forward food options. These characteristics align well with Heal's 
 
 --- Article 304 ---
-URL: https://newstalkkgvo.com/ixp/117/p/missoula-jersey-mikes-opening/
-Title: Jersey Mike’s Finally Announces Opening Date
+URL: https://www.stocktitan.net/news/HBFGF/happy-belly-food-group-s-heal-wellness-qsr-announces-the-grand-l68lf04j0jyi.html
+Title: Smoothie bowl chain Heal Wellness hits 41 stores with Woodstock opening
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 21:33:45
+Published: 2026-06-05 10:00:00
 
-Missoula’s New Jersey Mike’s Has an Opening Date Ace Sauerwein Ace Sauerwein Published: May 26, 2026 Credit: Ace Sauerwein Share on Facebook Share on Twitter Here's some good news for you, Missoula foodies. We're about to get a new sub shop. Or at least, we’re getting a second location of an old, familiar favorite. Second Missoula Jersey Mike's Set To Open The Jersey Mike’s on Brooks Street has been under construction for a while now, but it finally has an opening date. I spotted a banner outside the new storefront announcing that the grand opening is 8 days away. Jersey Mike's on Brooks Street. Credit: Ace Sauerwein Jersey Mike's on Brooks Street. Credit: Ace Sauerwein loading... READ MORE: 3 Stunning Valleys Just a Day's Drive Away From Missoula I was never the strongest at math, but by my college graduation calculations, that puts the grand opening on Wednesday, June 3. This will be the second Jersey Mike's in Missoula, joining the original on North Reserve near REI and Coldstone Creamery. This Jersey Mike's is located at 2810 Brooks Street. Jersey Mike's website also says there is a location in development at 1001 E Broadway St, which is at the East Gate Shopping Center with the Albertson's and the Montana Ace, but I haven't seen any evidence of it. Get our free mobile app Other Missoula Food News Jersey Mike's opening up comes as a couple of other Brooks Street fast food restaurants are temporarily closed. The Taco Bell on Brooks is undergoing renovations, while the KFC and A&W are getting a completely new building. READ MORE: Details on Missoula's Taco Bell, KFC, and A&W A few weeks ago, the Missoulian reported that Wing Stop applied for a permit to operate in Missoula, too. Missoula's Farmer's Markets 2025 Gallery Credit: Chris Wolfe Source: Missoula’s New Jersey Mike’s Has an Opening Date Filed Under : Missoula Montana , social post Categories : Missoula News
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.stocktitan.net/news/HBFGF/happy-belly-food-group-s-heal-wellness-qsr-announces-the-grand-l68lf04j0jyi.html]
 
 --- Article 305 ---
-URL: https://www.msn.com/en-us/foodanddrink/foodnews/popular-lexington-restaurant-opening-new-location/ar-AA1GPv2k?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Popular Lexington restaurant opening new location
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 21:08:49
+URL: https://www.yorkpress.co.uk/news/26169148.national-food-chain-open-whitby-former-holland-barrett-site/
+Title: Major retailer to open at former Holland & Barrett site
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-05 09:57:15
 
-MSN
+National food chain to open in Whitby at former Holland & Barrett site North Yorkshire Council Local government Planning and development Whitby By 
+            Anttoni James Numminen Local Democracy Reporter Share 0 Comments 7 Skip to next photo 1 / 1 Show caption 1 / 1 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. A HEALTH food retailer is set to open a new store in a North Yorkshire town if plans get approval from the council. ​The organic retailer Grape Tree plans to open a shop in Whitby at the site of a former Holland & Barrett store. ​A full refurbishment and fit-out has been proposed for the prominently located store at 1-2, Sandgate, Whitby. ​Grape Tree describes itself as “the UK’s fastest growing name in healthier eating” and has more than 190 stores across the nation. ​Isabel Costa’s application for the site had been designed to “preserve the building’s historic fabric and visual significance,” according to submitted plans. ​The existing building would be retained and alterations would be limited to repairs, the refurbishment of the shopfront, and internal fit-out works. Interior4. 1 Sandgate, Whitby. Courtesy Of Applicant ​“Works are planned to minimise impact on the heritage asset and neighbouring properties. All interventions, including electrical, plumbing, flooring, and signage, are reversible where possible, ensuring the continued preservation of the building’s character,” the proposal states. Interior3. 1 Sandgate, Whitby. Courtesy Of Applicant ​The proposed layout of the new store has been “carefully considered” to improve functional efficiency. ​The applicant said that stockrooms, back-of-house areas, and staff facilities have been reconfigured to optimise workflow, while the sales floor layout maximises circulation space for customers. ​Access considerations 
 
 --- Article 306 ---
-URL: https://mshale.com/2c89142a/183a4a72SpUhrJt2Cjk
-Title: "Veni Creator" Nicolas De Grigny Acapulco Restaurant Closing Locations (onzx6H7dei)
+URL: https://whatnow.com/houston/restaurants/popular-northern-style-italian-restaurant-in-a-houston-area-has-closed/
+Title: Popular Northern-Style Italian Restaurant in a Houston-Area Has Closed
 Status hint: Closing | Industry: Restaurants
-Published: 2026-05-26 21:07:43
+Published: 2026-06-05 09:36:37
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://mshale.com/2c89142a/183a4a72SpUhrJt2Cjk]
+Outside image of Nona’s Italian Grill (Image credit: Instagram @nonas_italian_grill_) SHARE Nona’s Italian Grill has permanently closed its doors in Woodlands. The Italian restaurant has shut its operations and served its final meal on June 1. The restaurant’s sister location in Woodforest will remain open. Nona’s Italian Grill Ends Service in The Woodlands After 9-Year Run The family-owned restaurant, Nona’s Italian Grill , was founded in 2010 in Tomball by Juan Garcia. In 2018, the restaurant opened its Woodlands location at 3091 College Park Dr #185. The restaurant offered Northern Italian dishes and a relaxed, upscale dining experience. After the success of the Woodlands location, the restaurant expanded to Montgomery with a location in the Woodforest community. According to the official closure announcement on social media, the Woodlands location closed on June 1. “It’s with a heavy heart that we announce we will be closing our Woodlands location as of June 1st (with today being our last day),” stated the restaurant team. In the announcement, the team thanked the community and loyal guests for their support. They said, “We are grateful to everyone who has supported our family-owned restaurant for the 9 years we have had the privilege of being there.” Nona’s team did not mention any official reason for its sudden closure. View this post on Instagram A post shared by Nona’s Italian Grill (@nonas_italian_grill_) Woodforest Restaurant Will Remain Open Even though the Woodlands location has closed, the Houston community can still enjoy the authentic Nona’s Italian flavors at the Woodforest location. The restaurant team invited fans to visit at 950 Pine Market Ave, Suite 400, in Montgomery, Texas. Following the closure announcement, several loyal customers shared their disappointment on social media. Many customers also expressed appreciation that the Woodforest location will continue operating. “So thankful you are in Woodforest!” commented a customer. With the abru
 
 --- Article 307 ---
-URL: https://tucson.com/thisistucson/article_c0963363-5f70-449f-8d58-033d85f2b7f0.html
-Title: Stacks Book Club to open new Tucson location on Tuesday
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 21:00:00
+URL: https://www.cleveland.com/entertainment/2026/06/independent-bookstore-closing-after-4-years.html
+Title: Independent bookstore closing after 4 years
+Status hint: Opening | Industry: Books / Toys / Gaming
+Published: 2026-06-05 09:30:00
 
-Facebook Twitter Bluesky WhatsApp SMS Email Facebook Twitter Bluesky WhatsApp SMS Email Print Copy article link Facebook Twitter Bluesky WhatsApp SMS Email Print Copy article link Owners Crispin and Lizzy Jeffrey-Franco sit in their new location for Stacks Book Club at 2920 East Broadway. The bookstore and cafe will open on Tuesday, May 26. Mamta Popat, Arizona Daily Star If this was the opening scene in a film instead of a simple newspaper story, the camera might quickly find a young couple slowly sipping from their glasses of wine, quietly discussing their day, clearly content to be there for a while. The surprise would come in Scene Two, when a sweep of the room reveals it to be a bookshop — not a pub or a restaurant, but a bookshop — and a perfect place to begin this real-life miniseries that will continue to unfold this week in Tucson. Meet Lizzy and Crispin Jeffrey-Franco and welcome to Stacks Book Club, which on Tuesday will open a second local location, at 2920 E. Broadway, just west of Country Club Road. Like its namesake in the Oro Valley Marketplace, the new bookstore will double as a coffee shop in the morning and triple as a beer-and-wine bar in the evening. And like the store in Oro Valley, it promises to become a busy place. “Almost since the day we opened, we’ve had customers asking if we might do something down here in Tucson,” Stacks co-owner Lizzy Jeffrey-Franco said from the new location. “They liked what we were doing — they liked coming up to our store — but for a lot of people we were just a long way away.” Consider that problem solved. Many genres and books for all ages will be available at  Stacks Book Club, 2920 E. Broadway. It's the second location for Stacks Book Club; the original is in Oro Valley. Mamta Popat, Arizona Daily Star Not only is the new Stacks store in the heart of midtown, many Tucsonans have been there before. From 1959-2006, it was the home of Austin’s Ice Cream, a much-beloved hot spot where families gathered on all our 
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.cleveland.com/entertainment/2026/06/independent-bookstore-closing-after-4-years.html]
 
 --- Article 308 ---
-URL: https://wsbt.com/news/local/gallery/well-know-elkhart-restaurant-callahans-family-dining-opening-new-location-starlight-square-cassopolis-street?photo=3
-Title: Well-known Elkhart restaurant opening at new location
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 20:58:36
+URL: http://www.msn.com/en-us/lifestyle/lifestyle-buzz/nyc-s-socialist-mayor-outrages-mom-and-pop-bodegas-as-he-unveils-first-city-run-grocery-store/ar-AA23zav3?ocid=uxbndlbing&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: NYC's socialist mayor outrages mom-and-pop bodegas as he unveils first city-run grocery store
+Status hint: Opening | Industry: Grocery
+Published: 2026-06-05 09:20:49
 
-Mobile Menu Icon Thumbnails View Thumbnails More Galleries More Galleries 1 / 6 Close Close Well-known Elkhart restaurant opening at new location A well-known family restaurant is returning to Elkhart at a new location after closing earlier this year. (WSBT photo) Read article Read The Article SHARE Facebook Share Icon X Share Icon Send via Email Share Icon
+MSN
 
 --- Article 309 ---
-URL: https://mickeyvisit.com/universal-permanently-closing-land-may-7-2026/
-Title: Universal Permanently Closing Entire Land and Popular Restaurant From Theme Park Opening Day
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 20:45:50
+URL: https://www.connectcre.ca/stories/harry-rosen-reopens-reimagined-oakridge-store/
+Title: Harry Rosen Reopens Reimagined Oakridge Store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-05 09:16:33
 
-Universal Orlando just announced the permanent closure of an opening day land in one of their theme parks. This closure will also impact one of their only sit-down restaurants. Rumors have been swirling about this area of the park for months, including many speculating that this area could become a Nintendo-themed space. We just got news of a big Universal ride change . Keep reading for all the details on this closure, plus what might be coming soon to the park. Mickey Visit brings you the latest Disney news and planning resources, including a new Disneyland popcorn bucket that lights up with sound and a price increase for a ticketed Disney World event . READ MORE – Totally Unique Front-Row World of Color View That Comes With Dinner Universal Orlando Announces Permanent Closure Lost Continent at Universal Islands of Adventure has been the subject of rumors for months, as the area has been slowly shrinking for years, with many former attractions now permanently closed. This area opened on the same day as the theme park in 1999 and is themed to ancient legend and mythology. Disney Ride Closure ALERTS, Major Changes, Secrets Revealed Get alerts on closures, park changes, exclusive discounts, and free printables. Trusted by 100,000+ Disney fans & planners. This restructuring began as early as 2010 when the former Dueling Dragons roller coasters in this land were rethemed to Harry Potter before permanently closing in 2017 to transform that space into the popular Hagrid’s Magical Creatures Motorbike Adventure. Following that closure, the stage show The Eighth Voyage of Sinbad closed permanently in 2018, with Poseidon’s Fury closing in 2023. All that remains of the Lost Continent at this point is the popular Mythos Restaurant and The Mystic Fountain, known for its viral insults as it squirts water at guests who engage with it. The land has basically become just a transitional point between Hogsmeade and Seuss Landing, aside from those two remaining features. The restaurant
+Canada CRE News In Your Inbox. Sign up for Connect emails to stay informed with CRE stories that are 150 words or less. Ontario + Retail | June 4, 2026 By: Monte Stewart Harry Rosen Reopens Reimagined Oakridge Store Harry Rosen has reopened its reimagined Oakridge Park location in Vancouver, unveiling a new retail concept as part of the menswear retailer’s broader national store modernization strategy. The new store spans more than 17,000 square feet and is positioned as one of the few dedicated luxury menswear destinations at Oakridge Park, offering tailored clothing, made-to-measure services, personalized wardrobe consultations and expanded client services. Oakridge Park is the massive 650,000-square-foot Oakridge mall redevelopment that saw its retail component open last week. The previous Harry Rosen location at Oakridge closed for more than five years, along with most stores as the redeveloped mall was under construction. “Reimagining Harry Rosen at Oakridge Park was about evolving how we serve our clients while staying true to who we are,” said Ian Rosen, president and chief operating office at Harry Rosen. “This store reflects our legacy of style authority and service, while embracing how Vancouverites dress, live, and work today. It’s a space designed to build relationships and wardrobes for the long term.” The location features an elevated tailoring lounge, private fitting rooms for made-to-measure appointments and a central client bar designed to encourage personalized service and client interaction. A centre-stage display area will host rotating concepts, new merchandise and pop-up activations. The store also includes an exclusive Zegna shop-in-shop with its own entrance, Isaia’s first hard shop-in-shop in Canada, a Tom Ford shop-in-shop, a dedicated Berluti footwear space and a curated assortment selected by Harry Rosen style advisors. Designed in partnership with dkstudio architects inc., the store departs from traditional department store layouts throu
 
 --- Article 310 ---
-URL: https://www.aol.com/articles/richland-eat-n-park-open-203334000.html
-Title: Richland Eat’n Park to open its doors, community invited to celebrate
+URL: https://parametric-architecture.com/eve-music-hall-big-2027-opening/
+Title: EVE Music Hall by BIG Takes Shape in Croatia’s Slavonian Landscape Ahead of 2027 Opening
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 20:33:34
+Published: 2026-06-05 09:00:32
 
-Hayden Thompson Tue, May 26, 2026 at 8:33 PM UTC 0 Richland Eat’n Park to open its doors, community invited to celebrate JOHNSTOWN, Pa. (WTAJ) — The Eat’n Park in Richland is gearing up to celebrate its grand opening, which includes many guest-friendly features. The new restaurant, located on Scalp Avenue, offers experiences for dining in or taking out, including a new pickup window. The space includes increased seating and parking, a new soup, salad and fruit bar as well as updated finishes, fixtures and decor. “This new restaurant is an investment in our community and a commitment to our team members,” Mercy Senchur, President and Chief Operating Officer, Eat’n Park Hospitality Group Restaurant Division, said. “Eat’n Park has been part of the Johnstown community since 1985, and our Richland restaurant is an expression of our appreciation for the community’s support. We look forward to creating smiles for our guests and team members for many more years to come.” Advertisement Get the latest news, weather forecasts and sports stories delivered straight to your inbox! Sign up for our newsletters . The new Eat’n Park will officially open at 7 a.m. Friday, May 29. The grand opening festivities will include free Smiley Cookies, Smiley Cookie decorating, and chances to win free Superburgers for a year, Pittsburgh Pirates tickets and Grilled Stickies. Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to WTAJ - www.wtaj.com.
-
---- Article 311 ---
-URL: https://www.msn.com/en-us/news/us/questions-loom-over-when-harford-mall-will-officially-shut-its-doors/ar-AA23vKEi
-Title: Questions loom over when Harford Mall will officially shut its doors
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 20:01:15
-
-MSN
-
---- Article 312 ---
-URL: https://mshale.com/afe6d874/125fda155mQmUS39IJU
-Title: Acapulco Restaurant Closing Locations (SSipw3fy1n)
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-26 19:59:27
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://mshale.com/afe6d874/125fda155mQmUS39IJU]
-
---- Article 313 ---
-URL: https://www.tcpalm.com/story/news/2026/05/26/bucees-florida-locations/90257817007/
-Title: Buc-ee's to open 1st store in this state. 4 more are coming to Florida
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 19:50:00
-
-[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.tcpalm.com/story/news/2026/05/26/bucees-florida-locations/90257817007/]
-
---- Article 314 ---
-URL: https://www.msn.com/en-us/money/companies/tiffany-co-closing-store-in-dallas/ar-AA247b7V?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Tiffany & Co. closing store in Dallas
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 19:29:13
-
-MSN
-
---- Article 315 ---
-URL: https://www.yahoo.com/news/us/articles/seafood-restaurant-chain-closes-baton-190225214.html
-Title: Seafood restaurant chain closes Baton Rouge location at Mall of Louisiana
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-26 19:02:25
-
-BATON ROUGE, La. ( Louisiana First ) — There is now only one Red Lobster open in Louisiana after the Baton Rouge location closed its doors on April 15, 2026. Red Lobster confirmed the closure of the restaurant at The Mall of Louisiana, 6051 Bluebonnet Boulevard. The company stated that “as part of our normal course of business, Red Lobster continuously evaluates individual restaurant performance and lease terms and may, from time to time, choose to close select restaurants. We remain committed to making thoughtful decisions that position Red Lobster for long-term success, stability and growth.” Advertisement Advertisement The remaining Red Lobster open in the state can be found in Monroe. It is located at 4601 Pecanland Mall Drive. The casual seafood restaurant chain filed for Chapter 11 bankruptcy in 2024. Endless Shrimp returning to Red Lobster for limited time A photo of the last Red Lobster location in Baton Rouge, La. that was shut down in April 2026. Latest News Healthy Aging Fair offers free health screenings and assessments The Mother Road: Exploring the legacy of Route 66 5 things to know as launch day approaches for Trump accounts US, Iran reach tentative deal, waiting for Trump’s approval, sources say Cedar Point guest gets lifetime ban from Six Flags parks for roller coaster stunt Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to Louisiana First News. About Our Ads
-
---- Article 316 ---
-URL: http://www.msn.com/en-us/money/companies/new-stores-coming-to-one-of-the-busiest-malls-in-texas-include-ulta/ar-AA2475K3?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: New stores coming to one of the busiest malls in Texas include Ulta
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 18:51:25
-
-MSN
-
---- Article 317 ---
-URL: https://www.alxnow.com/2026/05/26/fresh-markets-alexandria-store-is-staying-put-as-other-n-va-location-closes/
-Title: Fresh Market’s Alexandria store is staying put as other N. Va. location closes
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 18:45:42
-
-As another Fresh Market store in the Northern Virginia region prepares to close, the Alexandria location isn’t going anywhere. A Fresh Market spokesperson told ALXnow no changes are planned for the Alexandria store at Bradlee Shopping Center (3680 King Street). The store is one of the anchor businesses at the shopping center, adjacent to a Safeway grocery store to the east. That update came after FFXnow reported the grocery chain will close its Vienna store on May 31, with a spokesperson citing a decision not to renew its lease. The Fresh Market dates back to 2014 in Alexandria, replacing a Giant Food store that closed in 2013, according to Patch. When the Vienna store closes, the chain will have 12 locations remaining in Virginia. The Alexandria and Vienna stores are the only ones in Northern Virginia, although new locations are in the works at the West Falls development in Falls Church and the Midline at Reston Station development in Reston. No opening timelines for the new stores have been announced. Bradlee Shopping Center is also gaining a new business — Chord Bread and Bottle (2690 J King Street), under the same ownership as Slaters Market (1552 Potomac Greens Drive) and Union Sandwich Company (101 N. Union Street). The business, taking over the former Unwined wine shop space, will serve sandwiches, soups, salads and wine, and will offer a wine club and catering packages. An opening date has not been announced. Image via Google Maps About the Author Emily Leayman Emily Leayman is the editor of ALXnow and contributes reporting to ARLnow and FFXnow. She was previously a field editor covering parts of Northern Virginia for Patch for more than eight years. A native of the Lehigh Valley in Pennsylvania, she lives in Northern Virginia. #Bradlee Shopping Center #food #grocery store #local business
-
---- Article 318 ---
-URL: https://www.bostonglobe.com/2026/05/26/business/clover-closing-restaurants-prices-jobs/
-Title: Clover restaurants to close down after more than 17 years
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-26 18:25:00
-
-Clover will soon serve up its last batches of chickpea fritter and mushroom popper sandwiches. The Boston-area chain of 12 quick-serve restaurants and kiosks, known for its vegetarian dishes and locally sourced ingredients, will close for good at the end of the day on Thurs., May 28, after more than 17 years in business. Clover chief executive Julia Wrin Piper blamed the closure on recent inflationary pressures that have caused ingredient prices to go up while also prompting many Clover customers to pare back on their spending — a recipe for fiscal disaster. Around 170 people will lose their jobs after the Clover restaurants shutter this week. “We’re grappling with the impact of inflation,” Wrin Piper said. “Our local farms are raising their prices. We’re experiencing the same pressures on every part of our supply chain that people are [experiencing] in their daily lives. . . . We simply can’t keep up with inflationary pressures.” Clover management had hoped to find a buyer that could keep some or all of the business going, but many of the potential acquirers face the same macroeconomic headwinds. In March, Clover informed state officials that the company was at risk of closing on May 29 if a new buyer couldn’t be found. Last Friday, employees were given the bad news that a deal could not be consummated. “We had many positive conversations,” Wrin Piper said of the discussions with possible buyers. “Ultimately, they’re dealing with the same pressures we are as a standalone company.” Founder Ayr Muir launched Clover Food Lab in October 2008 as a food truck at MIT, where he got his master’s degree in materials science in 2001 before going on to study at Harvard Business School. His goal was to come up with vegetable-based recipes that meat lovers would like, to broaden the potential audience beyond vegetarians, with an eye toward sustainability. Under Muir’s leadership over the following decade, Clover shifted from food trucks to brick-and-mortar shops, supported by a 
-
---- Article 319 ---
-URL: https://www.msn.com/en-us/money/companies/chick-fil-a-open-nationwide-on-memorial-day-fargo-store-pauses-to-honor-troops/ss-AA242wM1?cvid=6a156695670b46a1b5a116e43b229995&ocid=iehrs
-Title: Chick-fil-A to open on Memorial Day, hours may vary
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 18:23:23
-
-MSN
-
---- Article 320 ---
-URL: https://www.gurufocus.com/news/8882062/autozone-azo-expands-global-presence-with-new-store-openings?mobile=true
-Title: AutoZone (AZO) Expands Global Presence with New Store Openings
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 18:11:15
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.gurufocus.com/news/8882062/autozone-azo-expands-global-presence-with-new-store-openings?mobile=true]
-
---- Article 321 ---
-URL: https://www.news-journalonline.com/story/grocery/stores/2026/05/26/aldi-opening-lady-lake-florida-the-villages/90257756007/
-Title: New Aldi opening June 11 near The Villages. When to go, what to expect
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 17:43:00
-
-[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.news-journalonline.com/story/grocery/stores/2026/05/26/aldi-opening-lady-lake-florida-the-villages/90257756007/]
-
---- Article 322 ---
-URL: https://mshale.com/2a69d7ab/09fbd2c9dPoLTmyaVD0
-Title: ShopRite Of Drexeline Grand Opening
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 17:25:56
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://mshale.com/2a69d7ab/09fbd2c9dPoLTmyaVD0]
-
---- Article 323 ---
-URL: https://www.msn.com/en-us/news/us/popular-grocery-store-chain-expands-even-further-opening-25-new-locations/ar-AA247dRD
-Title: Popular grocery store chain expands even further, opening 25 new locations
-Status hint: Opening | Industry: Grocery
-Published: 2026-05-26 17:03:00
-
-MSN
-
---- Article 324 ---
-URL: https://www.blogto.com/eat_drink/2026/05/food-world-plus-mississauga-ontario/
-Title: Massive grocery store with 1,000-foot candy aisle coming to Ontario
-Status hint: Opening | Industry: Grocery
-Published: 2026-05-26 15:52:35
-
-Eat & Drink Natalia Buia Posted 2 days ago Report Inaccuracy Massive grocery store with 1,000-foot candy aisle coming to Ontario Eat & Drink Natalia Buia Posted 2 days ago Report Inaccuracy Latest Videos A giant new international grocery store is coming to the Greater Toronto Area, and it sure doesn't look like your typical supermarket stroll. Food World Plus is set to open a massive new 176,000-square-foot store in Mississauga, offering foods from around the world, including the Caribbean, Eastern Europe, the Middle East, and South and East Asia, all under one roof. To give you a better sense of just how big this supermarket will be, it will have a whopping 1,100 parking spots outside. A rendering of the grocery store, courtesy of Food World Plus. There will be an in-store butcher counter offering both Halal and Kosher options, along with plans for what the grocer calls "the largest seafood, meat and deli departments in the GTA." In a region already full of big international supermarkets, this is a pretty bold claim. If you've ever shopped at places like Nations Fresh Foods in the Stockyards, then you already know the GTA is no stranger to monumental multicultural grocers, but this one plans to scale the concept even further. On Tuesday, May 26, Food World Plus announced it plans to introduce a fresh juice and sushi bar, a cafe serving hot breakfast, and a gluten-free dessert parlour. A considerable health and beauty section with Korean skincare products is also featured in the plans. One of the most alluring features is the planned 1,000-foot candy-and-chocolate aisle, which may or may not fast-track you to booking a dentist appointment (unapologetically, of course). There is no official opening date just yet for Food World Plus, but it’s worth keeping an eye on their website and Instagram for updates. When it does open, it will only be a 15-minute walk from the Britannia Stop on the Hazel McCallion LRT line (though the rail route likely won't open until 2028). If
-
---- Article 325 ---
-URL: https://news.cision.com/tokmanni-group-oyj/r/the-holder-of-the-title-of-the-world-s-northernmost-tokmanni-store-changes---a-new-tokmanni-store-op,c4353382
-Title: The holder of the title of the world’s northernmost Tokmanni store changes
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 15:01:00
-
-The holder of the title of the world’s northernmost Tokmanni store changes – A new Tokmanni store opens its doors in Ivalo Tue, May 26, 2026 17:01 CET Report this content Tokmanni     Press release     26 May 2026 at 6:00 p.m. There is a reason to celebrate in Northern Lapland as Tokmanni expands its store network to Ivalo, Inari. The opening of the new Ivalo store will be celebrated on Thursday 28 May. The photo above is from the Tokmanni store opened in Nikkilä in Sipoo in 2024. The holder of the title of the world’s northernmost Tokmanni store changes as the Tokmanni variety discount retail chain opens its store in Ivalo in Inari for the first time on Thursday 28 May 2026 at 8 am. The new Tokmanni store offers a versatile range of products and a pleasant shopping experience, in accordance with the wishes of customers in Northern Lapland. In true Tokmanni style, the Ivalo store opening will feature plenty of opening offers and free buckets filled with product gifts. Having served customers for more than four years as the northernmost Tokmanni store in the world, the Tokmanni store in Kittilä is now handing over the title to the Tokmanni store opening in a brand-new commercial building in the southern part of Ivalo in Inari. The municipality of Inari is located approximately 250 kilometres north of the Arctic Circle, and its population has been reported to have increased in recent years. At the end of 2025, the Inari municipality had 7,244 residents. They can now enjoy the wide product selections of the Tokmanni store located in the immediate vicinity of the E75 road (European route E75) at the address Neitamontie 2, 99800 Ivalo . “We have built our new Tokmanni store with the help of local partners, and we are very pleased to be able to make Tokmanni ’ s diverse and affordable product selection available also to residents and visitors in the northern part of Lapland,” Harri Koponen says. He works as Vice President, Store Network and Concept for Tokmanni’s operatio
-
---- Article 326 ---
-URL: https://www.pennlive.com/food/2026/05/paris-baguette-bakery-cafe-to-open-in-cumberland-county.html?outputType=amp
-Title: Paris Baguette bakery cafe to open in Cumberland County
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 14:58:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.pennlive.com/food/2026/05/paris-baguette-bakery-cafe-to-open-in-cumberland-county.html?outputType=amp]
-
---- Article 327 ---
-URL: https://www.msn.com/en-us/travel/news/killington-s-closing-ski-weekend-gives-guests-chances-to-ski-bike-and-golf-on-the-same-day/ar-AA23QW7l?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Killington's closing ski weekend gives guests chances to ski, bike and golf on the same day
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 14:54:32
-
-MSN
-
---- Article 328 ---
-URL: https://www.kget.com/studio17live/golden-ox-expands-in-bakersfield-with-homemade-comfort-food-and-grand-opening-specials/amp/
-Title: Golden Ox Expands in Bakersfield With Homemade Comfort Food and Grand Opening Specials
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 14:45:02
-
-If the nightly question in your house is “What’s for dinner?”, Golden Ox hopes to become your new go-to answer. During a recent Studio 17 appearance, Eleas Exarchoulakos shared what makes the locally owned restaurant stand out with homemade, made-to-order comfort food, affordable prices, and plenty of personality. Golden Ox recently announced the opening of its new Bakersfield location at 2933 North Chester Avenue, joining its existing restaurant at 8149 East Brundage Lane. Exarchalikos said the restaurant focuses on serving fresh, homemade meals designed to leave customers full and satisfied. Their slogan says it all: “Come hungry, leave happy.” One of the featured menu items during the segment was the restaurant’s homemade biscuits and gravy, made fresh daily with house-made sausage gravy and baked biscuits. Golden Ox is also celebrating the grand opening with special giveaways. The first 50 customers who spend $30 or more on Saturday, May 30th, will receive a free order of biscuits and gravy. Another fan favorite highlighted during the interview was the restaurant’s chili fries, made with fresh ground beef chili and house spices instead of traditional bean-heavy chili recipes. Exarchalikos proudly called them “the best chili fries in California.” The first 50 guests spending $30 or more on Friday, May 29th, will receive a free order of chili fries during the grand opening celebration. The restaurant also showcased its signature Ox Burger — a half-pound double cheeseburger topped with pastrami and homemade chili — designed for customers with a serious appetite. Golden Ox says its independently owned Bakersfield locations are focused on customer service, fresh ingredients, and creating a welcoming atmosphere for the community. They have a magnificent selection of Greek pastries, baklava, a honey walnut cookies, and butter almond cookies and their Ox’s Wow Cake: an orange flavored drenched in homemade syrup and topped with coconut. The Grand Opening of the new locat
-
---- Article 329 ---
-URL: https://www.bizjournals.com/sacramento/news/2026/05/26/bliss-marketplace-folsom-premium-outlets.html
-Title: Bliss Marketplace bringing vintage vendors to Folsom Premium Outlets
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 14:37:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/sacramento/news/2026/05/26/bliss-marketplace-folsom-premium-outlets.html]
-
---- Article 330 ---
-URL: https://www.news-journalonline.com/story/entertainment/dining/2026/05/26/raising-canes-gainesville-florida-grand-opening/90139639007/
-Title: Here’s where Raising Cane’s new Florida location is opening this week
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 14:31:00
-
-[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.news-journalonline.com/story/entertainment/dining/2026/05/26/raising-canes-gainesville-florida-grand-opening/90139639007/]
-
---- Article 331 ---
-URL: https://travellingforbusiness.co.uk/destinations/the-luce-st-pete-beachs-newest-coastal-retreat-and-a-marriott-tribute-portfolio-hotel-will-celebrate-its-soft-opening-on-june-11th/
-Title: The Luce, St. Pete Beach’s newest coastal retreat and a Marriott Tribute Portfolio Hotel, will celebrate its soft opening on June 11th
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 14:26:14
-
-St. Pete Beach’s Most Anticipated Hotel Debut Brings a Full Beach Club, Pool Service, Coastal Dining and Event Space to the Gulf Coast The Luce, the highly anticipated new addition to St. Pete Beach’s vibrant shoreline, is set to open doors to guests on June 11th. With 200 stylish accommodations, including a selection of bungalow studio suites, The Luce offers an effortless retreat designed for both relaxation and celebration. Now part of Marriott’s Tribute Portfolio, owned by LCP and Safanad and managed by Crescent Hotels & Resorts, The Luce has been transformed from a St. Pete Beach classic boutique hotel into an unforgettable destination that will capture the charm of SPB while integrating a distinctly Floridian experience celebrating the endless sunshine, eclectic culture, and laid-back sophistication of Florida’s Gulf Coast. From the moment The Luce opens, two distinct culinary experiences will set the tone for St. Pete Beach’s newest coastal retreat. Sundrop, the hotel’s vibrant coastal-inspired restaurant and bar, invites guests to enjoy seven-day brunch and dinner service in a seamless indoor-outdoor setting, paired with full pool and beach service and private cabanas. Come Fall 2026, Baby Turtle Beach Club joins the lineup, bringing casual American Coastal fare directly to the beach and pool from dawn to dusk, perfect for sun-soaked afternoons and golden-hour sunsets. The opening adds a new anchor to a Gulf Coast corridor already celebrated for its arts community, independent restaurants, and sunset culture, giving locals a destination that reflects the character of the place they love. At the heart of the hotel, Sundrop is an elevated indoor-outdoor dining experience that flows from day to night. The lobby restaurant and bar features an outdoor cocktail lounge and a fire-pit table ideal for gathering over drinks, along with daily happy hour and weekly rum tastings every Wednesday and Friday. The menu highlights elevated coastal classics and fresh, citrus-f
-
---- Article 332 ---
-URL: https://www.aol.com/articles/whats-best-grocery-store-brevard-143707000.html
-Title: What's the best grocery store in Brevard County? Vote now.
-Status hint: Opening | Industry: Grocery
-Published: 2026-05-26 14:00:00
-
-Amber Olesen, Florida Today Wed, April 29, 2026 at 2:37 PM UTC 0 What's the best grocery store in Brevard County? Vote now. Brevard County’s grocery landscape keeps getting bigger, with new stores and expansions reshaping where locals shop. Chains like ALDI , Trader Joe’s, Whole Foods Market and Sprouts have either opened recently or announced even more growth in the area, joining long‑established supermarkets like Publix across the county. We also have an influx of specialty grocers, local butchers and small seafood markets that continue to draw loyal followings for specific items you can’t always find at one store. With so many options, we want to know where you shop for groceries. Advertisement While you might love one store’s produce, you might rely on another for prepared foods or meat and seafood. That’s why we’re asking you to weigh in by category, from friendliest service to best overall and tell us which grocery stores stand out in Brevard County. You have until May 6 to cast your votes. Stay tuned for new stories, crowning readers favorites and comments. Amber Olesen is FLORIDA TODAY's food and dining reporter. Reach her at aolesen@floridatoday.com. This article originally appeared on Florida Today: Best market in Brevard? readers decide.
-
---- Article 333 ---
-URL: https://www.yahoo.com/news/us/articles/el-gato-cantina-announces-move-135926458.html
-Title: El Gato Cantina announces move, Essex Junction location to close
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 13:59:26
-
-ESSEX JUNCTION, Vt. ( ABC22/FOX44 ) – El Gato Cantina is reportedly closing their Essex Junction location. Staff are reportedly preparing for the move. The Mexican restaurant made an announcement on Facebook , noting that their last day open in Essex Junction will be this coming Sunday, May 31. We had an amazing run in Essex, and we truly loved every minute of it. The memories, the friendships, the late nights, the margaritas, the karaoke, and all the support from this incredible community will always mean the world to us. Advertisement Advertisement Restaurant officials emphasized in their post that this is not goodbye, as they’ll be moving to a new location set to be announced in July. El Gato Cantina will be open from 4:00 p.m. to 9:00 p.m. on Tuesday, Wednesday and Thursday. Friday and Saturday hours will run from 11:30 a.m. to 9:00 p.m., with their final day hours being 11:00 a.m. to 8:00 p.m. Other El Gato locations will still be in operation during the move. Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to ABC22 & FOX44. About Our Ads
-
---- Article 334 ---
-URL: https://finance.yahoo.com/markets/stocks/articles/bjs-wholesale-club-bets-big-135120967.html
-Title: BJ's Wholesale Club bets big on Florida with 3 new locations
-Status hint: Opening | Industry: Grocery Wholesale
-Published: 2026-05-26 13:51:20
-
-BJ's Wholesale Club bets big on Florida with 3 new locations C. A. Bridges, USA TODAY NETWORK - Florida Tue, May 26, 2026 at 7:21 PM GMT+5:30 3 min read Flush with sales income increases and a jump of nearly 10% in membership subscription revenues, BJ's Wholesale Club announced on May 22 a big push into Florida with three more locations set to open this fiscal year. The new locations in Ocala, Lecanto, and Port St. Lucie will boost the warehouse retailer's presence in Florida up to 46 clubs, a release said. Two more locations were also announced in Portage, Indiana, and Frankfort, Kentucky. We are committed to growing our footprint in both new and existing markets to bring the value of a BJ’s Wholesale Club to even more members,” said Bill Werner, BJ's Executive Vice President, Strategy and Development, in the release. The company plans to open 25 to 30 new locations every two years. BJ's expands hours: BJ’s Wholesale Club makes cheaper gas easier with later hours Where is BJ's Wholesale Club coming in Florida? BJ's Wholesale Club has already been expanding in Florida, with new locations opened last year in Brooksville and Casselberry , and a new half-sized BJ's Market in Delray Beach in January. Addresses and grand opening dates for the upcoming new locations have not been released. Here's what we know. Ocala : BJ's bought a 12-acre site at 7030 SW 59th Ave. in the Winding Oaks community, according to 352today.com Lecanto : The Citrus County Chronicle reported that BJ's requested a building permit at Shoppes at Black Diamond along County Road 486 Port St. Lucie : a 106,200-square-foot store with a liquor store, a propane refill station, and a 16-pump gas station is under construction at the Gatlin Plaza shopping center What is BJ's Wholesale Club? Like Costco and Sam's Club, BJ's Wholesale Club is a warehouse-sized store that offers fresh foods, produce, full-service deli items, fresh bakery goods, household essentials, home décor, pet supplies, toys, beer, wine an
-
---- Article 335 ---
-URL: https://www.travelandtourworld.com/news/article/dtnycgtvq6m1/
-Title: Portsmouth Hospitality Sector Now Boosted by Royal Maritime Hotel Expansion, Get the Details Here
-Status hint: Opening | Industry: Hospitality
-Published: 2026-05-26 13:51:04
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/dtnycgtvq6m1/]
-
---- Article 336 ---
-URL: https://www.msn.com/en-us/money/companies/family-dining-chain-closes-dozens-of-locations-files-chapter-11/ar-AA245psR?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Family-dining chain closes dozens of locations, files Chapter 11
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 13:49:53
-
-MSN
-
---- Article 337 ---
-URL: https://whatnow.com/news/local-news/a-fayetteville-eatery-tied-to-generations-of-diners-is-closing-this-weekend/
-Title: A Fayetteville Eatery Tied to Generations of Diners Is Closing This Weekend
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 13:21:28
-
-Outside Mong Dynasty in Fayetteville  (Image credit: Yelp by Thomas B.) SHARE Mong Dynasty will be close permanently after its final service this weekend. The Chinese restaurant is closing after more than three decades in business. The announcement surprised some local customers, who wished the owners well. Mong Dynasty is Closing Permanently This Weekend A Fayetteville favorite is bidding farewell to the community, leaving behind a gap in its culinary landscape. Mong Dynasty will be closing its doors permanently after its final service on May 30, 2026. The restaurant is owned by Mrs. Feng, who is retiring. According to a February 2026 report by Fayetteville Flyer , the Fayetteville Planning Commission has approved a 4,468-square-foot Armor Bank branch in the location. The project will require demolition of Mong Dynasty and the adjacent Play It Again Sports. The new branch is another reason behind the closure of the beloved restaurant. View this post on Instagram A post shared by Mong Dynasty (@mongdynasty) Loyal Fans React Mong Dynasty has been one of Fayetteville’s longest-running Chinese restaurants. Its iconic Buddha statue became a symbol recognized by generations of patrons. It was also known for its extensive menu, including egg rolls, house special fried rice, and Szechuan chicken. Mrs. Feng’s grandson plans to open a new restaurant under a different concept. The wooden Buddha statue will also return to the new location. Meanwhile, the news of the closure is met with patrons wishing the owner a happy retirement. One Facebook user wrote, “So sad to see y’all go, but enjoy retirement. Thank you for the years of delicious food and wonderful service!!” Another Facebook user wrote, “Thank you for your dedicated service to our community. I started going to your establishment many years ago. I introduced my girls to your awesome place to eat. Although I am very sad, I am happy for you guys. I hope you enjoy your retirement. I can’t wait for the new concept to come 
-
---- Article 338 ---
-URL: https://www.smilepolitely.com/splog/get-the-kababs-at-mezza-house-now-open/
-Title: Get the kababs at Mezza House, now open
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 13:20:28
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.smilepolitely.com/splog/get-the-kababs-at-mezza-house-now-open/]
-
---- Article 339 ---
-URL: https://www.msn.com/en-us/travel/news/ruby-s-mexican-restaurant-opening-new-location-in-tyler/ar-AA23YzCw
-Title: Ruby’s Mexican restaurant opening new location in Tyler
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 13:20:20
-
-MSN
-
---- Article 340 ---
-URL: https://koel.com/ixp/679/p/eager-beaver-bbq-elizabeth-opening/
-Title: BBQ Restaurant Moves Into Former Cajun Jack’s Location in Elizabeth
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-26 13:17:13
-
-BBQ Restaurant Moves Into Former Cajun Jack’s Location in Elizabeth Steve Pulaski Steve Pulaski Published: May 26, 2026 Google Maps Share on Facebook Share on Twitter On my ride back to my father's house, I always found my eyes catching Cajun Jack's on Highway 20 in Elizabeth, IL . It was a colorful, Cajun-themed restaurant with gator statues and imagery fixed all over the property. Alas, after the building sat dormant following Cajun Jack's closure in 2024 , it's about to reopen as a new barbeque restaurant for the area. Driving back to Dubuque yesterday afternoon, I noticed a plethora of flags waving in the wind outside that very location, at 1336 US Highway 20 West. Signage around the building boasted that Eager Beaver BBQ was coming soon. Turns out, "soon" is actually today (May 26th)! READ MORE: Chef Kevin Bludso Gives Fire BBQ Tips for Iowans to Use This Summer A New BBQ Joint Comes to Elizabeth, IL: Outside quaint little downtown Elizabeth sits Eager Beaver BBQ , "the ultimate BBQ lodge," according to their Facebook page . The new owners showed love to their team, who has been "working their dam tails off" to transform this massive space into a welcoming new BBQ restaurant for the community: The hard hats are gone, the dust has settled, and our new dam is finally built. We’re firing up the smoker and bringing you a loaded menu packed with our signature smoked meats, Gourmet Hand-Tossed Pizza, stacked sandwiches, and killer desserts. It almost killed us, but we built a dam good restaurant - per Eager Beaver BBQ's Facebook page Eager Beaver BBQ Opens on May 26th: Eager Beaver BBQ opens today (May 26th) at 11am. As of this writing, their official website still bills a countdown clock as opposed to any photos or menus, but that is likely to come in very short order. On their Facebook page , you can find mentions of Texas-style brisket, ribs, and pulled pork, as well as teaser photos mentioning various sauces, including: "Mango Beaver Fever," "Sloppy Beaver," and 
-
---- Article 341 ---
-URL: https://www.cronista.com/en/today/the-countrys-most-popular-restaurant-says-goodbye-more-than-40-stores-will-close-forever/
-Title: The country’s most popular restaurant says goodbye: more than 40 stores will close forever
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-26 13:10:29
-
-Updated on May 26, 2026 1:10 PM + Follow on abre en nueva pestaña abre en nueva pestaña abre en nueva pestaña abre en nueva pestaña abre en nueva pestaña En esta noticia Salad and Go says goodbye: more than 40 stores close their doors forever The journey of Salad and Go What will happen to the brand after these mass closures The healthy food chain, Salad and Go , has decided to close all of its branches in Houston. According to reports, this decision is part of a broader restructuring that includes the closure of 41 locations across various places in the United States, carried out in September 2025, with the aim of concentrating operations in strategic markets. The company has explained that the focus will be on strengthening its presence in the Dallas-Fort Worth metropolitan area and in other regions where the brand will continue operating . Kitchen . Farewell to the air fryer | The new state-of-the-art appliance that cooks every meal in different ways abre en nueva pestaña Salad and Go says goodbye: more than 40 stores close their doors forever According to the company’s CEO, Mike Tattersfield, the company aims to boost its performance in strategic markets. “Focusing our efforts will allow us to strengthen the brand and invest more effectively in quality improvement, spur innovation, and build a community,” he said. Along the same lines, he highlighted that Salad and Go’s presence in Texas will remain strong in Dallas and reaffirmed that the company remains confident in the market’s long-term potential. He also confirmed that the locations in Phoenix and Tucson, Arizona, as well as those in Las Vegas, Nevada, will continue operating normally. The journey of Salad and Go Salad and Go first opened in 2013 in Gilbert, founded by Tony and Roushan Christofellis. The chain is currently owned by private firm Volt Investment Holdings , based in New York. At the end of 2024, the company had 146 restaurants in the United States , according to data from Nation’s Restaurant N
-
---- Article 342 ---
-URL: https://libn.com/2026/05/26/milkshake-factory-first-long-island-location/
-Title: MilkShake Factory to open first Long Island location
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 13:01:53
-
-
-
---- Article 343 ---
-URL: https://www.sandiegouniontribune.com/2026/05/26/these-new-brewery-businesses-are-opening-soon-in-san-diego-county/
-Title: These new brewery businesses are opening soon in San Diego County
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 13:01:01
-
-Mike Aubuchon, who owns Koakai Brewing in Oceanside with his wife,   Tomomi, works on dry-hopping a tank of beer in their brewpub. The brewpub is a next-door addition to their other business, Kyoto Japanese Market. (John Gastaldo / For The San Diego Union-Tribune) By Brandon Hernandez PUBLISHED: May 26, 2026 at 6:00 AM PDT | UPDATED: May 27, 2026 at 9:57 AM PDT Getting your Trinity Audio player ready... Over the past several years, there has been a countywide decrease in the annual number of new breweries and new venues from established brewing companies. This has been due to numerous economic conditions and consumer trends. Despite a lack of movement where those contributing factors are concerned, the local brewing landscape currently has more work-in-progress breweries, brewpubs and tasting rooms going on than at any time in the past three years. The following are details about each of those projects, as well as some changes that are in store for several existing brewery venues. New brewing businesses Koakai Brewing, Oceanside: Husband and wife Mike and Tomomi Aubuchon who met while working at Pizza Port’s Carlsbad Village location – with him brewing award-winning beers and her pouring those largely hoppy offerings at the bar – are in the soft-open period for their very own brewpub. Mike Aubuchon, left and Tomomi are owners of Koakai Brewing in Oceanside.  (John Gastaldo / For The San Diego Union-Tribune) A next-door addition to their other business, Kyoto Japanese Market, Koakai Brewing introduces house beers to the equation (various West Coast IPAs intermingled with a wide-ranging array of low-alcohol, international-style lagers) as well as Japanese- and Hawaiian-inspired barbecue, sushi and izakaya-style items to go with the market’s grab-and-go fare. Kyoto Japanese Market, 559 Greenbrier Drive, Ste. B, Instagram.com/koakaibrewing Monday Morning Lab, San Marcos: A tucked-away facility that’s served as the base of operations for Stumblefoot Brewery and Creative 
-
---- Article 344 ---
-URL: https://insidethemagic.net/2026/05/disney-world-suffers-massive-wave-of-ride-closures-just-hours-before-resort-wide-grand-opening-sb1/
-Title: Disney World Suffers Massive Wave of Ride Closures Just Hours Before Resort-Wide Grand Opening
-Status hint: Opening | Industry: Hospitality
-Published: 2026-05-26 12:38:22
-
-Home » Theme Parks » Disney Parks » Walt Disney World Credit: Jeremy Thompson, Flickr Disney World is heading into one of its biggest summer kickoff days of 2026, but the timing could not feel more awkward for guests already inside the parks. Multiple attractions across Walt Disney World experienced extended downtime yesterday, and now many visitors are wondering how reliable operations will actually be as thousands pour through the gates for today’s major grand openings. The situation became especially noticeable because these closures did not happen during a slower time of year. This is the exact moment Disney is unveiling several highly anticipated additions across the resort. Guests are arriving specifically to experience brand-new entertainment, updated lands, returning attractions, and long-awaited projects Disney has spent months promoting. That is why yesterday’s operational struggles stood out so much. When major rides start dropping offline right before a resort-wide launch day, it naturally creates concern about what guests will realistically be able to experience once crowds surge today. Credit: Disney Disney Launches Major Summer Offerings Today Today officially marks a huge day for Walt Disney World. After weeks of previews, soft openings, limited-access testing, and phased guest rollouts, several major experiences are now fully open to the general public as of May 26, 2026. Over at Disney’s Hollywood Studios, guests can finally experience Rock ’n’ Roller Coaster Starring The Muppets without needing special access or preview eligibility. The long-awaited retheme officially launches today for all park guests, bringing Dr. Teeth and the Electric Mayhem into one of Disney’s most intense coaster experiences. Hollywood Studios is also debuting the new Walt Disney Studios animation area, another major project Disney has quietly been building toward for months. Disney Jr. Mickey Mouse Clubhouse Live! officially opens to everyone today as well, with families e
-
---- Article 345 ---
-URL: https://www.mlive.com/news/grand-rapids/2026/05/retracing-76-years-from-post-world-war-ii-grocery-store-to-affordable-housing.html
-Title: Retracing 76 years: From post-World War II grocery store to affordable housing
-Status hint: Opening | Industry: Grocery
-Published: 2026-05-26 12:15:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.mlive.com/news/grand-rapids/2026/05/retracing-76-years-from-post-world-war-ii-grocery-store-to-affordable-housing.html]
-
---- Article 346 ---
-URL: https://973kkrc.com/ixp/481/p/over-easy-sioux-falls-opening-soon/
-Title: Hungry? New Tasty Sioux Falls Brunch Eatery Opening This June
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 12:06:54
-
-Hungry? New Tasty Sioux Falls Brunch Eatery Opening This June Christine Manika Christine Manika Published: May 26, 2026 Over Easy Restaurant (via Facebook) Share on Facebook Share on Twitter The restaurant seen is getting bigger in the next few weeks, especially for brunch fans across the Sioux Falls area. A new brunch spot Over Easy is set to open this June making this the first-ever Sioux Falls location in the eatery's history. Let's get crackin'! Get our free mobile app Over Easy Restaurant (via Facebook) Over Easy Restaurant (via Facebook) loading... What Is Over Easy and Where Will It Open in Sioux Falls? Over Easy is a restaurant brunch based in Phoenix, Arizona with 19 locations across Arizona. Sioux Falls will be the 20th location and the first outside of the "Grand Canyon State." Over Easy Restaurant (via Facebook) Over Easy Restaurant (via Facebook) loading... Over Easy will open on Saturday, June 6th at 5722 East 18th Street near Dawley Farm Village. You can expect "bright flavors, real ingredients, and a made-from-scratch menu served with good vibes." They encourage you to "come as you are." I also recommend coming hungry too! Over Easy Restaurant (via Facebook) Over Easy Restaurant (via Facebook) loading... Sioux Falls can expect doors to reopen bright and early at 6:30 AM until 2:30 PM daily. Their menu is "made from scratch" with something everyone will love for breakfast, lunch, or brunch. Some food from Over Easy include the Brown Butter Beignets, Golden Waffle Dogs, The Crying Pig omelette, the Basil Melt, Cajun Hash, Rolled Tacos, Cinnamon Roll Toast, Protein Bowl, and of course for brunch lovers mimosas and other boozy beverages! Over Easy Restaurant (via Facebook) Over Easy Restaurant (via Facebook) loading... Over Easy is having a big Grand Opening party to celebrate the first-ever South Dakota location. Kids eat free when adults order an entree during the weekend party on June 6th and June 7th. Plus, Penny mimosas (limit 1 per guest) with a pu
-
---- Article 347 ---
-URL: https://www.msn.com/en-us/news/us/city-doubles-down-on-request-for-permanent-closure-of-bar-may-25-2026-news-19-at-10-p-m/vi-AA243CBO
-Title: City doubles down on request for permanent closure of bar
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-05-26 12:02:56
-
-MSN
-
---- Article 348 ---
-URL: https://www.hotelmanagement.net/conversions/melia-open-zel-cozumel-mexico-following-resort-repositioning
-Title: Meliá to open ZEL Cozumel in Mexico following conversion
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 12:00:14
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.hotelmanagement.net/conversions/melia-open-zel-cozumel-mexico-following-resort-repositioning]
-
---- Article 349 ---
-URL: https://www.bizjournals.com/chicago/news/2026/05/26/club-athletic-expands-to-chicago-with-2-locations.html
-Title: Social fitness brand Club Athletic opens first locations outside New York in Chicago
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 12:00:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/chicago/news/2026/05/26/club-athletic-expands-to-chicago-with-2-locations.html]
-
---- Article 350 ---
-URL: https://www.hotelmanagement.net/150/turks-caicos-expansion-positions-beaches-future-growth
-Title: HM on Location: Turks & Caicos expansion positions Beaches for future growth
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-26 12:00:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.hotelmanagement.net/150/turks-caicos-expansion-positions-beaches-future-growth]
+Home Architecture News EVE Music Hall by BIG Takes Shape in Croatia’s Slavonian Landscape Ahead of 2027 Opening Architecture News Architecture EVE Music Hall by BIG Takes Shape in Croatia’s Slavonian Landscape Ahead of 2027 Opening Isha Chaudhary June 5, 2026 3 Mins read 675 Share EVE Music Hall by BIG Share Bjarke Ingels Group (BIG) has revealed new details and imagery of EVE Music Hall, a major cultural and entertainment venue currently under construction in Čepin, eastern Croatia. Scheduled to open in early 2027, the project represents BIG’s first commission in Croatia and is expected to become the firm’s first completed purpose-built music performance venue. Spanning approximately 10,000 square meters, EVE Music Hall forms part of a broader vision to establish a new cultural destination in the Slavonia region, bringing together music, conferences, exhibitions, and public events within a single architectural complex. EVE Music Hall Brings a Major Cultural Venue to Slavonia Located amid the expansive agricultural landscape of eastern Croatia , EVE Music Hall is designed to accommodate a wide range of activities. The venue will host nearly 4,000 visitors indoors, while its outdoor event grounds can welcome up to 25,000 attendees for festivals, concerts, and large-scale gatherings. The project aims to strengthen the region’s cultural infrastructure while creating a year-round destination for residents and visitors alike. Two Performance Venues Framed by a Shared Public Space At the core of the development are two distinct volumes that rise from the surrounding landscape. One houses the main live music hall, while the second contains a congress hall and supporting facilities. Positioned around a central foyer, the two halls are acoustically separated and designed to operate either independently or simultaneously. This arrangement allows the venue to accommodate concerts, conferences, exhibitions, presentations, and community events within a flexible operational frame
