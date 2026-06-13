@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-12",
-  "total": 7185,
+  "last_updated": "2026-06-13",
+  "total": 7162,
   "data": [
     {
       "state": "Alaska",
@@ -2236,6 +2236,16 @@
       "state": "Ohio",
       "company": "JeniusBank SMBC Manubank",
       "city": "Unknown/Unknown",
+      "notice_date": "6/8/2026",
+      "layoff_date": "8/3/2026",
+      "employees_affected": "2",
+      "closure_type": "Layoff",
+      "notes": "Phone: (646) 256-5895 | Union: N | PDF: https://dam.assets.ohio.gov/image/upload/v1781208657/jfs.ohio.gov/warn/WARN%202026/JeniusBankSMBCManubank2.pdf"
+    },
+    {
+      "state": "Ohio",
+      "company": "JeniusBank SMBC Manubank",
+      "city": "Unknown/Unknown",
       "notice_date": "1/8/2026",
       "layoff_date": "3/10/2026",
       "employees_affected": "2",
@@ -2361,6 +2371,16 @@
       "employees_affected": "115",
       "closure_type": "Closure",
       "notes": "Phone: (586) 707-5128 | Union: Y/See WARN | PDF: https://dam.assets.ohio.gov/image/upload/v1771873177/jfs.ohio.gov/warn/WARN%202026/ParsecLLC.pdf"
+    },
+    {
+      "state": "Ohio",
+      "company": "Pioneer Cladding & Glazing Systems, Inc.",
+      "city": "Mason/Warren",
+      "notice_date": "6/10/2026",
+      "layoff_date": "8/9/2026",
+      "employees_affected": "43",
+      "closure_type": "Temp Layoff",
+      "notes": "Phone: (513) 583-2310 | Union: N | PDF: https://dam.assets.ohio.gov/image/upload/v1781208658/jfs.ohio.gov/warn/WARN%202026/PioneerCladding_GlazingSystemsInc.pdf"
     },
     {
       "state": "Ohio",
@@ -7161,6 +7181,16 @@
       "employees_affected": "432",
       "closure_type": "Layoff",
       "notes": "County: Allegheny"
+    },
+    {
+      "state": "Pennsylvania",
+      "company": "JBS Souderton",
+      "city": "249 Allentown Road, Souderton, PA  18964 741 Souder Road, Souderton, PA 18964",
+      "notice_date": "8/14/26",
+      "layoff_date": "8/14/26",
+      "employees_affected": "1,485",
+      "closure_type": "Closure",
+      "notes": "County: Montgomery"
     },
     {
       "state": "Pennsylvania",
@@ -12064,6 +12094,36 @@
     },
     {
       "state": "Virginia",
+      "company": "M1 Support Services LP",
+      "city": "Norfolk , VA",
+      "notice_date": "06/01/2026",
+      "layoff_date": "07/31/2026",
+      "employees_affected": "168",
+      "closure_type": "Closure",
+      "notes": ""
+    },
+    {
+      "state": "Virginia",
+      "company": "SMBC Manubank",
+      "city": "Statewide, VA",
+      "notice_date": "06/04/2026",
+      "layoff_date": "08/03/2026",
+      "employees_affected": "6",
+      "closure_type": "Closure",
+      "notes": ""
+    },
+    {
+      "state": "Virginia",
+      "company": "General Dynamics Information Technology",
+      "city": "Washington, DC, VA",
+      "notice_date": "06/09/2026",
+      "layoff_date": "08/08/2026",
+      "employees_affected": "174",
+      "closure_type": "Layoff",
+      "notes": ""
+    },
+    {
+      "state": "Virginia",
       "company": "Parkhurst Dining, LLC (Randolph Macon College Site)",
       "city": "Ashland, VA",
       "notice_date": "06/05/2026",
@@ -12427,7 +12487,7 @@
       "company": "AeroFarms, Inc. - Rescinded",
       "city": "Ringgold, VA",
       "notice_date": "04/29/2026",
-      "layoff_date": "06/12/2026",
+      "layoff_date": "06/13/2026",
       "employees_affected": "133",
       "closure_type": "Closure",
       "notes": ""
@@ -30087,6 +30147,26 @@
       "company": "CAE",
       "city": "",
       "notice_date": "06/01/2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "",
+      "notes": ""
+    },
+    {
+      "state": "Colorado",
+      "company": "Paragon Sspace Development Corp",
+      "city": "",
+      "notice_date": "06/11/2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "",
+      "notes": ""
+    },
+    {
+      "state": "Colorado",
+      "company": "Battelle",
+      "city": "",
+      "notice_date": "6/11//26",
       "layoff_date": "",
       "employees_affected": "",
       "closure_type": "",
@@ -58114,6 +58194,16 @@
     },
     {
       "state": "Michigan",
+      "company": "Oakland Stamping LLC, DBA AUTOKINITON",
+      "city": "Detroit, Michigan",
+      "notice_date": "",
+      "layoff_date": "",
+      "employees_affected": "201",
+      "closure_type": "Facility closure",
+      "notes": "Wayne"
+    },
+    {
+      "state": "Michigan",
       "company": "Factory ZERO Detroit-Hamtramck Assembly Center",
       "city": "Detroit, Michigan",
       "notice_date": "",
@@ -58131,16 +58221,6 @@
       "employees_affected": "67",
       "closure_type": "Layoff",
       "notes": "Kent"
-    },
-    {
-      "state": "Michigan",
-      "company": "Oakland Stamping LLC, DBA AUTOKINITON",
-      "city": "Detroit, Michigan",
-      "notice_date": "",
-      "layoff_date": "",
-      "employees_affected": "201",
-      "closure_type": "Facility closure",
-      "notes": "Wayne"
     },
     {
       "state": "Michigan",
@@ -58164,16 +58244,6 @@
     },
     {
       "state": "Michigan",
-      "company": "Avancez",
-      "city": "Hazel Park, Michigan",
-      "notice_date": "",
-      "layoff_date": "12/05/2025",
-      "employees_affected": "143",
-      "closure_type": "Layoff",
-      "notes": "Oakland"
-    },
-    {
-      "state": "Michigan",
       "company": "The Taubman Company LLC",
       "city": "Bloomfield Hills, Michigan",
       "notice_date": "",
@@ -58194,13 +58264,13 @@
     },
     {
       "state": "Michigan",
-      "company": "Freudenberg Battery Power Systems, LLC",
-      "city": "Midland, Michigan",
+      "company": "Avancez",
+      "city": "Hazel Park, Michigan",
       "notice_date": "",
-      "layoff_date": "",
-      "employees_affected": "107",
-      "closure_type": "Company closure",
-      "notes": "Midland"
+      "layoff_date": "12/05/2025",
+      "employees_affected": "143",
+      "closure_type": "Layoff",
+      "notes": "Oakland"
     },
     {
       "state": "Michigan",
@@ -58231,6 +58301,16 @@
       "employees_affected": "11",
       "closure_type": "Company closure",
       "notes": "Oakland"
+    },
+    {
+      "state": "Michigan",
+      "company": "Freudenberg Battery Power Systems, LLC",
+      "city": "Midland, Michigan",
+      "notice_date": "",
+      "layoff_date": "",
+      "employees_affected": "107",
+      "closure_type": "Company closure",
+      "notes": "Midland"
     },
     {
       "state": "Michigan",
@@ -58374,16 +58454,6 @@
     },
     {
       "state": "Michigan",
-      "company": "Davalor Mold Company, LLC",
-      "city": "New Baltimore, Michigan",
-      "notice_date": "",
-      "layoff_date": "10/03/2025",
-      "employees_affected": "45",
-      "closure_type": "Layoff",
-      "notes": "Macomb"
-    },
-    {
-      "state": "Michigan",
       "company": "NPR of America, Inc.",
       "city": "Grand Haven, Michigan",
       "notice_date": "",
@@ -58391,6 +58461,16 @@
       "employees_affected": "64",
       "closure_type": "Company closure",
       "notes": "Ottawa"
+    },
+    {
+      "state": "Michigan",
+      "company": "Davalor Mold Company, LLC",
+      "city": "New Baltimore, Michigan",
+      "notice_date": "",
+      "layoff_date": "10/03/2025",
+      "employees_affected": "45",
+      "closure_type": "Layoff",
+      "notes": "Macomb"
     },
     {
       "state": "Michigan",
@@ -58464,16 +58544,6 @@
     },
     {
       "state": "Michigan",
-      "company": "Lansing Entertainment and Public Facilities Authority (LEPFA)",
-      "city": "Lansing, Michigan",
-      "notice_date": "",
-      "layoff_date": "",
-      "employees_affected": "181",
-      "closure_type": "Layoff",
-      "notes": "Ingham"
-    },
-    {
-      "state": "Michigan",
       "company": "Plasan North America, Inc.",
       "city": "Grand Rapids, Michigan",
       "notice_date": "",
@@ -58511,6 +58581,16 @@
       "employees_affected": "47",
       "closure_type": "Layoff",
       "notes": "Statewide"
+    },
+    {
+      "state": "Michigan",
+      "company": "Lansing Entertainment and Public Facilities Authority (LEPFA)",
+      "city": "Lansing, Michigan",
+      "notice_date": "",
+      "layoff_date": "",
+      "employees_affected": "181",
+      "closure_type": "Layoff",
+      "notes": "Ingham"
     },
     {
       "state": "Michigan",
@@ -58614,16 +58694,6 @@
     },
     {
       "state": "Michigan",
-      "company": "Aramark Campus, LLC",
-      "city": "Detroit, Michigan",
-      "notice_date": "",
-      "layoff_date": "06/30/2025",
-      "employees_affected": "137",
-      "closure_type": "Layoff",
-      "notes": "Wayne"
-    },
-    {
-      "state": "Michigan",
       "company": "Conagra Brands, Inc.",
       "city": "Fennville, Michigan",
       "notice_date": "",
@@ -58641,6 +58711,16 @@
       "employees_affected": "2 remote workers",
       "closure_type": "Layoff",
       "notes": "Statewide"
+    },
+    {
+      "state": "Michigan",
+      "company": "Aramark Campus, LLC",
+      "city": "Detroit, Michigan",
+      "notice_date": "",
+      "layoff_date": "06/30/2025",
+      "employees_affected": "137",
+      "closure_type": "Layoff",
+      "notes": "Wayne"
     },
     {
       "state": "Michigan",
@@ -63994,6 +64074,16 @@
     },
     {
       "state": "New York",
+      "company": "USIC Locating Services, LLC. d/b/a Reconn Utility Services",
+      "city": "",
+      "notice_date": "2026-04-01",
+      "layoff_date": "2026-04-06",
+      "employees_affected": "29",
+      "closure_type": "Layoff",
+      "notes": "Suffolk"
+    },
+    {
+      "state": "New York",
       "company": "VanDeMark Chemical Inc.",
       "city": "",
       "notice_date": "2026-02-24",
@@ -65039,6 +65129,16 @@
       "notice_date": "March 19, 2026",
       "layoff_date": "September 18, 2026",
       "employees_affected": "105",
+      "closure_type": "Permanent Layoff",
+      "notes": "Wake County"
+    },
+    {
+      "state": "North Carolina",
+      "company": "Ubisoft",
+      "city": "Cary",
+      "notice_date": "June 10, 2026",
+      "layoff_date": "August 10, 2026",
+      "employees_affected": "17",
       "closure_type": "Permanent Layoff",
       "notes": "Wake County"
     },
@@ -66567,336 +66667,6 @@
       "company": "McGee Air Services, Inc.",
       "city": "Phoenix",
       "notice_date": "Sep 10, 2025",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "U.S Census Bureau",
-      "city": "Tucson",
-      "notice_date": "Oct 10, 2025",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Buena Vista Recovery",
-      "city": "Scottsdale",
-      "notice_date": "Oct 28, 2025",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Microchip",
-      "city": "Tempe",
-      "notice_date": "Oct 29, 2025",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Arizona Autism",
-      "city": "Phoenix",
-      "notice_date": "Oct 30, 2025",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Allied Tube and Conduit Corporation",
-      "city": "Phoenix",
-      "notice_date": "Nov 05, 2025",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Evernorth Care Group",
-      "city": "Scottsdale",
-      "notice_date": "Nov 11, 2025",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Nordstrom",
-      "city": "Centennial",
-      "notice_date": "Nov 17, 2025",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Nordstrom",
-      "city": "Centennial",
-      "notice_date": "Nov 20, 2025",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "GNC Distribution Center",
-      "city": "Phoenix",
-      "notice_date": "Jan 07, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "DHM Payroll - Fiesta Tempe, LLC,",
-      "city": "Tempe",
-      "notice_date": "Nov 26, 2025",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Aramark Campus, LLC",
-      "city": "Vail",
-      "notice_date": "Apr 01, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Catholic Community Services of Southern Arizona, Inc.",
-      "city": "Tucson",
-      "notice_date": "Apr 08, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "VisionQuest National LTD",
-      "city": "Tucson",
-      "notice_date": "Apr 09, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "The Tendit Group, LLC.",
-      "city": "Phoenix",
-      "notice_date": "Apr 14, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Marsden Services, LLC",
-      "city": "Tucson",
-      "notice_date": "Apr 15, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Northpoint Expeditionary Learning Academy",
-      "city": "Prescott",
-      "notice_date": "Apr 29, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Republic National Distributing Company, LLC",
-      "city": "Phoenix",
-      "notice_date": "Apr 23, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "DLH Solutions Inc",
-      "city": "Tucson",
-      "notice_date": "Apr 17, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Federal Express Corporation",
-      "city": "Phoenix",
-      "notice_date": "Jun 02, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Avelo Airlines",
-      "city": "Mesa",
-      "notice_date": "Jan 07, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "SMBC Group - JeniusBank",
-      "city": "Scottsdale",
-      "notice_date": "Jan 08, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Benchmark",
-      "city": "Phoenix",
-      "notice_date": "Apr 29, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "SDH Education West, LLC",
-      "city": "Phoenix",
-      "notice_date": "May 14, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Honeywell AZ0Y",
-      "city": "Chandler",
-      "notice_date": "May 27, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "SMBC MANUBANK",
-      "city": "New York",
-      "notice_date": "Jun 04, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Southwest Key Programs",
-      "city": "Phoenix",
-      "notice_date": "Aug 06, 2025",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Benchmark",
-      "city": "Phoenix",
-      "notice_date": "Jan 27, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Shell Recharge Solutions",
-      "city": "Los Angeles",
-      "notice_date": "Jan 29, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Automated Harvesting, LLC.",
-      "city": "Yuma",
-      "notice_date": "Jan 30, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Liberty Dental Plan",
-      "city": "Tustin",
-      "notice_date": "Feb 05, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Saks & Company LLC",
-      "city": "Phoenix",
-      "notice_date": "Feb 10, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Lowe's Companies, Inc.",
-      "city": "Mooresville",
-      "notice_date": "Feb 16, 2026",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": ""
-    },
-    {
-      "state": "Arizona",
-      "company": "Advanced Call Center Technologies (ACT)",
-      "city": "San Luis",
-      "notice_date": "May 01, 2026",
       "layoff_date": "",
       "employees_affected": "",
       "closure_type": "WARN",
