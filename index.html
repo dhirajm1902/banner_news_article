@@ -1923,16 +1923,16 @@
             el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-0 transition-opacity duration-200';
             el.title = 'Mark as done';
             renderHistoricalTable();
-            try {
-                await _sb.from('article_marks').delete().eq('article_key', key);
-            } catch (e) {
+            const { error: delErr } = await _sb.from('article_marks').delete().eq('article_key', key);
+            if (delErr) {
+                console.error('article_marks delete failed:', delErr);
                 // rollback on failure
                 doneKeys.add(key);
                 el.style.cssText = DONE_STYLE;
                 el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-100 transition-opacity duration-200';
                 el.title = 'Marked as done — click to undo';
                 renderHistoricalTable();
-                showToast('Failed to save — try again', 'error');
+                showToast('Failed to save: ' + (delErr.message || delErr.code || 'DB error'), 'error');
             }
         } else {
             // optimistic update
@@ -1941,21 +1941,21 @@
             el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-100 transition-opacity duration-200';
             el.title = 'Marked as done — click to undo';
             renderHistoricalTable();
-            try {
-                await _sb.from('article_marks').upsert({
-                    article_key: key,
-                    is_done: true,
-                    marked_by: _currentUserEmail,
-                    marked_at: new Date().toISOString()
-                }, { onConflict: 'article_key' });
-            } catch (e) {
+            const { error: upsertErr } = await _sb.from('article_marks').upsert({
+                article_key: key,
+                is_done: true,
+                marked_by: _currentUserEmail,
+                marked_at: new Date().toISOString()
+            }, { onConflict: 'article_key' });
+            if (upsertErr) {
+                console.error('article_marks upsert failed:', upsertErr);
                 // rollback on failure
                 doneKeys.delete(key);
                 el.style.cssText = UNDONE_STYLE;
                 el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-0 transition-opacity duration-200';
                 el.title = 'Mark as done';
                 renderHistoricalTable();
-                showToast('Failed to save — try again', 'error');
+                showToast('Failed to save: ' + (upsertErr.message || upsertErr.code || 'DB error'), 'error');
             }
         }
     }

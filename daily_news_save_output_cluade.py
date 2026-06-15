@@ -184,7 +184,7 @@ for rec in final_records:
         seen.add(key)
         added += 1
 
-existing_rows.sort(key=lambda r: r.get("published_date", ""), reverse=True)
+existing_rows.sort(key=lambda r: r.get("published_date") or "", reverse=True)
 
 with open(MASTER_FILE, "w", encoding="utf-8", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=MASTER_COLS, extrasaction="ignore")
