@@ -17,38 +17,427 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 Create ONE clean Markdown table with these exact column headers (in this order):
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
-🌎 Geographic filter (STRICT)
-• Only extract businesses located in the USA or Canada
-• If the article is about a business in any other country (UK, Australia, India, UAE, etc.) → DO NOT add any row to the table; add it ONLY to the Non-working list as "Outside USA/Canada"
-• If an article covers both USA/Canada locations AND international locations → extract only the USA/Canada rows, skip the rest; add the article to the Non-working list as "Outside USA/Canada (partial)"
-
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
-• If a USA/Canada article has zero relevant business opening or closure information, still include a row with:
+• If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
-• ❌ Never add a table row for articles outside USA/Canada — those go in the Non-working list only
 
 🚫 Strict constraints
 • ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
-• ❌ No extraction of businesses outside USA or Canada
 
 📎 Final section (mandatory)
 At the very end of your response, add:
 Non-working or unusable articles List:
-• Article number — Reason (paywall / no business details / duplicate / text missing / Outside USA/Canada / etc.)
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
 If none, write: None
 
 ✅ Articles below — extract now:
 
 
 --- Article 401 ---
-URL: https://www.mindfood.com/article/what-to-shop-when-skims-launches-at-luxe-new-auckland-department-store/
-Title: What to Shop When SKIMS Launches At Luxe New Auckland Department Store
-Status hint: Opening | Industry: Department Stores
-Published: 2026-05-26 23:13:40
+URL: https://www.theglobeandmail.com/investing/markets/markets-news/GlobeNewswire/2384987/toll-brothers-announces-model-home-grand-opening-at-santa-rita-ranch-in-liberty-hill-texas/
+Title: Toll Brothers Announces Model Home Grand Opening at Santa Rita Ranch in Liberty Hill, Texas
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 18:35:10
 
-Seaside Treasures Recreated In New Zoe & Morgan Jewellery Collection
+This section contains press releases and other materials from third parties (including paid content). The Globe and Mail has not reviewed this content. Please see disclaimer . Toll Brothers Announces Model Home Grand Opening at Santa Rita Ranch in Liberty Hill, Texas Toll Brothers, Inc. - GlobeNewswire - Tue Jun 9, 1:34PM CDT LIBERTY HILL, Texas, June 09, 2026 (GLOBE NEWSWIRE) -- Toll Brothers, Inc . (NYSE:TOL), the nation's leading builder of luxury homes, today announced it will host a Model Home Grand Opening event at the Austin-area Santa Rita Ranch community on Saturday, June 13, from 2 p.m. to 5 p.m. Located at 131 Modello Way in Liberty Hill, Texas, home shoppers are invited to explore three stunning new model homes in Eldorado Village at Santa Rita Ranch and experience the exceptional lifestyle offered in this amenity-rich master-planned community. Santa Rita Ranch – Eldorado offers three distinct collections of single-family home designs ranging from 2,238 to over 4,700 square feet situated on 50-, 60-, and 70-foot-wide home sites with Texas Hill Country views. Homes are priced from the low $500,000s. "We are thrilled to unveil our new model homes in Eldorado Village at Santa Rita Ranch," said Brandon Cooper, Division President of Toll Brothers in Austin. "These homes showcase the exceptional craftsmanship, innovative design, and luxury living that Toll Brothers is known for, all set within one of the most sought-after communities in the Austin area." Residents of Santa Rita Ranch enjoy access to award-winning amenities, including six resort-style pools, splash pads, water slides, parks, trails, a wellness barn, and a full-time "Director of Fun." The community also offers onsite conveniences such as a clubhouse, fitness center, dog park, and multiple event lawns, providing an unparalleled living experience. Santa Rita Ranch is part of the highly rated Liberty Hill Independent School District, making it an ideal choice for families. Toll Brothers customers w
+
+--- Article 402 ---
+URL: https://whatnow.com/philadelphia/retail/locker-room-by-lids-opening-in-philadelphias-fashion-district/
+Title: Locker Room by Lids Opening in Philadelphia’s Fashion District
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 18:29:14
+
+A selection of MLB hats at Locker Room by Lids. (Image credit: Facebook page) SHARE A new sports store opening in the city brings Eagles, Phillies, Flyers and 76ers gear to Philadelphia sports fans. Locker Room by Lids will debut in the Fashion District concourse at 901 Market St. , located between the Streets Dept. Wall Art Exhibit and Strike Zone. The storefront is a retail concept from Lids offering licensed sports apparel and fan gear. Stores sell jerseys, hoodies, T-shirts and accessories representing professional and collegiate teams across major leagues, creating a one-stop shop. The Fashion District is a downtown retail and entertainment destination located primarily along Market Street between 6th and 11th streets. It brings together a mix of national retailers, local shops, dining options and entertainment venues, including a movie theater and rotating art installations. The district, redeveloped on the site of the former Gallery Mall, features both indoor retail space and public concourses. It is open from 11 a.m. to 7 p.m. Monday through Thursday, 10 a.m. to 8 p.m. Friday and Saturday, and noon to 6 p.m. Sunday. An official opening date for Locker Room by Lids has not been announced, but a Fashion District spokesperson told What Now Philadelphia the store is expected to open within the next few weeks. Visit the website and follow along on Instagram and Facebook for the latest updates. Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 901 Market St., Philadelphia, PA 19107 Be the First to Know From new restaurant openings to exciting retail launches and real estate insights, be the first to know what’s happening in Philadelphia Subscribe & Stay Ahead Share This Article Facebook Copy Link Print By Courtney McGinley Regional Reporter Courtney McGinley is a Regional Reporter based in Pittsburgh, PA. A graduate of Penn State University's Donald P. Bellisario College of Communications, she has be
+
+--- Article 403 ---
+URL: https://newsline.com/first-dry/56YearOld-FastFood-Chain-Shutters-Hundreds-of-Locations-Amid-Industry-Shift-29-16560
+Title: 56-Year-Old Fast-Food Chain Shutters Hundreds of Locations Amid Industry Shift
+Status hint: Closing | Industry: Restaurants
+Published: 2026-06-09 18:24:41
+
+[Could not fetch: 410 Client Error: Gone for url: https://www.newsline.com/first-dry/56YearOld-FastFood-Chain-Shutters-Hundreds-of-Locations-Amid-Industry-Shift-29-16560]
+
+--- Article 404 ---
+URL: https://www.kansas.com/entertainment/restaurants/dining-with-denise-neil/article316061492.html
+Title: Everything that could have gone wrong did. Now, this restaurant is ready to open.
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-09 18:19:00
+
+Local lawyer and developer Abdul Arif has opened many restaurants over the years and knows that they can get behind. His latest venture, an Indian restaurant, meat market and grocery called Desi Dhaba that’s moving into the black-and-yellow metal building just west of the Family Dollar at 5120 E. 21st St., faced many delays, which kept it from opening in February as he had originally planned. “Everything that could have gone wrong has gone wrong,” he said, pointing to equipment delays and trouble getting the right Wi-Fi setup in the new building. Local developer Abdul Arif and his nephew are opening a combination restaurant, halal meat market and grocery near 21st and Oliver.                                                                                            Travis Heying The Wichita Eagle Now, though, he’s finally ready to open the restaurant part of the business — and it’s happening just in time. Arif is planning to start a soft opening on Friday, June 12: He always envisioned the business as a place that international students from nearby Wichita State University could gather to watch their home teams play soccer, and the FIFA World Cup opens Thursday. At first, only the restaurant portion of the business will be open. It will be set up “Chipotle-stye,” Arif said, and it will serve halal proteins like goat, lamb and chicken, which customers will be able to get over rice, quinoa and other bases. It will also offer items like dosa, curry dishes and pani puri. The restaurant, which is on the north end of the building, will have a drive-through window, and in the early mornings, people will be able to drive through for coffee and doughnuts. The restaurant also will serve Yemeni coffee, and it will include a bakery that produces Indian and Middle Eastern pastries. Restaurant customers will find lots of indoor and outdoor seating, Arif said. The other parts of the business — a halal meat market that serves items like goat, chicken, lamb and some beef and a groce
+
+--- Article 405 ---
+URL: https://newsline.com/first-dry/56YearOld-Beloved-FastFood-Chain-Shutters-Over-700-Locations-Amid-Market-Shifts-31-16134
+Title: 56-Year-Old Beloved Fast-Food Chain Shutters Over 700 Locations Amid Market Shifts
+Status hint: Closing | Industry: Restaurants
+Published: 2026-06-09 18:16:42
+
+[Could not fetch: 410 Client Error: Gone for url: https://www.newsline.com/first-dry/56YearOld-Beloved-FastFood-Chain-Shutters-Over-700-Locations-Amid-Market-Shifts-31-16134]
+
+--- Article 406 ---
+URL: https://progressivegrocer.com/buc-ees-open-1st-arizona-store
+Title: Buc-ee’s to Open 1st Arizona Store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 18:13:15
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://progressivegrocer.com/buc-ees-open-1st-arizona-store]
+
+--- Article 407 ---
+URL: https://www.journal-news.net/news/business_and_economy/highland-bank-breaks-ground-for-new-location-in-berkeley-county/article_1abf8f1c-e274-5c83-b62d-1f90448d6a6a.html
+Title: Highland Bank breaks ground for new location in Berkeley County
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 18:13:00
+
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.journal-news.net/news/business_and_economy/highland-bank-breaks-ground-for-new-location-in-berkeley-county/article_1abf8f1c-e274-5c83-b62d-1f90448d6a6a.html]
+
+--- Article 408 ---
+URL: https://www.bizjournals.com/cincinnati/news/2026/06/09/covington-deli-to-close-after-15-years.html
+Title: Covington deli and market to close after 15 years
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-09 18:13:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/cincinnati/news/2026/06/09/covington-deli-to-close-after-15-years.html]
+
+--- Article 409 ---
+URL: https://www.the-sun.com/money/16474590/cafe-sbisa-closes-new-orleans-louisiana/
+Title: Historic restaurant that first opened 127 years ago closes doors for good
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-09 18:11:59
+
+Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Comment now AFTER approximately 127 years in business, a historic restaurant has closed down permanently. It joins a growling list of several longstanding and one-of-a-kind establishments across the US that have shuttered this year. Sign up for the Money newsletter Thank you! A famous restaurant in a US city has closed for good (stock image) Credit: Getty Café Sbisa (pictured) was first founded in 1899 in New Orleans, Louisiana Credit: Alamy Advertisement Cafè Sbisa, one of the most beloved eateries in New Orleans , Louisiana, confirmed it would no longer be operating in a June 7 Instagram post . “While we explored every option to remain open, the ongoing construction ultimately made it impossible to continue,” the post read. “We are grateful to our customers and staff for their support and loyalty throughout the years.” The owners emphasized that there was “careful consideration” before the “difficult decision” was made. Read More on Restaurants SAY BYE Sadness as award-winning burger restaurant will close another location in days NO ONE HOME Olive Garden rival closes restaurant abruptly leaving diners 'no explanation' It’s important to note that the mentioned construction refer to those on Decatur Street in the French Quarter of the city, where Café Sbisa and other popular businesses are located. Decatur Street’s construction from the Sewage and Water Board has been ongoing for more than 260 days, according to Fox affiliate WVUE . It’s a massive utility and road restoration project that stretches for several blocks. This includes the replacement water mains that are more than a century old, along with new gas lines and more. Advertisement Most read in Money STEAK OUT Texas Roadhouse rival opening 5,780 square foot location next to Olive Garden MOVING IN Former JCPenney location is being demolished to make room for Costco Warehouse MAKE WAY Walmart rival set to open new store on Jun
+
+--- Article 410 ---
+URL: https://www.chron.com/food/article/chopnblok-houston-new-memorial-city-22297677.php
+Title: Houston's hottest Michelin-rated restaurant may open new location
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-09 18:11:10
+
+ChòpnBlọk is a fast-casual restaurant concept from Houston, Texas, with West African cuisine. A new location may be in the works. Photo by StuffBenEats One of Houston's Michelin-rated restaurants appears to be making major moves. Permit filings indicate that ChòpnBlọk is not only planning to expand its first brick-and-mortar restaurant , but there may be another ChòpnBlọk on the way. While the fast-casual West African concept from chef Ope Amosu has not officially announced an additional location, a permit filed with the Texas Department of Licensing and Regulation on Tuesday points to a new ChòpnBlọk opening at 1085 Gessner Rd. in Greenside Memorial , the new mixed-use development in Memorial City. Advertisement Article continues below this ad According to the filing, the project includes an estimated $1.25 million interior build-out of a 3,757-square-foot restaurant space within an existing core-and-shell building. Construction is expected to begin in September and be completed by November. This filing comes less than a week after another TDLR permit was submitted for a "ChopNBlok Expansion" of its brick-and-mortar restaurant at 507 Westheimer Rd. Not many details were indicated about the scope of work for this possible expansion, but the estimated $200,000 renovation is anticipated to be done between August and October. ChòpnBlọk has two locations in the Houston area, as of today. Photo by StuffBenEats When reached by Chron for information regarding the two filings, a representative for ChòpnBlọk declined to confirm. TDLR filings are subject to change. A representative for Greenside Memorial referred Chron to ChòpnBlọk's representative. Advertisement Article continues below this ad If ChòpnBlọk's is in fact moving to Greenside Memorial, it would be its third location, joining its Montrose restaurant and food stall at POST Houston. It would join the community hub's growing lineup of dining and drinking options, including Kirby Ice House, Mia's Table and Torchy's T
+
+--- Article 411 ---
+URL: https://whatnow.com/charlotte/retail/the-blossom-shop-eyes-second-charlotte-location-in-dilworth/
+Title: The Blossom Shop Eyes Second Charlotte Location in Dilworth
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-09 18:00:54
+
+Future home of The Blossom Shop's second Charlotte location. (Image credit: Google Earth) SHARE The Blossom Shop is preparing to expand its Charlotte footprint with a second location in Dilworth, where the longtime florist has acquired the former Long’s Dry Cleaning building at 918 E. Morehead Street . According to reporting from The Charlotte Ledger’s social page , the nearly century-old company plans to preserve and renovate the historic 1939 structure, converting it into a facility that will house retail space, floral production operations, and offices. According to their website , the project marks a significant step for one of Charlotte’s most established businesses. Founded nearly 100 years ago, The Blossom Shop has served generations of customers from its Myers Park location, building a reputation as one of the region’s premier florists for everyday arrangements, weddings, events, and special occasions. Rather than redeveloping the site from the ground up, plans call for the existing building to be preserved and adapted for modern use. The renovation will breathe new life into the former dry-cleaning property while maintaining a piece of the corridor’s historic character. According to The Charlotte Ledger, the Dilworth location is expected to function as more than a traditional flower shop. In addition to retail operations, the facility will house production space and offices, allowing the company to consolidate key functions while creating room for future growth. As reported by The Charotte Ledger, construction could begin later this year, with a summer 2027 opening currently targeted for the project. Once complete, the Dilworth site will become The Blossom Shop’s second Charlotte location while complementing its longtime Myers Park store, which will remain open. WhatNow Charlotte reached out to The Blossom Shop for additional information regarding the project but did not receive a response by the time of publication. Updates will be provided as more informa
+
+--- Article 412 ---
+URL: https://nypost.com/2026/06/09/business/fresh-blow-for-californias-carls-jr-as-iconic-burger-chain-to-close-more-stores/
+Title: Fresh blow for California’s Carl’s Jr as iconic burger chain to close more stores
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-09 17:54:00
+
+See more of our coverage in your search results. Add The California Post on Google Carl’s Jr. is being hit with another brutal blow in California as 10 more restaurants are now set to close — and dozen more could be sold off. Franchisee Harsbad Dharod, whose company operates 59 restaurants across California, is seeking buyers for most of his stores after filing for Chapter 11 bankruptcy protection in April, according to the DailyMail . The operator plans to close 10 locations outright while putting the rest of the restaurants on the market, according to brokerage firm National Franchise Sales. Franchisee Harsbad Dharod, whose company operates 59 restaurants across California, is seeking buyers for most of his stores after filing for Chapter 11 bankruptcy protection in April. Shutterstock / Felipe  Sanchez Sign up for the California Morning Report newsletter California's top news, sports and entertainment delivered to your inbox every day. Thanks for signing up! The restaurants are largely concentrated in Southern California, where Carl’s Jr. has long been a fast-food fixture. A previous report read that Dharod’s subsidiary Sun Gir Inc. blamed California’s $20-an-hour fast-food minimum wage for worsening financial distress. Dharod said in court filings that the wage hike “materially increased operating expenses,” while also citing weaker sales, reduced marketing effectiveness and a lack of innovation from Carl’s Jr. parent company. Despite generating more than $6 million in monthly revenue, the franchise group has reportedly been losing more than $600,000 per month this year. SKE Restaurants, the parent company of Carl’s Jr., said the crisis is specific to the franchisee and does not affect the wider chain. “This situation is specific to this individual franchisee’s financial and business circumstances,” the company said. “This has no impact on the operations of any other Carl’s Jr. locations.” The possible closures mark another setback for the California-born chain,
+
+--- Article 413 ---
+URL: https://www.snowboarder.com/news/mammoth-mountain-2026-closing
+Title: Mammoth Mountain Has Closed For The Season
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 17:48:20
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.snowboarder.com/news/mammoth-mountain-2026-closing]
+
+--- Article 414 ---
+URL: https://www.wdwmagic.com/dining/grand-floridian-cafe/news/09jun2026-disney-s-grand-floridian-cafe-closing-date-confirmed-brunch-moves-to-citricos.htm
+Title: Disney's Grand Floridian Café Closing Date Confirmed
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-09 17:45:00
+
+Disney's Grand Floridian Café Closing Date Confirmed — Brunch Moves to Cítricos Relevance Newest Park Hours & Calendar Updated frequently Find operating hours, early entry times, and park hopping info across all four Walt Disney World parks. Lightning Lane Prices Updated daily See current Lightning Lane prices for Genie+ and Individual Lightning Lane attractions at all parks. Dining at Walt Disney World Dining Guide Explore restaurants, menus, and reviews for quick service and table service dining across Walt Disney World. Latest Disney News Updated multiple times per day Catch up on the latest park updates, construction news, entertainment, and official announcements. width="24" height="24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="28" stroke-linecap="round"
+        stroke-linejoin="round">
+
+--- Article 415 ---
+URL: https://patch.com/arizona/phoenix/popular-filipino-restaurant-shutters-phoenix-location
+Title: Popular Filipino Restaurant Shutters Phoenix Location
+Status hint: Closing | Industry: Restaurants
+Published: 2026-06-09 17:40:17
+
+Restaurants & Bars Popular Filipino Restaurant Shutters Phoenix Location The lease is up, but Tambayan isn't done. The beloved Filipino restaurant is expanding across the Valley, starting in Mesa. Vianella Burns , Patch Staff Posted Tue, Jun  9, 2026 at 11:40 am MT PHOENIX, AZ — One of the Phoenix area's most beloved Filipino restaurants just closed its doors and immediately started opening new ones. Tambayan Filipino Food ended its run at its original Phoenix location on May 25 after the restaurant's lease expired. But owners Joann and Denver Tagorda made clear in an Instagram announcement that the closure is less an ending than a pivot. A Mesa location has already soft-opened, a Glendale spot near Diamond Casino is expected to follow within months, and a new Phoenix location is in the works for Bethany Home Road and 27th Avenue, next to the future Lam's Market. Find out what's happening in Phoenix for free with the latest updates from Patch. The couple described the moment simply: not a goodbye, but growth. The Tagordas emigrated from the Philippines to the U.S. in the early-to-mid 2000s, met and married in Illinois, and settled in Phoenix in 2010. What they found was a Valley dining scene with a noticeable gap: authentic Filipino food was hard to come by. Find out what's happening in Phoenix for free with the latest updates from Patch. Tambayan became their answer. Named after the Filipino word for a gathering place or hangout spot, the restaurant built its menu around the bold, comforting dishes Joann grew up cooking and eating. Beef tapa, pork isaw and chicken barbecue anchor the menu alongside other traditional staples drawn from family recipes passed down through generations. Joann described the restaurant's origin as a lifelong dream to share the flavors of her upbringing with the broader community. The new Mesa location, at 1832 W. Broadway Road, Suite 111, opened this past week. The Tagordas noted that some menu items may still be limited as the kitchen ge
+
+--- Article 416 ---
+URL: https://www.msn.com/en-us/travel/news/h-e-b-sets-opening-date-for-first-irving-store-and-more-top-stories/ar-AA24ZBp5?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: H-E-B sets opening date for first Irving store and more top stories
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 17:38:38
+
+MSN
+
+--- Article 417 ---
+URL: https://www.aol.com/articles/60s-grocery-store-prices-boomers-231700000.html
+Title: '60s Grocery Store Prices Boomers Miss The Most
+Status hint: Closing | Industry: Grocery
+Published: 2026-06-09 17:36:52
+
+Cami Cox Fri, June 5, 2026 at 11:17 PM UTC 0 A senior checks their phone in a grocery store - Lordhenrivoton/Getty Images It can be nice to get nostalgic and look back on another era. For members of the Baby Boom generation — those born between about 1946 and 1964 — there's a lot to get misty-eyed over, not the least of which is the cost of food back then. In the 1960s, the average household could buy a week's worth of groceries for less than $20. Nowadays, you can scarcely get one family-sized frozen lasagna for that price. Today's skyrocketing food costs seem crazy. To fight the sticker shock, people are turning to discount supermarkets like Aldi for cheaper groceries and even resorting to the old-fashioned method of growing their own produce to cut down on costs. By comparison, purchasing food in the 1960s seemed like a dream when you consider the prices of common grocery staples then versus now. Maybe someday, today's high-priced food will seem like nothing, say, 30 years in the future. For now, folks everywhere are feeling the pinch and wishing we could turn back the clock to a simpler time, when a dollar stretched much further and you could, for instance, buy a McDonald's burger, french fries, and a milkshake for $0.52 (today, Mickey D's is among the fast food chains customers consider overpriced , and you can pay more than $10 for a basic hamburger, small fries, and a shake). While we can't turn back the clock, we can certainly glance backward with wistfulness at this golden age, when grocery bills didn't break the bank. Take a look at some of the 1960s-era food prices Boomers wish we could get back again (as do the rest of us). Read more: 10 Cheap Fish That Should Make You Think Twice (No Matter The Price) Coca-Cola was drastically cheaper A hand holds a glass bottle of Coca-Cola - Marina Demidiuk/Shutterstock Today, if you're craving a cold Coca-Cola, just one 20-ounce bottle can set you back more than $2. Back in 1960, though, you could buy an entire case 
+
+--- Article 418 ---
+URL: https://www.insauga.com/despite-planned-closures-starbucks-opens-new-store-serving-mississauga-oakville/
+Title: Despite planned closures, Starbucks opens new store serving Mississauga, Oakville
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 17:32:04
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.insauga.com/despite-planned-closures-starbucks-opens-new-store-serving-mississauga-oakville/]
+
+--- Article 419 ---
+URL: https://www.the-sun.com/money/16475264/chick-fil-a-closes-jacksonville-florida-kitchen-fire/
+Title: Chick-fil-A spot forced to close for 'foreseeable future' after kitchen fire
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 17:23:47
+
+Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Comment now CHICK-FIL-A has been forced to temporarily close following a devastating kitchen fire. The popular fast food chain, which has announced several new locations in the US this year , has paused operations at a location in Jacksonville, Florida. Sign up for the Money newsletter Thank you! According to reports , a fire broke out early Tuesday morning , which the fire department later said was electrical. Chick-fil-A has closed the Florida restaurant, and there are no indications of when it will reopen. Advertisement Franchise owner and operator Ben Bryant described the damage as “significant” in a statement. He also admitted that it would be “a while” before it opened again. read more on chick-fil-a DINING DO'S Chick-fil-A mandates strict 'my pleasure' rule for customers at all locations CRISPY CLONE Chick-fil-A fans can make copycat meal at home - it's all about double-dipping He said: “We will have to have our consultants come down. As you can see, significant damage to our drive-thru. “It is unfortunate, but luckily, no one was here, no casualties. “But it’s definitely going to be a while before we open up for the community again. “Our guests who come and see us every single day; it’s unfortunate that we won’t be able to serve them for a while, but we look forward to getting everything cleaned up and serving our guests soon.” Most read in Money MOVING IN Former JCPenney location is being demolished to make room for Costco Warehouse 'DEAD' NAVY Final days to enjoy Old Navy store after bosses sign off July 23 closure GET GRILLED Texas Roadhouse rival closes doors after more than three decades FORKS DOWN Popular steakhouse abruptly closes down despite diners still having reservations Fast Food meal deals Here are some of the current value meals offered by popular fast food joints. Taco Bell’s $7 Luxe Cravings Box: Chalupa Supreme Beefy Five-Layer Burrito Double Stacked Taco Ch
+
+--- Article 420 ---
+URL: https://www.postregister.com/news/local/bradys-owner-reflects-on-store-closing-looks-to-the-future/article_8bd971c1-b7cf-4188-882b-2eeabc08d987.html
+Title: Brady's owner reflects on store closing, looks to the future
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-09 17:08:47
+
+[Could not fetch: 451 Client Error: Unavailable For Legal Reasons for url: https://www.postregister.com/news/local/bradys-owner-reflects-on-store-closing-looks-to-the-future/article_8bd971c1-b7cf-4188-882b-2eeabc08d987.html]
+
+--- Article 421 ---
+URL: https://whatnow.com/orange-county/restaurants/candeeland-wonderpark-set-to-open-new-san-bernardino-location/
+Title: Candeeland Wonderpark Set to Open New San Bernardino Location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 17:01:15
+
+The candy-themed indoor family entertainment concept expands to the Inland Empire with immersive play and event spaces (Image credit: Facebook: Candeeland Wonderpark) SHARE Candeeland Wonderpark is preparing to expand its California footprint with a new indoor playground location planned for San Bernardino. The upcoming venue will introduce the brand’s immersive, candy-themed entertainment concept to the Inland Empire. To WhatNow, owner Peter Cho revealed the location on 500 Inland Center Drive is expected to open in December 2026. The concept is designed as a large-scale indoor play environment where children can explore multi-level structures, slides, tunnels, obstacle courses , and ball pits within a vibrant themed setting. The space focuses on active play and imagination, offering a weather-independent destination for families year-round. In addition to its core playground attractions, the San Bernardino location is expected to include arcade-style games and interactive entertainment features that extend the experience beyond traditional indoor play spaces. The environment is built to encourage movement, exploration, and social interaction in a supervised setting. Candeeland Wonderpark also integrates a strong events and celebrations component into its model. The new location will feature private party rooms and customizable birthday package s designed for group gatherings, including food, themed decorations, and structured play sessions. On its website, the company describes itself as “Where Smiles and Memories are created,” framing Candeeland as a space centered on joy, movement, and shared experiences. The brand also emphasizes that there is “never a dull moment,” reflecting its focus on continuous activity designed to keep children engaged from the moment they enter the playground. Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 500 Inland Center Dr, San Bernardino, CA 92408 Be the First to K
+
+--- Article 422 ---
+URL: https://www.thenewstribune.com/entertainment/restaurants/tnt-diner/article316009292.html
+Title: Chicken and waffles restaurant will add a second location in Tacoma
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-09 17:00:00
+
+Buddy’s Chicken & Waffles will open a second restaurant potentially before the end of the summer and this time with late-night hours. Owner Buddy Brown confirmed that it will be located in Tacoma and will offer later hours than the original in the Lincoln District , which will continue. He also operates a food truck, which he said has been steadily improving with recurring events and private bookings — success that helped buoy the possibility of another brick-and-mortar. The exact location for Buddy’s No. 2 is still under wraps, but he said it has a commercial kitchen that was recently in use. He also teased that it would be a good spot for “late-night or later night” hours. The menu will mirror the wonderfully seasoned chicken tenders in a flagship flavor and a dry-rub hot style, breaded and fried to order, that fans have learned to love over several years of Buddy’s presence in Tacoma. You can order with crinkle-cut fries or, as the name suggests, waffles in various flavors, including the best-selling strawberry shortcake and Southern cornbread. Specials roll in and out, from Old Bay to ube coconut. Buddy's Chicken & Waffles in Tacoma is known for chicken tenders dredged, breaded and fried to order and waffles in fun flavors. The first restaurant at 3709 S. G St. in the Lincoln District and the food truck will continue as the owner adds a second brick-and-mortar in 2026.                                                                                            Kristine Sherred ksherred@thenewstribune.com The new location will serve limited alcohol, focused on spiked lemonades and mimosas, but Brown stressed that the concept is really about the chicken and waffles. In recent weeks, the affable entrepreneur had dropped some hints on Instagram, where he regularly posts candid updates of his life as a small food-business owner. On Wednesday, he was a bit more specific: “Guess what ya’ll… Hint: It rhymes with… Second Location.” Later that day, he shared a couple of vid
+
+--- Article 423 ---
+URL: https://wineindustryadvisor.com/2026/06/09/charles-julia-now-open-at-hotel-perle-in-new-orleans/
+Title: Charles & Julia Now Open at Hotel Perle in New Orleans
+Status hint: Opening | Industry: Hospitality
+Published: 2026-06-09 16:58:17
+
+Treasury Wine Estates Unveils Future Portfolio Strategy June 4, 2026
+
+--- Article 424 ---
+URL: https://www.aol.com/news/bellingham-shari-actually-closing-know-223914066.html
+Title: Is Bellingham’s Shari’s actually closing? What to know amid bankruptcy filings
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-09 16:54:42
+
+Alyse Smith Fri, June 5, 2026 at 10:39 PM UTC 0 The last Shari’s Cafe and Pies located in Tacoma sits vacant after closing in 2024. (AMBER RITSON) A popular Pacific Northwest restaurant chain is facing more changes due to a recent bankruptcy filing. Shari's Restaurants was founded in Hermiston, Oregon, in 1978. The chain has closed several locations in recent years, including one in Mount Vernon that was turned into an all-you-can-eat sushi restaurant. Known for pies, all-day breakfast, burgers, prime rib and pie shakes, Shari's restaurants have become a popular American dining staple that's even open Christmas Day. In 2024, Shari's closed all its Oregon locations , according to previous reporting by McClatchy, and now only operates nine locations across Washington, Idaho and California, according to the restaurant's website. Corporate legal troubles persist for once-prolific area restaurant chain "The closures of the Oregon properties appeared to be tied to debt owed the Oregon Lottery for video lottery-gaming machines, which had been an extra revenue stream at the restaurants in that state," previous reporting by McClatchy stated . Advertisement The chain's parent company, Lena Brands LLC, filed for Chapter 11 bankruptcy on May 15, according to ABC News, and many local rumors have been circulating about the Bellingham Shari's location closing permanently. Lena Brands LLC owns both Shari's Restaurants and Coco's Bakery , a chain of California-inspired restaurants specializing in slow-roasted meats, sandwiches, seafood and more. According to Sam Borgese, sole member/manager at Lena Brands LLC, only one restaurant will be closing due to the recent bankruptcy filings. "Bellingham Shari's will NOT be closing," Borgese stated in an email to The Bellingham Herald. "We do not anticipate or plan closing more than one restaurant. We are closing one of the Shari's locations in California. There are no Coco's closures planned," Borgese said. Bellingham's Shari's location is o
+
+--- Article 425 ---
+URL: https://www.audacy.com/kdkaradio/news/local/el-colibri-pittsburgh
+Title: Popular Mexican restaurant opening brick and mortar location
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-09 16:52:02
+
+The Big K Morning Show with Larry Richert
+
+--- Article 426 ---
+URL: https://whatnow.com/houston/restaurants/houston-vietnamese-restaurant-shutters-location-at-the-stomping-grounds/
+Title: Houston Vietnamese Restaurant Shutters Location at The Stomping Grounds
+Status hint: Closing | Industry: Restaurants
+Published: 2026-06-09 16:50:39
+
+Outside The Pho Fix restaurant in Houston  (Image credit: Alan N. | Yelp) SHARE A popular Vietnamese restaurant in Houston closed its doors on Monday. The Pho Fix was known for its wide selection of pho and vermicelli bowls. Local diners reacted to the sudden closure announcement on social media. The Pho Fix Closes Its Doors in Garden Oaks The Pho Fix restaurant announced its sudden closure on social media and did not cite any reason. The restaurant closed its doors on Monday, June 8. Guests enjoyed Vietnamese cuisine at the restaurant at 1223 W 34th St, Suite C-200, in Houston. In the closure announcement, the team cited “After much thought and consideration, we have made the difficult decision to close The Pho Fix.” The team reflected on The Pho Fix as a gathering spot for the community. From celebrations to shared meals, guests enjoyed the food and welcoming environment. The team expressed their gratitude for guests and staff, writing, “While this chapter is coming to an end, we leave with gratitude for the memories, relationships, and community that we built together.” Following the announcement, diners shared messages of disappointment over the closure of the neighborhood spot. View this post on Instagram The Pho Fix Story Image of food items from the menu of a Vietnamese restaurant (Image Credit: thephofix.com) The Pho Fix traces its roots to owner Danny Pham’s childhood, where cooking Vietnamese food was part of daily family life. Pham was raised by generations of family members who taught him recipes, cooking methods, and traditions, where food was a way to connect people. In 2005, Pham moved to Houston to create a career focused on his culinary roots. In 2021, The Pho Fix opened its doors in Houston’s Underground Food Hall and later moved to The Stomping Grounds in Garden Oaks. The restaurant earned a reputation for slow-simmered broths, family-inspired menus, and personalized Vietnamese specialties. There was also a selection of signature dishes such as ph
+
+--- Article 427 ---
+URL: https://www.thestreet.com/retail/womens-fashion-retailer-closes-170-stores-in-turnaround-push
+Title: Women’s fashion retailer closes 170 stores in turnaround push
+Status hint: Closing | Industry: Apparel
+Published: 2026-06-09 16:37:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.thestreet.com/retail/womens-fashion-retailer-closes-170-stores-in-turnaround-push]
+
+--- Article 428 ---
+URL: https://newsline.com/first-dry/Beloved-56YearOld-FastFood-Chain-Shuts-Over-700-Locations-Amid-Industry-Headwinds-29-16455
+Title: Beloved 56-Year-Old Fast-Food Chain Shuts Over 700 Locations Amid Industry Headwinds
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-09 16:35:01
+
+[Could not fetch: 410 Client Error: Gone for url: https://www.newsline.com/first-dry/Beloved-56YearOld-FastFood-Chain-Shuts-Over-700-Locations-Amid-Industry-Headwinds-29-16455]
+
+--- Article 429 ---
+URL: https://www.pennlive.com/life/2026/06/once-popular-seafood-chain-has-closed-700-plus-spots-over-the-years.html?outputType=amp
+Title: Once-popular seafood chain has closed 700-plus spots over the years
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 16:32:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.pennlive.com/life/2026/06/once-popular-seafood-chain-has-closed-700-plus-spots-over-the-years.html?outputType=amp]
+
+--- Article 430 ---
+URL: https://www.thoroughbreddailynews.com/registration-open-for-the-2026-global-symposium-on-racing-dec-7-9/
+Title: Registration Open for the 2026 Global Symposium on Racing Dec. 7-9
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 16:26:00
+
+× Search TDN
+
+--- Article 431 ---
+URL: https://www.msn.com/en-my/news/other/luxury-sandwich-restaurant-set-up-by-michelin-chef-forced-to-temporarily-close-due-to-popularity/ar-AA25cwOy?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Luxury sandwich restaurant set up by Michelin chef forced to temporarily close due to popularity
+Status hint: Opening | Industry: Restaurants
+Published: 2026-06-09 16:21:20
+
+MSN
+
+--- Article 432 ---
+URL: https://wlos.com/news/ask-13/ask-13-new-doubletree-hilton-restaurant-piebird-planned-former-tgi-fridays-location-biltmore-village-asheville-north-carolina-comfort-food-american-diner
+Title: Ask 13: What is planned for the former TGI Fridays location near Biltmore Village?
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-09 16:19:00
+
+
+
+--- Article 433 ---
+URL: https://www.the-sun.com/money/16474398/lowes-foods-opens-new-grocery-stores-charlotte-north-carolina/
+Title: Walmart rival set to open new store on June 18
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 16:11:53
+
+Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook 2 comments 2 A WALMART rival is steadily growing its store footprint, with bosses setting out to open a brand new grocery location on June 18. After the Lowes Foods grocery spot turns on the lights in just days, the regional supermarket chain will welcome another new store in the coming months. Sign up for the Money newsletter Thank you! The two new grocery stores will hit the Charlotte, North Carolina area, giving retail rivals like Walmart , Target , and Whole Foods a run for their money. The Winston-Salem-based grocery chain will first debut a new shop in Kannapolis at 8 am on June 18, to be located on Kannapolis Parkway and Rogers Lake Road. Advertisement Lowes Foods is planning to host a pre-opening block party on June 14 from 1 pm to 3 pm. Once the Kannapolis store opens up, it will provide roughly 100 to 120 full and part-time jobs to Charlotte locals. Read More on Money GET READY Costco to open 150,000-square-foot spot at new development alongside Chick-fil-A GROCER GAINS Trader Joe's to swing doors open to 25 new stores - and first wave is underway “Like all our Lowes Foods stores, our new Kannapolis store is very focused on supporting all things local,” said Lowes Foods president Tim Lowe. “Our commitment to local includes offering produce sourced through our partnerships with more than 200 farmers from the Carolinas and featuring a wide assortment of unique local products found throughout the store.” Adjacent to the top-selling Kellswater Bridge residential development, the new store will be the third in Cabarrus County and the seventh in the Charlotte market. It will measure 52,000 square feet, arriving as part of a large development, per developer MVP Properties’ website. Most read in Money STEAK OUT Texas Roadhouse rival opening 5,780 square foot location next to Olive Garden MOVING IN Former JCPenney location is being demolished to make room for Costco Warehouse 'SAD T
+
+--- Article 434 ---
+URL: https://vegnews.com/planta-closes-toronto-plans-us-comeback
+Title: Exclusive: Why Planta Left Canada Behind—and Where It Wants to Expand to Next
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-09 16:09:00
+
+In 2019, if you wanted a good chance of spotting a celebrity, Planta on Miami Beach was the place to be. Foodgod (formerly known as Jonathan Cheban) stopped by for dinner, Jaden Smith celebrated his birthday there, and supermodels including Hailey Bieber, Bella Hadid, and Adriana Lima shared photos from the South Beach hotspot. Sadly for fans, Planta’s Miami location closed in August 2025, just a few months after the restaurant group filed for Chapter 11 bankruptcy. But anyone who assumes the brand has lost its edge would be mistaken. While the vegan chain has been through financial struggles and shrunk from 17 locations to five, it is now positioning itself for a major comeback. Planta is all in on the US market, and new locations are coming. | Planta RELATED: Millennium, One of America’s Most Influential Vegan Restaurants, Is Closing Founded in Toronto in 2016 by chef David Lee and restaurateur Steven Salm, Planta is preparing for its next chapter. “Planta has been at the forefront of refined plant-based dining since day one,” Planta COO Daniel Moody told VegNews in an exclusive interview. “[It has] grown into a lifestyle brand that showcases how exciting, craveable, and globally inspired plant-forward dining can be.” The turnaround has not been easy. Recovering from bankruptcy required difficult decisions, and despite its Canadian roots, Planta will no longer have a presence in Canada. Instead, the company is doubling down on the US market, where it has already cultivated a loyal and highly engaged customer base. So, what’s next for Planta? We spoke with Moody to find out exactly that. From where they’re looking to expand (yep, new restaurants are once again on the horizon) to what the new menu will bring to the table to the strategy behind the brand’s comeback, we’ve got the lowdown on what’s next. Planta’s new menu is ‘globally-inspired.’ | Planta RELATED: The Only Vegan Business in This Food Hall Refused to Serve Dairy—and Paid for It VegNews: Canadian fans we
+
+--- Article 435 ---
+URL: https://www.aol.com/articles/popular-women-clothing-brand-closing-154258000.html
+Title: Popular women’s clothing brand is closing its fitting rooms inside US stores
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-06-09 16:06:34
+
+Erin Keller Tue, June 9, 2026 at 3:42 PM UTC 0 Brandy Melville , the controversial one-size-fits-all teen fashion brand, is closing its in-store fitting rooms nationwide, but has offered few details about why. The Independent confirmed Tuesday through a phone call with a corporate customer service agent about they new policy. Details, including the cause of the closures, were not shared. However, employees in Boston and Austin told the BBC last week that the change was prompted by " vandalism ," including chewing gum being stuck to fitting room curtains and walls. Customers had also complained that the curtains would not stay fully closed, according to the outlet. The Independent has contacted representatives for Brandy Melville by email for further information. Brandy Melville, founded in the 1980s, has long been criticized for its one-size, smaller-body-focused clothing and concerns about body image standards. A 2024 HBO documentary, "Brandy Hellville & The Cult of Fast Fashion," also alleged the company promoted eating disorders and sexualized young female employees. Brandy Melville has yet to announce an official reason as to why its nationwide fitting rooms are closed (AFP/Getty) The company has not publicly addressed the accusations in the documentary. The clothing company currently operates stores in 24 states and the District of Columbia, including Texas, California and Massachusetts. Advertisement With the closures swirling on social media, a TikTok user further fueled the gum theory in a video that has surpassed 3.8 million views , showing dried, stained residue on dressing room curtains and walls. "POV: the reason why we can't try on clothes at Brandy anymore," text over the video stated, though the poster said further stated that they did not know if the gum was the official reason for the closures. The move has sparked a storm of complaints from the brand's teenage fanbase, as one user stated, "It's not difficult for a multi-million dollar company to ge
+
+--- Article 436 ---
+URL: https://allears.net/2026/06/09/reservations-now-open-for-this-new-celebrity-hotel/
+Title: Reservations Now Open For This NEW Celebrity Hotel!
+Status hint: Opening | Industry: Hospitality
+Published: 2026-06-09 16:06:16
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://allears.net/2026/06/09/reservations-now-open-for-this-new-celebrity-hotel/]
+
+--- Article 437 ---
+URL: https://www.bradfordera.com/2026/06/09/coudersport-dunkin-celebrate-grand-opening/
+Title: COUDERSPORT: Dunkin’ to celebrate grand opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 16:05:56
+
+[Could not fetch: HTTPSConnectionPool(host='www.bradfordera.com', port=443): Read timed out. (read timeout=15)]
+
+--- Article 438 ---
+URL: https://patch.com/illinois/highlandpark/amy-mortons-new-speakeasy-1898-open-now-highland-park-report
+Title: Amy Mortons New Speakeasy 1898 Open Now In Highland Park: Report
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 15:59:03
+
+Business & Tech Amy Morton's New Speakeasy 1898 Open Now In Highland Park: Report A new speakeasy from Amy Morton has opened in Highland Park, according to Chicago Food Magazine. Rachel Barnes , Patch Staff Posted Tue, Jun  9, 2026 at 10:59 am CT HIGHLAND PARK, IL — Highland Park has a new late-night option. Amy Morton's newest project 1898 Speakeasy is a 25-seat cocktail hideaway and private event space tucked down a cobblestone alley near the restaurant’s main dining room. According to a report from Chicago Food Magazine, The new concept follows just months after the opening of The Barn Steakhouse Highland Park. According to the magazine, the name 1898 comes from the building’s original address and also marks the year the structure was completed. The space draws on Prohibition-era Chicago and Morton’s family history. Food centers on a domestic caviar service with paddlefish for $45, hackleback for $70 and Siberian for $120, each served with tater tots and crème fraîche. The menu also includes salted nuts and olives, mezze, butter-poached lobster rolls, rotating artisanal cheeses and seasonal sweets. Find out what's happening in Highland Park for free with the latest updates from Patch. A private room behind the main bar is designed for cocktail receptions, intimate celebrations and corporate gatherings. The space can accommodate about 60 seated guests or 80 standing, and private event bookings will begin this summer. 1898 is open Thursday through Saturday. Hours are 6 p.m. to 10 p.m. on Thursdays and 6 p.m. until late on Fridays and Saturdays. Walk-ins are encouraged. Find out what's happening in Highland Park for free with the latest updates from Patch. Read more from Chicago Food Magazine: New From Amy Morton: 1898 Speakeasy Now Open in Highland Park Get more local news delivered straight to your inbox. Sign up for free Patch newsletters and alerts. Share Join the conversation
+
+--- Article 439 ---
+URL: https://bizfayetteville.com/health-care/2026/6/9/cape-fear-valley-health-announces-opening-of-new-community-mental-health-center-in-dunn/5547
+Title: Cape Fear Valley Health announces opening of new Community Mental Health Center in Dunn
+Status hint: Opening | Industry: Pharmaceutical / Medical
+Published: 2026-06-09 15:57:33
+
+Photo provided by CFVH Cape Fear Valley Health is expanding access to behavioral health services with the opening of the new Community Mental Health Center – Dunn on June 22. Located at 805 Tilghman Drive, Suite A, the new clinic will provide comprehensive mental health services for children, teens, and adults throughout Dunn and the surrounding communities. The Community Mental Health Center – Dunn is staffed by board-certified psychiatrists and experienced advanced practice providers who offer diagnosis, treatment and ongoing support for a wide range of mental health conditions. The center provides compassionate, patient-centered care designed to meet individuals where they are and help them achieve lasting emotional and behavioral well-being. "Our goal is to make high-quality mental health care more accessible to the communities we serve," said Cape Fear Valley Health leadership in a press release. "The opening of this new location allows more patients and families to receive specialized behavioral health services close to home. The new location reflects Cape Fear Valley Health's ongoing commitment to expanding access to essential healthcare services across the region. For more information about services or to schedule an appointment, call (910) 984-3030 or visit www.capefearvalley.com.
+
+--- Article 440 ---
+URL: https://www.marthastewart.com/publix-opening-new-stores-soon-11993876
+Title: Publix Just Announced New Store Locations—See If One Will Open Near You
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 15:56:45
+
+[Could not fetch: 402 Client Error: Payment Required for url: https://www.marthastewart.com/publix-opening-new-stores-soon-11993876]
+
+--- Article 441 ---
+URL: https://www.prlog.org/13151086-mike-williams-golf-center-now-open-at-georgias-lanier-islands-resort.html
+Title: Mike Williams Golf Center Now Open at Georgia's Lanier Islands Resort
+Status hint: Opening | Industry: Hospitality
+Published: 2026-06-09 15:56:35
+
+1 2 3 4 5 The Mike Williams Golf Center at Lanier Islands Mike Williams Golf Center's New Event Pavilion The New 19th Hole Bar And Lounge At Lanier Islands Firepit Outside the Mike Williams Golf Center The Late Mike Williams of Lanier Islands Resort BUFORD, Ga. - June 9, 2026 - PRLog -- Earlier this spring, Lanier Islands Resort introduced a bold new experience on Lake Lanier's shores with the opening of The Six. Marking one of the nation's only night-lit par-3 courses, it has quickly emerged as one of Georgia's most talked-about golf attractions. The Six features six illuminated holes ranging from 56 to 91 yards, allowing guests to play well past sunset. Not one to rest on its laurels, the lakeside resort announced today the opening of the all-new Mike Williams Golf Center. The fully reimagined clubhouse is designed to serve as the new headquarters for golf at Lanier Islands Resort and a community gathering place for North Georgia. Investments in creating The Six and transforming the clubhouse totaled nearly $4M. Named in honor of former Lanier Islands Resort CEO Mike Williams, the new Golf Center reflects the resort's commitment to creating one of the Southeast's most unique golf destinations. Combined, The Six , the scenic 18-hole Legacy Golf Course, and the Golf Center represent a significant investment in the future of the sport at Lanier Islands Resort – fulfilling the vision behind the lakeside destination's New Era of Golf initiative. The project also marks the first major renovation and expansion of the Legacy Golf clubhouse since the award-winning course opened in 2009. "The opening of the Mike Williams Golf Center is about much more than a new clubhouse," said Lanier Islands Resort President Matthew Bowling. "It's another major step in our vision to create an experience unlike anything else in the Southeast. Whether you're playing 18 holes on our award-winning Legacy Golf Course, teeing it up under the lights at The Six , hosting a corporate outing, celeb
+
+--- Article 442 ---
+URL: https://www.themainstreetmouse.com/2026/06/09/vans-officially-opens-at-disney-springs-at-walt-disney-world-resort/
+Title: Vans Just Opened at Disney Springs and Its Founding City Has a Fun Disney Connection
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 15:53:11
+
+Vans Officially Opens at Disney Springs at Walt Disney World Resort . Disney Springs continues to expand its impressive lineup of shopping destinations, and now guests can add another iconic brand to their must-visit list. Vans , the legendary footwear and apparel company known for its skateboarding roots and laid-back California style, has officially opened its doors at Disney Springs. The new location brings a fresh mix of shoes, apparel, accessories, and classic Vans culture to Walt Disney World, giving guests even more reasons to spend time exploring Disney’s premier shopping, dining, and entertainment district. Vans Brings West Coast Style to Disney Springs The highly anticipated Vans location has officially opened in the Town Center section of Disney Springs , taking over the former Volcom storefront near World of Disney. The arrival of Vans adds another recognizable retail brand to Disney Springs’ ever-growing collection of stores and continues the destination’s evolution as one of Central Florida’s top shopping locations. For decades, Vans has been a staple of skateboarding, action sports, music, and streetwear culture. Founded in Anaheim, California, in 1966, the brand has become known worldwide for its classic silhouettes, including the Old Skool, Authentic, Sk8-Hi, and Checkerboard Slip-On styles. The company has also built a loyal following through collaborations with artists, musicians, entertainment brands, and pop culture franchises. What Guests Can Expect The new store offers a wide selection of Vans footwear, apparel, backpacks, hats, accessories, and seasonal merchandise for men, women, and children. Guests can browse the latest collections while finding both timeless classics and newly released designs. The addition of Vans is particularly fitting for Walt Disney World fans, as the brand has previously partnered with Disney on multiple footwear and apparel collections featuring beloved Disney characters and attractions. Many Disney fans have embra
+
+--- Article 443 ---
+URL: https://www.longmontleader.com/local-news/summit-tacos-expanding-to-university-hill-12394890
+Title: Summit Tacos Expanding to University Hill
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 15:46:09
+
+Summit Tacos Expanding to University Hill The Longmont Leader Skip to content Join our Newsletter Home Local News Summit Tacos Expanding to University Hill No opening date has been announced Alex Delia Jun 9, 2026 9:46 AM Share by Email Share on Facebook Share on X Share on LinkedIn Print Share via Text Message Summit Tacos via Instagram @summit_tacos Listen to this article 00:03:41 Summit Tacos plans to open a new location at 1149 13th St. on University Hill, according to signage recently installed at the property. The restaurant would take over the former home of Scrooge Sul, a bar that closed earlier this year after losing its liquor license following a Boulder police investigation involving allegations of underage alcohol service connected to a sexual assault and drugging case. The move represents a significant step for a locally grown business that started as a food truck before opening its first permanent restaurant in Longmont. Summit Tacos operates a restaurant at 237 Collyer St. in downtown Longmont and has built its brand around street tacos, traditional Mexican dishes, catering services and community events. The business regularly hosts live music, wrestling events, trivia nights and other gatherings, helping establish it as both a restaurant and entertainment venue. Axios Boulder first reported the planned opening and noted that no opening date has been announced. Because Summit Tacos would be considered a new business at the location, it could apply for a liquor license if ownership chooses to do so. The new location arrives during a period of significant turnover in Boulder’s restaurant industry. Recent months have brought a mix of openings, expansions, rebrandings and closures throughout Boulder County. Axios recently reported that Zodiac Subs is opening a second Boulder location, University Hill restaurant Kathi Klub has rebranded as The Yeti, and several new food businesses have launched in downtown Boulder. At the same time, some operators have clo
+
+--- Article 444 ---
+URL: https://www.yahoo.com/lifestyle/articles/8-classic-grocery-store-chains-154100491.html
+Title: 8 Classic Grocery Store Chains That Vanished for Good—and What Happened to Them
+Status hint: Opening | Industry: Grocery
+Published: 2026-06-09 15:41:00
+
+Key takeaways Powered by Yahoo Scout. Yahoo is using AI to generate key points from this article. This means the info may not always match what’s in the article. Reporting mistakes helps us improve the experience. Several iconic regional grocery store chains, such as A&P, Dominick's, and Bruno's, disappeared due to an inability to adapt to the changing grocery industry. Financial struggles, debt, and increasing competition from larger supermarket operators led to the downfall of classic grocery chains like Eagle Food Centers, Hinky Dinky, and Big Bear Stores. Despite disappearing from the grocery landscape, many former locations of these extinct grocery store chains continue to operate under different banners like Kroger, Jewel-Osco, and Giant. See more There was a time when grocery shopping was a far more local experience. Long before Walmart Supercenters, online grocery delivery and coast-to-coast supermarket giants, many Americans did their weekly shopping at regional chains that felt inseparable from their communities. Some sponsored youth sports teams, others became known for their bakeries or customer service, and many developed fiercely loyal followings that lasted for generations . At their peak, several of these chains were among the largest grocery operators in the country. Others dominated individual regions, becoming household names in cities and states where shoppers rarely considered going anywhere else. Yet despite decades of success, each eventually disappeared from the grocery landscape. 😋😋 SIGN UP to get delicious recipes, handy kitchen hacks & more in our daily Pop Kitchen newsletter 🍳 🍔 Advertisement Advertisement The reasons varied. Some chains struggled to adapt as the supermarket industry evolved. Others became victims of mergers and acquisitions that erased familiar brands. Several were hurt by debt, corporate restructuring or increased competition from rapidly expanding rivals. In many cases, the stores themselves survived, while the names o
+
+--- Article 445 ---
+URL: https://parade.com/food/classic-grocery-chains-extinct
+Title: The Real Reason These 8 Classic Grocery Store Chains Went Extinct
+Status hint: Closing | Industry: Grocery
+Published: 2026-06-09 15:41:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://parade.com/food/classic-grocery-chains-extinct]
+
+--- Article 446 ---
+URL: https://www.businessdebut.com/hummus-republic-opening-first-loganville-location/
+Title: Hummus Republic Opening First Loganville Location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 15:39:55
+
+LOGANVILLE, GA – Hummus Republic is planning a soft opening June 17 at 4743 Atlanta Hwy Suite 120, Loganville, GA 30052 , franchisee Sushmitha Konduru told Business Debut in a phone interview. The fast-casual Mediterranean concept will open for regular customer service starting June 20, Konduru said. What to Expect The Loganville restaurant is the first Hummus Republic location for Konduru. Staff will train during the soft opening period June 17 — June 19 while serving guests, Konduru told Business Debut. She said the team aims to have operations fully in place by the time regular service begins June 20. Hummus Republic is a Mediterranean fast-casual brand. They specialize in healthy Mediterranean dishes like their Gyro Garden Bowl, Fire Shawarma Bowl, and their Falafel Fusion Bowl. Additionally, they offer chicken sandwiches, burgers, fries and more. Opening Timeline Soft opening is scheduled for June 17 — June 19. Regular daily service is set to begin June 20. Konduru said the team is targeting a grand opening event sometime in July. An exact date for the grand opening ceremony is to be announced. Hours Hummus Republic plans to open seven days a week, Konduru told Business Debut. Daily hours are scheduled for 11 a.m. — 8 p.m. Follow for More Check out their website and Facebook . Drive community buzz with Business Debut We aim to create local buzz before you even open. Business Debut | New Business Openings in the Southeast Ross McWaters More openings in Loganville Neveria La Michoacana 5 Estrellas Expanding to Loganville in 2026 The Loganville location will feature savory and sweet menu items. Read more Christopher’s Bar and Grill Opening on October 10th in Loganville Caribbean favorites like oxtail, jerk pork, and curried goat will headline the menu as Christopher’s Bar and Grill opens soon in Loganville. Read more Vgan Corner Opening in Wynwood with Vegan Deli and Market Plant-based foods and groceries will be for sale in the new business. Read more Baltimore C
+
+--- Article 447 ---
+URL: https://swimireland.ie/2026/06/09/awards-night-nominations-now-open/
+Title: Awards Night Nominations Now Open!
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 15:38:22
+
+We are delighted to announce that nominations for our 2026 Awards Night are now officially open! The Awards night will be taking place on 14th November 2026 in the Carlton Hotel, Blanchardstown, Dublin 15. This is your opportunity as a member of Swim Ireland to recognise and celebrate the outstanding individuals and clubs who have made a real impact throughout the season. With the 2025–2026 season still fresh in everyone’s minds, now is the perfect time to highlight those who went above and beyond, both in the pool and beyond. We encourage all clubs to take this opportunity to nominate deserving Athletes, Volunteers, Coaches, and Officials who have shown dedication, excellence, and true sporting spirit. Whether it’s outstanding performance, commitment, improvement, or contribution to the sport – this is your chance to highlight those who made a difference. Let’s come together to celebrate the achievements within our Aquatic Sports community and ensure those who deserve recognition are honoured. Further details on categories and submission deadlines can be found in the Nomination form. Submit your nominations here . Tickets to attend the Awards Night are now available. Come along and celebrate the best of our swimming community. Book your ticket here. Swim Ireland Author posts Related Posts Employment Homepage June 11, 2026 We’re Hiring – Education Administrator by Swim Ireland Employment Homepage June 10, 2026 We’re Hiring – Office Manager by Swim Ireland Homepage Pool Operations June 5, 2026 Pool Operators Conference by Swim Ireland
+
+--- Article 448 ---
+URL: https://nypost.com/2026/06/09/lifestyle/largest-in-n-out-on-earth-opens-on-vegas-strip-today/
+Title: Absolutely colossal Vegas In-N-Out Burger opens on the strip today, will be the chain’s largest location on Earth
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 15:31:00
+
+See more of our coverage in your search results. Add The California Post on Google California’s favorite burger chain is doubling down on the Las Vegas Strip. In-N-Out Burger will open its newest restaurant on Tuesday at BLVD Las Vegas, the flashy retail and entertainment complex at 3747 S. Las Vegas Blvd — bringing another massive serving of Double-Doubles, Animal Fries and shakes to one of America’s busiest tourist destinations. 5 In-N-Out Burger’s newest Las Vegas Strip location opens at 10:30 a.m. Tuesday. Instagram/innoutroadtrip 5 The Irvine-based burger chain’s new Strip location sits at 3747 S. Las Vegas Blvd. Instagram/innoutroadtrip Sign up for the California Morning Report newsletter California's top news, sports and entertainment delivered to your inbox every day. Thanks for signing up! The Irvine-based chain said the new Strip restaurant will have indoor seating for 170 guests and an outdoor patio for another 50. The roughly 8,000-square-foot restaurant also features a 2,500-square-foot terrace, according to Neon , making it likely the largest In-N-Out location in the chain’s footprint. The new restaurant will be managed by Travis Barendt, a 15-year In-N-Out veteran, the company said. The location is expected to employ about 70 workers, with a starting wage of $18.25 per hour. The company said it will continue hiring new associates in the months ahead. The new In-N-Out opens daily at 10:30 a.m. The opening gives the Las Vegas Strip another outpost of the wildly popular California-born burger chain , which already operates another location at The Linq. 5 The new In-N-Out at BLVD Las Vegas has indoor seating for 170 guests and an outdoor patio for 50 more. Instagram/innoutroadtrip 5 The massive new In-N-Out gives the Las Vegas Strip a second outpost of the California-born chain. Instagram/innoutroadtrip 5 The new restaurant is expected to employ about 70 associates, with starting wages at $18.25 per hour. Instagram/innoutroadtrip In-N-Out was founded in 1
+
+--- Article 449 ---
+URL: https://www.27east.com/southampton-press/news/business-news/article_73aaf790-3dae-4d80-8d9d-a2a877f2d56f.html
+Title: Tiny’s Famous Eats Holds Grand Opening in Riverside
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 15:30:00
+
+Facebook Twitter WhatsApp SMS Email Facebook Twitter WhatsApp SMS Email Print Copy article link Save Growing up, Tania Edwards’s mother told her she’d be famous. “I remember being a little girl, and I always did well in school,” said Tania, who is known affectionately as “Tiny” for her petite stature and being the youngest of six. “I always wanted to make my mom proud. We had a really close relationship. I remember her saying, ‘You know, you’re going to be very well-known.’ She was, like, ‘Your name is going to be up in lights one day.’” Now, thanks to hard work and collaboration with her son, Marcus Edwards, Tiny’s mother’s prediction has come true. Their new soul food restaurant, Tiny’s Famous Eats, has already made a name for itself, if a recent packed ribbon-cutting event is anything to go by. Tiny’s Famous Eats opened in Riverside at the beginning of the year, but Edwards and Tiny wanted to get everything right. On Saturday, Tiny’s held its official ribbon-cutting ceremony and welcomed in a hungry — and satisfied — crowd. Edwards, an East Hampton High School graduate, started his career as a personal trainer. He never envisioned himself opening a restaurant. “I moved to L.A. I was there for eight years, and I was doing personal training. It was going well, but not enough,” Edwards said in a recent interview. He said he considered opening a restaurant in L.A. before settling on coming back to New York and opening in the small, but effective, Riverside spot. “I wasn’t busy enough … We just decided to give it a go,” said Edwards. “I’ve never done this before. I’ve had other businesses and stuff, but never restaurants. I never really cooked before. I could barely boil water.” Luckily, Tiny was more than willing to help. Tiny had already been cooking for her family for years, and the cuisine guests will find at Tiny’s — soul food favorites such as fried chicken wings, collard greens, and mac and cheese — is the same food she’d been cooking her entire life. She’d eve
+
+--- Article 450 ---
+URL: https://www.pennlive.com/life/2026/06/casino-operator-closes-more-locations-cuts-jobs.html?outputType=amp
+Title: Casino operator closes more locations, cuts jobs
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-06-09 15:27:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.pennlive.com/life/2026/06/casino-operator-closes-more-locations-cuts-jobs.html?outputType=amp]
