@@ -1,361 +1,185 @@
 {
-  "last_updated": "2026-06-10",
+  "last_updated": "2026-06-16",
   "data": [
     {
-      "store_name": "Food Street",
-      "location": "103 Silas Deane Highway, Wethersfield, CT",
+      "store_name": "Fairfield Inn & Suites",
+      "location": "East Hartford, Connecticut",
       "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "open",
+      "short_description": "Fairfield Inn & Suites is a Marriott-branded hotel. The article reports it has opened in East Hartford, Connecticut. Article content could not be fully retrieved due to a 403 error; details confirmed only from headline.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/east-hartford-scoop-fairfield-inn-suites-towneplace-suites-open-in-east-hartford",
+      "published_date": "Not specified"
+    },
+    {
+      "store_name": "TownePlace Suites",
+      "location": "East Hartford, Connecticut",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "open",
+      "short_description": "TownePlace Suites is a Marriott-branded extended-stay hotel. The article reports it has opened in East Hartford alongside the Fairfield Inn & Suites. Article content could not be fully retrieved due to a 403 error; details confirmed only from headline.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/east-hartford-scoop-fairfield-inn-suites-towneplace-suites-open-in-east-hartford",
+      "published_date": "Not specified"
+    },
+    {
+      "store_name": "Jersey Mike's",
+      "location": "135 West Road, Ellington, Connecticut",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "sets opening date",
+      "short_description": "Jersey Mike's is a national sandwich chain. The article reports the Ellington location has set an opening date at 135 West Road. Article content could not be fully retrieved due to a 403 error; address confirmed from CT Scoop's own earlier snippet on the same location.",
+      "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/ellington-scoop-jersey-mikes-sets-opening-date",
+      "published_date": "Not specified"
+    },
+    {
+      "store_name": "Connecticut Golf Land",
+      "location": "Vernon, Connecticut",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "coming soon",
+      "short_description": "Connecticut Golf Land is a family entertainment complex in Vernon. The article reports a new attraction is coming soon to the existing site. Article content could not be fully retrieved due to a 403 error; details confirmed only from headline.",
+      "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/vernon-scoop-new-attraction-coming-soon-to-connecticut-golf-land",
+      "published_date": "Not specified"
+    },
+    {
+      "store_name": "Dairy Cream",
+      "location": "Windsor Locks, Connecticut",
+      "event_type": "N/A",
       "event_date": "N/A",
-      "status": "Coming Soon",
-      "short_description": "Pakistani fast-casual street food brand opening in 2,400 sq ft vacant space in plaza with Family Dollar and O'Reilly Auto Parts; building permits received late May, construction anticipated soon",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/wethersfield-scoop-food-street-coming-soon-to-silas-deane",
-      "published_date": "6/9/2026"
+      "status": "N/A",
+      "short_description": "Dairy Cream is an ice cream shop in Windsor Locks. The article covers its recognition as the Best Ice Cream Shop in Hartford County, which is an award — not an opening, closing, or remodel event. No qualifying business event is described.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/windsor-locks-scoop-dairy-cream-in-windsor-locks-voted-best-ice-cream-shop-in-hartford-county",
+      "published_date": "Not specified"
     },
     {
-      "store_name": "Cava Restaurant (Mamma Mia Rooftop)",
-      "location": "1615 West Street, Southington, CT",
-      "event_type": "New Experience/Opening",
-      "event_date": "Coming weeks",
-      "status": "Opening in the coming weeks",
-      "short_description": "Rooftop transformed into Mamma Mia-inspired dining experience; expected to open in coming weeks and remain through end of rooftop season",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/southington-scoop-cava-restaurant-to-debut-mamma-mia-themed-rooftop-experience",
-      "published_date": "6/9/2026"
-    },
-    {
-      "store_name": "Encompass Health",
-      "location": "596-614 East Main Street, Branford, CT",
-      "event_type": "Opening (Planned)",
-      "event_date": "N/A",
-      "status": "Planned/Proposed",
-      "short_description": "Proposed 48-bed inpatient rehabilitation facility with potential Phase 2 of 30 additional beds; to be heard at Planning & Zoning Commission on June 23, 2026",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/branford-scoop-new-in-patient-medical-facility-planned-for-branford",
-      "published_date": "6/9/2026"
-    },
-    {
-      "store_name": "Kaos Speakeasy • Steakhouse • Pizza House",
-      "location": "354 Woodmont Avenue, Milford, CT",
-      "event_type": "Closure",
-      "event_date": "N/A",
-      "status": "Closed until further notice",
-      "short_description": "Announced indefinite closure via social media after approximately 3 months of operation; opened in March 2026",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-kaos-speakeasy-steakhouse-announces-indefinte-closure-after-3-months",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Whole Foods Market",
-      "location": "2061 Highland Avenue, Cheshire, CT",
+      "store_name": "7th Street Burger",
+      "location": "1054 Chapel Street, New Haven, Connecticut",
       "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
+      "event_date": "June 29",
+      "status": "planning June 29th opening",
+      "short_description": "7th Street Burger is a smash burger chain originating in New York City. The article reports the restaurant is planning a June 29th opening at 1054 Chapel Street in New Haven, the former Avocado Haven location. Article content could not be fully retrieved due to a 403 error; address and prior context confirmed from CT Scoop's own earlier snippet about the same location.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/new-haven-scoop-7th-street-burger-planning-june-29th-opening-in-new-haven",
+      "published_date": "Not specified"
     },
     {
-      "store_name": "J Crew Factory",
-      "location": "2061 Highland Avenue, Cheshire, CT",
+      "store_name": "Farmers Tavern",
+      "location": "Southbury, Connecticut",
       "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
+      "event_date": "Not specified",
+      "status": "coming soon",
+      "short_description": "Farmers Tavern is a restaurant described as coming soon to Southbury. The article reports it is coming soon to Southbury, Connecticut. Article content could not be fully retrieved due to a 403 error; details confirmed only from headline.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/southbury-scoop-farmers-tavern-is-coming-soon-to-southbury",
+      "published_date": "Not specified"
     },
     {
-      "store_name": "Lovesac",
-      "location": "2061 Highland Avenue, Cheshire, CT",
+      "store_name": "Just Salad",
+      "location": "1460 Boston Post Road, Milford, Connecticut",
       "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
+      "event_date": "Not specified",
+      "status": "opens in Milford",
+      "short_description": "Just Salad is a fast-casual salad, wrap, and warm bowl chain. The article reports the location has opened at 1460 Boston Post Road in Milford, the former Boston Market space. Article content could not be fully retrieved due to a 403 error; address confirmed from CT Scoop's own earlier \"coming soon\" snippet for the same location.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-just-salad-opens-in-milford",
+      "published_date": "Not specified"
     },
     {
-      "store_name": "Chase Bank",
-      "location": "2061 Highland Avenue, Cheshire, CT",
+      "store_name": "Luca's Beach Kitchen",
+      "location": "99 Calf Pasture Beach Road, Norwalk, Connecticut",
       "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
+      "event_date": "Not specified",
+      "status": "opens new beach-side eatery",
+      "short_description": "Luca's Beach Kitchen is a coastal kitchen and dining concept in Norwalk. The article reports it has opened at 99 Calf Pasture Beach Road, the former site of Ripka's Beach Café & The Dugout. Article content could not be fully retrieved due to a 403 error; address confirmed from CT Scoop's own earlier snippet for the same location.",
+      "article_link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-lucas-beach-kitchen-opens-new-beach-side-eatery",
+      "published_date": "Not specified"
+    },
+    {
+      "store_name": "The Main Moose",
+      "location": "94 Route 66, Columbia, Connecticut",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "will reopen its doors",
+      "short_description": "The Main Moose is a roadside eatery in Columbia serving burgers, seafood, and ice cream. The article reports that The Main Moose will reopen its doors after a previous closure. Article content could not be fully retrieved due to a 403 error; address confirmed from external sources referencing the same location.",
+      "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/columbia-scoop-the-main-moose-will-reopen-its-doors",
+      "published_date": "Not specified"
+    },
+    {
+      "store_name": "Run Manchester by Kelley's Pace",
+      "location": "Downtown Manchester, Connecticut",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "coming soon",
+      "short_description": "Run Manchester by Kelley's Pace is a running store described as coming soon to Downtown Manchester. The article reports it is coming soon to downtown Manchester, Connecticut. Article content could not be fully retrieved due to a 403 error; details confirmed only from headline.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-run-manchester-by-kelleys-pace-coming-soon-to-downtown-manchester",
+      "published_date": "Not specified"
     },
     {
       "store_name": "Starbucks",
-      "location": "2061 Highland Avenue, Cheshire, CT",
+      "location": "286 Branford Road, North Branford, Connecticut",
       "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
+      "event_date": "Not specified",
+      "status": "delays opening",
+      "short_description": "Starbucks is a national coffeehouse chain. The article reports the North Branford location at 286 Branford Road has delayed its opening. Article content could not be fully retrieved due to a 403 error; address confirmed from CT Scoop's own earlier snippet for the same location.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/north-branford-scoop-starbucks-delays-opening",
+      "published_date": "Not specified"
     },
     {
-      "store_name": "Blender Bar",
-      "location": "2061 Highland Avenue, Cheshire, CT",
+      "store_name": "Beach Donut Shop",
+      "location": "Clinton, Connecticut",
       "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Saybrook Home",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Club Pilates",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "BIRDCODE",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Shake Shack",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Verizon",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Harvey & Lewis Opticians",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Chipotle",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Barnes & Noble",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "TJ Maxx",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Choice Pet",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Hartford Healthcare - Go Health Urgent Care",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Sephora",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Atlantis Gas Station",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Dunkin",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Late 2025",
-      "status": "Open",
-      "short_description": "Now open at The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Blu Pointe Prime Steak & Seafood",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Fall 2026",
-      "status": "Coming Soon — Opening this fall",
-      "short_description": "Coming soon to The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Mercato Italian Kitchen & Bar",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "Summer 2026",
-      "status": "Coming Soon — Opening this summer",
-      "short_description": "Coming soon to The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Ramen & Bao (R&B)",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "N/A",
-      "status": "Coming Soon — Stay tuned for an opening announcement",
-      "short_description": "Coming soon to The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Paris Baguette",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "N/A",
-      "status": "Coming Soon — Stay tuned for an opening announcement",
-      "short_description": "Coming soon to The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Oasis Nails & Spa",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "N/A",
-      "status": "Coming Soon",
-      "short_description": "Coming soon to The Shops at Stone Bridge; previously announced as 90's Nails",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Hand & Stone Massage & Facial Spa",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "N/A",
-      "status": "Coming Soon",
-      "short_description": "Coming soon to The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Kay Jewelers",
-      "location": "2061 Highland Avenue, Cheshire, CT",
-      "event_type": "Opening",
-      "event_date": "N/A",
-      "status": "Coming Soon",
-      "short_description": "Coming soon to The Shops at Stone Bridge",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-update-on-the-shops-at-stone-bridge-here-is-what-is-open-and-what-is-coming-soon",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "MOTW Coffee & Pastries",
-      "location": "467 West Avenue, Norwalk, CT",
-      "event_type": "Opening",
-      "event_date": "June 13, 2026",
-      "status": "Opening on Saturday",
-      "short_description": "Halal family-owned coffee and pastry shop soft opening June 13 at 10am in the Piper mixed-use complex; 18th location in chain",
-      "article_link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-motw-coffee-pastries-opening-on-saturday",
-      "published_date": "6/8/2026"
-    },
-    {
-      "store_name": "Brew Lab Café",
-      "location": "1949 Silas Deane Highway, Rocky Hill, CT",
-      "event_type": "Opening",
-      "event_date": "June 13, 2026",
-      "status": "Soft Opening Saturday, June 13th",
-      "short_description": "Vietnamese-influenced coffee shop soft opening June 13 from 8am–3pm; located in former Dunkin space",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/rocky-hill-scoop-brew-lab-cafe-sets-opening-date-in-rocky-hill",
-      "published_date": "6/7/2026"
-    },
-    {
-      "store_name": "Plan B Burger Bar",
-      "location": "1638 Boston Post Road, Milford, CT",
-      "event_type": "Closure",
-      "event_date": "June 14, 2026",
-      "status": "Closing",
-      "short_description": "Final day of operation June 14, 2026; part of Milford Marketplace; chain will retain Simsbury and Glastonbury locations",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-plan-b-burger-bar-closing",
-      "published_date": "6/7/2026"
-    },
-    {
-      "store_name": "O'Reilly Auto Parts",
-      "location": "300 Cooley Street, Springfield, MA",
-      "event_type": "Opening (Planned)",
-      "event_date": "N/A",
-      "status": "Eyeing new location",
-      "short_description": "Leased former Casa Vallarta space at Five Town Plaza; would be third Springfield location; ~7,500 sq ft; unclear if reuse or rebuild",
-      "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/springfield-scoop-oreilly-auto-parts-eyeing-new-springfield-location",
-      "published_date": "6/7/2026"
+      "event_date": "Not specified",
+      "status": "reopening in former Friendly's",
+      "short_description": "Beach Donut Shop is a handcrafted donut and breakfast shop in Clinton, Connecticut. The article reports it is reopening in the former Friendly's location in Clinton. Article content could not be fully retrieved due to a 403 error; details confirmed only from headline.",
+      "article_link": "https://www.theconnecticutscoop.com/all-middlesex-county-posts/clinton-scoop-beach-donut-shop-reopening-in-former-friendlys",
+      "published_date": "Not specified"
     }
   ],
   "non_working": [
     {
+      "identifier": "Article 1",
+      "reason": "403 Forbidden — theconnecticutscoop.com (body text absent; headline + search fallback used)"
+    },
+    {
+      "identifier": "Article 2",
+      "reason": "403 Forbidden — theconnecticutscoop.com (body text absent; headline + search fallback used)"
+    },
+    {
+      "identifier": "Article 3",
+      "reason": "403 Forbidden — theconnecticutscoop.com (body text absent; headline + search fallback used)"
+    },
+    {
+      "identifier": "Article 4",
+      "reason": "403 Forbidden — theconnecticutscoop.com (body text absent; headline + search fallback used)"
+    },
+    {
+      "identifier": "Article 5",
+      "reason": "403 Forbidden — theconnecticutscoop.com (body text absent; headline + search fallback used)"
+    },
+    {
+      "identifier": "Article 6",
+      "reason": "403 Forbidden — theconnecticutscoop.com (body text absent; headline + search fallback used)"
+    },
+    {
       "identifier": "Article 7",
-      "reason": "https://www.theconnecticutscoop.com/all-tolland-county-posts/ellington-scoop-kloters-ice-cream-barn-voted-best-ice-cream-shop-in-tolland-county — No qualifying business event (award/recognition story only, no opening or closure)"
+      "reason": "403 Forbidden — theconnecticutscoop.com (body text absent; headline + search fallback used)"
+    },
+    {
+      "identifier": "Article 8",
+      "reason": "403 Forbidden — theconnecticutscoop.com (body text absent; headline + search fallback used)"
+    },
+    {
+      "identifier": "Article 9",
+      "reason": "403 Forbidden — theconnecticutscoop.com (body text absent; headline + search fallback used)"
+    },
+    {
+      "identifier": "Article 10",
+      "reason": "403 Forbidden — theconnecticutscoop.com (body text absent; headline + search fallback used)"
+    },
+    {
+      "identifier": "Article 11",
+      "reason": "403 Forbidden — theconnecticutscoop.com (body text absent; headline + search fallback used)"
+    },
+    {
+      "identifier": "Article 12",
+      "reason": "403 Forbidden — theconnecticutscoop.com (body text absent; headline + search fallback used)"
     }
   ]
 }
