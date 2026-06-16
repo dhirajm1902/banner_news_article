@@ -1532,7 +1532,8 @@
     // â•â• STORE NEWS â•â•
     async function loadDoneKeys() {
         try {
-            const { data } = await _sb.from('article_marks').select('article_key').eq('is_done', true);
+            const { data, error } = await _sb.from('article_marks').select('article_key').eq('is_done', true);
+            if (error) { console.error('loadDoneKeys DB error:', error); return; }
             doneKeys = new Set((data || []).map(m => m.article_key));
         } catch (e) {
             console.error('loadDoneKeys:', e);
@@ -1710,7 +1711,7 @@
         histVisible = PAGE_SIZE;
         filteredHistoricalArticles = historicalArticles.filter(a => {
             const ms     = !term || ['Store','Analyst','Title','Summary'].some(k => (a[k] || '').toLowerCase().includes(term));
-            const isDone = localStorage.getItem(histDoneKey(a)) === 'true';
+            const isDone = doneKeys.has(histDoneKey(a));
             const matchDone = doneF === 'all' || (doneF === 'done' ? isDone : !isDone);
             return ms
                 && (analystF === 'all' || a.Analyst === analystF)
@@ -1727,7 +1728,7 @@
         document.getElementById('histTotal').textContent    = filteredHistoricalArticles.length;
         document.getElementById('histOpenings').textContent = filteredHistoricalArticles.filter(a => a.Type === 'Opening').length;
         document.getElementById('histClosings').textContent = filteredHistoricalArticles.filter(a => a.Type === 'Closing').length;
-        document.getElementById('histDoneCount').textContent = historicalArticles.filter(a => localStorage.getItem(histDoneKey(a)) === 'true').length;
+        document.getElementById('histDoneCount').textContent = historicalArticles.filter(a => doneKeys.has(histDoneKey(a))).length;
         document.getElementById('histStatsContainer').style.display = 'grid';
     }
 
@@ -1804,21 +1805,38 @@
         const isDone = doneKeys.has(key);
         if (isDone) {
             doneKeys.delete(key);
-            try { await _sb.from('article_marks').delete().eq('article_key', key); } catch(e) {}
+            updateHistStats();
+            renderHistoricalTable();
+            renderStoreArticles();
+            const { error: delErr } = await _sb.from('article_marks').delete().eq('article_key', key);
+            if (delErr) {
+                console.error('article_marks delete failed:', delErr);
+                doneKeys.add(key);
+                updateHistStats();
+                renderHistoricalTable();
+                renderStoreArticles();
+                showToast('Failed to save: ' + (delErr.message || delErr.code || 'DB error'), 'error');
+            }
         } else {
             doneKeys.add(key);
-            try {
-                await _sb.from('article_marks').upsert({
-                    article_key: key,
-                    is_done: true,
-                    marked_by: _currentUserEmail,
-                    marked_at: new Date().toISOString()
-                }, { onConflict: 'article_key' });
-            } catch(e) {}
+            updateHistStats();
+            renderHistoricalTable();
+            renderStoreArticles();
+            const { error: upsertErr } = await _sb.from('article_marks').upsert({
+                article_key: key,
+                is_done: true,
+                marked_by: _currentUserEmail,
+                marked_at: new Date().toISOString()
+            }, { onConflict: 'article_key' });
+            if (upsertErr) {
+                console.error('article_marks upsert failed:', upsertErr);
+                doneKeys.delete(key);
+                updateHistStats();
+                renderHistoricalTable();
+                renderStoreArticles();
+                showToast('Failed to save: ' + (upsertErr.message || upsertErr.code || 'DB error'), 'error');
+            }
         }
-        updateHistStats();
-        renderHistoricalTable();
-        renderStoreArticles();
     }
 
     function renderStoreArticles() {
