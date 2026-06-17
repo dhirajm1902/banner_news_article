@@ -1892,6 +1892,8 @@
 
         const articleKey = 'done-' + (article.Link || article.Title || 'x' + Math.random().toString(36).slice(2));
         const isDone = doneKeys.has(articleKey);
+        if (isDone) console.log('[MATCH] key:', articleKey);
+        else if (doneKeys.size > 0 && article === filteredStoreArticles[0]) console.log('[NO MATCH] first article key:', articleKey, '| sample doneKey:', [...doneKeys][0]);
         const _seenKey = article.Link || article.Title || '';
         const articleIsNew = isNew(article.Published, _seenKey);
         const newBadge = articleIsNew ? `<span class="badge-new"><i class="fas fa-bolt" style="font-size:0.5rem"></i>NEW</span>` : '';
