@@ -1533,8 +1533,10 @@
     async function loadDoneKeys() {
         try {
             const { data, error } = await _sb.from('article_marks').select('article_key').eq('is_done', true);
+            console.log('[loadDoneKeys] data:', data, '| error:', error);
             if (error) { console.error('loadDoneKeys DB error:', error); return; }
             doneKeys = new Set((data || []).map(m => m.article_key));
+            console.log('[loadDoneKeys] doneKeys size:', doneKeys.size);
         } catch (e) {
             console.error('loadDoneKeys:', e);
         }
