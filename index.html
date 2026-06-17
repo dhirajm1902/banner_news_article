@@ -3259,7 +3259,6 @@
 
     window.addEventListener('DOMContentLoaded', () => {
         switchTab('store');
-        loadStoreData();
     });
 
     // â”€â”€ PERSONAL PROGRESS BANNER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -3630,6 +3629,9 @@
         document.documentElement.style.visibility = 'visible';
 
         _currentUserEmail = session.user.email;
+
+        // Load data now that auth is confirmed — ensures loadDoneKeys uses authenticated role
+        loadStoreData();
 
         // Display logged-in user email in nav
         const el = document.getElementById('loggedInUser');
