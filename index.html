@@ -3290,7 +3290,7 @@
                 const name = a.Analyst || 'Unknown';
                 if (!analystMap[name]) analystMap[name] = { assigned: 0, done: 0, lastActivity: null };
                 analystMap[name].assigned++;
-                const mk = doneMap['done-' + a.Link];
+                const mk = doneMap['done-' + (a.Link || (a.Store + '|' + a.Title))];
                 if (mk) {
                     analystMap[name].done++;
                     if (!analystMap[name].lastActivity || mk.marked_at > analystMap[name].lastActivity)
@@ -3437,7 +3437,7 @@
         for (const m of marks) { if (m.is_done) doneMap[m.article_key] = m; }
 
         const total   = historicalArticles.length;
-        const done    = historicalArticles.filter(a => doneMap['done-' + a.Link]).length;
+        const done    = historicalArticles.filter(a => doneMap['done-' + (a.Link || (a.Store + '|' + a.Title))]).length;
         const pending = total - done;
         const pct     = total > 0 ? Math.round(done / total * 100) : 0;
 
