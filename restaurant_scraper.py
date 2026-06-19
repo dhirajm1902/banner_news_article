@@ -87,17 +87,31 @@ HEADERS = {
 }
 
 # ── Scrape post listing ───────────────────────────────────────────────────────
+MAX_LOAD_RETRIES = 3
+
 driver = get_driver()
 
 try:
-    try:
-        driver.get(URL)
-    except (TimeoutException, WebDriverException) as err:
-        print(f"⚠️  Page load timeout or driver error: {err}")
+    page_load_ok = False
+    for attempt in range(1, MAX_LOAD_RETRIES + 1):
         try:
-            driver.execute_script("window.stop();")
-        except Exception:
-            pass
+            driver.get(URL)
+            page_load_ok = True
+            break
+        except Exception as err:
+            print(f"⚠️  Page load attempt {attempt}/{MAX_LOAD_RETRIES} failed: {type(err).__name__}: {err}")
+            try:
+                driver.execute_script("window.stop();")
+            except Exception:
+                pass
+            if attempt < MAX_LOAD_RETRIES:
+                print(f"   Retrying in 10s …")
+                time.sleep(10)
+
+    if not page_load_ok:
+        print("❌  Site unreachable after all retries — exiting gracefully.")
+        driver.quit()
+        exit(0)
 
     try:
         WebDriverWait(driver, 15).until(
