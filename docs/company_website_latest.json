@@ -1,5 +1,5 @@
 {
-  "last_updated": "June 16, 2026 18:47 UTC",
+  "last_updated": "June 19, 2026 14:02 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -63,6 +63,12 @@
     },
     {
       "company": "Dogtopia",
+      "address": "931 N Wendover Rd, Charlotte, North Carolina 28211, United States",
+      "opening_date": "",
+      "link": "https://www.dogtopia.com/locations/charlotte-wendover/"
+    },
+    {
+      "company": "Dogtopia",
       "address": "500 District Dr # 6, Berkeley Heights, New Jersey 07922, United States",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/berkeley-heights-the-park/"
@@ -75,7 +81,7 @@
     },
     {
       "company": "Dogtopia",
-      "address": "17422 Airline Hwy, Prairieville, Louisiana 70769, United States",
+      "address": "17424 Airline Hwy, Prairieville, Louisiana 70769, United States",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/prairieville/"
     },
@@ -243,12 +249,6 @@
     },
     {
       "company": "Burlington",
-      "address": "Ohio",
-      "opening_date": "",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
       "address": "Oklahoma",
       "opening_date": "",
       "link": ""
@@ -333,12 +333,6 @@
     },
     {
       "company": "Burlington",
-      "address": "Texas",
-      "opening_date": "",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
       "address": "Utah",
       "opening_date": "",
       "link": ""
@@ -354,54 +348,6 @@
       "address": "Wisconsin",
       "opening_date": "",
       "link": ""
-    },
-    {
-      "company": "Five Below",
-      "address": "251 N Broadway, Pennsville, NJ, 08070",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/nj/pennsville/251-n-broadway/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "4222 E Ontario Ranch Rd, Ontario, CA, 91762",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ca/ontario/4222-e-ontario-ranch-rd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "3060 Baldwin Park Blvd, Baldwin Park, CA, 91706",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ca/baldwin-park/3060-baldwin-park-blvd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "3625 Elkhorn Blvd, North Highlands, CA, 95660",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ca/north-highlands/3625-elkhorn-blvd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "1855 Main St, Ramona, CA, 92065",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ca/ramona/1855-main-st/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "2400 Las Posas Road, Camarillo, CA, 93010",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ca/camarillo/2400-las-posas-road/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "1100 S Mount Vernon, Colton, CA, 92324",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ca/colton/1100-s-mount-vernon/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "8447 Alondra Blvd, Paramount, CA, 90723",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ca/paramount/8447-alondra-blvd/coming-soon"
     },
     {
       "company": "Five Below",
@@ -429,12 +375,6 @@
     },
     {
       "company": "Five Below",
-      "address": "11610 E Hwy 80, Forney, TX, 75126",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/tx/forney/11610-e-hwy-80/coming-soon"
-    },
-    {
-      "company": "Five Below",
       "address": "4735 Hwy 6 N, Houston, TX, 77084",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/tx/houston/4735-hwy-6-n/coming-soon"
@@ -453,27 +393,51 @@
     },
     {
       "company": "Five Below",
+      "address": "19 Litchfield Plaza, Litchfield, IL, 62056",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/il/litchfield/19-litchfield-plaza/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "113 Northshore Blvd, Slidell, LA, 70460",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/la/slidell/113-northshore-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "8447 Alondra Blvd, Paramount, CA, 90723",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/paramount/8447-alondra-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "3625 Elkhorn Blvd, North Highlands, CA, 95660",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/north-highlands/3625-elkhorn-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "1855 Main St, Ramona, CA, 92065",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/ramona/1855-main-st/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "2400 Las Posas Road, Camarillo, CA, 93010",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/camarillo/2400-las-posas-road/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "1100 S Mount Vernon, Colton, CA, 92324",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/colton/1100-s-mount-vernon/coming-soon"
+    },
+    {
+      "company": "Five Below",
       "address": "1017 W 7th St, Auburn, IN, 46706",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/in/auburn/1017-w-7th-st/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "828 W Johnson St, Fond du Lac, WI, 54935",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/wi/fond-du-lac/828-w-johnson-st/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "240 W Commonwealth Blvd, Martinsville, VA, 24112",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/va/martinsville/240-w-commonwealth-blvd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "251A N Washington Hwy, Ashland, VA, 23005",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/va/ashland/251a-n-washington-hwy/coming-soon"
     },
     {
       "company": "Five Below",
@@ -492,6 +456,18 @@
       "address": "400 N Navy Blvd, Pensacola, FL, 32507",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/fl/pensacola/400-n-navy-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "1408 W Hunt Hwy, San Tan Valley, AZ, 85143",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/az/san-tan-valley/1408-w-hunt-hwy/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "251 N Broadway, Pennsville, NJ, 08070",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/nj/pennsville/251-n-broadway/coming-soon"
     },
     {
       "company": "Five Below",
@@ -519,21 +495,27 @@
     },
     {
       "company": "Five Below",
-      "address": "1408 W Hunt Hwy, San Tan Valley, AZ, 85143",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/az/san-tan-valley/1408-w-hunt-hwy/coming-soon"
-    },
-    {
-      "company": "Five Below",
       "address": "4610 Cutler Ave NE, Albuquerque, NM, 87110",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/nm/albuquerque/4610-cutler-ave-ne/coming-soon"
     },
     {
       "company": "Five Below",
-      "address": "19 Litchfield Plaza, Litchfield, IL, 62056",
+      "address": "828 W Johnson St, Fond du Lac, WI, 54935",
       "opening_date": "",
-      "link": "https://locations.fivebelow.com/il/litchfield/19-litchfield-plaza/coming-soon"
+      "link": "https://locations.fivebelow.com/wi/fond-du-lac/828-w-johnson-st/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "240 W Commonwealth Blvd, Martinsville, VA, 24112",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/va/martinsville/240-w-commonwealth-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "251A N Washington Hwy, Ashland, VA, 23005",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/va/ashland/251a-n-washington-hwy/coming-soon"
     },
     {
       "company": "Five Below",
@@ -546,18 +528,6 @@
       "address": "1246 Perry Ave, Big Rapids, MI, 49307",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/mi/big-rapids/1246-perry-ave/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "1155 Buck Creek Road, Simpsonville, KY, 40067",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ky/simpsonville/1155-buck-creek-road/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "113 Northshore Blvd, Slidell, LA, 70460",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/la/slidell/113-northshore-blvd/coming-soon"
     },
     {
       "company": "HomeGoods",
@@ -777,18 +747,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "135 West Road (Rt. 83), Ellington, CT 06029-5725",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-CT"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "1866 Berlin Turnpike, Wethersfield, CT 06109-2414",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-CT"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "143 River Road, Lisbon, CT 06351-3263",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-CT"
@@ -972,12 +930,6 @@
       "address": "1709 W Nursery Road, Linthicum Heights, MD 21090",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MD"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "456 Center Street, Ludlow, MA 01056-7201",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-MA"
     },
     {
       "company": "Jersey Mike's",
@@ -1257,18 +1209,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "1617 Georgesville Square Drive, Columbus, OH 43228-3689",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-OH"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "5200 Brockway Drive, Perrysburg, OH 43551",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-OH"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "10572 Loveland Madeira Road, Loveland, OH 45140-8962",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-OH"
@@ -1362,12 +1302,6 @@
       "address": "9451 Dayton Pike, Soddy Daisy, TN 37379",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-TN"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "605 NW Parkway Street, Azle, TX 76020-2941",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
     },
     {
       "company": "Jersey Mike's",
@@ -1491,12 +1425,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "370 Patteson Drive, Morgantown, WV 26505-3270",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-WV"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "2248 Coffeen Ave, Sheridan, WY 82801-6213",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-WY"
@@ -1506,6 +1434,12 @@
       "address": "209 Pennsylvania Avenue SE, Washington, DC 20003-1107",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-DC"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "10 SE Flowers Parkway",
+      "opening_date": "June 18, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-flowers"
     },
     {
       "company": "Chick-fil-A",
@@ -1650,12 +1584,6 @@
       "address": "6430 S Cedar St",
       "opening_date": "May 7, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-south-cedar"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "193 Covenant Drive",
-      "opening_date": "May 7, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-batesville"
     },
     {
       "company": "Wawa",
@@ -2422,7 +2350,7 @@
     {
       "company": "7-Eleven",
       "address": "4701 S 12th St Rd WACO, TX",
-      "opening_date": "Opens: 07/02/26Grand Opening: 07/17/26",
+      "opening_date": "07/24/2026",
       "link": "https://maps.app.goo.gl/7Z7pzb8YnT3Bk9vy9"
     },
     {
@@ -2454,6 +2382,18 @@
       "address": "50 E 70TH AVE DENVER, CO",
       "opening_date": "Opens: 07/02/26Grand Opening: 07/31/26",
       "link": "https://maps.app.goo.gl/WBnq9zG6VFni1ggu9"
+    },
+    {
+      "company": "7-Eleven",
+      "address": "7151 Williams Drive Corpus Christi, TX",
+      "opening_date": "Opens: 07/09/26Grand Opening: 07/24/26",
+      "link": "https://maps.app.goo.gl/aqRAPCqU1Nyp4MHi6"
+    },
+    {
+      "company": "7-Eleven",
+      "address": "4231 N STATE HIGHWAY 161 IRVING, TX",
+      "opening_date": "Opens: 07/14/26Grand Opening: 07/31/26",
+      "link": "https://maps.app.goo.gl/BoUnXdshLPjfynvr5"
     },
     {
       "company": "Marshalls",
@@ -2538,12 +2478,6 @@
       "address": "2607 Decherd Blvd, Winchester",
       "opening_date": "Now Open!",
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1687&ref=grandOpenings"
-    },
-    {
-      "company": "TJ Maxx",
-      "address": "280 Black Gold Blvd, Hazard",
-      "opening_date": "Now Open!",
-      "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1694&ref=grandOpenings"
     },
     {
       "company": "TJ Maxx",
