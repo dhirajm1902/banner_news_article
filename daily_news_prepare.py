@@ -14,7 +14,6 @@ Output:
 import csv
 import json
 import time
-from datetime import date, timedelta
 from pathlib import Path
 
 import requests
@@ -102,22 +101,13 @@ def main():
         print("❌  No articles found in docs/news_data.json.")
         return
 
-    # Load already-processed URLs from master CSV — only the last 3 days.
-    # The scraper uses a 48-hour Google News window, so articles older than
-    # 3 days can never appear in today's news_data.json.  Scanning all-time
-    # records (8k+ URLs) is wasteful and unnecessary; a 3-day window covers
-    # the full overlap zone while keeping the dedup set small (~700 URLs).
+    # Load already-processed URLs from master CSV
     master_path = Path("data/daily_news/daily_news_extraction_master.csv")
     done_urls = set()
-    DEDUP_WINDOW_DAYS = 3
-    cutoff_date = (date.today() - timedelta(days=DEDUP_WINDOW_DAYS)).isoformat()
     if master_path.exists():
         with open(master_path, encoding="utf-8", newline="") as f:
-            for row in csv.DictReader(f):
-                if row.get("Date_Appended", "") >= cutoff_date:
-                    done_urls.add(row["article_link"])
-        print(f"✓  {len(done_urls)} already-processed URLs loaded from master CSV "
-              f"(last {DEDUP_WINDOW_DAYS} days only)")
+            done_urls = {row["article_link"] for row in csv.DictReader(f)}
+        print(f"✓  {len(done_urls)} already-processed URLs loaded from master CSV")
 
     # Sort ALL articles newest first
     articles.sort(key=lambda a: a.get("published_date", ""), reverse=True)
