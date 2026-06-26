@@ -948,6 +948,60 @@ if all_results:
         lambda u: isinstance(u, str) and _is_homepage(u)
     ), "google_link"]
 
+    # Post-decode domain filter — block sources that produce off-topic results.
+    # The geo-filter earlier runs against the Google News RSS URL (always
+    # news.google.com), so it can't catch the actual decoded article domain.
+    # This filter runs AFTER link decoding and enforces both a domain allowlist
+    # and a TLD suffix blocklist that mirrors GEO_BLOCK_DOMAIN_SUFFIXES.
+    DIRECT_LINK_BLOCK_DOMAINS = {
+        'insideradio.com',          # radio advertising trade — not retail store news
+        'travelandtourworld.com',   # travel/tourism industry
+        'travelmarketreport.com',   # travel trade publication
+        'en.sedaily.com',           # South Korean newspaper
+        'sedaily.com',
+        'starnewskorea.com',        # South Korean entertainment
+        'mid-day.com',              # Indian tabloid
+        'hollywoodreporterindia.com',
+        'lifestyleasia.com',        # Asia-focused lifestyle
+        'openthemagazine.com',      # Indian magazine
+        'infashionbusiness.com',    # fashion industry trade (non-retail-store)
+        'cdcgaming.com',            # casino/gaming trade publication
+        'concreteplayground.com',   # Australian lifestyle
+        'manilatimes.net',          # Philippine newspaper
+        'vijesti.me',               # Montenegrin news
+        'agoranotizia.it',          # Italian news
+        'road.cc',                  # UK cycling
+        # UK local/regional news — consistently non-US/Canada articles
+        'nub.news',
+        'cheshire-live.co.uk',
+        'essexlive.news',
+        'kentlive.news',
+        'liverpoolecho.co.uk',
+        'leicestermercury.co.uk',
+        'bracknellnews.co.uk',
+        'warwick.nub.news',
+    }
+
+    # Also block any domain whose TLD suffix indicates a non-US/Canada origin
+    _POST_DECODE_BLOCK_SUFFIXES = GEO_BLOCK_DOMAIN_SUFFIXES  # reuse existing set
+
+    def _in_block_list(url: str) -> bool:
+        try:
+            domain = url.split('/')[2].replace('www.', '').lower()
+            if domain in DIRECT_LINK_BLOCK_DOMAINS:
+                return True
+            if any(domain.endswith(sfx) for sfx in _POST_DECODE_BLOCK_SUFFIXES):
+                return True
+        except Exception:
+            pass
+        return False
+
+    before_block = len(df)
+    df = df[~df["direct_link"].apply(_in_block_list)].copy()
+    blocked_count = before_block - len(df)
+    if blocked_count:
+        print(f"\n🚫 Post-decode domain filter removed {blocked_count} article(s) from noise/geo sources")
+
     mask_resolved = ~df["direct_link"].str.contains("news.google.com", na=False)
     n_resolved    = mask_resolved.sum()
     n_fallback    = (~mask_resolved).sum()

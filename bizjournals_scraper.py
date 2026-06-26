@@ -1,9 +1,16 @@
 """
 bizjournals_scraper.py
-Scrapes bizjournals.com search for "restaurant opening" using Playwright + stealth.
+Scrapes bizjournals.com for multiple search queries using Playwright + stealth.
 Falls back to Zyte proxy if Cloudflare blocks the plain request.
+Then fetches each article URL and extracts full content via:
+  - trafilatura  → clean body text
+  - newspaper4k  → auto summary + keywords
+  - extruct      → JSON-LD structured data (name, date, address) + OpenGraph
 
-Output (mirrors restaurant_scraper.py pattern):
+Install extraction libraries:
+  pip install trafilatura newspaper4k extruct w3lib
+
+Output:
   data/bizjournals/Daily_bizjournals_YYYY-MM-DD.csv
   master_file/bizjournals_master.csv
   bizjournals_latest.json
@@ -37,10 +44,35 @@ try:
 except ImportError:
     pass
 
+import requests
+import concurrent.futures
+
+try:
+    import trafilatura
+    HAS_TRAFILATURA = True
+except ImportError:
+    HAS_TRAFILATURA = False
+    print("⚠️  trafilatura not available — pip install trafilatura")
+
+try:
+    import newspaper
+    HAS_NEWSPAPER = True
+except ImportError:
+    HAS_NEWSPAPER = False
+    print("⚠️  newspaper4k not available — pip install newspaper4k")
+
+try:
+    import extruct
+    from w3lib.html import get_base_url as _get_base_url
+    HAS_EXTRUCT = True
+except ImportError:
+    HAS_EXTRUCT = False
+    print("⚠️  extruct not available — pip install extruct w3lib")
+
 # ── Config ────────────────────────────────────────────────────────────────────
-SEARCH_QUERY = "restaurant opening"
-DAYS_BACK    = 1        # look back N days (1 = yesterday → today)
-HEADLESS     = True     # set False to watch the browser during debugging
+SEARCH_QUERIES = ["restaurant opening", "store opening", "grocery opening"]
+DAYS_BACK      = 1        # look back N days (1 = yesterday → today)
+HEADLESS       = True     # set False to watch the browser during debugging
 
 ZYTE_API_KEY = os.environ.get("ZYTE_API_KEY", "")
 
@@ -49,14 +81,16 @@ today      = datetime.now()
 date_end   = today.strftime("%Y-%m-%d")
 date_begin = (today - timedelta(days=DAYS_BACK)).strftime("%Y-%m-%d")
 
-BASE_SEARCH_URL = (
-    "https://www.bizjournals.com/search"
-    f"?q={SEARCH_QUERY.replace(' ', '+')}"
-    f"&db={date_begin}&de={date_end}&s=2"
-)
 
-print(f"🔍 Query: {SEARCH_QUERY}  |  {date_begin} → {date_end}")
-print(f"   Base URL: {BASE_SEARCH_URL}\n")
+def _build_search_url(query: str) -> str:
+    return (
+        "https://www.bizjournals.com/search"
+        f"?q={query.replace(' ', '+')}"
+        f"&db={date_begin}&de={date_end}&s=2"
+    )
+
+
+print(f"🔍 Queries: {', '.join(repr(q) for q in SEARCH_QUERIES)}  |  {date_begin} → {date_end}\n")
 
 
 # ── Cloudflare detection ──────────────────────────────────────────────────────
@@ -204,8 +238,8 @@ def parse_page(html: str):
 
 
 # ── Single Playwright session — fetches all pages without closing browser ─────
-def scrape_all_pages(use_zyte: bool = False) -> list:
-    """Open one browser session and paginate through all result pages."""
+def scrape_all_pages(query: str, use_zyte: bool = False) -> list:
+    """Open one browser session and paginate through all result pages for a single query."""
     all_rows = []
     seen_urls: set = set()
 
@@ -225,7 +259,7 @@ def scrape_all_pages(use_zyte: bool = False) -> list:
         })
 
         # Start at page 1 (no pl param = default first page)
-        start_url = BASE_SEARCH_URL + "&pl=1"
+        start_url = _build_search_url(query) + "&pl=1"
         current_url = start_url
         page_num = 1
 
@@ -257,14 +291,122 @@ def scrape_all_pages(use_zyte: bool = False) -> list:
     return all_rows
 
 
-# ── Determine whether Zyte is needed, then scrape all pages ──────────────────
+# ── Article content extraction ────────────────────────────────────────────────
+
+def _fetch_html_requests(url, use_zyte=False):
+    """Fetch raw HTML via requests, optionally through Zyte proxy."""
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0.0.0 Safari/537.36"
+        ),
+        "Accept": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
+    proxies = None
+    if use_zyte and ZYTE_API_KEY:
+        proxies = {
+            "http":  f"http://{ZYTE_API_KEY}:@api.zyte.com:8011",
+            "https": f"http://{ZYTE_API_KEY}:@api.zyte.com:8011",
+        }
+    try:
+        resp = requests.get(url, headers=headers, proxies=proxies,
+                            timeout=25, verify=not bool(proxies))
+        if resp.status_code == 200:
+            return resp.text
+    except Exception:
+        pass
+    return None
+
+
+def extract_article_content(url, use_zyte=False):
+    """
+    Fetch a single article URL and extract content with three libraries:
+      - trafilatura  → clean full body text
+      - newspaper4k  → auto summary + keywords
+      - extruct      → JSON-LD structured data (name, date, address) + OpenGraph description
+    Returns a dict of enrichment fields (all default to empty string on failure).
+    """
+    result = {
+        "full_text":      "",
+        "summary":        "",
+        "keywords":       "",
+        "jsonld_name":    "",
+        "jsonld_date":    "",
+        "jsonld_address": "",
+        "og_description": "",
+    }
+
+    # Try direct fetch first; fall back to Zyte if blocked or too short
+    html = _fetch_html_requests(url, use_zyte=False)
+    if not html or len(html) < 300 or is_cloudflare_blocked(html):
+        if ZYTE_API_KEY:
+            html = _fetch_html_requests(url, use_zyte=True)
+    if not html:
+        return result
+
+    # trafilatura — clean full body text (best general extractor)
+    if HAS_TRAFILATURA:
+        text = trafilatura.extract(html, include_comments=False, include_tables=False)
+        result["full_text"] = text or ""
+
+    # newspaper4k — NLP summary + keywords
+    if HAS_NEWSPAPER:
+        try:
+            art = newspaper.Article(url)
+            art.set_html(html)
+            art.parse()
+            try:
+                art.nlp()
+                result["summary"]  = art.summary or ""
+                result["keywords"] = ", ".join(art.keywords) if art.keywords else ""
+            except Exception:
+                result["summary"] = (art.text or "")[:500]
+        except Exception:
+            pass
+
+    # extruct — JSON-LD structured data + OpenGraph
+    if HAS_EXTRUCT:
+        try:
+            base_url = _get_base_url(html, url)
+            data = extruct.extract(html, base_url=base_url,
+                                   syntaxes=["json-ld", "opengraph"],
+                                   errors="ignore")
+            # Find first Article/NewsArticle JSON-LD block
+            for item in data.get("json-ld", []):
+                t = item.get("@type", "")
+                if isinstance(t, list):
+                    t = " ".join(t)
+                if any(k in t for k in ("Article", "NewsArticle", "BlogPosting", "Report")):
+                    result["jsonld_name"] = item.get("headline") or item.get("name") or ""
+                    result["jsonld_date"] = (
+                        item.get("datePublished") or item.get("dateCreated") or ""
+                    )
+                    loc = item.get("contentLocation") or item.get("locationCreated") or {}
+                    if isinstance(loc, dict):
+                        result["jsonld_address"] = loc.get("name") or loc.get("address") or ""
+                    elif isinstance(loc, str):
+                        result["jsonld_address"] = loc
+                    break
+            og = data.get("opengraph", [])
+            if og:
+                result["og_description"] = og[0].get("og:description") or ""
+        except Exception:
+            pass
+
+    return result
+
+
+# ── Determine whether Zyte is needed (probe with first query) ─────────────────
+_probe_url = _build_search_url(SEARCH_QUERIES[0]) + "&pl=1"
 print("Attempt 1: Playwright + stealth (no proxy)…")
 with sync_playwright() as _p:
     _browser, _ctx = _make_context(_p, use_zyte=False)
     _page = _ctx.new_page()
     if HAS_STEALTH:
         _STEALTH.apply_stealth_sync(_page)
-    _probe_html = _navigate_and_get_html(_page, BASE_SEARCH_URL + "&pl=1")
+    _probe_html = _navigate_and_get_html(_page, _probe_url)
     _browser.close()
 
 USE_ZYTE = False
@@ -279,14 +421,44 @@ if is_cloudflare_blocked(_probe_html):
 else:
     print("  ✅ No Cloudflare — proceeding without proxy")
 
-rows = scrape_all_pages(use_zyte=USE_ZYTE)
+# ── Run all queries and merge, deduplicating by URL ───────────────────────────
+_all_rows = []
+_seen_urls: set = set()
+for _query in SEARCH_QUERIES:
+    print(f"\n🔍 Scraping query: \"{_query}\"")
+    _qrows = scrape_all_pages(_query, use_zyte=USE_ZYTE)
+    _new = 0
+    for _r in _qrows:
+        if _r["url"] not in _seen_urls:
+            _seen_urls.add(_r["url"])
+            _r["query"] = _query
+            _all_rows.append(_r)
+            _new += 1
+    print(f"   → {len(_qrows)} results, {_new} unique new  ({len(_all_rows)} total so far)")
 
-print(f"\n📋 Articles extracted: {len(rows)}")
+rows = _all_rows
+
+print(f"\n📋 Total unique articles: {len(rows)}")
 for r in rows[:5]:
-    print(f"  • {r['title'][:70]}")
+    print(f"  • [{r['query']}] {r['title'][:60]}")
 if len(rows) > 5:
     print(f"  … and {len(rows) - 5} more")
 
+# ── Enrich each article with full content extraction ──────────────────────────
+ENRICH_WORKERS = 5  # concurrent HTTP workers
+
+def _enrich_row(row):
+    content = extract_article_content(row["url"], use_zyte=USE_ZYTE)
+    return {**row, **content}
+
+if HAS_TRAFILATURA or HAS_NEWSPAPER or HAS_EXTRUCT:
+    print(f"\n📰 Extracting article content ({len(rows)} URLs, {ENRICH_WORKERS} workers)…")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=ENRICH_WORKERS) as pool:
+        rows = list(pool.map(_enrich_row, rows))
+    extracted_count = sum(1 for r in rows if r.get("full_text") or r.get("summary"))
+    print(f"  ✅ Content extracted for {extracted_count}/{len(rows)} articles")
+else:
+    print("\n⚠️  No extraction libraries found — run: pip install trafilatura newspaper4k extruct w3lib")
 
 # ── Output directories ────────────────────────────────────────────────────────
 BJ_DIR     = Path("data/bizjournals")
@@ -300,7 +472,11 @@ today_str = today.strftime("%Y-%m-%d")
 csv_file = BJ_DIR / f"Daily_bizjournals_{today_str}.csv"
 df = pd.DataFrame(
     rows,
-    columns=["title", "url", "source", "pub_date", "snippet"],
+    columns=[
+        "title", "url", "source", "pub_date", "snippet", "query",
+        "full_text", "summary", "keywords",
+        "jsonld_name", "jsonld_date", "jsonld_address", "og_description",
+    ],
 )
 df.to_csv(csv_file, index=False, encoding="utf-8")
 print(f"\n✅ CSV  saved → {csv_file}  ({len(df)} rows)")
@@ -308,7 +484,7 @@ print(f"\n✅ CSV  saved → {csv_file}  ({len(df)} rows)")
 # ── JSON ──────────────────────────────────────────────────────────────────────
 json_payload = {
     "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-    "query":        SEARCH_QUERY,
+    "queries":      SEARCH_QUERIES,
     "date_begin":   date_begin,
     "date_end":     date_end,
     "total":        len(rows),
