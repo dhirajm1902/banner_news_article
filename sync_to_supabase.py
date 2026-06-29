@@ -37,7 +37,8 @@ CHUNK_SIZE = 500  # rows per upsert batch
 TABLE_CONFIG = {
     "businessdebut_master.csv": ("businessdebut_master", "link"),
     "restaurant_master.csv":    ("restaurant_master",    "url"),
-    "ct_scoop_master.csv":      ("ct_scoop_master",      "link"),
+    "ct_scoop_master.csv":               ("ct_scoop_master",            "link"),
+    "ct_scoop_master_extraction.csv":    ("ct_scoop_master_extraction",  "article_link"),
     "daily_news_master.csv":    ("daily_news_master",    "direct_link"),
     "banner_news_master.csv":   ("banner_news_master",   "Link"),
 }
