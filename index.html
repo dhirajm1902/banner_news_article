@@ -3275,14 +3275,27 @@
     });
 
     // â”€â”€ PERSONAL PROGRESS BANNER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    async function _fetchAllMarks(fields) {
+        const all = [];
+        let from = 0;
+        while (true) {
+            const { data } = await _sb.from('article_marks').select(fields).range(from, from + 999);
+            if (!data || data.length === 0) break;
+            all.push(...data);
+            if (data.length < 1000) break;
+            from += 1000;
+        }
+        return all;
+    }
+
     async function loadPersonalProgress() {
         const card = document.getElementById('personalProgressCard');
         if (!card || !_currentUserEmail) return;
         try {
             if (historicalArticles.length === 0) await loadHistoricalData();
-            const { data: marks } = await _sb.from('article_marks').select('article_key,is_done,marked_at');
+            const marks = await _fetchAllMarks('article_key,is_done,marked_at');
             const doneMap = {};
-            for (const m of (marks || [])) { if (m.is_done) doneMap[m.article_key] = m; }
+            for (const m of marks) { if (m.is_done) doneMap[m.article_key] = m; }
 
             // Build per-analyst stats
             const analystMap = {};
@@ -3416,14 +3429,13 @@
         document.getElementById('mgmtContent').classList.add('hidden');
         if (historicalArticles.length === 0) await loadHistoricalData();
         try {
-            const { data: marks, error } = await _sb.from('article_marks').select('*');
-            if (error) throw error;
-            renderMgmtDashboard(marks || []);
+            const marks = await _fetchAllMarks('*');
+            renderMgmtDashboard(marks);
             if (_mgmtRefreshInterval) clearInterval(_mgmtRefreshInterval);
             _mgmtRefreshInterval = setInterval(async () => {
                 if (activeStoreSubTab !== 'management') return;
-                const { data: m } = await _sb.from('article_marks').select('*');
-                if (m) renderMgmtDashboard(m);
+                const m = await _fetchAllMarks('*');
+                renderMgmtDashboard(m);
             }, 60000);
         } catch (err) {
             console.error('Management load error:', err);

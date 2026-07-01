@@ -1,0 +1,212 @@
+============================================================
+PASTE INTO CLAUDE.AI — Part 1 of 2
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant bankruptcy filings and related closures. I will provide multiple news articles. For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Chapter 11", "Chapter 7", or "Bankruptcy" based only on the article content)
+• Filing / Event Date
+  - Write exact date or month/year if mentioned; otherwise write exactly "Not specified"
+• Status
+  - Use phrasing like: "filed Chapter 11", "filed Chapter 7", "seeking bankruptcy protection",
+    "in receivership", "liquidating", "closed due to bankruptcy", "restructuring under Chapter 11", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Filing / Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article covers multiple businesses, create a separate row for each
+• If an article contains ZERO relevant bankruptcy / closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://support.google.com/websearch/answer/86640
+   Title: Popular summer camp files for Chapter 11 bankruptcy
+   Keyword matched: chapter 11 bankruptcy | Industry: Specialty / Other
+2. URL: https://support.google.com/websearch/answer/86640
+   Title: West Marine to close 59 stores as Chapter 11 bankruptcy proceedings continue
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+3. URL: https://support.google.com/websearch/answer/86640
+   Title: The purchase of a downtown St. Louis hotel out of receivership is back on, at a discounted price
+   Keyword matched: receivership | Industry: Hospitality
+4. URL: https://support.google.com/websearch/answer/86640
+   Title: Beloved restaurant chain franchisee files Chapter 11 bankruptcy
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+5. URL: https://support.google.com/websearch/answer/86640
+   Title: 637 NJ jobs jeopardized after major meal supplier files for Chapter 11 bankruptcy
+   Keyword matched: chapter 11 bankruptcy | Industry: Specialty / Other
+6. URL: https://support.google.com/websearch/answer/86640
+   Title: Sleep Number Just Filed for Chapter 11 Bankruptcy—Here's What Went Wrong After Its $2.18 Billion Pandemic Boom
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+7. URL: https://support.google.com/websearch/answer/86640
+   Title: Outdoor retail giant files for bankruptcy, closes 59 stores
+   Keyword matched: files for bankruptcy | Industry: Specialty / Other
+8. URL: https://support.google.com/websearch/answer/86640
+   Title: 34-year-old pizza company files for bankruptcy
+   Keyword matched: files for bankruptcy | Industry: Specialty / Other
+9. URL: https://support.google.com/websearch/answer/86640
+   Title: Sleep Number files for bankruptcy, will combine with Sleep Country Canada
+   Keyword matched: files for bankruptcy | Industry: Specialty / Other
+10. URL: https://support.google.com/websearch/answer/86640
+   Title: JTBC, even its corporate card access has been cut off amid bankruptcy filing... "Costs to be processed later"
+   Keyword matched: bankruptcy filing | Industry: Specialty / Other
+11. URL: https://support.google.com/websearch/answer/86640
+   Title: Eagles Investments ends bankruptcy proceedings, reveals plans to open 100 new c-stores
+   Keyword matched: chapter 11 | Industry: Convenience Stores / Distributors
+12. URL: https://support.google.com/websearch/answer/86640
+   Title: Four shotguns, zero filler: why Fortnite Chapter 7 Season 2 has the best gun meta in years
+   Keyword matched: chapter 7 | Industry: Specialty / Other
+13. URL: https://support.google.com/websearch/answer/86640
+   Title: Boating supply retailer to close 4 stores in region after Chapter 11 filing
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+14. URL: https://support.google.com/websearch/answer/86640
+   Title: Warehouse owner files Chapter 11 to halt foreclosure auction
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+15. URL: https://support.google.com/websearch/answer/86640
+   Title: Debt, receivership and closure: Unpacking Century Park’s woes| The New Times
+   Keyword matched: receivership | Industry: Specialty / Other
+16. URL: https://support.google.com/websearch/answer/86640
+   Title: Boating Retail Giant To Close MD Stores Amid Bankruptcy
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+17. URL: https://support.google.com/websearch/answer/86640
+   Title: Long-stalled San Antonio development designed for military, veterans files bankruptcy
+   Keyword matched: bankruptcy protection | Industry: Specialty / Other
+18. URL: https://support.google.com/websearch/answer/86640
+   Title: West Marine closing dozens of stores, declares bankruptcy
+   Keyword matched: filing for bankruptcy | Industry: Specialty / Other
+19. URL: https://support.google.com/websearch/answer/86640
+   Title: Applebee’s franchisee with 53 restaurants files bankruptcy amid up to $50M in debt
+   Keyword matched: files for bankruptcy | Industry: Specialty / Other
+20. URL: https://support.google.com/websearch/answer/86640
+   Title: Jewish Federation of Greater Harrisburg sells campus to avoid bankruptcy amid $9.7 million debt
+   Keyword matched: filing for bankruptcy | Industry: Specialty / Other
+21. URL: https://support.google.com/websearch/answer/86640
+   Title: Brightline Considers Bankruptcy Despite Popularity
+   Keyword matched: filing for bankruptcy | Industry: Specialty / Other
+22. URL: https://support.google.com/websearch/answer/86640
+   Title: West Marine to close Port Washington store, 58 others nationwide following bankruptcy filing
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+23. URL: https://support.google.com/websearch/answer/86640
+   Title: West Marine files bankruptcy, closing Florida stores, here's where
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+24. URL: https://support.google.com/websearch/answer/86640
+   Title: Sleep Number plans $415 million bankruptcy sale
+   Keyword matched: files for bankruptcy | Industry: Specialty / Other
+25. URL: https://support.google.com/websearch/answer/86640
+   Title: Haruvi family company files for bankruptcy, affecting nearly 500 apartments
+   Keyword matched: chapter 11 bankruptcy | Industry: Specialty / Other
+26. URL: https://support.google.com/websearch/answer/86640
+   Title: West Marine closing 59 stores after bankruptcy. See Florida list
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+27. URL: https://support.google.com/websearch/answer/86640
+   Title: Outdoor retailer set to close 59 stores amid bankruptcy filing
+   Keyword matched: chapter 11 bankruptcy | Industry: Specialty / Other
+28. URL: https://support.google.com/websearch/answer/86640
+   Title: Outdoor retailer set to close 59 stores in the US amid bankruptcy filing
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+29. URL: https://support.google.com/websearch/answer/86640
+   Title: West Marine plans to close 59 stores after bankruptcy filing: See full list of locations
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+30. URL: https://support.google.com/websearch/answer/86640
+   Title: Boating retail giant West Marine files for bankruptcy, closes 59 stores
+   Keyword matched: chapter 11 bankruptcy | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 2 of 2
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant bankruptcy filings and related closures. I will provide multiple news articles. For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Chapter 11", "Chapter 7", or "Bankruptcy" based only on the article content)
+• Filing / Event Date
+  - Write exact date or month/year if mentioned; otherwise write exactly "Not specified"
+• Status
+  - Use phrasing like: "filed Chapter 11", "filed Chapter 7", "seeking bankruptcy protection",
+    "in receivership", "liquidating", "closed due to bankruptcy", "restructuring under Chapter 11", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Filing / Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article covers multiple businesses, create a separate row for each
+• If an article contains ZERO relevant bankruptcy / closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://support.google.com/websearch/answer/86640
+   Title: This Home Depot rival just filed for bankruptcy. What happens next?
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+2. URL: https://support.google.com/websearch/answer/86640
+   Title: West Marine to close 5 WA locations following bankruptcy filing
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+3. URL: https://support.google.com/websearch/answer/86640
+   Title: Major outdoor chain enters bankruptcy and shutters dozens of stores
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+4. URL: https://support.google.com/websearch/answer/86640
+   Title: West Marine to Shut 59 Locations After Filing Bankruptcy Amid Major Consumer Shift
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+5. URL: https://support.google.com/websearch/answer/86640
+   Title: Iconic grocery brand Del Monte Foods files for bankruptcy
+   Keyword matched: chapter 11 bankruptcy | Industry: Specialty / Other
+6. URL: https://support.google.com/websearch/answer/86640
+   Title: LIV Golf preparing to file for bankruptcy in the US as it desperately seeks new funding
+   Keyword matched: chapter 11 bankruptcy | Industry: Specialty / Other
+7. URL: https://support.google.com/websearch/answer/86640
+   Title: Luxury retail chain wins court approval, exits bankruptcy
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+8. URL: https://support.google.com/websearch/answer/86640
+   Title: West Marine files for bankruptcy and closes 59 stores nationwide
+   Keyword matched: chapter 11 | Industry: Specialty / Other
+9. URL: https://support.google.com/websearch/answer/86640
+   Title: West Marine to close 59 stores amid Chapter 11 restructuring
+   Keyword matched: chapter 11 bankruptcy | Industry: Specialty / Other
+10. URL: https://support.google.com/websearch/answer/86640
+   Title: 25-year-old bagel chain closes all locations, files Chapter 7
+   Keyword matched: files for bankruptcy | Industry: Specialty / Other
+11. URL: https://support.google.com/websearch/answer/86640
+   Title: Boat giant to divest Four Winns brand as Cadillac plant faces closure
+   Keyword matched: filing for bankruptcy | Industry: Hospitality
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
