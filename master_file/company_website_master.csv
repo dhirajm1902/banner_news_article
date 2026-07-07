@@ -24,7 +24,7 @@ company,address,opening_date,link,is_new,first_seen,Date_Appended
 7-Eleven,"3808 Guthrie Hwy Clarksville, TN",Opens: 05/07/26Grand Opening: 06/05/26,https://maps.app.goo.gl/f8rBcVotH29LXYxT6,False,,2026-05-18
 7-Eleven,"400 Buff Blvd Summerton, SC",Opens: 06/02/26Grand Opening: 06/25/26,https://maps.app.goo.gl/rr5c6yZpt5eVUTm29,False,,2026-05-18
 7-Eleven,"4076 West 13400 South Riverton, UT",Opens: 06/03/26Grand Opening: 06/26/26,https://maps.app.goo.gl/a84GpYvZebwNTt7z6,False,,2026-05-18
-7-Eleven,"413 WASHINGTON AVE NORTH HAVEN, CT",Opens: 07/23/26Grand Opening: 08/14/26,https://maps.app.goo.gl/fan5SWX64rBWFjrx7,True,2026-07-04,2026-07-04
+7-Eleven,"413 WASHINGTON AVE NORTH HAVEN, CT",Opens: 07/23/26Grand Opening: 08/14/26,https://maps.app.goo.gl/fan5SWX64rBWFjrx7,False,2026-07-04,2026-07-04
 7-Eleven,"4231 N STATE HIGHWAY 161 IRVING, TX",Opens: 07/14/26Grand Opening: 07/31/26,https://maps.app.goo.gl/BoUnXdshLPjfynvr5,False,2026-06-19,2026-06-19
 7-Eleven,"4326 Dundee Rd WINTER HAVEN, FL",Opens: 07/02/26Grand Opening: 07/24/26,https://maps.app.goo.gl/E3ThpV4umhvRbreL8,False,2026-06-16,2026-06-16
 7-Eleven,"4701 S 12th St Rd WACO, TX",Opens: 07/02/26Grand Opening: 07/17/26,https://maps.app.goo.gl/7Z7pzb8YnT3Bk9vy9,False,2026-06-16,2026-06-16
@@ -32,14 +32,16 @@ company,address,opening_date,link,is_new,first_seen,Date_Appended
 7-Eleven,"50 E 70TH AVE DENVER, CO",Opens: 07/02/26Grand Opening: 07/31/26,https://maps.app.goo.gl/WBnq9zG6VFni1ggu9,False,2026-06-16,2026-06-16
 7-Eleven,"5550 Lee Blvd Lehigh Acres, FL",Opens: 05/14/26Grand Opening: 06/05/26,https://maps.app.goo.gl/suJU86VXwFQ8tnHB7,False,,2026-05-18
 7-Eleven,"600 5TH ST EAGLE LAKE, FL",Opens: 06/25/26Grand Opening: 07/17/26,https://maps.app.goo.gl/SKyvSqQ3oiTSXLt28,False,2026-06-16,2026-06-16
-7-Eleven,"705 COUNTRY CLUB DRIVE FAYETTEVILLE, NC",Opens: 07/23/26Grand Opening: 08/14/26,https://maps.app.goo.gl/cLeFvDFkFWjbexDb9,True,2026-07-04,2026-07-04
+7-Eleven,"705 COUNTRY CLUB DRIVE FAYETTEVILLE, NC",Opens: 07/23/26Grand Opening: 08/14/26,https://maps.app.goo.gl/cLeFvDFkFWjbexDb9,False,2026-07-04,2026-07-04
 7-Eleven,"7151 Williams Drive Corpus Christi, TX",Opens: 07/09/26Grand Opening: 07/24/26,https://maps.app.goo.gl/aqRAPCqU1Nyp4MHi6,False,2026-06-19,2026-06-19
-7-Eleven,"750 N HARBOR BLVD LA HABRA, CA",Opens: 07/23/26Grand Opening: 08/21/26,https://maps.app.goo.gl/3WEcm5Rt3LMceuLw9,True,2026-07-04,2026-07-04
+7-Eleven,"750 N HARBOR BLVD LA HABRA, CA",Opens: 07/23/26Grand Opening: 08/21/26,https://maps.app.goo.gl/3WEcm5Rt3LMceuLw9,False,2026-07-04,2026-07-04
 7-Eleven,"770 Steele Station Rd Steele, AL",Opens: 06/04/26Grand Opening: 07/10/26,https://maps.app.goo.gl/NvxcK9Ex6qFJYey18,False,,2026-05-18
 7-Eleven,"829 White Pond Rd Elgin, SC",Opens: 05/21/26Grand Opening: 06/19/26,https://maps.app.goo.gl/y3rqDZt61mjEM72p6,False,,2026-05-18
 7-Eleven,"8650 Beach Blvd Buena Park, CA",Opens: 05/07/26Grand Opening: 06/04/26,https://maps.app.goo.gl/o2CszUfykGg7K62bA,False,,2026-05-18
 7-Eleven,"9511 Asheville Hwy Inman, SC",Opens: 05/28/26Grand Opening: 06/26/26,https://maps.app.goo.gl/pfZuAHzSHzxqzSKJ6,False,,2026-05-18
+ALDI,"100 Powder Mill Road, Acton, MA 01720-5932",7/23/2026,https://info.aldi.us/stores/l/ma/acton/100-powder-mill-road/fn77,True,2026-07-07,2026-07-07
 ALDI,"1045 South Gilbert Road, Mesa, AZ 85204",5/21/2026,https://info.aldi.us/stores/l/az/mesa/1045-south-gilbert-road/fo39,False,,2026-05-18
+ALDI,"105300 Overseas Highway, Key Largo, FL 33037",7/23/2026,https://info.aldi.us/stores/l/fl/key-largo/105300-overseas-highway/fs75,True,2026-07-07,2026-07-07
 ALDI,"1151 Ross Clark CIR Suite 100, Dothan, AL 36301",5/28/2026,https://info.aldi.us/stores/l/al/dothan/1151-ross-clark-cir-suite-100/fp33,False,,2026-05-18
 ALDI,"12777 Atlantic Boulevard, Jacksonville, 32225",7/2/2026,https://info.aldi.us/stores/l/fl/jacksonville/12777-atlantic-boulevard/ft03,False,2026-06-16,2026-06-16
 ALDI,"1531 Monument Road, Jacksonville, FL 32225",6/25/2026,https://info.aldi.us/stores/l/fl/jacksonville/1531-monument-road/ft18,False,2026-06-10,2026-06-10
@@ -90,6 +92,7 @@ Burlington,"701 NJ-440 Space 16, New Jersey",05/22,,False,,2026-05-18
 Burlington,"720 W Telegraph Street, Utah",06/26,,False,,2026-05-18
 Burlington,"9500 S I-35 Frontage Rd, Building K, Texas",06/26,,False,,2026-05-18
 Burlington,"9653 Colerain Avenue, Ohio",06/19,,False,,2026-05-18
+Burlington,Alabama,,,True,2026-07-07,2026-07-07
 Burlington,Arizona,,,False,2026-05-28,2026-05-28
 Burlington,California,,,False,2026-05-28,2026-05-28
 Burlington,Florida,,,False,2026-05-28,2026-05-28
@@ -233,6 +236,7 @@ Hobby Lobby,3040 E,"February 02, 2026",https://newsroom.hobbylobby.com/new-store
 Hobby Lobby,400 Mill Avenue SE in New Philadelphia,"May 29, 2026",https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-new-philadelphia-ohio,False,2026-05-31,2026-05-31
 Hobby Lobby,5445 Alexandria Pike in Cold Spring,"March 20, 2026",https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-cold-spring-kentucky,False,2026-05-19,2026-05-19
 Hobby Lobby,55 Sgt,"March 20, 2026",https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-natchez-mississippi,False,2026-05-19,2026-05-19
+Hobby Lobby,8 Gurnet Road in Brunswick,"July 03, 2026",https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-brunswick-maine,True,2026-07-07,2026-07-07
 HomeGoods,"Cedar Breaks West Shopping Center, 4610 Williams Dr 105, Georgetown, TX 78633, Texas","New store opening on April 23, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/Georgetown-TX-78633/1220,False,,2026-05-18
 HomeGoods,"Coastal Centre, 1218 Cottage Lane, Conway, SC 29526, South Carolina",Now Open!,https://www.homegoods.com/store-details/Conway-SC-29526/1222,False,,2026-05-18
 HomeGoods,"Columbus Center, 3200 Columbus Center, Columbus, IN 47203, Indiana",,https://www.homegoods.com/store-details/Columbus-IN-47203/1178,False,,2026-05-18
@@ -334,7 +338,7 @@ Jersey Mike's,"2924 US Highway 70 W, Goldsboro, NC 27530-9619",In Development,ht
 Jersey Mike's,"3022 Fairlane Drive, Allen Park, MI 48101",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MI,False,,2026-05-18
 Jersey Mike's,"3065 Clairemont Drive, San Diego, CA 92117-6974",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CA,False,,2026-05-18
 Jersey Mike's,"3071 College Ave, Fayetteville, AR 72703",In Development,https://www.jerseymikes.com/locations/coming-soon/US-AR,False,,2026-05-18
-Jersey Mike's,"3078 SW Martin Downs Blvd, Palm City, FL 34990-2643",In Development,https://www.jerseymikes.com/locations/coming-soon/US-FL,True,2026-07-04,2026-07-04
+Jersey Mike's,"3078 SW Martin Downs Blvd, Palm City, FL 34990-2643",In Development,https://www.jerseymikes.com/locations/coming-soon/US-FL,False,2026-07-04,2026-07-04
 Jersey Mike's,"3100 FM 2181, Hickory Creek, TX 75065-7731",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,False,,2026-05-18
 Jersey Mike's,"319 Bethel Road, Somers Point, NJ 08244",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NJ,False,2026-05-19,2026-05-19
 Jersey Mike's,"3195 Wright St., Marquette, MI 49855-9620",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MI,False,,2026-05-18
@@ -346,7 +350,7 @@ Jersey Mike's,"3328 Campster Drive, Cape Girardeau, MO 63701-8472",In Developmen
 Jersey Mike's,"333 E Main Street, Alhambra, CA 91801-3914",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CA,False,2026-06-13,2026-06-13
 Jersey Mike's,"34 Winslow Gate Road, Poughkeepsie, NY 12601",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,,2026-05-18
 Jersey Mike's,"341 Halstead Avenue, Harrison, NY 10528-3727",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,,2026-05-18
-Jersey Mike's,"35 Goodman Road W, Southaven, MS 38671-9485",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MS,True,2026-07-04,2026-07-04
+Jersey Mike's,"35 Goodman Road W, Southaven, MS 38671-9485",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MS,False,2026-07-04,2026-07-04
 Jersey Mike's,"3511 East Race Avenue, Searcy, AR 72143-6200",In Development,https://www.jerseymikes.com/locations/coming-soon/US-AR,False,,2026-05-18
 Jersey Mike's,"355 E 2600 N, North Ogden, UT 84414",In Development,https://www.jerseymikes.com/locations/coming-soon/US-UT,False,,2026-05-18
 Jersey Mike's,"356 Devoe Street, Brooklyn, NY 11211-2638",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,,2026-05-18
@@ -367,6 +371,7 @@ Jersey Mike's,"4551 2nd Street, Davis, CA 95618-9415",In Development,https://www
 Jersey Mike's,"456 Center Street, Ludlow, MA 01056-7201",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MA,False,,2026-05-18
 Jersey Mike's,"4775 North Airport Way, Denver, CO 80239",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CO,False,,2026-05-18
 Jersey Mike's,"4845 Moores Mill Road, Huntsville, AL 35811",In Development,https://www.jerseymikes.com/locations/coming-soon/US-AL,False,,2026-05-18
+Jersey Mike's,"4845 Moores Mill Road, Huntsville, AL 35811-1592",In Development,https://www.jerseymikes.com/locations/coming-soon/US-AL,True,2026-07-07,2026-07-07
 Jersey Mike's,"4860 Blue Diamond Road, Las Vegas, NV 89139-7675",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NV,False,,2026-05-18
 Jersey Mike's,"4870 GOlden Parkway, Buford, GA 30518-5840",In Development,https://www.jerseymikes.com/locations/coming-soon/US-GA,False,,2026-05-18
 Jersey Mike's,"4880 US Highway 89, Flagstaff, AZ 86004",In Development,https://www.jerseymikes.com/locations/coming-soon/US-AZ,False,,2026-05-18
