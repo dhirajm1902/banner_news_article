@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-07",
-  "total": 6975,
+  "last_updated": "2026-07-08",
+  "total": 6985,
   "data": [
     {
       "state": "Alabama",
@@ -260,6 +260,16 @@
       "layoff_date": "03/07/2025",
       "employees_affected": "56",
       "closure_type": "closure",
+      "notes": ""
+    },
+    {
+      "state": "Alaska",
+      "company": "RNDC Shared Services LLC",
+      "city": "Juneau",
+      "notice_date": "07/06/26",
+      "layoff_date": "09/04/26",
+      "employees_affected": "160",
+      "closure_type": "",
       "notes": ""
     },
     {
@@ -11083,6 +11093,56 @@
       "notes": ""
     },
     {
+      "state": "Texas",
+      "company": "JPMorgan Chase & Co.",
+      "city": "Plano",
+      "notice_date": "06/23/2026",
+      "layoff_date": "08/21/2026",
+      "employees_affected": "244.0",
+      "closure_type": "",
+      "notes": ""
+    },
+    {
+      "state": "Texas",
+      "company": "KUEHNE + NAGEL (KN) 2026",
+      "city": "Lewisville",
+      "notice_date": "06/16/2026",
+      "layoff_date": "06/29/2026",
+      "employees_affected": "90.0",
+      "closure_type": "",
+      "notes": ""
+    },
+    {
+      "state": "Texas",
+      "company": "SAKS GLOBAL (Neiman Marcus)",
+      "city": "Dallas",
+      "notice_date": "06/12/2026",
+      "layoff_date": "09/30/2026",
+      "employees_affected": "67.0",
+      "closure_type": "",
+      "notes": ""
+    },
+    {
+      "state": "Texas",
+      "company": "First Student (DeSoto I.S.D.)",
+      "city": "De Soto",
+      "notice_date": "06/12/2026",
+      "layoff_date": "06/30/2026",
+      "employees_affected": "74.0",
+      "closure_type": "",
+      "notes": ""
+    },
+    {
+      "state": "Texas",
+      "company": "Fortrex (John Soules Foods, Inc.)",
+      "city": "Tyler",
+      "notice_date": "06/12/2026",
+      "layoff_date": "06/26/2026",
+      "employees_affected": "85.0",
+      "closure_type": "",
+      "notes": ""
+    },
+    {
       "state": "Vermont",
       "company": "The Orvis Company",
       "city": "Arlington",
@@ -11637,7 +11697,7 @@
       "company": "AeroFarms, Inc. - Rescinded",
       "city": "Ringgold, VA",
       "notice_date": "04/29/2026",
-      "layoff_date": "07/07/2026",
+      "layoff_date": "07/08/2026",
       "employees_affected": "133",
       "closure_type": "Closure",
       "notes": ""
@@ -29871,6 +29931,26 @@
       "employees_affected": "35",
       "closure_type": "",
       "notes": "56 Administrative and Support and Waste Management and Remediation"
+    },
+    {
+      "state": "California",
+      "company": "Blue Diamond Growers",
+      "city": "Sacramento County",
+      "notice_date": "07/02/2026",
+      "layoff_date": "09/04/2026",
+      "employees_affected": "31",
+      "closure_type": "",
+      "notes": "31-33 Manufacturing"
+    },
+    {
+      "state": "California",
+      "company": "Kingdom Animalia, LLC (Hourglass Cosmetics)",
+      "city": "Los Angeles County",
+      "notice_date": "07/02/2026",
+      "layoff_date": "09/15/2026",
+      "employees_affected": "7",
+      "closure_type": "",
+      "notes": "42 Wholesale Trade"
     },
     {
       "state": "Colorado",
@@ -58374,16 +58454,6 @@
     },
     {
       "state": "Michigan",
-      "company": "GMRI, Inc., DBA Bahama Breeze",
-      "city": "Livonia, Michigan",
-      "notice_date": "",
-      "layoff_date": "",
-      "employees_affected": "66",
-      "closure_type": "Company closure",
-      "notes": "Wayne"
-    },
-    {
-      "state": "Michigan",
       "company": "Grouper Acquisition Company, Inc.",
       "city": "Galesburg, Michigan",
       "notice_date": "",
@@ -58391,6 +58461,16 @@
       "employees_affected": "160",
       "closure_type": "Company closure",
       "notes": "Kalamazoo"
+    },
+    {
+      "state": "Michigan",
+      "company": "GMRI, Inc., DBA Bahama Breeze",
+      "city": "Livonia, Michigan",
+      "notice_date": "",
+      "layoff_date": "",
+      "employees_affected": "66",
+      "closure_type": "Company closure",
+      "notes": "Wayne"
     },
     {
       "state": "Michigan",
@@ -61516,11 +61596,31 @@
       "state": "New York",
       "company": "Lutheran Social Services of New York",
       "city": "",
+      "notice_date": "2026-01-29",
+      "layoff_date": "2026-03-31",
+      "employees_affected": "37",
+      "closure_type": "Layoff",
+      "notes": "Bronx"
+    },
+    {
+      "state": "New York",
+      "company": "Lutheran Social Services of New York",
+      "city": "",
       "notice_date": "2026-04-01",
       "layoff_date": "2026-06-30",
       "employees_affected": "30",
       "closure_type": "Closure",
       "notes": "Kings"
+    },
+    {
+      "state": "New York",
+      "company": "Lutheran Social Services of New York",
+      "city": "",
+      "notice_date": "2026-01-29",
+      "layoff_date": "2026-03-31",
+      "employees_affected": "20",
+      "closure_type": "Layoff",
+      "notes": "Bronx"
     },
     {
       "state": "New York",
@@ -62824,16 +62924,6 @@
     },
     {
       "state": "North Carolina",
-      "company": "Conduent Commercial Solutions, LLC",
-      "city": "Florham Park",
-      "notice_date": "June 30, 2026",
-      "layoff_date": "August 28, 2026",
-      "employees_affected": "0",
-      "closure_type": "Permanent Layoff",
-      "notes": ""
-    },
-    {
-      "state": "North Carolina",
       "company": "Firestone Fibers and Textiles, LLC",
       "city": "Kings Mountain",
       "notice_date": "January 27, 2026",
@@ -63931,6 +64021,16 @@
       "employees_affected": "28",
       "closure_type": "Permanent Layoff",
       "notes": "Statewide - Mul"
+    },
+    {
+      "state": "Utah",
+      "company": "Point Designs",
+      "city": "Bountiful",
+      "notice_date": "10/30/26",
+      "layoff_date": "",
+      "employees_affected": "8",
+      "closure_type": "",
+      "notes": ""
     },
     {
       "state": "Utah",
