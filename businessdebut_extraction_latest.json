@@ -1,35 +1,293 @@
 {
-  "last_updated": "2026-06-30",
+  "last_updated": "2026-07-13",
   "data": [
     {
-      "store_name": "Mystic Social Club",
-      "location": "242 East Dania Beach Blvd, Dania Beach, FL 33004",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting a fall opening",
-      "short_description": "Mystic Social Club is a new Caribbean-infused social club and restaurant planning to open in Dania Beach, FL. The indoor-outdoor venue will offer a menu drawing from multiple Caribbean islands, a full music program, and an attached rental lounge space. The project is currently in the permitting stage with an exact opening date to be announced.",
-      "article_link": "https://www.businessdebut.com/comingmystic-social-club/",
-      "published_date": "Not specified"
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Neo Coffee and Kava",
+      "store_name": "1483 South University Drive, Plantation, FL 33324",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Targeting the first week of August",
+      "status": "Neo Coffee and Kava is planned as an upscale coffee and kava bar focused on wellness and alcohol-free gathering, combining a full coffee program, kava bar, spirit-free cocktails and a health-oriented food menu. The 2,400-square-foot space will feature an open layout, two bars and lounge seating. Owner Ruth Connors is serving as both contractor and designer.",
+      "short_description": "https://www.businessdebut.com/4-new-coming-soon-broward-county-restaurants-and-cafes-july-10-2026/",
+      "article_link": ""
     },
     {
-      "store_name": "Alma Argentina (College Park)",
-      "location": "2304 Edgewater Dr, Orlando, FL 32804",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting an opening in about one month",
-      "short_description": "Alma Argentina plans to open its third location in College Park, Orlando, offering steaks, homemade empanadas, milanesas, and Argentine wines in a 1,500-square-foot space. Owner Marisa Flores said the interior is undergoing a major remodel and the location is targeting an opening in about one month.",
-      "article_link": "https://www.businessdebut.com/coming-soon-college-park-alma-argentina/",
-      "published_date": "Not specified"
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Mystic Social Club",
+      "store_name": "242 East Dania Beach Blvd, Dania Beach, FL 33004",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Targeting a fall opening",
+      "status": "Mystic Social Club is a Caribbean-infused social club and restaurant with indoor-outdoor space, music programming and an attached rental lounge. Manager Philmore McCarthy said the goal is to bring a Caribbean feel to Dania Beach.",
+      "short_description": "https://www.businessdebut.com/4-new-coming-soon-broward-county-restaurants-and-cafes-july-10-2026/",
+      "article_link": ""
     },
     {
-      "store_name": "Alma Argentina (Commissary Kitchen)",
-      "location": "110 Live Oaks Boulevard, Casselberry, FL (zip not specified)",
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "NY Deli & Juice Bar",
+      "store_name": "803 Green Springs Hwy, Homewood, AL 35209",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Targeting a late July or early August opening",
+      "status": "NY Deli & Juice Bar, led by owner Mohamed Nagi, is preparing a new location in the former SanPeggios Pizza space, targeting a late July or early August opening. The menu centers on New York-style deli offerings with a juice bar section, and the location will include a drive-thru. The company is also opening in Houston, Texas.",
+      "short_description": "https://www.businessdebut.com/coming-soon-to-homewood-ny-deli-juice-bar/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Byte Burgers",
+      "store_name": "301 N Westshore Blvd, Tampa, FL 33609",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Food truck targeting an opening in the next 30 days; restaurant targeting an opening in the next couple of months",
+      "status": "Byte Burgers is preparing a new Tampa location on Westshore Boulevard, operating a food truck in the parking lot before the restaurant opens. The menu includes classic cheeseburgers, truffle burgers, Lebanese-inspired chicken sandwiches and falafel smash burgers. Co-owners Ali and Ahmed Mansour also plan a larger Byte location with a full bar.",
+      "short_description": "https://www.businessdebut.com/hillsborough-counties-3-new-coming-soon-burger-spots/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Slap Burger",
+      "store_name": "14915 Bruce B Downs Blvd, Tampa, FL 33613",
+      "location": "Opening",
+      "event_type": "June 21",
+      "event_date": "Targeting June 21. The date has not been formally finalized",
+      "status": "Slap Burger is a New York- and New Jersey-born smashburger franchise opening a full-service restaurant near the University of South Florida, seating about 40 guests with late-night service planned. The menu includes single, double and triple smashburgers, Nashville-style chicken sandwiches, shakes and Slap Lemonades.",
+      "short_description": "https://www.businessdebut.com/hillsborough-counties-3-new-coming-soon-burger-spots/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Kobu",
+      "store_name": "1435 Naldo Ave #1, Jacksonville, FL 32207",
+      "location": "Opening",
+      "event_type": "July 28–July 31",
+      "event_date": "Targeting an opening window between July 28 and July 31",
+      "status": "Kobu, a new Japanese-focused restaurant from owner Tuna Lui, is preparing to open later this month with seating for about 36 in the dining room and 32 on the patio, plus a reservation-only omakase room priced at about $175 per person. The menu centers on hand rolls, sushi and sashimi, with Japanese wagyu prepared tableside and about 80 percent dry-aged fish.",
+      "short_description": "https://www.businessdebut.com/jacksonville-sushi-spot-is-opening-with-full-menu-and-an-omakase-counter/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "My Village Play Cafe",
+      "store_name": "1109 Del Prado Blvd S Unit 2, Cape Coral, FL 33990",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Targeting an opening in about two to three months, pending permitting",
+      "status": "My Village Play Cafe is an indoor play cafe designed for parents and young children, combining a cafe at the front with an indoor playground in the back. The footprint is more than 3,400 square feet, and the menu includes coffee, espresso drinks, smoothies and children's snacks. Owners are Carolina and Zavier Bravo.",
+      "short_description": "https://www.businessdebut.com/3-exciting-lee-county-restaurants-and-cafes-coming-soon/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Tacos & Tequila Cantina",
+      "store_name": "903 NE 15th Place, Suite 130, Cape Coral, FL 33909",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Targeting a public opening about two weeks from the interview, pending final inspections",
+      "status": "Tacos & Tequila Cantina is opening a new Cape Coral location, joining existing restaurants in Naples and Estero. Director of operations Billy Pfaff described the concept as vibrant, with a menu mixing Tex-Mex, American-influenced tacos and traditional Mexican dishes.",
+      "short_description": "https://www.businessdebut.com/3-exciting-lee-county-restaurants-and-cafes-coming-soon/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Koa Sushi",
+      "store_name": "912 N Mills Ave, Orlando, FL 32803",
+      "location": "Opening",
+      "event_type": "mid July / July 15th",
+      "event_date": "Coming soon; will likely open in mid July, current goal July 15th",
+      "status": "Koa Sushi, known for fusing Latin, Japanese and Hawaiian cuisine, is opening its first standalone brick and mortar in Mills 50, taking over the former Grilled Cheezus space. The brand has operated in The Great Southern Box Company Food Hall since 2024 and will offer counter service open as late as 2 a.m. on weekends. Primary owner is Grace Orta.",
+      "short_description": "https://www.businessdebut.com/koa-sushi-opening-a-brick-and-mortar-in-mills-50/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Neutral Ground",
+      "store_name": "801 Dodds Ave, Chattanooga, TN 37404",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Opening permanently",
+      "status": "Chef Kenyatta Ashford is bringing his Afro-Creole concept, Neutral Ground, to a permanent home in Chattanooga after popping up and catering in the area since 2020. The restaurant will seat about 65 guests inside plus a patio of about 30 seats, offering full table service and a bar. The menu blends Creole cuisine and West African culinary traditions.",
+      "short_description": "https://www.businessdebut.com/cultural-heritage-and-ancestry-are-behind-this-upcoming-chattanooga-restaurant/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Santa Maria",
+      "store_name": "715 Glynn St S, Fayetteville, GA 30214",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Targeting late July or early August for opening",
+      "status": "Santa Maria is a full-service Latin tapas restaurant with a Peruvian focus preparing to open in the former Speedi Pig space, owned by chef Mario Garcia. The menu pulls from Peruvian, Colombian, Venezuelan, Mexican and Andean cooking, with a raw bar, smoked-meat component and craft cocktails. It will be the second Santa Maria location, following an original in Cumming.",
+      "short_description": "https://www.businessdebut.com/replacing-speedi-pig-in-fayetteville-santa-maria/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Speedi Pig",
+      "store_name": "715 Glynn St S, Fayetteville, GA 30214",
+      "location": "Closing",
+      "event_type": "2025",
+      "event_date": "Closed",
+      "status": "Speedi Pig, a longtime local barbecue restaurant, closed in 2025 according to Mario Garcia. Santa Maria is taking over the former space and kept the smokers and pitmaster from the BBQ restaurant.",
+      "short_description": "https://www.businessdebut.com/replacing-speedi-pig-in-fayetteville-santa-maria/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Byte Burger",
+      "store_name": "301 N Westshore Blvd, Tampa, FL 33609",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Truck aiming to open in the next 30 days; restaurant aiming to open in the next couple of months",
+      "status": "A new location of Byte Burger is opening in Tampa, with a food truck operating in the parking lot before the restaurant opens. The truck will serve classic cheeseburgers, truffle burgers, Lebanese-inspired chicken sandwiches and falafel smash burgers. Co-owners Ali and Ahmed Mansour plan a larger location with a full bar.",
+      "short_description": "https://www.businessdebut.com/tampa-expansion-byte-burger-opening-a-new-location-copy/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Desi Chowrastha Indian Eatery",
+      "store_name": "6127 Westwood Blvd, Orlando, FL 32821",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Targeting the second week of October for opening",
+      "status": "Desi Chowrastha Indian Eatery is preparing a new restaurant in the former Curry Mantra Indian Cuisine space, with interior work underway. The menu features chicken, paneer, goat and egg biryani, samosas, dosas, curries and tandoor options. The location will join a recently opened Desi Chowrastha in St. Johns County.",
+      "short_description": "https://www.businessdebut.com/coming-soon-orlando-desi-chowrastha-indian-eatery/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Griffin's Steakhouse",
+      "store_name": "1040 West Lake Commons Drive Unit 6&7, Martinez, GA 30907",
+      "location": "Opening",
+      "event_type": "July 10",
+      "event_date": "Set to open July 10",
+      "status": "Griffin's Steakhouse is set to open, opened by co-owners and sisters Diane McCall and Paula Duncan, whose maiden name inspired the name. It is described as an upscale steakhouse open for lunch and dinner, occupying about 3,500 square feet with seating for about 80 guests.",
+      "short_description": "https://www.businessdebut.com/coming-soon-martinez-griffins-steakhouse-opening-july-10th/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Desi Chowrastha Indian Eatery",
+      "store_name": "6127 Westwood Blvd, Orlando, FL 32821",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Targeting the second week of October",
+      "status": "Desi Chowrastha Indian Eatery is preparing a new Orlando restaurant in the former Curry Mantra space, undergoing interior work. The menu includes chicken, paneer, goat and egg biryani, samosas, dosas, curries and tandoor items. It will join a recently opened location in St. Johns County.",
+      "short_description": "https://www.businessdebut.com/7-new-restaurants-opening-in-orange-county-fl-july-6-2026/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Koa Sushi",
+      "store_name": "912 N Mills Ave, Orlando, FL 32803",
+      "location": "Opening",
+      "event_type": "mid-July / July 15",
+      "event_date": "Targeting mid-July, with July 15 as the current goal",
+      "status": "Koa Sushi is moving from a food hall stall into its first standalone brick-and-mortar restaurant in Mills 50, taking over the former Grilled Cheezus space. The Puerto Rican and Venezuelan-owned brand fuses Japanese, Latin and Hawaiian cooking. Primary owner is Grace Orta.",
+      "short_description": "https://www.businessdebut.com/7-new-restaurants-opening-in-orange-county-fl-july-6-2026/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Nep Sai Gon Bbq & Hotpot",
+      "store_name": "6817 Eagle Watch Dr #275, Orlando, FL 32822",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "N/A (status text truncated in article)",
+      "status": "Nep Sai Gon BBQ & Hotpot is listed as an upcoming Orlando restaurant at the given address. The article text for this entry is cut off before full status and description details are provided.",
+      "short_description": "https://www.businessdebut.com/7-new-restaurants-opening-in-orange-county-fl-july-6-2026/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Mystic Social Club",
+      "store_name": "242 East Dania Beach Blvd, Dania Beach, FL 33004",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Targeting a fall opening",
+      "status": "Mystic Social Club is a Caribbean-infused social club and restaurant with indoor-outdoor space, music programming and an attached rental lounge. The menu includes jerk chicken, jerk pork, conch pasta, oxtail pasta and Bahamian conch salad. Manager Philmore McCarthy leads the concept.",
+      "short_description": "https://www.businessdebut.com/37-new-coming-soon-florida-restaurants-we-found-in-june-2026/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Keke's Breakfast Cafe",
+      "store_name": "5201 Sheridan St, Hollywood, FL 33021",
+      "location": "Opening",
+      "event_type": "mid-July / July 16",
+      "event_date": "Targeting mid-July, with July 16 as the current goal",
+      "status": "A new Keke's Breakfast Cafe location serving the brand's standard breakfast, brunch and lunch format is expected to seat close to 150 guests. Owner Ijmal Ali is also working on additional locations in Pembroke Pines, Tucker and McDonough.",
+      "short_description": "https://www.businessdebut.com/37-new-coming-soon-florida-restaurants-we-found-in-june-2026/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Keke's Breakfast Cafe",
+      "store_name": "10800 Pines Blvd, Pembroke Pines, FL 33026",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Targeting October",
+      "status": "A second South Florida Keke's location is in development from owner Ijmal Ali, expected to seat about 130 to 150 guests.",
+      "short_description": "https://www.businessdebut.com/37-new-coming-soon-florida-restaurants-we-found-in-june-2026/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "TrySeafood Grill",
+      "store_name": "525 E Broad St, Fuquay-Varina, NC 27526",
+      "location": "Opening",
+      "event_type": "2026",
+      "event_date": "Planned to open in 2026; targeting an opening later this year",
+      "status": "TrySeafood Grill, from the team behind TrySeafood Grill in Cary, is planned for the former Aviator Smokehouse space, owned by Regina Scott. It is an American-style seafood restaurant offering steamed, fried and grilled seafood, with a full-service dine-in focus and a bar program.",
+      "short_description": "https://www.businessdebut.com/new-seafood-restaurant-opening-in-fuquay-varina-tryseafood-grill/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Barrio Burrito Bar",
+      "store_name": "9830 Upper Alafia Ct, Suite 101 Riverview 33578",
+      "location": "Opening",
+      "event_type": "mid-August",
+      "event_date": "Under construction; estimate opening in mid-August",
+      "status": "A new location of Barrio Burrito Bar is under construction in Riverview, brought by co-franchisees Afiya Fareen and Priyal Patel. The Canadian franchise is known for tacos, burritos, burrito bowls, chips and salsa, fries and churros.",
+      "short_description": "https://www.businessdebut.com/mexican-fast-casual-coming-to-riverview-barrio-burrito-bar/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Tipsy Taco",
+      "store_name": "20 S Main St, Greenville, SC 29601",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Opening targeted for \"a couple months\" from lease signing",
+      "status": "Tipsy Taco plans to open in the former Bonjour Main and White Duck Taco space, its first location in downtown Greenville, owned by Frank Roman. The menu centers on casual Tex-Mex with tacos, burritos, fajitas and shareable starters, plus a full bar and planned weekend late-night service.",
+      "short_description": "https://www.businessdebut.com/heres-whats-replacing-white-duck-taco-in-downtown-greenville-tipsy-taco/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Nếp Sài Gòn BBQ & Hotpot",
+      "store_name": "6817 Eagle Watch Dr #275, Orlando, FL 32822",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Expected to open in August, pending final permits and approvals",
+      "status": "Nếp Sài Gòn BBQ & Hotpot, a new Vietnamese grill and hot pot restaurant owned by Oanh Vo, is in development across from Epic Theatres. It offers a family-style dining experience with tabletop grills and hot pots featuring premium meats, fresh seafood, vegetables and rice paper wraps.",
+      "short_description": "https://www.businessdebut.com/authentic-thai-coming-to-orlando-nep-sai-gon-bbq-hotpot/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "Southern Sassy BBQ",
+      "store_name": "8 Raymond Parks St S, Dawsonville, GA 30534",
+      "location": "Opening",
+      "event_type": "third week of July",
+      "event_date": "Targeting the third week of July for opening",
+      "status": "Southern Sassy BBQ plans to launch its food trailer and new commissary kitchen in downtown Dawsonville, serving as owner Tina Everett's base for catering, events and food truck service. The concept focuses on pulled pork and smoked chicken with house-made sauces and dry rub. Everett is preparing for inspections before opening.",
+      "short_description": "https://www.businessdebut.com/dawsonville-bbq-brand-opening-commissary-kitchen-food-truck-southern-sassy-bbq/",
+      "article_link": ""
+    },
+    {
+      "i'll_extract_the_retail_restaurant_data_from_these_articles_using_the_news-extraction_skill.": "NY Prime Fried Chicken",
+      "store_name": "1190 Five Forks Trickum Rd SW, Lawrenceville, GA 30045",
+      "location": "Opening",
+      "event_type": "Not specified",
+      "event_date": "Preparing to re-open; open soon",
+      "status": "NY Prime Fried Chicken has changed hands and new owner Manvir Singh is preparing to re-open, currently going through licensing and permitting. He intends to update the menu in a few small ways. The restaurant focuses on fried chicken including wings, tenders, sandwiches and drumsticks.",
+      "short_description": "https://www.businessdebut.com/gwinnett-county-restaurant-changes-hands-ny-prime-fried-chicken/",
+      "article_link": ""
+    },
+    {
+      "store_name": "Smashbird",
+      "location": "13051 Abercorn St, Ste B5, Savannah, GA 31419",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "targeting an opening in about one month",
-      "short_description": "Alma Argentina is building out a new commissary kitchen in Casselberry to increase empanada production and support catering demand. The space is planned as a production hub and small market offering frozen empanadas, prepared meats, and Argentine grocery items. It is targeting an opening in about one month.",
-      "article_link": "https://www.businessdebut.com/coming-soon-college-park-alma-argentina/",
-      "published_date": "Not specified"
+      "status": "Targeting a mid-July opening",
+      "short_description": "Smashbird is a new fast-casual burger concept from the owners behind several Savannah restaurants, built as mostly grab-and-go with self-service kiosks, QR-code ordering and delivery integration. The menu features thin crispy smashburgers, hand-breaded chicken tenders, wings and shoestring fries. Owners Christine and David Cutlip also operate Savannah Seafood Shack and other local restaurants.",
+      "article_link": "https://www.businessdebut.com/19-restaurants-opening-across-georgia-we-found-this-month-j/"
+    },
+    {
+      "store_name": "Honey's Po'boys and Gumbo",
+      "location": "2667 Powder Springs Rd SW Ste 102, Marietta, GA 30064",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Targeting an August opening, depending on construction, permitting and inspections",
+      "short_description": "Honey's Po'boys and Gumbo is a Louisiana-inspired restaurant from siblings Angela Randolph and Lionel Thomas, opening a brick-and-mortar after more than 20 years in catering. It will focus mostly on takeout with about 10 to 12 dine-in seats, serving po'boys, gumbo and New Orleans-style snowballs. The restaurant honors the siblings' late mother, nicknamed Honey.",
+      "article_link": "https://www.businessdebut.com/19-restaurants-opening-across-georgia-we-found-this-month-j/"
     },
     {
       "store_name": "Fly Chef Restaurant",
@@ -37,9 +295,8 @@
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "Moving into the new location in four to six weeks",
-      "short_description": "Fly Chef Restaurant is relocating to a larger Peachtree Corners space that will seat around 150 guests, up from 60 at the current Spaulding Drive location. The new space will allow for bigger crowds, added event space, and expanded catering services while keeping the same menu of Nigerian and Jamaican-style dishes.",
-      "article_link": "https://www.businessdebut.com/3-coming-soon-gwinnett-county-restaurants-june-27-26/",
-      "published_date": "Not specified"
+      "short_description": "Fly Chef Restaurant is relocating to a larger Peachtree Corners space expected to seat around 150, up from about 60 at its current Spaulding Drive location, adding event space and expanded catering. The menu, concept and atmosphere will remain the same, featuring Nigerian and Jamaican-style dishes. Owner is Gregory Owie.",
+      "article_link": "https://www.businessdebut.com/3-coming-soon-gwinnett-county-restaurants-june-27-26/"
     },
     {
       "store_name": "Brick City Ice Cream Bar & Grill",
@@ -47,569 +304,175 @@
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "Targeting a July opening",
-      "short_description": "Brick City Ice Cream Bar & Grill is a new New Jersey-inspired bar and grill opening in Duluth, GA, featuring classic ice cream, alcoholic ice cream beverages, and northern comfort foods. The space will include two large bar areas, one of which combines the main bar with an ice cream counter near the entrance. Menu highlights include Italian hot dogs, Italian cheesesteaks, and specialty Italian pizza roll-style bread.",
-      "article_link": "https://www.businessdebut.com/3-coming-soon-gwinnett-county-restaurants-june-27-26/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article is a video interview with the owner of Rosa's Pizza discussing 35 years of business history; no opening or closure event is reported.",
-      "article_link": "https://www.businessdebut.com/interviewing-legendary-downtown-atl-pizzeria-rosas-pizza/",
-      "published_date": "N/A"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article lists new Florida business entity formations (LLCs, corporations, etc.) from the Secretary of State; no restaurant or retail openings or closures are reported.",
-      "article_link": "https://www.businessdebut.com/florida-business-formations-june-26-2026/",
-      "published_date": "N/A"
+      "short_description": "Brick City Ice Cream Bar & Grill is a New Jersey-inspired bar and grill with classic ice cream, alcoholic ice cream beverages and northern comfort foods. The space will include two large bar areas, one combining the main bar with an ice cream counter using a cold-stone-style setup. The menu features Italian hot dogs, Italian cheesesteaks and New Jersey Italian American dishes.",
+      "article_link": "https://www.businessdebut.com/3-coming-soon-gwinnett-county-restaurants-june-27-26/"
     },
     {
       "store_name": "Smash Mouth Foods",
       "location": "2130 Cobbs Ford Rd, Prattville, AL 36066",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "targeting mid to late August",
-      "short_description": "Smash Mouth Foods is planning to open its fifth location in Prattville, AL, targeting mid to late August. The concept specializes in customizable smashburgers cooked on a flat top, with a compact dining room seating about 21 or 22 guests and a pickup window for online orders.",
-      "article_link": "https://www.businessdebut.com/coming-soon-to-prattville-smash-mouth-foods/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Whiskey's Bar And Grill",
-      "location": "2191 Us-1, Titusville, FL 32796",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "relocating",
-      "short_description": "Whiskey's Bar And Grill, a longtime downtown Titusville bar, is relocating to a new address on US-1. The new location will maintain its neighborhood bar feel with plans for music, bingo, karaoke, and pool events.",
-      "article_link": "https://www.businessdebut.com/10-restaurants-opening-across-florida-june-25-2026/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Bunkerr Golf Lounge",
-      "location": "801 S University Dr Ste C-138, Plantation, FL 33324",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "recently opened",
-      "short_description": "Bunkerr Golf Lounge, an independently owned golf simulator venue, has opened in Plantation, FL. The venue features three simulator bays where guests can book time to play full rounds on virtual golf courses from around the world.",
-      "article_link": "https://www.businessdebut.com/10-restaurants-opening-across-florida-june-25-2026/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Keke's Breakfast Cafe (Hollywood)",
-      "location": "5201 Sheridan St, Hollywood, FL 33021",
-      "event_type": "Opening",
-      "event_date": "Mid-July; tentative July 16",
-      "status": "preparing to open",
-      "short_description": "Keke's Breakfast Cafe is preparing to open a new location in Hollywood, FL, targeting mid-July with a tentative date of July 16. The restaurant will seat close to 150 guests.",
-      "article_link": "https://www.businessdebut.com/10-restaurants-opening-across-florida-june-25-2026/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Roadhouse Chicken Co",
-      "location": "14197 US-441, Lake City, FL 32024",
-      "event_type": "Opening",
-      "event_date": "June 17",
-      "status": "soft opening June 17 at 4 p.m.",
-      "short_description": "Roadhouse Chicken Co. planned a soft opening on June 17 at 4 p.m. at its Lake City, FL location. The restaurant sits in the same building as the TA truck stop off Interstate 75.",
-      "article_link": "https://www.businessdebut.com/10-restaurants-opening-across-florida-june-25-2026/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Fatboy Fried Rice",
-      "location": "9745 Old St. Augustine Rd, Jacksonville, FL 32257",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "preparing its first brick-and-mortar restaurant",
-      "short_description": "Fatboy Fried Rice, a Jacksonville-based fried rice concept led by co-owners Joshua Valencia and Jun Marc Quinones, is preparing to open its first brick-and-mortar restaurant.",
-      "article_link": "https://www.businessdebut.com/10-restaurants-opening-across-florida-june-25-2026/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article lists new Florida business entity formations (LLCs, corporations, etc.) from the Secretary of State; no restaurant or retail openings or closures are reported.",
-      "article_link": "https://www.businessdebut.com/florida-business-registrations-june-25-2026/",
-      "published_date": "N/A"
-    },
-    {
-      "store_name": "Tequila Real Mexican Bar & Grill",
-      "location": "400 Legacy Village Dr., Suite 101, Davenport, FL 33896",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Very recently opened",
-      "short_description": "Tequila Real is a full-service Mexican restaurant and bar seating about 157 guests in a 3,100-square-foot space in Davenport, FL. The restaurant received a perfect 0-violation inspection score on June 2, 2026. Everything is made fresh daily and the menu includes 11 types of burritos and six to seven fajita choices.",
-      "article_link": "https://www.businessdebut.com/4-polk-county-restaurants-score-perfect-inspection-scores-ahead-of-opening/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Xurro",
-      "location": "209 E Main St, Dundee, FL 33838",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Very recently opened",
-      "short_description": "Xurro, a churro-focused franchise with one other Florida location in Winter Haven, has started serving guests in Dundee, FL. The shop offers churros, churro milkshakes, and churro sundaes, and received a perfect inspection score on June 2, 2026.",
-      "article_link": "https://www.businessdebut.com/4-polk-county-restaurants-score-perfect-inspection-scores-ahead-of-opening/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Donde Wilking Restaurant",
-      "location": "Address not specified",
-      "event_type": "Opening",
-      "event_date": "July 6",
-      "status": "Opening on July 6th",
-      "short_description": "Donde Wilking Restaurant passed its health inspection and is set to open on July 6th in Polk County, FL.",
-      "article_link": "https://www.businessdebut.com/4-polk-county-restaurants-score-perfect-inspection-scores-ahead-of-opening/",
-      "published_date": "Not specified"
+      "status": "Targeting mid to late August",
+      "short_description": "Smash Mouth Foods plans to open its fifth location, owned by Jared Hawsey and his father Tracy Hawsey, specializing in customizable smashburgers cooked on a flat top with fresh, hand-cut ingredients. The Prattville restaurant will seat about 21 or 22 guests with a pickup window for online orders. The brand started as a food trailer in Andalusia in 2021 before moving to brick-and-mortar.",
+      "article_link": "https://www.businessdebut.com/coming-soon-to-prattville-smash-mouth-foods/"
     },
     {
       "store_name": "Taqueria El Viajero",
       "location": "2080 Candler Rd, Gainesville, GA 30507",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "opening next week",
-      "short_description": "Taqueria El Viajero is replacing Brandon's Cafe at its Gainesville, GA location and is opening next week. The taqueria will serve tacos, burritos, burgers, and Mexican breakfast options seven days a week, and received a 100/A inspection report on June 15th.",
-      "article_link": "https://www.businessdebut.com/coming-soon-to-gainesville-taqueria-el-viajero-replacing-brandons-cafe/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Fun Spot America (Atlanta)",
-      "location": "Fayetteville, GA (address not specified)",
-      "event_type": "Closing",
-      "event_date": "August 2",
-      "status": "closing permanently on August 2nd",
-      "short_description": "Fun Spot America is permanently closing its Atlanta-area theme park on August 2nd after decades in Metro Atlanta. The closure comes three years after the park invested $13 million in its roller coaster Arie Force One, and amid financial difficulties including restructuring of a $25 million loan.",
-      "article_link": "https://www.businessdebut.com/one-13mm-coaster-later-and-fun-spot-atlanta-is-closing/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article covers four existing Cobb County restaurants recognized by Wine Spectator for their wine programs; no opening or closure events are reported.",
-      "article_link": "https://www.businessdebut.com/4-best-cobb-county-restaurants-for-wine-according-to-wine-spectator/",
-      "published_date": "N/A"
-    },
-    {
-      "store_name": "Double Dippin'",
-      "location": "235 Riverside Dr Suite 85, Holly Hill, FL 32117",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Targeting a December opening",
-      "short_description": "Award-winning food truck Double Dippin' is preparing its first brick-and-mortar restaurant in Holly Hill, FL, targeting a December opening. Owner Alyssa Allred has operated the food truck for four years and is building the restaurant around a birria-focused menu. The approximately 1,600-square-foot space will include an indoor dining area and a 700-square-foot lanai.",
-      "article_link": "https://www.businessdebut.com/3-new-coming-soon-volusia-county-restaurants-july-24-2026/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Two Jerks Tiki Bar & Grill",
-      "location": "79 Dunlawton Avenue, Port Orange, FL 32127",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Targeting a late 2026 opening",
-      "short_description": "Two Jerks Tiki Bar & Grill is a planned waterfront tiki-style restaurant and grill for the longtime former DJ's Deck property in Port Orange, FL. The earliest current window is November or December 2026, with February or March also possible depending on project progress.",
-      "article_link": "https://www.businessdebut.com/3-new-coming-soon-volusia-county-restaurants-july-24-2026/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article lists new Florida business entity formations (LLCs, corporations, etc.) from the Secretary of State; no restaurant or retail openings or closures are reported.",
-      "article_link": "https://www.businessdebut.com/florida-business-formations-june-24-2026/",
-      "published_date": "N/A"
-    },
-    {
-      "store_name": "Heritage Supper Club",
-      "location": "63 Georgia Ave SE, Atlanta, GA 30315",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "in the works",
-      "short_description": "Heritage Supper Club, a concept from Bellevue Hospitality, is in the works at 63 Georgia Ave SE in Atlanta. Initially a pop-up, the brand has expanded its scope to cover cuisines across the African diaspora with a multi-course tasting menu.",
-      "article_link": "https://www.businessdebut.com/we-found-five-new-restaurants-coming-to-greater-atlanta-read-about-them-here/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Viva",
-      "location": "39 Georgia Ave SE, Atlanta, GA 30312",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "preparing to open",
-      "short_description": "Viva is a new taqueria from local operator Agustin Leon preparing to open at 39 Georgia Ave SE in Atlanta, in the space previously occupied by BOCA. The restaurant will offer a smaller, focused menu with counter service and a casual neighborhood atmosphere.",
-      "article_link": "https://www.businessdebut.com/we-found-five-new-restaurants-coming-to-greater-atlanta-read-about-them-here/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Library ATL",
-      "location": "6025 Oakbrook Pkwy, Norcross, GA 30093",
-      "event_type": "Opening",
-      "event_date": "June 30 (soft opening)",
-      "status": "soft opening on Tuesday, June 30",
-      "short_description": "Library ATL is a new nightclub and lounge preparing to open in Norcross, GA, with a soft opening on June 30. The venue will feature a fusion of Nigerian, American, and Mediterranean dishes, Afrobeats and diverse music, and LGBTQ and Latino nights.",
-      "article_link": "https://www.businessdebut.com/we-found-five-new-restaurants-coming-to-greater-atlanta-read-about-them-here/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Tailored Smoke",
-      "location": "4790 Peachtree Industrial Blvd., Unit 204, Norcross, GA 30071",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "preparing to open",
-      "short_description": "Tailored Smoke, a cigar lounge franchise based in Charlotte, NC, is preparing to open its first Atlanta-area location in Norcross, GA.",
-      "article_link": "https://www.businessdebut.com/we-found-five-new-restaurants-coming-to-greater-atlanta-read-about-them-here/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Poolie's BBQ & Grill",
-      "location": "2054 Highway 42N, Mcdonough, GA 30253",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "plans a new restaurant",
-      "short_description": "Poolie's BBQ & Grill plans a new restaurant, catering kitchen, and food truck hub in McDonough, GA, as the next stage after more than two and a half years operating a food trailer. The menu will center on Southern barbecue plates including pulled pork, brisket, smoked chicken wings, and sides, with dine-in and takeout options.",
-      "article_link": "https://www.businessdebut.com/we-found-five-new-restaurants-coming-to-greater-atlanta-read-about-them-here/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Keke's Breakfast Cafe (Hollywood)",
-      "location": "5201 Sheridan St, Hollywood, FL 33021",
-      "event_type": "Opening",
-      "event_date": "Mid-July; tentative July 16",
-      "status": "preparing to open",
-      "short_description": "Keke's Breakfast Cafe is preparing to open in Hollywood, FL, targeting mid-July with a tentative date of July 16, and will seat close to 150 guests. Owner Ijmal Ali is also planning additional locations in Pembroke Pines, Tucker, and McDonough.",
-      "article_link": "https://www.businessdebut.com/multi-state-expansion-kekes-breakfast-cafe-opening-in-fl-and-ga/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Keke's Breakfast Cafe (Pembroke Pines)",
-      "location": "10800 Pines Blvd, Pembroke Pines, FL 33026",
-      "event_type": "Opening",
-      "event_date": "October",
-      "status": "targeting October",
-      "short_description": "A second South Florida Keke's Breakfast Cafe location is planned for Pembroke Pines, FL, targeting an October opening with about 130 to 150 seats.",
-      "article_link": "https://www.businessdebut.com/multi-state-expansion-kekes-breakfast-cafe-opening-in-fl-and-ga/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Keke's Breakfast Cafe (Tucker, GA)",
-      "location": "Address not specified",
-      "event_type": "Opening",
-      "event_date": "August or September",
-      "status": "targeting August or September openings",
-      "short_description": "Owner Ijmal Ali is working on a Keke's Breakfast Cafe location in Tucker, near Atlanta, targeting an August or September opening. Exact address is to be announced.",
-      "article_link": "https://www.businessdebut.com/multi-state-expansion-kekes-breakfast-cafe-opening-in-fl-and-ga/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Keke's Breakfast Cafe (McDonough, GA)",
-      "location": "Address not specified",
-      "event_type": "Opening",
-      "event_date": "August or September",
-      "status": "targeting August or September openings",
-      "short_description": "Owner Ijmal Ali is working on a Keke's Breakfast Cafe location in McDonough, near Atlanta, targeting an August or September opening. Exact address is to be announced.",
-      "article_link": "https://www.businessdebut.com/multi-state-expansion-kekes-breakfast-cafe-opening-in-fl-and-ga/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Library ATL",
-      "location": "6025 Oakbrook Pkwy, Norcross, GA 30093",
-      "event_type": "Opening",
-      "event_date": "June 30 (soft opening)",
-      "status": "soft opening on Tuesday, June 30",
-      "short_description": "Library ATL is a new nightclub and lounge opening in Norcross, GA, with a soft opening on June 30 at 5 p.m. The venue will offer a fusion of Nigerian, American, and Mediterranean dishes plus classic club food, with lounge and nightclub hours from 5 p.m. to 2:30 a.m. six days a week.",
-      "article_link": "https://www.businessdebut.com/norcross-is-getting-a-new-nightclub-and-lounge-library-atl/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Viva",
-      "location": "39 Georgia Ave SE, Atlanta, GA 30312",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting an opening soon",
-      "short_description": "Viva is a new taqueria from operator Agustin Leon opening in the former BOCA space in Atlanta's Summerhill neighborhood. The restaurant will offer counter service with a menu centered on tacos, burritos, tortas, quesadillas, and bowls, and will seat about 60 guests. Leon said the team is waiting on final approvals from the city with the exact date to be announced.",
-      "article_link": "https://www.businessdebut.com/heres-whats-replacing-boca-in-summerhill-viva/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Poolie's BBQ & Grill",
-      "location": "2054 Highway 42N, Mcdonough, GA 30253",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "plans a new restaurant",
-      "short_description": "Poolie's BBQ & Grill is transitioning from a food trailer to a brick-and-mortar restaurant, catering kitchen, and food truck hub in McDonough, GA. The menu will focus on Southern barbecue including pulled pork, brisket, smoked chicken wings, and various sides, with dine-in and takeout options.",
-      "article_link": "https://www.businessdebut.com/this-local-food-truck-is-opening-a-brick-and-mortar-in-mcdonough-poolies-bbq-grill/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "50'S Diner",
-      "location": "7223 International Dr, Orlando, FL 32819",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting a soft opening this week",
-      "short_description": "50'S Diner is a new 1950s-themed restaurant opening this week at International Drive in Orlando, FL, from owners Uriel Rivera and Felipe Osborn. The 1,400-square-foot space seats about 52 guests and offers quesadillas, burgers, pasta, pizza, fajitas, and milkshakes. A formal grand opening date is to be announced.",
-      "article_link": "https://www.businessdebut.com/a-new-50s-style-diner-is-bringing-nostalgia-to-orlando/",
-      "published_date": "Not specified"
+      "status": "Opening next week",
+      "short_description": "Taqueria El Viajero is a new Mexican taqueria replacing Brandon's Cafe, serving tacos, burritos, burgers and Mexican breakfast options. The restaurant will be open seven days a week. It received a 100/A inspection report on June 15th.",
+      "article_link": "https://www.businessdebut.com/coming-soon-to-gainesville-taqueria-el-viajero-replacing-brandons-cafe/"
     },
     {
       "store_name": "Renaissance Rooftop",
       "location": "118 South Pearl Street, Rocky Mount, NC 27804",
       "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting a June opening",
-      "short_description": "Renaissance Rooftop is a new rooftop restaurant, bar, and event venue targeting a June opening in downtown Rocky Mount, NC. The venue will offer live music, networking events, wellness mornings, brunch, DJs, poetry, art, and private gatherings in an indoor-outdoor space seating 60–100 guests inside and 25–35 on the patio. The food and beverage program will include Eastern North Carolina-inspired dishes, handcrafted cocktails, and wellness beverages.",
-      "article_link": "https://www.businessdebut.com/this-rooftop-experience-is-coming-soon-to-rocky-mount/",
-      "published_date": "Not specified"
+      "event_date": "June",
+      "status": "Targeting a June opening",
+      "short_description": "Renaissance Rooftop is a rooftop restaurant, bar and event venue coming to downtown Rocky Mount, owned by Daniel and Tina Bellamy and other investors, built around culture, music, wellness and community. The second-floor and rooftop venue is expected to seat between 60 and 100 guests indoors plus a patio for 25 to 35. The menu, still being finalized, will feature Eastern North Carolina-inspired dishes with cocktails and small plates.",
+      "article_link": "https://www.businessdebut.com/this-rooftop-experience-is-coming-soon-to-rocky-mount/"
     },
     {
       "store_name": "Ladder Company Cafe",
       "location": "104 N Elm St, Lumberton, NC 28358",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "preparing to open",
-      "short_description": "Ladder Company Cafe is preparing to open inside Lumberton's historic 1917 fire station, pending final health department approval. The cafe will offer about 35 seats with a casual dine-in menu focused on artisan sandwiches and lighter lunch options with no fried food. Owners Tommy and Gidget Vickers have spent two years restoring the building using historical documents to preserve its original character.",
-      "article_link": "https://www.businessdebut.com/ladder-company-cafe-preparing-downtown-lumberton-debut/",
-      "published_date": "Not specified"
+      "status": "Preparing to open after final health department approval",
+      "short_description": "Ladder Company Cafe is preparing to open inside Lumberton's historic 1917 fire station, owned by Tommy and Gidget Vickers, in the former garage area restored over two years. The cafe will offer casual dine-in with about 35 seats, focusing on artisan sandwiches and lighter lunch options with no fried food. The couple also operate 219 Elm, another downtown Lumberton project.",
+      "article_link": "https://www.businessdebut.com/ladder-company-cafe-preparing-downtown-lumberton-debut/"
     },
     {
       "store_name": "Kabayan Bites",
-      "location": "139 SE Main St, Rocky Mount, NC (zip not specified)",
+      "location": "139 SE Main St",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "recently opened",
-      "short_description": "Kabayan Bites has recently opened in Rocky Mount, NC, specializing in Filipino cuisine with dine-in and takeout service seven days a week from 11 a.m. to 9 p.m. The menu includes dishes like Chicken Inasal, Tapsilog, Pansit Canton noodles, and a Kamayan feast served on banana leaves for groups of 6–8 or more.",
-      "article_link": "https://www.businessdebut.com/kabayan-bites-bringing-pinoy-comfort-food-to-rocky-mount/",
-      "published_date": "Not specified"
+      "status": "Recently opened",
+      "short_description": "Kabayan Bites has recently opened in Rocky Mount, specializing in Filipino cuisine and serving dine-in and takeout guests seven days a week from 11 am to 9 pm. The menu includes Chicken Inasal, Tapsilog, Pansit Canton noodles and a Kamayan feast. Owner is JM Yravin.",
+      "article_link": "https://www.businessdebut.com/kabayan-bites-bringing-pinoy-comfort-food-to-rocky-mount/"
     },
     {
       "store_name": "All Kinds",
       "location": "2116 New Bern Ave., Suite J, Raleigh, NC 27610",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "targeting an opening in the next two to four weeks",
-      "short_description": "All Kinds is a new local craft shop with beer and wine targeting an opening in the next two to four weeks in Raleigh, NC. The shop will sell local crafts including pottery and artisan goods, with a beer and wine component, and may offer grab-and-go snacks. Owner Carl Vick is opening the business with his wife Allison next door to their existing Little Blue Bakehouse.",
-      "article_link": "https://www.businessdebut.com/all-kinds-set-to-open-with-local-artisan-goods-and-wine/",
-      "published_date": "Not specified"
+      "status": "Targeting an opening in the next two to four weeks",
+      "short_description": "All Kinds is a new local craft shop with beer and wine from owners Carl and Allison Vick, located next to their bakery Little Blue Bakehouse. It will sell local crafts including pottery and artisan goods with a smaller wine-focused beer and wine component. The business will not operate as a restaurant but may offer grab-and-go snacks.",
+      "article_link": "https://www.businessdebut.com/all-kinds-set-to-open-with-local-artisan-goods-and-wine/"
     },
     {
       "store_name": "La Victoria Raleigh",
       "location": "2519 Fairview Road, Raleigh, NC 27608",
       "event_type": "Opening",
-      "event_date": "First week of November",
-      "status": "targeting an opening in the first week of November",
-      "short_description": "La Victoria Raleigh is a full-service Mexican restaurant from Jalmex Hospitality targeting an opening in the first week of November in the former Mandolin space in Raleigh's Five Points area. The approximately 4,400-square-foot space will offer about 120 seats, a full bar, and a Tulum-inspired design using natural materials. The menu will feature elevated Mexican dishes and Tex-Mex offerings with higher-quality ingredients.",
-      "article_link": "https://www.businessdebut.com/la-victoria-raleigh-bringing-elevated-mexican-dining-to-raleigh/",
-      "published_date": "Not specified"
+      "event_date": "first week of November",
+      "status": "Targeting an opening in the first week of November",
+      "short_description": "La Victoria Raleigh is targeting an opening in the former Mandolin space, part of Jalmex Hospitality owned by Salvador Alvarez and Juan Sanchez, marking the group's 13th restaurant. The full-service Mexican restaurant will offer about 120 seats, a full bar and party seating in a roughly 4,400-square-foot space with a Tulum-inspired design. The menu focuses on elevated Mexican dining with authentic and Tex-Mex offerings.",
+      "article_link": "https://www.businessdebut.com/la-victoria-raleigh-bringing-elevated-mexican-dining-to-raleigh/"
     },
     {
       "store_name": "Burrito Shak",
       "location": "4941 Dogwood Blvd., Kannapolis, NC 28081",
       "event_type": "Opening",
-      "event_date": "Late August or early September",
-      "status": "targeting a late August or early September opening",
-      "short_description": "Burrito Shak is targeting a late August or early September opening at a new franchise location in Kannapolis, NC, in the new Kellswater Commons shopping center. Owners Mike and Christine Gracer will bring a beach-inspired, fast-casual concept with burritos, burrito bowls, tacos, and chips, seating about 40 guests inside with additional outdoor patio seating. Construction was anticipated to begin within about 30 days of receiving the keys on May 22, with a 90-day buildout.",
-      "article_link": "https://www.businessdebut.com/burrito-shak-expanding-into-kannapolis-with-new-franchise-location/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Piedmont Delicatessen",
-      "location": "125 E. Main Ave., Gastonia, NC 28052",
-      "event_type": "Opening",
-      "event_date": "June 22 (grand opening)",
-      "status": "grand opening targeted for June 22",
-      "short_description": "Piedmont Delicatessen is preparing to open in downtown Gastonia, NC, combining a daytime deli, a hidden evening speakeasy, and a vintage baseball-inspired experience built around a preserved ghost mural of Piedmont cigarettes discovered during renovation. The opening menu will include four signature sandwiches and build-your-own options, with soups, salads, and smoothies planned as the business grows. Owners Jacinda and Derrick Jacobs and partners Preston and Somer Wilson are also considering a soft opening a few days before the June 22 grand opening.",
-      "article_link": "https://www.businessdebut.com/piedmont-delicatessen-opening-in-downtown-gastonia/",
-      "published_date": "Not specified"
+      "event_date": "Not specified",
+      "status": "Targeting a late August or early September opening",
+      "short_description": "Burrito Shak is opening a family-owned franchise from Mike and Christine Gracer in the new Kellswater Commons shopping center anchored by Lowe's Foods. The beach-inspired, fast-casual restaurant will serve burritos, burrito bowls, tacos, chips, queso and drinks, seating about 40 guests inside plus outdoor patio seating. This will be the Gracers' first restaurant and first franchise.",
+      "article_link": "https://www.businessdebut.com/burrito-shak-expanding-into-kannapolis-with-new-franchise-location/"
     },
     {
       "store_name": "Sammy's Boba and Coffee",
-      "location": "Stockbridge, GA (address not specified)",
+      "location": "Stockbridge, GA",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "a few weeks away from opening",
-      "short_description": "Sammy's Boba and Coffee in Stockbridge, GA is a few weeks away from opening, with owner Sam Beng having invested his entire $250,000 stock portfolio into the build-out. The cafe will serve boba and coffee along with popcorn chicken, wings, Hong Kong-style bubble waffles, and Japanese taiyaki, requiring specialized equipment including a hood system and fryers. Beng completed pop-ups prior to investing to validate market demand.",
-      "article_link": "https://www.businessdebut.com/is-250-000-enough-to-open-a-small-cafe/",
-      "published_date": "Not specified"
+      "status": "A few weeks away from opening",
+      "short_description": "Sammy's Boba and Coffee, from owner Sam Beng, is a few weeks away from opening in a second-generation former restaurant space, having liquidated a $250,000 stock portfolio to fund the business. In addition to being a cafe, it will serve cooked items including popcorn chicken, wings, Hong Kong-style bubble waffles and Japanese taiyaki. Beng validated demand through pop-ups before investing.",
+      "article_link": "https://www.businessdebut.com/is-250-000-enough-to-open-a-small-cafe/"
     },
     {
-      "store_name": "Slava",
-      "location": "downtown Asheville, NC (address not specified)",
+      "store_name": "Plaza De Espana",
+      "location": "10043 SW 72nd St, Miami, FL 33173",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "opening",
-      "short_description": "Slava is a cafe-bakery being opened in downtown Asheville, NC by Ukrainian immigrant Svitlana Edie, offering dishes inspired by Ukrainian cuisine such as borscht and cabbage rolls. The concept is designed as a communal gathering space where people can share both everyday and meaningful moments over food.",
-      "article_link": "https://www.businessdebut.com/how-to-open-a-restaurant-as-an-new-com-to-the-usa/",
-      "published_date": "Not specified"
+      "status": "Preparing to open in the next month; expects to open in a month",
+      "short_description": "Plaza De Espana is a new 100% Spanish restaurant preparing to open in Miami, co-owned by Iris Duran. It will have around 60 seats, serve takeout and dine-in, and have a bar serving beer and wine. Details on the wine list and food menu are pending.",
+      "article_link": "https://www.businessdebut.com/spanish-restaurant-coming-to-miami-plaza-de-espana/"
     },
     {
-      "store_name": "Tiffin Box",
-      "location": "Tallahassee, FL and soon Gainesville, FL (addresses not specified)",
+      "store_name": "Mystic Social Club",
+      "location": "242 East Dania Beach Blvd, Dania Beach, FL 33004",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "opening soon in Gainesville",
-      "short_description": "Tiffin Box is a fast-casual Indian concept founded by Anesh Bodasing, with an existing location in Tallahassee and a new location opening soon in Gainesville, FL.",
-      "article_link": "https://www.businessdebut.com/how-to-open-a-restaurant-as-an-new-com-to-the-usa/",
-      "published_date": "Not specified"
+      "status": "Targeting a fall opening",
+      "short_description": "Mystic Social Club is a new Caribbean-infused social club and restaurant with an attached rental lounge, managed by Philmore McCarthy, currently in the permitting stage. The menu pulls from several Caribbean islands including jerk chicken, jerk pork, conch pasta, oxtail pasta, Trinidadian doubles and Bahamian conch salad, with a full music program. It plans to operate six days a week from lunch through dinner.",
+      "article_link": "https://www.businessdebut.com/comingmystic-social-club/"
     },
     {
       "store_name": "My Village Play Cafe",
       "location": "1109 Del Prado Blvd S Unit 2, Cape Coral, FL 33990",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "in development",
-      "short_description": "My Village Play Cafe is a new indoor play cafe concept in development in Cape Coral, FL, combining a cafe at the front with an indoor playground in the back across more than 3,400 square feet. The cafe will serve coffee, espresso drinks, teas, smoothies, panini, and children's food items, with parents able to supervise children from a bar counter facing the playground.",
-      "article_link": "https://www.businessdebut.com/a-destination-for-parents-and-children-is-coming-to-cape-coral-my-village-play-cafe/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Bunkerr Golf Lounge",
-      "location": "801 S University Dr Ste C-138, Plantation, FL 33324",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "has opened",
-      "short_description": "Bunkerr Golf Lounge has opened in Plantation, FL, featuring three golf simulator bays for full virtual rounds as well as putting and chipping games in a carnival-style format. The venue currently serves beer and wine with a concessions program under development to include gourmet hot dogs, flatbread pizzas, and quesadillas.",
-      "article_link": "https://www.businessdebut.com/bunkerr-golf-lounge-now-open-in-plantation-adding-food-menu-soon/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Double Take Market & Eatery",
-      "location": "319 NE 167th Street, North Miami Beach, FL 33162",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting an opening in two to three months",
-      "short_description": "Double Take Market & Eatery is a specialty market and fast-casual eatery targeting an opening in two to three months in North Miami Beach, FL. The concept combines a Caribbean fusion restaurant with a grocery market featuring specialty dry goods, imported items, and fresh cuts of meat and seafood. The space is in the early stages of construction with plans for catering and meal prep services.",
-      "article_link": "https://www.businessdebut.com/this-new-caribbean-market-and-restaurant-is-opening-in-north-miami-beach/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "Dare Goes Da Pasta",
-      "location": "723 SW Port St Lucie Blvd, Port St. Lucie, FL 34953",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "planned",
-      "short_description": "Dare Goes Da Pasta is a new fast-casual pasta and coffee concept planned for a 1,200-square-foot space in Port St. Lucie, FL, from owner Domenick Gonzalez. Guests will build pasta bowls Chipotle-style by choosing a pasta, sauce, and protein, with a sauce lineup including amatriciana, vodka, pesto, Alfredo, marinara, Bolognese, and a house Luciano-style sauce.",
-      "article_link": "https://www.businessdebut.com/psls-newest-restaurant-coming-soon-dare-goes-da-pasta/",
-      "published_date": "Not specified"
+      "status": "In development",
+      "short_description": "My Village Play Cafe is a new indoor play cafe concept from couple Carolina and Zavier Bravo, combining a cafe at the front with an indoor playground in the back across more than 3,400 square feet. Cameras cover the play area with a livestream television so parents can supervise while working. The menu will launch compact with coffee, espresso drinks, teas, smoothies, panini and children's snacks.",
+      "article_link": "https://www.businessdebut.com/a-destination-for-parents-and-children-is-coming-to-cape-coral-my-village-play-cafe/"
     },
     {
       "store_name": "Fatboy Friedrice",
       "location": "9735 Old St Augustine Rd, Jacksonville, FL 32257",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "preparing its first brick-and-mortar restaurant",
-      "short_description": "Fatboy Friedrice is preparing its first brick-and-mortar restaurant at 9735 Old St. Augustine Rd in Jacksonville, FL, with renovations about 90 percent complete. The fast-casual restaurant will seat 60–70 guests and serve as headquarters for the brand's food truck fleet, offering fried rice bowls, wings, fries, and planned additions of boba drinks and flavored lemonades.",
-      "article_link": "https://www.businessdebut.com/jacksonville-food-truck-brand-opening-brick-and-mortar-fatboy-friedrice/",
-      "published_date": "Not specified"
+      "status": "Renovations about 90 percent complete",
+      "short_description": "Fatboy Friedrice, a Jacksonville-based fried rice concept led by co-owners Joshua Valencia and Jun Marc Quinones, is preparing its first brick-and-mortar restaurant to serve as a home base for its food trucks. The menu builds on fried rice bowls with proteins plus fries, wings, appetizers, boba drinks and lemonades, seating about 60 to 70 guests in a fast-casual format. Renovations are about 90 percent complete with the team focused on staff training.",
+      "article_link": "https://www.businessdebut.com/jacksonville-food-truck-brand-opening-brick-and-mortar-fatboy-friedrice/"
     },
     {
-      "store_name": "Authentic Gyros & Grill (Tallahassee)",
+      "store_name": "Authentic Gyros & Grill",
       "location": "2119 W. Tennessee St., Tallahassee, FL 32304",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "targeted within the next 30 days",
-      "short_description": "Authentic Gyros & Grill is preparing to open a new fast-casual Mediterranean location in Tallahassee, FL, targeted within the next 30 days. The menu draws on owner Badr Kbiri Alaoui's recipes developed in Cyprus, with more than 20 wing flavors, seafood, and house-made cheese sauces, and plans to add breakfast service.",
-      "article_link": "https://www.businessdebut.com/tallahassees-newest-comfort-food-spot-authentic-gyros-grill-opening-soon/",
-      "published_date": "Not specified"
+      "status": "Targeted within the next 30 days",
+      "short_description": "Authentic Gyros & Grill, a fast-casual Mediterranean concept led by owner Badr Kbiri Alaoui, is preparing to open a new Tallahassee location, its sixth overall. The menu draws on recipes developed in Cyprus with a focus on gyros, wings with more than 20 flavors, and seafood, and Tallahassee will add breakfast.",
+      "article_link": "https://www.businessdebut.com/tallahassees-newest-comfort-food-spot-authentic-gyros-grill-opening-soon/"
     },
     {
-      "store_name": "Authentic Gyros & Grill (Fayetteville)",
+      "store_name": "Authentic Gyros & Grill",
       "location": "190 Banks Sta, Fayetteville, GA 30214",
       "event_type": "Opening",
       "event_date": "June 9",
-      "status": "grand opening June 9",
-      "short_description": "Authentic Gyros & Grill opened a new location in Fayetteville, GA, with its grand opening on June 9 after several soft-opening days with late-night hours. The Fayetteville location is also adding breakfast service.",
-      "article_link": "https://www.businessdebut.com/tallahassees-newest-comfort-food-spot-authentic-gyros-grill-opening-soon/",
-      "published_date": "Not specified"
+      "status": "Grand opening June 9; opened June 9",
+      "short_description": "The Authentic Gyros & Grill Fayetteville store held its grand opening June 9 after several soft-opening days with late-night hours. The location is adding breakfast to its menu. It is part of the brand's group of six locations.",
+      "article_link": "https://www.businessdebut.com/tallahassees-newest-comfort-food-spot-authentic-gyros-grill-opening-soon/"
     },
     {
       "store_name": "Polynesian BBQ",
-      "location": "Crestview, FL (address not specified — food truck)",
+      "location": "Crestview, FL (serving Okaloosa County and surrounding areas)",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "targeting an early July opening",
-      "short_description": "Polynesian BBQ is a new food truck from Aleki and Lisa Siaki targeting an early July opening, serving Okaloosa County and surrounding areas from Crestview, FL. The menu will feature island-style barbecue including boneless chicken, ribs, turkey tail, hot dogs, and potato crab salad rooted in Aleki Siaki's Samoan background.",
-      "article_link": "https://www.businessdebut.com/polynesian-bbq-launching-island-style-food-truck-in-crestview/",
-      "published_date": "Not specified"
+      "status": "Targeting an early July opening",
+      "short_description": "Polynesian BBQ is a new food truck from Aleki and Lisa Siaki focusing on Polynesian island barbecue drawn from Aleki's Samoan background, targeting an early July opening serving Okaloosa County. The menu includes barbecue boneless chicken, ribs, turkey tail, hot dogs, potato crab salad, and long noodles with corned beef (sapasui). Siaki hopes to secure a permanent parking location.",
+      "article_link": "https://www.businessdebut.com/polynesian-bbq-launching-island-style-food-truck-in-crestview/"
     },
     {
       "store_name": "Mini & Me Play Cafe",
       "location": "960 E 9 Mile Rd, Pensacola, FL 32514",
       "event_type": "Opening",
-      "event_date": "July",
-      "status": "plan to open in July",
-      "short_description": "Mini & Me Play Cafe is a new family-centered cafe and play space planning to open in July in Pensacola, FL. The cafe will offer espresso drinks, croissants, bagels, fruit cups, and other snacks while children play in an attached playhouse with large windows and an open layout for parental supervision. Owner Valeria Barahona also plans art classes, book readings, and membership options for local families.",
-      "article_link": "https://www.businessdebut.com/mini-me-play-cafe-opening-in-pensacola/",
-      "published_date": "Not specified"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article profiles North Jetty Grill's existing concessions operations inside Huguenot Memorial Park in Jacksonville; no new opening or closure event is reported.",
-      "article_link": "https://www.businessdebut.com/a-look-at-the-concessions-in-jacksonvilles-huguenot-park/",
-      "published_date": "N/A"
+      "event_date": "Not specified",
+      "status": "Plan to open in July",
+      "short_description": "Mini & Me Play Cafe is a family-centered cafe and play space coming to Pensacola from owner Valeria Barahona, designed with an open layout so parents can relax with coffee while supervising children in the playhouse. The menu includes espresso drinks, croissants, bagels, fruit cups, yogurt and granola. The cafe will host art classes and book readings and plans to offer 100 memberships to local families.",
+      "article_link": "https://www.businessdebut.com/mini-me-play-cafe-opening-in-pensacola/"
     }
   ],
   "non_working": [
     {
-      "identifier": "Article 4",
-      "reason": "No opening or closure event; video interview about an existing 35-year-old business (Rosa's Pizza) with no new opening/closure details"
+      "identifier": "Article 10",
+      "reason": "No business details (video interview with existing business Marrakesh Express; no opening or closure information)"
     },
     {
-      "identifier": "Article 5",
-      "reason": "Florida business entity formations list only; no restaurant or retail opening/closure events"
+      "identifier": "Article 23",
+      "reason": "No business details (video interview with existing business Rosa's Pizza; no opening or closure information)"
     },
     {
-      "identifier": "Article 8",
-      "reason": "Florida business entity formations list only; no restaurant or retail opening/closure events"
-    },
-    {
-      "identifier": "Article 12",
-      "reason": "Wine Spectator awards roundup for existing restaurants; no opening or closure events reported"
-    },
-    {
-      "identifier": "Article 14",
-      "reason": "Florida business entity formations list only; no restaurant or retail opening/closure events"
-    },
-    {
-      "identifier": "Article 15",
-      "reason": "partial) — Library ATL and Viva are duplicates of Articles 17 and 18 respectively; extracted separately but flagged as duplicates"
-    },
-    {
-      "identifier": "Article 16",
-      "reason": "partial) — Hollywood, FL Keke's location is a duplicate of the entry in Article 7; extracted separately but flagged as duplicate"
-    },
-    {
-      "identifier": "Article 19",
-      "reason": "Poolie's BBQ & Grill is a duplicate of the entry in Article 15; extracted separately but flagged as duplicate"
-    },
-    {
-      "identifier": "Article 29",
-      "reason": "No specific addresses provided for either Slava (Asheville, NC) or Tiffin Box (Tallahassee/Gainesville, FL); rows included with available details but flagged for incomplete location data"
-    },
-    {
-      "identifier": "Article 34",
-      "reason": "Address listed as 9735 Old St. Augustine Rd; Article 7 (prior batch) listed the same business at 9745 Old St. Augustine Rd — minor address discrepancy noted, extracted as written in this article"
-    },
-    {
-      "identifier": "Article 36",
-      "reason": "Food truck with no fixed address; location noted as Crestview, FL / Okaloosa County serving area"
-    },
-    {
-      "identifier": "Article 38",
-      "reason": "Profile of existing concessions operation; no new opening or closure event reported"
+      "identifier": "Article 33",
+      "reason": "No qualifying business found in extractable form (advisory/educational article; Slava in Asheville, NC and Tiffin Box in Florida mentioned only narratively with no addresses, dates, or opening status)"
     }
   ]
 }
