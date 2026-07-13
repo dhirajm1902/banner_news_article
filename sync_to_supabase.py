@@ -78,7 +78,15 @@ def sync_table(csv_name: str, table: str, conflict_col: str) -> None:
 
     for i in range(0, total, CHUNK_SIZE):
         chunk = records[i: i + CHUNK_SIZE]
-        supabase.table(table).upsert(chunk, on_conflict=conflict_col).execute()
+        try:
+            supabase.table(table).upsert(chunk, on_conflict=conflict_col).execute()
+        except Exception as exc:
+            msg = str(exc)
+            if "PGRST205" in msg or "schema cache" in msg:
+                print(f"  ⚠️  Table '{table}' not found in Supabase — skipping.")
+                print(f"       Create the table first, then re-run to sync.")
+                return
+            raise
 
     print(f"  ✅  {table}: {total} rows upserted")
 
