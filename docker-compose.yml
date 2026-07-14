@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    image: banner-news-app
+    env_file: .env
+    # Mount entire project so output files (CSVs, JSONs) appear on your local machine
+    volumes:
+      - .:/app
+    working_dir: /app
+    # Chrome needs extra shared memory or it crashes
+    shm_size: "2gb"
+    stdin_open: true
+    tty: true

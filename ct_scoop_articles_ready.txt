@@ -1,59 +1,62 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+
+🌎 Geographic filter (STRICT)
+• Only extract businesses located in the USA or Canada
+• If the article is about a business in any other country (UK, Australia, India, UAE, etc.) → DO NOT add any row to the table; add it ONLY to the Non-working list as "Outside USA/Canada"
+• If an article covers both USA/Canada locations AND international locations → extract only the USA/Canada rows, skip the rest; add the article to the Non-working list as "Outside USA/Canada (partial)"
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If a USA/Canada article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+• ❌ Never add a table row for articles outside USA/Canada — those go in the Non-working list only
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+• ❌ No extraction of businesses outside USA or Canada
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / Outside USA/Canada / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
 --- Article 1 ---
-URL: https://www.theconnecticutscoop.com/all-hartford-county-posts/newington-south-windsor-scoop-colony-grill-eyeing-possible-new-locations
-Headline: NEWINGTON & SOUTH WINDSOR SCOOP: Colony Grill eyeing possible new locations!
+URL: https://www.theconnecticutscoop.com/all-hartford-county-posts/hartford-scoop-pop-bowl-crepes-opens-in-hartford
+Headline: HARTFORD SCOOP: Pop Bowl & Crepes opens in Hartford!
 
 HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
 
 --- Article 2 ---
-URL: https://www.theconnecticutscoop.com/all-hartford-county-posts/east-windsor-scoop-mollys-sweet-spot-celebrates-opening-in-east-windsor
-Headline: EAST WINDSOR SCOOP: Molly's Sweet Spot celebrates opening in East Windsor
+URL: https://www.theconnecticutscoop.com/all-new-haven-county-posts/oxford-scoop-rich-farms-named-best-ice-cream-shop-in-new-london-county
+Headline: OXFORD SCOOP: Rich Farms named 'Best Ice Cream Shop' in New London County!
 
 HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
 
 --- Article 3 ---
-URL: https://www.theconnecticutscoop.com/all-new-haven-county-posts/meriden-scoop-new-barber-academy-coming-to-meriden-mall
-Headline: MERIDEN SCOOP: New barber academy coming to Meriden Mall
-
-HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
-
---- Article 4 ---
-URL: https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-new-businesses-restaurants-coming-to-west-hartford-center
-Headline: WEST HARTFORD SCOOP: New businesses & restaurants coming to West Hartford Center
-
-HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
-
---- Article 5 ---
-URL: https://www.theconnecticutscoop.com/all-hartford-county-posts/plainville-scoop-dairy-queen-to-reopen-under-new-ownership
-Headline: PLAINVILLE SCOOP: Dairy Queen to reopen under new ownership
-
-HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
-
---- Article 6 ---
-URL: https://www.theconnecticutscoop.com/all-hartford-county-posts/wethersfield-review-river-a-waterfront-restaurant-bar
-Headline: WETHERSFIELD REVIEW: River - A Waterfront Restaurant & Bar
-
-HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
-
---- Article 7 ---
-URL: https://www.theconnecticutscoop.com/all-hartford-county-posts/south-windsor-scoop-pandora-opens-at-the-shops-at-evergreen-walk
-Headline: SOUTH WINDSOR SCOOP: Pandora opens at The Shops at Evergreen Walk!
-
-HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
-
---- Article 8 ---
-URL: https://www.theconnecticutscoop.com/all-new-london-county-posts/waterford-scoop-new-retailers-start-construction-in-waterford
-Headline: WATERFORD SCOOP: New retailers start construction in Waterford
-
-HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
-
---- Article 9 ---
-URL: https://www.theconnecticutscoop.com/all-middlesex-county-posts/old-saybrook-scoop-new-plaza-at-maxs-place-approved-chipotle-jersey-mikes-eyed-along-with-others
-Headline: OLD SAYBROOK SCOOP: New plaza at Max's Place approved, Chipotle & Jersey Mike's eyed along with others!
-
-HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
-
---- Article 10 ---
-URL: https://www.theconnecticutscoop.com/all-mass-posts/west-springfield-scoop-work-begins-on-massachusetts-first-ross-dress-for-less
-Headline: WEST SPRINGFIELD SCOOP: Work begins on Massachusetts first Ross Dress for Less!
+URL: https://www.theconnecticutscoop.com/all-fairfield-county-posts/ridgefield-scoop-rikos-bring-signature-hot-oil-pizza-to-ridgefield
+Headline: RIDGEFIELD SCOOP: Riko's bring signature hot oil pizza to Ridgefield
 
 HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise
