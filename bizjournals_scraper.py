@@ -12,6 +12,7 @@ Output (mirrors restaurant_scraper.py pattern):
 import os
 import sys
 import json
+import time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -38,7 +39,7 @@ except ImportError:
     pass
 
 # ── Config ────────────────────────────────────────────────────────────────────
-SEARCH_QUERY = "restaurant opening"
+SEARCH_QUERIES = ["restaurant opening", "store opening", "grocery opening"]
 DAYS_BACK    = 1        # look back N days (1 = yesterday → today)
 HEADLESS     = True     # set False to watch the browser during debugging
 
@@ -49,14 +50,16 @@ today      = datetime.now()
 date_end   = today.strftime("%Y-%m-%d")
 date_begin = (today - timedelta(days=DAYS_BACK)).strftime("%Y-%m-%d")
 
-BASE_SEARCH_URL = (
-    "https://www.bizjournals.com/search"
-    f"?q={SEARCH_QUERY.replace(' ', '+')}"
-    f"&db={date_begin}&de={date_end}&s=2"
-)
 
-print(f"🔍 Query: {SEARCH_QUERY}  |  {date_begin} → {date_end}")
-print(f"   Base URL: {BASE_SEARCH_URL}\n")
+def _build_search_url(query: str) -> str:
+    return (
+        "https://www.bizjournals.com/search"
+        f"?q={query.replace(' ', '+')}"
+        f"&db={date_begin}&de={date_end}&s=2"
+    )
+
+
+print(f"🔍 Queries: {', '.join(SEARCH_QUERIES)}  |  {date_begin} → {date_end}\n")
 
 
 # ── Cloudflare detection ──────────────────────────────────────────────────────
@@ -70,6 +73,17 @@ def is_cloudflare_blocked(html: str) -> bool:
         "ray id",
         "cloudflare",
         "please wait",
+    ]
+    snippet = html[:3000].lower()
+    return any(m in snippet for m in markers)
+
+
+def is_rate_limited(html: str) -> bool:
+    """Return True if the page is a browser-level 'downloading problem' / Retry-After error."""
+    markers = [
+        "downloading problem",
+        "retry-after",
+        "retry in",
     ]
     snippet = html[:3000].lower()
     return any(m in snippet for m in markers)
@@ -137,7 +151,7 @@ def _navigate_and_get_html(page, url: str) -> str:
 
 
 # ── Parse one page of results, return (rows, next_page_url | None) ────────────
-def parse_page(html: str):
+def parse_page(html: str, query: str):
     """
     bizjournals.com search result structure (confirmed from live HTML):
       <a class="item item--flag" href="/market/news/...">
@@ -184,6 +198,7 @@ def parse_page(html: str):
             "source":   source,
             "pub_date": pub_date,
             "snippet":  snippet,
+            "query":    query,
         })
 
     # Find "Next page" link — the one whose text is "Next" or has rel="next"
@@ -204,10 +219,11 @@ def parse_page(html: str):
 
 
 # ── Single Playwright session — fetches all pages without closing browser ─────
-def scrape_all_pages(use_zyte: bool = False) -> list:
-    """Open one browser session and paginate through all result pages."""
+def scrape_all_pages(query: str, use_zyte: bool = False) -> list:
+    """Open one browser session and paginate through all result pages for a single query."""
     all_rows = []
     seen_urls: set = set()
+    debug_file = f"bizjournals_debug_{query.replace(' ', '_')}.html"
 
     with sync_playwright() as p:
         browser, context = _make_context(p, use_zyte=use_zyte)
@@ -225,25 +241,34 @@ def scrape_all_pages(use_zyte: bool = False) -> list:
         })
 
         # Start at page 1 (no pl param = default first page)
-        start_url = BASE_SEARCH_URL + "&pl=1"
+        start_url = _build_search_url(query) + "&pl=1"
         current_url = start_url
         page_num = 1
 
         while current_url:
-            print(f"  Page {page_num}: {current_url}")
+            print(f"  [{query}] Page {page_num}: {current_url}")
             html = _navigate_and_get_html(page_obj, current_url)
+
+            if is_rate_limited(html):
+                print(f"  ⏳ Rate limited on page {page_num} — waiting 30s and retrying once")
+                page_obj.wait_for_timeout(30_000)
+                html = _navigate_and_get_html(page_obj, current_url)
+                if is_rate_limited(html):
+                    print(f"  ❌ Still rate limited after retry — aborting query \"{query}\"")
+                    Path(debug_file).write_text(html, encoding="utf-8")
+                    break
 
             if is_cloudflare_blocked(html):
                 print(f"  ❌ Cloudflare blocked page {page_num} — aborting")
-                Path("bizjournals_debug.html").write_text(html, encoding="utf-8")
+                Path(debug_file).write_text(html, encoding="utf-8")
                 break
 
-            page_rows, next_url = parse_page(html)
+            page_rows, next_url = parse_page(html, query)
             print(f"    → {len(page_rows)} results")
 
             if not page_rows and page_num == 1:
                 print("  ⚠️  No results on page 1 — saving debug HTML")
-                Path("bizjournals_debug.html").write_text(html, encoding="utf-8")
+                Path(debug_file).write_text(html, encoding="utf-8")
 
             for row in page_rows:
                 if row["url"] not in seen_urls:
@@ -264,7 +289,7 @@ with sync_playwright() as _p:
     _page = _ctx.new_page()
     if HAS_STEALTH:
         _STEALTH.apply_stealth_sync(_page)
-    _probe_html = _navigate_and_get_html(_page, BASE_SEARCH_URL + "&pl=1")
+    _probe_html = _navigate_and_get_html(_page, _build_search_url(SEARCH_QUERIES[0]) + "&pl=1")
     _browser.close()
 
 USE_ZYTE = False
@@ -279,11 +304,24 @@ if is_cloudflare_blocked(_probe_html):
 else:
     print("  ✅ No Cloudflare — proceeding without proxy")
 
-rows = scrape_all_pages(use_zyte=USE_ZYTE)
+QUERY_DELAY_SECONDS = 20  # pause between queries so we don't trip bizjournals' rate limiter
+
+rows = []
+_seen_urls: set = set()
+for _i, _query in enumerate(SEARCH_QUERIES):
+    if _i > 0:
+        print(f"  ⏸  Waiting {QUERY_DELAY_SECONDS}s before next query…")
+        time.sleep(QUERY_DELAY_SECONDS)
+    print(f"\n🔎 Scraping query: \"{_query}\"")
+    _query_rows = scrape_all_pages(_query, use_zyte=USE_ZYTE)
+    for _r in _query_rows:
+        if _r["url"] not in _seen_urls:
+            _seen_urls.add(_r["url"])
+            rows.append(_r)
 
 print(f"\n📋 Articles extracted: {len(rows)}")
 for r in rows[:5]:
-    print(f"  • {r['title'][:70]}")
+    print(f"  • [{r['query']}] {r['title'][:70]}")
 if len(rows) > 5:
     print(f"  … and {len(rows) - 5} more")
 
@@ -300,7 +338,7 @@ today_str = today.strftime("%Y-%m-%d")
 csv_file = BJ_DIR / f"Daily_bizjournals_{today_str}.csv"
 df = pd.DataFrame(
     rows,
-    columns=["title", "url", "source", "pub_date", "snippet"],
+    columns=["title", "url", "source", "pub_date", "snippet", "query"],
 )
 df.to_csv(csv_file, index=False, encoding="utf-8")
 print(f"\n✅ CSV  saved → {csv_file}  ({len(df)} rows)")
@@ -308,7 +346,7 @@ print(f"\n✅ CSV  saved → {csv_file}  ({len(df)} rows)")
 # ── JSON ──────────────────────────────────────────────────────────────────────
 json_payload = {
     "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-    "query":        SEARCH_QUERY,
+    "queries":      SEARCH_QUERIES,
     "date_begin":   date_begin,
     "date_end":     date_end,
     "total":        len(rows),

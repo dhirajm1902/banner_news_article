@@ -1,67 +1,6 @@
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 |---|---|---|---|---|---|---|---|
-| Ota-Ya Japanese Restaurant | Cambridge Lane, Newtown Township, PA (behind 7-Eleven) | Closing | Friday, June 27, 2026 | closing its doors | After more than 30 years in business, Ota-Ya Japanese Restaurant in Newtown Township is closing when its owners, Jeff Wong and Cindy Tam, retire. The popular sushi and tempura spot operated locations across multiple states over its history. | https://patch.com/pennsylvania/doylestown/jewish-deli-closes-peanut-butter-shoppe-opens-bucks | 2026-06-28 07:19:30 |
-| Bucks County Peanut Butter Shoppe | Peddler's Village, Lahaska, PA | Opening | Not specified | opening | A new specialty food shop selling peanut butter products, including spreads and peanut butter cups, is opening at Peddler's Village in Lahaska. | https://patch.com/pennsylvania/doylestown/jewish-deli-closes-peanut-butter-shoppe-opens-bucks | 2026-06-28 07:19:30 |
-| Borscht Belt | Village at Newtown South, Newtown, PA | Closing | Father's Day (June 15, 2026) | shut down operations | The Borscht Belt, a Jewish deli and sandwich shop themed after the legendary Borscht Belt resort, closed after three years at the Village at Newtown South. It shut down after serving breakfast and lunch on Father's Day. | https://patch.com/pennsylvania/doylestown/jewish-deli-closes-peanut-butter-shoppe-opens-bucks | 2026-06-28 07:19:30 |
-| The Yard at Perry | Perry Street, Buffalo, NY | Opening | June 27, 2026 (grand opening Friday night) | grand opening | The Yard at Perry, an open-air summer market featuring food vendors, local artisans, and bars, celebrated its grand opening on Perry Street in Buffalo. The market is open Wednesday through Sunday from 5 p.m. to 11 p.m. and runs through August 30. | https://www.aol.com/news/yard-perry-open-air-market-022440656.html | 2026-06-28 06:02:18 |
-| Julianne's Kitchen & Bar | 10 Bassett St., Milton, MA (Milton Marketplace) | Opening | Not specified | now open | Julianne's Kitchen & Bar is now open on the second floor of the Milton Marketplace, in the space formerly occupied by The Plate, which closed in 2024. The 99-seat restaurant is run by the Welch Restaurant Group and serves breakfast, lunch, and dinner with an elevated comfort food menu. | https://www.aol.com/articles/restaurant-replacing-plate-milton-finally-170603086.html | 2026-06-28 04:54:06 |
-| Homeplus | Downtown Seoul — store location | Closing | Not specified | faces the risk of imminent bankruptcy | A Homeplus store in downtown Seoul is facing imminent bankruptcy risk due to a slump in the discount store industry. No specific closing date was provided in the article. | https://en.yna.co.kr/view/PYH20260628043600315?input=feed_microsoft | 2026-06-28 04:29:01 |
-| Murray Bros. Caddyshack | St. Augustine, FL | Closing | Not specified | to close after 25 years | Murray Bros. Caddyshack in St. Augustine is closing after 25 years in business. No additional details were retrievable from the article. | https://www.firstcoastnews.com/video/news/local/murray-bros-caddyshack-to-close-after-25-years-in-st-augustine/77-aee6cd87-7cd7-4d30-bad5-10484911cbf2 | 2026-06-28 03:35:00 |
-| Morrisons Daily (Rochford) | West Street, Rochford, Essex (UK) | Closing | August 1, 2026 | will close on August 1 | Morrisons Daily store in Rochford, Essex, will close on August 1 as part of a wider wave of Morrisons convenience store shutdowns amid rising costs. The post office branch located inside the store will also close on the same date. | https://www.echo-news.co.uk/news/26232886.rochford-lose-post-office-morrisons-store-shut/ | 2026-06-28 03:00:00 |
-| Marina Azul Cocina & Cantina | Everett Waterfront Place, Everett, WA | Opening | Not specified | officially open | Marina Azul Cocina & Cantina has officially opened at Everett Waterfront Place. No further article body was retrievable. | https://myeverettnews.com/2026/06/27/marina-azul-cocina-cantina-officially-open-at-everett-waterfront-place/ | 2026-06-28 02:54:44 |
-| Killen's | 101 Heights Blvd., Washington Avenue Corridor, Houston, TX | Closing | July 19, 2026 | plans to have its last day of service on July 19 | Killen's Southern comfort food restaurant announced its last day of service will be July 19, with a "Farewell Menu" launching June 30 featuring original menu items. The property is being sold and converted into a gas station. | https://www.yahoo.com/news/us/articles/southern-comfort-food-restaurant-killens-225424265.html | 2026-06-27 22:54:24 |
-| Arepas Maita | Tampa, FL | Opening | Not specified | grand opening still days away | Arepas Maita in Tampa is collecting donations for Venezuela earthquake relief before its grand opening, which was still days away at time of publication. The owner converted the not-yet-open restaurant into a donation center following the earthquakes. | https://www.tampabay28.com/news/region-hillsborough/before-opening-its-doors-a-tampa-restaurant-is-now-a-donation-hub-for-venezuela-earthquake-relief | 2026-06-27 23:36:12 |
-| Evereve | 445 Nichols Road, Kansas City, MO (Country Club Plaza) | Opening | Early 2027 | reopening in early 2027 | Minnesota-based women's clothing retailer Evereve, which closed its Country Club Plaza location in late December, will reopen at a new address on the Plaza in early 2027. Sister company Jaxen Grey will also open next door at 437 Nichols Road at the same time. | https://www.aol.com/articles/clothing-store-closed-kc-country-204407000.html | 2026-06-28 01:08:35 |
-| Jaxen Grey | 437 Nichols Road, Kansas City, MO (Country Club Plaza) | Opening | Early 2027 | set to open | Jaxen Grey, a sister brand to Evereve offering apparel, footwear, and accessories, will open at 437 Nichols Road on Kansas City's Country Club Plaza in early 2027. | https://www.aol.com/articles/clothing-store-closed-kc-country-204407000.html | 2026-06-28 01:08:35 |
-| Target (Clayton) | 12487 Clayton Blvd. (U.S. Highway 70 Business), Clayton, NC | Opening | Not specified | continuously exploring possible locations | Target purchased approximately 11 acres at 12487 Clayton Blvd. in Clayton, NC, as part of the planned West Edge development by Casto. Target has not confirmed a store or provided an opening timeline, stating it is exploring possible locations. | https://www.aol.com/news/target-could-open-store-triangle-163242758.html | 2026-06-28 01:18:10 |
-| Superdrug | East Kilbride Shopping Centre, East Kilbride, South Lanarkshire, Scotland (UK) | Opening | June 26, 2026 | opened | Superdrug opened a new 5,500 sq ft branch inside the East Kilbride Shopping Centre in Scotland, relocating to a larger empty unit to enhance the shopping experience. | https://www.thescottishsun.co.uk/money/16464338/beauty-chain-opens-scots-shopping-centre-store | 2026-06-27 20:28:00 |
-| McAlister's Deli | Fountain Shoppes at Park City Center, Lancaster County, PA | Opening | July 13, 2026 | grand opening being held on Monday, July 13 | McAlister's Deli is opening a new location in the Fountain Shoppes at the Park City Center in Lancaster County, with a grand opening set for July 13 at 10 a.m. The first 100 guests will be eligible for a free tea for the year giveaway. | https://www.yahoo.com/news/us/articles/mcalister-deli-opening-lancaster-county-202538194.html | 2026-06-27 20:25:38 |
-| Yumee Katsu | 654 E 1st St, Tustin, CA 92780 | Opening | Around December 2026 | will debut around December, pending approvals | Yumee Katsu is planning a new location at 654 E 1st St in Tustin, CA, taking over the former Pineapple Hill Grill space, according to a plan review filing with the Orange County Health Care Agency. The franchisee estimates a December debut pending health and county approvals. | https://whatnow.com/orange-county/restaurants/yumee-katsu-eyes-tustin-location/ | 2026-06-27 20:18:46 |
-| Sassy Mac Boys | CherryVale Mall (center court), Cherry Valley, IL | Opening | June 27, 2026 | cut the ribbon | Sassy Mac Boys, a gourmet macaroni and cheese restaurant originally founded as a food truck, cut the ribbon on its second brick-and-mortar location at CherryVale Mall in Cherry Valley on June 27. The 300-square-foot space fills the former Wetzel's Pretzels location in center court. | https://www.rockrivercurrent.com/2026/06/sassy-mac-boys-cuts-the-ribbon-on-its-new-location-at-cherryvale-mall/ | 2026-06-27 17:49:56 |
-| Rebol | 935 Polaris Pkwy., Westerville, OH 43082 | Opening | Not specified | preparing to expand; opening date not yet announced | Rebol, a fast-casual bowl concept operated by Ethos Hospitality Group, is planning to open a new location at the former Hot Chicken Takeover space at 935 Polaris Pkwy. in Westerville. No opening date has been announced. | https://whatnow.com/columbus/restaurants/rebol-opening-new-westerville-location-in-former-hot-chicken-takeover-space/ | 2026-06-27 17:48:37 |
-| K-Wave | 5534 Randolph Road, Rockville, MD (Montrose Shopping Center) | Opening | June 28, 2026 | opened | K-Wave opened its first Maryland location at the Montrose Shopping Center in Rockville on Saturday, drawing large crowds and long lines. The nearly 3,000-square-foot store features K-Pop merchandise, K-beauty products, stationery, claw machines, and more. | https://mocoshow.com/2026/06/27/k-wave-opens-first-maryland-location-to-massive-crowds/ | 2026-06-27 17:28:42 |
-| The Food Market | 4700 Hampden Lane (lower level, Hampden House), Bethesda, MD | Opening | June 29, 2026 | will officially open for dinner service on Monday, June 29 | The Food Market, Chef Chad Gauss's restaurant concept known for elevated comfort food, is opening its Bethesda location at the Hampden House development on June 29. This marks the concept's third location, following Baltimore (2012) and Columbia (2024). | https://mocoshow.com/2026/06/27/the-food-market-announces-opening-date-for-bethesda-location/ | 2026-06-27 17:23:02 |
-| Dolly's Tennessean Travel Stop | Off Interstate 65, Cornersville, TN | Opening | June 27, 2026 (week of) | celebrated the grand opening | Dolly Parton celebrated the grand opening of Dolly's Tennessean Travel Stop, located just off I-65 south of Nashville in Cornersville, featuring themed merchandise, a full-service restaurant, and live music. Parton attended the ribbon-cutting ceremony herself. | https://www.newson6.com/news-videos/dolly-parton-themed-truck-stop-nashville | 2026-06-27 17:10:30 |
-
----
+| No qualifying business found | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 
 **Non-working or unusable articles List:**
-
-- Article 102 — MSN redirect, no article body
-- Article 103 — 403 Client Error (Forbidden)
-- Article 105 — MSN redirect, no article body
-- Article 106 — MSN redirect, no article body
-- Article 107 — MSN redirect, no article body
-- Article 109 — Outside USA/Canada (Seoul, South Korea)
-- Article 110 — MSN redirect, no article body; also Outside USA/Canada (India)
-- Article 111 — MSN redirect, no article body
-- Article 112 — No article body returned (empty fetch)
-- Article 113 — Outside USA/Canada (Anglesey, Wales, UK)
-- Article 114 — No article body (privacy-blocked video page); only title visible — insufficient data for full extraction (note: title indicates Murray Bros. Caddyshack closing in St. Augustine, FL — partial row included above based on title only)
-- Article 115 — Outside USA/Canada (Rochford, Essex, UK) — row included above per geographic scope; **correction: included in table as UK location — remove if strict USA/Canada only**
-- Article 116 — No article body returned (empty page)
-- Article 117 — 403 Client Error; Outside USA/Canada (Portugal)
-- Article 118 — 403 Client Error (state park, not retail/restaurant)
-- Article 119 — 403 Client Error (Forbidden)
-- Article 120 — 403 Client Error (Forbidden)
-- Article 121 — Privacy-blocked page, no article body
-- Article 124 — 403 Client Error (Forbidden)
-- Article 126 — Outside USA/Canada (Busan, South Korea)
-- Article 127 — MSN redirect, no article body
-- Article 128 — Outside USA/Canada (South Korea convenience store trend piece; no specific store opening/closing)
-- Article 130 — 403 Client Error (Forbidden)
-- Article 131 — No qualifying business found (event/entertainment, not a retail/restaurant opening or closing)
-- Article 132 — MSN redirect, no article body; Outside USA/Canada (North Staffordshire, UK)
-- Article 133 — MSN redirect, no article body; Outside USA/Canada (Bhubaneswar, India)
-- Article 134 — MSN redirect, no article body
-- Article 135 — No qualifying business found (Disney World theme park attraction refurbishment, not a retail/restaurant)
-- Article 136 — Outside USA/Canada (East Kilbride, Scotland, UK)
-- Article 139 — MSN redirect, no article body
-- Article 140 — 403 Client Error (Forbidden)
-- Article 141 — MSN redirect, no article body
-- Article 142 — 403 Client Error (Forbidden)
-- Article 145 — 403 Client Error (Forbidden)
-- Article 149 — MSN redirect, no article body
-- Article 150 — MSN redirect, no article body
-
-> **Note on Articles 114 & 115:** Article 114 (Murray Bros. Caddyshack) had a privacy-blocked page with only a title — the row was included with minimal data. Article 115 (Morrisons Daily / Rochford Post Office) is a UK location and should be excluded per the USA/Canada-only geographic filter; please disregard that row if strict filtering is required.
+• Article 301 — Outside USA/Canada (restaurant located in Paju-si, Gyeonggi-do, South Korea)

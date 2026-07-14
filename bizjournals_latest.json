@@ -1,156 +1,253 @@
 {
-  "last_updated": "2026-06-17 08:13 UTC",
-  "query": "restaurant opening",
-  "date_begin": "2026-06-16",
-  "date_end": "2026-06-17",
-  "total": 21,
+  "last_updated": "2026-07-09 05:17 UTC",
+  "queries": [
+    "restaurant opening",
+    "store opening",
+    "grocery opening"
+  ],
+  "date_begin": "2026-07-08",
+  "date_end": "2026-07-09",
+  "total": 30,
   "data": [
     {
-      "title": "Supreme Dumplings opens at Tacoma Mall's new Village complex",
-      "url": "https://www.bizjournals.com/seattle/news/2026/06/16/supreme-dumplings-restaurant-tacoma-mall-village.html",
-      "source": "Puget Sound Business Journal",
-      "pub_date": "2 hours ago",
-      "snippet": "The restaurant joins other recently opened concepts at the mall including Happy Lamb Hot Pot, Shake Shack and Dave's Hot Chicken. Simply Thai and Gong Cha are expected to open this fall. …"
-    },
-    {
-      "title": "Indoor golf chain to enter Seattle market with Northgate location",
-      "url": "https://www.bizjournals.com/seattle/news/2026/06/16/another-nine-golf-northgate-north-topgolf-kite.html",
-      "source": "Puget Sound Business Journal",
-      "pub_date": "3 hours ago",
-      "snippet": "The location will hold five simulator suites, which are private and BYOB. \n\nThe opening is slated for fall or winter, though Another Nine will have a clearer sense of the timeline after permits are approved, Jewell said.\n\n…"
-    },
-    {
-      "title": "Developer files $7.3M lawsuit against Pihakis Restaurant Group",
-      "url": "https://www.bizjournals.com/birmingham/news/2026/06/16/mouron-lawsuit-pihakis-rent.html",
-      "source": "Birmingham Business Journal",
-      "pub_date": "9 hours ago",
-      "snippet": "The latest actions add to a growing list of legal challenges tied to Pihakis Restaurant Group and affiliated entities.\n\nIn a separate lawsuit filed on June 4, Florida-based Fox Funding Group LLC alleges more than two dozen restaurant entities tied to Pihakis defaulted on roughly $700,000 in financing and then shifted operations into new companies to avoid repayment.\n\n…"
-    },
-    {
-      "title": "Bakery expands to former Paradise Valley Mall project, and more restaurant news",
-      "url": "https://www.bizjournals.com/phoenix/news/2026/06/16/too-sweet-cakes-pv-pita-jungle-dbacks-haymaker.html",
-      "source": "Phoenix Business Journal",
-      "pub_date": "10 hours ago",
-      "snippet": "Osmani said the opportunity will allow Pita Jungle to connect with thousands of people over the week, which could end up driving more business to its brick-and-mortar restaurants.\n\n\n\n• Haymaker, a long-running West Valley restaurant , is looking to grow its presence in the Valley and across Arizona through franchising.\n\nEarlier this month, restaurant founder Joey Lucidi announced he is looking for qualified franchise partners for its next chapter of growth. …"
-    },
-    {
-      "title": "$18.5M sailing center opening on Cleveland's lakefront as development surges",
-      "url": "https://www.bizjournals.com/cleveland/news/2026/06/16/metroparks-parker-community-sailing.html",
-      "source": "Cleveland Business Journal",
-      "pub_date": "12 hours ago",
-      "snippet": "Sailing classes are expected to begin in the late summer or fall, according to Cleveland.com.\n\nThe eastern building includes a lakefront restaurant , The Galley, and bar, Rusty's, which are already open. The center also is a trailhead for Cleveland Metroparks' growing trail system on the east side of Cleveland.\n\n…"
-    },
-    {
-      "title": "Thai 9 expands to Piqua, opening second location in historic Fort Piqua Plaza",
-      "url": "https://www.bizjournals.com/dayton/news/2026/06/16/thai-9-opening-in-historic-fort-piqua-plaza.html",
-      "source": "Dayton Business Journal",
-      "pub_date": "12 hours ago",
-      "snippet": "Thai 9 plans to hire between 30 and 35 employees, with operating hours mirroring those of the Dayton restaurant . Hiring has already begun, and Clark said management training is underway.\n\n\"We've already hired our top manager, and he has hired his top-level team,\" Clark said. …"
-    },
-    {
-      "title": "First look: Nick & Sam's founding GM opens new steakhouse in Preston Hollow",
-      "url": "https://www.bizjournals.com/dallas/news/2026/06/16/palladinos-new-steakhouse-opens-preston-hollow.html",
-      "source": "Dallas Business Journal",
-      "pub_date": "12 hours ago",
-      "snippet": "Palladino had grown to a 50/50 partner in Nick & Sam's as of 2015 but is no longer involved with the restaurant , located at 3008 Maple Ave.\n\nPalladino, a former New York police officer and Bronx native, opened the first Palladino's location in New York City’s Grand Central Terminal in fall 2025. …"
-    },
-    {
-      "title": "KC Wheel property sells to New Jersey REIT as uncertainty lingers over stalled entertainment district",
-      "url": "https://www.bizjournals.com/kansascity/news/2026/06/16/kc-wheel-pennway-point-essential-properties-reit.html",
-      "source": "Kansas City Business Journal",
-      "pub_date": "13 hours ago",
-      "snippet": "EPRT primarily buys and manages single-tenant properties leased to restaurant , service-oriented and entertainment businesses. In 2022, it bought Chicken N Pickle's real estate in and beyond the Kansas City metro.\n\n…"
-    },
-    {
-      "title": "Jones Heel redevelopment underway, bringing 100+ apartments to the Brewery District",
-      "url": "https://www.bizjournals.com/columbus/news/2026/06/16/jones-heel-development-brewery-district-stonehenge.html",
-      "source": "Columbus Business First",
-      "pub_date": "13 hours ago",
-      "snippet": "Front St., a former creative space is being renovated into a restaurant and oyster bar called Lorelai.\n\nThe property is owned by Brontë Clifford, and the restaurant concept is being developed by chef Henry Christian.\n\n…"
-    },
-    {
-      "title": "As Argentina prepares for World Cup match, its ambassador talks business in KC",
-      "url": "https://www.bizjournals.com/kansascity/news/2026/06/16/world-cup-kansas-city-argentina-ambassador.html",
-      "source": "Kansas City Business Journal",
-      "pub_date": "13 hours ago",
-      "snippet": "Argentina President Javier Milei visited the U.S. 18 times in the past two years, and Argentina was the first nation to work out a trade agreement with the U.S. after the Trump administration's “Liberation Day” tariffs took effect last year. \n\n“The agreement regulated the opening of our markets in many agricultural sectors, so there are a lot of lines in both directions where products will start to flow,” Oxenford said. …"
-    },
-    {
-      "title": "Allen Morris secures $114 million loan for its West Midtown office building",
-      "url": "https://www.bizjournals.com/atlanta/news/2026/06/16/allen-morris-secures-refi-loan-west-midtown.html",
-      "source": "Atlanta Business Chronicle",
-      "pub_date": "13 hours ago",
-      "snippet": "That retail program within the district now includes Incognito, a cocktail bar that recently opened at 1025 Howell Mill Road NW. That's down the road from the new Ladybird opening on a 1-acre parcel at Star Metals. The 40,000 square feet of ground-floor retail space at Star Metals Offices is led by Michelin-starred Hayakawa, an omakase restaurant . \n\n…"
-    },
-    {
-      "title": "Whataburger to open Rock Hill restaurant in July as Texas chain expands footprint across the Carolinas",
-      "url": "https://www.bizjournals.com/charlotte/news/2026/06/16/rock-hill-whataburger-restaurant-food-expansion.html",
-      "source": "Charlotte Business Journal",
-      "pub_date": "13 hours ago",
-      "snippet": "A restaurant in Southern Pines will open June 18, and a second Raleigh location plans to debut this fall.\n\n“As Whataburger continues expanding throughout the Southeast, the Rock Hill opening represents another investment in the local community through new employment opportunities and long-term growth across South Carolina,” the company says in a statement.\n\n…"
-    },
-    {
-      "title": "Freddy's closes one location",
-      "url": "https://www.bizjournals.com/birmingham/news/2026/06/16/local-wine-bar-down-to-one-location.html",
-      "source": "Birmingham Business Journal",
-      "pub_date": "13 hours ago",
-      "snippet": "It was built in 1994 and sits on 2.96 acres. And Big John’s Buffet is opening at 162 Oxmoor Road. It will open in the location previously occupied by Cantina Tortilla Grill, a Mexican restaurant with a Central American twist, which closed in August 2024.…"
-    },
-    {
-      "title": "Pepper Lunch finalizes plans for 3 Austin-area locations",
-      "url": "https://www.bizjournals.com/austin/news/2026/06/16/pepper-lunch-atx-expansion-leander-hutto-kyle.html",
-      "source": "Austin Business Journal",
-      "pub_date": "13 hours ago",
-      "snippet": "A separate franchisee recently opened a Pepper Lunch in Frisco, Texas. The restaurant , founded in 1994, has 570 locations across 17 countries. …"
-    },
-    {
-      "title": "Level99 reveals Disney Springs opening date, new details for its largest gaming venue yet",
-      "url": "https://www.bizjournals.com/orlando/news/2026/06/16/level-99-opening-date-disney-springs-gaming.html",
-      "source": "Orlando Business Journal",
-      "pub_date": "14 hours ago",
-      "snippet": "This includes one of the top 100 independent restaurants in the United States, according to the trade publication Restaurant Business. The Boathouse is ranked No. 2 on the list, generating $51 million in sales in 2025, according to Restaurant Business. \n\n…"
-    },
-    {
-      "title": "Burger Up to close in 12South after 16 years amid neighborhood turnover",
-      "url": "https://www.bizjournals.com/nashville/news/2026/06/16/burger-up-nashville-closes-restaurant-12-south.html",
+      "title": "Immersive gaming venue plans Cummins Station location",
+      "url": "https://www.bizjournals.com/nashville/news/2026/07/08/time-mission-nashville-location-venue-cummins-stat.html",
       "source": "Nashville Business Journal",
-      "pub_date": "15 hours ago",
-      "snippet": "We would all agree that Nashville is a different city sitting here than it was 10 years ago when Josephine was opening .”\n\nAcross the street from Burger Up, an Anthropologie and Mother’s Ruin are opening in a new two-story building. Across the street from Anthropologie’s future home, local veteran investor group Corner Partnership is planning a new development to attract “top-notch” retailers. \n\n…"
+      "pub_date": "An hour ago",
+      "snippet": "Time Mission locations with two on the way, as well as international locations in Belgium and one coming soon in the Netherlands.\n\nAn opening date for the Nashville location wasn't immediately available, but the website says coming soon.\n\nSeveral projects are underway at Cummins Station, including members-only sporting club Lodge2A and Milkshake Concepts Mexican restaurant Vidorra.…",
+      "query": "restaurant opening"
     },
     {
-      "title": "Buffalo Wild Wings carryout restaurant opening in Central Ohio",
-      "url": "https://www.bizjournals.com/columbus/news/2026/06/16/columbus-buffalo-wild-wings-go-carryout-restaurant.html",
+      "title": "Popular Shelby County restaurant to close after nearly five years in business",
+      "url": "https://www.bizjournals.com/birmingham/news/2026/07/08/the-copper-train-closure.html",
+      "source": "Birmingham Business Journal",
+      "pub_date": "6 hours ago",
+      "snippet": "Alabaster cafe The Copper Train will close July 11, according to a social media post by the restaurant .\n\n“We love the community of Alabaster and will always cherish our memories of serving y’all,” the post states.\n\nThe restaurant has operated in its location at 224 First Street S. since opening almost five years ago.\n\n…",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "Austin losing Michelin starred restaurant Olamaie",
+      "url": "https://www.bizjournals.com/austin/news/2026/07/08/austin-olamaie-closing-restaurant.html",
+      "source": "Austin Business Journal",
+      "pub_date": "7 hours ago",
+      "snippet": "\"It's impossible to find the words to convey the sentiments related to closing a restaurant that has meant so much. Gratitude is the feeling that comes forward overwhelmingly,\" the announcement said. \n\nIn 2022, MaieB Hospitality LLC — basically the parent company of Olamaie — hired a CEO to grow the restaurant business. …",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "Middle Eastern eatery expands in Scottsdale, plus other Valley restaurant news",
+      "url": "https://www.bizjournals.com/phoenix/news/2026/07/08/middle-eastern-restaurant-expands-in-scottsdale.html",
+      "source": "Phoenix Business Journal",
+      "pub_date": "7 hours ago",
+      "snippet": "De Babel, a Scottsdale Middle Eastern restaurant , is opening its second location just four miles south of its original store along the Loop 101.\n\nDe Babel has signed a lease at The Edge, a retail development on Salt River Pima-Maricopa Indian Community Land near 90th Street and the 101. …",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "Anthony's Restaurants founder Budd Gould dies at 85",
+      "url": "https://www.bizjournals.com/seattle/news/2026/07/08/anthonys-restaurants-founder-budd-gould-dies-obit.html",
+      "source": "Puget Sound Business Journal",
+      "pub_date": "7 hours ago",
+      "snippet": "The name carried forward, and three years later, Anthony's HomePort was born in Kirkland. The restaurant , built around waterfront dining and fresh, local seafood, became the template for the business.\n\n\n\nGould pushed the company further up its own supply chain in 1984, opening a wholesale seafood operation at Seattle's Pier 91 to source directly from Northwest and Alaska fishing fleets. \n\n…",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "McIntyre’s eyes New Braunfels for new location",
+      "url": "https://www.bizjournals.com/sanantonio/news/2026/07/08/new-braunfels-sports-bar-chain-location-expansion.html",
+      "source": "San Antonio Business Journal",
+      "pub_date": "9 hours ago",
+      "snippet": "This marks the fifth outpost for the growing Texas chain, which opened its flagship in the Houston Heights neighborhood in 2016. Its expansion started shortly after with the opening of another Houston-area location in 2017. \n\nMcIntyre’s entered the San Antonio market in late December 2022. Its Southtown site took over the former home of The Patio at 1035 S. …",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "Former Central Avenue Starbucks location listed for lease",
+      "url": "https://www.bizjournals.com/albuquerque/news/2026/07/08/central-avenue-starbucks-listing-lease.html",
+      "source": "Albuquerque Business First",
+      "pub_date": "9 hours ago",
+      "snippet": "NE actively has plans for a new business with a Satellite coffee opening there soon. The location 106 W. San Francisco Street in Santa Fe is also currently listed for lease by Barker Realty.…",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "Former Edwards Dessert Kitchen chef opens her own bakery in south Minneapolis",
+      "url": "https://www.bizjournals.com/twincities/news/2026/07/08/edwards-dessert-kitchen-clementine-jasmine.html",
+      "source": "Minneapolis / St. Paul Business Journal",
+      "pub_date": "9 hours ago",
+      "snippet": "She’s also done some consulting work for Schwan’s.\n\nShe knew EDK couldn’t last forever, and had long considered opening her own spot. It was a tough road; finding money is hard. When Edwards opened, she had people who said they would invest if she ever opened her own spot. …",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "D.C. restaurant closures drop sharply, but industry group warns of looming threat",
+      "url": "https://www.bizjournals.com/washington/news/2026/07/08/dc-restaurant-closings-ramw-shawn-townsend.html",
+      "source": "Washington Business Journal",
+      "pub_date": "9 hours ago",
+      "snippet": "To that end, she said she puts credence in RAMW's position there's a correlation between the slowdown in restaurant closings and the pause in tipped wage increases.\n\nAs a business owner, Gross said she hates to see any restaurant close, and last year was a tough one because of increasing costs and decreasing consumer spending. …",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "Korean street food concept Seoul Gimbap to open first storefront in former pizza shop",
+      "url": "https://www.bizjournals.com/albuquerque/news/2026/07/08/korean-street-food-startup-permanent-location.html",
+      "source": "Albuquerque Business First",
+      "pub_date": "10 hours ago",
+      "snippet": "Hanmin, who is originally from Korea, said he is aiming for a late July opening but expects the restaurant could open in mid-August, depending on any delays in the city's permitting process.\n\nHe described the menu as “simple,” with kimbap priced at $6 each. …",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "Prado 264 set to open in former Mark's Feed Store location",
+      "url": "https://www.bizjournals.com/louisville/news/2026/07/08/prado-264-announces-opening-date.html",
+      "source": "Louisville Business First",
+      "pub_date": "11 hours ago",
+      "snippet": "Mimi’s Ethiopian Restaurant has yet to announce an opening date.…",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "Familiar name nears purchase of Old Mohawk restaurant in German Village",
+      "url": "https://www.bizjournals.com/columbus/news/2026/07/08/old-mohawk-german-village-ncr-ventures-rick-doody.html",
       "source": "Columbus Business First",
-      "pub_date": "16 hours ago",
-      "snippet": "That restaurant and bar moved to 2044 N. High St. in the 1990s and then to a new-build spot at 2149 N. High St. in 2007. It's one of 17 traditional locations Buffalo Wild Wings has in Central Ohio.\n\n…"
+      "pub_date": "11 hours ago",
+      "snippet": "Rick Doody said he lived in German Village for years when he worked at the restaurant .\n\nThe building Old Mohawk is in began as a corner store at the turn of the century and was a brothel and speakeasy before becoming a full restaurant in 1933.\n\n…",
+      "query": "restaurant opening"
     },
     {
-      "title": "Downtown restaurant to close after less than a year, and more retail news",
-      "url": "https://www.bizjournals.com/boston/news/2026/06/16/nine-restaurant-closing-retail-news.html",
-      "source": "Boston Business Journal",
-      "pub_date": "17 hours ago",
-      "snippet": "Middle Eastern fast-casual restaurant Naya is opening its sixth Greater Boston location in Fenway. The brand has been fast-expanding; its other new spots in Burlington and Kendall Square also opened earlier this year.\n…"
+      "title": "Tampa Bay's first Cook Out nears opening in USF area",
+      "url": "https://www.bizjournals.com/tampabay/news/2026/07/08/cook-out-tampa-east-fowler-opening.html",
+      "source": "Tampa Bay Business Journal",
+      "pub_date": "12 hours ago",
+      "snippet": "Cook Out’s chargrilled burgers and hand-spun milkshakes are close to opening its first Tampa location. \n\nNorth Carolina-based Cook Out, a fast-food chain with locations throughout the Southeast and Mid-Atlantic, appears to be opening its Temple Terrace location soon, as signage for the restaurant has been put on the building and the drive-thru has been constructed. …",
+      "query": "restaurant opening"
     },
     {
-      "title": "SoDough Square owner discusses expansion plans amid challenging restaurant climate",
-      "url": "https://www.bizjournals.com/orlando/news/2026/06/16/sodough-square-pizza-restaurant-expansion-economy.html",
+      "title": "Teddy's on West 38th has closed after less than 2 years",
+      "url": "https://www.bizjournals.com/austin/news/2026/07/08/teddys-restaurant-bar-closed-atx.html",
+      "source": "Austin Business Journal",
+      "pub_date": "12 hours ago",
+      "snippet": "Less than two years after opening on West 38th Street, Teddy's has closed. \n\nThe Southwestern cuisine restaurant and bar was at 1601 W. 38th St. in the Jefferson Square Shopping Center. …",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "Ikea's downtown S.F. mall gets new life, and the team behind it is ready 'to take some risk' to fill it up",
+      "url": "https://www.bizjournals.com/sanfrancisco/news/2026/07/08/ikea-saluhall-spirited-bar-oklava-cafe-mid-market.html",
+      "source": "San Francisco Business Times",
+      "pub_date": "15 hours ago",
+      "snippet": "Ingka's ambitious food hall bet hasn't found a sustainable food and beverage winner since opening in spring 2024 with a smorgasbord of local and vegetarian-leaning vendors, as well as Scandinavian concepts that included a bakery, soft-serve and smash burgers. \n\n…",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "Pop-up cafés are taking over Orlando’s coffee scene. Here’s what’s driving the trend.",
+      "url": "https://www.bizjournals.com/orlando/news/2026/07/08/coffee-shop-cafe-pop-up-small-business-orlando.html",
       "source": "Orlando Business Journal",
-      "pub_date": "17 hours ago",
-      "snippet": "To navigate this, he said restaurateurs need to focus on the fundamentals of the business, which are controlling the costs of food and labor. Murphy added ensuring a restaurant ’s delivery and takeout services are on par is key as well.   \n\nBair shared a similar perspective, which is also seen through his new restaurant opening in Tampa. …"
+      "pub_date": "16 hours ago",
+      "snippet": "Traditional coffee shops and cafés often require significant upfront investment. According to a study by Toast, opening costs can range from $80,000 to $300,000 due to expenses such as equipment, permitting, build-outs and long-term leases. By comparison, Capital One Research found that 44% of pop-up businesses cost less than $5,000 to launch.\n\n…",
+      "query": "restaurant opening"
     },
     {
-      "title": "Five restaurants now confirmed for Regency's $140M Seven Pines project ahead of 2027 opening",
-      "url": "https://www.bizjournals.com/jacksonville/news/2026/06/16/dining-the-village-at-seven-pines.html",
-      "source": "Jacksonville Business Journal",
+      "title": "Kura Sushi opening second area location in Overland Park",
+      "url": "https://www.bizjournals.com/kansascity/news/2026/07/08/high-tech-sushi-bar-kura-second-area-location.html",
+      "source": "Kansas City Business Journal",
       "pub_date": "18 hours ago",
-      "snippet": "The restaurant is known for shareable plates, noodles, bao buns, craft cocktails and roti inspired by the hawker stalls of Southeast Asia.\n\nLynora’s will make its North Florida debut at The Village at Seven Pines. …"
+      "snippet": "Kura Revolving Sushi Bar is opening its second Kansas City-area location, and first in Kansas.\n\nThe high-tech sushi bar debuted its first area location in December 2023 on the Country Club Plaza at 200 W. 47th St. …",
+      "query": "restaurant opening"
     },
     {
-      "title": "China Grill returns in Bal Harbour, Pilates studio set for Royal Palm Beach and beach club opens at Kimpton Surfcomber (Photos)",
-      "url": "https://www.bizjournals.com/southflorida/news/2026/06/16/china-grill-returns-bal-harbour-miami-beach.html",
+      "title": "Mister Pizza, Connor's among a dozen eateries to change hands in Q2",
+      "url": "https://www.bizjournals.com/buffalo/news/2026/07/08/restaurant-news-q2-new-owners-eateries-buffalo.html",
+      "source": "Buffalo Business First",
+      "pub_date": "19 hours ago",
+      "snippet": "The project could also include a Wendy’s, Dunkin or Buffalo Wild Wings to Go.\nArctic Bites is opening a site at 141 Buffalo St. in the Village of Hamburg. The site will become its second location, joining a hibachi restaurant that opened at 502 N. …",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "Overland Park revises Aspiria plan to avoid hotel, restaurant delays after Royals uncertainty",
+      "url": "https://www.bizjournals.com/kansascity/news/2026/07/08/aspiria-campus-overland-park-master-plan-119-nall.html",
+      "source": "Kansas City Business Journal",
+      "pub_date": "19 hours ago",
+      "snippet": "Rather, they make sure apparent city permitting oversights and delays related to the Kansas City Royals won't indefinitely bar a coming hotel and popular restaurants from opening next year.\n\nThe City Council on Monday approved a revised preliminary plan for the former Sprint campus to continue being remade as a \"live-work-play\" environment under Wichita owner Occidental Management Inc. …",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "Louis Vuitton opens new Miami Design District store, bakery makes Hallandale debut and mahjong concept joins Wellington mall (Photos)",
+      "url": "https://www.bizjournals.com/southflorida/news/2026/07/08/louis-vuitton-new-miami-design-district-store.html",
       "source": "South Florida Business Journal",
-      "pub_date": "20 hours ago",
-      "snippet": "The gallery will showcase Turco's \"Only One\" collection of wall art, sculptures and design objects, with a grand opening planned for Oct. 1. Turco recently opened his first dedicated gallery in Udine, Italy, before expanding to Miami Beach.\n\nGiotto Maestro della Pizza\n\n\n\nGiotto Maestro della Pizza opened its second location on June 11 in downtown Miami, expanding beyond its longtime South Beach restaurant . …"
+      "pub_date": "23 hours ago",
+      "snippet": "Royale Pizza Napoletana\n\nRoyale Pizza Napoletana plans to open in fall 2026 on Miami Beach at 1680 Meridian Ave. The 65-seat restaurant is owned by banking entrepreneur and restaurateur Jess Varughese and will feature Tokyo-style Neapolitan pizza developed in partnership with Japanese pizzaiolo Chef Bun of Tokyo's Savoy restaurant . …",
+      "query": "restaurant opening"
+    },
+    {
+      "title": "St. Louis-based tire and automotive chain expands Ohio footprint with acquisition",
+      "url": "https://www.bizjournals.com/stlouis/news/2026/07/08/dobbs-tire-expands-ohio-acquisition.html",
+      "source": "St. Louis Business Journal",
+      "pub_date": "4 hours ago",
+      "snippet": "Basile, who became CEO in April as part of a planned leadership transition, joined Dobbs in early 2024 as chief financial officer and was promoted in 2025 to also serve as chief operating officer. During his tenure in those roles, Dobbs increased its store count from 43 locations to more than 150 locations across eight states, according to the company. Revenue more than doubled during the prior two years, driven by same- store sales growth, store rebuilds, new locations and seven acquisitions.\n\n…",
+      "query": "store opening"
+    },
+    {
+      "title": "Report: Tecovas stores to open within Cabela's, Bass Pro Shops in US",
+      "url": "https://www.bizjournals.com/austin/news/2026/07/08/tecovas-cabelas-bass-pro-shops.html",
+      "source": "Austin Business Journal",
+      "pub_date": "7 hours ago",
+      "snippet": "In 2024, it announced that it's partnering with retailers including National Roper Supply, Texas Boot Company, Howell Western Wear and Junk Gypsy to bring the Tecovas store feel to new markets without the notable cost of opening a standalone store , Tecovas CEO David Lafitte told the ABJ in 2024. \n\nThe Western wear company has also been ramping up its AI strategy to support rapid growth. …",
+      "query": "store opening"
+    },
+    {
+      "title": "Nuna & Tavo open first retail location at Bridgeport Village",
+      "url": "https://www.bizjournals.com/portland/news/2026/07/08/nuna-tavo-bridgeport-village.html",
+      "source": "Portland Business Journal",
+      "pub_date": "8 hours ago",
+      "snippet": "Nuna has had sponsorship deals with Portland sports teams including the Thorns and Trail Blazers.\n\n\n\nThe company’s new store is 1,214 square feet at 7241 S.W. Bridgeport Road in Tigard. The company signed a multi-year lease.\n\n“ Opening at Bridgeport Village feels like coming full circle for us. …",
+      "query": "store opening"
+    },
+    {
+      "title": "Local architect debuts fashion house, leaning on Greek heritage and Nashville roots",
+      "url": "https://www.bizjournals.com/nashville/news/2026/07/08/leo-vas-nashville-fashion-designer-chestnut-hill.html",
+      "source": "Nashville Business Journal",
+      "pub_date": "9 hours ago",
+      "snippet": "A local architect and designer is opening Nashville’s newest fashion house in early August.\n\nAlexandros Darsinos, the founder of Studio YUDA, will open the flagship store of Leo Vas in Chestnut Hill, reflecting both his Greek heritage and his Nashville roots. \n\n…",
+      "query": "store opening"
+    },
+    {
+      "title": "Fast-growing fire safety firm Pye-Barker buys Maryland company",
+      "url": "https://www.bizjournals.com/atlanta/news/2026/07/08/pye-barker-acquires-responsetech.html",
+      "source": "Atlanta Business Chronicle",
+      "pub_date": "10 hours ago",
+      "snippet": "John Pye and Ben Barker, two graduates of Georgia Tech, founded the company in 1946 with the opening of Pye-Barker Supply Co., their flagship store that sold equipment like fire extinguishers and first-aid kits. Since its founding, the company expanded into new products and services and went on to make numerous acquisitions, especially in the 1990s – a growth strategy it maintains today. …",
+      "query": "store opening"
+    },
+    {
+      "title": "Jeff's Donuts opens its first Central Ohio shop near Gahanna",
+      "url": "https://www.bizjournals.com/columbus/news/2026/07/08/jeffs-donuts-opens-its-first-columbus-shop.html",
+      "source": "Columbus Business First",
+      "pub_date": "12 hours ago",
+      "snippet": "The southern Indiana-founded chain on Wednesday celebrated the grand opening of its first Central Ohio shop. It's also the first in the state. \n\nThe store is at 5717 N. Hamilton Road near Gahanna and the Hamilton Quarter development.\n\n…",
+      "query": "store opening"
+    },
+    {
+      "title": "Japanese lifestyle chain opens largest North American store in Jacksonville",
+      "url": "https://www.bizjournals.com/jacksonville/news/2026/07/08/teso-life-jax.html",
+      "source": "Jacksonville Business Journal",
+      "pub_date": "13 hours ago",
+      "snippet": "The store caters to local Eastern populations and American shoppers that several retailers have targeted in recent years. \n\nThe department store will open in the same Regency Court shopping center as Lotte Market, a Korean grocery and department store that opened in September 2025. …",
+      "query": "store opening"
+    },
+    {
+      "title": "Colectivo Coffee Roasters continues expansion across Chicago metro",
+      "url": "https://www.bizjournals.com/chicago/news/2026/07/08/grand-opening-for-colectivo-coffee-roasters.html",
+      "source": "Chicago Business Journal",
+      "pub_date": "13 hours ago",
+      "snippet": "On July 8, the Milwaukee-based company will open a 2,200-square-foot store at 3258 N. Southport Ave. in Lakeview with 20 employees. The new cafe can accommodate 40 customers including 26 outdoor seats.\n\nBy the fall, Colectivo plans to also open a 1,600-square-foot café at 2032 W. …",
+      "query": "store opening"
+    },
+    {
+      "title": "Chase Koch's Movement Musick plans to add grocery store to downtown",
+      "url": "https://www.bizjournals.com/wichita/news/2026/07/08/chase-koch-grocery-store-downtown-movement-musick.html",
+      "source": "Wichita Business Journal",
+      "pub_date": "13 hours ago",
+      "snippet": "Price Chopper is a regional store with locations in Kansas in Missouri and is operated by four family businesses in the Kansas City area. \n\nMovement Musick said it plans to lead the capital investment for construction of the store and has structured the partnership with the Queen family to support the store 's operations through its initial growth period to support the long-term success of the store . \n\n…",
+      "query": "store opening"
+    },
+    {
+      "title": "Buckhead retail staple Lucy’s Market to expand into larger space",
+      "url": "https://www.bizjournals.com/atlanta/news/2026/07/08/lucys-market-buckhead-relocation.html",
+      "source": "Atlanta Business Chronicle",
+      "pub_date": "19 hours ago",
+      "snippet": "Lucy’s, which is named for Wilson’s grandmother and 33-year-old daughter, both named Lucille, will host a sale beginning the week of August 24, “mainly of home goods,\" before a brief closure and then a soft opening of the new location October 3. A grand opening will follow a week later.\n\nWilson lights up when she talks about the plans for Lucy’s Market during the holidays, which include a gondola going through the store and a Ferris wheel for on top of the produce. \n\n…",
+      "query": "store opening"
     }
   ]
 }
