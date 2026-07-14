@@ -300,189 +300,65 @@ def scrape_dogtopia() -> list[dict]:
 
 
 # ── Burlington scraper ────────────────────────────────────────────────────────
+#
+# burlington.com is a Next.js app. The grand-openings list is not rendered as
+# literal HTML (no state-name headings or <li>/<a> rows to scrape) — it's
+# shipped as a JSON blob (`"storeOpenings": {...}`) inside a React Server
+# Components flight payload (a `self.__next_f.push([...])` script). We pull
+# that JSON out directly instead of walking the DOM.
 
 BURLINGTON_URL = "https://www.burlington.com/grand-openings"
 
-US_STATES_RE = re.compile(
-    r"^\s*(Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut"
-    r"|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas"
-    r"|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota"
-    r"|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey"
-    r"|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon"
-    r"|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas"
-    r"|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming"
-    r"|AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD"
-    r"|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC"
-    r"|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)\s*(?:\(\d+\))?$",
-    re.IGNORECASE,
-)
 
-# Matches Burlington entry format: "05/01 - Fayetteville (#1829) 3835 North Mall Ave Ste 2"
-# Group 1: opening date  (05/01)
-# Group 2: store name    (Fayetteville (#1829))
-# Group 3: address       (3835 North Mall Ave Ste 2)
-BURLINGTON_ENTRY_RE = re.compile(
-    r'^(\d{2}/\d{2})\s*[-–]\s*(.+?\(#\d+\))\s+(.+)$'
-)
+def _burlington_extract_store_openings(html: str) -> dict:
+    idx = html.find('\\"storeOpenings\\"')
+    if idx == -1:
+        return {}
+    brace_start = html.find("{", idx)
+    if brace_start == -1:
+        return {}
 
-
-def _burlington_expand_accordions(driver: webdriver.Chrome) -> int:
-    # Scroll through the page to trigger lazy-loaded content
-    for frac in (0.25, 0.5, 0.75, 1.0):
-        driver.execute_script(f"window.scrollTo(0, document.body.scrollHeight * {frac});")
-        time.sleep(0.8)
-    driver.execute_script("window.scrollTo(0, 0);")
-    time.sleep(1.5)
+    depth = 0
+    for i in range(brace_start, len(html)):
+        c = html[i]
+        if c == "{":
+            depth += 1
+        elif c == "}":
+            depth -= 1
+            if depth == 0:
+                raw = html[brace_start:i + 1]
+                break
+    else:
+        return {}
 
     try:
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.TAG_NAME, "button"))
-        )
-    except Exception:
-        pass
-
-    # Try standard aria-expanded buttons first
-    buttons = driver.find_elements(By.CSS_SELECTOR, "button[aria-expanded='false']")
-
-    # Try <details> elements that are not open
-    if not buttons:
-        details = driver.find_elements(By.XPATH, "//details[not(@open)]")
-        for d in details:
-            summary = d.find_elements(By.TAG_NAME, "summary")
-            if summary:
-                buttons.append(summary[0])
-
-    if not buttons:
-        buttons = [b for b in driver.find_elements(By.TAG_NAME, "button")
-                   if b.text.strip() in ("+", "expand", "Show", "show more", "View More")]
-    if not buttons:
-        buttons = driver.find_elements(By.XPATH, "//*[normalize-space(text())='+']")
-
-    count = 0
-    for btn in buttons:
-        try:
-            driver.execute_script("arguments[0].scrollIntoView({block:'center'});", btn)
-            time.sleep(0.2)
-            driver.execute_script("arguments[0].click();", btn)
-            count += 1
-            time.sleep(0.6)
-        except Exception:
-            continue
-    time.sleep(3)
-    return count
+        return json.loads(raw.replace('\\"', '"'))
+    except json.JSONDecodeError as e:
+        print(f"[Burlington] Failed to parse storeOpenings JSON: {e}")
+        return {}
 
 
-def _burlington_find_container(state_tag):
-    node = state_tag
-    for _ in range(6):
-        parent = node.parent
-        if parent is None or parent.name in ("body", "html", "[document]"):
-            break
-        if parent.find(["a", "li"]):
-            return parent
-        for sibling in node.next_siblings:
-            if not hasattr(sibling, "find"):
-                continue
-            if sibling.find(["a", "li"]):
-                return sibling
-        node = parent
-    return state_tag.parent
+def _burlington_parse(html: str) -> list[dict]:
+    store_openings = _burlington_extract_store_openings(html)
+    print(f"[Burlington] Found {len(store_openings)} state(s) in storeOpenings data.")
 
-
-def _burlington_entries(container):
-    entries = []
-    candidates = container.find_all("a") or container.find_all("li")
-    for el in candidates:
-        text = el.get_text(" ", strip=True)
-        if len(text) < 3:
-            continue
-        row = el.find_parent(["li", "div", "article", "p"]) or el.parent
-        row_text = row.get_text(" ", strip=True) if row else text
-        entries.append((text, row_text))
-    return entries
-
-
-def _burlington_parse(soup: BeautifulSoup) -> list[dict]:
-    section = (
-        soup.find(id="UpcomingGrandOpenings")
-        or soup.find(id=re.compile(r"grand.?opening", re.I))
-        or soup.find(attrs={"class": re.compile(r"grand.?opening", re.I)})
-        or soup.body
-    )
-    state_tags = section.find_all(
-        lambda t: t.name in ("h2", "h3", "h4", "strong", "b", "p", "span", "div")
-        and US_STATES_RE.match(t.get_text(strip=True))
-    )
-    print(f"[Burlington] Found {len(state_tags)} state heading(s).")
-
-    stores, seen = [], set()
-    for state_tag in state_tags:
-        raw_state = state_tag.get_text(strip=True)
-        m_state = US_STATES_RE.match(raw_state)
-        state_name = m_state.group(1) if m_state else raw_state
-        container  = _burlington_find_container(state_tag)
-        entries    = _burlington_entries(container)
-        print(f"  [{state_name}] {len(entries)} entries.")
-
-        for text, row_text in entries:
-            key = (state_name.lower(), text.lower())
-            if key in seen:
-                continue
-            seen.add(key)
-
-            m = BURLINGTON_ENTRY_RE.match(text.strip())
-            if m:
-                opening_date = m.group(1).strip()
-                address      = f"{m.group(3).strip()}, {state_name}"
-            else:
-                if len(text) <= 4:
-                    continue
-                opening_date = extract_date(text) or extract_date(row_text)
-                address      = state_name
-
+    stores = []
+    for state_name, entries in store_openings.items():
+        for entry in entries:
+            street = (entry.get("streetAddress") or "").strip()
+            city   = (entry.get("city") or "").strip()
+            date   = (entry.get("date") or "").strip()
+            address_parts = [p for p in (street, city, state_name) if p]
             stores.append({
-                "address":      address,
-                "opening_date": opening_date,
+                "address":      ", ".join(address_parts),
+                "opening_date": date,
             })
-
-    # Flat-list fallback: if no state headings found, scan all text nodes for entry pattern
-    if not stores:
-        print("[Burlington] No state headings matched — trying flat-list scan.")
-        full_text = section.get_text("\n", strip=True)
-        current_state = "Unknown"
-        for line in full_text.splitlines():
-            line = line.strip()
-            m_st = US_STATES_RE.match(line)
-            if m_st:
-                current_state = m_st.group(1)
-                continue
-            m_entry = BURLINGTON_ENTRY_RE.match(line)
-            if m_entry:
-                key = (current_state.lower(), line.lower())
-                if key not in seen:
-                    seen.add(key)
-                    stores.append({
-                        "address":      f"{m_entry.group(3).strip()}, {current_state}",
-                        "opening_date": m_entry.group(1).strip(),
-                    })
-            elif re.match(r"^\d{2}/\d{2}", line) and len(line) > 6:
-                # Looser fallback: lines starting with MM/DD
-                key = ("flat", line.lower())
-                if key not in seen:
-                    seen.add(key)
-                    stores.append({
-                        "address":      f"{line[6:].strip()}, {current_state}",
-                        "opening_date": line[:5].strip(),
-                    })
-        print(f"[Burlington] Flat scan found {len(stores)} entries.")
-
     return stores
 
 
 def scrape_burlington(driver: webdriver.Chrome) -> list[dict]:
     print(f"[Burlington] Loading {BURLINGTON_URL}")
 
-    # Try plain requests first (faster; works if page is server-rendered)
     try:
         resp = requests.get(
             BURLINGTON_URL,
@@ -490,36 +366,22 @@ def scrape_burlington(driver: webdriver.Chrome) -> list[dict]:
             timeout=20,
         )
         resp.raise_for_status()
-        static_soup = BeautifulSoup(resp.text, "html.parser")
-        quick_stores = _burlington_parse(static_soup)
-        if quick_stores:
-            print(f"[Burlington] Static fetch returned {len(quick_stores)} store(s). Skipping Selenium.")
-            results = [
-                {"company": "Burlington", "address": s["address"],
-                 "opening_date": s["opening_date"].strip(), "link": ""}
-                for s in quick_stores
-            ]
-            print(f"[Burlington] {len(results)} store(s) parsed.")
-            return results
-        print("[Burlington] Static fetch returned 0 stores; falling back to Selenium.")
+        stores = _burlington_parse(resp.text)
     except Exception as e:
         print(f"[Burlington] Static fetch failed: {e}; falling back to Selenium.")
+        driver.get(BURLINGTON_URL)
+        time.sleep(8)
+        stores = _burlington_parse(driver.page_source)
 
-    driver.get(BURLINGTON_URL)
-    time.sleep(8)
-    n = _burlington_expand_accordions(driver)
-    print(f"[Burlington] Expanded {n} accordion(s).")
-    soup = BeautifulSoup(driver.page_source, "html.parser")
-    stores = _burlington_parse(soup)
-
-    results = []
-    for s in stores:
-        results.append({
+    results = [
+        {
             "company":      "Burlington",
             "address":      s["address"],
-            "opening_date": s["opening_date"].strip(),
-            "link":         "",
-        })
+            "opening_date": s["opening_date"],
+            "link":         BURLINGTON_URL,
+        }
+        for s in stores
+    ]
     print(f"[Burlington] {len(results)} store(s) parsed.")
     return results
 
