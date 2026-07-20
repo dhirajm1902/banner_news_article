@@ -17,430 +17,428 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 Create ONE clean Markdown table with these exact column headers (in this order):
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
-🌎 Geographic filter (STRICT)
-• Only extract businesses located in the USA or Canada
-• If the article is about a business in any other country (UK, Australia, India, UAE, etc.) → DO NOT add any row to the table; add it ONLY to the Non-working list as "Outside USA/Canada"
-• If an article covers both USA/Canada locations AND international locations → extract only the USA/Canada rows, skip the rest; add the article to the Non-working list as "Outside USA/Canada (partial)"
-
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
-• If a USA/Canada article has zero relevant business opening or closure information, still include a row with:
+• If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
-• ❌ Never add a table row for articles outside USA/Canada — those go in the Non-working list only
 
 🚫 Strict constraints
 • ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
-• ❌ No extraction of businesses outside USA or Canada
 
 📎 Final section (mandatory)
 At the very end of your response, add:
 Non-working or unusable articles List:
-• Article number — Reason (paywall / no business details / duplicate / text missing / Outside USA/Canada / etc.)
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
 If none, write: None
 
 ✅ Articles below — extract now:
 
 
 --- Article 1 ---
-URL: https://www.shawlocal.com/kendall-county-now/2026/06/29/trader-joes-set-to-open-oswego-store-by-years-end/
-Title: Trader Joe’s set to open Oswego store by year’s end
+URL: https://www.ctinsider.com/food/article/marquee-state-street-new-london-opening-22339072.php
+Title: A 1920s-style speakeasy and jazz bar just opened in Connecticut
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 23:00:00
+Published: 2026-07-19 22:08:10
 
-California-based grocery chain Trader Joe’s is expected to open its new grocery store in Oswego by the end of the year. “Trader Joe’s should be open this year,” Oswego Economic Development Director Kevin Leighty told members of the village’s economic development commission earlier this month. Trader Joe’s promotes itself as a neighborhood grocery store. “At Trader Joe’s, you won’t find a lot of branded items,” states its website. “Instead, you’ll discover a store full of unique and interesting products, along with everyday basics, in the Trader Joe’s label.” In March, the Monrovia, California-based company confirmed on its website that it is building a new store at U.S. Route 34 and Kendall Point Drive in Oswego , next to Delta Sonic. Although Trader Joe’s previously had confirmed that it plans to open a store in Oswego, it had not said where the store will be located. The address for the new store is 1930 U.S. Route 34. Batavia, Glen Ellyn, Naperville, Downers Grove and Oak Park are some of the other communities where Trader Joe’s stores are located. During his State of the Village address on March 4, Oswego Village President Ryan Kauffman talked about the Trader Joe’s plans as just another example of the strength of the village. “When Trader Joe’s chooses your community, it says that this is a place with energy, stability and a customer base that executives believe in,” Kauffman said. Last year, village trustees unanimously approved plans for a 12,500-square-foot grocery store at the site. Benderson Development Company LLC. is building the store along with a 10,000-square-foot building on the property. “I don’t think they have any confirmed tenants yet,” Leighty said in talking about the outlot. Benderson Development Company often works with Trader Joe’s. The property is zoned for business.
+Christopher Leffert, bartender and co-owner of The Marquee Speakeasy Bar & Restaurant, prepares a drink for a staff member at the establishment on the eve of opening in New London, Conn. on Thursday July 16, 2026. Christian Abraham/Hearst Connecticut Media Imagine dropping a 1920s jazz bar, speakeasy and movie palace — all into one — onto State Street in New London . That's the feel that Christopher Leffert, 30, and his parents Sean and Sayra are curating with The Marquee on State Street , a new movie theater-themed bar and speakeasy that has opened its doors this month. Leffert said that he opened The Marquee on State Street for a soft opening during Celebrate New London while a hard opening is slated for Friday, July 17. The grand opening will feature live jazz from Joel Spineti, Matt McCauley and Jonas Sanchez. Advertisement Article continues below this ad The inside of the venue features a small stage where "classic cinema meets the soulful sound of live jazz." The Marquee on State Street will also have its own speakeasy, which can seat up to 20 guests. Sean Leffert, co-owner of The Marquee Speakeasy Bar & Restaurant, is hard at work at the establishment on the eve of opening in New London, Conn. on Thursday July 16, 2026. Christian Abraham/Hearst Connecticut Media Located at 312 State St., the building that houses The Marquee on State Street formerly served as the home of Dev's Bistro, Nico's and Hanafin's Public House. Leffert, who said the project has been he and his father's first foray into operating a business, noticed that the jazz bar concept had been picking up steam in recent years, which gave him the idea to bring The Marquee on State Street to New London. Advertisement Article continues below this ad CT Insider Logo Take control of your search results Make CT Insider a preferred source on Google to see more of our journalism when you search. Add Preferred Source "It's our first time going into opening up a business on our own, so you know we are comp
 
 --- Article 2 ---
-URL: https://kdhnews.com/news/local/heights-pizzeria-and-drafthouse-celebrating-new-killeen-location-this-week/article_273ce892-f1c2-47c1-bd5c-d014b2901885.html
-Title: Heights Pizzeria and Drafthouse celebrating new Killeen location this week
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 23:00:00
+URL: https://en.sedaily.com/finance/2026/07/20/hanwha-hotels-to-open-third-matie-hotel-in-pyeongtaek-in
+Title: Hanwha Hotels to Open Third Matie Hotel in Pyeongtaek in November
+Status hint: Opening | Industry: Hospitality
+Published: 2026-07-19 21:46:05
 
-Facebook Twitter WhatsApp SMS Email The Heights Pizzeria and Drafthouse opened up in October of 2023. The new Killeen location will be hosting festivities for locals. Facebook Twitter WhatsApp SMS Email Print Copy article link Save The Heights Pizzeria and Drafthouse will be celebrating the opening of the company’s new Killeen location with a ribbon-cutting ceremony on Thursday. The ribbon-cutting, organized with the Greater Killeen Chamber of Commerce, is scheduled for 4 p.m. at the new Killeen location, 1103 W. Stan Schlueter Loop, Building A, Suite 300. The Heights Pizzeria and Drafthouse hosted the grand opening to their Heights location back in October of 2023. According to store officials at the time, the pizzeria has had steady business since its opening in 2023. The new Killeen store will not only be hosting a ribbon-cutting for locals to get photos but the restaurant will host festivities as well. Around 11 a.m. Thursday, the pizzeria will offer activities and entertainment. “Guests can enjoy complimentary giant cheese or pepperoni slices (available until 4 p.m., limit one per guest), along with a variety of activities including Pokémon card pack giveaways, mystery prizes, face painting, outdoor patio games, a bouncy house for children, and a special appearance by Bluey,” wrote Killeen Chamber officials in a release to KDH News. “Additional highlights include limited-time Liberty Lemonade and a ‘Most Spirited Guest’ contest. Attendees are encouraged to dress in red, white, and blue for a chance to win a $100 gift card.” The restaurant offers a wide range of menu items from build-your-own pizzas and specialty pies, sub sandwiches and salads, to dozens of alcoholic drinks and desserts. As of now, the new restaurant location is open all days of the week. More from this section Local News Local woman, 48, killed in Harker Heights accident 13 hrs ago Crime Police reports: Assault, theft reported in Lampasas; four arrested Jun 27, 2026 Local News Heights Pizzeria
+| Summary | Save A A A Interior pool at Matie Osiria, operated by Hanwha Hotels & Resorts in the Osiria Tourism Complex in Gijang-gun, Busan. In November, Hanwha Hotels will open its third Matie-brand hotel, "Matie Noble," in Pyeongchon, Anyang, Gyeonggi Province. Hanwha Hotels & Resorts Hanwha Hotels & Resorts will open the "Matie Noble" hotel in Pyeongchon, Anyang, Gyeonggi Province, in November. It will be the third "Matie" brand hotel, following Matie Osiria in Gijang County, Busan, and Matie Busan Harbor City in the Bukhang area of Dong-gu, Busan. According to the hotel industry on the 19th, Hanwha Hotels will open Matie Noble within the Pyeongchon Prugio Central Park in Anyang, Gyeonggi Province, in November. Matie is a four-star lifestyle hotel brand that Hanwha Hotels launched in 2020. When Hanwha Hotels launched the Matie brand in 2020, it had announced plans to open in the Pyeongchon area. However, following various changes such as delays in the development of the project site itself and changes in its use due to the COVID-19 pandemic, the opening will now take place this November. In its first-quarter report this year, Hanwha Hotels said it had signed a sales contract to purchase 138 residential accommodation units and associated facilities within a 48-story above-ground lodging complex located in Anyang, Gyeonggi Province. The facility can accommodate both short-term and long-term stays. Hanwha Hotels plans to configure Matie Noble as a wellness-focused hotel with health management services. The concept is to equip it with a healthcare system and wellness programs to provide to both short- and long-term guests. "Matie Noble is an urban lifestyle brand that combines hotel-style service with living convenience and health management services," a company official said. "It is a facility that anyone can book through various online travel agencies (OTAs) and where guests can also experience health management during their stay." With the opening of Matie Noble 
 
 --- Article 3 ---
-URL: https://www.nj.com/business/2026/06/family-owned-nj-appliance-store-relocating-to-larger-showroom.html
-Title: Family-owned N.J. appliance store relocating to larger showroom in Middlesex County
+URL: https://www.tapinto.net/towns/edison/sections/business-and-finance/articles/timberland-store-opens-at-menlo-park-mall
+Title: Timberland Store Opens at Menlo Park Mall
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 23:00:00
+Published: 2026-07-19 20:20:14
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.nj.com/business/2026/06/family-owned-nj-appliance-store-relocating-to-larger-showroom.html]
+Timberland Store Opens at Menlo Park Mall | Edison, NJ News TAPinto | TAPinto
 
 --- Article 4 ---
-URL: https://qconline.com/life-entertainment/local/food-drink/article_ee7f7cdb-037d-578d-96d7-a51c9b9a1b27.html
-Title: Golden Corral Buffet & Grill in Davenport to close
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-06-29 23:00:00
+URL: https://wtaq.com/2026/07/19/rooted-in-culinary-center-of-excellence-now-open-in-green-bay/
+Title: “Rooted in Culinary Center of Excellence” now open in Green Bay
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-07-19 19:55:09
 
-1 of 3 Golden Corral Buffet & Grill, located at 5202 Elmore Avenue in Davenport, shown here on Monday, June 29, is closing, with the last day of operation on Monday, July 6. LAURA YEATER Shown inside the Golden Corral Buffet Grill are a couple of specials for seniors and children at 5202 Elmore Avenue in Davenport on Monday, June 29. The restaurant is permanently closing Monday, July 6. LAURA YEATER Golden Corral Buffet & Grill, located at 5202 Elmore Avenue in Davenport, is permanently closing, with its last day of operation on Monday, July 6. Golden Corral Buffet & Grill's marquee sign is shown advertising "kids eat free all day" from 8 a.m.-9 p.m. on July 4, on Monday, June 29. LAURA YEATER Prefer us on Google Learn More Facebook Twitter Bluesky WhatsApp SMS Email Print Copy article link Save LAURA YEATER A popular, all-you-can-eat Davenport restaurant is permanently closing. kAm%96 s2G6?A@CE v@=56? r@CC2= qF776E U2>Aj vC:==’D =2DE 52J @7 @A6C2E:@? H:== 36 |@?52J[ yF=J e[ 244@C5:?8 E@ >2?286C y24<:6 %9@>AD@?] k^Am kAm%96 C6DE2FC2?E :D =@42E65 2E da_a t=>@C6 pG6] :? s2G6?A@CE] k^Am kAm%96C6VD DE:== E:>6 E@ E2<6 25G2?E286 @7 E96 DA64:2=D v@=56? r@CC2= @776CD] ~? %F6D52J[ 7C@> c\h A]>][ 49:=5C6? `a 2?5 F?56C 62E 7C66 H:E9 6249 25F=E 3F776E AFC492D6] ~? $2EFC52J[ yF=J c[ <:5D 62E 7C66 2== 52J 7C@> g 2]>]\h A]>] %@?:89E 2?5 |@?52J[ yF=J e[ :EVD z:5DV }:89ED 7@C Sb]hh[ 7C@> c\h A]>][ H9:49 :?4=F56D 2 <:5D 3F776E 2?5 36G6C286]k^Am People are also reading… Pleasant Valley School District principal resigns, resignations, hirings from June 8 school board agenda Resignations, hirings and other Moline School District personnel news from June 22 iHeartMedia layoffs end runs for longtime Quad-Cities radio hosts Historic Allendale building sold; buyer plans residential renovation Rock Island-Milan appoints principal, IT director and dean New principal, resignations, hirings and other personnel news from East Moline School District Rock Island and Henry County real estate transa
+[Could not fetch: 403 Client Error: Forbidden for url: https://wtaq.com/2026/07/19/rooted-in-culinary-center-of-excellence-now-open-in-green-bay/]
 
 --- Article 5 ---
-URL: https://qctimes.com/exclusive/insight/article_30653b15-08cc-4032-8679-925f2d319ac0.html
-Title: La Catrina Plus opens, The Doc's Inn under new ownership, Ginza Hibachi & Ramen temporarily closed, and more Quad-Cities business news
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 22:45:00
+URL: https://www.aol.com/articles/family-owned-diner-kansas-city-164822000.html
+Title: Family-owned diner in the Kansas City area will close, citing rent spike
+Status hint: Closing | Industry: Restaurants
+Published: 2026-07-19 19:03:16
 
-1 of 6 The Doc's Inn is under new ownership. The bar and grill is located at 985 Avenue of the Cities in Silvis. Shown here is the restaurant's sign above the entrance shown here on Thursday, June 18. LAURA YEATER La Catrina Plus, a new specialty retail store, has opened at 430 12th St. in downtown Moline, across from Mercado on Fifth. Shown here on Monday are shelves with Mexican groceries, household supplies, spices, teas and cultural arts and crafts. LAURA YEATER La Catrina Plus, a new specialty retail store, has opened at 430 12th St. in downtown Moline, across from Mercado on Fifth. Shown here on Monday are a variety of clothing, hats, bedding, piñatas and more. LAURA YEATER La Catrina Plus, a new specialty retail store, has opened at 430 12th St. in downtown Moline, across from Mercado on Fifth. Shown here on Monday are purses, variety of hats, including sombreros, for purchase. LAURA YEATER Ginza Hibachi & Ramen restaurant in Moline is temporarily closed for private events through July 19 and will reopen on Monday, July 20. Genza's restaurant fascia sign shown here on Wednesday, June 18. LAURA YEATER Yanks and Shanks Disc Golf shop is permanently closed. The shop was located at 3416 46th Ave. in Rock Island. The shop's window decal is displayed at the storefront on Friday, June 19. LAURA YEATER Prefer us on Google Learn More Gift this article New subscriber benefit! Copied to clipboard Out of gifts for the month Unfortunately you've used all of your gifts this month. Your counter will reset on the first day of next month. Share this article paywall-free Email Copy Link Facebook Twitter Bluesky WhatsApp SMS Email Print Copy article link Save LAURA YEATER La Catrina Plus opens in downtown Moline La Catrina Plus, a new specialty retail store, has opened at 430 12th St. in downtown Moline, across from Mercado on Fifth. Pictured is the storefront on Monday, June 22. LAURA YEATER La Catrina Plus, a new specialty retail store, has opened at 430 12th St. in downtown 
+Noelle Alviz-Gransee Fri, July 17, 2026 at 4:48 PM UTC 0 A popular family-owned diner in Wyandotte County  will close this month. Grill 32, 104 S. Fourth St. , in Edwardsville, said in a Facebook post Thursday that a sudden rent increase was the cause for the closure. “We are sad to inform that we have no choice but to permanently close down the Grill. Unfortunately, the landlord had his daughter deliver an updated ‘lease’ with a 70% increase on the rent,” the post said. In the post, the restaurant said the lease included extra charges that would have amounted to a 30% increase as well and only 20 days’ notice to make a decision. Advertisement Grill 32 opened in 2022, making  burgers, breakfast and sandwiches. It has 4.7 stars on Google and over 1,800 followers on social media. The restaurant’s last day is July 29. “We want to thank the community for all of the support over the last 4 years! We love you all and will miss serving you! Please don’t feel bad for us, it’s been a great ride! We feel bad for the community and the workers in the area that we have fed all of these years,” the post said. “Thank you to our catering partners and every single person that has walked in our door! Thank you to our team and staff members and anyone that has ever helped us along the way!” The restaurant had a brief moment of fame in 2023 for its New Heights sandwich , a tribute to Travis and Jason Kelce that combines a Philly cheesesteak with a barbecue sauce- and turkey-infused BLT. Grill 32 is open Monday through Friday from 11 a.m. to 5 p.m.
 
 --- Article 6 ---
-URL: https://www.einpresswire.com/article/920006098/relax-in-comfort-celebrates-grand-opening-at-brandon-exchange-mall-bringing-decades-of-wellness-excellence-to-tampa-bay
-Title: Relax in Comfort Celebrates Grand Opening at Brandon Exchange Mall, Bringing Decades of Wellness Excellence to Tampa Bay
+URL: https://timesofindia.indiatimes.com/city/mumbai/bandras-gaothans-are-open-for-business-but-at-what-cost-to-the-community/articleshow/132499593.cms
+Title: Bandra’s gaothans are open for business
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 22:35:00
+Published: 2026-07-19 18:16:00
 
-Relax in Comfort Celebrates Grand Opening at Brandon Exchange Mall, Bringing Decades of Wellness Excellence to Tampa Bay World Media Directory · RSS · Email Newsletters There were 2,004 press releases posted in the last 24 hours and 477,267 in the last 365 days. Relax in Comfort Celebrates Grand Opening at Brandon Exchange Mall, Bringing Decades of Wellness Excellence to Tampa Bay News Provided By Relax In Comfort June 29, 2026, 22:35 GMT Share This Article Brandon Exchange - Home of the World's Best Massage Chairs Brandon Exchange  - Zero Gravity Recliner Headquarters Brandon Exchange  - Tempur-Pedic & Instant Comfort Smart Bed Gallery World's Best Massage Chairs and Smart Beds at Guaranteed Low Prices - Our Expertise is Free! At Relax in Comfort, we donât just sell beds & chairsâwe change lives. Shish Uppal's Brandon Exchange store will bring life-changing comfort to Tampa Bay, one person at a time.” — Dr. Don DePaulis, President Relax in Comfort BRANDON , FL, UNITED STATES, June 29, 2026 / EINPresswire.com / -- Brandon, FL â Relax in Comfort, the oldest back-care and sleep specialty store in the USA, proudly announces the grand opening of its newest location at Brandon Exchange Mall . This exciting expansion is led by Shish Uppal, a distinguished wellness professional and the first licensee and  owner-operator, who brings over a decade of experience changing lives for the better. Shish Uppalâs journey to wellness leadership is one of remarkable distinction. A former financial advisor at Merrill Lynch, Shish holds an MBA in Finance from the University of Wisconsin. However, his true calling wasnât in numbers, but in helping people feel better every day. âI wasnât born to sell beds and chairs,â Shish often says. âI was born to change lives.â His passion for wellness, coupled with his expertise, makes him a true standout in the Tampa Bay community. Relax in Comfortâs arrival at the Brandon Exchange Mall marks an exciting new chapter. The store 
+Edition IN IN US GCC English English à¤¹à¤¿à¤¨à¥à¤¦à¥ à¤®à¤°à¤¾à¤ à¥ à²à²¨à³à²¨à²¡ à®¤à®®à®¿à®´à¯ à¦¬à¦¾à¦à¦²à¦¾ à´®à´²à´¯à´¾à´³à´ à°¤à±à°²à±à°à± àªà«àªàª°àª¾àª¤à« Weather Sign In TOI Today's ePaper Live
 
 --- Article 7 ---
-URL: https://scvnews.com/july-22-harper-ellis-salon-grand-opening-ribbon-cutting/
-Title: July 22: Harper Ellis Salon Grand Opening, Ribbon Cutting
-Status hint: Opening | Industry: Health / Beauty
-Published: 2026-06-29 22:31:25
+URL: https://whatnow.com/columbus/retail/krazy-bins-debuts-first-cincinnati-area-store-eyes-further-ohio-growth/
+Title: Krazy Bins Debuts First Cincinnati-Area Store, Eyes Further Ohio Growth
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-07-19 17:59:11
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://scvnews.com/july-22-harper-ellis-salon-grand-opening-ribbon-cutting/]
+The exterior of the Krazy Bins store. (Image credit: Krazy Bins) SHARE The Cleveland -based discount retailer has opened its fifth Ohio location and says more expansion is on the horizon, according to the Cincinnati Business Journal. Krazy Bins has officially entered the market , opening its first location in the region as the discount retailer continues its expansion across Ohio. The Cleveland-based chain recently opened a 30,000-square-foot store at 5385 Ridge Ave. in Columbia Township , marking its fifth Ohio location. The new store celebrated its grand opening on July 17 and offers the retailer’s signature bin-shopping experience featuring discounted brand-name merchandise, excess inventory, and customer returns from major retailers including Target and Amazon. While speaking to the publication mentioned above, CEO Noah Leavitt said the Ridge Avenue location checked all the boxes for the company’s first venture into Greater Cincinnati. “We’ve built a strong following across Northeast Ohio, and Cincinnati gives us the opportunity to introduce Krazy Bins to a large, diverse market with a strong retail base,” Leavitt said. “The Ridge Avenue location stood out to us because of its size, accessibility, visibility and proximity to a large population base.” Krazy Bins is known for its rotating inventory and treasure-hunt shopping experience. New merchandise is stocked every Friday, with prices gradually decreasing throughout the week until the next restock. The company currently operates stores in Akron, Mentor, Parma, Toledo, and now Columbia Township. Still, Leavitt said the Cincinnati opening is only the beginning of the retailer’s long-term growth plans. Leavitt said the company’s immediate priority is ensuring a successful launch in Cincinnati, but he noted that Krazy Bins is already evaluating additional expansion opportunities across Ohio and other states. He added that the long-term goal is to continue growing the brand in new markets both within Ohio and beyon
 
 --- Article 8 ---
-URL: https://womiowensboro.com/ixp/782/p/imagine-hair-design-grand-opening-evansville/
-Title: A Popular Newburgh Salon Just Opened in Evansville And There Are Giveaways
-Status hint: Opening | Industry: Health / Beauty
-Published: 2026-06-29 22:21:34
+URL: https://www.fullaccessmagazine.com/2026/07/19/tampa-bays-first-cook-out-officially-opened-near-usf/
+Title: Tampa Bay’s First Cook Out Officially Opened Near USF
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-07-19 17:52:35
 
-Imagine Hair Design via Facebook/Canva Imagine Hair Design via Facebook/Canva Evansville’s Newest Salon Opens Today And the First 50 People Get a Free Gift Callie Callie Published: June 29, 2026 Imagine Hair Design via Facebook/Canva Share on Facebook Share on Twitter A Popular Newburgh Salon Just Moved to Evansville, And They're Celebrating TODAY Evansville despite the heat, we want your hair to shine! There is a new place that is opening up TODAY to make sure your hair is styling and profling. Imagine Hair Design, the full-service salon that built a loyal following in Newburgh has officially made the move to Evansville's east side, and they are throwing a grand opening celebration TODAY that you do not want to miss. Where Are They? The new location is inside the Heritage Centre, right off the intersection of Lynch and Green River Roads on the east side of Evansville. If you know that area, it's easy to find and if you've been looking for a great new salon closer to home, this might be exactly what you've been waiting for. Imagine Hair Design via Facebook/Canva Imagine Hair Design via Facebook/Canva What's Happening Today The grand opening celebration runs from 1PM to 7PM today, and they are making it worth your while to come out. The first 50 guests to get serviced at the new salon will walk out with a complimentary gift bag. So if you're reading this, go now! Every guest who gets serviced in July will receive a scratch-off ticket loaded with prizes like service discounts, free add-on treatments, retail discounts, and more. And every single visit in July enters you into their Grand Prize Giveaway for a FREE color service. A FREE color service?! I know that is saving a good chunk of change! What Makes Imagine Hair Design Worth the Visit This isn't just another salon. Imagine Hair Design is a full-service shop focused on creating a warm, elevated experience for every single guest who walks through the door. The new space has a modern luxury feel without being stuffy
+Food/Drinks Tampa Bay’s First Cook Out Officially Opened Near USF Neal Nachman 43 minutes ago 17 1 Min Read Popular North Carolina-based fast food chain Cook Out has opened its first Tampa Bay location in Temple Terrace. Located at 5501 E Fowler Ave., the new Cook Out outpost soft-opened Thursday, but officially celebrates its grand-opening today, July 17, in the roughly 3,272 square-foot building formerly home to a Boston Market. Cook Out’s menu centers around a variety of American-style fast food offerings with over 40 milkshake flavors, fresh chargrilled hamburgers, hot dogs, BBQ, chicken, corn dogs, quesadillas, hushpuppies, fries and more. This is the first of multiple Cook Out locations planned for the Tampa Bay area, with locations soon to open in Carrollwood and St. Petersburg. The 35-year-old chain has been rapidly expanding as of late, and already has over 300 locations mostly in North Carolina, South Carolina, Alabama, Georgia, Kentucky, Tennessee, Virginia, West Virginia, Maryland, and Mississippi. Cookout Florida Restaurant Temple Terrace Share Facebook Twitter LinkedIn Pinterest Stumbleupon Email By Neal Nachman
 
 --- Article 9 ---
-URL: https://open4business.com.ua/en/tag/local-variety/
-Title: Ukraine open for business
+URL: https://communitynews.org/sections/business-cns/sprouts-farmers-market-east-windsor-hiring-event/
+Title: Sprouts Farmers Market Sets Hiring Event Ahead of East Windsor Opening
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 22:20:52
+Published: 2026-07-19 17:23:48
 
-local variety – Ukraine open for business local variety – Ukraine open for business Business news from Ukraine Subscribe English Українська Deutsch Русский Español 中文 (中国) Home E-digest Statistics Events PRESS RELEASES About us Subscribe English Українська Deutsch Русский Español 中文 (中国) Ukrainian winemakers already developing local grape varieties as foundation of new wine identity The development of local grape varieties in Ukraine is already moving from the level of professional discussion to practical implementation and is becoming one of the key areas for enhancing the competitiveness of Ukrainian winemaking, building regional brands, and promoting high-value-added products in domestic and international markets. This was discussed during the National Roundtable “Local Grape Varieties: Heritage, Sustainability, and Rural Development,” organized by the UKRSADVINPROM Association to mark the 10th anniversary of the Association’s activities. Participants in the event noted that local grape varieties are already becoming for Ukrainian producers not only an agricultural resource but also an element of cultural heritage, regional identity, and the future export specialization of Ukrainian winemaking. It is precisely around these varieties that the new identity of Ukrainian wine is taking shape—with its own history, origin, taste, and distinctiveness. Volodymyr Pechko, Chairman of the “UKRSADVINPROM” Public Association, emphasized that Ukrainian winemaking already has its own foundation for development, and this foundation is linked to the promotion of domestic grape varieties. According to him, the flagship and ambassadorial varieties of Ukrainian wine could be, first and foremost, “Odesa Black” and “Sukholymansky,” which reflect Ukrainian breeding, authenticity, and the country’s wine identity. Special attention was given to the creation of a Vineyard Register and the conduct of a comprehensive inventory of vineyards in accordance with EU approaches. This work is inte
+[Could not fetch: 403 Client Error: Forbidden for url: https://communitynews.org/sections/business-cns/sprouts-farmers-market-east-windsor-hiring-event/]
 
 --- Article 10 ---
-URL: https://www.aol.com/articles/8-popular-stores-closing-locations-210000000.html
-Title: 8 Popular Stores Closing Locations in 2026 (Is Your Favorite on the List?)
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-06-29 22:20:42
+URL: https://secretlosangeles.com/sprouts-farmers-markets-inglewood/
+Title: Sprouts Farmers Market's first-ever Inglewood store is opening this August with giveaways and a ribbon cutting ceremony
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-07-19 17:00:00
 
-Amanda Machado Mon, June 29, 2026 at 9:00 PM UTC 0 It's vital to know the best ways to keep more cash in your wallet at your favorite stores and retailers. And for shoppers on a budget, it's important to be informed of potential store closures in order to shop smarter. From bankruptcies to declining sales, the retail landscape has been dismal. Here are eight retail chains that have been projected to close locations in 2026. Make Money: 8 dumb ways to make money (almost anyone can do this) 1. Foot Locker In November, following Foot Locker's acquisition by Dick's Sporting Goods, it was announced that underperforming stores would be closing in 2026. It was not stated how many locations would be shut down. "We need to clean out the garage," said Dick's Sporting Goods Executive Chairman Ed Stackduring in a 2025 earnings call. "This means clearing out unproductive inventory, closing underperforming stores, and right-sizing assets that don't align with our go-forward vision for the Foot Locker business." Shopping for cheaper auto insurance? Enter your zip code here to get started. 2. GameStop According to Fast Company, 470 GameStop locations in 43 states will close in 2026. This is due to declining foot traffic and rising operating costs. USA Today reports that as of Feb. 1, 2025, there were 2,325 GameStop locations. 3. Saks Off 5th After a recent bankruptcy filing, on Feb. 2, Saks Off 5th announced major changes to its footprint. "Saksoff5th.com, Neiman Marcus Last Call stores, and the majority of Saks OFF Fifth stores are closing," the company said in a social media statement. The post also mentioned that closing sales will be happening at select locations. According to USA Today, the closures come as a result of a sharper focus on luxury retail Find out: 14 moves seniors could benefit from but often forget about. 4. Pizza Hut As a result of parent company Yum! Brands, Inc.'s review of Pizza Hut, 250 underperforming locations will close in the first half of the year, whi
+Credit: Feng Cheng via Shutterstock. Save Share Taylor Henderson – Editor, Secret Los Angeles · July 19, 2026 Add us as a preferred source A new grocery store is headed to Los Angeles’ Inglewood neighborhood – and it finally has an opening date! Sprouts Farmers Market on Crenshaw Boulevard is officially opening to the public on Friday, August 2, 2026. “We are proud to welcome Sprouts Farmers Market to the City of Inglewood,” said Inglewood Mayor James Butts. “Beyond expanding access to fresh, healthy, and specialty foods , Sprouts is creating more than 90 jobs for residents. This investment reflects the continued growth of our city and advances our vision of making Inglewood a premier place to live, work, raise a family, and thrive.” The storefront will celebrate with grand opening activities, including a ribbon cutting which will take place on Friday at 6:45 am, and the doors to the store will open at 7 am. The first 200 shoppers on Friday and Saturday will receive a free reusable tote. And the first 400 guests on Friday will receive a free long-stem rose courtesy of Falcon Farms Floral . The store will also have Sprouts samples available all day on Friday, and is also hosting a Scavenger Hunt. Some of the location’s featured deals include: $5 Sushi Wednesdays – Sprouts rolls fresh sushi daily in-store and offers $5 sushi specials every Wednesday. Famous $5 Sandwiches – Sprouts’ Deli features build-your-own and grab-and-go sandwiches starting at just $4.99 featuring Sprouts Brand Deli Meats that are free from preservatives, nitrates and sliced daily. The Deli also offers convenient ready-to-eat meals and heat-and-eat prepared foods. Sprouts Wellness Bowls – Fresh, flavorful and ready-to-eat meals made daily in-store, packed with protein and perfect for a quick, healthy meal, starting at just $8.99. Shoppers can receive 20% off their purchase once over the grand opening weekend when they sign up for a Sprouts Rewards account. The store will also donate groceries tha
 
 --- Article 11 ---
-URL: https://www.qcnews.com/news/u-s/north-carolina/catawba-county/30-year-old-bbq-restaurant-closing-near-lake-norman/
-Title: 30+ year-old BBQ restaurant closing near Lake Norman
-Status hint: Closing | Industry: Restaurants
-Published: 2026-06-29 22:11:42
+URL: https://www.tikr.com/blog/toast-is-down-18-this-year-while-adding-7000-restaurant-locations-a-quarter
+Title: Toast Is Down 18% This Year While Adding 7,000 Restaurant Locations a Quarter
+Status hint: Opening | Industry: Restaurants
+Published: 2026-07-19 16:51:52
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.qcnews.com/news/u-s/north-carolina/catawba-county/30-year-old-bbq-restaurant-closing-near-lake-norman/]
+Key Stats for Toast: 52-week range: ~$22 – $37 Current price: $30.08 Street mean target: ~$34 Annualized IRR (TIKR mid case): ~19% / year Q1 2026 revenue: $1.630B (+24% YoY) Total locations: 171,000 (+22% YoY) Full-year 2026 adjusted EBITDA guidance: $775M – $795M Track Toast stock’s full financial history and forward estimates at no cost. Explore TOST on TIKR for free → A 39% Drawdown That the Business Never Justified Toast ( TOST ) is a cloud-based technology platform purpose-built for restaurants. Walk into almost any modern restaurant and the tablet at the counter taking your order, the system processing your payment, and the software tracking inventory and scheduling staff are increasingly likely to be Toast. The platform handles point-of-sale, payments, digital ordering, payroll, marketing, and now AI-powered tools like Toast IQ Grow, which helps restaurants drive more sales through targeted promotions. It is not a single product but an operating system for the restaurant industry, and once a restaurant builds its workflow around it, switching is genuinely disruptive to daily operations. The stock spent the first half of 2026 drifting lower before hitting a sharp bottom. The max drawdown of 39.09% landed on May 13, before a recovery that has carried shares back to $30. Toast Stock Drawdowns. ( TIKR ) The selloff was not triggered by a deteriorating business. Q1 2026 results were clean across every major metric: ARR up 26%, locations up 22%, GPV up 22%, adjusted EBITDA of $179 million, and $135 million in free cash flow. Management raised its full-year outlook for subscription and financial technology gross profit growth to 21-23%. What drove the stock lower was a combination of hardware margin pressure from tariffs, competitive noise from Block and Lightspeed, and a broader market rotation away from restaurant-facing consumer businesses amid economic uncertainty. Goldman Sachs upgraded Toast to Buy on July 9 with a $36 target, citing the AI marketing tool Toas
 
 --- Article 12 ---
-URL: https://www.chron.com/food/article/shake-shack-expands-houston-richmond-22325894.php
-Title: Whataburger rival adds second Houston-area location in 3 months
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 21:48:20
+URL: https://www.aol.com/articles/regional-fast-food-chains-quietly-161500000.html
+Title: The Regional Fast Food Chains Quietly Expanding Into New States
+Status hint: Opening | Industry: Restaurants
+Published: 2026-07-19 16:37:31
 
-Shake Shack offers burgers, crispy chicken, hand-spun milkshakes and more. Christine Han/Courtesy of Shake Shack A popular East Coast burger chain is expanding deeper into Whataburger territory. Shake Shack is officially making its Richmond debut on July 8 at 19130 W Bellfort St., marking its second Houston-area opening in just three months. The New York-based restaurant chain opened a location across from Meyerland Crossing in April, Chron previously reported. With the Richmond opening, Shake Shack will have 10 locations in Greater Houston and 32 across Texas. The move further expands the brand's footprint in one of the country's most competitive burger markets. Advertisement Article continues below this ad While Shake Shack is best known for its customizable burgers, crispy chicken sandwiches, hand-spun milkshakes and crinkle-cut fries, the chain actually started out as a hot dog cart. The original Shake Shack opened in New York City's Madison Square Park to support a public art project before becoming a permanent kiosk in 2004, according to the company's website. Since then, it has grown to more than 685 locations worldwide, most of which are across 35 states in the U.S. The Richmond restaurant is one of several new Shake Shack locations the company has announced across the country in recent weeks, stretching from California to North Carolina. Like the Meyerland location, the new Richmond restaurant will have a drive-thru and patio. To celebrate the grand opening, the first guests will receive custom-branded tumbler cups, and Shake Shack will donate $1 from every sandwich sold on opening day to the East Fort Bend Human Needs Ministry nonprofit organization. Shake Shack's Meyerland location will have a drive-thru. Courtesy of Shake Shack More Food & Drink Closures | Beloved Texas barbecue restaurant announces it will close Traditions | Houston restaurant sticks to same menu half a century later Conflicts | Drama rises over Texas pizzeria's heated 'dine-in' inciden
+Augusto Manuel Cornes Sangiao Fri, July 10, 2026 at 4:15 PM UTC 14 Perrine D - TripAdvisor Decades ago, fast-food enthusiasts often talked about their favorite chains, such as Culver’s, Cook Out, and Bojangles, precisely because they were scarce, requiring a road trip to enjoy the food. However, over time, these chains have expanded according to Reddit . This wave of new openings triggered a broader trend, transforming regional fast-food chains into multi-state operations; we’ll break them down for you below! Whataburger hapabapa – istockphoto Whataburger was founded in Corpus Christi, Texas, in 1950, and the fast-food chain has been linked to that state ever since. Menu items such as the original Whataburger, the Patty Melt, and the Honey Butter Chicken Biscuit built a strong customer base. However, the chain later expanded toward the Southeast. The new states targeted for expansion include Florida, Georgia, Tennessee, and Alabama. Reddit user [borrado] commented: “Whataburger is great, has way more variety in their menu than other fast-food.” Culver’s pallab.banerjee – istockphoto Culver’s originated in Wisconsin, making its mark with ButterBurgers and frozen custard. Having surpassed the 1,000-restaurant milestone, it continues to expand into other states to the South and East. Reddit user SpearandMagicHelmet remarked: “Culver’s has high quality ingredients, is consistent and always hot. Lots of good stuff there in addition to burgers.” Bojangles Wolterk – istockphoto Bojangles has historically focused on the Southeast, with its origins in Charlotte, North Carolina. Bojangles’ recent expansion agreements have included Texas, New York, and New Jersey, allowing millions of people to try its Cajun Chicken, Bo-Berry Biscuits, and seasoned fries. Reddit user Rolands_missing_head opined: “I never had anything in my life like a Bo Berry Biscuit, it blew my mind.” Cook Out T5852AG-Dennis – TripAdvisor With over 40 milkshake flavors, Cook Out is by far the most popular fa
 
 --- Article 13 ---
-URL: https://www.wgrz.com/article/life/food/popular-buffalo-vegan-restaurant-closing/71-d58f977c-407f-4a75-9f96-c5dff267e946
-Title: Popular Buffalo vegan restaurant announces closing
-Status hint: Closing | Industry: Restaurants
-Published: 2026-06-29 21:44:00
+URL: https://sg.finance.yahoo.com/news/former-retail-giant-closes-more-163300274.html
+Title: Former retail giant closes more stores
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-07-19 16:33:00
 
-Food Popular Buffalo vegan restaurant announces closing Strong Hearts Cafe will be holding their last day of business on July 11, with owners citing rising costs as reason for closing. To stream WGRZ on your phone, you need the WGRZ app. Download the WGRZ app More Videos Next up in 5 Example video title will go here for this video Next up in 5 Example video title will go here for this video BUFFALO, N.Y. — A popular Buffalo vegan restaurant will be closing its doors in just a few weeks, owners announced. Strong Hearts, a vegan cafe on Niagara Street, will have its last day of business on July 11. The announcement was made on social media. According to owners Joel Capolongo and Nicholas Ryan, the decision comes as rising costs and "operational struggles" have created challenges to operate the cafe over the past few years. This story continues below. More in Food Strong Hearts Cafe to close in July Spotted Octopus prepares to leave downtown Buffalo for new location RELATED: New coffee shop opens in WNY "This decision did not come lightly," the owners said in a social media post. "Over the past several years, the financial realities of operating independent restaurants have become increasingly difficult. Rising costs, mounting operational challenges, staffing struggles, debt obligations, and the day-to-day pressures of keeping everything afloat have gradually brought us to a point where continuing forward is no longer sustainable. Strong Hearts has been a Niagara Street staple since 2022. The original location in Syracuse will also be closing, and will hold their last day of business on July 18. That location opened in 2008 The cafe's owners took the time to thank their staff and customers who supported them throughout the years. "To our staff, both past and present: thank you," Capolongo and Ryan wrote.  "Strong Hearts was never just the two of us. It was built and sustained by an enormous number of people who poured their energy, creativity, humor, stress, exhaustion
+Former retail giant closes more stores Fernanda Tronco Sun, 19 July 2026 at 10:03 pm GMT+5:30 5 min read After quietly shrinking its retail footprint over the past year, one of the nation's largest office supply chains is set to close more stores in August, extending its ongoing effort to adapt to changing consumer demand. As online shopping grows in popularity and digital tools replace many paper-based workflows, retailers focused on workplace products have been forced to rethink their physical footprints. Rising operating costs and an uncertain economic environment have only accelerated that shift. Founded in 1986 in Brighton, Massachusetts, Staples grew into one of the country's largest providers of office supplies, expanding to more than 900 U.S. stores. Today, however, demand for traditional workplace essentials has weakened as consumers and businesses increasingly rely on digital tools and online purchasing. Staples is closing more stores Staples will close two locations across two states in August 2026, according to local reports by the Santa Barbara News-Press and Greater Long Island . The affected stores are: Goleta, California: 7015 Market Pl Dr, closing after more than 27 years. Levittown, New York: 2981-2991 Hempstead Tpke, closing after more than 15 years. The Goleta closure marks the end of Staples' presence in Santa Barbara County, while the Levittown shutdown leaves the Long Island suburb without a Staples store. Despite the closures, Staples still operates approximately 114 locations in California and 64 in New York. Recent Staples store closures The latest closures continue Staples' broader consolidation strategy. According to ScrapeHero , Staples' U.S. store count declined from 929 locations in October 2025 to 916 by January 2026, a net decrease of 13 stores in just four months. Store shutdowns have continued throughout 2026, according to Usearch data, including: Astoria, New York: 24-41 31st St Bayside, New York: 209-34 Northern Blvd Waterville, 
 
 --- Article 14 ---
-URL: https://communityimpact.com/houston/new-caney-porter/business/2026/06/29/h-e-b-to-build-45m-grocery-store-in-valley-ranch/
-Title: H-E-B to build $45M grocery store in Valley Ranch
-Status hint: Opening | Industry: Grocery
-Published: 2026-06-29 21:32:00
+URL: https://www.sthelensstar.co.uk/news/26292945.st-helens-town-centre-restaurant-announces-heartbreaking-decision/
+Title: Restaurant announces 'heartbreaking decision' to close St Helens town centre business
+Status hint: Closing | Industry: Restaurants
+Published: 2026-07-19 16:32:38
 
-H-E-B to build $45M grocery store in Valley Ranch | Community Impact | Houston H-E-B to build $45M grocery store in Valley Ranch Trending now Texas Legislature Texas education board OKs mandatory public school reading list Texas Legislature Texas moves forward with state-centered social studies curriculum, trimming world history ... Dining Homemade cookies, handcrafted cocktails: 6 dining options in the Greater Houston ... Arts & Entertainment Naskila Casino Resort breaks ground in Leggett Business EMS response, new Japanese bookstore: 5 trending stories in the Greater ... Texas Legislature Biblical readings, Texas-centered history lessons to be required in K-12 schools ... Business H-E-B to build $45M grocery store in Valley Ranch Events World Cup Watch Party, Pride Drag Brunch: 10 events to attend ... Development Houston Livestock Show and Rodeo announces new agriculture complex along Hwy. ... Government Public meetings for Montgomery County Mobility Plan taking place June 27 Business H-E-B to build $45M grocery store in Valley Ranch By Hannah Brol | 4:35 PM Jun 29, 2026 CDT Updated 4:35 PM Jun 29, 2026 CDT Based in San Antonio, H-E-B has over 455 stores and employs over 175,000 partners in Texas and Mexico. Pictured is an H-E-B in Leander. (Community Impact staff) Based in San Antonio, H-E-B has over 455 stores and employs over 175,000 partners in Texas and Mexico. Pictured is an H-E-B in Leander. (Community Impact staff) Editor’s note: This article is based on a Texas Department of Licensing and Regulation filing. Community Impact will update this story when more information is available. H-E-B officials are planning to open a new nearly 125,000-square-foot grocery store in Valley Ranch, per a June 29 TDLR filing . The $45 million project will also include a fuel station and car wash. Per the filing, construction is expected to begin in January 2027 and wrap up in October 2027. A projected opening date has not been announced as of press time. Based in San Antoni
+St Helens town centre restaurant announces 'heartbreaking decision' Business Food and drink Leisure St Helens Share 0 Comments (Image: Stock) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. A ST HELENS town centre restaurant has announced it is to close after just over a year in business. Bella Roma, on Claughton Street, revealed on social media that Saturday, July 25, will be its final day of trading. In a message to customers that was shared on social media, the restaurant said it had made the "heartbreaking decision" to close because of ill health and other reasons. The post said: "Some really sad news unfortunately, this Saturday 25th will be our last day of trading. "Unfortunately, due to ill health and other reasons we just cannot carry on. "We appreciate all the support over the last year but we have had no other choice but to make this very heartbreaking decision." The closure will come as a blow to many diners who have supported the independent business since it opened in June last year. Bella Roma was launched by Francesco Cangemi, taking inspiration from the original Bella Roma restaurant that was run by his parents on George Street. When the restaurant opened, Francesco said he wanted to bring authentic Italian food back to the heart of St Helens. The venue quickly developed a loyal following thanks to its pizzas, pasta dishes, and family-friendly atmosphere. Just four months after opening, the restaurant expanded into a neighbouring unit to create additional space for events, celebrations, and bottomless brunches. In a review, the St Helens Star described Bella Roma as "the Italian restaurant St Helens really does need", praising both the quality of the food and the warm welcome customers received. The restaurant has thanked customers for their support over the past year and will
 
 --- Article 15 ---
-URL: https://www.timminspress.com/news/exotic-pet-store-owner-awaits-july-28-court-date
-Title: Exotic pet store owner awaits July 28 court date
-Status hint: Opening | Industry: Pet Care
-Published: 2026-06-29 21:30:09
+URL: https://allears.net/2026/07/19/this-week-would-have-been-great-in-disney-world-if-not-for-this-massive-closure/
+Title: This Week Would Have Been Great in Disney World…If Not For This Massive Closure
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-07-19 16:30:23
 
-Share this Story : The Daily Press Copy Link Email X Reddit Pinterest LinkedIn Tumblr Article content An exotic pet store owner says he’s been getting a lot of community support after chasing an intruder down who broke his south-facing window on Friday in broad daylight. Advertisement 2 Story continues below This advertisement has not loaded yet, but your article continues below. Article content On Monday police again stated that victims of crime should not take justice into their own hands, as they announced they had charged the business owner with assault, and the intruder with mischief. Article content Recommended Videos We apologize, but this video has failed to load. Try refreshing your browser, or tap here to see other videos from our team . We apologize, but this video has failed to load. Try refreshing your browser, or tap here to see other videos from our team . Play Video Article content Robert Boucher and his wife Hailey Morgan, owners of Exotics and Aquatics pet shop on Second Avenue, sleep in shifts because they have been victimized so many times since moving into their new location two years ago. “We were switching shifts, I was waking up for mine, and she said we were under attack,” Boucher told The Daily Press in an in-person interview at the store on Monday. Boucher he’s been vandalized three times and broken into three times. “I didn’t see who it was, but she said it was ‘red sweater guy,’ whose been constantly here,” said Boucher, who has a security video camera. According to police, the incident happened around 11 a.m. According to Boucher’s version of events, when he arrived downstairs, he saw a hole in the south-facing window right where one of his lizards likes to rest on a branch. The Daily Press Catch up on all the latest news happening throughout Timmins and area with our newsletter, delivered to your inbox every Friday. By signing up, you consent to receive the above newsletter from Postmedia Network Inc. Thanks for signing up! A welcome e
+[Could not fetch: 403 Client Error: Forbidden for url: https://allears.net/2026/07/19/this-week-would-have-been-great-in-disney-world-if-not-for-this-massive-closure/]
 
 --- Article 16 ---
-URL: https://www.crossville-chronicle.com/news/business/crossville-foodland-to-celebrate-grand-opening-july-1/article_24d86dcc-6179-46eb-8a5f-9d51d0f79802.html
-Title: Crossville Foodland to Celebrate grand opening July 1
+URL: https://ashby.nub.news/news/local-news/new-horror-shop-opening-soon-in-ashby-302262
+Title: New 'horror' shop opening soon in Ashby
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 21:30:00
+Published: 2026-07-19 16:00:02
 
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.crossville-chronicle.com/news/business/crossville-foodland-to-celebrate-grand-opening-july-1/article_24d86dcc-6179-46eb-8a5f-9d51d0f79802.html]
+New 'horror' shop opening soon in Ashby By Grace Kennington 19th Jul 2026 comments | Local News Local News by Grace Kennington 19th Jul 2026 A brand new shop unlike any other in the town is opening in Ashby this August (Photo: All Things Horror) advertisement A new shop is opening in Ashby unlike anything the town has had before. All Things Horror , which will be situated on The Pass Courtyard, will be officially opening on 29 August with a book signing event. Stocking horror collectables, rock and retro paraphernalia, unique and rare finds as well as Neca, Mezco and Funko, the shop will also sell a variety of affordable and rare items along with t-shirts and tote bags all in the horror theme. Currently, Rachael is trading with 'All Things Horror' at events and expos so the Ashby shop will be their first bricks and mortar venue. 'It's born from an obsession for horror collectables of mine for nearly thirty years after scaring myself silly watching the Exorcist,' explains Rachael. 'My son is also a fan and expressed interest around a year ago to buy and sell all things horror - hence the name - and it's grown from there.' This family business will offer affordable options for shoppers, with Rachael saying: 'Collecting for all these years has really taught me it can be expensive so we plan to offer something for all pockets.' advertisement The official opening of the shop will be on 29 August from noon with a book signing from Hannah L Richards, author of Hauntings, Mysteries and Macabre: Ashby-de-la-Zouch and surrounding areas. Check what’s happening in ashby this weekend >>> ashby  Events CHECK OUT OUR Jobs Section HERE! ashby  vacancies updated hourly! Click here to see more: ashby  jobs Can we count on you? Local news is the heartbeat of Ashby — it needs your support. For less than the price of a cup of coffee each month, you can help us keep telling the stories that matter to Ashby. Support local journalism. Protect your community. Thank you to those of you that 
 
 --- Article 17 ---
-URL: https://www.aol.com/articles/chick-fil-sets-july-1-005014000.html
-Title: Chick-fil-A sets July 1 opening for new Clovis location
+URL: https://chester.nub.news/news/local-news/plans-approved-to-open-historic-undercroft-beneath-chester-chocolate-shop-302271
+Title: Plans approved to open historic undercroft beneath Chester chocolate shop
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 21:27:10
+Published: 2026-07-19 16:00:02
 
-KFSN Updated Wed, June 24, 2026 at 12:50 AM UTC 0 A popular fast-food chain is "mooving" into Clovis. A new Chick-fil-A restaurant located at Shaw and Helm avenues, just east of Willow Avenue, is scheduled to open July 1. The location is locally owned and operated by Andrew Bloom. Advertisement To celebrate the opening, the restaurant is inviting community members to participate in a themed promotion by wearing cow-themed attire. Customers who visit on opening day, beginning at 6:30 a.m., and wear either a full cow suit or a cow-spotted accessory can redeem one free entrée or kids' meal inside the restaurant or in the drive-thru. The promotion ties into the brand's well-known Holstein cow mascots, which are featured in Chick-fil-A's "Eat Mor Chikin" campaign.
+Plans approved to open historic undercroft beneath Chester chocolate shop By Dherran Titherington 19th Jul 2026 comments | Local News Local News by Dherran Titherington 19th Jul 2026 The undercroft will operate as an events space (Nub News) advertisement Plans to open up the historic undercroft beneath Montezuma's in Chester for public events have been approved. The Bridge Street venue has secured listed building consent from Cheshire West and Chester Council to bring the historic space beneath its Grade I listed store back into use. Plans will see the undercroft transformed into a space for small-scale chocolate tastings, talks, workshops and community events. Forming part of one of Chester's most historic buildings, the undercroft will operate as a booking-only venue to ensure it is not overused or subjected to excessive footfall. Planning documents state the aim is to preserve the character of the space while allowing more people to experience and appreciate its historic significance. The Bridge Street venue has secured listed building consent from Cheshire West and Chester Council (Nub News) The business also hopes the venue will provide a space that supports the local community and small businesses through a programme of events and workshops. The approved scheme includes minor internal works to expose more of the undercroft frontage, the removal of modern internal stud walls, internal redecoration, and alterations to the shopfront and external signage. advertisement No extensions are proposed, with all works taking place within the existing building. In the design and access statement, Montezuma's said the proposals had been designed to be "minimal, reversible and respectful" of the building's historic fabric, with the aim of enhancing public access to and appreciation of the undercroft while supporting the building's long-term viable use. The application also states that the historic character of the undercroft will be preserved, with any lighting, ventilation
 
 --- Article 18 ---
-URL: https://lamag.com/food/pizzeria-sei-opens-second-location-in-west-los-angeles-palms/
-Title: Pizzeria Sei Debuts Second Location in Palms
+URL: https://www.philstar.com/business/2026/07/20/2543218/strong-sales-push-aggressive-7-eleven-expansion-visayas-and-mindanao
+Title: Strong sales push aggressive 7-Eleven expansion in Visayas and Mindanao
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 21:18:03
+Published: 2026-07-19 16:00:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://lamag.com/food/pizzeria-sei-opens-second-location-in-west-los-angeles-palms/]
+STOCK COMMENTARIES TECHNOLOGY BUSINESS AS USUAL BANKING REAL ESTATE AGRICULTURE TELECOMS BIZ MEMOS
 
 --- Article 19 ---
-URL: https://wcrz.com/ixp/84/p/blackthorn-pub-holly-closure/
-Title: Sad News: Blackthorn Pub in Holly Is Closing for Good
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 21:12:20
+URL: https://abc7.com/post/orangeland-rv-park-residents-face-uncertainty-longtime-orange-prepares-close/19522753/
+Title: Orangeland RV Park residents face uncertainty as longtime Orange park prepares to close
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-07-19 15:30:00
 
-Google Maps Google Maps Blackthorn Pub in Holly Announces Permanent Closure Maggie Meadows Maggie Meadows Published: June 29, 2026 Google Maps Share on Facebook Share on Twitter Blackthorn Pub in Holly has announced it will be permanently closing its doors. The announcement was made today via social media. As you can imagine, it came as a surprise. The restaurant has been in downtown Holly for 15 years. The following message was posted on the Blackthorn Pub Facebook page, To our community and customers…and customers that became family, it is with heavy hearts and many tears that we have to let you all know that after 15 almost perfect years, we are closing our doors for good and will not be opening tomorrow. We considered a big send off with all the bells & whistles but instead opted for a regular, relaxed night with our crew & anyone that walked through the doors…just as we have from the start. You can read the entire post below. Read More: El Roy’s Tex-Mex Restaurant Now Open in Fenton, MI We certainly wish everyone involved all the best and thank the team at Blackthorn Pub in Holly for the many years of great food, drinks, and hospitality. The pub has been a favorite gathering spot for countless customers over the years, creating memories for locals and visitors alike. While it is always sad to see a longtime business close its doors, its impact on the Holly community will not be forgotten. Thank you to everyone at Blackthorn Pub - we certainly wish you all the best. Bar Rescue At Backroads Bar & Grill In Holly, Michigan Gallery Credit: Kennedy Broadwell Fire Rips Through Historic Downtown Holly Historic Holly is picking up the pieces after a blazing fire ripped through the downtown area. Multiple businesses were on fire including the Holly Hotel. 10 Popular Summer Activities in Michigan Source: Blackthorn Pub in Holly Announces Permanent Closure Filed Under : holly Categories : Michigan News , Featured , In Case You Missed It
+Orangeland RV Park residents face uncertainty as longtime Orange park prepares to close - ABC7 Los Angeles SOCIETY Orangeland RV Park residents face uncertainty as longtime Orange park prepares to close By Bianca Buono Sunday, July 19, 2026 3:22PM ORANGE, Calif. (KABC) -- Residents of the Orangeland RV Park in Orange say they are facing an uncertain future after learning the longtime RV community is being sold and is expected to close. The Orangeland RV Park has been family-owned and operated since 1972 and serves both tourists and full-time residents, some of whom have lived there for decades. Residents said they learned in February that the property was being put up for sale, but many remain unsure about when they will have to leave. "We were on the list for two years to be able to get in here," said resident Christina Ingels, who secured a spot at the park five years ago. Ingels described the park as a close-knit community. "This has been wonderful," she said. "There's a little store here. There's this spot where you can wash your unit or wash your car and fill up the fires in your car and it's like it's own little community. It's really great." Residents said they have received varying information about the timeline for the park's closure. "It's up and down but they're saying possibly for a year. We'll be here a year until like May," Ingels said. "We don't really have any idea," said Deborah, another resident. Deborah, who grew up in Orange and has lived at the park since 1999, also works there. She said the closure means she will lose both her home and her job. "I was really so depressed because of losing a job and losing a home because it's too old to move anyplace else. I have to get a new RV," Deborah said. She said replacing her RV will force her to continue working longer than she had planned. "You wouldn't believe how many people are so bummed and upset," she said. The park is also a destination for tourists and temporary visitors. It's located just miles
 
 --- Article 20 ---
-URL: https://www.baltimoresun.com/2026/06/29/garage-opening-mall-in-columbia/
-Title: Trendy clothing retailer plans to open in the Mall in Columbia
+URL: https://www.wdtn.com/news/kettering-health-celebrates-new-wilmington-location/amp/
+Title: Kettering Health celebrates new Wilmington location
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 21:10:34
+Published: 2026-07-19 15:28:06
 
-By April Santana PUBLISHED: June 29, 2026 at 5:10 PM EDT | UPDATED: June 29, 2026 at 5:12 PM EDT Getting your Trinity Audio player ready... A Canadian clothing retailer is opening its first Howard County location this fall. Subscribe to continue reading this article. Already subscribed? To log in, click here. Share this: Share on Facebook (Opens in new window) Facebook Share on X (Opens in new window) X RevContent Feed
+DAYTON, Ohio ( WDTN ) – A celebration for the new Kettering Health Wilmington location is in full swing this Sunday. The event will run from 2 p.m. to 5 p.m. at Kettering Health Wilmington, near the Wilmington Plaza Shopping Center. Officials from both the city of Wilmington and Kettering Health spoke about the new location before the ribbon-cutting ceremony. Listed speakers include: Pat Haley, Mayor of Wilmington Mike Gentry, CEO Kettering Health Paul Hoover, President Soin, Greene and Wilmington Kettering Health Jennifer Niswonger, Wilmington Executive Director Kettering Health Dr. Kevin Sharrett, Medical Director Kettering Health The event features: A community health fair A touch-a-truck section Free food / ice cream A chance to win a football signed by Cincinnati Bengals’ Ja’Marr Chase Photo of the event via Kris Sproles, WDTN. Photo of the event via Kris Sproles, WDTN. The new location is at 1500 Rombach Avenue, Wilmington.
 
 --- Article 21 ---
-URL: https://www.thestreet.com/retail/102-year-old-supermarket-brand-harveys-quietly-closed-all-stores
-Title: 102-year-old supermarket chain quietly shut down
-Status hint: Closing | Industry: Grocery
-Published: 2026-06-29 21:09:39
+URL: https://www.wxxv25.com/goodwill-of-south-mississippi-announces-grand-opening-date-for-new-hardy-court-store/
+Title: Goodwill of South Mississippi announces grand opening date for new Hardy Court store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-07-19 15:06:59
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.thestreet.com/retail/102-year-old-supermarket-brand-harveys-quietly-closed-all-stores]
+Goodwill of South Mississippi announces grand opening date for new Hardy Court store 14 hours ago WXXV Staff , Facebook email Twitter Pinterest Linkedin GULFPORT, Miss. (WXXV)- Goodwill Industries of South Mississippi announces the grand opening date for its new Hardy Court retail store. The organization is relocating its current Hardy Court location to a larger, updated space within the Hardy Court Shopping Center. The new location will open to the public on Thursday, August 20 at 10 a.m. It will offer an expanded shopping experience, improved donation process, and new resources to serve the community. Guests are invited to celebrate with a coastal themed grand opening featuring refreshments, giveaways, family friendly activities, and more. “Our Hardy Court store has been a favorite shopping destination for years, and we’re excited to welcome our customers into a larger, brighter space that offers an even better shopping experience,” said Paige Derouen, Chief Operating Officer of Goodwill Industries of South Mississippi. “The additional retail space allows us to showcase a wider variety of merchandise, create a more comfortable and enjoyable shopping environment, and make it even easier for our customers to discover great finds every time they visit. We can’t wait to welcome everyone through our doors and celebrate this exciting new chapter.” The new space also offers a community meeting room that can transform into a career center to help expand Goodwill’s workforce development, community partnerships, and educational opportunities. Categories : Local News Tags : Goodwill Of South Mississippi Facebook email Twitter Pinterest Linkedin
 
 --- Article 22 ---
-URL: https://www.thestreet.com/retail/60-year-old-retailer-kirklands-closes-over-240-locations-across-35-states
-Title: 60-year-old retailer closes over 240 locations across 35 states
+URL: https://www.aol.com/articles/22-years-soup-market-close-214140000.html
+Title: After 22 years, The Soup Market to close all Milwaukee-area locations
 Status hint: Closing | Industry: Specialty / Other
-Published: 2026-06-29 21:08:06
+Published: 2026-07-19 14:24:17
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.thestreet.com/retail/60-year-old-retailer-kirklands-closes-over-240-locations-across-35-states]
+Rachel Bernhard, Milwaukee Journal Sentinel Fri, July 17, 2026 at 9:41 PM UTC 0 After more than two decades ladling chicken dumpling and African peanut, beer cheese and more comforting soups to the Milwaukee area, The Soup Market is closing. Owner Dave Jurena announced the news on social media the morning of July 17. "Yesterday was one of my most difficult days professionally. I had to tell a dozen awesome people that their jobs will be coming to an end in the very near future," Jurena posted. "After 22 years, we have decided to close The Soup Market. It wasn’t an easy decision, or one that was made lightly." In the post, Jurena shared that he received an eviction notice from the landlord of the restaurant's Bay View location after "non-payment of rent for the last two months." Jurena said the notice came after he'd asked for an HVAC system replacement. He added that the facility, which is the production hub for all Soup Market locations, had been operating without air conditioning since the summer of 2026. The property at 2211 S. Kinnickinnic Ave. is owned by SK2, LLC, listed under agent Michael Olson. Neither Jurena nor Olson could be reached for comment. Jurena said relocating the business is out of the question after he invested $200,000 in the Bay View space over 20 years. Though the eviction notice was only posted at the Bay View location, The Soup Market's Hales Corners and Vliet Street locations will close, as well. Advertisement Jurena did not specify a closing date, but that it would remain open "another week or week and a half" as the business works to go through its inventory. He added that he will be offering free ingredients to people "truly in need." Those interested should email davej@thesoupmarket.com . "I'd like one good thing to come of this," he wrote in the post. While the business winds down, The Soup Market will vend at both the South Shore and Brookfield farmers markets the weekends of July 18 and July 24. The Soup Market served comfort for 2
 
 --- Article 23 ---
-URL: https://www.thestreet.com/restaurants/33-restaurant-chains-closed-10-or-more-of-their-locations-in-2025
-Title: These 33 restaurant chains cut 20%, 30%, even 60% of locations
+URL: https://mshale.com/c18b72c8/2c37c0d3Sjx_ACvyCKA
+Title: Prospect Pad: Andrew Benintendi (Off Beat) Acapulco Restaurant Closing Locations (CvCLRk6gmP)
 Status hint: Closing | Industry: Restaurants
-Published: 2026-06-29 21:05:49
+Published: 2026-07-19 14:21:02
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.thestreet.com/restaurants/33-restaurant-chains-closed-10-or-more-of-their-locations-in-2025]
+[Could not fetch: 403 Client Error: Forbidden for url: https://mshale.com/c18b72c8/2c37c0d3Sjx_ACvyCKA]
 
 --- Article 24 ---
-URL: https://dailyhive.com/vancouver/bruno-richmond-closes
-Title: Sustainability-focused Metro Vancouver restaurant announces permanent closure
-Status hint: Closing | Industry: Restaurants
-Published: 2026-06-29 21:05:00
+URL: https://www.mysanantonio.com/food/article/new-kerrville-marys-tacos-22319351.php
+Title: When does the new Mary's Tacos location open near San Antonio?
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-07-19 14:10:04
 
-@bruno.yvr/Instagram After an approximate five-year run, Bruno in Richmond has announced it has permanently closed . “We’re truly grateful for every visit, every celebration, and every memory shared with us,” wrote the restaurant. “Thank you for your support and for making Bruno such a special place.” View this post on Instagram A post shared by Bruno Restaurant (@bruno.yvr) Bruno was located inside Versante Hotel , which is situated just beside the Richmond Night Market’s current site. The 6,000 sq. ft. restaurant seated 130 people and was best known for its assortment of dishes featuring B.C. ingredients. The restaurant also shared that it hopes folks will continue to visit the team at its sister restaurant, Cask Whisky Vault, an intimate whisky lounge with Izakaya-inspired cuisine. However, the hotel has since shared that a new restaurant will soon be opening called Ova. View this post on Instagram A post shared by Versante Hotel (@versantehotelcanada) “A new chapter begins at Versante. Richmond’s next great dining destination is about to open its doors,” wrote the hotel. “Introducing Ova Restaurant & Bar @ovarichmond — where contemporary West Coast cuisine meets Italian inspiration, crafted with seasonal ingredients and served with our signature philosophy: Just Right.” You might also like: Eggslut to open first Vancouver location this year Beloved 18-year-old French bistro to officially reopen in Vancouver next week Vancouver restaurant closes after over a decade of operation An exact opening date and menu for Ova has yet to be announced. Will you be checking out this new restaurant? Let us know in the comments. Ova Restaurant Address: 8499 Bridgeport Rd., Richmond Instagram Still hungry? Discover Dished Vancouver on TikTok
+A breakfast taco from Mary's Tacos' Boerne location. Gil Villanueva, the owner of Mary's Tacos said the upgraded Texas Hill Country breakfast spot will officially open this summer — here's when. Mia Valdez/MySA A cult-favorite breakfast taco spot has finally announced an opening date for its new location in the Texas Hill Country. According to owner Gil Villanueva, Mary's Tacos ' long-awaited Kerrville eatery is set to open during the first week of August, starting on the 4th, and will welcome customers into a brand-new dining space featuring $2 million in upgrades . Advertisement Article continues below this ad The popular breakfast spot is known for its fan-favorite taco combinations, homemade tortillas and heaping portion sizes. The opening marks the next chapter for one of the Hill Country's most popular breakfast diners, which has been a staple in the region for the past 20 years. The new restaurant will give Mary's Tacos a 100-seat dining area, a drive-through lane, and other upgrades. The family-owned eatery also has locations in Boerne and Helotes. The restaurant currently operates from its original flagship location, which Viallanueva once described as "a 20-by-50-foot shack." More For You Acclaimed Central Texas winery to close its only tasting room The beloved winery was established in 2014. Whataburger drops new peachy summer menu items Peach flavors have arrived just in time for the hottest time of the year. Popular San Antonio Mexican spot expands with new location The local favorite is marking its Northside expansion with a grand opening celebration on Tuesday night. Its new, larger Kerrville location has been under construction since last summer. In pictures shared with MySA, the restaurant's new location appears to feature a swanky stone exterior and a more modern look. Advertisement Article continues below this ad Potato and egg breakfast tacos at Mary's Tacos in Helotes. Mia Valdez/MySA The restaurant describes itself as a "low-key, counter-serve 
 
 --- Article 25 ---
-URL: https://dallas.culturemap.com/news/restaurants-bars/mutts-canine-cantina-closed-freerange/
-Title: Dallas-based Mutts Canine Cantina suddenly closes all locations
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-06-29 21:04:00
+URL: https://www.msn.com/en-us/news/other/popular-restaurant-chains-are-quietly-closing-locations-in-april-here-s-what-to-know/ar-AA1ZPaHK
+Title: Popular restaurant chains are quietly closing locations in April—here’s what to know
+Status hint: Closing | Industry: Restaurants
+Published: 2026-07-19 13:24:14
 
-Dog-gone it Dallas-based Mutts Canine Cantina suddenly closes all locations Luciana Gomez Jun 29, 2026 | 4:04 pm Mutts Canine Cantina has closed all locations, including Uptown Dallas. Photo courtesy of MUTTS Canine Cantina A favorite Dallas hangout for dogs and their owners is gone "fur-ever." The owners of Mutts Canine Cantina announced Monday, June 29 they're permanently closing all locations, including Uptown Dallas and Fort Worth, after more than a decade in business. The unexpected announcement came via a social media post , catching patrons by surprise since the dog parks had just been open, as usual, the past weekend. The post reads in part: “After many years of wagging tails, muddy paws, and friendships formed at the water bowl, today we’re permanently closing our Mutts Dallas and Clearfork locations, effective immediately. Mutts has been more than a dog park — it’s been a community, and we’re incredibly grateful to every member, guest, and pup who made it special.” The company's website was updated with a similar message. Comments sharing memories, and expressing sadness, disappointment and dissatisfaction around the news were disabled shortly after the post went live. The closure affects the flagship Uptown location, which opened in 2013, and the Fort Worth outpost, which followed in 2018 at The Shops at Clearfork. Additionally, the Allen location ( opened in 2021) and the franchised Austin location ( opened in 2022) are now listed as permanently closed. A planned franchise location in New Braunfels never opened. Dallas-based FreeRange Concepts, which owns Mutts, told CultureMap the company closed Mutts to focus on their other concepts. “After nearly 15 years, we’ve had a great run with Mutts in Dallas and Fort Worth, and it’s time to shift our focus to our other brands,” says Kyle Noonan, owner and CEO of FreeRange Concepts. “We still own the Mutts name and don’t know what’s next for it — but today we’re simply grateful. Thank you to our team, our guests
+MSN
 
 --- Article 26 ---
-URL: https://www.thestreet.com/retail/hm-79-year-old-fast-fashion-retailer-closes-128-stores
-Title: 79-year-old fast-fashion retailer closes 128 stores
-Status hint: Opening | Industry: Apparel
-Published: 2026-06-29 21:03:00
+URL: https://www.midlandtoday.ca/local-news/barrie-toys-r-us-store-closure-date-still-unclear-amid-liquidation-sale-12564193
+Title: Barrie Toys "R" Us store closure date still unclear amid liquidation sale
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-07-19 12:34:03
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.thestreet.com/retail/hm-79-year-old-fast-fashion-retailer-closes-128-stores]
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.midlandtoday.ca/local-news/barrie-toys-r-us-store-closure-date-still-unclear-amid-liquidation-sale-12564193]
 
 --- Article 27 ---
-URL: https://www.forsythnews.com/news/growth-development/where-shake-shack-plans-to-open-its-first-restaurant-in-forsyth-county/
-Title: Where Shake Shack plans to open its first restaurant in Forsyth County
-Status hint: Opening | Industry: Restaurants
-Published: 2026-06-29 20:58:57
+URL: https://patch.com/connecticut/across-ct/popular-family-restaurant-close-owner-plans-open-new-eatery-elsewhere-ct
+Title: Popular Family Restaurant To Close As Owner Plans To Open New Eatery Elsewhere: CT Business News
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-07-19 12:04:38
 
-Shake Shack has filed to put its first Forsyth County location in west Forsyth County. Image courtesy of Shake Shack The burger chain filed a business permit last week.
+Business & Tech Popular Family Restaurant To Close As Owner Plans To Open New Eatery Elsewhere: CT Business News Unique Donut Shop Closes/ Popular Cidery Closes Taproom/ Snack Company Expanding/ New Brewery Opening/ Historic Property Cleared & More... Vincent Salzo , Patch Staff Posted Sun, Jul  19, 2026 at 8:04 am ET There was plenty of business news across Connecticut If you missed any of it on your local Patch, here's a roundup of some of the most-read stories. Popular Family Restaurant To Close As Owner Plans To Open New Eatery Elsewhere “While we're saying goodbye to this chapter, we're doing so with hearts full of gratitude because we're simply moving on to bigger and better things." >>>Read More. Unique Donut Shop Permanently Closes, Owner Announces “We are truly grateful for the memories we’ve made together. Thank you for being part of our journey,” the owner wrote in a statement. >>>Read More. Find out what's happening in Across Connecticut for free with the latest updates from Patch. Popular Cidery Closing Its Taproom, Owners Announce ‘Difficult Decision’ “This isn't goodbye, it's simply the beginning of a new chapter,” the owners wrote in a statement. >>>Read More. Historic Property Cleared For 2 Proposed Restaurants The zoning change moves two proposed restaurants one step closer to opening at the redevelopment. >>>Read More. Find out what's happening in Across Connecticut for free with the latest updates from Patch. Popular CT Snack Company Expanding The snack maker's latest expansion is expected to bring new jobs. >>>Read More. New Brewery Restaurant To Open This Week Progression Brewing describes its taproom as a gathering place for the community and says its mission centers on creativity, positivity, sustainability, and exploration. >>>Read More. See also: New East Windsor Pet Wash, Barkery Sets Grand Opening Family Bike To Open Somers Shop West Hartford Coffee Roaster/Beer Brewery Announces Closure New Use Proposed In Building That Formerly Housed S
 
 --- Article 28 ---
-URL: https://www.disneyfoodblog.com/2026/06/29/everything-we-learned-about-level99-in-disney-springs-on-opening-day/
-Title: EVERYTHING We Learned About LEVEL99 in Disney Springs on Opening Day
+URL: https://www.aol.com/articles/viral-dirty-soda-chain-opening-120223000.html
+Title: This viral dirty soda chain is opening 2 new metro Phoenix stores
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 20:54:37
+Published: 2026-07-19 12:02:22
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.disneyfoodblog.com/2026/06/29/everything-we-learned-about-level99-in-disney-springs-on-opening-day/]
+Eddie Fontanez, Arizona Republic Fri, July 17, 2026 at 12:02 PM UTC 0 A popular Utah-based dirty soda chain is expanding in metro Phoenix. Swig, which hails itself as the "Home of the Original Dirty Soda," was set to expand its Arizona footprint with two new locations that are on the way in metro Phoenix: one in Glendale and one in Tempe. Dirty soda is a drink that mixes sodas such as Coke or Dr. Pepper with custom flavored syrups, fresh fruits, purees and creams. According to Swig's website, "It's not a Dirty Soda if it's not from Swig." In addition to the iconic dirty sodas, the chain also offers other signature "reviver" and "refresher" drinks, hot chocolate and snacks such as pretzel bites and house made sugar cookies. Swig currently has 10 stores in Arizona. The addition of the two new spots will bring the state's total to 12 stores. Advertisement New Swig locations opening soon Two new Swig locations are listed as "coming soon" on the brand's website: Glendale: 5917 N. 91st Ave. Tempe: 8675 S. Priest Drive An opening date had not yet been shared for either location. Details : swig.com . Coming soon: Star chefs team with Upward Projects on Phoenix Mexican restaurant Reach the reporter at eddie.fontanez@azcentral.com . Follow @ERFontanez on Instagram. Support local journalism. Subscribe to azcentral.com today . This article originally appeared on Arizona Republic: Swig is opening 2 new metro Phoenix stores. Here's where
 
 --- Article 29 ---
-URL: https://www.shawlocal.com/kane-county-chronicle/2026/06/29/wahlburgers-announces-sudden-closing-of-st-charles-location-said-new-location-coming-soon/
-Title: Wahlburgers announces sudden closing of St. Charles location, said ‘new location coming soon’
+URL: https://open.kg/en/news/exclusive/110926-na-issyk-kule-zavershilsja-festival-filmov-stran-uchastnic-shos.html
+Title: open.kg
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 20:54:07
+Published: 2026-07-19 11:47:49
 
-The new kids on the block are looking for a new block. The Wahlburgers restaurant location in St. Charles announced in a post it’s closing “effective immediately,” and will be opening in a “new location coming soon.” The restaurant operators did not say if the new location would be outside of the city of St. Charles. The St. Charles location opened in 2020. Donnie Wahlberg signs his name and places a hand print in wet cement during the "Wahlk of Fame Ceremony" for New Kids on the Block at the Wahlburgers in St. Charles. (Mark Black for Shaw Local) Wahlburgers is owned by brother chef Paul, and actors Mark and Donnie Wahlberg. Donnie Wahlberg and his wife, former Playboy Playmate and MTV host Jenny McCarthy, are residents of St. Charles. The St. Charles Wahlburgers was located at 825 S. Randall Road. “It is with heavy hearts and fond memories that we announce Wahlburgers St. Charles will be permanently closing our doors on June 29 as our current lease at this location has come to an end,” the business said in a post. “To our beloved patrons, thank you for your support and we look forward to welcoming you back to our new location.” Donnie Wahlberg rose to fame in boy band New Kids on the Block. He acted in the show “Blue Bloods,” with Tom Selleck, and is currently in “Boston Blue.” New Kids on the Block band members, from left, Jonathan Knight, Danny Wood, Donnie Wahlberg, Joey McIntyre and Jordan Knight pose near the "Wahlk of Fame" placed in concrete at the Wahlburgers in St. Charles. (Mark Black for Shaw Local) The opening of the St. Charles location in 2020 received large fanfare as hundreds of fans of the band lined up for the grand opening. There are almost three dozen Wahlburgers location across the country.
+The closing ceremony took place with honoring the winning filmmakers The international film festival organized for the SCO member countries has concluded in Cholpon-Ata. At the closing ceremony, special attention was given to Kyrgyz filmmakers. Participants of the national program "Kyrgyz Panorama" received diplomas for their participation in the festival, after which the winners of the international competition were awarded. The festival took place from July 16 to 19 as part of Kyrgyzstan's presidency in the SCO and was timed to the 25th anniversary of the organization. The Director of the Cinematography Department of the Ministry of Culture, Information and Youth Policy of the Kyrgyz Republic, Talant Tolobekov, opened the ceremony, noting that the development of Kyrgyz cinema has largely been made possible by the contributions of previous generations of filmmakers. "Kyrgyz cinema is currently developing dynamically, and this is primarily the merit of our veterans, the luminaries of Kyrgyz cinema, who are present in this hall today," he stated. Diplomas of participation in the International Film Festival of SCO countries were awarded to the creators of Kyrgyz films included in the "Kyrgyz Panorama" program: * "Mergen" — director Chingiz Narynov; * "Buiruk" — director Dastan Madalbekov; * "Berekem" — director Ermek Kazybekov; * "Kachkyn" — director Dastan Japar Ryskel'di; * "Köz irmem" — director Almaz Jangaziev. After this, the organizers proceeded to award the winners of the film festival. The first prize was awarded for Best Music, received by composer Kasym Muinzo for the soundtrack to the film "The Great Amir and Donna Anna" (Uzbekistan). The next nomination was for "Best Editing," which was won by Olga Reshetnikova for her work on the Belarusian film "One for Two." At the SCO film festival, the best actors were recognized as the performers of the leading roles in the films from Tajikistan and Iran. The awards in the "Best Male Role" and "Best Female Role" cate
 
 --- Article 30 ---
-URL: https://www.bisnow.com/atlanta/news/mixed-use/developer-seeks-approval-to-expand-dunwoodys-campus-244-135225
-Title: Developer Seeks Approval To Expand Dunwoody's Campus 244
+URL: https://www.fox61.com/article/news/local/hartford-county/market-32-opens-new-newington-store-price-chopper-rebranding-continues-across-the-northeast/520-b10ab34d-edb8-48f6-b9ca-74fff85d1b8e
+Title: Market 32 opens new Newington store as Price chopper rebranding continues across the Northeast
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 20:44:46
+Published: 2026-07-19 11:30:00
 
-News Developer Seeks Approval To Expand Dunwoody's Campus 244 Atlanta Mixed-Use View count: Atlanta Mixed-Use June 29, 2026 | 4:44 p.m. ET Jarred Schenke, Atlanta The developer of a South Forsyth County mixed-use development is looking to expand its Central Perimeter project, this time with apartments. Google Maps Campus 244, including the Element hotel, in Central Perimeter RocaPoint Partners and its development partner, The Georgetown Co., are proposing to rezone portions of the Campus 244 site to make way for a 350-unit apartment complex, a 150-room hotel, 200K SF of office and an additional 30K SF of retail and restaurant spaces, according to a filing with the Georgia Department of Community Affairs , the agency tasked with reviewing developments that potentially impact regional infrastructure. The application was filed by the city of Dunwoody, which is considering the rezoning application filed by The Georgetown Co., the Atlanta Business Chronicle reported . If approved, the project would greatly expand the 12-acre campus at 244 Perimeter Center Parkway in Dunwoody. The project’s first phase has a five-story, 400K SF office building and a hotel. The developers want to complete the second phase by 2030, according to the application, and are eyeing an eventual build-out of 1.3M SF of mixed-use space. A message to RocaPoint was not returned as of press time. Campus 244 was built in 1975 and acted as the headquarters for the Southern poultry giant Gold Kist, which later became Pilgrim’s Pride. There is still plenty of asphalt around the campus that can be turned into revenue for the developers, according to The Atlanta Journal-Constitution . “The property is partly underutilized with surface parking,” Georgetown said in its rezoning application with Dunwoody, per the AJC. “The rezoning is necessary to allow the applicant to respond to market demand and develop these underutilized areas with economically viable uses, such as multifamily residential.” Georgetown and 
+Hartford County Market 32 opens new Newington store as Price Chopper rebranding continues across the Northeast New Market 32 on Berlin Turnpike replaces nearby Price chopper location, highlighting expanded grocery options and a modern shopping experience. Credit: Market 32 Newington Market 32 opening NEWINGTON, Conn. — Market 32 officially opened the doors Friday morning to its brand new Newington store, transitioning from the familiar Price Chopper brand to a new and modern Market 32 concept. The new constructed grocery store on the Berlin Turnpike replaces the company's nearby Price Chopper location and represents one of the latest investments as the regional supermarket chain continues its gradual rebranding process across the Northeast. While many store still operate under the Price Chopper name, new locations and remodeled stores are increasingly opening as Market 32, offering an updated shopping experience focusing on fresh food and locally sourced products. This story continues below. More in Local Southington police investigate shooting, assault at Cadillac Ranch; 8 arrested Drivers concerned about uptick in illegal ATV, dirt bike riding on public roads Guilford police investigating ATV and dirt bike riders that fled repeatedly Sign up for the FOX61 newsletters: Morning Forecast, Morning Headlines, Evening Headlines Newington Store Manager Mike Pauley, says his new store features a bright, open design with expanded departments and new amenities committed to the changing needs of today's shoppers. Credit: M32 Market 32 produce "We're thrilled to open the doors to this beautiful new Market 32 and welcome the Newington community," said Market 32 and Price chopper President Blaine Bringhurst. “This store was designed from the ground up with our customers in mind, creating a shopping experience that combines convenience, quality and freshness, innovation, and value. We're proud to continue serving the Newington community and look forward to doing so in this new l
 
 --- Article 31 ---
-URL: https://www.aol.com/articles/photos-first-look-tacos-tequila-201703701.html
-Title: Photos: First look at Tacos & Tequila Cantina, now open in Cape Coral
+URL: https://patch.com/pennsylvania/pittsburgh/pittsburgh-plates-brewery-closing-national-eatery-opening-new-local-location
+Title: Pittsburgh Plates: Brewery Closing, National Eatery Opening New Local Location
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 20:32:41
+Published: 2026-07-19 10:34:38
 
-Robyn George, Fort Myers News-Press Updated Mon, June 29, 2026 at 8:50 PM UTC 0 1 / 0 Photos: First look at Tacos & Tequila Cantina, now open in Cape Coral The bar at Tacos & Tequila Cantina in Cape Coral is roomy enough for nearly 30 customers. (Robyn George / Fort Myers News-Press & Naples Daily News/USA Today Network) Advertisement Tacos & Tequila Cantina brings its funky and fun take on Tex-Mex to Cape Coral. The new (and fifth) location is just north of Pine Island Road
+Restaurants & Bars Pittsburgh Plates: Brewery Closing, National Eatery Opening New Local Location Time to satisfy your appetite for Pittsburgh's latest bar and restaurant news. Eric Heyl , Patch Staff Posted Sun, Jul  19, 2026 at 6:34 am ET PITTSBURGH, PA — When it comes to the Pittsburgh area's restaurant and bar scene, there has been news aplenty recently - both good and bad. Here is what's been happening: This national restaurant chain has set an opening date for its new Pittsburgh location. The food is on the plate here. A unique three-level restaurant has opened in town. The food is on the plate here. A consumer alert was slapped on this well-known Pittsburgh restaurant. The food is on the plate here. A regional brewery is closing its only Pittsburgh location. The food is on the plate here. This craft brewery won an award at a national beer competition. The food is on the plate here. Find out what's happening in Pittsburgh for free with the latest updates from Patch. Get more local news delivered straight to your inbox. Sign up for free Patch newsletters and alerts. Related: PA Restaurants Share Join the conversation
 
 --- Article 32 ---
-URL: https://communityimpact.com/houston/katy-fulshear/dining/2026/06/29/brooklyn-pizzeria-opens-fulshear-area-location/
-Title: Brooklyn Pizzeria opens Fulshear area location
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 20:24:00
+URL: https://www.msn.com/en-gb/money/general/aldi-opening-40-new-supermarkets-and-recruiting-450-new-staff-this-year/ar-AA286QhK?ocid=finance-verthp-feeds
+Title: Aldi opening 40 new supermarkets and recruiting 450 new staff this year
+Status hint: Opening | Industry: Grocery
+Published: 2026-07-19 10:33:25
 
-Brooklyn Pizzeria opens Fulshear area location | Community Impact | Houston Brooklyn Pizzeria opens Fulshear area location Trending now Texas Legislature Texas education board OKs mandatory public school reading list Texas Legislature Texas moves forward with state-centered social studies curriculum, trimming world history ... Dining Homemade cookies, handcrafted cocktails: 6 dining options in the Greater Houston ... Arts & Entertainment Naskila Casino Resort breaks ground in Leggett Business EMS response, new Japanese bookstore: 5 trending stories in the Greater ... Business Grundfos breaks ground on production facility, opens training academy in Brookshire Texas Legislature Biblical readings, Texas-centered history lessons to be required in K-12 schools ... Education Katy ISD approves pay increase, lump-sum payments for 2026-27 Government City of Katy names Dana Massey as 1st female fire chief Events World Cup Watch Party, Pride Drag Brunch: 10 events to attend ... Dining Brooklyn Pizzeria opens Fulshear area location By Bradley Dountz | 3:29 PM Jun 29, 2026 CDT Updated 3:28 PM Jun 29, 2026 CDT Brooklyn Pizzeria offers a variety of Italian dishes with all sauces made in-house, including New York-style pizza, lasagna, manicotti, baked ziti, and spaghetti with meatballs. (Courtesy Brooklyn Pizzeria) Brooklyn Pizzeria offers a variety of Italian dishes with all sauces made in-house, including New York-style pizza, lasagna, manicotti, baked ziti, and spaghetti with meatballs. (Courtesy Brooklyn Pizzeria) Brooklyn Pizzeria has opened a location in the Fulshear area, owner Jimmy Shahni confirmed. What to expect The pizzeria scratch makes its New York-style pizzas using imported ingredients including whole milk mozzarella cheese and full-link spiced Italian sausages, according to its website. Customers can also enjoy a variety of pasta, subs, calzones, salads and desserts. Zooming out The restaurant has 11 other locations in the Greater Houston area with another coming s
+MSN
 
 --- Article 33 ---
-URL: https://patch.com/new-jersey/ridgewood/new-restaurant-will-open-bergen-county-cove-blu
-Title: New Restaurant Will Open In Bergen County: The Cove By Blu
-Status hint: Opening | Industry: Restaurants
-Published: 2026-06-29 20:21:04
+URL: https://www.blogto.com/eat_drink/2026/07/history-dominion-grocery-stores-ontario/
+Title: The history of Dominion grocery stores in Ontario
+Status hint: Opening | Industry: Grocery
+Published: 2026-07-19 10:25:24
 
-Restaurants & Bars New Waterfront Restaurant Planned For Bergen County: Cove By Blu NJ restaurateurs who already own an eatery on the Hudson River are planning another, they say. Caren Lissner , Patch Staff Posted Mon, Jun  29, 2026 at 4:21 pm ET | Updated Tue, Jun  30, 2026 at 12:45 am ET NORTH JERSEY — The owners of the two Blu on the Hudson restaurants — one in Weehawken and a newer location in Livingston — are planning a sister eatery on the waterfront in Edgewater. They posted on social media over the weekend about The Cove By Blu —showing photos of the building, without revealing much more. They wrote, "Coming soon. From the team behind Blu on the Hudson." Find out what's happening in Ridgewood-Glen Rock for free with the latest updates from Patch. Commenters identified the location as Edgewater. The eatery appears to be coming to the area of 115 River Road. Blu on the Hudson is known for an extensive upscale menu including sushi, pasta, and cocktails. Find out what's happening in Ridgewood-Glen Rock for free with the latest updates from Patch. The original 30,000-square-foot Weehawken location opened in spring 2023. Its Blu Sushi Bar sits off the main dining room, serving a menu created by K Dong, in collaboration with Executive Chef Juan Carlos “JC” Ortega. The Blu Hospitality group's website lists The Cove By Blu as "coming soon," and also notes a future restaurant in Miami. Patch reached out to the owners and will update this story if more information is received. We'd love to write about more restaurants opening in North Jersey, so if you've got a tip or release, let Patch know! And do you want to know about five restaurants that opened in North Jersey just this month? Read our new story: 5 Restaurants That Opened In North Jersey In June Get more local news delivered straight to your inbox. Sign up for free Patch newsletters and alerts. Related: NJ Restaurants NJ Store Openings Patch Exclusives Share Join the conversation
+Eat & Drink Kimia Afshar Mehrabi Posted 19 hours ago Report Inaccuracy The history of Dominion grocery stores in Ontario Eat & Drink Kimia Afshar Mehrabi Posted 19 hours ago Report Inaccuracy Latest Videos Long before giant supermarket chains dominated nearly every intersection in Toronto, one of the country's biggest success stories began as a tiny storefront at 174 Wallace Ave. Dominion Stores Limited was founded in May 1919 by American businessmen Robert Jackson and William J. Pentland, who got the company off to a remarkable start. By the end of its first year in operation, the brand had opened 20 stores, and just one year later, that number quickly skyrocketed to 61 locations. After just four years in business, Dominion claimed to be the largest grocer in Canada, with 190 stores, including 62 in Toronto. Dominion store seen at 417 Yonge St., east side, at McGill Street in 1948. Photo: City of Toronto Archives. While it's difficult to imagine in our world today with self-checkout lanes stationed at practically every grocery store, customers didn't actually browse the aisles themselves. Instead, the store's clerks would grab products from well-stocked shelves and bag everything up on the shopper's behalf. Throughout its first two decades, Dominion steadily expanded its presence across Ontario and even acquired some stores from T.P. Loblaw. By the 1930s, the company had grown to over 500 stores, although most still operated as small, local neighbourhood shops. Dominion store, 213 Wellesley St., grocery section in 1929. Photo: City of Toronto Archives. Like many businesses of that era, Dominion struggled through the Great Depression, but entered a new chapter in 1939, when J. William Horsey became president and began modernizing the chain. Horsey — who increased employee wages and introduced attractive benefits like paid vacations — also played a fundamental role in keeping the supermarket chain under Canadian ownership by working with financier Bud McDougald to br
 
 --- Article 34 ---
-URL: https://www.disneyfoodblog.com/2026/06/29/good-news-this-disney-world-hotel-restaurant-is-opening-soon/
-Title: Good News: This Disney World Hotel Restaurant Is Opening SOON
-Status hint: Opening | Industry: Hospitality, Restaurants
-Published: 2026-06-29 20:20:36
+URL: https://www.the-sun.com/money/16701983/sprouts-grand-opening-hiring-event-east-windsor-new-jersey/
+Title: Trader Joe's rival with over 480 stores confirms July 21 deadline for 'walk-in' special event ahead of grand opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-07-19 10:12:43
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.disneyfoodblog.com/2026/06/29/good-news-this-disney-world-hotel-restaurant-is-opening-soon/]
+Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Comment now A POPULAR specialty grocer is one month from opening – but it will first welcome locals inside for a special event. The grocer recently announced a partnership with a Florida-based coffee company and the opening of 10 in-store cafes . A popular specialty grocer and Trader Joe’s rival will open its doors on August 21 in New Jersey (stock image) Credit: Getty Prior to opening, Sprouts will host a two-day hiring event this week on July 21 and 22 (stock image) Credit: Getty Advertisement A Sprouts Farmers Market will open in East Windsor, New Jersey , on August 21. The Trader Joe’s rival, which operates more than 480 stores in 25 states, will bring approximately 83 new jobs to the East Windsor area. Sign up for the Money newsletter Thank you! Sprouts is currently in the hiring stage, with available positions including cashiers, courtesy clerks, department managers and assistants, and clerks in several departments. The store’s produce, meat and seafood, deli, grocery, bakery, and body care departments are in need of clerks. Read more on Store Openings LOOKING AHEAD 7-Eleven shoppers brace for shake-up as 7,000 stores set to get a new look FAIR TRADE Trader Joe's announces five new stores in three states Sprouts is also hiring for receiver, administrative coordinator, and scan coordinator roles. In order to assist in the hiring process, Sprouts will host an in-person hiring event this week at the Hyatt Place Princeton, located at 3565 Route 1 in Princeton, New Jersey . The event will take place from 8 am to 6 pm on Tuesday, July 21, and 8 am to 5 pm on Wednesday, July 22. Candidates can apply online in advance through Sprouts’ career page . Advertisement Most read in Money SHOP SHIFT Costco rolls out new minimum policy across US stores & will change how you shop COIN CRAZE Lincoln 'sought-after' penny worth $336,000 still in circulation DICEY TIMES Casinos may introduce 'card' 
 
 --- Article 35 ---
-URL: https://www.bizjournals.com/sanfrancisco/news/2026/06/29/tartine-mill-valley-strawberry-village.html
-Title: Famed bakery Tartine to open long-awaited first Bay Area outlet outside of San Francisco
+URL: https://www.msn.com/en-us/money/companies/chick-fil-a-opening-soon-in-cleveland-s-university-circle-hiring-up-to-110-employees/ar-AA283Fyr
+Title: Chick-fil-A opening soon in Cleveland’s University Circle, hiring up to 110 employees
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 20:13:00
+Published: 2026-07-19 10:11:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/sanfrancisco/news/2026/06/29/tartine-mill-valley-strawberry-village.html]
+MSN
 
 --- Article 36 ---
-URL: https://news.ssbcrack.com/louis-vuitton-opens-new-temporary-womens-store-in-miami-design-district/
-Title: Louis Vuitton Opens New Temporary Women’s Store in Miami Design District
+URL: https://thenew961.com/mayer-brothers-opening-date-2026/
+Title: Mayer Brothers Announces Opening Date For 2026
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 20:03:40
+Published: 2026-07-19 10:01:41
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://news.ssbcrack.com/louis-vuitton-opens-new-temporary-womens-store-in-miami-design-district/]
+Mayer Brothers Announces Opening Date For 2026 Mayer Brothers Announces Opening Date For 2026 Dave Fields Dave Fields Published: July 19, 2026 Mark Richards TSM Share on Facebook Share on Twitter A local favorite will be opening soon for the Season. Mayer Brothers, in West Seneca, announced their opening date for 2026, and it is coming up soon. Mayer Bros Will Be Opening Soon We are in the middle of summer here in Western New York, but one of the most popular spots for Fall in the 716 will be opening soon. Mayer Bros announced that their opening date this year will be August 5th. This will be the 174th year that Mayer Bros will be open to the public, making it one of the longest-running businesses in New York State. WHAT IS MAYER BROS? Mayer Brothers is one of the oldest stores in Western New York. It has been family-owned and operated since 1852. They are the largest processor of cider in America. WHERE IS MAYER BROS LOCATED? The cider mill and bakery are located at 1540 Seneca Creek Road in West Seneca. READ MORE: IS THIS THE MOST UNDERRATED SPOT FOR WINGS IN WESTERN NEW YORK? WHAT ARE MAYER BROS HOURS OF OPERATION? The cider mill and bakery will be open 7 days a week. On opening day, August 5th, they will be open from 6 am until 8 pm. WHAT PRODUCTS DOES MAYER BROS SELL? Western New York's Favorite Weird Food Combos You just never know what two foods will go together for a delicious meal. Check out some of Western New York's favorite weird food combos. Gallery Credit: Dave Fields Filed Under : buffalo food , Buffalo Foods , Buffalo News , Mayer Bros , Mayer Bros Bakery Categories : Buffalo Events , Buffalo Stuff
 
 --- Article 37 ---
-URL: https://www.wmar2news.com/news/region/baltimore-city/slutty-vegan-opening-stall-in-cross-street-market
-Title: Slutty Vegan opening stall in Cross Street Market
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 20:02:53
+URL: https://www.shreveportbossieradvocate.com/food_and_entertainment/food/zona-fresh-mex-restaurant-shreveport-la-potato/article_248e288d-9a74-493d-846d-4fa526125e1c.html
+Title: Fresh-Mex restaurant with two locations in Shreveport has unique new item to menu
+Status hint: Opening | Industry: Restaurants
+Published: 2026-07-19 10:00:00
 
-News Region Baltimore City Actions Facebook Tweet Email Slutty Vegan opening stall in Cross Street Market Prev Next WMAR Pinky Cole Owner of Slutty Vegan By: Siobhan Garrett Posted and last updated BALTIMORE — Slutty Vegan restaurant announces its opening a permanent stall at Cross Street Market in Federal Hill in August. The announcement was made on its Facebook page and said the grand opening will be on August 1. This comes just two weeks after founder Pinky Cole Hayes announced plans to relocate her Baltimore restaurant from the Baltimore Peninsula to a location near the Johns Hopkins Hospital campusnext year. The plant-based burger brand was one of the original tenants at Baltimore Peninsula, opening its first restaurant there in December 2024 as part of the $5 billion development of that area. Baltimore-bred, Pinky founded her fast-casual restaurant chain in Atlanta in 2018, and has expanded to several locations across the country. About WMAR Lost WMAR on DirecTV?  Here's how to keep watching News from across Maryland Maryland Interactive Map by WMAR
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.shreveportbossieradvocate.com/food_and_entertainment/food/zona-fresh-mex-restaurant-shreveport-la-potato/article_248e288d-9a74-493d-846d-4fa526125e1c.html]
 
 --- Article 38 ---
-URL: https://www.bizjournals.com/milwaukee/news/2026/06/29/landmark-credit-union-madison-expansion-2027.html
-Title: Credit union expands Madison presence after decade with single branch
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 20:02:00
+URL: https://www.mindanaotimes.com.ph/cris-inn-davao-to-open-soon/
+Title: Cris Inn Davao to open soon
+Status hint: Opening | Industry: Hospitality
+Published: 2026-07-19 09:33:16
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/milwaukee/news/2026/06/29/landmark-credit-union-madison-expansion-2027.html]
+Business Cris Inn Davao to open soon by Gio Tanudtanud July 19, 2026 written by Gio Tanudtanud July 19, 2026 208 CRIS INN Hotel, a growing budget hotel chain by Felcris Group, will hold a soft opening for its new branch in Davao City on July 24, 2026, at Washington Street, Poblacion District, near the Andres Bonifacio rotunda monument. Thea Dimaano, Cris Inn sales and marketing manager, announced that the launch will open 63 out of the 186 rooms to cater to guests. She also mentioned the grand opening will occur in the next two or three months. “We are located in the heart of the city, so we are accessible to everything, like the hospital, the museum, the coffee shops, and the malls. So, that makes it a nice hotel to stay in,” she said during the PEP Talks on July 17. The new branch will have flexible function rooms that can accommodate 30 to 300, along with partner companies to provide food and beverages for in-house guests, with plans to open an in-house kitchen next year. Room rates range from P1,900 to P3,300 per night with inclusions of breakfast, air-conditioned rooms, and free Wi-Fi. Dimaano shared that the hotel will also be prepared for the Kadayawan Festival 2026, which will kick off next month. Criss Inn Hotels offers comfortable and convenient accommodations in Mindanao with properties located in Bayugan, Tagum, Samal, and a new hotel to open in Digos soon. budget hotel chain cris inn hotel felcris group kadayawan festival opening cris inn 0 comments 0 Facebook Twitter Pinterest Email Gio Tanudtanud previous post Malalag Fishport eyes to be completed in 2027 next post From Classroom to Nation-Building: Why every Filipino child deserves the best education You may also like Malalag Fishport eyes to be completed in 2027 July 19, 2026 Finding a dream home made easier with UnionBank... July 17, 2026 Aboitiz Foods wins at Content Marketing Awards Asia... July 17, 2026 Cebu Pacific, Vietnam Airlines Sign Wet Lease Deal July 16, 2026 Security Bank and Security B
 
 --- Article 39 ---
-URL: https://mocoshow.com/2026/06/29/first-look-at-fish-taco-during-very-limited-soft-opening/
-Title: First Look at Fish Taco During Very Limited Soft Opening
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 19:52:04
+URL: https://www.naplesnews.com/story/news/local/2026/07/19/judge-orders-feds-to-prove-alligator-alcatraz-is-permanently-closed/90955657007/
+Title: Fort Myers judge demands proof of Alligator Alcatraz permanent closure
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-07-19 09:07:00
 
-Fish Taco has officially begun its very limited soft opening at its newest location in Gaithersburg, giving diners an early chance to try the restaurant ahead of its official grand opening on Wednesday, July 1. A first look preview video of what to expect is available below According to signage posted at the restaurant, the soft opening schedule is: Monday, June 29: Lunch from 12pm to 1pm and dinner from 5:30pm to 6:30pm Tuesday, June 30: Lunch from 12pm to 1pm and dinner from 5:30pm to 6:30pm The new restaurant is located at 12117 Darnestown Road in The Shops of Potomac Valley shopping center. During the soft opening on Monday, June 29, and Tuesday, June 30, guests can receive one free menu item per person during select lunch and dinner service windows. The offer is valid for dine-in only, while drinks and desserts are available at regular price. The family-owned restaurant is occupying a space that was previously home to an AT&T store and was later planned for a Wayback Burgers location that never opened. The Gaithersburg restaurant is Fish Taco’s sixth location in the DMV. Known for its Baja-inspired cuisine, the restaurant focuses on seasonal, sustainable and locally sourced ingredients. Its menu features seafood tacos, burritos, rice bowls, quesadillas and salads, with popular items including the Blackened Fish Taco and Salmon Taco. To celebrate the summer season, Fish Taco is also offering limited-time specials through July 31, including Cucumber Gazpacho, Salmon Aguachile and Wasabi Shrimp Tacos. Following the soft opening, the restaurant’s official grand opening is scheduled for Wednesday, July 1, with regular hours of 11am to 8:30pm daily. View this post on Instagram A post shared by Mr. MoCo • Alex Tsironis (@mrmoco301) Author MCS Staff
+LOCAL Fort Myers judge demands proof of Alligator Alcatraz permanent closure Alexa Ryan Fort Myers News-Press & Naples Daily News July 19, 2026, 5:07 a.m. ET Gov. Ron DeSantis declared the controversial immigration detention facility in the Everglades, Alligator Alcatraz , officially closing on June 25, but a federal judge and the American Civil Liberties Union want concrete proof .
 
 --- Article 40 ---
-URL: https://www.hotel-online.com/news/white-lodging-to-open-hotel-trinity-autograph-collection-in-downtown-austin-in-late-2026
-Title: White Lodging to Open Hotel Trinity, Autograph Collection, in Downtown Austin in Late 2026
-Status hint: Opening | Industry: Hospitality
-Published: 2026-06-29 19:50:41
+URL: https://www.enterprisenews.com/story/news/2026/07/19/top-stories-brockton-grocery-store-whitmans-christos-to-go/90929042007/
+Title: Top news: New Brockton grocery store; cop's harassment claim denied
+Status hint: Opening | Industry: Grocery
+Published: 2026-07-19 09:05:00
 
-Q1 2026 Major U.S. Hotel Sales Survey & Lodging Sector Overview Largely driven by escalating geopolitical conflict in the Middle East and the resultant spike in energy prices, the first quarter (Q1) of 2026 was characterized by a sharp shift from early-year optimism to heightened volatility. The U.S. blockade of the Strait of Hormuz which followed Iran's closure of the waterway... Daniel H. Lesser May 13, 2026
+NEWS Top news: New Brockton grocery store; cop's harassment claim denied Kathy Bossa The Enterprise July 19, 2026, 5:05 a.m. ET Before a new week begins, we're looking back at the week that was, and the stories that led the news with Enterprise readers. Top stories this past week included: The old Stop & Shop on North Montello will be empty no more and the North Side will have a grocery store again. State Police on behalf of a Brockton cop sought to criminally charge mayoral runner-up Jean Bradley Derenoncourt. The accusation and what the court said. The owner of Brockton Auto Parts was back at work Monday after suffering burns in a fire that also sent a firefighter to the hospital. It's the end of era as Whitman's Christo's To Go announced that it will not reopen, confirming the closure of the takeout restaurant after the business was seized for unpaid taxes. An 81-year-old Kingston man was killed when a small plane crashed into a pond in Plymouth on Monday. In case you missed it, here are five stories from the past week that resonated with our readers. Grocery store plans to open in old Brockton Stop & Shop. Which one? A small grocery chain from Providence, Rhode Island, plans to open in the old Stop & Shop on North Montello. Daily Stop posted a notice on its website that it's "excited to expand into Brockton this summer." "I'm excited," said Ward 7 City Councilor Shirley Asack. "I did not want that to be an empty building." Pilot identified in fatal Plymouth plane crash The pilot of a small aircraft killed after crashing into a pond in Plymouth Monday morning has been identified as Richard Carrara, 81, of Kingston, the Plymouth County District Attorney's Office said in a statement. The plane went down on Curlew Pond on Rocky Pond Road on Thursday, July 16, at approximately7:40 a.m., according to the DA's Office. Owner burned in Brockton salvage yard fire. How he's doing The owner of a Brockton salvage yard was burned and a firefighter was taken to the hospital wi
 
 --- Article 41 ---
-URL: https://www.jsonline.com/story/communities/west/2026/06/29/new-sussex-culvers-location-opening-this-july/90741103007/
-Title: New Sussex Culver's location on Highway 164 gets ready to open
+URL: https://www.postandcourier.com/columbia/news/miss-cocky-lexington-store-gamecocks-usc/article_fa1cab55-0a1e-4cd5-9f7a-b0871c251649.html
+Title: Gamecocks gear boutique to open third Midlands location. What we know.
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 19:44:00
+Published: 2026-07-19 09:00:00
 
-WEST SUBURBS New Sussex Culver's location on Highway 164 gets ready to open Cathy Kozlowicz Milwaukee Journal Sentinel June 29, 2026, 2:44 p.m. CT The Culver's in Sussex is ready to open its new location within the village. According to company officials, the Sussex Culver's at W249 N6424 Highway 164 is slated to open Monday, July 6. It will be just down the road from the previous location.
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.postandcourier.com/columbia/news/miss-cocky-lexington-store-gamecocks-usc/article_fa1cab55-0a1e-4cd5-9f7a-b0871c251649.html]
 
 --- Article 42 ---
-URL: https://ktar.com/arizona-business/burlington-stores-colonnade/5884461/
-Title: Burlington Stores announces new Phoenix location
+URL: https://www.dailyecho.co.uk/news/26292439.former-lymington-poundland-becomes-mountain-warehouse/
+Title: Closed Poundland store in New Forest town becomes new flagship outlet
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 19:41:41
+Published: 2026-07-19 08:42:44
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://ktar.com/arizona-business/burlington-stores-colonnade/5884461/]
+Poundland store in New Forest transformed into Mountain Warehouse Lymington Business Leisure Shopping By 
+            Richard McLaughlin Reporter Share 0 Comments 2 Skip to next photo 1 / 1 Show caption 1 / 1 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. A FORMER Poundland store has been transformed into a Mountain Warehouse flagship outlet. Goadsby secured the 12,000 sq ft Lymington High Street store for the landlord . Mountain Warehouse has brought several of its brands together at the new store. Edd Watts from Goadsby said: “We received strong interest in the former Poundland following the announcement of their closure in Lymington town centre and are delighted to have secured Mountain Warehouse as a tenant for our client. “This is a great result all round, and another excellent example of retailers continuing to invest in Lymington High Street.” The new Mountain Warehouse store in Lymington (Image: Goadsby) Recommended reading: Former high street shoe shop to go up for auction New convenience store opens in Hampshire town centre Opening date confirmed for new pub after redevelopment Mountain Warehouse already operated a nearby store, but the new unit at 78-80 High Street is larger than its previous Lymington premises. Poundland on Lymington High Street closed its doors to customers in January. The new Mountain Warehouse store opened at the end of June. Speaking after the plans were first revealed, Cllr Jack Davies said: “This is a real vote of confidence in Lymington, and I look forward to seeing them open.” Lymington Business Leisure Shopping Share 0 Comments Get involved with the news Send your news & photos
 
 --- Article 43 ---
-URL: https://www.arizonafoothillsmagazine.com/taste/grand-opening/someburros-expands-to-north-peoria-with-new-lake-pleasant-location
-Title: Someburros Expands to North Peoria With New Lake Pleasant Location
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 19:41:15
+URL: https://www.msn.com/en-us/travel/news/mexican-restaurant-to-reopen-at-new-downtown-columbia-location-here-s-where-it-will-be/ar-AA27TA59
+Title: Mexican restaurant to reopen at new downtown Columbia location. Here’s where it will be.
+Status hint: Opening | Industry: Restaurants
+Published: 2026-07-19 06:28:05
 
-Read More Collins Debuts One Sixth, a New Culinary Concept Inside Bond Phoenix Chef Chris Collins is reimagining workplace dining with a new hospitality concept.
+MSN
 
 --- Article 44 ---
-URL: https://cw33.com/a-taste-of-north-texas/food-and-drink/chipotle-expands-in-dallas-with-third-new-location-this-month/
-Title: Chipotle expands in Dallas with third new location this month
+URL: https://www.tapinto.net/towns/wayne/sections/business-and-finance/articles/barnes-noble-coming-to-former-gary-s-wine-location-on-rte-23-in-wayne
+Title: Barnes & Noble Coming to Former Gary’s Wine Location on Rte 23 in Wayne
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 19:40:00
+Published: 2026-07-19 06:00:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://cw33.com/a-taste-of-north-texas/food-and-drink/chipotle-expands-in-dallas-with-third-new-location-this-month/]
+Barnes & Noble Coming to Former Gary’s Wine Location on Rte 23 in Wayne | Wayne, NJ News TAPinto | TAPinto
 
 --- Article 45 ---
-URL: https://www.bizjournals.com/twincities/news/2026/06/29/hope-breakfast-bar-maple-grove.html
-Title: Hope Breakfast Bar to open in Maple Grove after years of setbacks
+URL: https://www.wvva.com/2026/07/19/light-so-many-lives-mom-who-beat-cancer-killed-by-falling-tree-branch/?outputType=amp
+Title: ‘A light in so many lives’: Mom who beat cancer killed by falling tree branch
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 19:38:00
+Published: 2026-07-19 05:46:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/twincities/news/2026/06/29/hope-breakfast-bar-maple-grove.html]
+Add Us On Google Add as a preferred source on Google CORINTH, Maine ( WABI /Gray News) - A Maine family is mourning the loss of a 49-year-old woman who was killed by a falling tree branch. She’s being remembered as a devoted mother, loving wife and cherished community member. Amy Tatlock’s husband, Andrew Tatlock, says her family is still struggling to process what happened Thursday afternoon. The 49-year-old mother was killed when a tree branch fell on her car during a strong storm in Corinth. “I feel very numb. We look around the house, and it feels like she’s gonna walk in but we know she’s not going to,” Andrew Tatlock said. Amy Tatlock, 49, was killed when a tree branch fell on her car during a strong storm. She’s being remembered as a devoted mother, loving wife and cherished community member. (Source: Christian Tatlock/Family photos, WABI via CNN) He and his son, Christian Tatlock, are among many in the close-knit community who are in shock after Amy Tatlock’s death. “She was the type of mom that you literally dreamed of... You couldn’t even think of a better mom,” Christian Tatlock said. He says he may never understand why his mother was killed by a falling tree branch. “She battled cancer and defeated it last year in October, so only something as crazy and as questionable as this could take her out — truly,” he said. “She wasn’t going down without a fight. That woman — she was the strongest woman I knew,” he said. Christian Tatlock says his mother’s impact stretched well beyond her family. He plans to spend the rest of his life sharing who she was — “a light in so many lives” through the joy and kindness she showed others — including as a volunteer bus driver and a Girl Scout troop leader for more than two decades. “Remember her as the giving, loving, courageous mother, grandma, friend, sister, aunt — everything that she was — instead of the tragedy,” he said. In 2019, Amy Tatlock entered a contest to help make her home more accessible for her daughter. Her
 
 --- Article 46 ---
-URL: https://www.kwqc.com/2026/06/29/golden-corral-buffet-grill-close-davenport-location/
-Title: Golden Corral Buffet & Grill to close Davenport location
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-06-29 19:32:00
+URL: https://mshale.com/016b8dfb/361302cfWgdRVSYESAk1AR4
+Title: Dates Series Acapulco Restaurant Closing Locations (EqGEo3aAnc)
+Status hint: Closing | Industry: Restaurants
+Published: 2026-07-19 05:45:51
 
-Share Add Us On Google Add as a preferred source on Google DAVENPORT, Iowa (KWQC) - A popular Davenport restaurant will close their doors next week. Golden Corral Buffet & Grill confirmed to KWQC TV6 News that their last day open will be Monday, July 6. Golden Corral Buffet & Grill is located at 5202 Elmore Avenue. Golden Corral Buffet & Grill is known for their family-friendly buffet chain featuring all-you-can-eat American fare, plus salad and dessert bars, according to their website. Copyright 2026 KWQC. All rights reserved.
+[Could not fetch: 403 Client Error: Forbidden for url: https://mshale.com/016b8dfb/361302cfWgdRVSYESAk1AR4]
 
 --- Article 47 ---
-URL: https://www.inc.com/fast-company-2/west-marine-closing-stores-boating-supply-locations/91367282
-Title: West Marine Is Closing Stores: See a Full List of Doomed Boating Supply Locations That Will Shutter in 23 States
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-06-29 19:30:44
+URL: https://nkytribune.com/2026/07/mcalisters-deli-opening-in-newest-location-in-cold-spring-on-monday/
+Title: McAlister’s Deli opening in newest location in Cold Spring on Monday
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-07-19 04:34:37
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.inc.com/fast-company-2/west-marine-closing-stores-boating-supply-locations/91367282]
+[Could not fetch: 403 Client Error: Forbidden for url: https://nkytribune.com/2026/07/mcalisters-deli-opening-in-newest-location-in-cold-spring-on-monday/]
 
 --- Article 48 ---
-URL: https://www.einnews.com/amp/pr_news/923062604/a-r-group-celebrates-the-grand-opening-of-hampton-inn-by-hilton-gulfport-ms
-Title: A&R Group Celebrates the Grand Opening of Hampton Inn by Hilton Gulfport, MS
-Status hint: Opening | Industry: Hospitality
-Published: 2026-06-29 19:30:00
+URL: https://mshale.com/9b072aab/eb7220ebXjBaLl8RFwsnHgI
+Title: 11 Major Restaurants SHUTTING DOWN In 2025
+Status hint: Closing | Industry: Restaurants
+Published: 2026-07-19 04:08:34
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.einnews.com/amp/pr_news/923062604/a-r-group-celebrates-the-grand-opening-of-hampton-inn-by-hilton-gulfport-ms]
+[Could not fetch: 403 Client Error: Forbidden for url: https://mshale.com/9b072aab/eb7220ebXjBaLl8RFwsnHgI]
 
 --- Article 49 ---
-URL: https://www.timeout.com/miami/news/louis-vuitton-just-opened-a-gorgeous-new-womens-boutique-in-the-design-district-062926
-Title: Louis Vuitton opened a stunning new Miami Design District boutique
+URL: https://www.azcentral.com/story/news/local/surprise/2026/07/18/zaxbys-restaurant-bringing-chicken-fingerz-surprise-az/90934707007/
+Title: Zaxby's cleared to open new location in Surprise
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-06-29 19:27:49
+Published: 2026-07-19 04:06:00
 
-
+SURPRISE Zaxby's cleared to open new location in Surprise Elena Santa Cruz Arizona Republic Updated July 18, 2026, 10:06 p.m. MT Zaxby's is inching closer to adding another Arizona location following its 2025 debut. The Southeastern restaurant chain was cleared to bring a new site to the exact opposite side of the Valley from its Queen Creek location.
 
 --- Article 50 ---
-URL: https://www.news4jax.com/news/local/2026/06/29/three-popeyes-restaurants-close-including-jacksonvilles-oldest-amid-bankruptcy-struggles/
-Title: Three Popeyes restaurants close, including Jacksonville’s oldest, amid bankruptcy struggles
-Status hint: Closing | Industry: Restaurants
-Published: 2026-06-29 19:27:19
+URL: http://www.prestoncitizen.co.uk/news/26291744.new-150k-b-rgshake-restaurant-open-blackburn/
+Title: National burger brand to open in 'booming' Blackburn district
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-07-19 04:00:00
 
-A flood warning in effect for Brantley County
+[Could not fetch: HTTPConnectionPool(host='www.prestoncitizen.co.uk', port=80): Max retries exceeded with url: /news/26291744.new-150k-b-rgshake-restaurant-open-blackburn/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000216F0533650>, 'Connection to www.prestoncitizen.co.uk timed out. (connect timeout=15)'))]
