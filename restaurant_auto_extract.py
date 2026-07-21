@@ -106,6 +106,25 @@ def is_separator(line: str) -> bool:
     return bool(re.match(r'^\s*\|?\s*[-:]+\s*(\|\s*[-:]+\s*)+\|?\s*$', line))
 
 
+def _is_real(value: str) -> bool:
+    return bool(value) and value.strip().lower() not in ("not specified", "n/a", "-", "—")
+
+
+def synthesize_location(row: dict) -> str:
+    """Build a single location string from address/city/state/zipcode columns
+    (some batches split the address into separate fields instead of a single
+    'Location' column, which would otherwise leave row['location'] blank)."""
+    address = row.get("address", "")
+    city    = row.get("city", "")
+    state   = row.get("state", "")
+    zipcode = row.get("zipcode", "")
+    parts = [v.strip() for v in (address, city) if _is_real(v)]
+    state_zip = " ".join(v.strip() for v in (state, zipcode) if _is_real(v))
+    if state_zip:
+        parts.append(state_zip)
+    return ", ".join(parts)
+
+
 def parse_table(text: str) -> list[dict]:
     rows, headers, keys = [], [], []
     in_table = False
@@ -131,6 +150,8 @@ def parse_table(text: str) -> list[dict]:
         row = {keys[i]: cells[i] for i in range(len(keys))}
         et = row.get('event_type', '').strip().lower()
         row['event_type'] = {'opening': 'Opening', 'closing': 'Closing', 'remodel': 'Remodel'}.get(et, row.get('event_type', ''))
+        if not row.get('location', '').strip() and row.get('address'):
+            row['location'] = synthesize_location(row)
         if all(v in ('', '—', '-', 'N/A') for v in row.values()):
             continue
         rows.append(row)
