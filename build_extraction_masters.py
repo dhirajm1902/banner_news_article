@@ -91,6 +91,11 @@ def parse_batch_file(path: Path) -> list[dict]:
             continue
         if "|" not in line:
             continue
+        if not line.startswith("|"):
+            # Guard against a leading sentence glued onto the same line as the
+            # table (e.g. "I'll extract the data...| Store Name | ..."), which
+            # would otherwise be parsed as a bogus extra header/column.
+            line = line[line.index("|"):]
         if is_separator(line):
             continue
 
