@@ -148,6 +148,13 @@ def parse_batch_file(path: Path) -> list[dict]:
         if all(v in ("", "—", "-", "N/A") for v in row.values()):
             continue
 
+        if not row.get("location"):
+            location_parts = [row.get("address", ""), row.get("city", "")]
+            state_zip = " ".join(p for p in (row.get("state", ""), row.get("zipcode", "")) if p)
+            if state_zip:
+                location_parts.append(state_zip)
+            row["location"] = ", ".join(p for p in location_parts if p)
+
         row["source_batch"] = path.stem
         row["Date_Appended"] = TODAY
         rows.append(row)
