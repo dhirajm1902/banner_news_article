@@ -24,6 +24,7 @@ Scrapers:
   • Capital Grille  — https://www.thecapitalgrille.com/locations/new-locations (Selenium)
   • Hobby Lobby     — https://newsroom.hobbylobby.com/new-stores (requests)
   • Ulta Beauty     — https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings (requests)
+  • Costco          — https://www.costco.ca/f/-/new-locations (Patchright, Cloudflare-protected)
 
 Output:
   docs/company_website_latest.json
@@ -2029,6 +2030,75 @@ def scrape_ulta() -> list[dict]:
     return results
 
 
+# ── Costco scraper ───────────────────────────────────────────────────────────
+#
+# costco.ca sits behind a Cloudflare bot check ("Just a moment…" interstitial),
+# so this uses Patchright (a Playwright fork with anti-detection patches)
+# instead of the regular playwright/Selenium drivers used above. It needs a
+# real (non-headless) browser window to clear the Cloudflare challenge — see
+# the CI workflow, which runs it under xvfb for that reason.
+
+COSTCO_URL = "https://www.costco.ca/f/-/new-locations"
+
+
+def scrape_costco() -> list[dict]:
+    print(f"[Costco] Loading {COSTCO_URL}")
+    try:
+        from patchright.sync_api import sync_playwright
+    except ImportError:
+        print("[Costco] patchright not installed — run: pip install patchright && patchright install chromium")
+        return []
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(
+                headless=False,
+                args=["--no-sandbox", "--disable-setuid-sandbox"],
+            )
+            context = browser.new_context(
+                viewport={"width": 1280, "height": 800},
+                locale="en-US",
+            )
+            page = context.new_page()
+            page.goto(COSTCO_URL, wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_function("document.title !== 'Just a moment...'", timeout=20000)
+            # Wait until the markdown block that holds the location list is rendered
+            page.wait_for_selector('div[data-testid="MarkdownRenderer"]', timeout=15000)
+            html = page.content()
+            browser.close()
+    except Exception as e:
+        print(f"[Costco] Error: {e}")
+        return []
+
+    soup = BeautifulSoup(html, "html.parser")
+    # Each location lives in its own separate MarkdownRenderer div (along with
+    # unrelated ones like the membership banner and footer), so scan all of them.
+    containers = soup.find_all("div", attrs={"data-testid": "MarkdownRenderer"})
+    print(f"[Costco] Found {len(containers)} MarkdownRenderer container(s).")
+
+    results = []
+    for container in containers:
+        for strong in container.find_all("strong"):
+            address = strong.get_text(strip=True)
+            if not address:
+                continue
+
+            # The opening date sits as plain text right after the <strong> tag,
+            # e.g. "<strong>W Roseville, CA</strong> - January 2026"
+            date_text = strong.next_sibling
+            date_text = str(date_text).strip(" -\n\r\t") if date_text else ""
+
+            results.append({
+                "company":      "Costco",
+                "address":      address,
+                "opening_date": extract_date(date_text) or date_text,
+                "link":         COSTCO_URL,
+            })
+
+    print(f"[Costco] {len(results)} location(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -2215,6 +2285,12 @@ def main():
         all_stores.extend(scrape_ulta())
     except Exception as e:
         print(f"[Ulta Beauty] Scraping failed: {e}")
+
+    # ── Costco ──
+    try:
+        all_stores.extend(scrape_costco())
+    except Exception as e:
+        print(f"[Costco] Scraping failed: {e}")
 
     print(f"\nTotal records collected this run: {len(all_stores)}")
 

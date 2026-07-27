@@ -17,6 +17,9 @@ webdriver-manager
 # Playwright (bizjournals_scraper, batch_extract, company_website_comingsoon)
 playwright
 
+# Patchright (company_website_comingsoon — Costco, Cloudflare-protected)
+patchright
+
 # Text extraction utilities (batch_extract, fetch_text)
 trafilatura
 newspaper3k
