@@ -1254,7 +1254,7 @@
                 <p class="text-gray-500 text-sm">Run company_website_comingsoon.py to generate data.</p>
             </div>
             <div id="companyWebTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
-                <table class="w-full text-sm text-left data-table">
+                <table class="w-full text-sm text-left data-table table-fixed">
                     <thead><tr>
                         <th class="px-3 py-3 w-12 text-center">Done</th>
                         <th class="px-3 py-3 w-10">#</th>
@@ -3250,7 +3250,9 @@
                 <td class="px-3 py-3 text-xs max-w-[280px] ${isDone ? 'text-gray-600 line-through' : 'text-gray-400'}">
                     <span class="line-clamp-2 block" title="${escapeHtml(r.address||'')}">${highlight(r.address||'—', term)}</span>
                 </td>
-                <td class="px-3 py-3 text-xs whitespace-nowrap ${isDone ? 'text-gray-600' : 'text-gray-300'}">${highlight(r.opening_date||'—', term)}</td>
+                <td class="px-3 py-3 text-xs ${isDone ? 'text-gray-600' : 'text-gray-300'}">
+                    <span class="line-clamp-2 block" title="${escapeHtml(r.opening_date||'')}">${highlight(r.opening_date||'—', term)}</span>
+                </td>
                 <td class="px-3 py-3 text-xs whitespace-nowrap text-gray-500">${escapeHtml(r.first_seen||'—')}</td>
                 <td class="px-3 py-3">${linkCell}</td>
             </tr>`;
