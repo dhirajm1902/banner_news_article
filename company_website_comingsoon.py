@@ -1879,9 +1879,35 @@ HOBBY_LOBBY_DATE_RE = re.compile(
     r"\b(?:January|February|March|April|May|June|July|August|September|"
     r"October|November|December)\s+\d{1,2},?\s+\d{4}\b"
 )
+
+# Matches the common "... located at 1943 Mineral Wells Avenue in Tennessee."
+# sentence. NOTE: uses a lazy ".+?" (not a "no periods" class) so mid-address
+# abbreviations like "E.", "S.", "Sgt." don't truncate the match early — it
+# stops at the first " in <words>." instead.
 HOBBY_LOBBY_ADDR_LOCATED = re.compile(
-    r"(?:located at|at)\s+([\d]+[^.,]+(?:,\s*[A-Za-z ]+)?)",
+    r"located\s+at\s+(\d+.+?)\s+in\s+([A-Za-z][A-Za-z .'\-]*?)\.",
     re.IGNORECASE,
+)
+# Relocation articles phrase it as "...originally located at OLD moved to NEW."
+# or "...originally at OLD to NEW." — capture the NEW (current) address only.
+# Same lazy-match approach, anchored on the recurring "<Name> is the store
+# manager" sentence that follows (rather than a bare period, which would
+# again false-stop on abbreviations like "E." inside the address).
+HOBBY_LOBBY_RELOCATION_RE = re.compile(
+    r"originally(?:\s+located)?\s+at\s+.+?\s+(?:moved\s+to|to)\s+(\d+.+?)"
+    r"(?=\.\s+[A-Z][a-zA-Z.'-]*(?:\s+[A-Z][a-zA-Z.'-]*){0,2}\s+is\s+the\s+(?:new\s+)?store\s+manager)",
+    re.IGNORECASE,
+)
+# The opening sentence ("A new Hobby Lobby store opened in Paris, Tennessee
+# on...") reliably gives City, State — more complete than the trailing
+# "located at X in Y" clause, which sometimes only has the state (see Paris).
+HOBBY_LOBBY_OPEN_CITY_RE = re.compile(
+    r"opened\s+in\s+([A-Za-z][A-Za-z .'\-]+?),\s+([A-Za-z][A-Za-z ]+?)\s+on\s",
+    re.IGNORECASE,
+)
+# Relocation articles open with "<City>'s Hobby Lobby store has opened..."
+HOBBY_LOBBY_RELOCATED_CITY_RE = re.compile(
+    r"^\s*([A-Za-z][A-Za-z .'\-]+?)(?:['’�]s)\s+Hobby Lobby store has opened",
 )
 HOBBY_LOBBY_ADDR_STREET = re.compile(
     r"\b(\d{2,5}\s+[A-Z][a-z]+(?:\s+[A-Za-z]+){1,5}"
@@ -1931,13 +1957,24 @@ def _hl_article(url: str) -> tuple[str, str]:
     body_text = " ".join(p.get_text(" ", strip=True) for p in paras)
 
     address = ""
-    m = HOBBY_LOBBY_ADDR_LOCATED.search(body_text)
-    if m:
-        address = m.group(1).strip().rstrip(",")
+    reloc_m = HOBBY_LOBBY_RELOCATION_RE.search(body_text)
+    if reloc_m:
+        street = reloc_m.group(1).strip().rstrip(",")
+        city_m = HOBBY_LOBBY_RELOCATED_CITY_RE.search(body_text)
+        address = f"{street}, {city_m.group(1).strip()}" if city_m else street
     else:
-        m2 = HOBBY_LOBBY_ADDR_STREET.search(body_text)
-        if m2:
-            address = m2.group(1).strip()
+        located_m = HOBBY_LOBBY_ADDR_LOCATED.search(body_text)
+        if located_m:
+            street, tail = located_m.group(1).strip(), located_m.group(2).strip()
+            city_m = HOBBY_LOBBY_OPEN_CITY_RE.search(body_text)
+            if city_m:
+                address = f"{street}, {city_m.group(1).strip()}, {city_m.group(2).strip()}"
+            else:
+                address = f"{street}, {tail}"
+        else:
+            street_m = HOBBY_LOBBY_ADDR_STREET.search(body_text)
+            if street_m:
+                address = street_m.group(1).strip()
 
     return address, opening_date
 
