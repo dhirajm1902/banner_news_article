@@ -1,5 +1,5 @@
 {
-  "last_updated": "July 28, 2026 05:18 UTC",
+  "last_updated": "July 31, 2026 05:39 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -22,7 +22,7 @@
     {
       "company": "ALDI",
       "address": "126 Boston Street, Lynn, MA 01904",
-      "opening_date": "07/28/2026",
+      "opening_date": "07/31/2026",
       "link": "https://info.aldi.us/stores/l/ma/lynn/126-boston-street/ft31"
     },
     {
@@ -70,7 +70,7 @@
     {
       "company": "Dogtopia",
       "address": "2311 Colorado Blvd, Denton, Texas 76205, United States",
-      "opening_date": "Coming Summer 2026!",
+      "opening_date": "Coming Fall 2026!",
       "link": "https://www.dogtopia.com/locations/denton/"
     },
     {
@@ -128,21 +128,15 @@
       "link": "https://www.dogtopia.com/locations/jenkintown/"
     },
     {
-      "company": "Dogtopia",
-      "address": "140 Four Seasons Shopping Center, Chesterfield, Missouri 63017, United States",
-      "opening_date": "PERMANENTLY CLOSED",
-      "link": "https://www.dogtopia.com/locations/four-seasons-chesterfield/"
-    },
-    {
       "company": "Burlington",
-      "address": "783 Lancaster Dr NE Ste 133, Salem, Oregon",
-      "opening_date": "07/30",
+      "address": "20000 E. Jackson Dr., Independence, Missouri",
+      "opening_date": "08/06",
       "link": "https://www.burlington.com/grand-openings"
     },
     {
       "company": "Burlington",
-      "address": "2640 W University Dr. #1276, Denton, Texas",
-      "opening_date": "07/30",
+      "address": "8450 NW Prairie View Rd, Kansas City, Missouri",
+      "opening_date": "08/20",
       "link": "https://www.burlington.com/grand-openings"
     },
     {
@@ -161,18 +155,6 @@
       "company": "Burlington",
       "address": "TBD - NEC of US Expressway 83 & Mile 1 ½ Rd., Mercedes, Texas",
       "opening_date": "09/17",
-      "link": "https://www.burlington.com/grand-openings"
-    },
-    {
-      "company": "Burlington",
-      "address": "20000 E. Jackson Dr., Independence, Missouri",
-      "opening_date": "08/06",
-      "link": "https://www.burlington.com/grand-openings"
-    },
-    {
-      "company": "Burlington",
-      "address": "8450 NW Prairie View Rd, Kansas City, Missouri",
-      "opening_date": "08/20",
       "link": "https://www.burlington.com/grand-openings"
     },
     {
@@ -345,9 +327,27 @@
     },
     {
       "company": "Five Below",
+      "address": "182 Summit Ave, Circleville, OH, 43113",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/oh/circleville/182-summit-ave/coming-soon"
+    },
+    {
+      "company": "Five Below",
       "address": "8447 Alondra Blvd, Paramount, CA, 90723",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/ca/paramount/8447-alondra-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "11096 Jefferson Blvd, Culver City, CA, 90230",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/culver-city/11096-jefferson-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "20426 CA-18, Apple Valley, CA, 92307",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/apple-valley/20426-ca-18/coming-soon"
     },
     {
       "company": "Five Below",
@@ -366,6 +366,60 @@
       "address": "113 Northshore Blvd, Slidell, LA, 70460",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/la/slidell/113-northshore-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "2804 Frontage Road, Warsaw, IN, 46580",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/in/warsaw/2804-frontage-road/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "3100 Hwy 365, Port Arthur, TX, 77642",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/tx/port-arthur/3100-hwy-365/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "4847 W Commerce St., San Antonio, TX, 78237",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/tx/san-antonio/4847-w-commerce-st./coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "930 22nd Ave S, Brookings, SD, 57006",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/sd/brookings/930-22nd-ave-s/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "2628 Nez Perce Dr., Lewiston, ID, 83501",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/id/lewiston/2628-nez-perce-dr./coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "1991 EW Pkwy, Fleming Island, FL, 32003",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/fl/fleming-island/1991-ew-pkwy/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "2600 South Rd., Poughkeepsie, NY, 12601",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ny/poughkeepsie/2600-south-rd./coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "2441 Foothill Blvd, Rock Springs, WY, 82901",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/wy/rock-springs/2441-foothill-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "58-86 Swansea Mall, Swansea, MA, 02777",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ma/swansea/58-86-swansea-mall/coming-soon"
     },
     {
       "company": "HomeGoods",
@@ -879,12 +933,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "1807 Plymouth Road, Minnetonka, MN 55305-1980",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-MN"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "5466 St. Croix Trail, North Branch, MN 55056-4204",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MN"
@@ -970,12 +1018,6 @@
     {
       "company": "Jersey Mike's",
       "address": "57 Bethel Road, Somers Point, NJ 08244-1601",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-NJ"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "1 Commvault Way, Tinton Falls (New Shrewsbury), NJ 07724-3096",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-NJ"
     },
@@ -1335,12 +1377,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "355 E 2600 N, North Ogden, UT 84414",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-UT"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "178 West 1500 S Main St., Richfield, UT 84701",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-UT"
@@ -1383,6 +1419,12 @@
     },
     {
       "company": "Jersey Mike's",
+      "address": "500 Valley Mall Parkway, West Wenatchee, WA 98802-3812",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-WA"
+    },
+    {
+      "company": "Jersey Mike's",
       "address": "25 Sweetbrier Lane, Bridgeport, WV 26330-8426",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-WV"
@@ -1398,6 +1440,12 @@
       "address": "209 Pennsylvania Avenue SE, Washington, DC 20003-1107",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-DC"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "",
+      "opening_date": "July 30, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-countryside-and-tuolumne"
     },
     {
       "company": "Chick-fil-A",
@@ -1542,12 +1590,6 @@
       "address": "",
       "opening_date": "May 26, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-dallas-north-tollway-and-w-frontier-pkwy"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "930 Garrisonville Road",
-      "opening_date": "May 21, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-west-garrisonville"
     },
     {
       "company": "Wawa",
@@ -2139,6 +2181,30 @@
     },
     {
       "company": "Marshalls",
+      "address": "1424 West Hunt Hwy, San Tan Valley, Arizona",
+      "opening_date": "August 27, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1639&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "19390 Bear Valley Rd, Apple Valley, California",
+      "opening_date": "July 30, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1619&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "1855 Main St S-1110, Ramona, California",
+      "opening_date": "August 27, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1658&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "1701 Us Hgwy 22 West, Watchung, New Jersey",
+      "opening_date": "August 27, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=281&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
       "address": "417 Blue Ridge St S D1, Blairsville, Georgia",
       "opening_date": "August 6, 2026",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1667&ref=grandOpenings"
@@ -2157,12 +2223,6 @@
     },
     {
       "company": "Marshalls",
-      "address": "19390 Bear Valley Rd, Apple Valley, California",
-      "opening_date": "July 30, 2026",
-      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1619&ref=grandOpenings"
-    },
-    {
-      "company": "Marshalls",
       "address": "995 North State 434, Altamonte Springs, Florida",
       "opening_date": "Now Open!",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=67&ref=grandOpenings"
@@ -2178,6 +2238,12 @@
       "address": "Ave Victor Rojas & Calle Cervantes, Arecibo, Puerto Rico",
       "opening_date": "August 13, 2026",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=625&ref=grandOpenings"
+    },
+    {
+      "company": "TJ Maxx",
+      "address": "1254 East Ash St, Piqua",
+      "opening_date": "August 30, 2026",
+      "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1702&ref=grandOpenings"
     },
     {
       "company": "TJ Maxx",
@@ -2247,73 +2313,73 @@
     },
     {
       "company": "Hobby Lobby",
-      "address": "3136 N",
+      "address": "3136 N. Stockton Hill Road, Kingman, Arizona",
       "opening_date": "July 17, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-kingman-arizona"
     },
     {
       "company": "Hobby Lobby",
-      "address": "265 N",
+      "address": "265 N. McDowell Boulevard, Petaluma, California",
       "opening_date": "July 17, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-petaluma-california"
     },
     {
       "company": "Hobby Lobby",
-      "address": "8 Gurnet Road in Brunswick",
+      "address": "8 Gurnet Road, Brunswick, Maine",
       "opening_date": "July 03, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-brunswick-maine"
     },
     {
       "company": "Hobby Lobby",
-      "address": "1943 Mineral Wells Avenue in Tennessee",
+      "address": "1943 Mineral Wells Avenue, Paris, Tennessee",
       "opening_date": "June 19, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-paris-tennessee"
     },
     {
       "company": "Hobby Lobby",
-      "address": "19382 Bear Valley Road in Apple Valley",
+      "address": "19382 Bear Valley Road, Apple Valley, California",
       "opening_date": "June 12, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-apple-valley-califronai"
     },
     {
       "company": "Hobby Lobby",
-      "address": "284 Black Gold Boulevard in Hazard",
+      "address": "284 Black Gold Boulevard, Hazard, Kentucky",
       "opening_date": "June 05, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-hazard-kentucky"
     },
     {
       "company": "Hobby Lobby",
-      "address": "15750 Shady Grove Road in Gaithersburg",
+      "address": "15750 Shady Grove Road, Gaithersburg, Maryland",
       "opening_date": "May 29, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-gaithersburg-maryland"
     },
     {
       "company": "Hobby Lobby",
-      "address": "400 Mill Avenue SE in New Philadelphia",
+      "address": "400 Mill Avenue SE, New Philadelphia, Ohio",
       "opening_date": "May 29, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-new-philadelphia-ohio"
     },
     {
       "company": "Hobby Lobby",
-      "address": "231 Mall Drive in Murrells Inlet",
+      "address": "231 Mall Drive, Murrells Inlet, South Carolina",
       "opening_date": "April 17, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-murrells-inlet-south-carolina"
     },
     {
       "company": "Hobby Lobby",
-      "address": "2753 E",
+      "address": "2753 E. Eastland Ctr Drive, Suite 1160, West Covina",
       "opening_date": "March 30, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/relocation-of-store-in-west-covina-california"
     },
     {
       "company": "Hobby Lobby",
-      "address": "1101 E 16th Avenue in Cordele",
+      "address": "1101 E 16th Avenue, Cordele, Georgia",
       "opening_date": "March 27, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-cordele-georgia"
     },
     {
       "company": "Hobby Lobby",
-      "address": "11215 Causeway Boulevard in Brandon",
+      "address": "11215 Causeway Boulevard, Brandon, Florida",
       "opening_date": "March 20, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-brandon-florida"
     },
