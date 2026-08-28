@@ -25,6 +25,7 @@ Scrapers:
   • Hobby Lobby     — https://newsroom.hobbylobby.com/new-stores (requests)
   • Ulta Beauty     — https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings (requests)
   • Costco          — https://www.costco.ca/f/-/new-locations (Patchright, Cloudflare-protected)
+  • Citi Trends     — https://locations.cititrends.com/coming-soon.html (requests)
 
 Output:
   docs/company_website_latest.json
@@ -2136,6 +2137,54 @@ def scrape_costco() -> list[dict]:
     return results
 
 
+# ── Citi Trends scraper ──────────────────────────────────────────────────────
+
+CITI_TRENDS_URL = "https://locations.cititrends.com/coming-soon.html"
+CITI_TRENDS_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+    )
+}
+
+
+def scrape_citi_trends() -> list[dict]:
+    print(f"[Citi Trends] Fetching {CITI_TRENDS_URL}")
+    try:
+        resp = requests.get(CITI_TRENDS_URL, headers=CITI_TRENDS_HEADERS, timeout=30)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"[Citi Trends] Error: {e}")
+        return []
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    boxes = soup.find_all("div", class_="c-location-grid-col")
+    print(f"[Citi Trends] Found {len(boxes)} location card(s).")
+
+    results = []
+    for box in boxes:
+        address_tag = box.find("div", class_="c-location-grid-item-address")
+        status_tag  = box.find("div", class_="directory-status")
+        link_tag    = box.find("a", class_="c-location-grid-item-link")
+
+        address = address_tag.get_text(" ", strip=True) if address_tag else ""
+        status  = status_tag.get_text(strip=True) if status_tag else ""
+        link    = link_tag["href"] if link_tag and link_tag.get("href") else CITI_TRENDS_URL
+
+        if not address:
+            continue
+
+        results.append({
+            "company":      "Citi Trends",
+            "address":      address,
+            "opening_date": extract_date(status) or status,
+            "link":         link,
+        })
+
+    print(f"[Citi Trends] {len(results)} store(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -2328,6 +2377,12 @@ def main():
         all_stores.extend(scrape_costco())
     except Exception as e:
         print(f"[Costco] Scraping failed: {e}")
+
+    # ── Citi Trends ──
+    try:
+        all_stores.extend(scrape_citi_trends())
+    except Exception as e:
+        print(f"[Citi Trends] Scraping failed: {e}")
 
     print(f"\nTotal records collected this run: {len(all_stores)}")
 
