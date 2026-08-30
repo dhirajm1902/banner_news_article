@@ -76,8 +76,12 @@ def get_driver():
 
 
 # ── Config ────────────────────────────────────────────────────────────────────
-URL       = "https://whatnow.com/category/restaurants/"
-MAX_PAGES = 7
+# Both categories feed into the same restaurant output files below — no
+# separate directories/files for retail, just more rows in the same dataset.
+CATEGORIES = [
+    {"name": "restaurants", "url": "https://whatnow.com/category/restaurants/", "max_pages": 7},
+    {"name": "retail",      "url": "https://whatnow.com/category/retail/",      "max_pages": 2},
+]
 
 HEADERS = {
     "User-Agent": (
@@ -86,20 +90,23 @@ HEADERS = {
     )
 }
 
-# ── Scrape post listing ───────────────────────────────────────────────────────
 MAX_LOAD_RETRIES = 3
 
-driver = get_driver()
 
-try:
+def count_posts(driver):
+    return len(driver.find_elements(By.CLASS_NAME, "p-wrap"))
+
+
+def scrape_category(driver, url, max_pages, label):
+    """Load a whatnow.com category listing and return its post rows (date + url)."""
     page_load_ok = False
     for attempt in range(1, MAX_LOAD_RETRIES + 1):
         try:
-            driver.get(URL)
+            driver.get(url)
             page_load_ok = True
             break
         except Exception as err:
-            print(f"⚠️  Page load attempt {attempt}/{MAX_LOAD_RETRIES} failed: {type(err).__name__}: {err}")
+            print(f"⚠️  [{label}] Page load attempt {attempt}/{MAX_LOAD_RETRIES} failed: {type(err).__name__}: {err}")
             try:
                 driver.execute_script("window.stop();")
             except Exception:
@@ -109,80 +116,86 @@ try:
                 time.sleep(10)
 
     if not page_load_ok:
-        print("❌  Site unreachable after all retries — exiting gracefully.")
-        driver.quit()
-        exit(0)
+        print(f"❌  [{label}] Site unreachable after all retries — skipping.")
+        return []
 
     try:
         WebDriverWait(driver, 15).until(
             EC.presence_of_all_elements_located((By.CLASS_NAME, "p-wrap"))
         )
     except Exception:
-        print("⚠️  No posts found on initial load — check if selector changed")
-
-    def count_posts():
-        return len(driver.find_elements(By.CLASS_NAME, "p-wrap"))
+        print(f"⚠️  [{label}] No posts found on initial load — check if selector changed")
 
     pages_viewed = 1
-    while pages_viewed < MAX_PAGES:
-        prev_count = count_posts()
+    while pages_viewed < max_pages:
+        prev_count = count_posts(driver)
         try:
             view_more = driver.find_element(
                 By.XPATH, "//a[contains(@class, 'loadmore-trigger')]"
             )
         except Exception:
-            print(f"No more 'View More' button — stopping at page {pages_viewed}")
+            print(f"[{label}] No more 'View More' button — stopping at page {pages_viewed}")
             break
 
         driver.execute_script("arguments[0].click();", view_more)
         try:
-            WebDriverWait(driver, 10).until(lambda d: count_posts() > prev_count)
+            WebDriverWait(driver, 10).until(lambda d: count_posts(d) > prev_count)
             pages_viewed += 1
-            print(f"  Loaded page {pages_viewed}/{MAX_PAGES}")
+            print(f"  [{label}] Loaded page {pages_viewed}/{max_pages}")
             time.sleep(0.5)
         except Exception:
-            print("Click did not load new posts or timed out")
+            print(f"[{label}] Click did not load new posts or timed out")
             break
 
-    page_source = driver.page_source
+    soup  = BeautifulSoup(driver.page_source, "html.parser")
+    posts = soup.select("div.p-wrap")
 
-finally:
-    driver.quit()   # always quit — even if scraping throws an error
+    cat_rows = []
+    for p in posts:
+        a    = p.select_one("h4.entry-title a.p-url") or p.select_one("h4.entry-title a")
+        href = a.get("href") if a else None
+        if not href:
+            continue
 
-# ── Parse posts ───────────────────────────────────────────────────────────────
-soup  = BeautifulSoup(page_source, "html.parser")
-posts = soup.select("div.p-wrap")
+        time_el  = p.select_one("time[datetime]") or p.select_one("time")
+        date_str = None
+
+        if time_el:
+            if time_el.has_attr("datetime"):
+                dt_str = time_el["datetime"].replace("Z", "+00:00")
+                try:
+                    post_dt = datetime.fromisoformat(dt_str)
+                    if post_dt.tzinfo is None:
+                        post_dt = post_dt.replace(tzinfo=timezone.utc)
+                    date_str = post_dt.strftime("%B %d, %Y")
+                except Exception:
+                    date_str = time_el.get_text(strip=True)
+            else:
+                date_str = time_el.get_text(strip=True)
+
+        cat_rows.append({"date": date_str, "url": href})
+
+    print(f"📋 [{label}] Posts found: {len(cat_rows)}")
+    return cat_rows
+
+
+# ── Scrape post listings (restaurants + retail, merged) ───────────────────────
+driver = get_driver()
 
 rows      = []
 seen_urls = set()
 
-for p in posts:
-    a    = p.select_one("h4.entry-title a.p-url") or p.select_one("h4.entry-title a")
-    href = a.get("href") if a else None
-    if not href or href in seen_urls:
-        continue
+try:
+    for cat in CATEGORIES:
+        for row in scrape_category(driver, cat["url"], cat["max_pages"], cat["name"]):
+            if row["url"] in seen_urls:
+                continue
+            seen_urls.add(row["url"])
+            rows.append(row)
+finally:
+    driver.quit()   # always quit — even if scraping throws an error
 
-    time_el  = p.select_one("time[datetime]") or p.select_one("time")
-    post_dt  = None
-    date_str = None
-
-    if time_el:
-        if time_el.has_attr("datetime"):
-            dt_str = time_el["datetime"].replace("Z", "+00:00")
-            try:
-                post_dt = datetime.fromisoformat(dt_str)
-                if post_dt.tzinfo is None:
-                    post_dt = post_dt.replace(tzinfo=timezone.utc)
-                date_str = post_dt.strftime("%B %d, %Y")
-            except Exception:
-                date_str = time_el.get_text(strip=True)
-        else:
-            date_str = time_el.get_text(strip=True)
-
-    seen_urls.add(href)
-    rows.append({"date": date_str, "url": href})
-
-print(f"\n📋 Posts within last 48 hours: {len(rows)}")
+print(f"\n📋 Total posts across categories: {len(rows)}")
 
 if not rows:
     print("No posts found in window — exiting without writing files.")
