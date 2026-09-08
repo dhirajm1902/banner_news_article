@@ -15,6 +15,7 @@ SUPABASE_URL=...
 SUPABASE_KEY=...
 ANTHROPIC_API_KEY=...  # Used by some extraction scripts
 GEMINI_API_KEY=...     # Used by the chat widget in index.html
+GROQ_API_KEY=...       # Used by ct_scoop_auto_extract.py / community_impact_auto_extract.py (free tier)
 ```
 
 Install dependencies:
@@ -32,11 +33,14 @@ pip install pandas feedparser python-dateutil supabase selenium requests beautif
 | `restaurant_scraper.py` | Restaurant listings | Uses Selenium (headless Chrome) |
 | `warn.py` | State WARN Act portals | 5,000+ lines; state-specific handlers |
 | `ct_scoop_scraper.py` | CT Scoop | Regional announcements |
+| `community_impact_scraper.py` | communityimpact.com/business/ | Uses Patchright (Cloudflare bot-check, same as Costco in `company_website_comingsoon.py`); per-metro-city article listings |
 
 ### Extraction Pipeline (Claude-Assisted)
 1. **`daily_news_prepare.py`** — Batches ~50 articles, writes `newsbatch_N.txt` files with a structured Claude prompt asking for a markdown extraction table.
 2. **Manual step** — User pastes each batch into Claude; Claude returns `newsbatch_N_output.md` with a table of store name, location, event type, date, etc.
 3. **`build_extraction_masters.py`** — Parses all `newsbatch_*_output.md` files into master CSVs under `data/daily_news/`.
+
+**Automated alternative**: `ct_scoop_auto_extract.py` and `community_impact_auto_extract.py` skip the manual paste step entirely — they read their source's `*_latest.json`, fetch each article, call the Groq API (free tier, `GROQ_API_KEY`) with the same extraction prompt, and write both `*_extraction_latest.json` (read directly by the frontend) and `master_file/*_master_extraction.csv` (synced to Supabase).
 
 ### Data Consolidation & Sync
 - **`merge_results.py`** — Merges opening/closing JSON archives into unified datasets.
@@ -72,19 +76,21 @@ Single-file glassmorphic dashboard. Key behaviors:
 - Requires Supabase session — page is hidden until auth is verified.
 - Fetches data directly from Supabase tables via the JS client.
 - AI chat widget calls **Gemini API** (not Claude) from the browser using `GEMINI_API_KEY` embedded at build/deploy time.
-- Tabs: Store News, CT Scoop, Restaurant News — each with Articles and Extraction sub-tabs.
+- Tabs: Store News, CT Scoop, Restaurant News, Biz Debut, Daily News, Warn News, Company Website, Community Impact — most have Articles and Extraction sub-tabs (Warn News and Company Website don't).
 - Deployed to both GitHub Pages and Vercel; Vercel config adds 1-hour cache headers on JSON files.
 
 ## GitHub Actions Automation
 
-Eight workflows in `.github/workflows/` run on schedule:
+Nine workflows in `.github/workflows/` run on schedule:
 
 | Workflow | Schedule (UTC) | Action |
 |----------|---------------|--------|
 | Daily banner news | 23:30 daily | `fetch_banner_store_news.py` → sync |
 | Daily restaurant | daily | `restaurant_scraper.py` → sync |
 | Daily BusinessDebut | daily | `businessdebut_scraper.py` → sync |
+| Daily CT Scoop | daily | `ct_scoop_scraper.py` → `ct_scoop_auto_extract.py` (Groq) → sync |
 | Daily WARN Act | daily | `warn.py` → sync |
+| Daily Community Impact | 22:30 daily | `community_impact_scraper.py` → `community_impact_auto_extract.py` (Groq) → sync |
 | Extraction master build | manual trigger | `build_extraction_masters.py` → sync |
 
 All workflows commit updated CSVs back to `main` and call `sync_to_supabase.py`.

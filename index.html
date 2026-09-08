@@ -352,6 +352,9 @@
                 <button id="tabCompanyWebBtn" class="tab-btn" onclick="switchTab('companyweb')">
                     <i class="fas fa-globe mr-1.5"></i>Company Website
                 </button>
+                <button id="tabCommunityBtn" class="tab-btn" onclick="switchTab('community')">
+                    <i class="fas fa-city mr-1.5"></i>Community Impact<span id="tabCommunityNewCount" class="tab-new-dot hidden"></span>
+                </button>
             </div>
         </div>
 
@@ -726,6 +729,133 @@
                     <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
                         <span>Showing <span id="extRowCount" class="text-gray-300 font-semibold">0</span> records</span>
                         <span>Updated: <span id="extLastUpdated" class="text-gray-300">—</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMMUNITY IMPACT TAB -->
+        <div id="communityTabContent" class="hidden">
+            <div class="mb-6 flex justify-center">
+                <div class="glass rounded-2xl p-1 flex gap-1">
+                    <button id="communitySubTabArticlesBtn" class="sub-tab-btn active" onclick="switchCommunitySubTab('articles')">
+                        <i class="fas fa-city mr-1"></i> Articles
+                    </button>
+                    <button id="communitySubTabExtractionBtn" class="sub-tab-btn" onclick="switchCommunitySubTab('extraction')">
+                        <i class="fas fa-table mr-1"></i> Extraction
+                    </button>
+                </div>
+            </div>
+
+            <div id="communityArticlesSubTab">
+                <div id="communityStatsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 fade-in" style="display:none;">
+                    <div class="stats-card rounded-2xl p-6 card-accent-blue">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Articles</p>
+                                <p class="text-3xl font-bold text-white" id="communityTotalArticles">0</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                                <i class="fas fa-city text-blue-400 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6 card-accent-green">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Metro Cities</p>
+                                <p class="text-3xl font-bold text-gray-300" id="communityTotalCities">0</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center">
+                                <i class="fas fa-map-location-dot text-gray-400 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                        <input type="text" id="communitySearchInput" placeholder="Search by store, headline, or city..."
+                            class="input-field w-full pl-11 pr-4 py-3 text-sm"
+                            oninput="debounce(filterCommunityArticles, 250)()">
+                    </div>
+                    <select id="communityCityFilter" onchange="filterCommunityArticles()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Cities</option>
+                    </select>
+                    <button onclick="downloadCommunityCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                        <i class="fas fa-download"></i><span>Download CSV</span>
+                    </button>
+                </div>
+                <div id="communityLoadingState" class="hidden py-20"></div>
+                <div id="communityEmptyState" class="text-center py-20 hidden">
+                    <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-inbox text-3xl text-gray-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-300">No recent Community Impact articles</h3>
+                    <p class="text-gray-500 text-sm">No business openings/closings found in the last 2 days.</p>
+                </div>
+                <div id="communityArticlesContainer" class="hidden"></div>
+            </div>
+
+            <div id="communityExtractionSubTab" class="hidden">
+                <div id="communityExtStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+                    <div class="stats-card rounded-2xl p-6 card-accent-blue">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Rows</p><p class="text-3xl font-bold text-white" id="communityExtTotal">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center"><i class="fas fa-table text-blue-400 text-xl"></i></div>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6 card-accent-green">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p><p class="text-3xl font-bold text-gray-300" id="communityExtOpenings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-arrow-trend-up text-gray-400 text-xl"></i></div>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6 card-accent-orange">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p><p class="text-3xl font-bold text-gray-300" id="communityExtClosings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-arrow-trend-down text-gray-400 text-xl"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                        <input type="text" id="communityExtSearchInput" placeholder="Search by store, location, or description..."
+                            class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterCommunityExtractionRows,250)()">
+                    </div>
+                    <select id="communityExtTypeFilter" onchange="filterCommunityExtractionRows()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Types</option>
+                        <option value="Opening">Opening</option>
+                        <option value="Closing">Closing</option>
+                    </select>
+                    <button onclick="downloadCommunityExtractionCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                        <i class="fas fa-download"></i><span>Download CSV</span>
+                    </button>
+                </div>
+                <div id="communityExtLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading...</p></div>
+                <div id="communityExtEmptyState" class="text-center py-20 hidden">
+                    <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-table text-3xl text-gray-600"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
+                    <p class="text-gray-500 text-sm">Run the extractor script to generate data.</p>
+                </div>
+                <div id="communityExtTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
+                    <table class="w-full text-sm text-left data-table table-fixed">
+                        <thead><tr>
+                            <th class="px-3 py-3 whitespace-nowrap w-12">#</th>
+                            <th class="px-3 py-3">Store / Restaurant</th>
+                            <th class="px-3 py-3">Location</th>
+                            <th class="px-3 py-3 w-28">Event Type</th>
+                            <th class="px-3 py-3 w-36">Event Date</th>
+                            <th class="px-3 py-3 w-40">Status</th>
+                            <th class="px-3 py-3">Description</th>
+                            <th class="px-3 py-3 w-20">Link</th>
+                        </tr></thead>
+                        <tbody id="communityExtTableBody"></tbody>
+                    </table>
+                    <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
+                        <span>Showing <span id="communityExtRowCount" class="text-gray-300 font-semibold">0</span> records</span>
+                        <span>Updated: <span id="communityExtLastUpdated" class="text-gray-300">—</span></span>
                     </div>
                 </div>
             </div>
@@ -1300,6 +1430,7 @@
     document.getElementById('scoopLoadingState').innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>`;
     document.getElementById('bizLoadingState').innerHTML   = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>`;
     document.getElementById('dailyLoadingState').innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>`;
+    document.getElementById('communityLoadingState').innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>`;
 
     (function(){
         const style = document.createElement('style');
@@ -1318,6 +1449,8 @@
     const DAILY_NEWS_EXT_URL     = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/daily_news_extraction_latest.json';
     const WARN_JSON_URL          = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/warn_latest.json';
     const COMPANY_WEB_JSON_URL   = 'docs/company_website_master.json';
+    const COMMUNITY_JSON_URL       = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/community_impact_latest.json';
+    const COMMUNITY_EXTRACTION_URL = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/community_impact_extraction_latest.json';
 
     let storeArticles = [], filteredStoreArticles = [];
     let doneKeys = new Set();
@@ -1337,6 +1470,9 @@
     let warnRows = [], filteredWarnRows = [];
     let warnSortCol = 'notice_date', warnSortDir = 'desc';
     let companyWebRows = [], filteredCompanyWebRows = [];
+    let communityArticles = [], filteredCommunityArticles = [];
+    let communityExtractionRows = [], filteredCommunityExtractionRows = [];
+    let activeCommunitySubTab = 'articles';
     let activeTab = 'store', activeScoopSubTab = 'articles';
 
     // ── 2026 date filter helper ───────────────────────────────────────────────
@@ -1393,6 +1529,7 @@
         restArticles.forEach(a => seenSet.add(a.url || ''));
         bizArticles.forEach(a => seenSet.add(a.link || ''));
         dailyNewsArticles.forEach(a => seenSet.add(a.link || ''));
+        communityArticles.forEach(a => seenSet.add(a.link || ''));
         localStorage.setItem('seenArticles', JSON.stringify([...seenSet]));
         // Remove all badges and glows from current DOM
         document.querySelectorAll('.badge-new').forEach(b => b.remove());
@@ -1409,6 +1546,7 @@
             restaurant: restArticles.filter(a => isNew(a.date, a.url || '')).length,
             biz: bizArticles.filter(a => isNew(a.date, a.link || '')).length,
             daily: dailyNewsArticles.filter(a => isNew(a.date, a.link || '')).length,
+            community: communityArticles.filter(a => isNew(a.date, a.link || '')).length,
         };
         const updateDot = (id, n) => {
             const el = document.getElementById(id);
@@ -1421,6 +1559,7 @@
         updateDot('tabRestaurantNewCount', counts.restaurant);
         updateDot('tabBizNewCount',        counts.biz);
         updateDot('tabDailyNewCount',      counts.daily);
+        updateDot('tabCommunityNewCount',  counts.community);
         const totalNew = Object.values(counts).reduce((s, v) => s + v, 0);
         const markAllBtn = document.getElementById('markAllReadBtn');
         if (markAllBtn) markAllBtn.classList.toggle('hidden', totalNew === 0);
@@ -1496,8 +1635,8 @@
 
     function switchTab(tab) {
         activeTab = tab;
-        const tabs = { store: 'storeTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent', daily: 'dailyTabContent', warn: 'warnTabContent', companyweb: 'companywebTabContent' };
-        const btns = { store: 'tabStoreBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn', daily: 'tabDailyBtn', warn: 'tabWarnBtn', companyweb: 'tabCompanyWebBtn' };
+        const tabs = { store: 'storeTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent', daily: 'dailyTabContent', warn: 'warnTabContent', companyweb: 'companywebTabContent', community: 'communityTabContent' };
+        const btns = { store: 'tabStoreBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn', daily: 'tabDailyBtn', warn: 'tabWarnBtn', companyweb: 'tabCompanyWebBtn', community: 'tabCommunityBtn' };
         Object.values(tabs).forEach(id => document.getElementById(id).classList.add('hidden'));
         Object.values(btns).forEach(id => document.getElementById(id).classList.remove('active'));
         document.getElementById(tabs[tab]).classList.remove('hidden');
@@ -1518,11 +1657,14 @@
             if (warnRows.length === 0) loadWarnData();
         } else if (tab === 'companyweb') {
             if (companyWebRows.length === 0) loadCompanyWebData();
+        } else if (tab === 'community') {
+            if (activeCommunitySubTab === 'articles' && communityArticles.length === 0) loadCommunityData();
+            if (activeCommunitySubTab === 'extraction' && communityExtractionRows.length === 0) loadCommunityExtractionData();
         }
     }
 
     function updateNavTotal() {
-        const total = storeArticles.length + scoopArticles.length + restArticles.length + bizArticles.length + dailyNewsArticles.length + warnRows.length;
+        const total = storeArticles.length + scoopArticles.length + restArticles.length + bizArticles.length + dailyNewsArticles.length + warnRows.length + communityArticles.length;
         const badge = document.getElementById('navTotalBadge');
         document.getElementById('navTotalCount').textContent = total;
         badge.classList.toggle('hidden', total === 0);
@@ -2093,6 +2235,196 @@
     }
 
     // â•â• RESTAURANT â•â•
+    async function loadCommunityData() {
+        try {
+            document.getElementById('communityLoadingState').classList.remove('hidden');
+            document.getElementById('communityArticlesContainer').classList.add('hidden');
+            document.getElementById('communityEmptyState').classList.add('hidden');
+            document.getElementById('communityStatsContainer').style.display = 'none';
+
+            const res = await fetch(COMMUNITY_JSON_URL + '?t=' + Date.now());
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
+
+            // No is2026Plus filter here — Community Impact's date field is a
+            // relative string (e.g. "16h ago"), not an absolute date, so it
+            // can't be reliably year-filtered like the other sources.
+            communityArticles = (data.data || []).map(item => ({
+                city:  item.city  || '',
+                title: item.title || '',
+                date:  item.date  || '',
+                link:  item.link  || '',
+                image: item.image || '',
+            }));
+            filteredCommunityArticles = communityArticles;
+            populateCommunityCityFilter();
+            updateCommunityStats(filteredCommunityArticles);
+            renderCommunityArticles();
+            updateNavTotal();
+            updateTabNewCounts();
+            document.getElementById('communityLoadingState').classList.add('hidden');
+        } catch (err) {
+            console.error(err);
+            document.getElementById('communityLoadingState').classList.add('hidden');
+            document.getElementById('communityEmptyState').classList.remove('hidden');
+        }
+    }
+
+    function populateCommunityCityFilter() {
+        const select = document.getElementById('communityCityFilter');
+        const current = select.value;
+        const cities = [...new Set(communityArticles.map(a => a.city).filter(Boolean))].sort();
+        select.innerHTML = '<option value="all">All Cities</option>' +
+            cities.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+        if (cities.includes(current)) select.value = current;
+    }
+
+    function updateCommunityStats(articles) {
+        setCount('communityTotalArticles', articles.length);
+        setCount('communityTotalCities', new Set(articles.map(a => a.city).filter(Boolean)).size);
+        document.getElementById('communityStatsContainer').style.display = articles.length ? 'grid' : 'none';
+    }
+
+    function filterCommunityArticles() {
+        const term = document.getElementById('communitySearchInput').value.toLowerCase();
+        const city = document.getElementById('communityCityFilter').value;
+        filteredCommunityArticles = communityArticles.filter(a => {
+            const matchesTerm = !term || ['title', 'city'].some(k => (a[k] || '').toLowerCase().includes(term));
+            return matchesTerm && (city === 'all' || a.city === city);
+        });
+        updateCommunityStats(filteredCommunityArticles);
+        renderCommunityArticles();
+    }
+
+    function downloadCommunityCSV() {
+        if (!filteredCommunityArticles.length) return;
+        const h = ['date', 'city', 'title', 'link'];
+        const csv = [h.join(','), ...filteredCommunityArticles.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
+        dlCSV(csv, `community_impact_${TODAY}.csv`);
+        showToast('Community Impact CSV downloaded!');
+    }
+
+    function renderCommunityArticles() {
+        const container = document.getElementById('communityArticlesContainer');
+        const term = document.getElementById('communitySearchInput').value.toLowerCase();
+        if (!filteredCommunityArticles.length) {
+            container.classList.add('hidden');
+            document.getElementById('communityEmptyState').classList.remove('hidden');
+            return;
+        }
+        document.getElementById('communityEmptyState').classList.add('hidden');
+        container.classList.remove('hidden');
+        const grid = document.createElement('div');
+        grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5';
+        filteredCommunityArticles.forEach(a => {
+            const w = document.createElement('div');
+            w.innerHTML = createCommunityCard(a, term);
+            if (w.firstElementChild) grid.appendChild(w.firstElementChild);
+        });
+        container.innerHTML = '';
+        container.appendChild(grid);
+    }
+
+    function createCommunityCard(article, term = '') {
+        let dateText = article.date || 'Date not available';
+        try {
+            const d = new Date(dateText);
+            if (!isNaN(d.getTime())) dateText = d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+        } catch {}
+        const _communityKey = article.link || '';
+        const communityIsNew = isNew(article.date, _communityKey);
+        const newBadge = communityIsNew ? `<span class="badge-new ml-2"><i class="fas fa-bolt" style="font-size:0.5rem"></i>NEW</span>` : '';
+        const newGlowClass = communityIsNew ? ' card-new-glow' : '';
+        const thumb = article.image
+            ? `<img src="${escapeHtml(article.image)}" alt="" loading="lazy" class="w-full h-32 object-cover rounded-xl mb-3" onerror="this.remove()">`
+            : '';
+        return `
+            <div class="glass-card${newGlowClass} card-accent-blue rounded-2xl p-5">
+                ${thumb}
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="badge-opening px-3 py-1 rounded-full text-xs font-bold text-white flex items-center gap-1">
+                        <i class="fas fa-city text-xs"></i>${escapeHtml(article.city || 'Community Impact')}
+                    </span>${newBadge}
+                </div>
+                <h3 class="font-bold text-base mb-3 text-white leading-snug">${highlight(article.title || '', term)}</h3>
+                <a href="${escapeHtml(article.link || '#')}" target="_blank" rel="noopener noreferrer"
+                   onclick="markArticleSeen('${escapeHtml(_communityKey)}', event)"
+                   class="text-blue-400 hover:text-blue-300 text-sm font-medium mb-3 block transition-colors">
+                    View full story <i class="fas fa-external-link-alt text-xs ml-1 opacity-60"></i>
+                </a>
+                <div class="flex items-center text-gray-500 text-xs">
+                    <i class="fas fa-calendar-alt mr-1.5 text-gray-600"></i>${escapeHtml(dateText)}
+                </div>
+            </div>`;
+    }
+
+    function switchCommunitySubTab(subTab) {
+        activeCommunitySubTab = subTab;
+        toggleSubTab('communityArticlesSubTab', 'communityExtractionSubTab', 'communitySubTabArticlesBtn', 'communitySubTabExtractionBtn', subTab === 'articles');
+        if (subTab === 'articles' && communityArticles.length === 0) loadCommunityData();
+        if (subTab === 'extraction' && communityExtractionRows.length === 0) loadCommunityExtractionData();
+    }
+
+    async function loadCommunityExtractionData() {
+        try {
+            document.getElementById('communityExtLoadingState').classList.remove('hidden');
+            document.getElementById('communityExtTableContainer').classList.add('hidden');
+            document.getElementById('communityExtEmptyState').classList.add('hidden');
+            document.getElementById('communityExtStatsContainer').style.display = 'none';
+            const res = await fetch(COMMUNITY_EXTRACTION_URL + '?t=' + Date.now());
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
+            document.getElementById('communityExtLastUpdated').textContent = data.last_updated || '—';
+            communityExtractionRows = data.data || [];
+            filteredCommunityExtractionRows = [...communityExtractionRows];
+            updateCommunityExtStats(filteredCommunityExtractionRows);
+            renderCommunityExtractionTable();
+            document.getElementById('communityExtLoadingState').classList.add('hidden');
+        } catch (err) {
+            console.error(err);
+            document.getElementById('communityExtLoadingState').classList.add('hidden');
+            document.getElementById('communityExtEmptyState').classList.remove('hidden');
+        }
+    }
+
+    function updateCommunityExtStats(rows) {
+        setCount('communityExtTotal', rows.filter(r => r.store_name !== 'No qualifying business found').length);
+        setCount('communityExtOpenings', rows.filter(r => r.event_type === 'Opening').length);
+        setCount('communityExtClosings', rows.filter(r => r.event_type === 'Closing').length);
+        document.getElementById('communityExtStatsContainer').style.display = rows.length ? 'grid' : 'none';
+    }
+
+    function filterCommunityExtractionRows() {
+        const term = document.getElementById('communityExtSearchInput').value.toLowerCase();
+        const type = document.getElementById('communityExtTypeFilter').value;
+        filteredCommunityExtractionRows = communityExtractionRows.filter(r => {
+            const ms = !term || ['store_name','location','short_description','status'].some(k => (r[k]||'').toLowerCase().includes(term));
+            return ms && (type === 'all' || r.event_type === type);
+        });
+        updateCommunityExtStats(filteredCommunityExtractionRows);
+        renderCommunityExtractionTable();
+    }
+
+    function renderCommunityExtractionTable() {
+        const tbody = document.getElementById('communityExtTableBody'), container = document.getElementById('communityExtTableContainer');
+        const term = document.getElementById('communityExtSearchInput').value.toLowerCase();
+        if (!filteredCommunityExtractionRows.length) {
+            container.classList.add('hidden');
+            document.getElementById('communityExtEmptyState').classList.remove('hidden');
+            return;
+        }
+        document.getElementById('communityExtEmptyState').classList.add('hidden');
+        container.classList.remove('hidden');
+        tbody.innerHTML = filteredCommunityExtractionRows.map((r, i) => buildExtractionRow(r, i, term, 'blue')).join('');
+        document.getElementById('communityExtRowCount').textContent = filteredCommunityExtractionRows.length;
+    }
+
+    function downloadCommunityExtractionCSV() {
+        if (!filteredCommunityExtractionRows.length) return;
+        csvDownloadExtraction(filteredCommunityExtractionRows, `community_impact_extraction_${TODAY}.csv`);
+        showToast('Community Impact Extraction CSV downloaded!');
+    }
+
     async function loadRestData() {
         try {
             document.getElementById('restLoadingState').classList.remove('hidden');
@@ -3851,6 +4183,8 @@
     businessdebut_ext:    { file:'businessdebut_master_extraction.csv',search:['store_name','location','event_type','short_description'],          fmt:r=>`"¢ ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'BUSINESS DEBUT EXTRACTION',desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
     warn:                 { file:'warn_master.csv',                      search:['state','company','city','closure_type','notes'],                   fmt:r=>`"¢ ${r.state} | ${r.company} | ${r.city} | Notice:${r.notice_date} | Layoff:${r.layoff_date} | Affected:${r.employees_affected} | ${r.closure_type}`,  label:'WARN NOTICES',             desc:'Columns: state, company, city, notice_date, layoff_date, employees_affected, closure_type, notes' },
     comingsoon:           { file:'company_website_master.csv',           search:['company','address'],                                               fmt:r=>`"¢ ${r.company} | ${r.address} | Opens:${r.opening_date} | ${r.link}`,                                                                       label:'COMPANY WEBSITE "“ COMING SOON', desc:'Columns: company, address, opening_date, link' },
+    community:            { file:'community_impact_master.csv',           search:['title','city'],                                                    fmt:r=>`"¢ ${r.date} | ${r.city} | ${r.title} | ${r.link}`,                                                                                    label:'COMMUNITY IMPACT',         desc:'Columns: city, title, date, link, image' },
+    community_ext:        { file:'community_impact_master_extraction.csv', search:['store_name','location','event_type','short_description'],        fmt:r=>`"¢ ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'COMMUNITY IMPACT EXTRACTION', desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
   };
 
   // Session cache — each CSV is fetched once then kept in memory
@@ -3920,12 +4254,14 @@
     const isExtract    = /extract|location|address|where/.test(q);
     const isWarn       = /\bwarn\b|layoff|layoffs|closure|closures|employees affected|workers|job loss|mass layoff/.test(q);
     const isComingSoon = /coming soon|grand opening|new store|opening soon|comingsoon|new location|opens|aldi|burlington|five below|trader joe|target|marshalls|wawa|chick.fil.a|jersey mike|longhorn|natural grocer|capital grille|yard house|kirkland|7.eleven|teso/.test(q);
+    const isCommunity  = /community impact|civic|metro|austin|dallas|houston|san antonio|fort worth/.test(q);
 
     const keys = new Set();
     if (isRestaurant) { keys.add('restaurant'); keys.add('restaurant_ext'); }
     if (isCT)         { keys.add('ct_scoop');   keys.add('ct_scoop_ext');   }
     if (isBusiness)   { keys.add('businessdebut'); keys.add('businessdebut_ext'); }
-    if (isExtract)    { keys.add('restaurant_ext'); keys.add('daily_ext'); keys.add('ct_scoop_ext'); keys.add('businessdebut_ext'); }
+    if (isCommunity)  { keys.add('community');  keys.add('community_ext');  }
+    if (isExtract)    { keys.add('restaurant_ext'); keys.add('daily_ext'); keys.add('ct_scoop_ext'); keys.add('businessdebut_ext'); keys.add('community_ext'); }
     if (isDaily)        keys.add('daily');
     if (isWarn)         keys.add('warn');
     if (isComingSoon)   keys.add('comingsoon');

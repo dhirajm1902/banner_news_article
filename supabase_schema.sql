@@ -52,6 +52,16 @@ CREATE TABLE ct_scoop_master (
     "Date_Appended" date
 );
 
+-- Community Impact scraper (community_impact_scraper.py)
+CREATE TABLE community_impact_master (
+    link           text PRIMARY KEY,
+    city           text,
+    title          text,
+    date           text,
+    image          text,
+    "Date_Appended" date
+);
+
 -- Restaurant listings scraper (restaurant_scraper.py)
 CREATE TABLE restaurant_master (
     url             text PRIMARY KEY,
@@ -136,6 +146,19 @@ CREATE TABLE businessdebut_master_extraction (
 
 CREATE TABLE ct_scoop_master_extraction (
     article_link      text PRIMARY KEY REFERENCES ct_scoop_master(link),
+    store_name        text,
+    location          text,
+    event_type        text,
+    event_date        text,
+    status            text,
+    short_description text,
+    published_date    text,
+    source_batch      text,
+    "Date_Appended"   date
+);
+
+CREATE TABLE community_impact_master_extraction (
+    article_link      text PRIMARY KEY REFERENCES community_impact_master(link),
     store_name        text,
     location          text,
     event_type        text,
