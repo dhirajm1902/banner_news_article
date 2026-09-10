@@ -1,105 +1,35 @@
 {
-  "last_updated": "2026-09-09",
+  "last_updated": "2026-09-10",
   "data": [
     {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article covers Danebo Elementary School's $15M-$18M expansion project during the school year; no retail/restaurant business opening or closing mentioned.",
-      "article_link": "https://www.registerguard.com/story/news/education/2026/09/08/danebo-elementary-expansion-gym/91662527007/",
-      "published_date": "2026-09-08 23:32:00"
-    },
-    {
-      "store_name": "Great Clips",
-      "location": "1505 W Chapman Dr #200, Sanger, TX 76266",
-      "event_type": "Opening",
-      "event_date": "February 1, 2027",
-      "status": "targeted opening date confirmed",
-      "short_description": "Great Clips plans to open a new salon in the Sanger Crossing Shopping Center. Franchisee Bhavin Barevadia confirmed the targeted opening date and said the location fills a community need in growing Sanger. A grand opening special of $6.99 haircuts is planned.",
-      "article_link": "https://whatnow.com/dallas/retail/great-clips-to-open-new-location-in-sanger/",
-      "published_date": "2026-09-08 23:20:47"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article covers the opening of the M1 motorway extension bypassing Hexham and Heatherbrae; not a retail/restaurant business.",
-      "article_link": "https://newy.com.au/2026/09/09/m1-extension-to-open-friday-bypassing-hexham-and-heatherbrae/",
-      "published_date": "2026-09-08 23:02:26"
-    },
-    {
-      "store_name": "Hairy Tales",
-      "location": "1 Bellis Fair Pkwy, Suite 706, Bellingham, WA 98226",
-      "event_type": "Opening",
-      "event_date": "October 7",
-      "status": "plans to open / preparing to open",
-      "short_description": "Hairy Tales, a children's hair salon with a fairy-tale theme, is preparing to open at Bellis Fair mall in Bellingham. Owner Laetitia Assink hopes to welcome first customers October 7, and the salon will include a low-sensory room for children who feel overwhelmed.",
-      "article_link": "https://whatnow.com/seattle/retail/hairy-tales-plans-october-opening-at-bellis-fair/",
-      "published_date": "2026-09-08 22:16:57"
-    },
-    {
-      "store_name": "Nan Xiang Xiao Long Bao",
-      "location": "33 W. Ontario St., River North, Chicago",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "opens (recently opened)",
-      "short_description": "Nan Xiang Xiao Long Bao opened its first Midwest restaurant in Chicago's River North, a 6,667-square-foot space seating 135 guests. Founded in Flushing, Queens, in 2006, the chain has 14 U.S. locations with 10 more planned.",
-      "article_link": "https://www.chicagostarmedia.com/restaurants/michelin-recommended-nan-xiang-xiao-long-bao-opens-first-midwest-location-in-river-north/article_4ad3f076-2cc1-4149-bd43-13767cddfc5c.html",
-      "published_date": "2026-09-08 22:03:00"
-    },
-    {
-      "store_name": "TESO X",
-      "location": "2200 S. 10th St., Suite F-17, McAllen, TX 78503",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "will soon open",
-      "short_description": "TESO X, a spinoff of TESO Life focused on collectibles, blind boxes, and hobby kits, is opening its first Rio Grande Valley store at La Plaza Mall in McAllen, according to a TDLR filing. The 3,780-square-foot space previously held a Torrid store.",
-      "article_link": "https://www.yahoo.com/news/articles/popular-japanese-style-hobby-store-220200701.html",
-      "published_date": "2026-09-08 22:02:00"
-    },
-    {
-      "store_name": "Judy's Family Café",
-      "location": "Aledo (Address not specified)",
-      "event_type": "Opening",
-      "event_date": "Soft opening Wednesday; grand opening Sept. 18",
-      "status": "soft opening / grand opening scheduled",
-      "short_description": "Judy's Family Café, a viral social media hit, is set to hold a soft opening in Aledo this week ahead of a grand opening on Sept. 18. The location takes over the former Miguel's Bar and Grill space.",
-      "article_link": "https://wrmj.com/judys-family-cafe-holding-soft-opening-wednesday/",
-      "published_date": "2026-09-08 21:52:07"
-    },
-    {
-      "store_name": "Tastes of the Philippines",
-      "location": "1987 Ringling Blvd., Sarasota",
-      "event_type": "Opening",
-      "event_date": "as soon as next week",
-      "status": "could open as soon as next week",
-      "short_description": "Tastes of the Philippines, a new fast-casual restaurant serving authentic Filipino cuisine cooked over an open flame, plans to open in downtown Sarasota. The restaurant will feature natural décor reflecting Filipino culture.",
-      "article_link": "https://www.heraldtribune.com/story/entertainment/dining/2026/09/08/new-downtown-sarasota-restaurant-set-to-open-as-soon-as-next-week/91660717007/",
-      "published_date": "2026-09-08 21:50:00"
-    },
-    {
-      "store_name": "Little DON'YA",
-      "location": "10405 Jasper Ave., Edmonton",
+      "store_name": "O'Charley's (multiple company-owned locations)",
+      "location": "Multiple locations incl. Nashville TN, Manchester TN, Marion IL, Hopkinsville KY, Florence KY, Cold Spring KY, Niles OH (address not specified)",
       "event_type": "Closing",
-      "event_date": "Last day Friday, Sept. 11",
-      "status": "closing",
-      "short_description": "Little DON'YA, a Ukrainian kitchen in downtown Edmonton, is closing its downtown location this week after operating there for just under two years. The team cited downtown construction, crime, and parking challenges as reasons for the closure.",
-      "article_link": "https://dailyhive.com/edmonton/little-donya-ukrainian-kitchen-edmonton-closure",
-      "published_date": "2026-09-08 21:48:00"
+      "event_date": "Wednesday (Sept. 9, 2026); Niles OH remains open until Sept. 27",
+      "status": "\"scheduled to close permanently at 8 p.m.\"",
+      "short_description": "O'Charley's shuttered company-owned restaurants nationwide with little warning, with employees told Wednesday was their last day. Locations in Tennessee, Illinois, Kentucky closed at 8 p.m., while the franchised Niles, Ohio location stays open until Sept. 27. The company did not respond to media requests for comment.",
+      "article_link": "https://www.fsrmagazine.com/growth/chain-restaurants/ocharleys-abruptly-shutters-all-company-owned-locations/",
+      "published_date": "2026-09-10 00:00:33"
     },
     {
-      "store_name": "Minnesota Flyers Gymnastics and Fitness",
-      "location": "Rossman Avenue, Detroit Lakes (Address not specified)",
+      "store_name": "O'Charley's (Virginia locations)",
+      "location": "Virginia (address not specified)",
+      "event_type": "Closing",
+      "event_date": "as early as 8PM Wednesday, September 9",
+      "status": "\"operations will cease by as early as 8PM\"",
+      "short_description": "Virginia O'Charley's locations confirmed operations ceasing by 8PM Sept. 9. Reports of closures also came from Ohio and Tennessee employees. The Niles, Ohio location was pushing to stay open \"as long as possible\" but expected permanent closure between Sept. 27 and Oct. 4.",
+      "article_link": "https://blackamericaweb.com/2026/09/09/ocharleys-restaurant-closing-nationwide/",
+      "published_date": "2026-09-09 23:55:35"
+    },
+    {
+      "store_name": "Sri Guru Raghavendra Udupi Veg Hotel",
+      "location": "near Pillar No. 785, Vivekananda Nagar Division, Kukatpally, Hyderabad (Address not specified with zip code)",
       "event_type": "Opening",
-      "event_date": "Tuesday, Sept. 8 (ribbon-cutting)",
-      "status": "grand opening",
-      "short_description": "Minnesota Flyers Gymnastics and Fitness celebrated the grand opening of its 34,000-square-foot expansion with a ribbon-cutting. The project came in under budget at $3.85 million and finished ahead of schedule.",
-      "article_link": "https://www.dl-online.com/news/local/minnesota-flyers-cuts-ribbon-on-expansion-coming-in-under-budget-and-ahead-of-schedule",
-      "published_date": "2026-09-08 21:38:52"
+      "event_date": "Not specified",
+      "status": "\"grandly inaugurated\"",
+      "short_description": "Sri Guru Raghavendra Udupi Veg Hotel was grandly inaugurated in Kukatpally by Serilingampally MLA Arikepudi Gandhi. Owners Veereshappa and Kumar say the vegetarian restaurant will prioritize cleanliness, hygiene and quality ingredients. Local residents and well-wishers attended the inauguration.",
+      "article_link": "https://www.thehansindia.com/news/cities/hyderabad/grand-opening-of-sri-guru-raghavendra-udupi-veg-hotel-in-kukatpally-1120148",
+      "published_date": "2026-09-09 23:51:34"
     },
     {
       "store_name": "No qualifying business found",
@@ -107,229 +37,9 @@
       "event_type": "N/A",
       "event_date": "N/A",
       "status": "N/A",
-      "short_description": "Article describes Fishtank's new 24/7 livestreamed reality show set inside an existing New York clothing store; not a business opening/closing.",
-      "article_link": "https://www.dexerto.com/kick/fishtank-turns-a-clothing-store-into-a-24-7-reality-show-with-customers-and-employees-3406854/",
-      "published_date": "2026-09-08 21:36:09"
-    },
-    {
-      "store_name": "A Ma Maniere (drink concept)",
-      "location": "1144 W Washington Blvd, 1st Floor, Chicago, IL 60607",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "application submitted, not officially announced",
-      "short_description": "James Whitner, owner of shoe store chain A Ma Maniere, submitted a liquor license application for a West Loop Chicago location, suggesting a bar or restaurant concept. The new business has not been officially announced by the team.",
-      "article_link": "https://whatnow.com/chicago/restaurants/a-ma-maniere-footwear-store-owner-submits-application-for-drink-concept/",
-      "published_date": "2026-09-08 21:33:07"
-    },
-    {
-      "store_name": "Hardee's",
-      "location": "1100 SW 23rd St., Lee's Summit, MO",
-      "event_type": "Opening",
-      "event_date": "Wednesday (ribbon cutting 9:30 a.m., opening 10 a.m.)",
-      "status": "reopening",
-      "short_description": "Westar Foods is reopening a Hardee's location in Lee's Summit after the chain closed all its Kansas City metro locations amid a lawsuit with franchisee ARC Burger. The first 50 customers in line receive a free biscuit sandwich voucher for a year.",
-      "article_link": "https://www.kansascity.com/news/business/openings-closings/article317170882.html",
-      "published_date": "2026-09-08 21:27:35"
-    },
-    {
-      "store_name": "Natural History Museum (Copenhagen)",
-      "location": "Botanical Garden, Copenhagen (Address not specified)",
-      "event_type": "Opening",
-      "event_date": "March 6, 2027",
-      "status": "set to open",
-      "short_description": "Copenhagen's new underground Natural History Museum, a £200 million redevelopment, will officially open with eight galleries beneath the historic Botanical Garden. The museum's collection includes around 14 million specimens gathered over 400 years.",
-      "article_link": "https://timesofindia.indiatimes.com/world/europe/copenhagens-200m-underground-natural-history-museum-under-construction-since-2019-to-open-in-2027-with-eight-galleries-14m-specimens-dinosaur-skeletons-3d-exhibits-and-ocean-hall/amp_articleshow/133941513.cms",
-      "published_date": "2026-09-08 21:17:00"
-    },
-    {
-      "store_name": "Dutch Bros",
-      "location": "11365 S Memorial Pkwy, Huntsville, AL 35803",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "NOW OPEN",
-      "short_description": "Dutch Bros is now serving its signature drinks at a fourth Huntsville location, open Sun-Thu 5AM-10PM and Fri-Sat 5AM-11PM.",
-      "article_link": "https://hvilleblast.com/7-new-openings-around-huntsville-newks-now-closed/",
-      "published_date": "2026-09-08 21:11:08"
-    },
-    {
-      "store_name": "Chipotle",
-      "location": "11606 Memorial Pkwy SW, Huntsville, AL 35803",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "coming soon",
-      "short_description": "A \"coming soon\" sign has appeared for a third Chipotle location in South Huntsville, following a recent opening on Governors Drive.",
-      "article_link": "https://hvilleblast.com/7-new-openings-around-huntsville-newks-now-closed/",
-      "published_date": "2026-09-08 21:11:08"
-    },
-    {
-      "store_name": "Elevate Fitness",
-      "location": "15340 Flinders Ln, Athens, AL 35611",
-      "event_type": "Opening",
-      "event_date": "September 26",
-      "status": "GRAND OPENING SEPTEMBER 26",
-      "short_description": "Elevate Fitness, a 24-hour gym over 40,000 square feet, is coming to Athens with a smoothie bar, tanning beds, and childcare options.",
-      "article_link": "https://hvilleblast.com/7-new-openings-around-huntsville-newks-now-closed/",
-      "published_date": "2026-09-08 21:11:08"
-    },
-    {
-      "store_name": "Scenthound",
-      "location": "5000 Whitesburg Dr, Ste 152",
-      "event_type": "Opening",
-      "event_date": "Fall 2026",
-      "status": "OPENING FALL 2026",
-      "short_description": "Scenthound offers personalized dog grooming care focused on animal wellness, including dental care and ear cleanings.",
-      "article_link": "https://hvilleblast.com/7-new-openings-around-huntsville-newks-now-closed/",
-      "published_date": "2026-09-08 21:11:08"
-    },
-    {
-      "store_name": "Eggbred (Clovis)",
-      "location": "1127 N. Willow Ave., Suite 105, Clovis, CA",
-      "event_type": "Opening",
-      "event_date": "Saturday (opening weekend)",
-      "status": "opened",
-      "short_description": "Eggbred opened its first Central Valley location in Clovis, drawing lines during opening weekend, after a three-month renovation of a former ice cream shop. Franchise owner Varinder Singh plans further expansion in Fresno and Clovis.",
-      "article_link": "https://thebusinessjournal.com/eggbred-clovis-first-central-valley-location-2/",
-      "published_date": "2026-09-08 21:00:41"
-    },
-    {
-      "store_name": "Michaels",
-      "location": "Marketplace at Centerra, Loveland, CO (former Staples space)",
-      "event_type": "Opening",
-      "event_date": "late this year",
-      "status": "expects to open",
-      "short_description": "Michaels craft store chain expects to open a new Loveland location in the long-vacant former Staples space at Centerra shopping district late this year.",
-      "article_link": "https://bizwest.com/2026/09/08/michaels-opening-loveland-craft-store-in-long-vacant-centerra-space/",
-      "published_date": "2026-09-08 20:58:36"
-    },
-    {
-      "store_name": "Rodeo Mexican Kitchen & Bar",
-      "location": "13750 W. Hwy. 29, Liberty Hill, TX",
-      "event_type": "Opening",
-      "event_date": "Opened Aug. 26",
-      "status": "now open",
-      "short_description": "Rodeo Mexican Kitchen & Bar, opened by the owners of Marisol's Mexican Grill, is now open near the intersection of Hwy. 1869 and Hwy. 29 in Liberty Hill, serving classic Mexican fare including ceviche, pozole, and chile verde.",
-      "article_link": "https://communityimpact.com/leander-liberty-hill/dining/rodeo-mexican-kitchen-bar-now-open-in-liberty-hill-along-hwy-29/",
-      "published_date": "2026-09-08 20:56:09"
-    },
-    {
-      "store_name": "Straub's Markets (Central West End)",
-      "location": "302 N. Kingshighway, St. Louis, MO",
-      "event_type": "Closing",
-      "event_date": "Through Sept. 25 or until inventory sold",
-      "status": "closing",
-      "short_description": "Straub's Markets will close its Central West End location, which has operated since 1948, and sell the building. A store-closing sale offers 10% off liquor, wine, beer, and tobacco and 20% off other departments.",
-      "article_link": "https://www.stlpr.org/news-briefs/2026-09-08/straubs-close-central-west-end-grocery-store",
-      "published_date": "2026-09-08 20:38:00"
-    },
-    {
-      "store_name": "The Grumpy Pig",
-      "location": "7 East Oak Street, Luthersville, GA",
-      "event_type": "Opening",
-      "event_date": "Tuesday, September 15",
-      "status": "scheduled to open",
-      "short_description": "The Grumpy Pig closed its Moreland location after two years and is preparing to reopen in Luthersville in the former Old County Line Cafe space, continuing to serve barbecue while keeping up its food truck and catering.",
-      "article_link": "https://thecitymenus.com/2026/09/08/the-grumpy-pig-moves-from-moreland-to-new-luthersville-location/",
-      "published_date": "2026-09-08 20:36:54"
-    },
-    {
-      "store_name": "Jerith Manufacturing (factory)",
-      "location": "14400 McNulty Rd., Northeast Philadelphia",
-      "event_type": "Closing",
-      "event_date": "by next spring",
-      "status": "closing / going out of business as separate entity",
-      "short_description": "Jerith Manufacturing is closing its Northeast Philadelphia fence factory due to rent nearly tripling starting May 1. The closure affects 61 workers, with layoffs beginning Nov. 15; some work will shift to parent Ameristar's New Jersey and Tulsa facilities.",
-      "article_link": "https://www.inquirer.com/business/jerith-manufacturing-fence-philadelphia-closing-ameristar-20260908.html",
-      "published_date": "2026-09-08 20:29:39"
-    },
-    {
-      "store_name": "Grand Union (Sherrill)",
-      "location": "East State Street, Sherrill, NY",
-      "event_type": "Closing",
-      "event_date": "Not specified",
-      "status": "preparing to close",
-      "short_description": "The Grand Union grocery store in Sherrill is preparing to close per a corporate decision; a closing date has not been set, though store hours change next week. This follows Grand Union closures in Rome and Cooperstown.",
-      "article_link": "https://www.wktv.com/news/local-business/grand-union-grocery-store-in-sherrill-preparing-to-close/article_34dccf9c-c3c7-471c-8ba5-b8fe7e1c2fd6.html",
-      "published_date": "2026-09-08 20:12:00"
-    },
-    {
-      "store_name": "Amped Fitness (Westheimer)",
-      "location": "10707 Westheimer Road, Houston, TX",
-      "event_type": "Opening",
-      "event_date": "September 1",
-      "status": "opened",
-      "short_description": "Amped Fitness opened its seventh Greater Houston-area gym on Westheimer Road, featuring cold plunges, infrared recovery rooms, themed training zones, reformer Pilates, and a kids' club.",
-      "article_link": "https://hoodline.com/2026/09/amped-fitness-opens-7th-houston-area-gym-on-westheimer-with-cold-plunges-movie-cardio/",
-      "published_date": "2026-09-08 19:51:36"
-    },
-    {
-      "store_name": "Jewel-Osco (St. John)",
-      "location": "Former Kmart location, St. John, IN",
-      "event_type": "Opening",
-      "event_date": "Sept. 16 (soft opening ribbon-cutting Sept. 15)",
-      "status": "opening next week",
-      "short_description": "The much-anticipated Jewel-Osco grocery store will open in the former Kmart in St. John, with a ribbon-cutting ceremony featuring the JoJo mascot, local officials, and community partners.",
-      "article_link": "https://nwitimes.com/news/local/article_59bd6e1a-d28a-4e8b-ab4f-577883654069.html",
-      "published_date": "2026-09-08 20:00:00"
-    },
-    {
-      "store_name": "Barnes & Noble (Lexington)",
-      "location": "3565 Nicholasville Road, Fayette Mall, Lexington, KY",
-      "event_type": "Opening",
-      "event_date": "Opened Aug. 26",
-      "status": "recently opened",
-      "short_description": "A new, larger Barnes & Noble opened at Fayette Mall in Lexington with a grand opening on Aug. 26, part of the company's plan to open 60 stores this year.",
-      "article_link": "https://www.courier-journal.com/story/money/2026/09/08/barnes-and-noble-lexington-louisville-ky-new-stores-2026/91654898007/",
-      "published_date": "2026-09-08 19:42:00"
-    },
-    {
-      "store_name": "Barnes & Noble (Louisville)",
-      "location": "Mall St. Matthews, Louisville, KY (East end)",
-      "event_type": "Opening",
-      "event_date": "Expected October",
-      "status": "on track to open",
-      "short_description": "Another new Barnes & Noble is planned for Louisville's East end at Mall St. Matthews, in the space that previously housed Zappos Unboxed before it closed in March; as of mid-August it was on track for an October opening.",
-      "article_link": "https://www.courier-journal.com/story/money/2026/09/08/barnes-and-noble-lexington-louisville-ky-new-stores-2026/91654898007/",
-      "published_date": "2026-09-08 19:42:00"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article reports on Sudan's health crisis, with 36 IRC-supported humanitarian health facilities closing due to aid funding cuts; not a retail/restaurant business closure.",
-      "article_link": "https://kulu-media.com/sudan-health-crisis-aid-cuts/",
-      "published_date": "2026-09-08 19:38:02"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article describes the grand opening celebration of Jessie Street Terrace, 50 affordable supportive housing apartments in Santa Cruz; not a retail/restaurant business.",
-      "article_link": "https://yieldpro.com/2026/09/jessie-street-terrace/",
-      "published_date": "2026-09-08 19:20:44"
-    },
-    {
-      "store_name": "The Corner Store (Las Vegas)",
-      "location": "Cosmopolitan Las Vegas (Address not specified)",
-      "event_type": "Opening",
-      "event_date": "October/November 2026",
-      "status": "Opening",
-      "short_description": "The second location of the SoHo bistro-meets-Americana restaurant The Corner Store, known for gourmet pizza rolls and sour cream and onion Martinis, is opening inside the Cosmopolitan Las Vegas.",
-      "article_link": "https://www.winespectator.com/articles/fall-wine-restaurant-openings-2026",
-      "published_date": "2026-09-08 19:10:00"
-    },
-    {
-      "store_name": "Enlō",
-      "location": "Greenville, South Carolina (Address not specified)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "expanding with the opening of",
-      "short_description": "Table 301, the hospitality group behind Soby's, is expanding in Greenville with the opening of Enlō, a new restaurant.",
-      "article_link": "https://www.winespectator.com/articles/fall-wine-restaurant-openings-2026",
-      "published_date": "2026-09-08 19:10:00"
+      "short_description": "Article content could not be extracted beyond the title/date snippet; no usable business opening details present in the retrieved text.",
+      "article_link": "https://www.onenews.ph/robinsons-supermarket-expands-footprint-in-bohol-opens-first-store-in-panglao",
+      "published_date": "2026-09-09 23:49:02"
     },
     {
       "store_name": "No qualifying business found",
@@ -338,28 +48,8 @@
       "event_date": "N/A",
       "status": "N/A",
       "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.lehighvalleylive.com/news/2026/09/fast-food-burger-chain-with-devoted-following-opens-new-location-in-home-state.html",
-      "published_date": "2026-09-08 19:01:00"
-    },
-    {
-      "store_name": "Indiana Jones Adventure: Temple of the Forbidden Eye",
-      "location": "Adventureland, Disneyland Park, Disneyland Resort, Southern California",
-      "event_type": "Closing",
-      "event_date": "September 8, 2026",
-      "status": "now closed",
-      "short_description": "The Indiana Jones Adventure attraction at Disneyland Resort closed September 8, 2026 for refurbishment. No reopening date has been announced beyond signs saying \"this fall.\"",
-      "article_link": "https://insidethemagic.net/2026/09/disneyland-indiana-jones-adventure-refurbishment-begins-jc1/",
-      "published_date": "2026-09-08 18:56:00"
-    },
-    {
-      "store_name": "Dolly Parton's SongTeller Hotel and Life of Many Colors Museum",
-      "location": "Downtown Nashville, TN",
-      "event_type": "Opening",
-      "event_date": "Sept. 29 (soft opening Sept. 14)",
-      "status": "set to open",
-      "short_description": "Dolly Parton's SongTeller Hotel and adjoining museum will officially open Sept. 29 in downtown Nashville, with a soft opening for hotel guests starting Sept. 14.",
-      "article_link": "https://www.tennessean.com/story/money/business/2026/09/08/dolly-parton-songteller-hotel-opening-date-museum-details/91659236007/",
-      "published_date": "2026-09-08 18:51:00"
+      "article_link": "https://www.thestreet.com/restaurants/bravo-brio-restaurants-close-18-locations-since-filing-bankruptcy",
+      "published_date": "2026-09-09 23:47:00"
     },
     {
       "store_name": "No qualifying business found",
@@ -368,38 +58,38 @@
       "event_date": "N/A",
       "status": "N/A",
       "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.disneyfoodblog.com/2026/09/08/booking-is-now-open-for-your-2027-and-2028-disney-cruise/",
-      "published_date": "2026-09-08 18:50:13"
+      "article_link": "https://www.bizjournals.com/houston/news/2026/09/09/underbelly-burger-spring-branch-location-close.html",
+      "published_date": "2026-09-09 23:21:00"
     },
     {
-      "store_name": "Whataburger (Fort Myers location)",
-      "location": "Fort Myers, FL",
+      "store_name": "Tonkatsu Sakazaki",
+      "location": "Sam Sung Plaza, Honolulu (Address not specified with zip code)",
       "event_type": "Opening",
-      "event_date": "By end of November 2026",
-      "status": "planned for",
-      "short_description": "Whataburger is opening 17 new locations across 7 states by the end of November, including two in Florida (Fort Myers and Estero).",
-      "article_link": "https://www.news-press.com/story/entertainment/dining/2026/09/08/where-new-whataburger-florida-locations-when-open-fort-myers-estero/91654958007/",
-      "published_date": "2026-09-08 18:23:00"
+      "event_date": "Not specified",
+      "status": "\"just opened\"",
+      "short_description": "Tonkatsu Sakazaki has just opened in Sam Sung Plaza, Honolulu, in the former space of Sushi ii. The eatery serves tonkatsu sets including pork loin, pork tenderloin, chicken katsu, and fried shrimp, with an opening special of a $9.99 pork loin cutlet rice bowl. It is the sister restaurant of Ramen Nakamura in Waikīkī.",
+      "article_link": "https://alohastatedaily.com/2026/09/09/tonkatsu-sakazaki-is-now-open-in-honolulu/",
+      "published_date": "2026-09-09 23:12:00"
     },
     {
-      "store_name": "Whataburger (Estero location)",
-      "location": "Estero, FL",
+      "store_name": "Round River Distillery",
+      "location": "741 S Main St, Viroqua, WI (Address not specified with zip code)",
       "event_type": "Opening",
-      "event_date": "By end of November 2026",
-      "status": "planned for",
-      "short_description": "Same expansion; Estero is the second of two new Florida Whataburger locations opening this fall.",
-      "article_link": "https://www.news-press.com/story/entertainment/dining/2026/09/08/where-new-whataburger-florida-locations-when-open-fort-myers-estero/91654958007/",
-      "published_date": "2026-09-08 18:23:00"
+      "event_date": "Wednesday, Sept. 5, 2026",
+      "status": "\"officially opening\"",
+      "short_description": "Round River Distillery officially opened in Viroqua, Wisconsin on Sept. 5, 2026, with a ribbon cutting. Owner Dan Johnson founded the distillery to make spirits from locally grown grains near the Kickapoo River.",
+      "article_link": "https://vernonreporter.com/round-river-distillery-and-daymoon-japanese-restaurant-celebrate-their-opening/",
+      "published_date": "2026-09-09 23:11:47"
     },
     {
-      "store_name": "Primark (Minnesota's first store)",
-      "location": "Mall of America, Level 1, Southeast Court, Bloomington, MN",
+      "store_name": "Daymoon Japanese Restaurant",
+      "location": "741 S Main St, Viroqua, WI (Address not specified with zip code)",
       "event_type": "Opening",
-      "event_date": "Thursday, September 3rd",
-      "status": "now officially opened",
-      "short_description": "Primark opened its first Minnesota store, a nearly 35,000-square-foot location at Mall of America in Bloomington, at 11 a.m. on Sept. 3.",
-      "article_link": "https://quickcountry.com/primark-new-store-mall-america-minnesota/",
-      "published_date": "2026-09-08 18:13:18"
+      "event_date": "Wednesday, Sept. 5, 2026",
+      "status": "\"officially opening\"",
+      "short_description": "Daymoon Japanese Restaurant celebrated its opening alongside Round River Distillery with a ribbon cutting on Sept. 5, 2026, in Viroqua, Wisconsin.",
+      "article_link": "https://vernonreporter.com/round-river-distillery-and-daymoon-japanese-restaurant-celebrate-their-opening/",
+      "published_date": "2026-09-09 23:11:47"
     },
     {
       "store_name": "No qualifying business found",
@@ -408,668 +98,58 @@
       "event_date": "N/A",
       "status": "N/A",
       "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://ua.news/en/ukraine/milk-bar-shukaie-pratsivnikiv-u-lvovi-ta-gotuie-novii-zaklad",
-      "published_date": "2026-09-08 18:13:12"
-    },
-    {
-      "store_name": "Graham Elliot's new restaurant (Commodore Tavern & Terrace)",
-      "location": "Near Southside, Fort Worth, TX",
-      "event_type": "Opening",
-      "event_date": "This fall",
-      "status": "opening",
-      "short_description": "Celeb chef Graham Elliot is opening a new restaurant in Fort Worth this fall, part of a feature on the city's Michelin-starred chefs.",
-      "article_link": "https://www.papercitymag.com/restaurants/fort-worth-michelin-starred-chefs-graham-elliot/?amp",
-      "published_date": "2026-09-08 18:09:23"
-    },
-    {
-      "store_name": "Aldi (Anna, TX)",
-      "location": "1740 N Central Expressway, Anna, TX",
-      "event_type": "Opening",
-      "event_date": "Construction mid-Nov 2026, wrap by June 2027",
-      "status": "under construction",
-      "short_description": "Aldi is building its first store in Anna, TX at a cost of about $2.75 million; construction begins mid-November and wraps by June 2027, no opening date confirmed yet.",
-      "article_link": "https://www.yahoo.com/news/articles/construction-timeline-revealed-aldi-store-180000313.html",
-      "published_date": "2026-09-08 18:00:00"
-    },
-    {
-      "store_name": "Indiana Jones Adventure: Temple of the Forbidden Eye",
-      "location": "Adventureland, Disneyland Park, Disneyland Resort",
-      "event_type": "Closing",
-      "event_date": "Tuesday, September 8, 2026",
-      "status": "now closed",
-      "short_description": "The attraction closed September 8 for refurbishment, with construction walls and signage in place; an opening date has not been announced.",
-      "article_link": "https://wdwnt.com/2026/09/indiana-jones-adventure-now-closed-for-refurbishment-at-disneyland/",
-      "published_date": "2026-09-08 17:59:00"
-    },
-    {
-      "store_name": "Up Up Books / Yikes! Gallery (PALS building)",
-      "location": "1452 NE 28th Ave, Portland, OR",
-      "event_type": "Opening",
-      "event_date": "Saturday, Sept. 12",
-      "status": "grand opening on Sept. 12",
-      "short_description": "Up Up Books, along with Buckman Journal HQ and the new Yikes! Gallery, will hold a grand opening Sept. 12 at the newly dubbed PALS building.",
-      "article_link": "https://www.wweek.com/arts/books/2026/09/08/up-up-books-teaming-up-with-buckman-journal-in-new-location/",
-      "published_date": "2026-09-08 17:49:36"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (406 Not Acceptable).",
-      "article_link": "https://www.independentmail.com/story/life/food/beer/2026/09/08/jinya-ramen-bar-opening-date-in-greenville-sc-coming-soon-as-liquor-license-is-filed/91611282007/",
-      "published_date": "2026-09-08 17:39:00"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.bizjournals.com/cincinnati/news/2026/09/08/amped-fitness-gym-open-symmes-lewis-center-ohio.html",
-      "published_date": "2026-09-08 17:36:00"
-    },
-    {
-      "store_name": "Henderson Sport & Social (Fitness Center presented by Bighorn Law)",
-      "location": "West Henderson, NV",
-      "event_type": "Opening",
-      "event_date": "Oct. 16",
-      "status": "ahead of its Oct. 16 opening",
-      "short_description": "Henderson Sport & Social is now selling fitness memberships ahead of its Oct. 16 opening; the 180,000-sq-ft complex will include fitness, sports courts, and entertainment.",
-      "article_link": "https://nevadabusiness.com/2026/09/henderson-sport-social-launches-fitness-memberships-ahead-of-fall-opening/",
-      "published_date": "2026-09-08 17:35:37"
-    },
-    {
-      "store_name": "KORV 93.5 \"The Goose\"",
-      "location": "102 N. E St., Lakeview, OR",
-      "event_type": "Opening",
-      "event_date": "Not specified (ribbon cutting held Thursday)",
-      "status": "grand re-opening",
-      "short_description": "KORV radio station celebrated its move to a new location in Lakeview with a ribbon-cutting ceremony on Thursday.",
-      "article_link": "https://www.heraldandnews.com/apgstate/korv-93-5-the-goose-celebrates-new-location-opening/article_e3f54fc8-9165-5982-947a-e942cfa873cd.html",
-      "published_date": "2026-09-08 17:35:00"
-    },
-    {
-      "store_name": "Convenience store (unnamed brand)",
-      "location": "130 South Farview Avenue, 134 South Farview Avenue, and 19 Pleasant Avenue, Paramus, NJ",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "proposed",
-      "short_description": "A proposal to replace a bank building with a convenience store across three Paramus properties is heading to the Board of Adjustment for a hearing.",
-      "article_link": "https://patch.com/new-jersey/paramus/amp/34795561/convenience-store-proposed-at-bank-site-in-paramus",
-      "published_date": "2026-09-08 17:29:57"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article is about an explosion/injuries at a jewelry store, not an opening or closing event.",
-      "article_link": "https://en.ara.cat/society/an-explosion-in-jewelry-store-in-cerdanyola-leaves-four-injured-two-seriously_1_5844002.html",
-      "published_date": "2026-09-08 17:28:00"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Duplicate of Article 67 (explosion/injuries at jewelry store, not an opening/closing event).",
-      "article_link": "https://en.ara.cat/society/an-explosion-at-jewelry-store-in-cerdanyola-leaves-three-injured-two-of-them-in-serious-condition_1_5844002.html",
-      "published_date": "2026-09-08 17:28:00"
-    },
-    {
-      "store_name": "Kenny's Meals",
-      "location": "5 Midway Lane, Ewing Township, NJ",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "now open",
-      "short_description": "Kenny's Meals, a healthy meal-prep spot, has expanded and is now open in Ewing Town Center; it's the company's 7th location.",
-      "article_link": "https://wpst.com/kennys-meals-ewing-nj/",
-      "published_date": "2026-09-08 17:27:24"
-    },
-    {
-      "store_name": "Primark (first Georgia location)",
-      "location": "Sugarloaf Mills, Lawrenceville, GA",
-      "event_type": "Opening",
-      "event_date": "Today (article date)",
-      "status": "opening today / opened at 11 a.m.",
-      "short_description": "Primark opened its first Georgia location, a 26,000+ sq ft store at Sugarloaf Mills in Lawrenceville, with a grand opening celebration.",
-      "article_link": "https://www.11alive.com/article/news/local/primark-opens-first-georgia-location-sugarloaf-mills/85-3c4347e2-f507-46c5-ba71-3de59c1cc7a6",
-      "published_date": "2026-09-08 17:19:00"
-    },
-    {
-      "store_name": "Raising Cane's",
-      "location": "Corner of Bay and Tittabawassee roads, Kochville Township, MI",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "now open",
-      "short_description": "Raising Cane's fried chicken restaurant is now open in Kochville Township, with a ribbon-cutting held Tuesday.",
-      "article_link": "https://www.wnem.com/2026/09/08/raising-canes-now-open-kochville-township/",
-      "published_date": "2026-09-08 17:18:00"
-    },
-    {
-      "store_name": "Johnny D's Market & Bistro",
-      "location": "Vero Beach, FL",
-      "event_type": "Closing",
-      "event_date": "Not specified",
-      "status": "will close for a year",
-      "short_description": "The 15-year-old Italian restaurant will close for a year for renovations, selling some goods at Turtle Cove Market in Vero Beach during the closure.",
-      "article_link": "https://www.tcpalm.com/story/entertainment/dining/2026/09/08/florida-restaurant-closures-johnny-ds-bistro-vero-beach-closing-renovations-italian-market-near-me/91659132007/",
-      "published_date": "2026-09-08 17:14:00"
-    },
-    {
-      "store_name": "Aldi (Johnson County)",
-      "location": "5830 Antioch Rd., Merriam Town Center / Merriam Village, Johnson County, KS",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "coming soon / currently under construction",
-      "short_description": "A new Aldi is under construction at 5830 Antioch Rd. in the Merriam Town Center, near a newly opened Trader Joe's; no opening date announced.",
-      "article_link": "https://www.kansascity.com/news/business/openings-closings/article317164672.html",
-      "published_date": "2026-09-08 17:10:17"
-    },
-    {
-      "store_name": "Aldi (Grain Valley)",
-      "location": "3300 S. Outer Road E., Grain Valley, MO",
-      "event_type": "Opening",
-      "event_date": "Expected January 2027",
-      "status": "expected to open",
-      "short_description": "City officials in Grain Valley recently announced construction of another Aldi off Interstate 70, expected to open January 2027.",
-      "article_link": "https://www.kansascity.com/news/business/openings-closings/article317164672.html",
-      "published_date": "2026-09-08 17:10:17"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article is about golf/LIV Tour uncertainty, not a store/restaurant opening or closing.",
-      "article_link": "https://www.irishexaminer.com/sport/golf/arid-41908369.html",
-      "published_date": "2026-09-08 17:09:00"
-    },
-    {
-      "store_name": "Layne's Chicken Fingers (San Antonio)",
-      "location": "Bandera Road, San Antonio/Leon Valley, TX",
-      "event_type": "Opening",
-      "event_date": "Aiming for end-of-September; official date not announced",
-      "status": "under construction / aiming for end-of-September opening",
-      "short_description": "Layne's Chicken Fingers is under construction on Bandera Road for its first San Antonio-area location; construction workers say they're aiming for an end-of-September opening.",
-      "article_link": "https://www.mysanantonio.com/food/article/laynes-chicken-fingers-san-antonio-22421741.php",
-      "published_date": "2026-09-08 17:08:45"
-    },
-    {
-      "store_name": "Zante",
-      "location": "Guilderland, NY (former Athos location)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "has opened",
-      "short_description": "Zante, a fine-dining Greek restaurant, has opened in Guilderland, replacing the 17-year-old Athos.",
-      "article_link": "https://www.timesunion.com/food/article/restaurants-opened-closed-august-2026-capital-22422218.php",
-      "published_date": "2026-09-08 17:07:21"
-    },
-    {
-      "store_name": "Herbie's Burgers (Lark Street)",
-      "location": "Lark Street, Albany, NY (former Bombers Burrito Bar space)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "has opened",
-      "short_description": "The latest Herbie's Burgers has opened with a two-floor concept on Lark Street in Albany, its first location to serve alcohol.",
-      "article_link": "https://www.timesunion.com/food/article/restaurants-opened-closed-august-2026-capital-22422218.php",
-      "published_date": "2026-09-08 17:07:21"
-    },
-    {
-      "store_name": "Shake Shack (Stuyvesant Plaza)",
-      "location": "Stuyvesant Plaza, Capital Region, NY",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "has opened",
-      "short_description": "Shake Shack has opened for business in Stuyvesant Plaza.",
-      "article_link": "https://www.timesunion.com/food/article/restaurants-opened-closed-august-2026-capital-22422218.php",
-      "published_date": "2026-09-08 17:07:21"
-    },
-    {
-      "store_name": "Hamlet",
-      "location": "Historic Union Hall, Rensselaerville, NY",
-      "event_type": "Opening",
-      "event_date": "Mid-September projected",
-      "status": "on the verge of opening / mid-September opening projected",
-      "short_description": "Two New York City design professionals are about to open a restaurant called Hamlet in the historic Union Hall in Rensselaerville, with a mid-September opening projected.",
-      "article_link": "https://www.timesunion.com/food/article/restaurants-opened-closed-august-2026-capital-22422218.php",
-      "published_date": "2026-09-08 17:07:21"
-    },
-    {
-      "store_name": "7 Brew",
-      "location": "Crossgates Commons, Capital Region, NY",
-      "event_type": "Opening",
-      "event_date": "Later this fall",
-      "status": "coming",
-      "short_description": "The rapidly expanding drive-through beverage chain 7 Brew is coming to Crossgates Commons later this fall.",
-      "article_link": "https://www.timesunion.com/food/article/restaurants-opened-closed-august-2026-capital-22422218.php",
-      "published_date": "2026-09-08 17:07:21"
-    },
-    {
-      "store_name": "Frank Guido's Port of Call",
-      "location": "Dutchman's Landing, Catskill, NY",
-      "event_type": "Closing",
-      "event_date": "Sept. 13",
-      "status": "closing",
-      "short_description": "Frank Guido's Port of Call, a waterfront restaurant at Catskill's Dutchman's Landing, is closing Sept. 13.",
-      "article_link": "https://www.timesunion.com/food/article/restaurants-opened-closed-august-2026-capital-22422218.php",
-      "published_date": "2026-09-08 17:07:21"
-    },
-    {
-      "store_name": "Patricelli's Deli & Catering",
-      "location": "Little Italy neighborhood, Troy, NY",
-      "event_type": "Closing",
-      "event_date": "Aug. 27",
-      "status": "closed",
-      "short_description": "Patricelli's Deli & Catering, a fixture in Troy's Little Italy since 1995, closed on Aug. 27.",
-      "article_link": "https://www.timesunion.com/food/article/restaurants-opened-closed-august-2026-capital-22422218.php",
-      "published_date": "2026-09-08 17:07:21"
-    },
-    {
-      "store_name": "Barnes & Noble (Huebner Oaks, San Antonio)",
-      "location": "Huebner Oaks, San Antonio, TX",
-      "event_type": "Opening",
-      "event_date": "Sept. 9",
-      "status": "set to open",
-      "short_description": "A 20,000-sq-ft Barnes & Noble is set to open Sept. 9 at Huebner Oaks as San Antonio's sixth location.",
-      "article_link": "https://www.usatoday.com/story/news/state/texas/2026/09/08/barnes-noble-san-antonio-texas-locations-openings/91657287007/",
-      "published_date": "2026-09-08 17:07:00"
-    },
-    {
-      "store_name": "Barnes & Noble (Mall del Norte, Laredo)",
-      "location": "Mall del Norte, Laredo, TX",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "set to open",
-      "short_description": "Barnes & Noble is set to open one of six additional Texas stores at Mall del Norte in Laredo.",
-      "article_link": "https://www.usatoday.com/story/news/state/texas/2026/09/08/barnes-noble-san-antonio-texas-locations-openings/91657287007/",
-      "published_date": "2026-09-08 17:07:00"
-    },
-    {
-      "store_name": "Barnes & Noble (Grand Prairie)",
-      "location": "Grand Prairie, TX",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "coming",
-      "short_description": "Another new Barnes & Noble location is coming to Grand Prairie as part of the company's Texas expansion.",
-      "article_link": "https://www.usatoday.com/story/news/state/texas/2026/09/08/barnes-noble-san-antonio-texas-locations-openings/91657287007/",
-      "published_date": "2026-09-08 17:07:00"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Page unavailable (Error 451, geo-restricted).",
-      "article_link": "https://www.wftv.com/news/local/bojangles-opens-new-apopka-restaurant-expand-central-florida-presence/ZYBYMGBCNJHDDHSMUZPTWUENLM/",
-      "published_date": "2026-09-08 17:02:22"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article text not retrievable in usable form (only headline text available, no specific business details).",
-      "article_link": "https://www.chosun.com/english/industry-en/2026/09/09/KA4HTYV63ZHP3IXDR72TYNIH64/",
-      "published_date": "2026-09-08 17:01:45"
-    },
-    {
-      "store_name": "Lidl (Staten Island)",
-      "location": "1545 Forest Avenue, Staten Island, NY",
-      "event_type": "Opening",
-      "event_date": "Wednesday, Sept. 30",
-      "status": "grand opening on Sept. 30",
-      "short_description": "Lidl US announced the grand opening of its newest Staten Island grocery store on Sept. 30, with a ribbon-cutting ceremony at 7:40 a.m.",
-      "article_link": "https://massmarketretailers.com/lidl-us-to-open-new-staten-island-store-on-sept-30/",
-      "published_date": "2026-09-08 16:56:41"
-    },
-    {
-      "store_name": "Andria's Seafood Restaurant & Market",
-      "location": "Ventura Harbor, CA",
-      "event_type": "Closing",
-      "event_date": "Next year (not specified exactly)",
-      "status": "could temporarily close",
-      "short_description": "A construction project at Ventura Harbor could temporarily close Andria's Seafood Restaurant & Market next year as the harbor builds fish offloading facilities.",
-      "article_link": "https://www.vcstar.com/story/money/business/2026/09/08/ventura-harbor-project-could-temporarily-close-andrias-other-tenants/91337722007/",
-      "published_date": "2026-09-08 16:48:00"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://johnsoncountypost.com/2026/09/08/hy-vee-plans-western-lenexa-295686/",
-      "published_date": "2026-09-08 16:45:39"
-    },
-    {
-      "store_name": "Sneakerville (Austintown expansion)",
-      "location": "1502 S. Raccoon Road, Teri-Mar Plaza, Austintown, OH",
-      "event_type": "Opening",
-      "event_date": "Friday, Sept. 11",
-      "status": "grand opening",
-      "short_description": "Sneakerville is expanding its Austintown store by adding an adjacent storeroom, with a grand opening for the expanded shop on Sept. 11.",
-      "article_link": "https://businessjournaldaily.com/sneakerville-expands-austintown-store-will-add-hubbard-location/",
-      "published_date": "2026-09-08 16:45:00"
-    },
-    {
-      "store_name": "Sneakerville (Hubbard location)",
-      "location": "304 W. Liberty St., Hubbard, OH",
-      "event_type": "Opening",
-      "event_date": "Later this month",
-      "status": "will open",
-      "short_description": "Owner Dominic Mashorda will open his second Sneakerville location later this month at 304 W. Liberty St., Hubbard.",
-      "article_link": "https://businessjournaldaily.com/sneakerville-expands-austintown-store-will-add-hubbard-location/",
-      "published_date": "2026-09-08 16:45:00"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://canadiangrocer.com/tt-sets-opening-date-largest-store-ontario",
-      "published_date": "2026-09-08 16:39:13"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.bizjournals.com/jacksonville/news/2026/09/08/madbolic-coming-soon.html",
-      "published_date": "2026-09-08 16:38:00"
-    },
-    {
-      "store_name": "Heather's Place",
-      "location": "816 Harrison Ave. SW, Canton, OH (former Athens Restaurant)",
-      "event_type": "Opening",
-      "event_date": "Sept. 9",
-      "status": "grand opening",
-      "short_description": "Heather's Place, a breakfast/lunch diner co-owned by a mother and her three daughters, will celebrate its grand opening Sept. 9 at the former Athens Restaurant location.",
-      "article_link": "https://www.cantonrep.com/story/business/2026/09/08/former-athens-restaurant-in-canton-to-get-new-life-as-heathers-place/91658846007/",
-      "published_date": "2026-09-08 16:32:00"
-    },
-    {
-      "store_name": "DillaDawgs",
-      "location": "11 S. Madison St., Oswego, IL (former Freddie's Off The Chain space)",
-      "event_type": "Opening",
-      "event_date": "Not specified (opening date to be shared soon)",
-      "status": "plans to open",
-      "short_description": "DillaDawgs, an Aurora food truck specializing in hot dogs and quesadillas, plans to open a full-service restaurant in downtown Oswego, taking over the former Freddie's Off The Chain space.",
-      "article_link": "https://patch.com/illinois/oswego/dilladawgs-plans-open-restaurant-downtown-oswego",
-      "published_date": "2026-09-08 16:20:01"
-    },
-    {
-      "store_name": "Scat Cat's Club Café and Lounge",
-      "location": "Disney's Port Orleans Resort - French Quarter",
-      "event_type": "Closing",
-      "event_date": "Closing Oct. 6; lounge reopens ~January 2027, café reopens December 2026",
-      "status": "closing for refurbishment",
-      "short_description": "Scat Cat's Club Café and Lounge at Disney's Port Orleans Resort-French Quarter will close Oct. 6 for refurbishment; the café reopens in December 2026 and the lounge is expected to remain closed until January 2027.",
-      "article_link": "https://currently.att.yahoo.com/att/disney-worlds-popular-snack-getting-161958498.html",
-      "published_date": "2026-09-08 16:19:58"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://johnsoncountypost.com/2026/09/08/back-nine-olathe-open-295660/",
-      "published_date": "2026-09-08 16:00:06"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.mississauga.com/news/mississauga-restaurant-inspection-results/article_d8f08d9e-96be-53cf-a564-c55396a85a22.html",
-      "published_date": "2026-09-08 16:00:00"
-    },
-    {
-      "store_name": "Wolfgang Puck Bar & Grill",
-      "location": "Disney Springs, FL",
-      "event_type": "Closing",
-      "event_date": "Reported final date Sept. 13",
-      "status": "reservations being canceled / nearing end of run (no official closure announced)",
-      "short_description": "Disney has reportedly begun canceling Wolfgang Puck Bar & Grill reservations for dates after Sept. 13 at Disney Springs, though no public closure announcement has been made.",
-      "article_link": "https://www.disneyfanatic.com/wolfgang-puck-disney-springs-reservations-canceled-emd1/",
-      "published_date": "2026-09-08 15:55:40"
-    },
-    {
-      "store_name": "Kendra Scott (Tanger Outlets Sevierville)",
-      "location": "Tanger Outlets Sevierville, TN",
-      "event_type": "Opening",
-      "event_date": "Not specified (recent ribbon cutting)",
-      "status": "opening its first location",
-      "short_description": "Tanger Outlets Sevierville held a ribbon cutting for Kendra Scott, its first location in the Sevierville area, alongside the recent arrival of Swarovski.",
-      "article_link": "https://www.themountainpress.com/business/tanger-outlets-sevierville-welcomes-kendra-scott/article_7b12660e-9b6f-555a-a357-4736a65f2119.html",
-      "published_date": "2026-09-08 15:52:00"
-    },
-    {
-      "store_name": "Swarovski (Tanger Outlets Sevierville)",
-      "location": "Tanger Outlets Sevierville, TN, next to HEYDUDE and Coach",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "now open",
-      "short_description": "Swarovski is now open in a 2,000-square-foot location at Tanger Outlets Sevierville, next to HEYDUDE and the newly reopened Coach.",
-      "article_link": "https://www.themountainpress.com/business/tanger-outlets-sevierville-welcomes-kendra-scott/article_7b12660e-9b6f-555a-a357-4736a65f2119.html",
-      "published_date": "2026-09-08 15:52:00"
-    },
-    {
-      "store_name": "CNC Food Factory (south-side location)",
-      "location": "5028 S. Cliff Ave., Sioux Falls, SD",
-      "event_type": "Opening",
-      "event_date": "End of this year, more likely beginning of next year",
-      "status": "might be ready to open",
-      "short_description": "CNC Food Factory, known for gluten-free offerings, is opening a new south Sioux Falls location with a drive-thru at 5028 S. Cliff Ave.; opening could be late 2026 or early 2027.",
-      "article_link": "https://siouxfalls.business/cafe-known-for-gluten-free-offerings-to-open-south-side-location/",
-      "published_date": "2026-09-08 15:49:11"
-    },
-    {
-      "store_name": "Wolfgang Puck Bar & Grill",
-      "location": "Disney Springs, FL",
-      "event_type": "Closing",
-      "event_date": "Reported final date Sept. 13",
-      "status": "preparing to close / reservations canceled (no official announcement)",
-      "short_description": "Disney World has reportedly begun canceling Wolfgang Puck Bar & Grill reservations for Sept. 14 onward, indicating the restaurant is nearing permanent closure, though no formal announcement has been made.",
-      "article_link": "https://www.disneydining.com/wolfgang-puck-disney-springs-closure-reservations-emd1/",
-      "published_date": "2026-09-08 15:49:10"
-    },
-    {
-      "store_name": "Barbecue Inn",
-      "location": "Oak Forest, Houston, TX",
-      "event_type": "Closing",
-      "event_date": "Early August 2026",
-      "status": "closed",
-      "short_description": "Barbecue Inn, open since 1946, closed at the start of August after 80 years; owner Wayne Skrehot retired at age 86.",
-      "article_link": "https://www.houstonchronicle.com/food-restaurants/article/august-restaurant-closings-2026-22402747.php",
-      "published_date": "2026-09-08 15:44:15"
-    },
-    {
-      "store_name": "The Address",
-      "location": "South of Third Ward, Houston, TX",
-      "event_type": "Closing",
-      "event_date": "Early August 2026",
-      "status": "closed",
-      "short_description": "Nightlife spot the Address, known for Sunday Funday parties, closed in early August after nine years.",
-      "article_link": "https://www.houstonchronicle.com/food-restaurants/article/august-restaurant-closings-2026-22402747.php",
-      "published_date": "2026-09-08 15:44:15"
-    },
-    {
-      "store_name": "Al Quick Shop (Heights)",
-      "location": "The Heights, Houston, TX",
-      "event_type": "Closing",
-      "event_date": "Aug. 24",
-      "status": "closed",
-      "short_description": "The Heights location of Al Quick Shop closed Aug. 24 after the owner decided not to renew the lease; the Montrose location remains open.",
-      "article_link": "https://www.houstonchronicle.com/food-restaurants/article/august-restaurant-closings-2026-22402747.php",
-      "published_date": "2026-09-08 15:44:15"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (406 Not Acceptable).",
-      "article_link": "https://www.knoxnews.com/press-release/story/231232/guaca-go-opens-in-royal-palm-beach-on-national-guacamole-day/",
-      "published_date": "2026-09-08 15:41:42"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.masslive.com/boston/2026/09/longtime-cambridge-breakfast-spot-to-open-new-south-boston-location.html",
-      "published_date": "2026-09-08 15:37:00"
-    },
-    {
-      "store_name": "Saratoga Race Course (2026 season)",
-      "location": "Saratoga Springs, NY",
-      "event_type": "Closing",
-      "event_date": "Monday (final day of season)",
-      "status": "closed for the season",
-      "short_description": "Saratoga Race Course closed out its 2026 summer racing season on Monday after 50 days of racing, including a 45-day summer meet.",
-      "article_link": "https://www.timesunion.com/news/article/photos-closing-day-saratoga-race-course-22420826.php",
-      "published_date": "2026-09-08 15:36:32"
-    },
-    {
-      "store_name": "SCHEELS (Cedar Park flagship)",
-      "location": "Cedar Park, TX",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "officially opened",
-      "short_description": "SCHEELS officially opened its 35th store and second Texas location, a 300,000+ sq ft flagship store in Cedar Park, featuring a Ferris wheel and aquarium.",
-      "article_link": "https://hardwareretailing.com/scheels-opens-flagship-destination-store-in-cedar-park-texas/",
-      "published_date": "2026-09-08 15:23:49"
-    },
-    {
-      "store_name": "Commodore Tavern & Terrace",
-      "location": "1101 W. Magnolia Ave., Fort Worth, TX (former Magnolia Wine Bar space)",
-      "event_type": "Opening",
-      "event_date": "This fall",
-      "status": "will open this fall",
-      "short_description": "Celebrity chef Graham Elliot and Charlie Rushton announced Commodore Tavern & Terrace will open this fall on Magnolia Avenue, in the former Magnolia Wine Bar space.",
-      "article_link": "https://www.wfaa.com/article/entertainment/dining/celebrity-chef-to-open-new-restaurant-on-buzzy-fort-worth-street/287-30771db1-f6a2-410b-b0cd-c78461a8d40d",
-      "published_date": "2026-09-08 15:23:00"
-    },
-    {
-      "store_name": "Boyes",
-      "location": "Former Wilko site, Longton, Stoke-on-Trent",
-      "event_type": "Opening",
-      "event_date": "Friday 11 September",
-      "status": "opening on Friday 11 September at 9am",
-      "short_description": "Boyes, a discount homewares retailer with over 80 UK stores, is opening a new store this week at the former Wilko site in Longton. It follows the chain's opening in Burton-on-Trent in May.",
-      "article_link": "https://stoke.nub.news/news/local-news/new-department-store-set-to-open-at-former-stoke-on-trent-wilko-site-307539",
-      "published_date": "2026-09-08 15:20:00"
-    },
-    {
-      "store_name": "Krispy Krunchy Chicken",
-      "location": "Market on Market, Harrisburg, Dauphin County, PA",
-      "event_type": "Opening",
-      "event_date": "Ribbon-cutting Sept. 14; soft opening Sept. 1",
-      "status": "soft opening completed, ribbon-cutting planned",
-      "short_description": "A new Krispy Krunchy Chicken franchise is opening at Market on Market in Harrisburg following a Sept. 1 soft opening, with a ribbon-cutting Sept. 14. It will be the chain's fourth location in the Harrisburg area.",
-      "article_link": "https://www.abc27.com/local-business/krispy-chicken-franchise-opening-in-dauphin-county/amp/",
-      "published_date": "2026-09-08 15:17:12"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://progressivegrocer.com/1st-look-inside-asianfreshs-new-jersey-store",
-      "published_date": "2026-09-08 15:15:26"
-    },
-    {
-      "store_name": "Wolfgang Puck Bar & Grill",
-      "location": "Disney Springs, Town Center, Walt Disney World",
-      "event_type": "Closing",
-      "event_date": "Not specified",
-      "status": "strongly indicated by reservation cancellations, no formal public announcement",
-      "short_description": "Disney is canceling dining reservations for Wolfgang Puck Bar & Grill starting Sept. 14, with Cast Members telling guests the restaurant will not reopen. Neither Disney nor Wolfgang Puck has publicly confirmed a permanent closure.",
-      "article_link": "https://insidethemagic.net/2026/09/wolfgang-puck-disney-springs-closure-emd1/",
-      "published_date": "2026-09-08 15:13:09"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.beavercreeknewscurrent.com/2026/09/08/doubletree-cuts-ribbon-for-grand-opening/",
-      "published_date": "2026-09-08 15:13:00"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.abc27.com/local-news/chipotle-opening-new-cumberland-county-restaurant-this-week/",
-      "published_date": "2026-09-08 15:11:32"
-    },
-    {
-      "store_name": "Sprouts Farmers Market",
-      "location": "East Windsor Village shopping center, Princeton Hightstown Road, East Windsor, NJ",
-      "event_type": "Opening",
-      "event_date": "Sept. 4",
-      "status": "grand opening celebrated with ribbon cutting",
-      "short_description": "East Windsor officials held a ribbon cutting Sept. 4 for the grand opening of Sprouts Farmers Market at East Windsor Village shopping center. The store offers fresh meat, seafood, deli, organic products and bulk foods.",
-      "article_link": "https://patch.com/new-jersey/eastwindsor/ribbon-cutting-marks-sprouts-farmers-market-opening-east-windsor",
-      "published_date": "2026-09-08 15:10:43"
-    },
-    {
-      "store_name": "Raising Cane's",
-      "location": "Corner of Bay and Tittabawassee Roads, Kochville Township, Saginaw County, MI",
-      "event_type": "Opening",
-      "event_date": "Not specified (recent)",
-      "status": "now open, grand opening held",
-      "short_description": "Raising Cane's is now open in Saginaw County, its first Mid-Michigan location, with a grand opening ceremony and lines of customers. The first 100 customers received a branded hat and free combo card.",
-      "article_link": "https://www.abc12.com/news/business/raising-canes-now-open-in-saginaw-county/article_9068a7b3-bca8-4185-9793-52701b3758a5.html",
-      "published_date": "2026-09-08 15:03:53"
-    },
-    {
-      "store_name": "Atlantic Glass & Mirror",
-      "location": "3613 (address not fully specified)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "now open",
-      "short_description": "Atlantic Glass & Mirror is now open for business, with a new sign up; the original Morehead City store, which just celebrated its 25th anniversary, remains open.",
-      "article_link": "https://wcti12.com/newsletter-daily/gallery/brians-business-beat-new-businesses-open-restaurants-progress-in-new-bern-area?photo=2",
-      "published_date": "2026-09-08 15:00:02"
+      "article_link": "https://www.vancouverisawesome.com/local-news/new-upscale-grocery-store-coming-to-east-vancouver-12761022",
+      "published_date": "2026-09-09 23:11:20"
     },
     {
       "store_name": "Dave's Hot Chicken",
-      "location": "Belfast (no exact address; speculative)",
+      "location": "1822 Deer Park Ave., Deer Park, NY (Address not specified with zip code)",
+      "event_type": "Opening",
+      "event_date": "sometime in October",
+      "status": "\"under construction... buildout is very far along\"",
+      "short_description": "Dave's Hot Chicken plans to open its first Suffolk County location in Deer Park in October, per franchisee Jeff Froccaro. The roughly 2,500-square-foot restaurant is waiting on gas line installation before hiring begins; it shares an address with a Qdoba operated by the same franchise.",
+      "article_link": "https://www.newsday.com/business/daves-hot-chicken-deer-park-long-island-oymt0bjb",
+      "published_date": "2026-09-09 23:05:09"
+    },
+    {
+      "store_name": "Hanbat Korean Restaurant",
+      "location": "3005 W. Cabela's Parkway, Gonzales, LA (Address not specified with zip code)",
+      "event_type": "Opening",
+      "event_date": "Soft opening in August; fully open as of Sept. 9",
+      "status": "\"fully open\"",
+      "short_description": "Hanbat Korean Restaurant held a soft opening in Gonzales in August and became fully open as of Sept. 9. The sit-down restaurant serves starters, grilled dishes, noodles, rice, soups, and dishes like bossam and bulgogi.",
+      "article_link": "https://www.theadvocate.com/baton_rouge/entertainment_life/food_restaurants/hanbat-korean-restaurant-open-in-gonzales/article_d0233316-2bec-4287-9a03-39ff72c67720.html",
+      "published_date": "2026-09-09 23:04:00"
+    },
+    {
+      "store_name": "Grocery Outlet (Galt)",
+      "location": "10570 Twin Cities Road, Galt, CA (Address not specified with zip code)",
+      "event_type": "Opening",
+      "event_date": "Thursday",
+      "status": "\"opening... will welcome customers beginning at 7 a.m.\"",
+      "short_description": "Galt's first Grocery Outlet opens Thursday at 7 a.m., offering discounted groceries from excess manufacturer stock. The grand opening includes gift cards for the first 100 customers and a $1,000 donation to Sunshine Food Pantry.",
+      "article_link": "https://www.sacbee.com/news/business/article317171710.html",
+      "published_date": "2026-09-09 23:03:55"
+    },
+    {
+      "store_name": "Planned Parenthood of Montana (Bozeman clinic)",
+      "location": "Bozeman, MT, near Montana State University (Address not specified)",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "speculated/eyeing, no confirmed location or date",
-      "short_description": "Dave's Hot Chicken has sparked speculation of a Belfast opening through social media hints, but no location or opening date has been confirmed. It opened its first Irish restaurant on Dublin's Dame Street in June.",
-      "article_link": "https://www.thesun.ie/money/17587043/us-fried-chicken-chain-eyes-irish-city/",
-      "published_date": "2026-09-08 14:51:43"
+      "status": "\"plans to open\"",
+      "short_description": "Planned Parenthood of Montana announced plans to open its first Bozeman health center, expanding in-person abortion services. It will be the organization's fifth Montana clinic, joining locations in Billings, Missoula, Helena, and Great Falls.",
+      "article_link": "https://www.kbzk.com/news/planned-parenthood-of-montana-plans-new-bozeman-clinic-expanding-abortion-services",
+      "published_date": "2026-09-09 23:01:43"
+    },
+    {
+      "store_name": "Grand Union (Sherrill)",
+      "location": "Route 5, Sherrill, NY (Address not specified with zip code)",
+      "event_type": "Closing",
+      "event_date": "October (exact date not announced)",
+      "status": "\"permanently closing its doors\"",
+      "short_description": "The Grand Union supermarket on Route 5 in Sherrill is closing in October, per a message sent to shoppers. Store hours change to 8 a.m.–7 p.m. starting Sept. 13, with the final day to redeem Red Dot Savings Points being Sept. 19; the exact closing date has not been announced.",
+      "article_link": "https://www.romesentinel.com/news/sherrill-grand-union-supermarket-closing-october/article_49b6a0b8-4ae4-4659-9f72-08378b37d105.html",
+      "published_date": "2026-09-09 23:00:00"
     },
     {
       "store_name": "No qualifying business found",
@@ -1078,248 +158,18 @@
       "event_date": "N/A",
       "status": "N/A",
       "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.edhat.com/beyond-local/news/urth-caffe-opens-european-location/",
-      "published_date": "2026-09-08 14:51:31"
+      "article_link": "https://thisisreno.com/2026/09/west-coast-sourdough-reno-opens/",
+      "published_date": "2026-09-09 22:45:00"
     },
     {
-      "store_name": "Auntie Anne's",
-      "location": "The Beacons shopping centre, Eastbourne",
-      "event_type": "Opening",
-      "event_date": "Saturday, September 12",
-      "status": "scheduled to open",
-      "short_description": "Auntie Anne's is set to open its 50th UK and Ireland store in Eastbourne on September 12, marking a milestone toward its target of 100 sites by 2030.",
-      "article_link": "https://www.theargus.co.uk/news/26532584.auntie-annes-open-new-eastbourne-store-september-12/",
-      "published_date": "2026-09-08 14:40:00"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article text not provided (empty content).",
-      "article_link": "https://614now.com/2026/food-drink/shawarma-focused-street-food-chain-opening-first-columbus-location",
-      "published_date": "2026-09-08 14:32:38"
-    },
-    {
-      "store_name": "The Original Woody's Bar-B-Q",
-      "location": "1638 University Blvd. S. at Atlantic Boulevard, Jacksonville, FL",
-      "event_type": "Closing",
-      "event_date": "September 30",
-      "status": "closing (temporarily), planning to relocate",
-      "short_description": "The Original Woody's Bar-B-Q, a 46-year-old Jacksonville barbecue institution, will close its original location Sept. 30 with a celebration featuring 1980 menu prices, before relocating to a new, yet-to-be-finalized site.",
-      "article_link": "https://www.jacksonville.com/story/entertainment/dining/2026/09/08/original-woodys-jacksonville-restaurant-closing-sept-30/91643621007/",
-      "published_date": "2026-09-08 14:29:26"
-    },
-    {
-      "store_name": "Home Values",
-      "location": "St Stephens Street, Norwich",
+      "store_name": "O'Charley's (W.Va., Ky., Ohio remaining locations)",
+      "location": "West Virginia, Ohio, Kentucky (Address not specified)",
       "event_type": "Closing",
       "event_date": "Not specified",
-      "status": "currently closed after ceiling collapse",
-      "short_description": "Home Values in Norwich remains closed after a ceiling collapse caused by a sprinkler system leak over the weekend, with debris and water damage visible; it is not yet known when the shop will reopen.",
-      "article_link": "https://www.eveningnews24.co.uk/news/26532100.home-values-norwich-remains-closed-ceiling-collapse/",
-      "published_date": "2026-09-08 14:29:00"
-    },
-    {
-      "store_name": "Two Hounds Public House",
-      "location": "43 South Main St., Newtown, CT",
-      "event_type": "Opening",
-      "event_date": "Friday, Sept. 11 (ribbon-cutting at 1 p.m.)",
-      "status": "grand opening celebration, already in soft-opening",
-      "short_description": "Two Hounds Public House is celebrating its grand opening in Newtown with a ribbon-cutting Sept. 11, in the former Farmhouse Restaurant space, after already welcoming customers during a soft-opening period.",
-      "article_link": "https://patch.com/connecticut/newtown/new-restaurant-pub-celebrating-grand-opening-newtown",
-      "published_date": "2026-09-08 14:23:04"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (403 Forbidden); content unrelated (tennis).",
-      "article_link": "https://mshale.com/afd197d0/aa72134eg3-EXo4T-nY",
-      "published_date": "2026-09-08 14:19:41"
-    },
-    {
-      "store_name": "Brittons of Columbia",
-      "location": "2818 Devine Street, Columbia, SC",
-      "event_type": "Closing",
-      "event_date": "End of 2026 (last day December 24)",
-      "status": "permanently close",
-      "short_description": "Brittons of Columbia, a nearly 80-year-old family-owned clothing store known for dressing Gamecock athletics figures, will permanently close at the end of 2026, with its last day being December 24.",
-      "article_link": "https://www.yahoo.com/news/articles/time-come-columbia-clothing-store-141800527.html",
-      "published_date": "2026-09-08 14:18:00"
-    },
-    {
-      "store_name": "Bojangles",
-      "location": "Gilbert, Arizona",
-      "event_type": "Opening",
-      "event_date": "This summer",
-      "status": "opened",
-      "short_description": "LV Petroleum opened its first Bojangles franchise in Arizona, in Gilbert, about 22 miles from Phoenix, along with a new Nevada location, as part of its expansion plans.",
-      "article_link": "https://www.cstoredive.com/news/lv-petroleum-opens-first-bojangles-in-arizona/829724/",
-      "published_date": "2026-09-08 14:08:24"
-    },
-    {
-      "store_name": "Click Shoes",
-      "location": "Lippulaiva urban centre, Espoo, Finland",
-      "event_type": "Opening",
-      "event_date": "Thursday 17 September",
-      "status": "opens its doors",
-      "short_description": "Tokmanni Group's Click Shoes chain is opening a new store in the Lippulaiva urban centre in Espoo on September 17, its second location in Espoo.",
-      "article_link": "https://news.cision.com/tokmanni-group-oyj/r/tokmanni-group-renews-its-store-network-in-finland-this-autumn-as-well---new-click-shoes-store-to-op,c4393337",
-      "published_date": "2026-09-08 14:06:00"
-    },
-    {
-      "store_name": "Tokmanni (Lohja smaller store)",
-      "location": "Lohja city centre, Finland",
-      "event_type": "Closing",
-      "event_date": "Not specified",
-      "status": "close (shopping to concentrate at Lempola store)",
-      "short_description": "Tokmanni's smaller Lohja city centre store will close as the Group concentrates shopping in its large Lempola store in Lohja.",
-      "article_link": "https://news.cision.com/tokmanni-group-oyj/r/tokmanni-group-renews-its-store-network-in-finland-this-autumn-as-well---new-click-shoes-store-to-op,c4393337",
-      "published_date": "2026-09-08 14:06:00"
-    },
-    {
-      "store_name": "Tokmanni (Kivistö, Vantaa)",
-      "location": "Kivistö, Vantaa, Finland",
-      "event_type": "Opening",
-      "event_date": "Not specified (later this year)",
-      "status": "construction continues to progress",
-      "short_description": "A new Tokmanni store in Kivistö, Vantaa is under construction, with further store openings planned in Finland later this year.",
-      "article_link": "https://news.cision.com/tokmanni-group-oyj/r/tokmanni-group-renews-its-store-network-in-finland-this-autumn-as-well---new-click-shoes-store-to-op,c4393337",
-      "published_date": "2026-09-08 14:06:00"
-    },
-    {
-      "store_name": "Slim Chickens",
-      "location": "Broughton Shopping Park, Broughton, Flintshire",
-      "event_type": "Opening",
-      "event_date": "Not specified (recruitment start date Sept. 24)",
-      "status": "'new site coming soon', opening moves closer",
-      "short_description": "Slim Chickens has begun recruiting for its new Broughton restaurant, listing the venue as \"coming soon,\" a sign the long-awaited opening is nearing, though no confirmed opening date was given.",
-      "article_link": "https://www.leaderlive.co.uk/news/26532292.slim-chickens-broughton-restaurant-opening-moves-closer/",
-      "published_date": "2026-09-08 14:05:00"
-    },
-    {
-      "store_name": "Thrive Alabama (Albertville health center)",
-      "location": "Albertville, AL",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "opening date to be announced soon",
-      "short_description": "Thrive Alabama is expanding to Albertville with a new federally funded health center after receiving a New Access Point grant; an opening date will be announced soon.",
-      "article_link": "https://256today.com/thrive-alabama-expanding-to-albertville-with-new-federally-funded-health-center/",
-      "published_date": "2026-09-08 14:00:04"
-    },
-    {
-      "store_name": "Our Kids Read Baltimore Literacy Hub",
-      "location": "418 E. 33rd Street, Baltimore",
-      "event_type": "Opening",
-      "event_date": "Saturday, September 5, 2026",
-      "status": "grand opening held",
-      "short_description": "Our Kids Read celebrated the grand opening of its expanded Baltimore Literacy Hub on Sept. 5, 2026, offering free books and literacy support to families at no cost.",
-      "article_link": "https://www.prnewswire.com/news-releases/grand-opening-of-nations-largest-free-bookstore-for-low-income-families-held-in-baltimore-302872399.html",
-      "published_date": "2026-09-08 14:00:00"
-    },
-    {
-      "store_name": "Fleurie",
-      "location": "Beatty Avenue, Armadale, Melbourne",
-      "event_type": "Opening",
-      "event_date": "December",
-      "status": "will open",
-      "short_description": "The team behind Clover wine bar is opening Fleurie, a modern French-accented bistro, in Armadale in December, taking over the old Chez Bob site.",
-      "article_link": "https://www.broadsheet.com.au/melbourne/food-and-drink/article/fleurie-armadale-coming-soon",
-      "published_date": "2026-09-08 13:59:07"
-    },
-    {
-      "store_name": "Wolfgang Puck Bar & Grill",
-      "location": "Disney Springs, Walt Disney World",
-      "event_type": "Closing",
-      "event_date": "September 13 (final day of operation per website)",
-      "status": "permanent closure indicated, no public confirmation",
-      "short_description": "Disney is calling guests to cancel Wolfgang Puck Bar & Grill reservations, with Cast Members telling them the restaurant will not reopen; September 13 is shown as the final day of operation, though no official closure confirmation has been issued.",
-      "article_link": "https://blogmickey.com/2026/09/disney-world-begins-canceling-reservations-ahead-of-wolfgang-puck-permanent-closure-at-disney-springs/",
-      "published_date": "2026-09-08 13:58:14"
-    },
-    {
-      "store_name": "Fresh Monkee",
-      "location": "11282 James Swart Circle, Fairfax City, VA",
-      "event_type": "Opening",
-      "event_date": "Not specified (\"coming soon\")",
-      "status": "coming soon, opening date not announced",
-      "short_description": "Fresh Monkee, a smoothie and protein shake chain, plans to open its first Virginia location in Fairfax City; the store is currently listed as \"coming soon\" with no announced opening date.",
-      "article_link": "https://patch.com/virginia/fairfaxcity/fresh-monkee-open-first-virginia-location-fairfax-city-report",
-      "published_date": "2026-09-08 13:42:18"
-    },
-    {
-      "store_name": "The Northwic",
-      "location": "Lower Goat Lane, Norwich",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "opening \"soon\", coming soon",
-      "short_description": "Chef Liam Nichols' new restaurant The Northwic in Norwich has signs reading \"coming soon\"; it will offer modern British tasting-menu dining, though no firm opening date is given.",
-      "article_link": "https://www.edp24.co.uk/news/26530300.new-restaurant-northwic-norwich-opening-soon/",
-      "published_date": "2026-09-08 13:38:00"
-    },
-    {
-      "store_name": "The Hoxton Dubai Media City",
-      "location": "Former Radisson Blu, Media City, Dubai",
-      "event_type": "Opening",
-      "event_date": "2027",
-      "status": "scheduled to open",
-      "short_description": "The Hoxton Dubai Media City, a 230-room hotel with a wellness club and Paris Society dining venues, is scheduled to open in 2027 after a transformation of the former Radisson Blu building.",
-      "article_link": "https://larevuedeshotels.com/en/the-hoxton-dubai-media-city-hotel-to-open-in-2027-230-rooms-a-unique-w",
-      "published_date": "2026-09-08 13:23:18"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article discusses McDonald's expansion pace generally; no specific store opening/closing with location details.",
-      "article_link": "https://finance.yahoo.com/markets/stocks/articles/mcds-slower-expansion-pace-help-131600463.html",
-      "published_date": "2026-09-08 13:16:00"
-    },
-    {
-      "store_name": "Tomaso's Pizza and Burger Bar",
-      "location": "Wharf Street, Old Port, Portland, Maine",
-      "event_type": "Closing",
-      "event_date": "Labor Day weekend",
-      "status": "permanently closed",
-      "short_description": "Tomaso's Pizza and Burger Bar on Wharf Street in Portland, Maine, has permanently closed as of Labor Day, following a rebrand from Rathskeller that failed to succeed.",
-      "article_link": "https://92moose.fm/ixp/698/p/portland-maine-restaurants-closed-tomasos-publica/",
-      "published_date": "2026-09-08 13:11:17"
-    },
-    {
-      "store_name": "Bar Publica",
-      "location": "Next to Wilson County BBQ, Portland, Maine",
-      "event_type": "Closing",
-      "event_date": "Labor Day weekend",
-      "status": "closed permanently",
-      "short_description": "Bar Publica in Portland, Maine, closed permanently over Labor Day weekend; the Puerto Rican-inspired restaurant's closure was attributed to the chef's health.",
-      "article_link": "https://92moose.fm/ixp/698/p/portland-maine-restaurants-closed-tomasos-publica/",
-      "published_date": "2026-09-08 13:11:17"
-    },
-    {
-      "store_name": "sweetgreen",
-      "location": "4624 Town Crossing Dr., St. Johns Town Center, Jacksonville, FL",
-      "event_type": "Opening",
-      "event_date": "September 15",
-      "status": "opens",
-      "short_description": "Sweetgreen is opening its first Northeast Florida location at St. Johns Town Center in Jacksonville on September 15, featuring its signature salads, bowls, and a limited-time Fall Harvest menu.",
-      "article_link": "https://www.businesswire.com/news/home/20260908578283/en/Sweetgreen-Makes-Its-Northeast-Florida-Debut-With-First-Ever-Jacksonville-Location-Opening-at-St.-Johns-Town-Center",
-      "published_date": "2026-09-08 13:07:04"
-    },
-    {
-      "store_name": "Giliberto's (Rochester location)",
-      "location": "Bandel Road / 5550 N. Hwy 52, Northwest Rochester, MN",
-      "event_type": "Closing",
-      "event_date": "Not specified",
-      "status": "shut down, will not reopen",
-      "short_description": "Giliberto's in Northwest Rochester was shut down by Olmsted County health officials over Minnesota Food Code violations and will not reopen; other locations in Owatonna, St. Cloud, Willmar, and Mankato remain open.",
-      "article_link": "https://kroc.com/gilibertos-nw-rochester-closed/",
-      "published_date": "2026-09-08 13:03:38"
+      "status": "\"closing all remaining eateries\"",
+      "short_description": "O'Charley's Restaurant & Bar will close all remaining locations, including those in West Virginia, Ohio, and Kentucky, per multiple reports. The chain has deleted its social media accounts; it was founded in Nashville and operated over 50 years.",
+      "article_link": "https://wchstv.com/news/local/ocharleys-to-close-remaining-restaurants-including-locations-in-wva-ky-and-ohio",
+      "published_date": "2026-09-09 22:34:39"
     },
     {
       "store_name": "No qualifying business found",
@@ -1328,8 +178,48 @@
       "event_date": "N/A",
       "status": "N/A",
       "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.cleveland.com/entertainment/2026/09/new-restaurant-to-open-in-playhouse-square.html",
-      "published_date": "2026-09-08 13:01:00"
+      "article_link": "https://www.wavy.com/sports/ap-nhl-still-has-work-to-do-before-approving-expanding-to-a-33rd-team-in-houston-or-austin-texas/",
+      "published_date": "2026-09-09 22:22:29"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article text could not be fetched (connection timeout).",
+      "article_link": "https://www.restaurantnews.com/angry-chickz-hot-chicken-avondale-arizona-expansion-090926/",
+      "published_date": "2026-09-09 22:17:19"
+    },
+    {
+      "store_name": "Cheesecake Factory (West County Mall)",
+      "location": "West County Mall, restaurant village area next to J Gilbert's, St. Louis, MO (Address not specified with zip code)",
+      "event_type": "Opening",
+      "event_date": "Nov. 10",
+      "status": "\"officially has an opening date... coming soon\"",
+      "short_description": "The new Cheesecake Factory at West County Mall will open Nov. 10, replacing the former McCormick and Schmick's location. Construction is underway; it will be the second location in the area, alongside the Galleria store.",
+      "article_link": "https://www.firstalert4.com/2026/09/09/west-county-mall-cheesecake-factory-set-open-november/?outputType=amp",
+      "published_date": "2026-09-09 22:04:00"
+    },
+    {
+      "store_name": "Ikea (San Marcos small-format store)",
+      "location": "San Mar Plaza shopping center, San Marcos, TX (Address not specified with zip code)",
+      "event_type": "Closing",
+      "event_date": "Nov. 1",
+      "status": "\"is closing its doors\"",
+      "short_description": "Ikea is closing its San Marcos small-format store on Nov. 1, about 14 months after it opened, citing a decision not to renew the lease. The 35,000-square-foot store was part of Ikea's strategy for smaller, more accessible formats; Ikea also closed its Domain, Austin small-format store on Aug. 30.",
+      "article_link": "https://www.expressnews.com/business/article/san-marcos-ikea-closing-22424332.php",
+      "published_date": "2026-09-09 21:56:24"
+    },
+    {
+      "store_name": "312 Pizza",
+      "location": "Germantown neighborhood, Nashville, TN (Address not specified)",
+      "event_type": "Closing",
+      "event_date": "Was set to close Monday; received temporary reprieve",
+      "status": "\"faces closure... last Hail Mary\"",
+      "short_description": "312 Pizza, a family-owned Chicago-style pizzeria in Nashville, nearly closed this week due to a roughly 25% revenue decline, but a surge of community orders over Labor Day weekend gave it a temporary reprieve. The owner says survival depends on customers returning consistently.",
+      "article_link": "https://www.wsmv.com/2026/09/09/community-rallies-around-one-nashvilles-oldest-chicago-style-pizza-joints-it-faces-closure-our-last-hail-mary/",
+      "published_date": "2026-09-09 21:54:00"
     },
     {
       "store_name": "No qualifying business found",
@@ -1338,8 +228,88 @@
       "event_date": "N/A",
       "status": "N/A",
       "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.bizjournals.com/houston/news/2026/09/08/united-airlines-test-food-delivery-airport-gate.html",
-      "published_date": "2026-09-08 12:54:00"
+      "article_link": "https://ts2.tech/en/which-dennys-locations-closed-five-midwest-diners-shut-as-franchisee-plans-bankruptcy/",
+      "published_date": "2026-09-09 21:53:48"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article content not present in retrieved text (only title/URL/metadata available).",
+      "article_link": "https://www.tampabay.com/food/food-news/2026/09/09/pura-vida-miami-opens-water-street-tampa/",
+      "published_date": "2026-09-09 21:38:00"
+    },
+    {
+      "store_name": "Zaab Thai",
+      "location": "9142 23rd Ave. NW, Edmonton (Address not specified with zip code)",
+      "event_type": "Opening",
+      "event_date": "Opened in June",
+      "status": "\"finally opened its doors\"",
+      "short_description": "Zaab Thai has recently opened in Edmonton's South Commons after being teased for some time, serving dishes like Pad Ka Pow and Mango Sticky Rice. It offers dine-in, take-out, and delivery, open daily 11 a.m.–9 p.m.",
+      "article_link": "https://dailyhive.com/edmonton/zaab-thai-opening-edmonton",
+      "published_date": "2026-09-09 21:24:00"
+    },
+    {
+      "store_name": "BJ's Wholesale Club (Rotterdam)",
+      "location": "Replacing former location at 70 W Campbell Road, Rotterdam, NY (Address not specified with zip code)",
+      "event_type": "Opening",
+      "event_date": "8 a.m. on Sept. 18",
+      "status": "\"opens at 8 a.m.\"",
+      "short_description": "The newly constructed 100,000-square-foot BJ's Wholesale Club in Rotterdam opens at 8 a.m. on Sept. 18 with an adjacent 16-pump gas station, replacing the current location which closes Sept. 17. New members can get a $15 annual membership.",
+      "article_link": "https://www.dailygazette.com/news/bjs-wholesale-club-rotterdam-opening-date/article_50794128-bfee-4366-b294-3e18df8746f8.html",
+      "published_date": "2026-09-09 21:18:00"
+    },
+    {
+      "store_name": "BJ's Wholesale Club (former Rotterdam location)",
+      "location": "70 W Campbell Road, Rotterdam, NY (Address not specified with zip code)",
+      "event_type": "Closing",
+      "event_date": "10 p.m. on Sept. 17",
+      "status": "\"will permanently close\"",
+      "short_description": "The former BJ's Wholesale Club location at 70 W Campbell Road will permanently close at 10 p.m. on Sept. 17, ahead of the new Rotterdam location opening on Sept. 18.",
+      "article_link": "https://www.dailygazette.com/news/bjs-wholesale-club-rotterdam-opening-date/article_50794128-bfee-4366-b294-3e18df8746f8.html",
+      "published_date": "2026-09-09 21:18:00"
+    },
+    {
+      "store_name": "Francesca's",
+      "location": "N/A (nationwide, address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "\"closed 450 stores, heads to final liquidation\"",
+      "short_description": "Article could not be fully fetched (403 Forbidden); only headline indicates the women's retailer Francesca's closed 450 stores and is heading to final liquidation.",
+      "article_link": "https://www.thestreet.com/retail/womens-retailer-francescas-closed-450-stores-heads-to-final-liquidation",
+      "published_date": "2026-09-09 21:12:28"
+    },
+    {
+      "store_name": "Qdoba",
+      "location": "N/A (41 restaurants, addresses not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "\"closing 41 restaurants\"",
+      "short_description": "Article could not be fully fetched (403 Forbidden); only headline indicates the Mexican chain, tied to a loan default, is closing 41 restaurants.",
+      "article_link": "https://www.thestreet.com/restaurants/loan-default-puts-41-restaurant-qdoba-mexican-chain-at-risk",
+      "published_date": "2026-09-09 21:11:50"
+    },
+    {
+      "store_name": "Isla y Fuego Bar and Grill",
+      "location": "14215 Coit Road, Ste. 126, Dallas (near Richardson) (Address not specified with zip code)",
+      "event_type": "Opening",
+      "event_date": "Opened August",
+      "status": "\"now open\"",
+      "short_description": "Isla y Fuego Bar and Grill opened in August near the Richardson border, serving Honduran and Mexican food including seafood and meat dishes, located near El Rancho Supermercado and Sunnyland Outdoor Living.",
+      "article_link": "https://communityimpact.com/richardson/dining/isla-y-fuego-bar-and-grill-now-open-near-richardson/",
+      "published_date": "2026-09-09 21:10:00"
+    },
+    {
+      "store_name": "Jolene's (Dolly Parton's SongTeller Hotel)",
+      "location": "SongTeller Hotel, Nashville, TN (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "End of September 2026 (hotel/museum open Sep. 29)",
+      "status": "\"set to open\"",
+      "short_description": "Jolene's, a lounge and rooftop bar at Dolly Parton's SongTeller Hotel, is set to open at the end of September 2026 and is now accepting reservations. The menu includes tapas, small plates, and a cocktail bar; entertainment programming begins Sept. 14.",
+      "article_link": "https://www.wsmv.com/2026/09/09/reservations-are-now-open-jolenes-dolly-partons-upcoming-lounge-rooftop-bar-her-hotel/",
+      "published_date": "2026-09-09 21:04:00"
     },
     {
       "store_name": "No qualifying business found",
@@ -1348,198 +318,1248 @@
       "event_date": "N/A",
       "status": "N/A",
       "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.insauga.com/jollibee-to-open-26-new-restaurants-in-canada/",
-      "published_date": "2026-09-08 12:49:00"
+      "article_link": "https://www.bizjournals.com/denver/news/2026/09/09/alterra-mountain-company-workforce-steamboat.html",
+      "published_date": "2026-09-09 21:04:00"
     },
     {
-      "store_name": "Paperback Parlor (mobile book truck)",
-      "location": "Brambley Park, Central Virginia",
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 Forbidden).",
+      "article_link": "https://www.geekwire.com/2026/general-motors-to-open-downtown-seattle-office-to-bring-together-remote-technical-talent/",
+      "published_date": "2026-09-09 21:01:08"
+    },
+    {
+      "store_name": "DeCicco & Sons",
+      "location": "21 Glenville St., Glen Plaza Shopping Center, Greenwich, CT (Address not specified with zip code)",
       "event_type": "Opening",
-      "event_date": "Saturday, Sept. 12",
-      "status": "grand opening",
-      "short_description": "Paperback Parlor is holding its grand opening for its mobile book truck on Saturday, Sept. 12, at Brambley Park from noon to 5 p.m., with freebies and giveaways.",
-      "article_link": "https://www.wric.com/in-studio-interviews/8news-paperback-parlor-event/amp/",
-      "published_date": "2026-09-08 12:43:03"
+      "event_date": "Wednesday, Sept. 9, 2026",
+      "status": "\"opened Wednesday\"",
+      "short_description": "DeCicco & Sons opened its 26,000-square-foot Greenwich store on Sept. 9, marking the family-owned New York chain's first Connecticut location, with an opening ceremony featuring founder John DeCicco, Sr. and Greenwich First Selectman Fred Camillo.",
+      "article_link": "https://www.ctinsider.com/business/article/decicco-sons-groceries-store-greenwich-ct-22422320.php",
+      "published_date": "2026-09-09 20:57:42"
     },
     {
-      "store_name": "Slim Chickens",
-      "location": "San Patricio Village, González Giusti Avenue, Guaynabo, Puerto Rico",
+      "store_name": "O'Charley's (nationwide)",
+      "location": "N/A (nationwide, address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "\"closing all locations nationwide\"",
+      "short_description": "Page unavailable (Error 451 - geo-restricted); only headline confirms O'Charley's is closing all locations nationwide.",
+      "article_link": "https://www.wsbtv.com/news/local/ocharleys-closing-all-locations-nationwide/EKF26HWTFFHCPIEBHR5VBEDH2Q/",
+      "published_date": "2026-09-09 20:43:05"
+    },
+    {
+      "store_name": "Chicken Salad Chick",
+      "location": "Clifton Park, NY (Address not specified)",
       "event_type": "Opening",
-      "event_date": "Thursday, Sept. 10",
-      "status": "scheduled to open",
-      "short_description": "Slim Chickens will open its first Puerto Rico restaurant Sept. 10 at San Patricio Village in Guaynabo, with a $1.5 million investment and plans for five locations across the island over five years.",
-      "article_link": "https://www.wjournalpr.com/lifestyle/food/slim-chickens-to-open-first-puerto-rico-location-at-san-patricio-village/article_6644d16b-5f1a-444e-9414-8a5d7d805a42.html",
-      "published_date": "2026-09-08 12:30:00"
+      "event_date": "Not specified",
+      "status": "\"Opens\" (first New York location)",
+      "short_description": "Chicken Salad Chick opened its first New York location in Clifton Park, according to the headline; full article text not available beyond the title.",
+      "article_link": "https://www.fb101.com/chicken-salad-chick-first-new-york-location-clifton-park-302873138",
+      "published_date": "2026-09-09 20:32:14"
     },
     {
-      "store_name": "Rosati's Pizza (11 new locations)",
+      "store_name": "Duck Soup",
+      "location": "365 Boston Post Road, Sudbury, MA (Address not specified with zip code)",
+      "event_type": "remodel",
+      "event_date": "Ribbon-cutting Oct. 10; original opening Oct. 12, 1971",
+      "status": "\"will mark the 55th anniversary... with a ribbon-cutting ceremony\"",
+      "short_description": "Duck Soup, a longtime Mill Village shop, will celebrate its 55th anniversary with events throughout October and a ribbon-cutting on Oct. 10. The store, opened in 1971 by Richard Ressler and Jim Barisano and purchased by Louise Mawhinney in 2014, will donate a portion of sales to the Sudbury Food Pantry.",
+      "article_link": "https://patch.com/massachusetts/sudbury/amp/34797739/iconic-sudbury-store-to-mark-55-years-with-ribbon-cutting",
+      "published_date": "2026-09-09 20:31:38"
+    },
+    {
+      "store_name": "IKEA (Tulsa)",
+      "location": "Tulsa Hills Shopping Center, 7309 S. Olympia Ave., Tulsa, OK (Address not specified with zip code)",
+      "event_type": "Opening",
+      "event_date": "Fall 2026 (no official date yet)",
+      "status": "\"planned... before the year closes\"",
+      "short_description": "The first Oklahoma IKEA will open in Tulsa in fall 2026, at a planned 51,000-square-foot store in Tulsa Hills Shopping Center, with no official opening date yet set. IKEA is also opening stores in Webster TX, Gurnee IL, Madison WI, SoHo NYC, and others through 2027.",
+      "article_link": "https://www.oklahoman.com/story/business/local/2026/09/09/ikea-tulsa-ok-opening-fall-2026/91657708007/",
+      "published_date": "2026-09-09 20:28:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 Forbidden).",
+      "article_link": "https://www.lehighvalleylive.com/business/2026/09/55-year-old-restaurant-chain-abruptly-closes-locations-nationwide.html",
+      "published_date": "2026-09-09 20:20:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article is about a roadside memorial relocation, not a business opening or closing.",
+      "article_link": "https://www.wcax.com/2026/09/09/roadside-memorial-teen-cyclist-killed-crash-moved-new-location/?outputType=amp",
+      "published_date": "2026-09-09 20:17:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article content not present in retrieved text (only title/URL/metadata available).",
+      "article_link": "https://bendbulletin.com/2026/09/09/homegoods-eyes-first-central-oregon-location-in-bend/",
+      "published_date": "2026-09-09 20:14:15"
+    },
+    {
+      "store_name": "House of Bombay (former Menlo Park Diner)",
+      "location": "Former Menlo Park Diner location (Address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "\"closes\" (after fire)",
+      "short_description": "Page/content unusable due to browser-support error message; headline indicates a fire shuttered the new House of Bombay restaurant at the former Menlo Park Diner just months after opening.",
+      "article_link": "https://www.mycentraljersey.com/story/entertainment/dining/2026/09/09/house-of-bombay-at-former-menlo-park-diner-closes-after-fire/91679416007/",
+      "published_date": "2026-09-09 20:12:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 Forbidden).",
+      "article_link": "https://www.insauga.com/closure-small-business-closing-soon-due-to-unsustainability-of-operating-in-toronto/",
+      "published_date": "2026-09-09 20:06:47"
+    },
+    {
+      "store_name": "Stephanie's Village Pancake House",
+      "location": "365... (address not given; Rowley, MA) (Address not specified with zip code)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "\"is now closed\"",
+      "short_description": "Stephanie's Village Pancake House in Rowley has closed after more than 23 years, as owners Cathy and Ed Sutherby retire. The building dates to 1660 and has been run by three families since; the restaurant was a weekly tradition for many local families.",
+      "article_link": "https://www.boston.com/food/food-news/2026/09/09/stephanies-village-pancake-house-rowley-closed/",
+      "published_date": "2026-09-09 20:01:00"
+    },
+    {
+      "store_name": "Burlington (Cicero)",
+      "location": "Cicero, NY (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"Opening date announced\"",
+      "short_description": "Article could not be fetched (403 Forbidden); headline indicates an opening date has been announced for a new Burlington store in Cicero.",
+      "article_link": "https://www.localsyr.com/news/your-stories/your-stories-qa-opening-date-announced-for-new-burlington-in-cicero/",
+      "published_date": "2026-09-09 20:00:00"
+    },
+    {
+      "store_name": "Florafête Bouquet Bar",
+      "location": "400 Beach Drive, downtown St. Pete, FL (Address not specified with zip code)",
+      "event_type": "Opening",
+      "event_date": "This fall",
+      "status": "\"plans to open this fall\"",
+      "short_description": "Florafête Bouquet Bar, founded by Lucy Watkins, plans to open this fall at 400 Beach Drive in downtown St. Pete, in the space formerly occupied by Savory Spice Shop. It will offer custom floral arrangements, a build-your-own bouquet bar, retail goods, and a nine-seat wine and coffee bar.",
+      "article_link": "https://stpeterising.com/home/floral-designer-florafte-to-open-boutique-flower-shop-and-wine-bar-on-beach-drive-in-downtown-st-pete",
+      "published_date": "2026-09-09 19:49:00"
+    },
+    {
+      "store_name": "O'Charley's (multiple regional locations)",
+      "location": "Ohio, Kentucky, Indiana (Address not specified)",
+      "event_type": "Closing",
+      "event_date": "Wednesday, Sept. 9 (8 p.m.)",
+      "status": "\"abruptly closing many locations\"",
+      "short_description": "O'Charley's is abruptly closing many locations, with employees told restaurants would close at 8 p.m. Wednesday. The chain, founded in 1971, currently operates 52 locations across states including Ohio, Kentucky, and Indiana; it closed 51 restaurants in 2023.",
+      "article_link": "https://www.wlwt.com/article/ocharleys-restaurant-closing-locations/73652882",
+      "published_date": "2026-09-09 19:44:55"
+    },
+    {
+      "store_name": "Red Lobster (36 locations, incl. Tallahassee FL)",
+      "location": "Alabama, California, Georgia, Illinois, New York, Tallahassee FL (Address not specified)",
+      "event_type": "Closing",
+      "event_date": "Throughout 2026",
+      "status": "\"closing dozens of locations\"",
+      "short_description": "Red Lobster has closed 36 locations in 2026, including its oldest standing location in Tallahassee, Florida, with additional closures in Alabama, California, Georgia, Illinois, and New York. The chain's footprint dropped from 520 to 484 locations nationwide, which the company calls \"right-sizing\" following its 2024 bankruptcy filing.",
+      "article_link": "https://www.thetakeout.com/2254249/iconic-seafood-chain-red-lobster-closures-2026/",
+      "published_date": "2026-09-09 19:36:10"
+    },
+    {
+      "store_name": "Nuvrei MC",
+      "location": "4884 Grand River, Detroit (Address not specified with zip code)",
+      "event_type": "Opening",
+      "event_date": "Cafe now open; bakery in November; pizzeria in 2027",
+      "status": "\"is open now\"",
+      "short_description": "Nuvrei MC, the coffee and pastry cafe portion of chef Marius Pop's multi-phase Core City project, is open now at 4884 Grand River, Detroit. A bakery will follow in November and a pizzeria in early 2027.",
+      "article_link": "https://www.detroitnews.com/story/entertainment/dining/2026/09/09/25-restaurants-expected-to-open-soon-in-metro-detroit/91577921007/",
+      "published_date": "2026-09-09 19:34:00"
+    },
+    {
+      "store_name": "O'Charley's (Knoxville - West Hills location)",
+      "location": "Kingston Pike, West Hills, Knoxville, TN (Address not specified with zip code)",
+      "event_type": "Closing",
+      "event_date": "Sept. 9, 2026",
+      "status": "\"closed sign was posted\"",
+      "short_description": "The O'Charley's on Kingston Pike in West Hills, Knoxville closed, with a sign thanking customers posted on Sept. 9. The Turkey Creek location closed a couple months earlier; the Mall Road and Alcoa locations remain open as of Sept. 9.",
+      "article_link": "https://www.knoxnews.com/story/entertainment/dining/2026/09/09/two-knoxville-charleys-restaurants-have-closed-what-about-the-rest/91673233007/",
+      "published_date": "2026-09-09 19:32:00"
+    },
+    {
+      "store_name": "Cash Only Bistro",
+      "location": "16215 E Warren Avenue, Detroit, MI 48224",
+      "event_type": "Opening",
+      "event_date": "No firm opening date",
+      "status": "\"has plans... does not yet have a firm opening date\"",
+      "short_description": "Cash Only Bistro, a build-your-own pasta concept, has received funding to build out at 16215 E Warren Avenue in Detroit's Morningside neighborhood. Owner Sharletta Hall does not yet have a firm opening date or released menu.",
+      "article_link": "https://whatnow.com/detroit/restaurants/entrepreneur-opening-cash-only-bistro-concept-in-morningside/",
+      "published_date": "2026-09-09 19:12:38"
+    },
+    {
+      "store_name": "O'Charley's (Tupelo, MS)",
+      "location": "3876 N. Gloster St., Tupelo, MS (Address not specified with zip code)",
+      "event_type": "Closing",
+      "event_date": "Effective Sept. 9, 2026",
+      "status": "\"will close... effective today\"",
+      "short_description": "O'Charley's is closing many more restaurants effective Sept. 9, including two Mississippi locations in Tupelo and Olive Branch. The chain, once at 244 locations, currently has 44; employees in Tennessee confirmed almost all company-owned locations would close at 8 p.m.",
+      "article_link": "https://www.clarionledger.com/story/life/food/2026/09/09/ocharleys-closing-restaurants-heres-what-we-know-mississippi-locations/91678480007/",
+      "published_date": "2026-09-09 19:10:00"
+    },
+    {
+      "store_name": "O'Charley's (Olive Branch, MS)",
+      "location": "7880 Craft-Goodman Road, Olive Branch, MS (Address not specified with zip code)",
+      "event_type": "Closing",
+      "event_date": "Effective Sept. 9, 2026",
+      "status": "\"will close... effective today\"",
+      "short_description": "The Olive Branch, Mississippi O'Charley's location is among those closing effective Sept. 9, as the chain undergoes widespread closures nationwide.",
+      "article_link": "https://www.clarionledger.com/story/life/food/2026/09/09/ocharleys-closing-restaurants-heres-what-we-know-mississippi-locations/91678480007/",
+      "published_date": "2026-09-09 19:10:00"
+    },
+    {
+      "store_name": "Doughboy's Pizza",
+      "location": "15410 New Hampshire Ave., Cloverly",
+      "event_type": "Opening",
+      "event_date": "Tuesday, September 15",
+      "status": "soft opening",
+      "short_description": "Doughboy's Pizza announced a soft opening for September 15, taking over the former Bear Brick Oven Pizza/Greek Islands Grill space. It will offer brick-oven pizzas, salads, desserts, and craft beer with dine-in and carryout.",
+      "article_link": "https://mocoshow.com/2026/09/09/montgomery-countys-newest-pizzeria-announces-soft-opening-date/",
+      "published_date": "2026-09-09 19:09:16"
+    },
+    {
+      "store_name": "O'Charley's",
+      "location": "Not specified",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "shutting down",
+      "short_description": "Article content unusable (only a promo/spotlight blurb about Technomic Top 500, no closure details).",
+      "article_link": "https://www.nrn.com/casual-dining/o-charley-s-is-shutting-down-all-corporate-locations",
+      "published_date": "2026-09-09 19:07:09"
+    },
+    {
+      "store_name": "O'Charley's",
+      "location": "Ohio locations (multiple)",
+      "event_type": "Closing",
+      "event_date": "Sept. 9, 2026",
+      "status": "abruptly closing",
+      "short_description": "O'Charley's will close all company locations Sept. 9, including those in Ohio, ending the chain's 55-year run. Employees confirmed closures at 8 p.m. Sept. 9; the chain has dwindled from over 200 to about 44 locations.",
+      "article_link": "https://www.dispatch.com/story/entertainment/dining/2026/09/09/ocharleys-closing-locations-ending-chains-55-year-run/91678014007/",
+      "published_date": "2026-09-09 19:07:00"
+    },
+    {
+      "store_name": "Los Tios",
       "location": "Address not specified",
       "event_type": "Opening",
-      "event_date": "Next 90 days",
-      "status": "plans to open",
-      "short_description": "Rosati's Pizza Enterprises plans to open 11 new locations over the next 90 days as part of a national expansion, aiming for record store openings in its 62-year history.",
-      "article_link": "https://www.pizzamarketplace.com/news/rosatis-pizza-plans-11-new-locations-in-90-days/",
-      "published_date": "2026-09-08 12:27:31"
-    },
-    {
-      "store_name": "Bothkennar Primary School",
-      "location": "Skinflats, Falkirk",
-      "event_type": "Closing",
       "event_date": "Not specified",
-      "status": "set for permanent closure",
-      "short_description": "Bothkennar Primary in Skinflats is set for final closure nearly seven years after pupils last attended, following a renewed consultation process ordered by the Scottish Government.",
-      "article_link": "https://www.heraldscotland.com/news/26531732.mothballed-falkirk-schools-set-permanent-closure/",
-      "published_date": "2026-09-08 12:20:51"
+      "status": "opening soon",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://www.axios.com/local/san-antonio/2026/09/09/los-tios-open-first-san-antonio-restaurant-broadway-fall",
+      "published_date": "2026-09-09 19:05:04"
     },
     {
-      "store_name": "Limerigg Primary School",
-      "location": "Limerigg, Falkirk",
-      "event_type": "Closing",
-      "event_date": "Not specified",
-      "status": "set for permanent closure",
-      "short_description": "Limerigg Primary School is set for final closure alongside Bothkennar Primary, after a new consultation process found little opposition on educational grounds despite community support for repurposing the buildings.",
-      "article_link": "https://www.heraldscotland.com/news/26531732.mothballed-falkirk-schools-set-permanent-closure/",
-      "published_date": "2026-09-08 12:20:51"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (403 Forbidden).",
-      "article_link": "https://www.insauga.com/massive-supermarket-opening-in-former-hudsons-bay-location-in-greater-toronto-area/",
-      "published_date": "2026-09-08 12:05:35"
-    },
-    {
-      "store_name": "JOi Dollar Plus Store #47",
-      "location": "Parque Las Antenas, Iztapalapa, eastern Mexico City",
+      "store_name": "Toro Toro (Liberty Village)",
+      "location": "72 Ordnance St., Toronto",
       "event_type": "Opening",
       "event_date": "September 2026",
-      "status": "grand opening",
-      "short_description": "PesoRama's JOi Dollar Plus Store #47, a 4,058 sq. ft. location, is opening at Parque Las Antenas mall in Iztapalapa in September 2026.",
-      "article_link": "https://www.stocktitan.net/news/PSSOF/peso-rama-announces-grand-opening-of-stores-47-48-and-bgq4z7ruype6.html",
-      "published_date": "2026-09-08 12:00:00"
+      "status": "slated to open",
+      "short_description": "Toronto sushi chain Toro Toro is opening a new Liberty Village location at 72 Ordnance St., its second downtown-area spot. It will host a trolley giveaway event on Sept. 13 ahead of opening.",
+      "article_link": "https://www.blogto.com/eat_drink/2026/09/toro-toro-sushi-toronto-liberty-village/",
+      "published_date": "2026-09-09 19:02:29"
     },
     {
-      "store_name": "JOi Dollar Plus Store #48",
-      "location": "Parque Tezontle, eastern Mexico City",
-      "event_type": "Opening",
-      "event_date": "September 2026",
-      "status": "grand opening",
-      "short_description": "PesoRama's Store #48, a 4,004 sq. ft. location, is opening at Parque Tezontle mall in eastern Mexico City in September 2026.",
-      "article_link": "https://www.stocktitan.net/news/PSSOF/peso-rama-announces-grand-opening-of-stores-47-48-and-bgq4z7ruype6.html",
-      "published_date": "2026-09-08 12:00:00"
+      "store_name": "Hooters (Panama City Beach)",
+      "location": "12709 Front Beach Rd.",
+      "event_type": "Closing",
+      "event_date": "September 7",
+      "status": "shut up shop forever",
+      "short_description": "The Hooters of Panama City Beach, Florida closed permanently after more than 30 years in business, shutting its doors on September 7 with an emotional Instagram/Facebook announcement.",
+      "article_link": "https://www.the-sun.com/money/16975791/hooters-panama-city-florida-closing/",
+      "published_date": "2026-09-09 19:00:07"
     },
     {
-      "store_name": "JOi Dollar Plus Store #49",
-      "location": "Plaza Coacalco, State of Mexico",
-      "event_type": "Opening",
-      "event_date": "September 2026",
-      "status": "grand opening",
-      "short_description": "PesoRama's Store #49, a 4,811 sq. ft. location, is opening at Plaza Coacalco in the State of Mexico, bringing the chain's network to 49 stores.",
-      "article_link": "https://www.stocktitan.net/news/PSSOF/peso-rama-announces-grand-opening-of-stores-47-48-and-bgq4z7ruype6.html",
-      "published_date": "2026-09-08 12:00:00"
+      "store_name": "O'Charley's",
+      "location": "Nationwide, incl. Tennessee (Clarksville, Hermitage, Nashville)",
+      "event_type": "Closing",
+      "event_date": "Sept. 9, 2026",
+      "status": "closing all locations",
+      "short_description": "O'Charley's will close all remaining company-owned locations nationwide Sept. 9, ending its 55-year run. Employees at Tennessee locations confirmed closures at 8 p.m.",
+      "article_link": "https://foxchattanooga.com/news/local/ocharleys-closing-all-locations-nationwide-after-55-years",
+      "published_date": "2026-09-09 18:58:07"
     },
     {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article could not be fetched (connection timeout).",
-      "article_link": "https://www.restaurantnews.com/erbert-gerberts-expands-campus-locations-with-sodexo-090826/",
-      "published_date": "2026-09-08 11:32:13"
-    },
-    {
-      "store_name": "ASML BIC North manufacturing campus",
-      "location": "Near Eindhoven Airport, Netherlands",
-      "event_type": "Opening",
-      "event_date": "Not specified (first phase completion targeted 2029)",
-      "status": "began construction",
-      "short_description": "ASML began construction on its new BIC North production campus near Eindhoven Airport, an expansion aimed at meeting AI-driven chip demand, with a first phase targeted for completion by 2029.",
-      "article_link": "https://www.thestar.com.my/tech/tech-news/2026/09/08/asml-breaks-ground-on-new-manufacturing-facilities-in-major-expansion",
-      "published_date": "2026-09-08 11:32:00"
-    },
-    {
-      "store_name": "Victoria's Secret",
-      "location": "Nassau Street, Dublin",
+      "store_name": "North Point (brewery)",
+      "location": "Port Moody",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "granted planning permission to open",
-      "short_description": "Victoria's Secret has been granted planning permission to open a new Dublin store on Nassau Street.",
-      "article_link": "https://www.thejournal.ie/victorias-secret-nassau-street-7155808-Sep2026/",
-      "published_date": "2026-09-08 11:30:00"
+      "status": "opens",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://www.vancouverisawesome.com/food-and-drink/north-point-opens-port-moody-2026-12759113",
+      "published_date": "2026-09-09 18:51:40"
     },
     {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Facebook post with no extractable business details (content inaccessible).",
-      "article_link": "https://www.facebook.com/theliverpoolecho/posts/it-will-be-closing-soon/1429070309319241/",
-      "published_date": "2026-09-08 11:10:22"
+      "store_name": "Jaggers",
+      "location": "1321 Polaris Parkway, Columbus, Ohio 43240",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "planned",
+      "short_description": "Fast-casual burger concept Jaggers (from Texas Roadhouse Inc.) is planned for Polaris Parkway in Columbus, marking its Ohio debut; opening date not yet announced. A second Columbus-area location is also planned in Pickerington.",
+      "article_link": "https://whatnow.com/columbus/restaurants/jaggers-to-make-ohio-debut-with-new-columbus-location/",
+      "published_date": "2026-09-09 18:44:17"
     },
     {
-      "store_name": "Hotel Jaisalkot",
-      "location": "Khasra No. 26, Village Manpia, Gram Panchayat Amarsagar, Jaisalmer",
+      "store_name": "Dual-branded Marriott hotel",
+      "location": "Lenexa City Center",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "sets opening",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://www.bizjournals.com/kansascity/news/2026/09/09/midas-hospitality-marriott-hotel-lenexa-city-cente.html",
+      "published_date": "2026-09-09 18:43:00"
+    },
+    {
+      "store_name": "Costco",
+      "location": "2002 W. Kirby St., Wylie, Texas",
+      "event_type": "Opening",
+      "event_date": "This year (construction)",
+      "status": "planning",
+      "short_description": "Costco is planning a new ~165,000 sq ft store in Wylie, Texas, its first for the municipality, costing about $40 million; construction could begin this year.",
+      "article_link": "https://www.dallasnews.com/business/retail/article/costco-store-north-texas-expansion-22424081.php",
+      "published_date": "2026-09-09 18:41:32"
+    },
+    {
+      "store_name": "Hazleton Home Center",
+      "location": "459 W. Broad St., Hazleton",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "open and ready to serve, final touches being made",
+      "short_description": "Hazleton Home Center opened in the former A&A Auto Store space, offering hardware, gardening, cleaning, and kitchenware products, plus key duplication and paint mixing.",
+      "article_link": "https://www.standardspeaker.com/2026/09/09/new-hardware-store-opens-on-west-broad-street-in-hazleton/",
+      "published_date": "2026-09-09 18:40:01"
+    },
+    {
+      "store_name": "O'Charley's",
+      "location": "Tennessee (Clarksville, Hermitage, Nashville); Knoxville/Alcoa remain open",
       "event_type": "Closing",
-      "event_date": "EOIs close September 21, 2026",
-      "status": "insolvency resolution process, corporate debtor",
-      "short_description": "Hotel Jaisalkot, a 50-room luxury property, is under insolvency resolution with expressions of interest invited for prospective applicants, EOIs due September 21, 2026, following admission into the CIRP process on July 29, 2026.",
-      "article_link": "https://insolvencytracker.in/2026/09/08/resolution-applicants-invited-for-jaisalmers-hotel-jaisalkot-eois-close-september-21/",
-      "published_date": "2026-09-08 11:07:05"
+      "event_date": "Sept. 9, 2026",
+      "status": "closing almost all locations",
+      "short_description": "O'Charley's will close almost all company locations on Sept. 9, ending its 55-year run; two locations (Knoxville, Alcoa) remain open.",
+      "article_link": "https://www.tennessean.com/story/entertainment/dining/2026/09/09/ocharleys-closing-all-locations-tennessee/91673370007/",
+      "published_date": "2026-09-09 18:37:00"
     },
     {
-      "store_name": "Target",
-      "location": "201 E. Little Creek Road, Norfolk, VA 23505",
-      "event_type": "Opening",
-      "event_date": "October 11",
-      "status": "official opening date set",
-      "short_description": "Target is opening a new 129,000-sq.-ft. store in Wards Corner, Norfolk, taking over a former Kroger location, with an official opening date of October 11, creating more than 140 jobs.",
-      "article_link": "https://www.the-sun.com/money/16965266/target-replaces-kroger-new-food-choices/",
-      "published_date": "2026-09-08 11:03:42"
-    },
-    {
-      "store_name": "Brunch (It Up, Cedarburg)",
-      "location": "Cedarburg (exact address not specified)",
+      "store_name": "O'Charley's",
+      "location": "Marion, Illinois; Paducah, KY area",
       "event_type": "Closing",
-      "event_date": "Not specified (\"tomorrow\")",
-      "status": "closing after service tomorrow",
-      "short_description": "Article could not be fully accessed (429 Too Many Requests), but the title indicates Brunch is closing after service the following day in Cedarburg.",
-      "article_link": "https://www.gmtoday.com/news_graphic/business/brunch-it-up-cedarburg-closing/article_8688500d-3a02-5513-9834-310b8eb9de31.html",
-      "published_date": "2026-09-08 11:00:00"
+      "event_date": "after 8 p.m. Wednesday",
+      "status": "reportedly closing all locations",
+      "short_description": "O'Charley's is reportedly closing all locations including those in the Local 6 region; the Marion, Illinois location confirmed closure.",
+      "article_link": "https://www.wpsdlocal6.com/news/ocharleys-reportedly-set-to-close-all-locations/article_827a84ff-1e83-4063-9e13-7ad995675944.html",
+      "published_date": "2026-09-09 18:36:00"
     },
     {
-      "store_name": "Goodwill",
-      "location": "Former Aldi site, Lower Burrell, PA",
+      "store_name": "LV Petroleum - Sbarro (Hillsboro, TX) / Bojangles (Las Vegas)",
+      "location": "Hillsboro, Texas / Flamingo Road, Las Vegas, Nevada",
       "event_type": "Opening",
-      "event_date": "End of January 2027",
-      "status": "set to open, coming soon",
-      "short_description": "Goodwill is opening a new thrift store on the site of a shuttered Aldi in Lower Burrell, Pennsylvania, at the end of January 2027, creating about 16,000 sq. ft. of retail space and 30 new jobs.",
-      "article_link": "https://www.the-sun.com/money/16960214/goodwill-replaces-aldi-signage-changes/",
-      "published_date": "2026-09-08 10:59:36"
+      "event_date": "Aug. 13 (Sbarro ribbon cutting) / recent (12th Bojangles)",
+      "status": "recently opened",
+      "short_description": "LV Petroleum expanded with two travel center acquisitions and continued Sbarro/Bojangles growth, including a ribbon cutting at its Hillsboro, TX Sbarro and opening its 12th Bojangles in Las Vegas.",
+      "article_link": "https://www.prnewswire.com/news-releases/lv-petroleum-strengthens-national-footprint-with-two-travel-center-acquisitions-and-food-expansion-302874192.html",
+      "published_date": "2026-09-09 18:34:00"
     },
     {
-      "store_name": "Caprinos Pizza",
-      "location": "Chester Road West, Shotton, Flintshire",
+      "store_name": "Lumbre",
+      "location": "220 N Rome Ave., Tampa",
       "event_type": "Opening",
-      "event_date": "Wednesday, September 9",
+      "event_date": "Wednesday, July 15",
+      "status": "officially opened",
+      "short_description": "Lumbre, a modern Spanish restaurant from hospitality group Tastes Pretty Good, opened its doors July 15 in the North Hyde Park area of Tampa.",
+      "article_link": "https://www.cltampa.com/food-drink/tampa-bays-hottest-new-restaurants-to-open-this-summer/",
+      "published_date": "2026-09-09 18:33:14"
+    },
+    {
+      "store_name": "Chalawaan Thai Delish",
+      "location": "5018 N Armenia Ave., Tampa",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opened",
+      "short_description": "Chef Sirikullaya \"Layla\" Martinez opened Chalawaan Thai Delish inside a Citgo gas station on N Armenia Ave in Tampa, serving Thai dishes.",
+      "article_link": "https://www.cltampa.com/food-drink/tampa-bays-hottest-new-restaurants-to-open-this-summer/",
+      "published_date": "2026-09-09 18:33:14"
+    },
+    {
+      "store_name": "Waffle House (Landrum)",
+      "location": "120 Fairwinds Road, Landrum",
+      "event_type": "Opening",
+      "event_date": "Tuesday, Sept. 8",
+      "status": "grand opening",
+      "short_description": "Waffle House celebrated the grand opening of its new Landrum location with a ribbon-cutting ceremony hosted by the City of Landrum.",
+      "article_link": "https://tryondailybulletin.com/2026/09/09/waffle-house-celebrates-grand-opening-in-landrum/",
+      "published_date": "2026-09-09 18:32:02"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "San Antonio (former Marshalls location)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "sets sights",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://www.bizjournals.com/sanantonio/news/2026/09/09/burlington-store-retail-chain-discount-expansion.html",
+      "published_date": "2026-09-09 18:32:00"
+    },
+    {
+      "store_name": "Petland Bolingbrook and Aquarium Adventure",
+      "location": "Bolingbrook, IL",
+      "event_type": "Closing",
+      "event_date": "Sept. 20",
+      "status": "closing",
+      "short_description": "Petland Bolingbrook and Aquarium Adventure will close Sept. 20, citing legislative changes and a changing retail environment; its Hoffman Estates location will remain open.",
+      "article_link": "https://patch.com/illinois/bolingbrook/amp/34797561/bolingbrook-pet-store-closing-later-this-month",
+      "published_date": "2026-09-09 18:31:38"
+    },
+    {
+      "store_name": "DeCicco & Sons",
+      "location": "Glenville, Greenwich, CT",
+      "event_type": "Opening",
+      "event_date": "Wednesday (Sept. 9)",
+      "status": "just-opened",
+      "short_description": "DeCicco & Sons grocery chain opened its doors in the Glenville section of Greenwich; the store will not offer beer on tap due to Connecticut law.",
+      "article_link": "https://www.greenwichtime.com/news/article/ct-greenwich-decicco-s-groceries-retail-beer-22422404.php",
+      "published_date": "2026-09-09 18:30:33"
+    },
+    {
+      "store_name": "Pinehurst No. 11",
+      "location": "Pinehurst, NC",
+      "event_type": "Opening",
+      "event_date": "March 29, 2027",
+      "status": "to open",
+      "short_description": "Pinehurst Resort announced Pinehurst No. 11, a new golf course designed by Coore & Crenshaw, will debut March 29, 2027.",
+      "article_link": "https://bizfayetteville.com/hospitality/2026/9/9/pinehurst-no-11-opening-march-29-2027/5858",
+      "published_date": "2026-09-09 18:22:26"
+    },
+    {
+      "store_name": "Los Tarascos",
+      "location": "622 South College Avenue, Fort Collins, Colorado",
+      "event_type": "Closing",
+      "event_date": "September 23, 2026",
+      "status": "closing",
+      "short_description": "Los Tarascos, open since 1995, announced on September 8, 2026 that owners Hugo and Maria Caballero are retiring, with the last day September 23, 2026.",
+      "article_link": "https://retro1025.com/los-tarascos-fort-collins-colorado/",
+      "published_date": "2026-09-09 18:19:38"
+    },
+    {
+      "store_name": "Toll Brothers Wildspring model homes",
+      "location": "3617 Desert Marigold Drive, Leander, Texas",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "grand opening, now open daily",
+      "short_description": "Toll Brothers announced the grand opening of Isabel and Cariana model homes at its Wildspring luxury community in Leander, Texas, now open daily.",
+      "article_link": "https://www.globenewswire.com/news-release/2026/09/09/3359014/0/en/toll-brothers-announces-model-home-grand-opening-at-wildspring-in-leander-texas.html",
+      "published_date": "2026-09-09 18:12:49"
+    },
+    {
+      "store_name": "Toronto's \"inconvenience store\"",
+      "location": "Address not specified",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "funeral (implied closing)",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://nowtoronto.com/culture/toronto-viral-floating-inconvenience-store-funeral/",
+      "published_date": "2026-09-09 18:04:03"
+    },
+    {
+      "store_name": "Robinsons Supermarket",
+      "location": "Panglao",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opens",
+      "short_description": "Article text was empty/unavailable, no extractable details beyond headline indicating Robinsons Supermarket opened its first Panglao store.",
+      "article_link": "https://manilastandard.net/business/corporate/314789785/robinsons-supermarket-opens-first-panglao-store.html",
+      "published_date": "2026-09-09 18:01:33"
+    },
+    {
+      "store_name": "Charlotte Russe",
+      "location": "Valley Mall, Union Gap (former Forever 21 location)",
+      "event_type": "Opening",
+      "event_date": "Friday, Sept. 11, 2026",
       "status": "opening",
-      "short_description": "Caprinos Pizza is opening its fourth Welsh store in Shotton on September 9, offering free pizzas during a launch event and discounts through September 13.",
-      "article_link": "https://www.leaderlive.co.uk/news/26530389.free-pizzas-caprinos-opens-new-store-flintshire-town/",
-      "published_date": "2026-09-08 10:36:00"
+      "short_description": "Charlotte Russe, a San Francisco-based teen/young adult clothing retailer, is opening at Valley Mall in Union Gap on Sept. 11, in the former Forever 21 space, with a buy-two-get-one-free promo.",
+      "article_link": "https://www.yakimaherald.com/news/local/business/business-tidbits-charlotte-russe-to-open-in-valley-mall-new-restaurant-in-selah/article_38da32c7-bf19-4468-8b00-ebe5fbf958fe.amp.html",
+      "published_date": "2026-09-09 18:00:00"
     },
     {
-      "store_name": "Summary",
-      "location": "Save A A A A view of Lotte Department Store. Lotte Department Store Department store stocks rallied across the board as expectations grew for expanding spending by foreign tourists and a recovery in high-end consumption. Analysts say the earnings improvement in the department store sector could extend beyond the year-end, with rising inbound spending compounded by domestic asset and income effects. Lotte Shopping (023530.KS) was trading at 119,800 won, up 7,500 won or 6.68% from the previous session, as of 2:24 p.m. on the 8th, according to the Korea Exchange. Hyundai Department Store (069960.KS) rose 4.50% to 102,100 won, while Shinsegae (004170.KS) gained 4.41% to 414,000 won. E-Mart (139480.KS) climbed 2.83%, Daegu Department Store (006370.KS) added 1.45% and Hanwha Galleria (452260.KS) edged up 1.05%. Foreign spending is the main driver lifting the sector. Tourism spending averaged 2.1 trillion won a month in the second quarter, up 59.6% from a year earlier, as the exchange rate, per-capita spending by foreign visitors and the number of arrivals all improved. Department stores, which draw a large share of revenue from luxury goods and fashion, are seen as a direct beneficiary channel of the inbound spending boom. Shinsegae is expected to see the gains concentrated at its main store in Myeong-dong. iM Securities estimates net sales to foreign customers at the Shinsegae main store will rise 94.8% this year from a year earlier. The brokerage said the store's ability to capture foreign spending has strengthened as a luxury-focused renovation combined with traffic drawn by its duty-free operations and digital signage. It projects Shinsegae's department store revenue at 3.02 trillion won this year, up 13.0%, with operating profit rising 37.7% to 559.3 billion won. High-end spending by domestic shoppers is cited as an additional growth driver, as larger performance bonuses at major companies benefiting from the semiconductor upturn could boost purchasing po",
-      "event_type": "",
-      "event_date": "",
-      "status": "",
-      "short_description": "",
-      "article_link": "",
-      "published_date": ""
+      "store_name": "Smashed n Sauced",
+      "location": "304 S. First St., Selah (former Pizza Hut location)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opened recently",
+      "short_description": "Smashed n Sauced, a national smash burger/crispy chicken chain, opened recently at 304 S. First St. in Selah in the former Pizza Hut location.",
+      "article_link": "https://www.yakimaherald.com/news/local/business/business-tidbits-charlotte-russe-to-open-in-valley-mall-new-restaurant-in-selah/article_38da32c7-bf19-4468-8b00-ebe5fbf958fe.amp.html",
+      "published_date": "2026-09-09 18:00:00"
+    },
+    {
+      "store_name": "AutoZone",
+      "location": "former Big Lots (Yakima area)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "set to open soon",
+      "short_description": "An AutoZone is set to open soon in the former Big Lots location, per the Yakima Herald business tidbits column.",
+      "article_link": "https://www.yakimaherald.com/news/local/business/business-tidbits-charlotte-russe-to-open-in-valley-mall-new-restaurant-in-selah/article_38da32c7-bf19-4468-8b00-ebe5fbf958fe.amp.html",
+      "published_date": "2026-09-09 18:00:00"
+    },
+    {
+      "store_name": "N.J. store chain (perks for heroes)",
+      "location": "Address not specified",
+      "event_type": "N/A",
+      "event_date": "Not specified",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://www.nj.com/business/2026/09/free-fuel-for-heroes-nj-store-chain-brewing-up-perks-for-teachers-and-first-responders.html",
+      "published_date": "2026-09-09 18:00:00"
+    },
+    {
+      "store_name": "Michelin-level restaurant shop",
+      "location": "Ontario",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "just opened",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://www.insauga.com/michelin-level-restaurant-just-opened-a-brand-new-shop-in-ontario/",
+      "published_date": "2026-09-09 17:57:54"
+    },
+    {
+      "store_name": "Pizzeria di Territorio and Stoccaggio",
+      "location": "301 West Cabarrus St., Raleigh's Warehouse District",
+      "event_type": "Opening",
+      "event_date": "early 2027",
+      "status": "expected to open",
+      "short_description": "Pizzeria di Territorio (Neapolitan pizza, pasta, Italian dishes) and attached speakeasy Stoccaggio are expected to open in early 2027 in downtown Raleigh, featuring a 900-degree imported brick pizza oven.",
+      "article_link": "https://www.newsobserver.com/living/food-drink/article317043687.html",
+      "published_date": "2026-09-09 17:43:00"
+    },
+    {
+      "store_name": "Brick-and-mortar video store",
+      "location": "Toronto",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "set to open",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://www.insauga.com/brick-and-mortar-video-store-set-to-open-in-toronto/",
+      "published_date": "2026-09-09 17:40:54"
+    },
+    {
+      "store_name": "Aldi",
+      "location": "Thames Valley (multiple stores)",
+      "event_type": "Opening",
+      "event_date": "September 2026",
+      "status": "one new store already opened, three more due this month",
+      "short_description": "Aldi has opened one new store already, with three more due to welcome shoppers this month across the Thames Valley region, creating 120 jobs.",
+      "article_link": "https://buttondown.com/good-morning-thames-valley/archive/aldi-creates-120-jobs-as-new-store-opens-every/",
+      "published_date": "2026-09-09 17:39:06"
+    },
+    {
+      "store_name": "Scrubs & Beyond",
+      "location": "2138 Miamisburg Centerville Road, Miami Township, Ohio",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "closing all brick-and-mortar stores",
+      "short_description": "Scrubs & Beyond is closing all of its retail stores nationwide, including the Miami Township, Ohio location; stores are holding going-out-of-business sales with 20-40% off. No official closing date announced for this location.",
+      "article_link": "https://www.wdtn.com/news/business/scrubs-beyond-closing-all-brick-and-mortar-stores/amp/",
+      "published_date": "2026-09-09 17:18:53"
+    },
+    {
+      "store_name": "Culver's",
+      "location": "Fairhope, Alabama",
+      "event_type": "Opening",
+      "event_date": "Monday, Sept. 7",
+      "status": "grand opening",
+      "short_description": "Culver's expanded into Baldwin County by opening a new location in Fairhope, with its grand opening on Labor Day morning, Sept. 7.",
+      "article_link": "https://gulfcoastmedia.com/stories/photos-culvers-opens-new-location-in-fairhope,347567",
+      "published_date": "2026-09-09 17:18:22"
+    },
+    {
+      "store_name": "Cowboy boot shop",
+      "location": "South Central Los Angeles",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "forced to close",
+      "short_description": "Article could not be fetched (429 error - too many requests), no content available.",
+      "article_link": "https://www.calonews.com/featured-topics/economic/ice-raids-force-this-iconic-cowboy-boot-shop-to-close-in-south-central-los-angeles/article_088267f7-ee7b-42bb-bdfb-0f31536de988.html",
+      "published_date": "2026-09-09 17:15:00"
+    },
+    {
+      "store_name": "White Castle",
+      "location": "1944 LPGA Blvd., Daytona Beach",
+      "event_type": "Opening",
+      "event_date": "Sept. 22",
+      "status": "grand opening",
+      "short_description": "White Castle set its grand opening date of Sept. 22 for its first Daytona Beach location, beginning with a 9 a.m. ribbon-cutting; construction started in May.",
+      "article_link": "https://www.news-journalonline.com/story/entertainment/dining/2026/09/09/white-castle-to-open-in-daytona-beach/91673730007/",
+      "published_date": "2026-09-09 17:10:00"
+    },
+    {
+      "store_name": "White Castle",
+      "location": "Daytona Beach",
+      "event_type": "Opening",
+      "event_date": "Sept. 22",
+      "status": "sets opening date",
+      "short_description": "Duplicate coverage (picture gallery) of White Castle's new Daytona Beach restaurant setting its opening date.",
+      "article_link": "https://www.news-journalonline.com/picture-gallery/entertainment/dining/2026/09/09/white-castle-to-open-daytona-beach-restaurant/91674260007/",
+      "published_date": "2026-09-09 17:08:00"
+    },
+    {
+      "store_name": "Cowboy Chicken",
+      "location": "Plano",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "grand opening",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://www.localprofile.com/amp/community/cowboy-chicken-turns-plano-grand-opening-into-2000-donation-12758224",
+      "published_date": "2026-09-09 17:00:00"
+    },
+    {
+      "store_name": "O'Charley's",
+      "location": "Central Ohio",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "reportedly to abruptly close",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://www.nbc4i.com/news/local-news/central-ohio-news/reports-ocharleys-to-abruptly-close-all-locations/",
+      "published_date": "2026-09-09 17:00:00"
+    },
+    {
+      "store_name": "Il Forno",
+      "location": "333 Clarks Pond Parkway, South Portland",
+      "event_type": "Opening",
+      "event_date": "mid-October (this fall)",
+      "status": "under construction, aim to open",
+      "short_description": "Taj owner Sai Guntaka and partner Jim Baldi are launching Italian restaurant Il Forno in South Portland, in the former Port City Nutrition space, aiming to open mid-October.",
+      "article_link": "https://www.pressherald.com/2026/09/09/owner-of-taj-opening-new-italian-restaurant-in-south-portland/",
+      "published_date": "2026-09-09 16:52:29"
+    },
+    {
+      "store_name": "Hobby Lobby",
+      "location": "Waterford (New London County, CT)",
+      "event_type": "Opening",
+      "event_date": "09/14",
+      "status": "to open",
+      "short_description": "Hobby Lobby is set to open in Waterford on 09/14, per the headline; no further body text provided.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/waterford-scoop-hobby-lobby-to-open-on-0914",
+      "published_date": "2026-09-09 16:42:10"
+    },
+    {
+      "store_name": "Jefferson Market & Deli",
+      "location": "Lafayette Northside",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "coming soon",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://developinglafayette.com/wp/jefferson-market-deli-a-new-neighborhood-grocery-store-coming-soon-to-lafayette-northside/",
+      "published_date": "2026-09-09 16:39:23"
+    },
+    {
+      "store_name": "Pinecrest Academy Springs",
+      "location": "2850 S. Lindell Road, Las Vegas",
+      "event_type": "Opening",
+      "event_date": "Thursday, Sept. 10, 4 p.m.",
+      "status": "officially opening with ribbon-cutting",
+      "short_description": "Pinecrest Academy Springs, a tuition-free K-6 public charter school, is officially opening its new campus Sept. 10 with a ribbon-cutting ceremony; it's the sixth Pinecrest Academy campus in Nevada.",
+      "article_link": "https://nevadabusiness.com/2026/09/pinecrest-academy-springs-campus-celebrates-official-opening-with-ribbon-cutting-ceremony/",
+      "published_date": "2026-09-09 16:33:42"
+    },
+    {
+      "store_name": "NYC City-owned grocery stores",
+      "location": "New York City (one per borough)",
+      "event_type": "Opening",
+      "event_date": "late 2027",
+      "status": "expected to open",
+      "short_description": "The first City-owned grocery store under the Mamdani administration's plan is expected to open in late 2027, though a federal lawsuit from supermarket owners seeks to block the program.",
+      "article_link": "https://patch.com/new-york/new-york-city/nyc-s-grocery-plan-could-be-blocked-stores-open",
+      "published_date": "2026-09-09 16:33:30"
+    },
+    {
+      "store_name": "Denny's (M15 Inc. franchise locations)",
+      "location": "Burnsville, Maplewood, Roseville, North Branch, MN; Hudson, WI",
+      "event_type": "Closing",
+      "event_date": "September 3",
+      "status": "abruptly shut down",
+      "short_description": "Franchisee M15 Inc. closed all five of its Denny's diners in Minnesota and Wisconsin at 7 a.m. Sept. 3, citing inability to meet payroll or purchase supplies; the company plans to file for Chapter 7 liquidation.",
+      "article_link": "https://b105country.com/dennys-closing-minnesota-wisconsin/",
+      "published_date": "2026-09-09 16:32:10"
+    },
+    {
+      "store_name": "O'Charley's",
+      "location": "Middle Tennessee",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "closing remaining restaurants",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://www.wkrn.com/news/local-news/nashville/ocharleys-closing-middle-tn/",
+      "published_date": "2026-09-09 16:31:47"
+    },
+    {
+      "store_name": "Jazzy Holidays at The Hollywood Brown Derby",
+      "location": "Disney's Hollywood Studios",
+      "event_type": "Opening",
+      "event_date": "Reservations begin Sept. 17",
+      "status": "opening soon",
+      "short_description": "Reservations for Jazzy Holidays, an adult jazz lounge experience at The Hollywood Brown Derby during Jollywood Nights, open Sept. 17, featuring live jazz and seasonal small plates.",
+      "article_link": "https://wdwnt.com/2026/09/reservations-for-jazzy-holidays-at-the-hollywood-brown-derby-during-jollywood-nights-opening-soon/",
+      "published_date": "2026-09-09 16:30:58"
+    },
+    {
+      "store_name": "Woody's Bar-B-Q (Original location)",
+      "location": "1638 University Blvd. S. at Atlantic Boulevard, Jacksonville",
+      "event_type": "Closing",
+      "event_date": "Sept. 30",
+      "status": "closing temporarily, will reopen at new location",
+      "short_description": "The Original Woody's Bar-B-Q will close Sept. 30 after 46 years but will reopen at a new (unfinalized) Jacksonville location; the restaurant was founded in 1980.",
+      "article_link": "https://www.jacksonville.com/picture-gallery/entertainment/dining/2026/09/09/woodys-bbq-closing-moving-to-new-location-jacksonville-florida/91675364007/",
+      "published_date": "2026-09-09 16:26:40"
+    },
+    {
+      "store_name": "Mt. Lake hotel",
+      "location": "Windom area",
+      "event_type": "Opening",
+      "event_date": "Thursday",
+      "status": "open house",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://windomnews.com/2026/09/09/mt-lake-hotel-to-hold-open-house-thursday/",
+      "published_date": "2026-09-09 16:25:33"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article contained only a boilerplate \"Powered and protected by Privacy\" message with no extractable business details.",
+      "article_link": "https://www.wfaa.com/article/life/food/decades-old-dallas-pizza-joint-to-reopen-in-new-location-7-months-after-devastating-fire/287-4cc1061a-ec7e-44cd-8cef-7df98b149ff1",
+      "published_date": "2026-09-09 16:24:00"
+    },
+    {
+      "store_name": "South Tyneside restaurant",
+      "location": "South Tyneside",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "to close its doors for good",
+      "short_description": "Article could not be fetched (403 error), no content available.",
+      "article_link": "https://www.shieldsgazette.com/news/another-south-tyneside-restaurant-to-close-its-doors-for-good-9002417",
+      "published_date": "2026-09-09 16:23:00"
+    },
+    {
+      "store_name": "Primark",
+      "location": "Augusta Mall, Augusta (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "no longer set to open Sept. 10; new date to be announced \"shortly\"",
+      "short_description": "Primark delayed its planned Augusta Mall opening originally set for Sept. 10. A spokeswoman said the store is not ready and a new date will be shared shortly. The company had signed a lease for the mall in 2025.",
+      "article_link": "https://www.augustachronicle.com/story/business/2026/09/09/augusta-malls-new-primark-postpones-september-10-grand-opening-clothing-fast-fashion-retail/91674814007/",
+      "published_date": "2026-09-09 16:22:00"
+    },
+    {
+      "store_name": "AM-PM (gas station/convenience store)",
+      "location": "5 South Main Street, Winchester (Address not specified beyond this)",
+      "event_type": "Opening",
+      "event_date": "Aug. 24, 2026 (soft opening)",
+      "status": "officially opened / recently opened",
+      "short_description": "A new AM-PM gas station and convenience store officially opened in Winchester after a soft opening on Aug. 24. It sells fuel, alcohol, tobacco and hot food, with a drive-through planned. It's the first new construction in Winchester since 2022.",
+      "article_link": "https://wlds.com/new-gas-station-is-open-in-winchester/",
+      "published_date": "2026-09-09 16:20:53"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 error); no content available.",
+      "article_link": "https://www.thestreet.com/retail/cider-us-store-expansion",
+      "published_date": "2026-09-09 16:19:00"
+    },
+    {
+      "store_name": "Chief's",
+      "location": "Nashville International Airport, Concourse A, Nashville (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "2028",
+      "status": "planned for/set to open when new concourse opens in 2028",
+      "short_description": "Eric Church's Chief's bar/restaurant will open a location in BNA's rebuilt Concourse A as a full-service restaurant. It's part of an $855 million concourse renovation. The airport board is expected to vote on the sublease in September.",
+      "article_link": "https://whatnow.com/nashville/restaurants/chiefs-takes-flight-with-new-nashville-international-airport-location/",
+      "published_date": "2026-09-09 16:16:20"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (401 error); no content available.",
+      "article_link": "https://jonesbororightnow.com/news/268862-nettleton-public-schools-celebrates-grand-opening-of-new-gymnasium/",
+      "published_date": "2026-09-09 16:15:36"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 error); no content available.",
+      "article_link": "https://bhamnow.com/2026/09/09/pelham-lands-new-planet-fitness-opening-soon/",
+      "published_date": "2026-09-09 16:13:40"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Page content is only site navigation/menu for WDW Magic; no business opening/closing details present.",
+      "article_link": "https://www.wdwmagic.com/events/disney-jollywood-nights/news/09sep2026-jazzy-holidays-at-the-hollywood-brown-derby-reservations-open-september-17.htm",
+      "published_date": "2026-09-09 16:09:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 error); no content available.",
+      "article_link": "https://onmilwaukee.com/articles/maras-grill-announces-closing",
+      "published_date": "2026-09-09 16:05:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 error); no content available.",
+      "article_link": "https://csnews.com/alimentation-couche-tard-gains-momentum-new-locations",
+      "published_date": "2026-09-09 16:02:29"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 error); no content available.",
+      "article_link": "https://www.fastcompany.com/91604198/dennys-closing-stores-list-shuttered-restaurant-locations-franchisee",
+      "published_date": "2026-09-09 15:59:48"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article describes the grand opening of a public recreation center (Trowbridge Recreation Center), not a retail or restaurant business.",
+      "article_link": "https://patch.com/connecticut/newhaven/community-celebrates-trowbridge-recreation-center-grand-opening-trowbridge",
+      "published_date": "2026-09-09 15:44:27"
+    },
+    {
+      "store_name": "QuikTrip",
+      "location": "3901 SW Topeka Blvd., Topeka, Kansas (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Sept. 3, 2026",
+      "status": "opened",
+      "short_description": "QuikTrip opened its first convenience store in Topeka, Kansas, its 82nd in the state. The ~6,200-sq-ft store has 16 fueling positions and an expanded kitchen menu. A second Topeka location is in the permitting process.",
+      "article_link": "https://www.cspdailynews.com/company-news/quiktrip-opens-first-store-topeka",
+      "published_date": "2026-09-09 15:42:49"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 error); no content available.",
+      "article_link": "https://www.bizjournals.com/dayton/news/2026/09/09/bravo-closes-final-dayton-location-mall-miamisburg.html",
+      "published_date": "2026-09-09 15:36:00"
+    },
+    {
+      "store_name": "IKEA (small-format store)",
+      "location": "917 SH-80 N., San Marcos (San Mar Plaza)",
+      "event_type": "Closing",
+      "event_date": "Nov. 1",
+      "status": "will be closing",
+      "short_description": "IKEA is closing its small-format San Marcos store on Nov. 1 after deciding not to renew its lease as part of its broader U.S. strategy. The store opened in July 2025. IKEA is directing customers to its larger stores in Houston, Webster, Round Rock and Live Oak.",
+      "article_link": "https://whatnow.com/austin/retail/national-retailer-to-close-small-format-store-in-san-marcos/",
+      "published_date": "2026-09-09 15:32:56"
+    },
+    {
+      "store_name": "KALA Pilates",
+      "location": "89 Halsey Street, Newark, NJ (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Thursday, Sept. 24, 2026",
+      "status": "grand opening date officially marked / opening soon",
+      "short_description": "KALA Pilates, a new Pilates studio, is opening in Newark on Sept. 24 with six class formats in infrared heat. A block party with vendor pop-ups will mark the grand opening. Membership starts at $139.",
+      "article_link": "https://www.themontclairgirl.com/kala-pilates-studio-newark-nj/",
+      "published_date": "2026-09-09 15:32:05"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article describes a recreation center/community facility renovation celebration, not a retail or restaurant opening/closing.",
+      "article_link": "https://patch.com/new-jersey/eastbrunswick/popular-filipino-food-truck-opens-brick-mortar-location-east-brunswick",
+      "published_date": "(mismatched — see note)"
+    },
+    {
+      "store_name": "Twelve Kusina",
+      "location": "275 Route 18 South, East Brunswick (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "celebrated its grand opening this week",
+      "short_description": "Twelve Kusina, a Filipino restaurant tied to the Twelve Truck food truck, held its grand opening with a ribbon-cutting inside the Asian Food Market on Route 18. Cousins Justin Bustos and Joseph Maglaqui co-own it and will keep running the food truck too.",
+      "article_link": "https://patch.com/new-jersey/eastbrunswick/popular-filipino-food-truck-opens-brick-mortar-location-east-brunswick",
+      "published_date": "2026-09-09 14:41:11"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article describes the grand opening of CHEST South, a community health/social services center, not a retail or restaurant business.",
+      "article_link": "https://www.ksat.com/news/local/2026/09/09/center-for-health-empowerment-in-south-texas-celebrates-grand-opening/",
+      "published_date": "2026-09-09 14:38:03"
+    },
+    {
+      "store_name": "CeX",
+      "location": "Wola Park shopping centre, first floor next to RTV Euro AGD, Warsaw (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "has opened",
+      "short_description": "CeX, a British used-electronics retailer, opened its first store (170 sqm) at Wola Park in Warsaw. It sells smartphones, consoles, games and electronics, and offers buyback/trade-in for cash or vouchers. Products come with a five-year warranty.",
+      "article_link": "https://eurobuildcee.com/en/news/37116-cex-opens-store-in-wola-park",
+      "published_date": "2026-09-09 14:37:46"
+    },
+    {
+      "store_name": "Sheetz",
+      "location": "2861 E. Prospect Road, near Longstown intersection, York Township (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "one step closer to building / license approved",
+      "short_description": "Sheetz received unanimous approval for an intermunicipal liquor license transfer for a vacant property in York Township where it plans a new store.",
+      "article_link": "https://www.ydr.com/story/money/2026/09/09/sheetz-gets-green-light-for-liquor-license-transfer-in-york-county/91654813007/",
+      "published_date": "2026-09-09 14:37:00"
+    },
+    {
+      "store_name": "Eden Mobility",
+      "location": "2 Upper Market Square, Hanley, Stoke-on-Trent (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"opening soon\"",
+      "short_description": "Eden Mobility, a mobility scooter retailer with 49 stores nationally, is opening a new showroom in Stoke-on-Trent city centre, in a former Greggs unit. An opening date has not yet been announced.",
+      "article_link": "https://stoke.nub.news/news/local-news/mobility-store-opening-soon-in-stoke-on-trent-city-centre-307619",
+      "published_date": "2026-09-09 14:30:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 error); no content available.",
+      "article_link": "https://www.syracuse.com/business/2026/09/a-national-gym-chain-is-closing-one-of-its-onondaga-county-locations.html",
+      "published_date": "2026-09-09 14:30:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (406 error); no content available.",
+      "article_link": "https://www.tuscaloosanews.com/story/news/local/2026/09/09/heritage-house-tuscaloosa-location-closing-soon/91618610007/",
+      "published_date": "2026-09-09 14:17:00"
+    },
+    {
+      "store_name": "Lidl",
+      "location": "Europa Way, on the site of Europa House, Heathcote Lane, Warwick (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "decision pending; planning permission recommended, to be decided Sept. 16",
+      "short_description": "Lidl is planning a new supermarket at Europa Way in Warwick. Europa House has already been approved for demolition, and councillors are set to decide on the new store's planning permission on Sept. 16.",
+      "article_link": "https://warwick.nub.news/news/local-news/decision-expected-on-major-new-lidl-store-307668",
+      "published_date": "2026-09-09 14:10:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (451 error - unavailable in location); no content available.",
+      "article_link": "https://www.wftv.com/news/local/white-castle-announces-opening-date-new-daytona-beach-restaurant/LUW3WS4RVNGT5PRJQE7RZ5NTBY/",
+      "published_date": "2026-09-09 14:05:13"
+    },
+    {
+      "store_name": "ALDI",
+      "location": "Orana Mall (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Later this year (2026)",
+      "status": "under construction / anticipated to open later this year",
+      "short_description": "ALDI is opening a new store as part of the Orana Mall extension, with construction on the building and carpark well advanced. An exact opening date hasn't been confirmed yet.",
+      "article_link": "https://www.dubbophotonews.com.au/news/orana-mall-extension-and-new-aldi-opening-later-this-year-oskooyyi",
+      "published_date": "2026-09-09 14:04:49"
+    },
+    {
+      "store_name": "White Duck Taco Shop",
+      "location": "3000 S. Tryon St. (inside Lenny Boy Brewing Co.), South End, Charlotte (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "plans to open / official date not made public",
+      "short_description": "White Duck Taco Shop, an Asheville-based taco chain, plans to open a second Charlotte location inside Lenny Boy Brewing Co. in South End. No official opening date has been announced.",
+      "article_link": "https://www.charlotteobserver.com/charlottefive/c5-food-drink/article317169949.html",
+      "published_date": "2026-09-09 14:04:09"
+    },
+    {
+      "store_name": "GameCraft Pinball Lounge",
+      "location": "Glastonbury (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"opening soon\" (per title)",
+      "short_description": "Title indicates GameCraft Pinball Lounge is opening soon in Glastonbury; however, the fetched page content contains only site navigation with no actual article details.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/glastonbury-scoop-gamecraft-pinball-lounge-opening-soon-in-glastonbury",
+      "published_date": "2026-09-09 13:49:43"
+    },
+    {
+      "store_name": "7greens",
+      "location": "Library Street, downtown Detroit (Address not specified with zip)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "closed for several days",
+      "short_description": "7greens, a salad spot on Library Street in downtown Detroit, has been closed for several days, according to a Detroit Free Press social post. No further details were provided in the fetched content.",
+      "article_link": "https://www.facebook.com/detroitfreepress/posts/7greens-a-downtown-detroit-salad-spot-on-library-street-has-been-closed-for-seve/1546237804215033/",
+      "published_date": "2026-09-09 13:40:06"
+    },
+    {
+      "store_name": "Flying Machine",
+      "location": "Experia Mall, Dombivli, Maharashtra (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"recently opened\"",
+      "short_description": "Flying Machine, India's homegrown denim brand under Arvind Fashions, recently opened a new store at Experia Mall, Dombivli, strengthening its presence in Maharashtra.",
+      "article_link": "https://www.indianretailer.com/franchisetv/archives/news/flying-machines-opens-new-store-maharashtra",
+      "published_date": "2026-09-09 13:39:20"
+    },
+    {
+      "store_name": "Blackberrys",
+      "location": "Maldahiya, Varanasi, Uttar Pradesh (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "launch of new store",
+      "short_description": "Blackberrys, an Indian menswear brand, launched a new store in Maldahiya, Varanasi, showcasing its Autumn Winter 2026 collection and expanding its Uttar Pradesh retail network to 62 stores.",
+      "article_link": "https://www.indianretailer.com/franchisetv/archives/news/flying-machines-opens-new-store-maharashtra",
+      "published_date": "2026-09-09 13:39:20"
+    },
+    {
+      "store_name": "Son-Vidéo.com",
+      "location": "68 Boulevard de la Liberté, Lille (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Sept. 24, 2026 (grand opening party)",
+      "status": "recently opened new showroom / grand opening celebration Sept. 24",
+      "short_description": "Son-Vidéo.com's Lille store moved this summer to a new, larger two-floor location and will officially celebrate its grand opening on Sept. 24 with demos featuring Elipson's Philippe Penna.",
+      "article_link": "https://blog.son-video.com/en/2026/09/son-video-com-lille-invites-you-to-its-grand-opening-party-on-september-24/",
+      "published_date": "2026-09-09 13:38:01"
+    },
+    {
+      "store_name": "The Woodshed",
+      "location": "2935 Blue Star Highway, Douglas (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Sept. 14, 2026",
+      "status": "announced a grand opening date",
+      "short_description": "The Woodshed, a restaurant opening in the former Christo's Roadhouse space, announced a grand opening date of Sept. 14 in Douglas. Owner Melanie Moorer also owns Spectators Sports Bar and Grill in Saugatuck.",
+      "article_link": "https://www.hollandsentinel.com/story/business/restaurant/2026/09/09/the-woodshed-has-announced-an-opening-date-in-douglas/91649776007/",
+      "published_date": "2026-09-09 13:35:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article describes the permanent closing of Aquatopia, a Tokyo DisneySea ride/attraction, not a retail or restaurant business.",
+      "article_link": "https://www.disneyfanatic.com/disney-closing-opening-day-attraction-at-tokyo-disneysea-this-month-el1/",
+      "published_date": "2026-09-09 13:28:10"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 error); no content available.",
+      "article_link": "https://www.silive.com/news/2026/09/lidl-to-open-second-si-store-this-month-with-ribbon-cutting-free-coffee-heres-what-we-know.html",
+      "published_date": "2026-09-09 13:19:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article is about a food-safety incident (a rat found in a takeout order) at Wa Jer Restaurant, Hong Kong; no opening or closing information is mentioned.",
+      "article_link": "https://www.wideopencountry.com/horrified-diner-discovers-hairless-rat-in-their-takeout-order/",
+      "published_date": "2026-09-09 13:18:59"
+    },
+    {
+      "store_name": "Reverie Room",
+      "location": "St. Pete (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"opening soon\" (per title)",
+      "short_description": "Title indicates Reverie Room, a bookstore and lounge, is opening soon in St. Pete, but the fetched content only contains an unrelated teaser about a separate restaurant (Boca Ciega Waterfront Bar & Grill), with no further detail on Reverie Room itself.",
+      "article_link": "https://ilovetheburg.com/reverie-room-bookstore-st-pete/",
+      "published_date": "2026-09-09 13:18:50"
+    },
+    {
+      "store_name": "Chicken Salad Chick",
+      "location": "5 Southside Drive, The Shops at Village Plaza, Clifton Park (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Sept. 22, 2026",
+      "status": "celebrating grand opening",
+      "short_description": "Chicken Salad Chick is opening its first New York restaurant in Clifton Park, expanding to 27 states. The grand opening on Sept. 22 includes giveaways like free chicken salad for a year to the first guest in line.",
+      "article_link": "https://www.prnewswire.com/news-releases/chicken-salad-chick-to-open-first-restaurant-in-the-empire-state-302873138.html",
+      "published_date": "2026-09-09 13:00:00"
+    },
+    {
+      "store_name": "Scheels",
+      "location": "CedarView development, Cedar Park, Texas (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Aug. 29, 2026",
+      "status": "opened",
+      "short_description": "Scheels opened its second Texas store, a roughly 300,000-square-foot sporting goods store, on Aug. 29 in Cedar Park, bringing more than 500 jobs to the CedarView development.",
+      "article_link": "http://hillcountrynews.com/stories/scheels-opens-300000-square-foot-cedar-park-store,259222",
+      "published_date": "2026-09-09 13:00:00"
+    },
+    {
+      "store_name": "Ocean 46",
+      "location": "46 Southfield Ave., Harbor Point, Stamford (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "plans to open",
+      "short_description": "Antonio's Restaurant Group signed a 15-year lease for over 6,000 sq ft at Harbor Point to open Ocean 46, a waterfront restaurant serving seafood, steaks and Italian-inspired dishes with indoor/outdoor bars.",
+      "article_link": "https://patch.com/connecticut/stamford/new-seafood-restaurant-ocean-46-open-stamfords-harbor-point",
+      "published_date": "2026-09-09 12:43:20"
+    },
+    {
+      "store_name": "Store/Shop/Restaurant Name",
+      "location": "Location or Full Address with zip code",
+      "event_type": "Event Type",
+      "event_date": "Event Date",
+      "status": "Status",
+      "short_description": "Short Description",
+      "article_link": "Article Link",
+      "published_date": "Published Date"
+    },
+    {
+      "store_name": "A La Vie Cafe",
+      "location": "1 S. Orlando Ave., Cocoa Beach (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified (part of 2026 openings)",
+      "status": "opened (per article's 2026 roundup)",
+      "short_description": "A La Vie Cafe brings a European-inspired experience to Cocoa Beach, specializing in fresh pastries, coffee and grab-and-go breakfast/lunch.",
+      "article_link": "https://www.floridatoday.com/story/entertainment/dining/2026/09/09/have-you-tried-these-spots-yet-new-places-to-eat-across-brevard/91672016007/",
+      "published_date": "2026-09-09 14:42:00"
+    },
+    {
+      "store_name": "Abbott's Frozen Custard",
+      "location": "2445 N. Courtenay Parkway, Merritt Island (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified (part of 2026 openings)",
+      "status": "opened (per article's 2026 roundup)",
+      "short_description": "Abbott's Frozen Custard on Merritt Island specializes in freshly made frozen custard, offering sundaes, hand-packed pints and custom ice cream cakes.",
+      "article_link": "https://www.floridatoday.com/story/entertainment/dining/2026/09/09/have-you-tried-these-spots-yet-new-places-to-eat-across-brevard/91672016007/",
+      "published_date": "2026-09-09 14:42:00"
+    },
+    {
+      "store_name": "Backwoods Social House",
+      "location": "4365 Grissom Parkway, Cocoa (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified (part of 2026 openings)",
+      "status": "evolved into a full-service restaurant (opened)",
+      "short_description": "Backwoods Social House started as a food truck and became a full-service restaurant in Cocoa, serving Southern-inspired comfort food like burgers, wings and pasta.",
+      "article_link": "https://www.floridatoday.com/story/entertainment/dining/2026/09/09/have-you-tried-these-spots-yet-new-places-to-eat-across-brevard/91672016007/",
+      "published_date": "2026-09-09 14:42:00"
+    },
+    {
+      "store_name": "Total Wine & More",
+      "location": "533 Mall Court, Frandor Shopping Center, Lansing (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Oct. 1, 2026",
+      "status": "will open",
+      "short_description": "Total Wine & More will open its first Lansing-area store on Oct. 1 in a former Joann Fabrics building, offering over 8,000 wines, 4,500 spirits and 2,500 beers. It's the chain's sixth Michigan location, employing 31 people.",
+      "article_link": "https://www.lansingstatejournal.com/story/news/local/2026/09/09/wine-lansing-total-wine-more-opening-day/91672935007/",
+      "published_date": "2026-09-09 14:42:00"
+    },
+    {
+      "store_name": "Marks & Spencer (new store)",
+      "location": "Discovery Park, Barnfield Drive, Chichester (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "unanimously approved; construction to follow",
+      "short_description": "A new 55,000 sq ft M&S store was unanimously approved for Discovery Park in Chichester, featuring a foodhall, fashion, home and beauty departments, plus around 300 parking spaces.",
+      "article_link": "https://www.thesun.co.uk/money/40322864/mands-gets-ok-to-open-store-in-old-homebase/",
+      "published_date": "2026-09-09 14:52:00"
+    },
+    {
+      "store_name": "M&S North Street branch",
+      "location": "North Street, Chichester (Address not specified with zip)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "will close",
+      "short_description": "Following construction of the new Discovery Park store, M&S's existing North Street branch in Chichester will close, with staff relocated to the new store.",
+      "article_link": "https://www.thesun.co.uk/money/40322864/mands-gets-ok-to-open-store-in-old-homebase/",
+      "published_date": "2026-09-09 14:52:00"
+    },
+    {
+      "store_name": "M&S Portfield retail park branch",
+      "location": "Portfield retail park, Chichester (Address not specified with zip)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "will close",
+      "short_description": "Following construction of the new Discovery Park store, M&S's existing Portfield retail park branch in Chichester will close, with staff relocated to the new store.",
+      "article_link": "https://www.thesun.co.uk/money/40322864/mands-gets-ok-to-open-store-in-old-homebase/",
+      "published_date": "2026-09-09 14:52:00"
+    },
+    {
+      "store_name": "Sheetz (Auburn Hills)",
+      "location": "3880 Lapeer Road, Auburn Hills (Address not specified with zip)",
+      "event_type": "Opening",
+      "event_date": "Construction expected to begin 2027",
+      "status": "plans to build / approved",
+      "short_description": "Sheetz plans an $8.5 million store at 3880 Lapeer Road in Auburn Hills, a 6,139-sq-ft convenience store with an attached restaurant, outdoor seating and 14 fuel pumps, employing 30-35 workers. Construction is expected to begin in 2027.",
+      "article_link": "https://hoodline.com/2026/09/sheetz-advances-auburn-hills-store-while-waterford-plan-stalls-over-ethics-cloud/",
+      "published_date": "2026-09-09 14:59:48"
+    },
+    {
+      "store_name": "Mara's Grill",
+      "location": "3441 N. 84th St., Milwaukee (Address not specified with zip)",
+      "event_type": "Closing",
+      "event_date": "Sept. 19, 2026",
+      "status": "will close",
+      "short_description": "Mara's Grill, a Mexican and Guatemalan restaurant on Milwaukee's northwest side, will close Sept. 19 after nearly 11 years. Owners Mara Taracena and David Hernandez did not share a reason for closing.",
+      "article_link": "https://www.jsonline.com/story/entertainment/dining/2026/09/09/milwaukee-restaurant-maras-grill-to-close/91673367007/",
+      "published_date": "2026-09-09 15:04:00"
     }
   ]
 }
