@@ -27,7 +27,7 @@ Scrapers:
   • Costco          — https://www.costco.ca/f/-/new-locations (Patchright, Cloudflare-protected)
   • Citi Trends     — https://locations.cititrends.com/coming-soon.html (requests)
   • Five Guys       — Yext API JSON endpoint (requests)
-  • Nordstrom       — Future Store Openings page (manually saved HTML; blocks automated requests)
+  • Nordstrom       — https://www.nordstrom.com/browse/about/future-store-openings (Patchright, blocks plain requests)
   • Sprouts Farmers Market — https://www.sprouts.com/stores/ (Patchright, Cloudflare-protected)
 
 Output:
@@ -2237,25 +2237,60 @@ def scrape_five_guys() -> list[dict]:
 
 # ── Nordstrom scraper ────────────────────────────────────────────────────────
 #
-# Nordstrom blocks automated HTTP requests, so this parses a page saved
-# manually from a real browser instead of fetching it live. In Chrome: open
-# the Future Store Openings page, let it fully load, then Ctrl+S ->
-# "Webpage, Complete" and save it under NORDSTROM_INPUT_FILE below. When the
-# file isn't present (e.g. in CI, where no one has saved a fresh copy), this
-# scraper just skips instead of failing the run.
+# Plain `requests` gets blocked outright. Patchright (real browser, same
+# approach as Costco/Sprouts) usually gets through, but Nordstrom's bot
+# protection is flakier than Cloudflare — repeated hits can trip a redirect
+# to siteclosed.nordstrom.com. So: try Patchright first, and if that's
+# blocked, fall back to parsing a page saved manually from a real browser
+# (Chrome: open the page, let it fully load, Ctrl+S -> "Webpage, Complete",
+# save as NORDSTROM_INPUT_FILE). If neither is available this run skips
+# instead of failing.
 
+NORDSTROM_URL        = "https://www.nordstrom.com/browse/about/future-store-openings"
 NORDSTROM_INPUT_FILE = "Future Store Openings _ Nordstrom.html"
 
 
-def scrape_nordstrom() -> list[dict]:
-    if not os.path.exists(NORDSTROM_INPUT_FILE):
-        print(f"[Nordstrom] {NORDSTROM_INPUT_FILE!r} not found; skipping "
-              f"(requires a manually saved page — see comment above).")
-        return []
+def _nordstrom_fetch_live() -> str | None:
+    try:
+        from patchright.sync_api import sync_playwright
+    except ImportError:
+        print("[Nordstrom] patchright not installed — run: pip install patchright && patchright install chromium")
+        return None
 
-    print(f"[Nordstrom] Parsing {NORDSTROM_INPUT_FILE}")
-    with open(NORDSTROM_INPUT_FILE, "r", encoding="utf-8") as f:
-        soup = BeautifulSoup(f.read(), "html.parser")
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(
+                headless=False,
+                args=["--no-sandbox", "--disable-setuid-sandbox"],
+            )
+            context = browser.new_context(
+                viewport={"width": 1280, "height": 800},
+                locale="en-US",
+            )
+            page = context.new_page()
+            page.goto(NORDSTROM_URL, wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_selector("p.WaUnB", timeout=15000)
+            html = page.content()
+            browser.close()
+            return html
+    except Exception as e:
+        print(f"[Nordstrom] Live fetch blocked/failed ({e}); trying manually saved page…")
+        return None
+
+
+def scrape_nordstrom() -> list[dict]:
+    print(f"[Nordstrom] Loading {NORDSTROM_URL}")
+    html = _nordstrom_fetch_live()
+
+    if html is None:
+        if not os.path.exists(NORDSTROM_INPUT_FILE):
+            print(f"[Nordstrom] {NORDSTROM_INPUT_FILE!r} not found either; skipping this run.")
+            return []
+        print(f"[Nordstrom] Parsing manually saved {NORDSTROM_INPUT_FILE}")
+        with open(NORDSTROM_INPUT_FILE, "r", encoding="utf-8") as f:
+            html = f.read()
+
+    soup = BeautifulSoup(html, "html.parser")
 
     results = []
     for p in soup.find_all("p", class_="WaUnB"):
@@ -2269,7 +2304,7 @@ def scrape_nordstrom() -> list[dict]:
         city, _, state = city_state.partition(",")
         opening_date = opens_line.replace("Opens", "").strip()
 
-        address = ", ".join(p.strip() for p in (name, city, state) if p.strip())
+        address = ", ".join(part.strip() for part in (name, city, state) if part.strip())
         if not address:
             continue
 
@@ -2277,7 +2312,7 @@ def scrape_nordstrom() -> list[dict]:
             "company":      "Nordstrom",
             "address":      address,
             "opening_date": opening_date,
-            "link":         "",
+            "link":         NORDSTROM_URL,
         })
 
     print(f"[Nordstrom] {len(results)} store(s) parsed.")
