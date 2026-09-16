@@ -26,6 +26,7 @@ Scrapers:
   • Ulta Beauty     — https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings (requests)
   • Costco          — https://www.costco.ca/f/-/new-locations (Patchright, Cloudflare-protected)
   • Citi Trends     — https://locations.cititrends.com/coming-soon.html (requests)
+  • Five Guys       — Yext API JSON endpoint (requests)
 
 Output:
   docs/company_website_latest.json
@@ -2185,6 +2186,53 @@ def scrape_citi_trends() -> list[dict]:
     return results
 
 
+# ── Five Guys scraper ────────────────────────────────────────────────────────
+
+FIVE_GUYS_API     = "https://cdn.yextapis.com/v2/accounts/me/content/comingSoonUS"
+FIVE_GUYS_API_KEY = "b75dce27389aad80cd7bb593c65dc10b"
+FIVE_GUYS_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36 Edg/152.0.0.0"
+    )
+}
+
+
+def scrape_five_guys() -> list[dict]:
+    print(f"[Five Guys] Fetching {FIVE_GUYS_API}")
+    params = {
+        "api_key": FIVE_GUYS_API_KEY,
+        "v": "20251022",
+        "name": "Five Guys - Coming Soon",
+    }
+    try:
+        resp = requests.get(FIVE_GUYS_API, params=params, headers=FIVE_GUYS_HEADERS, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception as e:
+        print(f"[Five Guys] Error: {e}")
+        return []
+
+    results = []
+    for doc in data.get("response", {}).get("docs", []):
+        addr    = doc.get("address", {}) or {}
+        street  = addr.get("line1", "") or ""
+        city    = addr.get("city", "") or ""
+        region  = addr.get("region", "") or ""
+        zipcode = addr.get("postalCode", "") or ""
+        address = ", ".join(p for p in (street, city, f"{region} {zipcode}".strip()) if p)
+
+        results.append({
+            "company":      "Five Guys",
+            "address":      address,
+            "opening_date": doc.get("openDate", "") or "",
+            "link":         doc.get("landingPageUrl", "") or FIVE_GUYS_API,
+        })
+
+    print(f"[Five Guys] Found {len(results)} coming-soon location(s).")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -2383,6 +2431,12 @@ def main():
         all_stores.extend(scrape_citi_trends())
     except Exception as e:
         print(f"[Citi Trends] Scraping failed: {e}")
+
+    # ── Five Guys ──
+    try:
+        all_stores.extend(scrape_five_guys())
+    except Exception as e:
+        print(f"[Five Guys] Scraping failed: {e}")
 
     print(f"\nTotal records collected this run: {len(all_stores)}")
 
