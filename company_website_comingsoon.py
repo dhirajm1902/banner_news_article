@@ -27,6 +27,8 @@ Scrapers:
   • Costco          — https://www.costco.ca/f/-/new-locations (Patchright, Cloudflare-protected)
   • Citi Trends     — https://locations.cititrends.com/coming-soon.html (requests)
   • Five Guys       — Yext API JSON endpoint (requests)
+  • Nordstrom       — Future Store Openings page (manually saved HTML; blocks automated requests)
+  • Sprouts Farmers Market — https://www.sprouts.com/stores/ (Patchright, Cloudflare-protected)
 
 Output:
   docs/company_website_latest.json
@@ -2233,6 +2235,165 @@ def scrape_five_guys() -> list[dict]:
     return results
 
 
+# ── Nordstrom scraper ────────────────────────────────────────────────────────
+#
+# Nordstrom blocks automated HTTP requests, so this parses a page saved
+# manually from a real browser instead of fetching it live. In Chrome: open
+# the Future Store Openings page, let it fully load, then Ctrl+S ->
+# "Webpage, Complete" and save it under NORDSTROM_INPUT_FILE below. When the
+# file isn't present (e.g. in CI, where no one has saved a fresh copy), this
+# scraper just skips instead of failing the run.
+
+NORDSTROM_INPUT_FILE = "Future Store Openings _ Nordstrom.html"
+
+
+def scrape_nordstrom() -> list[dict]:
+    if not os.path.exists(NORDSTROM_INPUT_FILE):
+        print(f"[Nordstrom] {NORDSTROM_INPUT_FILE!r} not found; skipping "
+              f"(requires a manually saved page — see comment above).")
+        return []
+
+    print(f"[Nordstrom] Parsing {NORDSTROM_INPUT_FILE}")
+    with open(NORDSTROM_INPUT_FILE, "r", encoding="utf-8") as f:
+        soup = BeautifulSoup(f.read(), "html.parser")
+
+    results = []
+    for p in soup.find_all("p", class_="WaUnB"):
+        lines = [line.strip() for line in p.get_text(separator="\n").split("\n") if line.strip()]
+        if len(lines) < 2:
+            continue
+
+        location_line, opens_line = lines[0], lines[1]
+
+        city_state, _, name = location_line.partition(":")
+        city, _, state = city_state.partition(",")
+        opening_date = opens_line.replace("Opens", "").strip()
+
+        address = ", ".join(p.strip() for p in (name, city, state) if p.strip())
+        if not address:
+            continue
+
+        results.append({
+            "company":      "Nordstrom",
+            "address":      address,
+            "opening_date": opening_date,
+            "link":         "",
+        })
+
+    print(f"[Nordstrom] {len(results)} store(s) parsed.")
+    return results
+
+
+# ── Sprouts Farmers Market scraper ───────────────────────────────────────────
+#
+# Cloudflare-protected like Costco, so this also uses Patchright. Walks the
+# state directory, then each state's store list, keeping only cards labelled
+# "Opening ..." (skips "Now Open!" cards).
+
+SPROUTS_URL = "https://www.sprouts.com/stores/"
+SPROUTS_BASE_URL = "https://www.sprouts.com"
+
+
+def _sprouts_get_html(page, url: str, wait_selector: str) -> str:
+    page.goto(url, wait_until="domcontentloaded", timeout=30000)
+    page.wait_for_function("document.title !== 'Just a moment...'", timeout=20000)
+    page.wait_for_selector(wait_selector, timeout=15000)
+    return page.content()
+
+
+def _sprouts_get_state_links(page) -> list[tuple[str, str]]:
+    html = _sprouts_get_html(page, SPROUTS_URL, "div.cell.small-6.medium-3.store-states")
+    soup = BeautifulSoup(html, "html.parser")
+    links = []
+    for cell in soup.find_all("div", class_="cell small-6 medium-3 store-states"):
+        a = cell.find("a", href=True)
+        state_name = cell.find("h3", class_="state-name")
+        if not (a and state_name):
+            continue
+        href = a["href"]
+        if not href.startswith("http"):
+            href = SPROUTS_BASE_URL + (href if href.startswith("/") else "/" + href)
+        links.append((state_name.get_text(strip=True), href))
+    return links
+
+
+def _sprouts_get_upcoming_stores(page, state_name: str, state_url: str) -> list[dict]:
+    html = _sprouts_get_html(page, state_url, "div.cell.medium-4.large-3.list-by-state")
+    soup = BeautifulSoup(html, "html.parser")
+    results = []
+    for cell in soup.find_all("div", class_="cell medium-4 large-3 list-by-state"):
+        opening_date_tag = cell.find("p", class_="opening-date")
+        if not opening_date_tag:
+            continue
+        opening_date_text = opening_date_tag.get_text(strip=True)
+        if not opening_date_text.lower().startswith("opening"):
+            continue  # skip "Now Open!" cards; keep only future openings
+
+        store_num_tag  = cell.find("p", class_="store-num")
+        store_name_tag = cell.find("h4")
+        store_name     = store_name_tag.get_text(strip=True) if store_name_tag else ""
+
+        address_parts = [
+            p.get_text(" ", strip=True)
+            for p in cell.find_all("p")
+            if p is not opening_date_tag and p is not store_num_tag
+        ]
+        address = ", ".join(part for part in address_parts if part)
+        if store_name:
+            address = f"{store_name}, {address}" if address else store_name
+
+        results.append({
+            "company":      "Sprouts Farmers Market",
+            "address":      address,
+            "opening_date": opening_date_text,
+            "link":         state_url,
+        })
+    return results
+
+
+def scrape_sprouts() -> list[dict]:
+    print(f"[Sprouts] Loading {SPROUTS_URL}")
+    try:
+        from patchright.sync_api import sync_playwright
+    except ImportError:
+        print("[Sprouts] patchright not installed — run: pip install patchright && patchright install chromium")
+        return []
+
+    results = []
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(
+                headless=False,
+                args=["--no-sandbox", "--disable-setuid-sandbox"],
+            )
+            context = browser.new_context(
+                viewport={"width": 1280, "height": 800},
+                locale="en-US",
+            )
+            page = context.new_page()
+
+            state_links = _sprouts_get_state_links(page)
+            print(f"[Sprouts] Found {len(state_links)} state(s).")
+
+            for state_name, state_url in state_links:
+                print(f"  Scraping {state_name} - {state_url}")
+                try:
+                    state_results = _sprouts_get_upcoming_stores(page, state_name, state_url)
+                except Exception as e:
+                    print(f"    failed: {e}")
+                    continue
+                print(f"    {len(state_results)} upcoming store(s) found")
+                results.extend(state_results)
+
+            browser.close()
+    except Exception as e:
+        print(f"[Sprouts] Error: {e}")
+        return results
+
+    print(f"[Sprouts] {len(results)} upcoming location(s) total.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -2437,6 +2598,18 @@ def main():
         all_stores.extend(scrape_five_guys())
     except Exception as e:
         print(f"[Five Guys] Scraping failed: {e}")
+
+    # ── Nordstrom ──
+    try:
+        all_stores.extend(scrape_nordstrom())
+    except Exception as e:
+        print(f"[Nordstrom] Scraping failed: {e}")
+
+    # ── Sprouts Farmers Market ──
+    try:
+        all_stores.extend(scrape_sprouts())
+    except Exception as e:
+        print(f"[Sprouts] Scraping failed: {e}")
 
     print(f"\nTotal records collected this run: {len(all_stores)}")
 
