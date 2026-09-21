@@ -43,13 +43,13 @@ except ImportError:
     def FileLink(x): return x
 
 try:
-    from googlenewsdecoder import new_decoderv1
+    from googlenewsdecoder import gnewsdecoder
     HAS_GND = True
 except ImportError:
     try:
         import subprocess
         subprocess.check_call(["pip", "install", "googlenewsdecoder", "-q"])
-        from googlenewsdecoder import new_decoderv1
+        from googlenewsdecoder import gnewsdecoder
         HAS_GND = True
     except Exception:
         HAS_GND = False
@@ -672,8 +672,8 @@ def _decode_gnd(google_url: str) -> str | None:
     for attempt in range(2):
         time.sleep(1.0 * (attempt + 1) + random.uniform(0, 0.3))
         try:
-            result = new_decoderv1(google_url, interval=2)
-            if result and result.get("status"):
+            result = gnewsdecoder(google_url, interval=2)
+            if result and result.get("success"):
                 url = result.get("decoded_url", "")
                 if _is_valid_article_url(url):
                     return _clean_url(url)
