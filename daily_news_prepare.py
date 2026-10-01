@@ -117,29 +117,34 @@ def main():
     new_batch_count = (len(new_articles) + BATCH_SIZE - 1) // BATCH_SIZE if new_articles else 0
     print(f"✓  {len(new_articles)} new article(s) -> {new_batch_count} new batch(es) at the top")
 
-    # Shift existing newsbatch output files up to make room for new batches
+    # Shift existing newsbatch input (.txt) and output (.md) files up to make
+    # room for new batches. Both must shift together — otherwise a batch's
+    # renamed _output.md ends up pointing at the wrong (stale) .txt content.
     if new_batch_count > 0:
-        existing = sorted(
-            [p for p in Path(".").glob("newsbatch_*_output.md")
-             if p.stem.split("_")[1].isdigit()],
-            key=lambda p: int(p.stem.split("_")[1]),
-            reverse=True,
-        )
-        for p in existing:
-            n = int(p.stem.split("_")[1])
-            p.rename(p.parent / f"newsbatch_{n + new_batch_count}_output.md")
-        if existing:
-            print(f"  shifted {len(existing)} output file(s) up by {new_batch_count}")
+        for pattern, suffix in (("newsbatch_*_output.md", "_output.md"),
+                                 ("newsbatch_*.txt", ".txt")):
+            existing = sorted(
+                [p for p in Path(".").glob(pattern)
+                 if p.stem.split("_")[1].isdigit()],
+                key=lambda p: int(p.stem.split("_")[1]),
+                reverse=True,
+            )
+            for p in existing:
+                n = int(p.stem.split("_")[1])
+                p.rename(p.parent / f"newsbatch_{n + new_batch_count}{suffix}")
+            if existing:
+                print(f"  shifted {len(existing)} {suffix} file(s) up by {new_batch_count}")
 
-        # Discard any output files that exceed the rolling cap
+        # Discard any input/output files that exceed the rolling cap
         discarded = 0
-        for p in Path(".").glob("newsbatch_*_output.md"):
-            parts = p.stem.split("_")
-            if len(parts) >= 2 and parts[1].isdigit() and int(parts[1]) > MAX_OUTPUT_KEEP:
-                p.unlink()
-                discarded += 1
+        for pattern in ("newsbatch_*_output.md", "newsbatch_*.txt"):
+            for p in Path(".").glob(pattern):
+                parts = p.stem.split("_")
+                if len(parts) >= 2 and parts[1].isdigit() and int(parts[1]) > MAX_OUTPUT_KEEP:
+                    p.unlink()
+                    discarded += 1
         if discarded:
-            print(f"  discarded {discarded} old output file(s) beyond limit of {MAX_OUTPUT_KEEP}")
+            print(f"  discarded {discarded} old file(s) beyond limit of {MAX_OUTPUT_KEEP}")
 
     # Only create batch files for new articles (old ones already have output files)
     articles = new_articles
