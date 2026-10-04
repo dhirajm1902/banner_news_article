@@ -70,7 +70,7 @@ company,address,opening_date,link,is_new,first_seen,Date_Appended
 ALDI,,,https://info.aldi.us/stores/l/fl/spring-hill/4221-mariner-boulevard/fi30,False,2026-09-22,2026-09-22
 ALDI,"100 Powder Mill Road, Acton, MA 01720-5932",7/23/2026,https://info.aldi.us/stores/l/ma/acton/100-powder-mill-road/fn77,False,2026-07-07,2026-07-07
 ALDI,"1030 U.S. 331, DeFuniak Springs, 32435",8/20/2026,https://info.aldi.us/stores/l/fl/defuniak-springs/1030-u-s-331/fp47,False,2026-08-04,2026-08-04
-ALDI,"10310 Washington Highway, Glen Allen, 23059",10/15/2026,https://info.aldi.us/stores/l/va/glen-allen/10310-washington-highway/fk66,True,2026-10-01,2026-10-01
+ALDI,"10310 Washington Highway, Glen Allen, 23059",10/15/2026,https://info.aldi.us/stores/l/va/glen-allen/10310-washington-highway/fk66,False,2026-10-01,2026-10-01
 ALDI,"1045 South Gilbert Road, Mesa, AZ 85204",5/21/2026,https://info.aldi.us/stores/l/az/mesa/1045-south-gilbert-road/fo39,False,,2026-05-18
 ALDI,"105300 Overseas Highway, Key Largo, FL 33037",7/23/2026,https://info.aldi.us/stores/l/fl/key-largo/105300-overseas-highway/fs75,False,2026-07-07,2026-07-07
 ALDI,"11 East Steuben Street, Oakdale, PA 15071",8/13/2026,https://info.aldi.us/stores/l/pa/oakdale/11-east-steuben-street/fj79,False,2026-07-27,2026-07-27
@@ -95,13 +95,13 @@ ALDI,"1910 Highway 15 North, Laurel, 39440",10/8/2026,https://info.aldi.us/store
 ALDI,"1955 N State Road 19, Eustis, 32726",8/20/2026,https://info.aldi.us/stores/l/fl/eustis/1955-n-state-road-19/fi17,False,2026-08-04,2026-08-04
 ALDI,"2000 North Locust Avenue, Lawrenceburg, 38464",6/18/2026,https://info.aldi.us/stores/l/tn/lawrenceburg/2000-north-locust-avenue/fm89,False,2026-06-01,2026-06-01
 ALDI,"2057 S Byron Butler Pkwy. Ste 1, Perry, FL 32348-5521",5/28/2026,https://info.aldi.us/stores/l/fl/perry/2057-south-byron-butler-parkway/fp42,False,2026-05-28,2026-05-28
-ALDI,"2110 Lake Lansing Road, Lansing, 48912",10/15/2026,https://info.aldi.us/stores/l/mi/lansing/2110-lake-lansing-road/fm45,True,2026-10-01,2026-10-01
-ALDI,"215 Veterans Memorial Boulevard, Metairie, LA 70005",10/15/2026,https://info.aldi.us/stores/l/la/metairie/215-veterans-memorial-boulevard/fp48,True,2026-10-01,2026-10-01
+ALDI,"2110 Lake Lansing Road, Lansing, 48912",10/15/2026,https://info.aldi.us/stores/l/mi/lansing/2110-lake-lansing-road/fm45,False,2026-10-01,2026-10-01
+ALDI,"215 Veterans Memorial Boulevard, Metairie, LA 70005",10/15/2026,https://info.aldi.us/stores/l/la/metairie/215-veterans-memorial-boulevard/fp48,False,2026-10-01,2026-10-01
 ALDI,"2200 South Atlantic Avenue, Daytona Beach Shores, FL 32118",10/1/2026,https://info.aldi.us/stores/l/fl/daytona-beach-shores/2200-south-atlantic-avenue/ft19,False,2026-09-22,2026-09-22
-ALDI,"30947 Mill Lane, Daphne, 36527",10/15/2026,https://info.aldi.us/stores/l/al/daphne/30947-mill-lane/ff76,True,2026-10-01,2026-10-01
+ALDI,"30947 Mill Lane, Daphne, 36527",10/15/2026,https://info.aldi.us/stores/l/al/daphne/30947-mill-lane/ff76,False,2026-10-01,2026-10-01
 ALDI,"311 West 42nd Street, New York, 10036",6/19/2026,https://info.aldi.us/stores/l/ny/new-york/311-west-42nd-street/ft33,False,2026-06-01,2026-06-01
 ALDI,"327 Mount Hope Avenue, Rockaway, NJ 07866",6/25/2026,https://info.aldi.us/stores/l/nj/rockaway/327-mount-hope-avenue/fl71,False,2026-06-10,2026-06-10
-ALDI,"3330 North Glassford Hill Road, Prescott Valley, 86314",10/15/2026,https://info.aldi.us/stores/l/az/prescott-valley/3330-north-glassford-hill-road/ft52,True,2026-10-01,2026-10-01
+ALDI,"3330 North Glassford Hill Road, Prescott Valley, 86314",10/15/2026,https://info.aldi.us/stores/l/az/prescott-valley/3330-north-glassford-hill-road/ft52,False,2026-10-01,2026-10-01
 ALDI,"345 Norman Drive, Valdosta, GA 31601",6/11/2026,https://info.aldi.us/stores/l/ga/valdosta/345-norman-drive/fp51,False,2026-06-10,2026-06-10
 ALDI,"4221 Mariner Boulevard, Spring Hill, 34609",09/07/2026,https://info.aldi.us/stores/l/fl/spring-hill/4221-mariner-boulevard/fi30,False,2026-09-01,2026-09-01
 ALDI,"4430 US Highway 17 Bypass South, Murrells Inlet, 29576",9/10/2026,https://info.aldi.us/stores/l/sc/murrells-inlet/4430-us-highway-17-bypass-south/fm25,False,2026-08-28,2026-08-28
@@ -230,6 +230,7 @@ Chick-fil-A,10 SE Flowers Parkway,"June 18, 2026",https://www.chick-fil-a.com/p
 Chick-fil-A,101 Lemonade Lane,"September 15, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-lemonade-lane,False,2026-09-16,2026-09-16
 Chick-fil-A,10150 Belleville Road,"September 3, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-belleville,False,2026-09-04,2026-09-04
 Chick-fil-A,1015 Vinehaven Drive NE,"May 1, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-dale-earnhardt-blvd,False,,2026-05-18
+Chick-fil-A,104 E Mission Ave,"October 1, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-ruby-and-sinto,True,2026-10-04,2026-10-04
 Chick-fil-A,10505 Trinity Parkway,"August 20, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-trinity-parkway-and-scott-creek,False,2026-08-22,2026-08-22
 Chick-fil-A,10890 NW 41 St,"May 21, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-west-doral,False,,2026-05-18
 Chick-fil-A,1094 Riverdale St,"September 24, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-west-springfield,False,2026-09-25,2026-09-25
@@ -247,12 +248,13 @@ Chick-fil-A,1900 NE Miami Court,"June 2, 2026",https://www.chick-fil-a.com/press
 Chick-fil-A,1910 W Main St,"July 23, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-troy-ohio,False,2026-07-19,2026-07-19
 Chick-fil-A,193 Covenant Drive,"May 7, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-batesville,False,,2026-05-18
 Chick-fil-A,19360 Highway 441,"June 11, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-golden-groves,False,2026-06-10,2026-06-10
-Chick-fil-A,1955 W Park Place Blvd,"September 29, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-west-park-place,True,2026-10-01,2026-10-01
+Chick-fil-A,1955 W Park Place Blvd,"September 29, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-west-park-place,False,2026-10-01,2026-10-01
 Chick-fil-A,2000 Hwy 20,"July 2, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-north-cartersville,False,2026-06-28,2026-06-28
 Chick-fil-A,2018 Forest Ave,"August 3, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-south-chico,False,2026-08-04,2026-08-04
 Chick-fil-A,2060 Southfield Rd,"May 21, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-lincoln-park,False,,2026-05-18
 Chick-fil-A,2100 Treelight Way,"April 9, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-wendell,False,,2026-05-18
 Chick-fil-A,22675 Clarksburg Road,"September 15, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-clarksburg,False,2026-09-16,2026-09-16
+Chick-fil-A,2301 55 th St,"October 1, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-veterans-and-23rd,True,2026-10-04,2026-10-04
 Chick-fil-A,2356 Pass Road,"September 24, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-biloxi,False,2026-09-25,2026-09-25
 Chick-fil-A,250 I-35 Service Road,"July 16, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-hillsboro-texas,False,2026-07-10,2026-07-10
 Chick-fil-A,25527 Tomball Pkwy,"June 25, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-grand-pkwy-at-tomball-pkwy,False,2026-06-25,2026-06-25
@@ -264,12 +266,15 @@ Chick-fil-A,2885 Allison-Bonnett Memorial Drive,"May 21, 2026",https://www.chic
 Chick-fil-A,2977 Market Drive,"May 7, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-east-cartmill,False,,2026-05-18
 Chick-fil-A,3200 West Broadway Blvd,"September 17, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-sedalia,False,2026-09-19,2026-09-19
 Chick-fil-A,3211 SW 160th Ave,"June 18, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-the-fountains-of-miramar,False,2026-06-13,2026-06-13
+Chick-fil-A,3217 N Vermillion St,"October 2, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-danville-2,True,2026-10-04,2026-10-04
 Chick-fil-A,3425 Bienville Blvd,"April 23, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-ocean-spring,False,,2026-05-18
 Chick-fil-A,3497 Brunswick Pike,"September 10, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-princeton,False,2026-09-13,2026-09-13
 Chick-fil-A,3820 City Gate Drive,"May 21, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-city-gate,False,,2026-05-18
+Chick-fil-A,390 Baseline St,"October 1, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-hwy-8-and-4th-ave,True,2026-10-04,2026-10-04
 Chick-fil-A,4147 Burbank Road,"September 21, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-wooster,False,2026-09-22,2026-09-22
 Chick-fil-A,417 NW Pkwy St,"July 30, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-azle-texas,False,2026-07-25,2026-07-25
 Chick-fil-A,41902 Jackson St,"May 21, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-i-10-and-jackson-street,False,,2026-05-18
+Chick-fil-A,4200 E Covell Road,"October 1, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-covell-and-sooner,True,2026-10-04,2026-10-04
 Chick-fil-A,4735 Mobile Highway,"April 16, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-mobile-hwy,False,,2026-05-18
 Chick-fil-A,5340 US Hwy 90 W,"May 14, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-tillmans-corner,False,,2026-05-18
 Chick-fil-A,5580 Wren St,"September 24, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-bethelview-and-castleberry,False,2026-09-25,2026-09-25
@@ -287,28 +292,30 @@ Chick-fil-A,705 Duval Station Road,"May 29, 2026",https://www.chick-fil-a.com/p
 Chick-fil-A,7411 Fair Oaks Blvd,"July 9, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-carmichael-village,False,2026-07-01,2026-07-01
 Chick-fil-A,7495 S Gartrell Road,"May 14, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-gartrell-rd-hwy-470,False,,2026-05-18
 Chick-fil-A,754 US Hwy 202,"June 4, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-bridgewater-towne-center,False,2026-05-31,2026-05-31
-Chick-fil-A,7936 White Bluff Road,"September 29, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-oglethorpe,True,2026-10-01,2026-10-01
-Chick-fil-A,80 Hillcrest Dr,"September 30, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-andalusia,True,2026-10-01,2026-10-01
+Chick-fil-A,7936 White Bluff Road,"September 29, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-oglethorpe,False,2026-10-01,2026-10-01
+Chick-fil-A,80 Hillcrest Dr,"September 30, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-andalusia,False,2026-10-01,2026-10-01
 Chick-fil-A,815 St,"May 21, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-east-village,False,,2026-05-18
+Chick-fil-A,905 Merriam Ave,"October 1, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-leominster,True,2026-10-04,2026-10-04
 Chick-fil-A,9111 E 40th Ave,"April 16, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-runway-35-south,False,,2026-05-18
 Chick-fil-A,930 Garrisonville Road,"May 21, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-west-garrisonville,False,2026-05-28,2026-05-28
 Chick-fil-A,9950 State Route 14,"August 25, 2026",https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-streetsboro,False,2026-08-28,2026-08-28
 Citi Trends,"1004 Culver Road Rochester , NY 14609 US",7/30/2026,https://locations.cititrends.com/ny/rochester/1004-culver-road.html,False,2026-08-28,2026-08-28
-Citi Trends,"1092 East Main Street Columbus , OH 43205 US",,https://www.cititrends.com/,True,2026-10-01,2026-10-01
-Citi Trends,"2600 Jefferson Street Nashville , TN 37208 US",,https://www.cititrends.com/,True,2026-10-01,2026-10-01
-Citi Trends,"3040 East Pawnee Street Wichita , KS 67211 US",,https://www.cititrends.com/,True,2026-10-01,2026-10-01
-Citi Trends,"3127 Greenmount Avenue Baltimore , MD 21218 US",,https://www.cititrends.com/,True,2026-10-01,2026-10-01
+Citi Trends,"1092 East Main Street Columbus , OH 43205 US",10/29/2026,https://www.cititrends.com/,False,2026-10-01,2026-10-01
+Citi Trends,"2600 Jefferson Street Nashville , TN 37208 US",10/29/2026,https://www.cititrends.com/,False,2026-10-01,2026-10-01
+Citi Trends,"3040 East Pawnee Street Wichita , KS 67211 US",10/29/2026,https://www.cititrends.com/,False,2026-10-01,2026-10-01
+Citi Trends,"3127 Greenmount Avenue Baltimore , MD 21218 US",10/29/2026,https://www.cititrends.com/,False,2026-10-01,2026-10-01
 Citi Trends,"323 East Main Street Brownsville , TN 38012 US",7/30/2026,https://locations.cititrends.com/tn/brownsville/323-east-main-street.html,False,2026-08-28,2026-08-28
 Citi Trends,"3417A Breckenridge Lane Louisville , KY 40220 US",7/30/2026,https://locations.cititrends.com/ky/louisville/3417a-breckenridge-lane.html,False,2026-08-28,2026-08-28
-Citi Trends,"3500 Main Street Buffalo , NY 14226 US",,https://www.cititrends.com/,True,2026-10-01,2026-10-01
-Citi Trends,"373 Huntington Turnpike Bridgeport , CT 06610 US",,https://www.cititrends.com/,True,2026-10-01,2026-10-01
-Citi Trends,"5000 Union Boulevard St. Louis , MO 63115 US",,https://www.cititrends.com/,True,2026-10-01,2026-10-01
-Citi Trends,"5701 Walnut Street Philadelphia , PA 19139 US",,https://www.cititrends.com/,True,2026-10-01,2026-10-01
-Citi Trends,"660 North Highway 67 Florissant , MO 63031 US",,https://www.cititrends.com/,True,2026-10-01,2026-10-01
-Citi Trends,"7333 East 10 Mile Road Center Line , MI 48015 US",,https://www.cititrends.com/,True,2026-10-01,2026-10-01
+Citi Trends,"3500 Main Street Buffalo , NY 14226 US",10/29/2026,https://www.cititrends.com/,False,2026-10-01,2026-10-01
+Citi Trends,"373 Huntington Turnpike Bridgeport , CT 06610 US",10/29/2026,https://www.cititrends.com/,False,2026-10-01,2026-10-01
+Citi Trends,"500 Mississippi 16 Carthage , MS 39051 US",10/29/2026,https://locations.cititrends.com/ms/carthage/500-mississippi-16.html,True,2026-10-04,2026-10-04
+Citi Trends,"5000 Union Boulevard St. Louis , MO 63115 US",10/29/2026,https://www.cititrends.com/,False,2026-10-01,2026-10-01
+Citi Trends,"5701 Walnut Street Philadelphia , PA 19139 US",10/29/2026,https://www.cititrends.com/,False,2026-10-01,2026-10-01
+Citi Trends,"660 North Highway 67 Florissant , MO 63031 US",10/29/2026,https://www.cititrends.com/,False,2026-10-01,2026-10-01
+Citi Trends,"7333 East 10 Mile Road Center Line , MI 48015 US",10/29/2026,https://www.cititrends.com/,False,2026-10-01,2026-10-01
 Citi Trends,"822 Lake Avenue Rochester , NY 14613 US",7/30/2026,https://locations.cititrends.com/ny/rochester/822-lake-avenue.html,False,2026-08-28,2026-08-28
-Citi Trends,"930 North 27th Street Milwaukee , WI 53208 US",,https://www.cititrends.com/,True,2026-10-01,2026-10-01
-Citi Trends,"9930 Maple Street Omaha , NE 68134 US",,https://www.cititrends.com/,True,2026-10-01,2026-10-01
+Citi Trends,"930 North 27th Street Milwaukee , WI 53208 US",10/29/2026,https://www.cititrends.com/,False,2026-10-01,2026-10-01
+Citi Trends,"9930 Maple Street Omaha , NE 68134 US",10/29/2026,https://www.cititrends.com/,False,2026-10-01,2026-10-01
 Costco,"Amherst, NY",October 2026,https://www.costco.ca/f/-/new-locations,False,2026-09-07,2026-09-07
 Costco,"Camarillo, CA",October 2026,https://www.costco.ca/f/-/new-locations,False,2026-09-13,2026-09-13
 Costco,"Chandler, AZ Business Center",November 2026,https://www.costco.ca/f/-/new-locations,False,2026-09-16,2026-09-16
@@ -465,6 +472,7 @@ Hobby Lobby,"3599 Grand River Avenue, Howell, Michigan","October 03, 2025",https
 Hobby Lobby,"3684 US 9 N, Freehold, New Jersey","October 10, 2025",https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-freehold-new-jersey,False,2026-07-28,2026-07-28
 Hobby Lobby,"3880 Morse Road, Columbus, Ohio","July 31, 2026",https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-columbus-ohio-2,False,2026-08-01,2026-08-01
 Hobby Lobby,"400 Mill Avenue SE, New Philadelphia, Ohio","May 29, 2026",https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-new-philadelphia-ohio,False,2026-05-31,2026-05-31
+Hobby Lobby,"4127 East US Highway 377, Granbury, Texas","October 02, 2026",https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-granbury-texas,True,2026-10-04,2026-10-04
 Hobby Lobby,"4198 E. Ontario Ranch Road, Ontario, California","August 21, 2026",https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-ontario-california,False,2026-08-22,2026-08-22
 Hobby Lobby,"4224 E. McCain Boulevard, North Little Rock","August 03, 2026",https://newsroom.hobbylobby.com/new-stores/relocation-of-store-in-north-little-rock-arkansas,False,2026-08-04,2026-08-04
 Hobby Lobby,"4601 E. Main Street, Farmington","February 02, 2026",https://newsroom.hobbylobby.com/new-stores/relocation-of-store-in-farmington-new-mexico,False,2026-05-19,2026-05-19
@@ -480,6 +488,7 @@ Hobby Lobby,"910 Sawmill Road, Laurel, Mississippi","August 21, 2026",https://ne
 Hobby Lobby,"916 Airport Centre Drive, Allentown, Pennsylvania","September 11, 2026",https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-allentown-pannsylvania,False,2026-09-13,2026-09-13
 Hobby Lobby,"960 Fairplain Drive, Benton Harbor, Michigan","August 29, 2025",https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-benton-harbor-michigan,False,2026-07-28,2026-07-28
 HomeGoods,"Acton Plaza II, 365 Massachusetts Ave, Acton, MA 01720, Massachusetts","We're moving to a new location in The Shops at Highland Commons. Come visit us on August 27, 2026 from 8am to 10pm for the new store opening!",https://www.homegoods.com/store-details/Acton-MA-01720/309,False,2026-07-27,2026-07-27
+HomeGoods,"Adams Creek, 2212 East Hillside Drive, North Broken Arrow, OK 74012, Oklahoma","New store opening on October 29, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/North-Broken-Arrow-OK-74012/1238,True,2026-10-04,2026-10-04
 HomeGoods,"Cedar Breaks West Shopping Center, 4610 Williams Dr 105, Georgetown, TX 78633, Texas","New store opening on April 23, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/Georgetown-TX-78633/1220,False,,2026-05-18
 HomeGoods,"City Centre, 1704 North Dixie Hwy, C102, Elizabethtown, KY 42701, Kentucky","New store opening on October 22, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/Elizabethtown-KY-42701/1228,False,2026-09-25,2026-09-25
 HomeGoods,"Coastal Centre, 1218 Cottage Lane, Conway, SC 29526, South Carolina",Now Open!,https://www.homegoods.com/store-details/Conway-SC-29526/1222,False,,2026-05-18
@@ -491,9 +500,12 @@ HomeGoods,"Gateway Commons, 2450 Calumet Trace, Owensboro, KY 42303, Kentucky","
 HomeGoods,"Great Road Shopping Center, 297 Great Road, Bedford, MA 01730, Massachusetts","New store opening on October 15, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/Bedford-MA-01730/1237,False,2026-09-19,2026-09-19
 HomeGoods,"Great Southern Shopping Center, 1155 Washington Pike, Bridgeville, PA 15017, Pennsylvania","New store opening on October 22, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/Bridgeville-PA-15017/468,False,2026-09-25,2026-09-25
 HomeGoods,"Lake Stevens Market Place, 303 91st Ave. NE Suite D401, Lake Stevens, WA 98528, Washington","New store opening on August 13, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/Lake-Stevens-WA-98528/1223,False,2026-07-16,2026-07-16
+HomeGoods,"Millenia Plaza, 4664 Millenia Plaza Way, Orlando, FL 32839, Florida","We're moving to a new location in Colonial Plaza Market Center. Come visit us on October 29, 2026 from 8am to 10pm for the new store opening!",https://www.homegoods.com/store-details/Orlando-FL-32839/664,True,2026-10-04,2026-10-04
 HomeGoods,"Mountain Farms, 337 Russell Street, Hadley, MA 01035, Massachusetts",,https://www.homegoods.com/store-details/Hadley-MA-01035/98,False,,2026-05-18
+HomeGoods,"North Andover Mall, 350 Winthrop Avenue, North Andover, MA 01845, Massachusetts","New store opening on October 29, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/North-Andover-MA-01845/1213,True,2026-10-04,2026-10-04
 HomeGoods,"Pavillion East, 1349 West Campbell Rd, Richardson, TX 75080, Texas","We're moving to a new location in Richardson Heights Village. Come visit us on August 20, 2026 from 8am to 10pm for the new store opening!",https://www.homegoods.com/store-details/Richardson-TX-75080/450,False,2026-07-22,2026-07-22
 HomeGoods,"Richardson Heights Village, 100 South Central Expressway, Unit 70, Richardson, TX 75080, Texas","New store opening on August 20, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/Richardson-TX-75080/450,False,2026-08-16,2026-08-16
+HomeGoods,"San Jacinto Marketplace, 6845 Garth Road, Suite 100, Baytown, TX 77521, Texas","New store opening on October 29, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/Baytown-TX-77521/1211,True,2026-10-04,2026-10-04
 HomeGoods,"Shops at Highland Commons, 17 Highland Commons E, Hudson, MA 01749, Massachusetts","New store opening on August 27, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/Hudson-MA-01749/309,False,2026-08-25,2026-08-25
 HomeGoods,"Skyline Ranch Marketplace, 1420 West Hunt Highway, San Tan Valley, AZ 85143, Arizona","New store opening on August 3, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/San-Tan-Valley-AZ-85143/1212,False,2026-07-10,2026-07-10
 HomeGoods,"South Port Shopping Center, 999 Montauk Highway, Space 1019-2, Shirley, NY 11967, New York","New store opening on October 22, 2026 from 8am to 10pm!",https://www.homegoods.com/store-details/Shirley-NY-11967/1226,False,2026-09-25,2026-09-25
@@ -536,6 +548,7 @@ Jersey Mike's,"1071 South Main Street, Smithfield, UT 84335",In Development,http
 Jersey Mike's,"108 Hekili Street, Kailua, HI 96734-2848",In Development,https://www.jerseymikes.com/locations/coming-soon/US-HI,False,,2026-05-18
 Jersey Mike's,"1090 Hooksett Road, Hookset, NH 03106-1001",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NH,False,2026-05-22,2026-05-22
 Jersey Mike's,"10926 Hardin Valley Road, Knoxville, TN 37932-1434",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TN,False,2026-08-22,2026-08-22
+Jersey Mike's,"10950 South 191st Street, Omaha, NE 68136",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NE,True,2026-10-04,2026-10-04
 Jersey Mike's,"11 Mill Road, Durham, NH 03824-3048",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NH,False,2026-08-19,2026-08-19
 Jersey Mike's,"1101 Northern Boulevard, Clarks Summit, PA 18411-2221",In Development,https://www.jerseymikes.com/locations/coming-soon/US-PA,False,,2026-05-18
 Jersey Mike's,"1101 South Main Street, Smithfield, UT 84335",In Development,https://www.jerseymikes.com/locations/coming-soon/US-UT,False,,2026-05-18
@@ -548,7 +561,7 @@ Jersey Mike's,"1156 W Maple Avenue, Mundelein, IL 60060-1409",In Development,htt
 Jersey Mike's,"1170 US Highway 287, Broomfield, CO 80020-7079",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CO,False,,2026-05-18
 Jersey Mike's,"11910 E US 290, Manor, TX 78653",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,False,2026-05-31,2026-05-31
 Jersey Mike's,"1201 Dutchman's Creek Drive, Brunswick, MD 21716-9771",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MD,False,2026-06-04,2026-06-04
-Jersey Mike's,"12301 West Parmer Lane, Cedar Park, TX 78613-2992",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,True,2026-10-01,2026-10-01
+Jersey Mike's,"12301 West Parmer Lane, Cedar Park, TX 78613-2992",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,False,2026-10-01,2026-10-01
 Jersey Mike's,"124 West Spring Mill Point Drive, Westfield, IN 46074-1599",In Development,https://www.jerseymikes.com/locations/coming-soon/US-IN,False,2026-06-25,2026-06-25
 Jersey Mike's,"1302 S. Canal St, Carlsbad, NM 88220-6510",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NM,False,2026-09-25,2026-09-25
 Jersey Mike's,"13117 Kingston Pike, Farragut, TN 37934-1008",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TN,False,2026-06-01,2026-06-01
@@ -569,7 +582,7 @@ Jersey Mike's,"1445 S Airport Way, Manteca, CA 95337",In Development,https://www
 Jersey Mike's,"1508 South Main Street, Nephi, UT 84648-2516",In Development,https://www.jerseymikes.com/locations/coming-soon/US-UT,False,,2026-05-18
 Jersey Mike's,"1525 S Jefferson Avenue, Lebanon, MO 65536-3762",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MO,False,,2026-05-18
 Jersey Mike's,"1565 Hustonville Road, Danville, KY 40422-2425",In Development,https://www.jerseymikes.com/locations/coming-soon/US-KY,False,,2026-05-18
-Jersey Mike's,"15673 Southern Blvd., Loxahatchee Groves, FL 33470-9218",In Development,https://www.jerseymikes.com/locations/coming-soon/US-FL,True,2026-10-01,2026-10-01
+Jersey Mike's,"15673 Southern Blvd., Loxahatchee Groves, FL 33470-9218",In Development,https://www.jerseymikes.com/locations/coming-soon/US-FL,False,2026-10-01,2026-10-01
 Jersey Mike's,"157 Crosstie Lane, Troutman, NC 28166-8732",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NC,False,2026-06-10,2026-06-10
 Jersey Mike's,"1597 North Susquehanna Trail, Selinsgrove, PA 17870-5500",In Development,https://www.jerseymikes.com/locations/coming-soon/US-PA,False,2026-08-22,2026-08-22
 Jersey Mike's,"160 Fairview Avenue, Hudson, NY 12534-1267",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,,2026-05-18
@@ -600,6 +613,7 @@ Jersey Mike's,"1809 Plymouth Road, Minnetonka, MN 55305-1980",In Development,htt
 Jersey Mike's,"1839 N Main Street, Princeton, IL 61356-9785",In Development,https://www.jerseymikes.com/locations/coming-soon/US-IL,False,,2026-05-18
 Jersey Mike's,"1866 Berlin Turnpike, Wethersfield, CT 06109-2414",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CT,False,,2026-05-18
 Jersey Mike's,"188 W. Museum Drive, Dickinson, ND 58601-3930",In Development,https://www.jerseymikes.com/locations/coming-soon/US-ND,False,,2026-05-18
+Jersey Mike's,"1880 North College Avenue, Fort Collins, CO 80524-1333",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CO,True,2026-10-04,2026-10-04
 Jersey Mike's,"1897 South Main Street, Waynesville, NC 28786",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NC,False,2026-08-07,2026-08-07
 Jersey Mike's,"193 W 237th Street, Bronx, NY 10463-4141",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,2026-05-22,2026-05-22
 Jersey Mike's,"193 W 237th Street, Bronx, NY 10470-2005",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,,2026-05-18
@@ -690,13 +704,14 @@ Jersey Mike's,"400 Gallatin Avenue, Nashville, TN 37206-3254",In Development,htt
 Jersey Mike's,"4100 Frontage Road, Marinette, WI 54143",In Development,https://www.jerseymikes.com/locations/coming-soon/US-WI,False,2026-09-13,2026-09-13
 Jersey Mike's,"4121 Shelbyville Road, Louisville, KY 40207-3205",In Development,https://www.jerseymikes.com/locations/coming-soon/US-KY,False,2026-07-25,2026-07-25
 Jersey Mike's,"415 Community Drive, North Liberty, IA 52317-6703",In Development,https://www.jerseymikes.com/locations/coming-soon/US-IA,False,,2026-05-18
+Jersey Mike's,"4211 E Loop 1604 N, San Antonio, TX 78253-4215",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,True,2026-10-04,2026-10-04
 Jersey Mike's,"4229 Concord Pike, Wilmington, DE 19803",In Development,https://www.jerseymikes.com/locations/coming-soon/US-DE,False,2026-08-04,2026-08-04
 Jersey Mike's,"4237 Concord Pike, Wilmington, DE 19803",In Development,https://www.jerseymikes.com/locations/coming-soon/US-DE,False,2026-08-07,2026-08-07
 Jersey Mike's,"4237 Concord Pike, Wilmington, DE 19803-1403",In Development,https://www.jerseymikes.com/locations/coming-soon/US-DE,False,2026-08-13,2026-08-13
 Jersey Mike's,"4267 West Thunderbird Road, Phoenix, AZ 85053-5357",In Development,https://www.jerseymikes.com/locations/coming-soon/US-AZ,False,2026-06-13,2026-06-13
 Jersey Mike's,"43 Blake Blvd, Celebration, FL 34747-4515",In Development,https://www.jerseymikes.com/locations/coming-soon/US-FL,False,,2026-05-18
 Jersey Mike's,"43 Marlborough Street, Portland, CT 06480-1829",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CT,False,2026-08-07,2026-08-07
-Jersey Mike's,"436 W 19th Street, Houston, TX 77008-3914",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,True,2026-10-01,2026-10-01
+Jersey Mike's,"436 W 19th Street, Houston, TX 77008-3914",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,False,2026-10-01,2026-10-01
 Jersey Mike's,"4456 Golden Foothill Parkway, El Dorado Hills, CA 95762",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CA,False,,2026-05-18
 Jersey Mike's,"44575 Mound Road, Sterling Heights, MI 48314-1319",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MI,False,,2026-05-18
 Jersey Mike's,"4551 2nd Street, Davis, CA 95618-9415",In Development,https://www.jerseymikes.com/locations/coming-soon/US-CA,False,,2026-05-18
@@ -707,7 +722,7 @@ Jersey Mike's,"4845 Moores Mill Road, Huntsville, AL 35811-1592",In Development,
 Jersey Mike's,"4860 Blue Diamond Road, Las Vegas, NV 89139-7675",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NV,False,,2026-05-18
 Jersey Mike's,"4870 GOlden Parkway, Buford, GA 30518-5840",In Development,https://www.jerseymikes.com/locations/coming-soon/US-GA,False,,2026-05-18
 Jersey Mike's,"4880 US Highway 89, Flagstaff, AZ 86004",In Development,https://www.jerseymikes.com/locations/coming-soon/US-AZ,False,,2026-05-18
-Jersey Mike's,"4900 Transit Road, Depew, NY 14043-4658",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,True,2026-10-01,2026-10-01
+Jersey Mike's,"4900 Transit Road, Depew, NY 14043-4658",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,2026-10-01,2026-10-01
 Jersey Mike's,"4921 Western Ave, South bend, IN 46619-2309",In Development,https://www.jerseymikes.com/locations/coming-soon/US-IN,False,2026-08-19,2026-08-19
 Jersey Mike's,"4976 East Dupont Road, Fort Wayne, IN 46825-1816",In Development,https://www.jerseymikes.com/locations/coming-soon/US-IN,False,2026-07-19,2026-07-19
 Jersey Mike's,"5 Foster Ave, Pittsburgh, PA 15205-2351",In Development,https://www.jerseymikes.com/locations/coming-soon/US-PA,False,2026-09-22,2026-09-22
@@ -717,7 +732,7 @@ Jersey Mike's,"500 Valley Mall Parkway, West Wenatchee, WA 98802-3812",In Develo
 Jersey Mike's,"500 W 33rd St., New York, NY 10001-2175",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,,2026-05-18
 Jersey Mike's,"5001 Sergeant Road, Sioux City, IA 51106-4774",In Development,https://www.jerseymikes.com/locations/coming-soon/US-IA,False,,2026-05-18
 Jersey Mike's,"5004 Dogwood Boulevard, Kannapolis, NC 28081-9461",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NC,False,2026-08-25,2026-08-25
-Jersey Mike's,"5014 Airport Rd N, Naples, FL 34105-2407",In Development,https://www.jerseymikes.com/locations/coming-soon/US-FL,True,2026-10-01,2026-10-01
+Jersey Mike's,"5014 Airport Rd N, Naples, FL 34105-2407",In Development,https://www.jerseymikes.com/locations/coming-soon/US-FL,False,2026-10-01,2026-10-01
 Jersey Mike's,"5014 North Airport Road, Naples, FL 34105-2407",In Development,https://www.jerseymikes.com/locations/coming-soon/US-FL,False,2026-07-16,2026-07-16
 Jersey Mike's,"5160 Borgen Boulevard, Gig Harbor, WA 98332-8809",In Development,https://www.jerseymikes.com/locations/coming-soon/US-WA,False,2026-09-10,2026-09-10
 Jersey Mike's,"519-521 Boston Post Road, Port Chester, NY 10573-4750",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,,2026-05-18
@@ -743,6 +758,7 @@ Jersey Mike's,"584 Centerville Road, Lancaster, PA 17601-1306",In Development,ht
 Jersey Mike's,"5984 Stage Rd., Bartlett, TN 38134",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TN,False,,2026-05-18
 Jersey Mike's,"6 Parkway Lane, Petal, MS 39465-3035",In Development,https://www.jerseymikes.com/locations/coming-soon/US-MS,False,,2026-05-18
 Jersey Mike's,"600 E Le Claire Road, Eldridge, IA 52748-1707",In Development,https://www.jerseymikes.com/locations/coming-soon/US-IA,False,2026-07-16,2026-07-16
+Jersey Mike's,"600 Metairie Road, Metairie, LA 70005-4068",In Development,https://www.jerseymikes.com/locations/coming-soon/US-LA,True,2026-10-04,2026-10-04
 Jersey Mike's,"601 Church Street, Nashville, TN 37219-2314",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TN,False,,2026-05-18
 Jersey Mike's,"605 NW Parkway Street, Azle, TX 76020-2941",In Development,https://www.jerseymikes.com/locations/coming-soon/US-TX,False,,2026-05-18
 Jersey Mike's,"612 8th Ave, New York, NY 10018-3002",In Development,https://www.jerseymikes.com/locations/coming-soon/US-NY,False,2026-07-16,2026-07-16
@@ -849,17 +865,21 @@ Marshalls,"1701 Route 22 West, Watchung, New Jersey","August 27, 2026",https://w
 Marshalls,"1701 Us Hgwy 22 West, Watchung, New Jersey","August 27, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=281&ref=grandOpenings,False,2026-07-31,2026-07-31
 Marshalls,"171 Edgewood Dr, North Augusta, South Carolina","September 17, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1662&ref=grandOpenings,False,2026-08-22,2026-08-22
 Marshalls,"1855 Main St S-1110, Ramona, California","August 27, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1658&ref=grandOpenings,False,2026-07-31,2026-07-31
+Marshalls,"190 Summit Ave, Circleville, Ohio","October 29, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1669&ref=grandOpenings,True,2026-10-04,2026-10-04
 Marshalls,"19390 Bear Valley Rd, Apple Valley, California","July 30, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1619&ref=grandOpenings,False,2026-07-01,2026-07-01
 Marshalls,"228 W Main St, Malone, New York","October 15, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1671&ref=grandOpenings,False,2026-09-19,2026-09-19
 Marshalls,"2485 Richmond Avenue, Staten Island, New York","August 13, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=656&ref=grandOpenings,False,2026-07-16,2026-07-16
 Marshalls,"3008 Ming Ave., Bakersfield, California","October 8, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=363&ref=grandOpenings,False,2026-09-13,2026-09-13
 Marshalls,"3220 S. Soncy Rd, Amarillo, Texas","September 3, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1670&ref=grandOpenings,False,2026-08-07,2026-08-07
 Marshalls,"417 Blue Ridge St S D1, Blairsville, Georgia","August 6, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1667&ref=grandOpenings,False,2026-07-10,2026-07-10
+Marshalls,"4301 North St Suite A, Nacogdoches, Texas","October 29, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1672&ref=grandOpenings,True,2026-10-04,2026-10-04
 Marshalls,"555 JFK Rd 700-04, Dubuque, Iowa","August 13, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1668&ref=grandOpenings,False,2026-07-16,2026-07-16
 Marshalls,"5811 Worth Pkwy Ste109, San Antonio, Texas","April 16, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=652&ref=grandOpenings,False,,2026-05-18
 Marshalls,"6001 E Expy 83 Suite G, Mercedes, Texas","October 15, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1674&ref=grandOpenings,False,2026-09-19,2026-09-19
+Marshalls,"73 Winthrop Avenue, Lawrence, Massachusetts","October 29, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=645&ref=grandOpenings,True,2026-10-04,2026-10-04
 Marshalls,"7420 Elk Grove Blvd, Elk Grove, California","October 8, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1654&ref=grandOpenings,False,2026-09-13,2026-09-13
 Marshalls,"7974 West Bell Rd, Glendale, Arizona","August 20, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1659&ref=grandOpenings,False,2026-07-22,2026-07-22
+Marshalls,"80 Storrs Street, Concord, New Hampshire","October 29, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=735&ref=grandOpenings,True,2026-10-04,2026-10-04
 Marshalls,"8364 S Dixie Hwy, Dadeland (Miami), Florida","September 17, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1666&ref=grandOpenings,False,2026-08-22,2026-08-22
 Marshalls,"850 3rd Avenue, Brooklyn, New York","April 23, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1290&ref=grandOpenings,False,,2026-05-18
 Marshalls,"8680 Fourwinds Dr, San Antonio, Texas","October 8, 2026",https://www.marshalls.com/us/store/stores/directions.jsp?sid=1663&ref=grandOpenings,False,2026-09-13,2026-09-13
@@ -907,21 +927,22 @@ Sprouts Farmers Market,"Bedford, N. Industrial Blvd. & Airport Fwy., 221 N. Indu
 Sprouts Farmers Market,"Carson, University Dr. & S. Avalon Blvd., 619 E. University Dr. Carson, CA 90746","Opening September 18, 2026",https://www.sprouts.com/stores/ca/,False,2026-09-16,2026-09-16
 Sprouts Farmers Market,"Clarksville, MLK Jr. Pkwy. & Fire Station Rd., 1002 Winn Wy. Clarksville, TN 37043","Opening October 23, 2026",https://www.sprouts.com/stores/tn/,False,2026-09-16,2026-09-16
 Sprouts Farmers Market,"College Station, Texas Ave. & Holleman Dr. E., 1913 Texas Ave. S. College Station, TX 77840","Opening September 25, 2026",https://www.sprouts.com/stores/tx/,False,2026-09-16,2026-09-16
-Sprouts Farmers Market,"Concord, Christenbury Pkwy. & Derita Rd., 8885 Christenbury Pkwy. Concord, NC 28027","Opening November 13, 2026",https://www.sprouts.com/stores/nc/,True,2026-10-01,2026-10-01
+Sprouts Farmers Market,"Concord, Christenbury Pkwy. & Derita Rd., 8885 Christenbury Pkwy. Concord, NC 28027","Opening November 13, 2026",https://www.sprouts.com/stores/nc/,False,2026-10-01,2026-10-01
 Sprouts Farmers Market,"Conyers, Hwy. 138 & Hunting Creek Dr., 1648 Hwy. 138 SE Suite 3 Conyers, GA 30013","Opening October 16, 2026",https://www.sprouts.com/stores/ga/,False,2026-09-16,2026-09-16
 Sprouts Farmers Market,"Hamilton Township, Hwy. 33 & White Horse Ave., 372 Hwy. 33 Trenton, NJ 08619","Opening November 6, 2026",https://www.sprouts.com/stores/nj/,False,2026-09-28,2026-09-28
-Sprouts Farmers Market,"Jurupa Valley, Limonite Ave. & Spectrum Center, 8054 Limonite Ave. Jurupa Valley, CA 92509","Opening November 13, 2026",https://www.sprouts.com/stores/ca/,True,2026-10-01,2026-10-01
+Sprouts Farmers Market,"Jurupa Valley, Limonite Ave. & Spectrum Center, 8054 Limonite Ave. Jurupa Valley, CA 92509","Opening November 13, 2026",https://www.sprouts.com/stores/ca/,False,2026-10-01,2026-10-01
 Sprouts Farmers Market,"Limerick, Ridge Pike & Township Line Rd., 36 W. Ridge Pike, Suite 415 Limerick, PA 19468","Opening October 2, 2026",https://www.sprouts.com/stores/pa/,False,2026-09-16,2026-09-16
 Sprouts Farmers Market,"Mesa-Ellsworth, Ellsworth Rd. & Ray Rd., 5131 S. Ellsworth Rd. Mesa, AZ 85212","Opening September 18, 2026",https://www.sprouts.com/stores/az/,False,2026-09-16,2026-09-16
 Sprouts Farmers Market,"Mesa-Southern Ave., Southern Ave. & Alma School Rd., 1110 W. Southern Ave., Suite 1 Mesa, AZ 85210","Opening November 6, 2026",https://www.sprouts.com/stores/az/,False,2026-09-28,2026-09-28
 Sprouts Farmers Market,"Newnan, Millard Farmer Industrial Blvd. & Bullsboro Dr., 19 Millard Farmer Industrial Blvd., Suite F Newnan, GA 30263","Opening October 16, 2026",https://www.sprouts.com/stores/ga/,False,2026-09-16,2026-09-16
 Sprouts Farmers Market,"San Diego-El Cajon Blvd., El Cajon Blvd. & Interstate-805, 3245 El Cajon Blvd. San Diego, CA 92104","Opening October 2, 2026",https://www.sprouts.com/stores/ca/,False,2026-09-16,2026-09-16
 Sprouts Farmers Market,"Santa Ana, Bristol St. & Warner Ave., 2311 S. Bristol St. Santa Ana, CA 92704","Opening October 23, 2026",https://www.sprouts.com/stores/ca/,False,2026-09-16,2026-09-16
-Sprouts Farmers Market,"Smyrna, Sam Ridley Pkwy. & Motlow College Blvd., 2015 Pilot Pl. Smyrna, TN 37167","Opening November 13, 2026",https://www.sprouts.com/stores/tn/,True,2026-10-01,2026-10-01
-Sprouts Farmers Market,"South Scottsdale, N. Scottsdale Rd. & SkySong Blvd., 1490 N. Scottsdale Rd. Scottsdale, AZ 85257","Opening October 30, 2026",https://www.sprouts.com/stores/az/,True,2026-10-01,2026-10-01
+Sprouts Farmers Market,"Smyrna, Sam Ridley Pkwy. & Motlow College Blvd., 2015 Pilot Pl. Smyrna, TN 37167","Opening November 13, 2026",https://www.sprouts.com/stores/tn/,False,2026-10-01,2026-10-01
+Sprouts Farmers Market,"South Scottsdale, N. Scottsdale Rd. & SkySong Blvd., 1490 N. Scottsdale Rd. Scottsdale, AZ 85257","Opening October 30, 2026",https://www.sprouts.com/stores/az/,False,2026-10-01,2026-10-01
 Sprouts Farmers Market,"Tucson-Rita Ranch, Old Vail Rd. & Houghton Rd., 10015 E Old Vail Rd. Tucson, AZ 85747","Opening October 30, 2026",https://www.sprouts.com/stores/az/,False,2026-09-19,2026-09-19
 Sprouts Farmers Market,"Waxahachie, Hwy. 77 &Hwy. 287, 150 Bessie Coleman Blvd. Waxahachie, TX 75165","Opening October 30, 2026",https://www.sprouts.com/stores/tx/,False,2026-09-16,2026-09-16
 TJ Maxx,"1233 Teakwood Ave, Coos Bay",Now open!,https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1681&ref=grandOpenings,False,,2026-05-18
+TJ Maxx,"1239 US-181, Portland","November 1, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1704&ref=grandOpenings,True,2026-10-04,2026-10-04
 TJ Maxx,"1254 East Ash St, Piqua","August 30, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1702&ref=grandOpenings,False,2026-07-31,2026-07-31
 TJ Maxx,"1384 Rombach Ave, Wilmington","May 28, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1485&ref=grandOpenings,False,2026-05-28,2026-05-28
 TJ Maxx,"1428 W. Airline Hwy, LaPlace","May 28, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1683&ref=grandOpenings,False,,2026-05-18
@@ -936,14 +957,18 @@ TJ Maxx,"2607 Decherd Blvd, Winchester","May 28, 2026",https://tjmaxx.tjx.com/st
 TJ Maxx,"280 Black Gold Blvd, Hazard","May 17, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1694&ref=grandOpenings,False,,2026-05-18
 TJ Maxx,"2821 King Ave. West, Billings","August 13, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=656&ref=grandOpenings,False,2026-08-13,2026-08-13
 TJ Maxx,"283 Platinum Ave, Staten Island","May 28, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=165&ref=grandOpenings,False,2026-05-28,2026-05-28
-TJ Maxx,"300 Bonner Mall Way, Ponderay","October 25, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1701&ref=grandOpenings,True,2026-10-01,2026-10-01
+TJ Maxx,"300 Bonner Mall Way, Ponderay","October 25, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1701&ref=grandOpenings,False,2026-10-01,2026-10-01
 TJ Maxx,"300 Bonner Mall Way, Sandpoint","October 25, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1701&ref=grandOpenings,False,2026-09-25,2026-09-25
 TJ Maxx,"34 East Ridgewood Avenue, Paramus","September 24, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=72&ref=grandOpenings,False,2026-08-25,2026-08-25
 TJ Maxx,"365 Constitution Ave, Littleton","August 27, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=400&ref=grandOpenings,False,2026-08-25,2026-08-25
 TJ Maxx,"365 Massachusetts Ave, Acton","August 27, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=400&ref=grandOpenings,False,2026-07-28,2026-07-28
+TJ Maxx,"400 E State Hwy 260, Payson","November 1, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1691&ref=grandOpenings,True,2026-10-04,2026-10-04
 TJ Maxx,"4328 W Waco Dr, Waco","October 18, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1698&ref=grandOpenings,False,2026-09-19,2026-09-19
+TJ Maxx,"4437 Commons Dr E, Destin","November 1, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1700&ref=grandOpenings,True,2026-10-04,2026-10-04
 TJ Maxx,"460 Mt Hood St, The Dalles","August 16, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1696&ref=grandOpenings,False,2026-07-19,2026-07-19
 TJ Maxx,"4726 South Boulevard, Charlotte","October 1, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=462&ref=grandOpenings,False,2026-09-04,2026-09-04
+TJ Maxx,"5375 William Flynn Hwy, Gibsonia","October 29, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=122&ref=grandOpenings,True,2026-10-04,2026-10-04
+TJ Maxx,"6109 S Aspen Ave, Broken Arrow","November 1, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1711&ref=grandOpenings,True,2026-10-04,2026-10-04
 TJ Maxx,"617 Hwy 62 65 N, Harrison","August 16, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1686&ref=grandOpenings,False,2026-07-19,2026-07-19
 TJ Maxx,"770 North Lee Hwy, Lexington","August 16, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1685&ref=grandOpenings,False,2026-07-19,2026-07-19
 TJ Maxx,"8540 Factory Shops Blvd, Jeffersonville","May 28, 2026",https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1485&ref=grandOpenings,False,,2026-05-18
@@ -1084,20 +1109,20 @@ Teso Life,"New locations are on the way., West Virginia",Coming Soon,https://www
 Teso Life,"New locations are on the way., Wisconsin",Coming Soon,https://www.tesolife.com#,False,,2026-05-18
 Teso Life,"New locations are on the way., Wyoming",Coming Soon,https://www.tesolife.com#,False,,2026-05-18
 Ulta Beauty,"10800 NW 41st St, Doral, FL 33172",Jul 24-Aug 24,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-06-28,2026-06-28
-Ulta Beauty,"11043 Westheimer Rd, Houston, TX 77042",Oct 02-Nov 02,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,True,2026-10-01,2026-10-01
+Ulta Beauty,"11043 Westheimer Rd, Houston, TX 77042",Oct 02-Nov 02,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-10-01,2026-10-01
 Ulta Beauty,"11910 E US 290 Hwy WB, Manor, TX 78653",Apr 24-May 24,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-19,2026-05-19
 Ulta Beauty,"11915 Quaker Ave, Lubbock, TX 79424",Aug 21-Sep 21,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-08-16,2026-08-16
 Ulta Beauty,"1222 Cottage Ln, Conway, SC 29526",Jun 05-Jul 05,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-28,2026-05-28
 Ulta Beauty,"125 NW Loop 410, San Antonio, TX 78216",Aug 14-Sep 14,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-08-16,2026-08-16
 Ulta Beauty,"1385 N Verrado Way, Buckeye, AZ 85396",May 29-Jun 29,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-19,2026-05-19
 Ulta Beauty,"1428 West Hunt Highway, San Tan Valley, AZ 85143",Aug 14-Sep 14,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-08-16,2026-08-16
-Ulta Beauty,"143 Edgewood Drive, North Augusta, SC 29841",Oct 23-Nov 23,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,True,2026-10-01,2026-10-01
+Ulta Beauty,"143 Edgewood Drive, North Augusta, SC 29841",Oct 23-Nov 23,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-10-01,2026-10-01
 Ulta Beauty,"15320 Shawnee Mission Pkwy, Shawnee, KS 66217",Jun 19-Jul 19,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-28,2026-05-28
 Ulta Beauty,"1645 Parkway, Sevierville, TN 37862",Jun 26-Jul 26,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-28,2026-05-28
 Ulta Beauty,"1655 N Expy, Griffin, GA 30223",Jul 31-Aug 31,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-06-28,2026-06-28
 Ulta Beauty,"1937 Mineral Wells Ave, Paris, TN 38242",Jul 31-Aug 31,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-06-28,2026-06-28
 Ulta Beauty,"2008 Paul Bunyan Dr NW, Bemidji, MN 56601",May 08-Jun 08,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-19,2026-05-19
-Ulta Beauty,"20426 CA-18, Apple Valley, CA 92307",Oct 16-Nov 16,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,True,2026-10-01,2026-10-01
+Ulta Beauty,"20426 CA-18, Apple Valley, CA 92307",Oct 16-Nov 16,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-10-01,2026-10-01
 Ulta Beauty,"2200 S 10th St, McAllen, TX 78503",Jun 26-Jul 26,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-28,2026-05-28
 Ulta Beauty,"2317 New Hyde Park Rd, New Hyde Park, NY 11042",May 22-Jun 22,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-19,2026-05-19
 Ulta Beauty,"25 Settlers Green Dr, North Conway, NH 03860",May 08-Jun 08,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-19,2026-05-19
@@ -1105,20 +1130,20 @@ Ulta Beauty,"2540 W 24th Ave, Emporia , KS 66801",May 15-Jun 15,https://www.ulta
 Ulta Beauty,"2581 Battlefield Pkwy, Fort Oglethorpe, GA 30742",Aug 14-Sep 14,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-08-16,2026-08-16
 Ulta Beauty,"2600 W 7th Street, Ft. Worth, TX 76107",Sep 11-Oct 11,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-09-04,2026-09-04
 Ulta Beauty,"2997 South 5600 West, West Valley City, UT 84120",Sep 11-Oct 11,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-09-04,2026-09-04
-Ulta Beauty,"3099 E Main St, Russellville, AR 72802",Oct 23-Nov 23,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,True,2026-10-01,2026-10-01
+Ulta Beauty,"3099 E Main St, Russellville, AR 72802",Oct 23-Nov 23,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-10-01,2026-10-01
 Ulta Beauty,"3117 W HWY 74, Monroe, NC 28110",Jul 24-Aug 24,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-06-28,2026-06-28
-Ulta Beauty,"3119 E Main St, Mohegan Lake, NY 10547",Oct 09-Nov 09,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,True,2026-10-01,2026-10-01
+Ulta Beauty,"3119 E Main St, Mohegan Lake, NY 10547",Oct 09-Nov 09,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-10-01,2026-10-01
 Ulta Beauty,"3233 W Norvell Bryant, Lecanto, FL 34461",Sep 18-Oct 18,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-09-04,2026-09-04
 Ulta Beauty,"3389 U.S Highway 441 South, Okeechobee, FL 34974",May 08-Jun 08,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-19,2026-05-19
-Ulta Beauty,"3401 N. Miami Avenue, Miami, FL 33127",Oct 23-Nov 23,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,True,2026-10-01,2026-10-01
+Ulta Beauty,"3401 N. Miami Avenue, Miami, FL 33127",Oct 23-Nov 23,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-10-01,2026-10-01
 Ulta Beauty,"3714 Shaw Ave, Clovis, CA 93619",May 08-Jun 08,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-19,2026-05-19
-Ulta Beauty,"396 Opry Mills Dr, Nashville, TN 37214",Oct 30-Nov 30,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,True,2026-10-01,2026-10-01
+Ulta Beauty,"396 Opry Mills Dr, Nashville, TN 37214",Oct 30-Nov 30,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-10-01,2026-10-01
 Ulta Beauty,"40 Nevius Blvd, Skillman, NJ 08558",Aug 28-Sep 28,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-08-16,2026-08-16
 Ulta Beauty,"40 Plaza Way, Mountain Home, AR 72653",Jun 26-Jul 26,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-28,2026-05-28
 Ulta Beauty,"4531 N Main St, Roswell, NM 88201",Sep 04-Oct 04,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-09-04,2026-09-04
 Ulta Beauty,"500 Connecticut Ave, Norwalk, CT 06854",Jul 10-Aug 10,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-06-28,2026-06-28
-Ulta Beauty,"535 W Commerce St, Brownwood, TX 76801",Oct 16-Nov 16,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,True,2026-10-01,2026-10-01
-Ulta Beauty,"5410 San Bernardo Ave, Laredo, TX 78041",Oct 30-Nov 30,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,True,2026-10-01,2026-10-01
+Ulta Beauty,"535 W Commerce St, Brownwood, TX 76801",Oct 16-Nov 16,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-10-01,2026-10-01
+Ulta Beauty,"5410 San Bernardo Ave, Laredo, TX 78041",Oct 30-Nov 30,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-10-01,2026-10-01
 Ulta Beauty,"5506 New Fashion Way, Charlotte, NC 28278",Jun 12-Jul 12,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-05-28,2026-05-28
 Ulta Beauty,"820 W Johnson St, Fond du Lac, WI 54935",Sep 04-Oct 04,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-09-04,2026-09-04
 Ulta Beauty,"830 W 78th St, Chanhassen, MN 55317",Jul 24-Aug 24,https://www.ulta.com/guestservices/ways-to-shop/in-store/grand-openings,False,2026-06-28,2026-06-28
@@ -1128,7 +1153,7 @@ Wawa,"105 Hopeman Pkwy. Waynesboro, VA 22980",8/20/2026,https://wawa.a.bigconten
 Wawa,"1290 Parkway Pl. Clarksville, TN 37042",6/18/2026,https://wawa.a.bigcontent.io/v1/static/061826_ClarksvilleTN_GrandOpening_Alert_Final,False,2026-06-13,2026-06-13
 Wawa,"14251 S US Highway 301 Sun City Center, FL 33573",6/4/2026,https://wawa.a.bigcontent.io/v1/static/060426_SunCityCenterFL_Alert_Final,False,,2026-05-18
 Wawa,"1431 Country Lane, South Hill, VA 23970",7/29/2026,https://wawa.a.bigcontent.io/v1/static/072926_SouthHillVA_Alert,False,2026-06-28,2026-06-28
-Wawa,"1598 U.S. 27, Avon Park, FL 33825",10/8/2026,https://wawa.a.bigcontent.io/v1/static/10082026_AvonParkFL_Release_FINAL,True,2026-10-01,2026-10-01
+Wawa,"1598 U.S. 27, Avon Park, FL 33825",10/8/2026,https://wawa.a.bigcontent.io/v1/static/10082026_AvonParkFL_Release_FINAL,False,2026-10-01,2026-10-01
 Wawa,"171 E Midland Trail, Lexington, VA 24450",7/29/2026,https://wawa.a.bigcontent.io/v1/static/072926_LexingtonVA_Alert,False,2026-06-28,2026-06-28
 Wawa,"1801 Capital Circle SE Tallahassee, FL 32301",7/30/2026,https://wawa.a.bigcontent.io/v1/static/073026_Store5439_TallahasseeFL_Alert,False,2026-07-25,2026-07-25
 Wawa,"1941 W. Main St. Salem, VA 24153",9/3/2026,https://wawa.a.bigcontent.io/v1/static/090326_SalemVA_Alert,False,2026-09-04,2026-09-04
@@ -1141,8 +1166,8 @@ Wawa,"2890 E Osceola Pkwy. Kissimmee, FL 34743",6/18/2026,https://wawa.a.bigcont
 Wawa,"303 S. White Horse Pk. Winslow, NJ 08089",9/18/2026,https://wawa.a.bigcontent.io/v1/static/091826_WinslowNJ_Release,False,2026-09-04,2026-09-04
 Wawa,"3304 5th St. Bedford, IN 47421",9/30/2026,https://wawa.a.bigcontent.io/v1/static/093026_BedfordIN_Alert,False,2026-09-04,2026-09-04
 Wawa,"3790 South St. Lafayette, IN 47905",6/24/2026,https://wawa.a.bigcontent.io/v1/static/062426_Store7418_LafayetteIN_Alert_Final,False,,2026-05-18
-Wawa,"4180 Berryhill Road, Pace, FL 32571",10/8/2026,https://wawa.a.bigcontent.io/v1/static/100826_PaceFL_Alert_FINAL,True,2026-10-01,2026-10-01
-Wawa,"4801 East Jackson St. Muncie, IN 47303",10/1/2026,https://wawa.a.bigcontent.io/v1/static/10.01.2026_MuncieIN_MediaAlert_FINAL,True,2026-10-01,2026-10-01
+Wawa,"4180 Berryhill Road, Pace, FL 32571",10/8/2026,https://wawa.a.bigcontent.io/v1/static/100826_PaceFL_Alert_FINAL,False,2026-10-01,2026-10-01
+Wawa,"4801 East Jackson St. Muncie, IN 47303",10/1/2026,https://wawa.a.bigcontent.io/v1/static/10.01.2026_MuncieIN_MediaAlert_FINAL,False,2026-10-01,2026-10-01
 Wawa,"5133 Cottage Hill Rd. Mobile, AL 36609",7/2/2026,https://wawa.a.bigcontent.io/v1/static/070226_MobileAL_GrandOpeningAlert,False,2026-06-28,2026-06-28
 Wawa,"5208 Veterans Pkwy. Murfreesboro, TN 37128",9/10/2026,https://wawa.a.bigcontent.io/v1/static/091026_MurfreesboroTN_Alert,False,2026-09-04,2026-09-04
 Wawa,"56 Reliance Rd. Middletown, VA 22645",9/4/2026,https://wawa.a.bigcontent.io/v1/static/090426_MiddletownVA_Alert,False,2026-09-04,2026-09-04
@@ -1152,9 +1177,9 @@ Wawa,"65 W Kessler-Cowlesville Rd. Tipp City, OH 45371",7/9/2026,https://wawa.a.
 Wawa,"6522 Bayshore Rd. Fort Myers, FL 33917",7/9/2026,https://wawa.a.bigcontent.io/v1/static/070926_FtMyersFL_PressRelease,False,2026-06-28,2026-06-28
 Wawa,"6800 Carolina Beach Rd. Wilmington, NC 28412",5/29/2026,https://wawa.a.bigcontent.io/v1/static/052926_WilmingtonNC_GrandOpening_Alert,False,,2026-05-18
 Wawa,"7601 Vaughn Mill Rd. Louisville, KY 40228",5/21/2026,https://wawa.a.bigcontent.io/v1/static/052126_LouisvilleKY_MediaAlert_Final,False,,2026-05-18
-Wawa,"797 Buchanan Trail East, Greencastle, PA 17225",10/2/2026,https://wawa.a.bigcontent.io/v1/static/10022026_GreencastlePA_MediaAlert_FINAL,True,2026-10-01,2026-10-01
+Wawa,"797 Buchanan Trail East, Greencastle, PA 17225",10/2/2026,https://wawa.a.bigcontent.io/v1/static/10022026_GreencastlePA_MediaAlert_FINAL,False,2026-10-01,2026-10-01
 Wawa,"800 Gunnison Trail Way, Bowling Green, KY 42101",7/9/2026,https://wawa.a.bigcontent.io/v1/static/070926_BowlingGreenKY_GrandOpening_Alert,False,2026-06-28,2026-06-28
-Wawa,"9009 Bridge Rd. Hummelstown, PA 17036",10/1/2026,"https://wawa.a.bigcontent.io/v1/static/10012026_Hummelstown,PA_MediaAlert_FINAL",True,2026-10-01,2026-10-01
+Wawa,"9009 Bridge Rd. Hummelstown, PA 17036",10/1/2026,"https://wawa.a.bigcontent.io/v1/static/10012026_Hummelstown,PA_MediaAlert_FINAL",False,2026-10-01,2026-10-01
 Wawa,"9010 Senca Dr. Wilmington, NC 28411",9/17/2026,https://wawa.a.bigcontent.io/v1/static/091726_WilmingtonNC_Alert,False,2026-09-04,2026-09-04
 Wawa,"9262 W Highway 98 Pensacola, FL 32506",5/21/2026,https://wawa.a.bigcontent.io/v1/static/052126_PensacolaFL_MediaAlert,False,,2026-05-18
 Wawa,"9291 S SR 228 Macclenny, FL 32063",8/6/2026,https://wawa.a.bigcontent.io/v1/static/080626_Store5475_MacclennyFL_Alert_Final,False,2026-08-07,2026-08-07
