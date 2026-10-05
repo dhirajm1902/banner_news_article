@@ -19,6 +19,11 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
+try:
+    from googlenewsdecoder import gnewsdecoder
+except ImportError:
+    gnewsdecoder = None
+
 BATCH_SIZE       = 50
 MAX_CHARS        = 2000
 MAX_OUTPUT_KEEP  = 25   # discard shifted output files beyond this number
@@ -63,6 +68,21 @@ If none, write: None
 
 ✅ Articles below — extract now:
 """
+
+
+def resolve_google_link(url: str) -> str:
+    """news_data.json can still hold news.google.com links when the scraper's
+    decode step was blocked. Fetching those returns Google's JS shell, not the
+    article, so decode to the publisher URL first."""
+    if "news.google.com" not in url or gnewsdecoder is None:
+        return url
+    try:
+        result = gnewsdecoder(url, interval=1)
+        if result.get("success") and result.get("decoded_url"):
+            return result["decoded_url"]
+    except Exception:
+        pass
+    return url
 
 
 def fetch_article(url: str) -> str:
@@ -179,7 +199,7 @@ def main():
 
         blocks = []
         for i, art in enumerate(batch, b_start):
-            url      = art.get("direct_link", "")
+            url      = resolve_google_link(art.get("direct_link", ""))
             title    = art.get("title", "")
             status   = art.get("status", "")
             industry = art.get("industry", "")

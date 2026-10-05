@@ -5,7 +5,7 @@ Changes from v9:
      Root cause: HEAD redirect lands on domain root, not the article.
      New decode pipeline:
        Tier A: base64 decode of the Google News path segment (most reliable, free)
-       Tier B: Zyte proxy redirect resolution (follows Google redirect to real article)
+       Tier B: googlenewsdecoder via Zyte proxy (Google blocks GitHub runner IPs)
        Tier C: Scrape Google's redirect page for data-n-au / c-wiz article URL
        Tier D: googlenewsdecoder library
        Tier E: Keep Google News URL (fallback)
@@ -43,13 +43,13 @@ except ImportError:
     def FileLink(x): return x
 
 try:
-    from googlenewsdecoder import gnewsdecoder
+    from googlenewsdecoder import gnewsdecoder, GoogleDecoder
     HAS_GND = True
 except ImportError:
     try:
         import subprocess
         subprocess.check_call(["pip", "install", "googlenewsdecoder", "-q"])
-        from googlenewsdecoder import gnewsdecoder
+        from googlenewsdecoder import gnewsdecoder, GoogleDecoder
         HAS_GND = True
     except Exception:
         HAS_GND = False
@@ -85,13 +85,18 @@ def _check_zyte_available() -> bool:
     if not ZYTE_API_KEY:
         print("⚠️  ZYTE_API_KEY not set — Tier B (Zyte) disabled")
         return False
-    try:
-        r = _ZYTE_SESSION.get("https://httpbin.org/ip", timeout=6)
-        print(f"✅ Zyte proxy reachable (status={r.status_code})")
-        return True
-    except Exception as e:
-        print(f"⚠️  Zyte proxy unreachable ({type(e).__name__}) — Tier B disabled for this run")
-        return False
+    # Zyte is the only way past Google's GitHub-IP blocks, so don't give up on
+    # one slow probe — retry before disabling it for the whole run.
+    for attempt in range(3):
+        try:
+            r = _ZYTE_SESSION.get("https://httpbin.org/ip", timeout=20)
+            print(f"✅ Zyte proxy reachable (status={r.status_code})")
+            return True
+        except Exception as e:
+            err = type(e).__name__
+            time.sleep(3)
+    print(f"⚠️  Zyte proxy unreachable ({err}) — Zyte fallbacks disabled for this run")
+    return False
 
 _ZYTE_AVAILABLE = _check_zyte_available()
 
@@ -550,6 +555,15 @@ def _is_valid_article_url(url: str) -> bool:
 _RSS_SOURCE_URLS: dict[str, str] = {}
 _tier_hits: Counter = Counter()
 _CAPTCHA_BACKOFF_UNTIL: float = 0.0   # epoch time — global RSS pause when CAPTCHA detected
+_rss_stats: Counter = Counter()
+
+# Google intermittently blocks GitHub Actions IPs (both RSS search and the
+# batchexecute endpoint googlenewsdecoder uses). After this many consecutive
+# direct failures we stop trying direct and route through Zyte instead.
+_GOOGLE_BLOCK_THRESHOLD = 5
+_GOOGLE_RSS_DIRECT_FAILS = 0
+_GND_DIRECT_FAILS = 0
+_state_lock = threading.Lock()
 
 
 def _decode_base64(google_url: str) -> str | None:
@@ -585,24 +599,39 @@ def _decode_base64(google_url: str) -> str | None:
     return None
 
 
+_zyte_decoder_local = threading.local()
+
+
 def _decode_zyte(google_url: str) -> str | None:
     """
-    Tier B: Resolve Google News redirect via Zyte proxy.
-    Zyte follows the redirect chain and returns the final real article URL.
+    Tier B: googlenewsdecoder routed through the Zyte proxy.
+    Google articles no longer HTTP-redirect (the page resolves via JS), so
+    following redirects just lands back on news.google.com. Instead run the
+    same signature + batchexecute decode as Tier D, but from Zyte's IPs —
+    needed because Google blocks the GitHub Actions runner IPs.
     """
-    if not _ZYTE_AVAILABLE:
+    if not (_ZYTE_AVAILABLE and HAS_GND):
         return None
-    try:
-        response = _ZYTE_SESSION.get(
-            google_url,
-            allow_redirects=True,
-            timeout=10,
+    dec = getattr(_zyte_decoder_local, "dec", None)
+    if dec is None:
+        import httpx
+        dec = GoogleDecoder.__new__(GoogleDecoder)
+        dec.client = httpx.Client(
+            proxy=ZYTE_PROXIES["https"],
+            verify=ZYTE_CA_CERT if ZYTE_CA_CERT else False,
+            follow_redirects=True,
+            timeout=60,
         )
-        final_url = response.url
-        if final_url and _is_valid_article_url(final_url):
-            return _clean_url(final_url)
-    except Exception:
-        pass
+        _zyte_decoder_local.dec = dec
+    for _ in range(2):
+        try:
+            result = dec.decode_google_news_url(google_url)
+            if result and result.get("success"):
+                url = result.get("decoded_url", "")
+                if _is_valid_article_url(url):
+                    return _clean_url(url)
+        except Exception:
+            continue
     return None
 
 
@@ -695,19 +724,31 @@ def decode_link(google_url: str) -> str:
         _tier_hits["A_base64"] += 1
         return decoded
 
+    global _GND_DIRECT_FAILS
+
     # Small jitter before any HTTP call
     time.sleep(random.uniform(0.1, 0.4))
 
-    # Tier B: Zyte proxy redirect resolution
+    # Tier D: googlenewsdecoder direct (free). Skipped once Google has blocked
+    # this IP several times in a row — each blocked attempt wastes seconds.
+    if _GND_DIRECT_FAILS < _GOOGLE_BLOCK_THRESHOLD or not _ZYTE_AVAILABLE:
+        decoded = _decode_gnd(google_url)
+        with _state_lock:
+            if decoded:
+                _GND_DIRECT_FAILS = 0
+            else:
+                _GND_DIRECT_FAILS += 1
+                if _GND_DIRECT_FAILS == _GOOGLE_BLOCK_THRESHOLD and _ZYTE_AVAILABLE:
+                    print(f"  [decode] Direct googlenewsdecoder failed {_GOOGLE_BLOCK_THRESHOLD}x "
+                          f"in a row — switching to Zyte for the rest of the run")
+        if decoded:
+            _tier_hits["D_gnd"] += 1
+            return decoded
+
+    # Tier B: googlenewsdecoder via Zyte proxy
     decoded = _decode_zyte(google_url)
     if decoded:
         _tier_hits["B_zyte"] += 1
-        return decoded
-
-    # Tier D: googlenewsdecoder library (moved before Tier C — avoids hitting Google directly)
-    decoded = _decode_gnd(google_url)
-    if decoded:
-        _tier_hits["D_gnd"] += 1
         return decoded
 
     # Tier C: scrape Google redirect page (last resort — can trigger CAPTCHA)
@@ -735,30 +776,68 @@ def build_query(intent_kw: str, industry_terms: list, use_sites: bool) -> str:
     return f'"{intent_kw}" ({industry_str}){site_part} when:2d'
 
 
-def fetch_rss(url: str) -> list:
+def _rss_get(url: str, via_zyte: bool):
+    """GET an RSS URL directly or through Zyte. Returns (content, reason);
+    content is None when the request failed or Google blocked it."""
     global _CAPTCHA_BACKOFF_UNTIL
-    # Honour any active global CAPTCHA backoff before making this request
-    wait = _CAPTCHA_BACKOFF_UNTIL - time.time()
-    if wait > 0:
-        time.sleep(wait + random.uniform(0, 5))
+    try:
+        if via_zyte:
+            r = _ZYTE_SESSION.get(url, timeout=60)
+        else:
+            r = _get_session().get(url, timeout=20)
+    except Exception as e:
+        return None, type(e).__name__
+    if r.status_code == 429 and not via_zyte:
+        _CAPTCHA_BACKOFF_UNTIL = time.time() + 120
+    if r.status_code != 200:
+        return None, f"HTTP {r.status_code}"
+    content = r.content
+    if b"<item>" not in content:
+        snippet = content[:1000].lower()
+        if b"captcha" in snippet or b"unusual traffic" in snippet:
+            if not via_zyte:
+                _CAPTCHA_BACKOFF_UNTIL = time.time() + 180
+            return None, "CAPTCHA"
+        if b"<html" in content[:200]:
+            return None, "HTML instead of RSS"
+    return content, ""
+
+
+def fetch_rss(url: str) -> list:
+    """
+    Google throttles GitHub Actions IPs on news.google.com. Blocked requests
+    used to return [] silently, shrinking the dataset. Now: try direct, retry
+    through Zyte on any block, and after repeated direct blocks go Zyte-first.
+    """
+    global _GOOGLE_RSS_DIRECT_FAILS
+    content, reason = None, ""
+
+    if _GOOGLE_RSS_DIRECT_FAILS < _GOOGLE_BLOCK_THRESHOLD or not _ZYTE_AVAILABLE:
+        # Honour any active global CAPTCHA backoff before making this request
+        wait = _CAPTCHA_BACKOFF_UNTIL - time.time()
+        if wait > 0:
+            time.sleep(wait + random.uniform(0, 5))
+        content, reason = _rss_get(url, via_zyte=False)
+        with _state_lock:
+            if content is None:
+                _rss_stats[f"direct_fail ({reason})"] += 1
+                _GOOGLE_RSS_DIRECT_FAILS += 1
+                if _GOOGLE_RSS_DIRECT_FAILS == _GOOGLE_BLOCK_THRESHOLD and _ZYTE_AVAILABLE:
+                    print(f"  [RSS] Direct Google requests blocked {_GOOGLE_BLOCK_THRESHOLD}x "
+                          f"in a row (last: {reason}) — switching RSS to Zyte for the rest of the run")
+            else:
+                _rss_stats["direct_ok"] += 1
+                _GOOGLE_RSS_DIRECT_FAILS = 0
+
+    if content is None and _ZYTE_AVAILABLE:
+        content, reason = _rss_get(url, via_zyte=True)
+        with _state_lock:
+            _rss_stats["zyte_ok" if content is not None else f"zyte_fail ({reason})"] += 1
+
+    if content is None:
+        return []
 
     try:
-        r = _get_session().get(url, timeout=20)
-        if r.status_code == 429:
-            _CAPTCHA_BACKOFF_UNTIL = time.time() + 120
-            print("  [RSS 429] Rate-limited — global backoff 2 min")
-            return []
-        if r.status_code != 200:
-            return []
-        content = r.content
-        if b"<item>" not in content:
-            snippet = content[:1000].lower()
-            if b"captcha" in snippet or b"unusual traffic" in snippet:
-                _CAPTCHA_BACKOFF_UNTIL = time.time() + 180
-                print("  [RSS CAPTCHA] Google CAPTCHA detected — global backoff 3 min")
-            elif b"<html" in content[:200]:
-                print(f"  [RSS BLOCKED] Google returned HTML — possible rate limit")
-            return []
         content = re.sub(rb'\s+xmlns(?::\w+)?="[^"]+"', b'', content)
         root  = ET.fromstring(content)
         items = root.findall(".//item")
@@ -880,7 +959,11 @@ for b_idx, batch in enumerate(batches, 1):
         print(f"     ⏸  Sleeping {pause:.0f}s before next batch...")
         time.sleep(pause)
 
-print(f"\n✅ RSS fetch complete: {len(all_results)} raw rows\n")
+print(f"\n✅ RSS fetch complete: {len(all_results)} raw rows")
+print("   RSS request breakdown:")
+for k, v in sorted(_rss_stats.items()):
+    print(f"     {k:30s} : {v}")
+print()
 
 # ─────────────────────────────────────────────────────────
 # DIAGNOSTIC
