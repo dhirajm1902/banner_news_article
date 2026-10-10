@@ -1,5 +1,5 @@
 {
-  "last_updated": "October 07, 2026 08:15 UTC",
+  "last_updated": "October 10, 2026 08:12 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -46,13 +46,13 @@
     {
       "company": "ALDI",
       "address": "3456 North Road, Poughkeepsie, 12601",
-      "opening_date": "10/07/2026",
+      "opening_date": "10/10/2026",
       "link": "https://info.aldi.us/stores/l/ny/poughkeepsie/3456-north-road/ft35"
     },
     {
       "company": "ALDI",
       "address": "10310 Washington Highway, Glen Allen, 23059",
-      "opening_date": "10/07/2026",
+      "opening_date": "10/10/2026",
       "link": "https://info.aldi.us/stores/l/va/glen-allen/10310-washington-highway/fk66"
     },
     {
@@ -292,7 +292,7 @@
     {
       "company": "HomeGoods",
       "address": "Crossroads Plaza, 6131 Gosford Road, Bakersfield, CA 93313, California",
-      "opening_date": "New store opening on October 8, 2026 from 8am to 10pm!",
+      "opening_date": "Now Open!",
       "link": "https://www.homegoods.com/store-details/Bakersfield-CA-93313/1227"
     },
     {
@@ -360,6 +360,12 @@
       "address": "9770 W Indian School Road, Phoenix, AZ 85037-1906",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-AZ"
+    },
+    {
+      "company": "Jersey Mike's",
+      "address": "17 Eagle Mountain Blvd, Batesville, AR 72501-4231",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-AR"
     },
     {
       "company": "Jersey Mike's",
@@ -573,12 +579,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "2015 West 63rd St., Downers Grove, IL 60516-2316",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-IL"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "1839 N Main Street, Princeton, IL 61356-9785",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-IL"
@@ -616,6 +616,12 @@
     {
       "company": "Jersey Mike's",
       "address": "17931 W 119th Street, Olathe, KS 66061-9531",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-KS"
+    },
+    {
+      "company": "Jersey Mike's",
+      "address": "3107 E. Central Ave, Wichita, KS 67214-4816",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-KS"
     },
@@ -1232,156 +1238,6 @@
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-WI"
     },
     {
-      "company": "Chick-fil-A",
-      "address": "605 Harry L Dr",
-      "opening_date": "October 6, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-oakdale"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "712 Lafayette Road",
-      "opening_date": "October 6, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-seabrook"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "3217 N Vermillion St",
-      "opening_date": "October 2, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-danville-2"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "390 Baseline St",
-      "opening_date": "October 1, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-hwy-8-and-4th-ave"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "4200 E Covell Road",
-      "opening_date": "October 1, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-covell-and-sooner"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "905 Merriam Ave",
-      "opening_date": "October 1, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-leominster"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "2301 55 th St",
-      "opening_date": "October 1, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-veterans-and-23rd"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "104 E Mission Ave",
-      "opening_date": "October 1, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-ruby-and-sinto"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "80 Hillcrest Dr",
-      "opening_date": "September 30, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-andalusia"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "1955 W Park Place Blvd",
-      "opening_date": "September 29, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-west-park-place"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "7936 White Bluff Road",
-      "opening_date": "September 29, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-oglethorpe"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "",
-      "opening_date": "September 28, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-shakopee-and-stillwater"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "3497 Brunswick Pike",
-      "opening_date": "September 24, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-princeton"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "",
-      "opening_date": "September 24, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-gaylord"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "5580 Wren St",
-      "opening_date": "September 24, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-bethelview-and-castleberry"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "6102 Cambridge Way",
-      "opening_date": "September 24, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-i-70-sr-267"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "",
-      "opening_date": "September 24, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-green"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "2356 Pass Road",
-      "opening_date": "September 24, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-biloxi"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "1094 Riverdale St",
-      "opening_date": "September 24, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-west-springfield"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "4147 Burbank Road",
-      "opening_date": "September 21, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-wooster"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "",
-      "opening_date": "September 21, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/pennsylvania-expansion-announcement"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "600 Holden Dr",
-      "opening_date": "September 18, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-mars"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "3200 West Broadway Blvd",
-      "opening_date": "September 17, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-sedalia"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "704 1st Ave",
-      "opening_date": "September 16, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-iowa-river"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "101 Lemonade Lane",
-      "opening_date": "September 15, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-lemonade-lane"
-    },
-    {
       "company": "Wawa",
       "address": "4801 East Jackson St. Muncie, IN 47303",
       "opening_date": "10/1/2026",
@@ -1804,7 +1660,7 @@
     {
       "company": "Marshalls",
       "address": "8680 Fourwinds Dr, San Antonio, Texas",
-      "opening_date": "October 8, 2026",
+      "opening_date": "Now Open!",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1663&ref=grandOpenings"
     },
     {
@@ -1822,19 +1678,19 @@
     {
       "company": "Marshalls",
       "address": "6215 Gosford Rd, Bakersfield, California",
-      "opening_date": "October 8, 2026",
+      "opening_date": "Now Open!",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=363&ref=grandOpenings"
     },
     {
       "company": "Marshalls",
       "address": "7420 Elk Grove Blvd, Elk Grove, California",
-      "opening_date": "October 8, 2026",
+      "opening_date": "Now Open!",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1654&ref=grandOpenings"
     },
     {
       "company": "Marshalls",
       "address": "980 SE Laurel St S-100, Waukee, Iowa",
-      "opening_date": "October 8, 2026",
+      "opening_date": "Now Open!",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1673&ref=grandOpenings"
     },
     {
@@ -1947,6 +1803,12 @@
     },
     {
       "company": "Hobby Lobby",
+      "address": "2002 Annapolis Mall, Annapolis, Maryland",
+      "opening_date": "October 09, 2026",
+      "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-annapolis-maryland"
+    },
+    {
+      "company": "Hobby Lobby",
       "address": "6584 South Parker Road, Aurora, Colorado",
       "opening_date": "October 02, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-aurora-colorado"
@@ -2010,12 +1872,6 @@
       "address": "3136 N. Stockton Hill Road, Kingman, Arizona",
       "opening_date": "July 17, 2026",
       "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-kingman-arizona"
-    },
-    {
-      "company": "Hobby Lobby",
-      "address": "265 N. McDowell Boulevard, Petaluma, California",
-      "opening_date": "July 17, 2026",
-      "link": "https://newsroom.hobbylobby.com/new-stores/new-store-opening-in-petaluma-california"
     },
     {
       "company": "Ulta Beauty",
@@ -2091,8 +1947,8 @@
     },
     {
       "company": "Costco",
-      "address": "Member Appreciation Days",
-      "opening_date": "– 7 Days Only",
+      "address": "ENDING SUNDAY",
+      "opening_date": "",
       "link": "https://www.costco.ca/f/-/new-locations"
     },
     {
@@ -2117,30 +1973,6 @@
       "company": "Costco",
       "address": "Amherst, NY",
       "opening_date": "October 2026",
-      "link": "https://www.costco.ca/f/-/new-locations"
-    },
-    {
-      "company": "Costco",
-      "address": "Lawrence, KS",
-      "opening_date": "October 2026",
-      "link": "https://www.costco.ca/f/-/new-locations"
-    },
-    {
-      "company": "Costco",
-      "address": "Camarillo, CA",
-      "opening_date": "October 2026",
-      "link": "https://www.costco.ca/f/-/new-locations"
-    },
-    {
-      "company": "Costco",
-      "address": "S Meridian, ID",
-      "opening_date": "November 2026",
-      "link": "https://www.costco.ca/f/-/new-locations"
-    },
-    {
-      "company": "Costco",
-      "address": "Vallejo, CA",
-      "opening_date": "November 2026",
       "link": "https://www.costco.ca/f/-/new-locations"
     },
     {
@@ -2242,7 +2074,7 @@
     {
       "company": "Five Guys",
       "address": "721 7th Avenue, New York, NY 10019",
-      "opening_date": "2026-08-31",
+      "opening_date": "2026-11-30",
       "link": "https://cdn.yextapis.com/v2/accounts/me/content/comingSoonUS"
     },
     {
