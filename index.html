@@ -2962,7 +2962,11 @@
     }
 
     function sortDailyExtData() {
+        // "No qualifying business found" rows carry "N/A" in every column, which
+        // sorts above real dates in desc order — always keep them at the bottom.
+        const isEmpty = r => r.store_name === 'No qualifying business found';
         filteredDailyNewsExtractionRows.sort((a, b) => {
+            if (isEmpty(a) !== isEmpty(b)) return isEmpty(a) ? 1 : -1;
             const va = (a[dailyExtSortCol] || '').toLowerCase();
             const vb = (b[dailyExtSortCol] || '').toLowerCase();
             return dailyExtSortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
@@ -3054,6 +3058,7 @@
             dailyNewsExtractionRows = (data.data || []).filter(r => is2026Plus(r.published_date || r.Date_Appended || ''));
             dailyExtVisible = PAGE_SIZE;
             filteredDailyNewsExtractionRows = [...dailyNewsExtractionRows];
+            sortDailyExtData();
             updateDailyNewsExtStats(filteredDailyNewsExtractionRows);
             renderDailyNewsExtractionTable();
             document.getElementById('dailyExtLoadingState').classList.add('hidden');

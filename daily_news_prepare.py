@@ -13,6 +13,7 @@ Output:
 
 import csv
 import json
+import re
 import time
 from pathlib import Path
 
@@ -85,6 +86,19 @@ def resolve_google_link(url: str) -> str:
     return url
 
 
+def batched_keys() -> tuple[set, set]:
+    """URLs and lowercased titles already written into a newsbatch_*.txt
+    (extracted or still waiting). news_data.json keeps several days of
+    articles, often as news.google.com links while the batch files hold the
+    resolved URL — so titles are what reliably match them."""
+    urls, titles = set(), set()
+    for p in Path(".").glob("newsbatch_*.txt"):
+        text = p.read_text(encoding="utf-8", errors="ignore")
+        urls   |= set(re.findall(r"^URL: (\S+)", text, re.M))
+        titles |= {t.lower().strip() for t in re.findall(r"^Title: (.*)$", text, re.M)}
+    return urls, titles
+
+
 def fetch_article(url: str) -> str:
     try:
         resp = requests.get(
@@ -129,11 +143,28 @@ def main():
             done_urls = {row["article_link"] for row in csv.DictReader(f)}
         print(f"✓  {len(done_urls)} already-processed URLs loaded from master CSV")
 
+    # Articles already sitting in a batch file (extracted or not) aren't new
+    batched_urls, batched_titles = batched_keys()
+    done_urls |= batched_urls
+    print(f"✓  {len(batched_titles)} article(s) already in newsbatch_*.txt files")
+
+    def is_new(art: dict) -> bool:
+        if art.get("title", "").lower().strip() in batched_titles:
+            return False
+        link = art.get("direct_link", "")
+        if link in done_urls:
+            return False
+        if "news.google.com" in link:
+            # master CSV stores the publisher URL — compare against that
+            art["direct_link"] = resolve_google_link(link)
+            return art["direct_link"] not in done_urls
+        return True
+
     # Sort ALL articles newest first
     articles.sort(key=lambda a: a.get("published_date", ""), reverse=True)
 
     # Count new articles to determine how many batch slots to free at the top
-    new_articles  = [a for a in articles if a.get("direct_link", "") not in done_urls]
+    new_articles  = [a for a in articles if is_new(a)]
     new_batch_count = (len(new_articles) + BATCH_SIZE - 1) // BATCH_SIZE if new_articles else 0
     print(f"✓  {len(new_articles)} new article(s) -> {new_batch_count} new batch(es) at the top")
 

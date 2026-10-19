@@ -1,0 +1,442 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 51 ---
+URL: https://www.mensjournal.com/news/why-food-lion-giant-and-other-grocery-store-chain-websites-apps-are-not-working
+Title: Why Food Lion, Giant, and Other Grocery Store Chain Websites/Apps Are Not Working
+Status hint: Opening | Industry: Grocery
+Published: 2026-10-13 20:05:48
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.mensjournal.com/news/why-food-lion-giant-and-other-grocery-store-chain-websites-apps-are-not-working]
+
+--- Article 52 ---
+URL: https://www.news-journalonline.com/story/entertainment/dining/2026/10/13/crumbl-cookies-closed-florida/92168131007/
+Title: Crumbl Cookies is closing stores. What about Florida locations?
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-13 20:04:00
+
+[Could not fetch: 402 Client Error: Payment Required for url: https://www.news-journalonline.com/story/entertainment/dining/2026/10/13/crumbl-cookies-closed-florida/92168131007/]
+
+--- Article 53 ---
+URL: https://wcyb.com/news/local/dave-busters-celebrates-opening-at-the-pinnacle-with-ribbon-cutting
+Title: Dave & Buster’s celebrates opening at The Pinnacle with ribbon cutting
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 20:03:45
+
+Dave & Buster’s celebrates opening at The Pinnacle with ribbon cutting by WCYB Tue, October 13, 2026 at 10:03 AM Dave & Buster’s at The Pinnacle welcomed hundreds of customers for its ribbon cutting on Monday. (WCYB photo) Comment on this story 0 Comment Share story Share topics: Dave & Buster’s The Pinnacle Ribbon-cutting Opening Entertainment Games Hiring Customers BRISTOL, Tenn. (WCYB) — Dave & Buster’s at The Pinnacle welcomed hundreds of customers for its ribbon cutting on Monday. The first 100 people in line received free games for the day. The entertainment venue features more than 100 games, along with a full bar and food menu. Management said the company has hired about 130 people and plans to hire more in the coming weeks. Trending Don Wells, father of Summer Wells, arrested, authorities say Don Wells, father of Summer Wells, has been arrested, the Hawkins County Sheriff's Office confirmed to News 5 on Tuesday.Police said that Wells has been charged Woman killed in Washington County, Virginia, crash, police say A woman was killed in a crash that happened in Washington County on Oct. 8, according to the Virginia State Police. What’s next for Christa Pike after her hospital release? The next scheduled court date in Pike’s case is Oct. 23 at 9:30 a.m. No charges to be filed following fatal shooting in Gray No charges will be filed following a fatal shooting that happened in August in Gray, according to officials. United Way of Southwest Virginia Flourish Project connects expectant mothers to care For expectant mothers in parts of Southwest Virginia, a missed ride to an appointment or an empty pantry can add stress during pregnancy. The United Way of Sout NEWS IN PHOTOS: " Local " 5 What’s next for Christa Pike after her hospital release? 5 Video, photos of deadly Nashville federal courthouse shooting released 4 Black bear cub with head stuck in jar for days rescued by N.C. wildlife officials 7 Overnight torrential rain causes flash flooding, landslides in WNC
+
+--- Article 54 ---
+URL: https://www.the-sun.com/money/17141936/inside-target-store-bridgehampton/
+Title: Inside controversial new Target store where red signage is strictly BANNED
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 19:57:48
+
+Comment now Next TARGET has given shoppers a peek inside one of its new stores and it’s very gray. The retail giant is known for its bright red decor but its new store in Bridgehampton, New York , looks completely different. 4 The new Target has gray shingles, white trim, soft florals and a beachy vibe Credit: Target 4 It has some muted red tones on the inside Credit: Target Advertisement The new Target location opened this October and has been designed to look like a quintessential Hamptons house. That’s why instead of red, it’s got a gray shingle exterior with a white trim. Sign up for the Money newsletter Thank you! It’s one of eight Target stores opened this fall . The retail giant had to work within Bridgehampton’s guidelines and design the store with a “coastal aesthetic.” Read more on Target CRUCIAL RULING Stores brace for $25 'minimum' rule as legislation nears January deadline DEMOLITION DERBY Bulldozers to raze 44-acre mall to make way for apartments & hotel Ken M., principal architect of store design at Target, said: “It’s all about building an emotional connection and making guests want to come back and feel like you understand their community and that you’re happy to be part of their community.” Photos of the store show it has planters and wooden beach chairs outside. Inside features muted red tones with “whimsical wallpaper” and wicker lampshades. Target said more windows were added to the front wall so customers could see out but also to let the brand “flow out.” Advertisement Most read in Money PODIUM PAYDAY How much does the White House press secretary make? PAY PROMISE Trump doubles down on giving 'American adults $5,000' under strict condition CASH BUMP Hobby Lobby reveals $21 'minimum' mandate at all stores effective immediately MISSED MONEY Who ISN'T receiving $90 Medicare check - and why 40million miss out 4 Target had to follow strict Bridgehampton guidelines and create a sign that was white Credit: Target 4 The interior has a beach and coasta
+
+--- Article 55 ---
+URL: https://patch.com/maryland/rockville/nordstrom-rack-hold-grand-opening-new-moco-site-month
+Title: Nordstrom Rack To Hold Grand Opening For New MoCo Site This Month
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 19:47:08
+
+Business & Tech Nordstrom Rack To Hold Grand Opening For New MoCo Site This Month Nordstrom Rack's looming opening will serve as the brand's latest location in Montgomery County. Here's what to know about the new site. Gaby Arancibia , Patch Staff Posted Tue, Oct  13, 2026 at 3:47 pm ET | Updated Tue, Oct  13, 2026 at 5:41 pm ET The Congressional Plaza shopping center will soon be the new home of Nordstrom Rack's Rockville location. (Google Maps) ROCKVILLE, MD — Starting this month, a popular retailer will be serving customers from a new location in Montgomery County. Nordstrom Rack will hold a grand opening on Oct. 29 for its new Congressional Plaza branch at 1683 Rockville Pike. Festivities marking the opening kick off at 8 a.m., an hour before the store officially opens. Residents who want to participate will be offered a host of giveaways. Find out what's happening in Rockville for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . The new property offers the brand 26,000 square feet of space and a prime location in a popular shopping center that also houses the Barnes and Noble bookstore. The new Nordstrom Rack location takes over the space that previously housed Buy Buy Baby. (Google Maps) Nordstrom Rack will operate in the site that previously housed Buy Buy Baby, which closed at the end of July. Find out what's happening in Rockville for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . "We look forward to being a part of the Rockville community and serving our customers with an amazing offering of great brands at great prices," Gemma Lionello, president of Nordstrom Rack, said in a statement. "We're excited to grow our footprint in the Washington, D.C., market and introduce new customers to the Nordstrom experience." In Montgomery County, Nordstrom Rack also has locations in Gaithersburg and at Westfield Montgomery Mall in Bethesda, bot
+
+--- Article 56 ---
+URL: https://patch.com/new-jersey/bernardsville-bedminster/amp/35007397/ricky-s-thai-asian-fusion-plans-bedminster-opening-in-2027
+Title: Ricky's Thai & Asian Fusion Plans Bedminster Opening In 2027
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 19:43:49
+
+Ricky’s Thai & Asian Fusion Plans Bedminster Opening In 2027 | Bernardsville-Bedminster, NJ Patch Sign up Bernardsville News Feed Events Local Businesses Classifieds Business Ricky’s Thai & Asian Fusion Plans Bedminster Opening In 2027 Founder Ricky Chai is returning to the same Bedminster space where he began in the U.S. restaurant business. By Alexis Tarrazi , Patch Staff Oct 13, 2026 3:43 PM EDT View original A new Ricky’s Thai & Asian Fusion is planned for Bedminster, with the family-owned restaurant expected to open at The Hills Village Center. (Courtesy of Ricky’s Thai & Asian Fusion) BEDMINSTER, NJ — A new Ricky's Thai & Asian Fusion is planned for Bedminster, with the family-owned restaurant expected to open at The Hills Village Center. The restaurant at 400 Hills Drive will be the fifth in the Ricky's family and expected to open in the first quarter of 2027. Subscribe Ricky's will serve a full Thai menu along with an expanded Asian fusion menu that includes Malaysian and Chinese dishes. The opening also marks a return for founder and co-owner Ricky Chai. Chai arrived in the United States from Malaysia in 1988 and began his American food industry career as the catering and takeout captain at a Chinese restaurant in the same space that will become the new Ricky's Thai & Asian Fusion. "This location is where I began learning the restaurant business in America, so coming back to open a restaurant in this very same spot bearing my name means a great deal to me," said Ricky. "We want to welcome our neighbors with the food and hospitality that have kept Ricky's going since 2004, and give them a place they can enjoy for years to come." The Ricky's brand began in 2004, when Ricky opened his first Thai restaurant in Hillsborough. Existing locations are Ricky's Thai in Hillsborough, established in 2004, Skillman, opened in 2014, Bernardsville, opened in 2022, and Ricky's Asian Fusion in Princeton, opened in 2025. Ricky remains an owner in all five restaurants, includi
+
+--- Article 57 ---
+URL: https://barharborstory.substack.com/p/28-million-from-rural-health-fund
+Title: $2.8 Million from Rural Health Fund Senator Collins Authored Will Keep Penobscot Community Health Care Open
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-13 19:40:27
+
+$2.8 Million from Rural Health Fund Senator Collins Authored Will Keep Penobscot Community Health Care Open Press release: Maine’s rural health system received $190 million from the Rural Health Transformation Program this year. Oct 13, 2026 3 3 1 Share BANGOR – U.S. Senator Susan Collins, Chair of the Senate Appropriations Committee, welcomed the announcement that $2.8 million in federal funding drawn from the Rural Health Transformation Program (RHTP), which she authored, will ensure Penobscot Community Health Care (PCHC) avoids an imminent bankruptcy filing. PCHC is Maine’s largest federally qualified health center and serves approximately 50,000 patients. “This is welcome news for the thousands of Mainers who rely on PCHC for access to essential health care services. PCHC’s financial challenges demonstrate exactly why this historic federal investment is so critical. With rural hospitals and health centers across Maine facing serious financial challenges, and emergency departments, maternity wards, and other hospital units facing the threat of closure, protecting access to medical care in rural communities has never been more important,” said Senator Collins. “That is why I fought to establish this $50 billion program to help ensure that Mainers and Americans in rural communities across the country can continue receiving the care they need close to home. While significant challenges remain, I am pleased to see these federal resources being put to use to help PCHC continue serving Maine families and prevent further losses of essential health care services in communities across our state.” The funding comes from the $50 billion RHTP, the largest single federal investment in rural health care in more than two decades, which Senator Collins proposed during negotiations over the 2025 budget reconciliation legislation. In December 2025, Senator Collins announced that Maine would receive $190 million in first-year funding through the program. Earlier this year, when Mai
+
+--- Article 58 ---
+URL: https://www.mrt.com/business/article/midland-tx-oreilly-loop-250-store-22475534.php
+Title: Another O'Reilly Auto Parts store is coming to Midland
+Status hint: Opening | Industry: Auto Parts
+Published: 2026-10-13 19:31:53
+
+JavaScript is disabled in your browser. Please enable JavaScript to proceed.
+
+--- Article 59 ---
+URL: https://www.registerguard.com/story/entertainment/dining/2026/10/13/raising-canes-grand-opening-celebration-draws-hundreds-to-springfield/92235648007/
+Title: Raising Cane's grand opening draws hundreds of Caniacs to Springfield
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 19:31:00
+
+[Could not fetch: 402 Client Error: Payment Required for url: https://www.registerguard.com/story/entertainment/dining/2026/10/13/raising-canes-grand-opening-celebration-draws-hundreds-to-springfield/92235648007/]
+
+--- Article 60 ---
+URL: https://www.powder.com/news/keystone-resort-really-opening-next-week
+Title: Rumors Spread That Keystone Is Opening Next Weekend, but Hold Your Horses
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 19:27:25
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.powder.com/news/keystone-resort-really-opening-next-week]
+
+--- Article 61 ---
+URL: https://www.diablomag.com/blog/diablo-dish/diablo-dish-zepher-grill-and-bar-closing-in-livermore/article_548a6b65-d986-42cb-a1c3-b1a37d4b25c5.html
+Title: Diablo Dish: Zepher Grill and Bar Closing in Livermore
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 19:25:00
+
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.diablomag.com/blog/diablo-dish/diablo-dish-zepher-grill-and-bar-closing-in-livermore/article_548a6b65-d986-42cb-a1c3-b1a37d4b25c5.html]
+
+--- Article 62 ---
+URL: https://www.nrn.com/independent-restaurants/joey-continues-its-u-s-expansion-opening-a-second-location-in-dallas
+Title: Joey continues its U.S. expansion, opening a second location in Dallas
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 19:24:45
+
+Top 500 Restaurants Content Spotlight The Technomic Top 500: Another tough year for chain restaurants Top 500 chain restaurant sales slowed again in 2025 as consumers cut back on dining, but sectors like coffee, beverages and snacks and chicken thrived Read More
+
+--- Article 63 ---
+URL: https://www.bizjournals.com/dallas/news/2026/10/13/luxury-retailers-plan-new-stores-in-knox-street.html
+Title: Luxury retailers plan new stores in Knox Street
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 19:24:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/dallas/news/2026/10/13/luxury-retailers-plan-new-stores-in-knox-street.html]
+
+--- Article 64 ---
+URL: https://wwd.com/footwear-news/shoe-industry-news/alohas-san-francisco-paris-store-openings-retail-growth-1239345358/
+Title: Alohas Opens Second Paris Store and First Outpost in San Francisco
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 19:15:43
+
+Outside of the Alohas Paris store in Saint-Germain-des-Prés. ESTELLE LEFEVRE Share this article on Facebook Share this article on X Share this article on Pin It Share this article on Tumblr Share this article on Reddit Share this article on LinkedIn Share this article on WhatsApp Share this article on Email Print this article Share this article on Talk Share this article on Facebook Share this article on X Share this article on Pin It Share this article on Tumblr Share this article on Reddit Share this article on LinkedIn Share this article on WhatsApp Share this article on Email Print this article Share this article on Talk Alohas is expanding its retail footprint with two new openings. The Spanish footwear and accessories brand recently opened a second Paris location and its first store in San Francisco. Its new store in the City of Light is located in Saint-Germain-des-Prés. It joins the brand’s other Parisian store situated in Le Marais. Alejandro Porras, founder and chief executive officer of Alohas, said in a statement that Paris has been a “key city” for the brand since it launched in 2015. Related Stories Venus Williams Laces Up Sporty & Fashionable Sneaker Heels at the Lacoste Spring 2027 Show in Paris Manolo Blahnik's New Harrods Boutique Features 300 of the Legendary Designer's Shoe Sketches “The response to our first store confirmed the connection between the brand and the Parisian audience,” Porras noted. “Opening a second location, this time in Saint-Germain-des-Prés, allows us to consolidate our presence in the city while reaching a new community.” You May Also Like Back in the States, Alohas lands in San Francisco for the first time with a new store at 2208 Fillmore Street. Both this new store and the second Paris location now offers the Barcelona-based footwear brand’s range of sneakers, sandals, ballet flats and more. For Porras, San Francisco is a “great representation of the type of city where Alohas wants to be: international, creative and open 
+
+--- Article 65 ---
+URL: https://www.hotel-online.com/news/mereshi-safari-camp-serengeti-autograph-collection-anticipated-to-open-in-november-2026
+Title: Mereshi Safari Camp Serengeti, Autograph Collection Anticipated to Open in November 2026
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 19:14:09
+
+Mereshi Safari Camp Serengeti, Autograph Collection Anticipated to Open in November 2026 Oct 13, 2026 4 minute read Save this news Summary Delaware Investments plans to open Mereshi Safari Camp Serengeti, Autograph Collection, near Fort Ikoma Gate in November 2026, with tourism revenue intended to support local communities and businesses. About 95% of its materials and equipment are sourced in Tanzania, and the 18-suite camp is expected to create around 100 permanent jobs, more than 90% for Tanzanians, while supporting a hospitality mentorship programme for young women. Tanzania, 13 October 2026: Delaware Investments has announced plans to open Mereshi Safari Camp Serengeti, Autograph Collection, a new safari camp created around the belief that the economic value generated by tourism should benefit the communities and businesses around it. Anticipated to open in November 2026, Mereshi Safari Camp is located near the Fort Ikoma Gate in the Serengeti, and builds on the approach established at Delaware Investments’ Mapito Safari Camp, Serengeti, Autograph Collection, with a focus on local employment, Tanzanian sourcing and community programmes. Supporting Communities in the Serengeti Give a Future Foundation, the non-profit arm of Delaware Investments, supports a range of community initiatives in the Serengeti region. These include a healthcare programme providing diagnosis, treatment and long-term management for children with sickle cell anaemia, healthcare provision in Robanda and a residential hospitality mentorship programme developed with Hope for Girls and Women, a non-profit organisation providing shelter, support and skills development opportunities for vulnerable girls and young women. Mereshi Safari Camp is expected to participate in the next phase of the mentorship programme. At least five young women will live and train at the camp with their accommodation, meals and day-to-day living costs covered by the camp while they gain practical experience across the
+
+--- Article 66 ---
+URL: https://www.disneytouristblog.com/disney-worlds-new-six-ravens-restaurant-sets-opening-date-with-free-collectible/
+Title: Disney World’s New Six Ravens Restaurant Sets Opening Date with Free Collectible
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-13 19:12:51
+
+Over two months after soft opening, the new Six Ravens restaurant by Gideon’s Bakehouse will hold its grand opening this weekend at Walt Disney World! Here are full details for location, including the full menu of food & drinks, operating hours and the freebie that’ll be offered to the first guests on opening day. As basic background, Six Ravens is located in Disney Springs at the Landing, taking over the former Art of Shaving. It’s a very small storefront, and is located steps away from the beloved bakery. Six Ravens is currently open daily from 10 am to 11:30 pm. Six Ravens specializes in grab-and-go hand pies. Their signature creation, known as Coffyns, is a house‑made yeast‑roll stuffed with savory fillings that draw inspiration from Medieval European pastry cases. The original “coffyns” were designed to preserve hearty meals for long pilgrimages; at Disney Springs, they’re sure to be a delicious on-the-go snack. Six Ravens is currently in soft opening mode, and has been since August 3rd. When the restaurant first opened, it had a lengthy line, virtual queue, and strict purchase limits. Within a couple weeks of soft opening, all of that had already died down. Gideon’s Bakehouse has since dethroned Six Ravens in terms of popularity. To the best of my knowledge, the virtual queue that was being used early on at Six Ravens hasn’t been required in over a month. You might wait in a 15-30 minute line, but that’s about it at this point. At least, until crowds pick up at Disney Springs around the holidays and peak weeks. Or over the upcoming grand opening weekend… Six Ravens will hold its grand opening on October 17, 2026 starting at 10 am. Opening day guests will receive a collectible pin, free with any purchase, along with a “regal crown” that we assume will be of the ephemera variety, as opposed to gold. But you never know, as owner Steve Lewis does love to go all-out! Here’s the announcement that Six Ravens posted on Instagram : Step into the realm of Six Ravens thi
+
+--- Article 67 ---
+URL: https://www.heraldtribune.com/story/entertainment/dining/2026/10/13/hawaiian-bros-island-grill-florida-expansion/92232743007/
+Title: Aloha! Hawaiian Bros plans major Florida expansion with 52 locations
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 19:11:00
+
+[Could not fetch: 402 Client Error: Payment Required for url: https://www.heraldtribune.com/story/entertainment/dining/2026/10/13/hawaiian-bros-island-grill-florida-expansion/92232743007/]
+
+--- Article 68 ---
+URL: https://www.orangeobserver.com/news/2026/oct/13/saucy-by-kfc-now-open-in-horizon-west/
+Title: Saucy! by KFC now open in Horizon West
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 19:05:00
+
+Loading
+
+--- Article 69 ---
+URL: https://www.nj.com/business/2026/10/popular-fitness-chain-to-open-new-gym-in-this-nj-city.html
+Title: Planet Fitness expands in Jersey City with new gym set to open
+Status hint: Opening | Industry: Gyms / Fitness
+Published: 2026-10-13 19:00:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.nj.com/business/2026/10/popular-fitness-chain-to-open-new-gym-in-this-nj-city.html]
+
+--- Article 70 ---
+URL: https://nomsmagazine.com/new-tuccis-fraser-spotted/
+Title: A New Italian Sandwich and Pasta Shop Is Opening Soon on Vancouver’s Fraser Street
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 18:45:00
+
+Noms Magazine Culinary and Lifestyle Team · British Columbia Canada News · October 13, 2026 Fresh Drop Spotted A New Italian Sandwich and Pasta Shop Is Opening Soon on Vancouver’s Fraser Street A new Italian sandwich and pasta shop with its own bakery is coming to Vancouver’s Fraser Street. We spotted signage up for Tucci’s at 4440 Fraser Street, in one of the new Arlo buildings near 28th Avenue. A green banner over the unit reads “Opening Soon,” with “Sandwiches, Pasta, Salad, Bakery” underneath. The window describes it as a trattoria-style, fast casual Italian spot with both counter and table service. The plan is house-baked focaccia sandwiches, fresh rolls, pasta, salads and an in-house bakery, plus beer and wine. The window text pitches “generous portions and exceptional value,” in a room meant to feel “reminiscent of old-school Italian eateries and traditional family-owned deli-restaurants.” Its Instagram bio has since added New York-style pizza to the list, along with dine-in, takeout and delivery. When we walked by, a now-hiring panel was up in the window looking for sandwich makers, pasta cooks, bakers, servers and cashiers. It also won’t be the only new food spot in the building. Tahini’s , the shawarma chain, is moving in right next door, and it’s also still listed as coming soon. That gives this stretch of Fraser near 28th an Italian deli and a shawarma counter within one doorway of each other. Tucci’s joins other upcoming Vancouver food spots like Holy Shakes , Bento Cafe and Nuan Nuan Beef Noodle House . For more new and upcoming food spots in Metro Vancouver, take a peek at our tracker here , and subscribe to our weekly newsletter here . Address : 4440 Fraser Street, Vancouver, BC Instagram Google decides which local food news you see. Tell it you want Noms One tap adds Noms Magazine as a preferred source. No signup, no email.
+
+--- Article 71 ---
+URL: https://www.sanluisobispo.com/news/local/article317605960.html
+Title: Athleisure brand opening new store in downtown SLO this week
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 18:40:22
+
+ALO is opening its first San Luis Obispo County store at 879 Higuera St. in downtown San Luis Obispo, taking over the former Athleta space. Libbey Hanson libbey.hanson@thetribunenews.com An athleisure brand is finally ready to open its new downtown San Luis Obispo store after months hidden behind scaffolding. ALO will officially open at 879 Higuera St. on Friday at 10 a.m., according to a news release from Jamestown, which owns the property. On Tuesday, workers could be seen inside assembling mannequins and putting the final touches on the store. The store is set to take over the former Athleta space, after the shop closed in April. It’ll be the first ALO in San Luis Obispo County. The next-nearest is in Santa Barbara. According to the release, ALO is a fashion and lifestyle brand “synonymous with premium studio-to-streetwear rooted in mind-body wellness.” Since its launch in 2007, the brand has become known for clothing that transitions from workouts to daily wear. It also routinely hosts community events, sells wellness products and has an online fitness platform with “thousands of free classes and offerings,” the release said. ALO is opening its first San Luis Obispo County store at 879 Higuera St. in downtown San Luis Obispo, taking over the former Athleta space.                                                                                            Libbey Hanson libbey.hanson@thetribunenews.com For more information ALO will hold its grand opening Friday at 10 a.m. It’s normal hours of operation will be Monday through Friday, from 10 a.m. to 9 p.m.; Saturday from 10 a.m. to 7 p.m.; and Sunday from 11 a.m. to 6 p.m. More information is available online at alo.com . ALO is opening its first San Luis Obispo County store at 879 Higuera St. in downtown San Luis Obispo, taking over the former Athleta space.                                                                                            Libbey Hanson libbey.hanson@thetribunenews.com Related Stories from  
+
+--- Article 72 ---
+URL: https://greenvillejournal.com/food-drink/emilys-table-to-open-soon-on-greenvilles-main-street/
+Title: Emily’s Table to open soon on Greenville’s Main Street
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 18:29:49
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://greenvillejournal.com/food-drink/emilys-table-to-open-soon-on-greenvilles-main-street/]
+
+--- Article 73 ---
+URL: https://www.nhregister.com/food/article/new-haven-casanova-restaurant-closing-22475143.php
+Title: New Haven restaurant Casanova is closing less than 2 years after opening
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-13 18:21:23
+
+JavaScript is disabled in your browser. Please enable JavaScript to proceed.
+
+--- Article 74 ---
+URL: https://nowgeorgia.com/food-lion-opening-marks-new-chapter-for-lavonia-grocery-store/
+Title: Food Lion opening marks new chapter for Lavonia grocery store
+Status hint: Opening | Industry: Grocery
+Published: 2026-10-13 18:20:59
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://nowgeorgia.com/food-lion-opening-marks-new-chapter-for-lavonia-grocery-store/]
+
+--- Article 75 ---
+URL: https://www.dailyherald.com/20261013/business-openings/getting-real-close-to-opening-new-restaurant-to-occupy-gateway-space-in-lake-villa/
+Title: ‘Getting real close’ to opening: New restaurant to occupy gateway space in Lake Villa
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-13 18:20:54
+
+
+
+--- Article 76 ---
+URL: https://www.imdb.com/de/news/ni66061088/?ref_=nwc_art_perm
+Title: The Bay Theater in Palisades Village, Closed Since the LA Wildfires, Will Reopen Thanks to Paramount and Rick Caruso
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 18:16:22
+
+
+
+--- Article 77 ---
+URL: https://sauconsource.com/2026/10/13/new-pet-supply-store-opening-at-promenade-saucon-valley/
+Title: New Pet Supply Store Opening at Promenade Saucon Valley
+Status hint: Opening | Industry: Pet Care
+Published: 2026-10-13 18:15:52
+
+New Pet Supply Store Opening at Promenade Saucon Valley By Josh Popichak ● Business ● October 13, 2026 Local pet owners will soon have a new store to shop for food and supplies at. Promenade Saucon Valley officials said Tuesday that the company Every DOG! is planning to open a 3,400 square-foot store between Claire’s and American Eagle during Saturday’s Barktoberfest. According to the company’s website , Every DOG! currently has two Pocono area stores in Bartonsville and Brodheadsville, Monroe County. “We’re incredibly excited to open Every DOG! at Promenade Saucon Valley and introduce ourselves to the community,” Every DOG! owner Alex Harris said in a news release about the opening. “As a locally-owned business, creating a welcoming place for pet owners and providing products they can feel good about choosing for their dogs is very important to us. Opening our doors during Barktoberfest makes our first day at the Promenade even more special, and we can’t wait to meet everyone and their dogs.” Although its name has a canine-centric name, Every DOG! also sells food, supplies and other items for cats, according to Everydog.dog . Barktoberfest will be held this Saturday, Oct. 17, 2026 from 10 a.m. to 4 p.m. The annual event brings together pet owners, local businesses, animal organizations and community partners for a day of dog-friendly activities and entertainment throughout Promenade Saucon Valley. The Upper Saucon Township lifestyle center is also celebrating its 20th anniversary and will have promotions related to that on Saturday . News of Every Dog’s opening comes just days after Promenade officials announced that eyewear retailer Warby Parker plans to open a store in the shopping center sometime next year . Promenade Saucon Valley is home to dozens of retail, dining and entertainment destinations as well as service sector businesses. The first open-air shopping center in the Lehigh Valley when it opened in October 2006, the complex also hosts special events thr
+
+--- Article 78 ---
+URL: https://www.nhregister.com/news/article/danbury-indoor-pickleball-golf-development-22473671.php
+Title: Danbury OKs extra parking for indoor pickleball, golf site opening next to westside high school
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 18:11:39
+
+JavaScript is disabled in your browser. Please enable JavaScript to proceed.
+
+--- Article 79 ---
+URL: https://mspmag.com/arts-and-culture/paperback-exchange-planning-new-location-after-flood/
+Title: Paperback Exchange Opening in New Location After Flood
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 18:01:34
+
+× Expand Paperback Exchange Paperback Exchange The Paperback Exchange, a south Minneapolis bookstore that closed after a water main break flooded the building in February 2025 , is set to return in spring 2027 in a new homey (literally) location at 5000 Oliver Ave. S.—just a block away from the original location at W 50th St. and Penn Ave. Co-owner of the Paperback Exchange Andy Hersey said it’s exciting and a relief to have secured the new location. The shop has been doing small pop-up book events after the flood. Hersey said he’s worked at the former location since the 1980s until they shut down. As the new location is a single-family house, Hersey said they have some renovating to do to improve accessibility and convert the building from residential to retail. They are far from moving in, Hersey added, because the bathroom has to be modified and expanded, and the entrance needs to meet ADA standards, among a laundry list of things. “It’s going to take some time,” Hersey said. “We’d love to be open in the spring, for Independent Bookstore Day in April.” × Expand Paperback Exchange Paperback Exchange New Location The bookstore opened in 1975 and had built up a collection of about 150,000 books before the flood damaged around two-thirds of the inventory. Nearby homes and businesses, including Sparrow Café and Italian restaurant Terzo, were also gravely impacted by the flood caused by a city main water line bursting. Hersey said the community support has been everything. “People seem to be super excited about the bookstore coming back and the new space,” Hersey said. He added that the GoFundMe (at $62,000 as of press time) is still up alongside the encouragement, excitement, and well-wishes. The support has been crucial, Hersey said. The City of Minneapolis did not approve any restitution to the owners of Paperback Exchange, nor for any of the other businesses or homes damaged by the burst pipe. “The community really stepped up in a big way with the GoFundMe and then
+
+--- Article 80 ---
+URL: https://www.cbsnews.com/gooddaysacramento/video/the-place-restaurant-in-roseville-moves-to-new-location/
+Title: The Place restaurant in Roseville moves to new location
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-13 18:01:00
+
+Pilots & Pups, a program that flies animals out of danger!
+
+--- Article 81 ---
+URL: https://www.mansfieldrecord.com/articles/kennedale-opening-new-ymca-in-january
+Title: Kennedale opening new YMCA in January
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 17:48:59
+
+Kennedale opening new YMCA in January SECTIONS Subscribe About contact Subscribe NEWS Sports Schools Business Food Opinion Historical Obituaries Fire & police Community Calendar Kennedale opening new YMCA in January October 13, 2026 Share this article The Arlington-Mansfield Area YMCA, in partnership with the City of Kennedale and Kennedale ISD is preparing to open a new Kennedale YMCA in January 2027 at 113 W. Kennedale Parkway. The new location will provide opportunities for residents of all ages to stay active, enjoy a variety of programs and connect with their neighbors. The Kennedale YMCA will build on the Y’s strong community relationships and existing programs with Kennedale ISD, the Kennedale Library, and the Kennedale Senior Center. This dedicated location will serve as a welcoming gathering place where individuals and families can find support, strengthen connections and experience a greater sense of belonging close to home. “The YMCA is a place where community comes together,” said Eric Tucker, CEO of the Arlington-Mansfield Area YMCA. “We are excited to deepen our commitment to Kennedale and create more opportunities for children, adults and families to grow, connect and thrive.” The new YMCA reflects a shared commitment among the Arlington-Mansfield Area YMCA, the City of Kennedale and strong support from community organizations such as the Kennedale Rotary Club to strengthen the community and expand access to programs and resources that support local individuals and families. “Together, we are investing in our youth, enriching the lives of our seniors and creating opportunities that will make Kennedale a stronger, healthier and more connected community. The YMCA and the City of Kennedale share one vision: investing in people, strengthening families and building a better tomorrow for generations to come,” said Kennedale City Manager Darrell Hull. “We are proud to welcome the YMCA to Kennedale and look forward to all we can accomplish together.” Planned 
+
+--- Article 82 ---
+URL: https://www.disneyfanatic.com/six-ravens-disney-springs-grand-opening-pin-emd1/
+Title: Disney Springs’ Six Ravens Sets Grand Opening With Free Collectible Pin
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 17:38:01
+
+Credit: Tokyo Disney Resort Six Ravens is preparing for its official grand opening at Disney Springs on Saturday, October 17, 2026, and the celebration comes with something beyond its medieval-inspired menu: a free collectible pin. The Six Ravens Disney Springs grand opening gives Walt Disney World guests another reason to visit the restaurant from the creators of Gideon's Bakehouse. For collectors, however, the biggest attraction may be the opening-day keepsake rather than the food. With the giveaway tied to the grand opening, guests interested in securing the collectible should pay attention to the event details before making the trip. Credit: Erica Lauren, Disney Fanatic Six Ravens Disney Springs Grand Opening Brings Free Collectible Pin The October 17 celebration marks a milestone for Six Ravens, the quick-service restaurant located in The Landing neighborhood of Disney Springs. Unlike a typical restaurant opening, this event adds a collectible incentive that could appeal to visitors who enjoy commemorative merchandise and limited-time Disney Springs experiences. The announced free pin is the central attraction for collectors. However, the exact quantity available, distribution requirements, and whether guests must make a purchase have not been independently verified. That distinction matters. A free collectible can encourage additional interest, but guests shouldn't assume that every visitor will receive one or that arriving at a particular time guarantees availability. The announcement also doesn't establish a resale value for the pin. Any suggestion that it will become an expensive collector's item would be speculative until actual secondary-market activity provides evidence. For now, the appeal is straightforward: an opportunity to commemorate the restaurant's grand opening with a physical keepsake. Credit: M. C. Bob Leonard, Flickr Why Gideon's Bakehouse Fans May Want This Disney Springs Pin Six Ravens has an established connection to one of Disney Springs'
+
+--- Article 83 ---
+URL: https://www.dailyrecord.com/story/news/hudson/2026/10/13/jersey-city-shoprite-hudson-exchange-place-to-open-in-everton/92229594007/
+Title: New Jersey City ShopRite to open its doors this week. What to expect
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 17:25:00
+
+[Could not fetch: 402 Client Error: Payment Required for url: https://www.dailyrecord.com/story/news/hudson/2026/10/13/jersey-city-shoprite-hudson-exchange-place-to-open-in-everton/92229594007/]
+
+--- Article 84 ---
+URL: https://www.nhonews.com/news/echo-cliffs-health-center-celebrates-grand-opening-with-community-and-national-health-leaders/article_c4b0553a-1fca-4d3f-bffd-3fceab0b87f7.html
+Title: Echo Cliffs Health Center celebrates grand opening with community and national health leaders
+Status hint: Opening | Industry: Pharmaceutical / Medical
+Published: 2026-10-13 17:24:00
+
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.nhonews.com/news/echo-cliffs-health-center-celebrates-grand-opening-with-community-and-national-health-leaders/article_c4b0553a-1fca-4d3f-bffd-3fceab0b87f7.html]
+
+--- Article 85 ---
+URL: https://dailyhive.com/vancouver/pizzeria-spacca-roma
+Title: 'Canada's best Neapolitan pizzeria' to open new Metro Vancouver restaurant
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-13 17:14:00
+
+A Neapolitan pizza from Pizzeria Spacca Napoli (@pizzeriaspacca/Instagram) There’s no denying it, the Pizzeria Spacca Napoli team know what they’re doing when it comes to Neapolitan pizza. Gambero Rosso (the global authority on Italian food, wine, and travel) has named the restaurant Canada’s best Neapolitan pizzeria for three years in a row , after all. Now the team is looking to expand, bringing their award-winning pizza to a new Metro Vancouver neighbourhood: Fort Langley. The new spot will be called Pizzeria Spacca Roma, and is expected to serve Roman-style pizza, tiramisu, supplì (Italian fried rice balls), and more. “Set your sundials, Pizzeria Spacca Roma is coming to Fort Langley,” reads a post shared by the restaurant. The new location will be opening at 9180 Glover Rd. alongside other Fort Langley favourites like Saba Bistro and Wendel’s Bookstore and Cafe. You might also like: Inside Vancouver's first Michelin-recommended Korean restaurant One of Vancouver's top hotel restaurants just got a new chef — here's what to expect Vancouver bar hands over the reigns for monthly 'guest shift' series Many commenters shared how excited they were about the new Fort Langley restaurant. “Oh my gosh… we used to live 10 mins from Spacca Napoli and since we moved we’ve tried to drive in at least once a year because we miss your pizza so much! I’m THRILLED at this news!!” wrote one person. “Yes!!!! Can’t wait! Hurry up already,” added another. The restaurant has not yet announced an exact opening date for the new location, but it said it would be “coming soon.” Be sure to check back here soon for more info. Pizzeria Spacca Roma Address: 9180 Glover Rd., Langley Twp. Instagram Still hungry? Discover Dished Vancouver on TikTok
+
+--- Article 86 ---
+URL: https://943litefm.com/new-business-ulster-county-ny-2/
+Title: New Business Set To Open In Former Ulster County Rite Aid
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 17:13:42
+
+New Business Set To Open In Former Ulster County Rite Aid New Business Set To Open In Former Ulster County Rite Aid Allison Allison Published: October 13, 2026 Canva, Google Maps Share on Facebook Share on Twitter The Ulster County community will be happy and excited to learn about this new store opening! It will be located in a popular location with nearby businesses as well. New Business Set To Open In Former Ulster County Rite Aid Canva, Google Maps Canva, Google Maps Finally, we know what will take over the former Rite Aid in this popular Ulster County location! The community enjoyed the convenience of having Rite Aid at the corner of this intersection. However, we will have another reason to return to this Kingston location! Royal Properties Inc. shared exciting news including that they are, "Pleased to announce the sale of 351 Flatbush Avenue in Kingston, New York to O’Reilly Auto Parts." Yes, its true! We will be able to visit and shop from O'Reilly Auto Parts on Flatbush Ave in Kingston, at the former Rite Aid! What Do We Know About O'Reilly Auto Parts Opening In Kingston, NY? View this post on Instagram A post shared by Royal Properties, Inc. (@royalpropertiesinc) Royal Properties Inc. shared this information in the summer and also explained, "The property consists of an 11,180 SF freestanding building situated on a 1.47 acre corner parcel at the highly visible intersection of Route 32 and Route 9W." They also shared that there will be over 40 parking spaces to accommodate the thousands of vehicles that drive by this location each day. For more information, we can visit Royal Properties Inc's website and keep our eye out for the exciting new store that we can visit in Kingston! What Else Can We Do In The Kingston, NY Area? Royal Properties mentioned that O'Reilly Auto Parts will also join the surrounding shopping area that already has stores including Shoprite, Kohls, Planet Fitness, Target and more! In this area, we can get gas, go shopping for clothes, gr
+
+--- Article 87 ---
+URL: https://www.shelbycountyreporter.com/news/saws-bbq-to-open-nov-2-in-chelsea-fe16a478
+Title: SAW’s BBQ to open Nov. 2 in Chelsea
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 16:54:02
+
+News October 13, 2026 SAW’s BBQ to open Nov. 2 in Chelsea SAW’s BBQ aims to open in Valley Post on Monday, Nov. 2, when renovations are done and final licenses are approved. Avery Forrest SAW’s BBQ aims to open in Valley Post on Monday, Nov. 2, when renovations are done and final licenses are approved. (File) By AVERY FORREST | Staff Writer Valley Post’s second restaurant is gearing up with plans to open within the next three weeks. SAW’s BBQ is hiring staff alongside adding finishing touches at its new location in the Chelsea entertainment district. The Alabama-based barbecue chain’s ABC license was approved by the Chelsea City Council during a meeting on Monday, Oct. 5 and is now working towards opening on Monday, Nov. 2. “We couldn’t be more excited to bring SAW’s BBQ to Valley Post and breathe new life into a location that has so much potential,” said Matt Snowden, managing partner of SAW’s. “The support and excitement we’ve received from the Valley Post and Chelsea communities has been incredible. We can’t wait to open our doors and welcome everyone in.” The renowned barbecue spot will be the second restaurant to open as part of Valley Post’s revival after Waldo’s Chicken and Beer opened on Sept. 29. SAW’s BBQ was founded by Mike Wilson, aka SAW, and first opened in Homewood. Don't miss the news! Sign up so you stay in the know. The barbecue restaurant has previously been named the “Best BBQ in Alabama” by Southern Living. The menu features Carolina-style smoked pulled pork along with chicken and ribs, served with three styles of sauces. Finishing touches are still being made on the Valley Post location, such as cosmetic additions to the bar and front of the building. These additions include lining the bar and entrance with old bar wood and neon signs on the interior of the building. The location is still in search of a full staff with open interview days on Tuesday, Oct. 13 and Thursday, Oct. 15. Both days of interviews will take place from noon to 6 p.m. at t
+
+--- Article 88 ---
+URL: https://corridorbusiness.com/the-little-gym-to-open-new-location-in-hiawatha/
+Title: The Little Gym to open new location in Hiawatha
+Status hint: Opening | Industry: Gyms / Fitness
+Published: 2026-10-13 16:48:53
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://corridorbusiness.com/the-little-gym-to-open-new-location-in-hiawatha/]
+
+--- Article 89 ---
+URL: https://www.prnewswire.com/news-releases/fords-garage-now-open-in-chattanooga-marking-brands-first-tennessee-location-302907358.html
+Title: Ford's Garage Now Open in Chattanooga, Marking Brand's First Tennessee Location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 16:38:00
+
+Restaurant brings automotive-inspired dining, prime burgers, craft beer and more to Hamilton Place CHATTANOOGA, Tenn. , Oct. 13, 2026 /PRNewswire/ -- Ford's Garage, the one-of-a-kind dining concept inspired by the heritage of the Ford Motor Company, is officially open in Chattanooga, marking the brand's first restaurant in Tennessee. Located at 2102 Hamilton Place Blvd. near Hamilton Place Mall, the new 8,000-square-foot restaurant offers seating for approximately 250 guests. Conveniently located off I-75 near I-24, the restaurant joins one of Chattanooga's busiest retail and dining corridors, near popular attractions including Lookout Mountain, Ruby Falls and Rock City. Continue Reading Ford’s Garage, the one-of-a-kind dining concept inspired by the heritage of the Ford Motor Company, is officially open in Chattanooga, marking the brand’s first Tennessee location. Located at 2102 Hamilton Place Blvd. near Hamilton Place Mall, the new 8,000-square-foot restaurant features an automotive-inspired atmosphere and seating for approximately 250 guests. Known for its immersive automotive-themed atmosphere, Ford's Garage combines vintage 1920s service station décor and Ford memorabilia with a chef-driven menu featuring 1/2lb. Certified Angus Beef  burgers, like the Estate Burger made with smoked Gouda cheese, sweet red onion marmalade, arugula, fried onion straws and white truffle bacon aioli served on a brioche bun; premium entrees like Simply Grilled Salmon and Chicken Henry with Chardonnay lemon butter sauce, goat cheese and sun-dried tomatoes served with a choice of two sides; shareable appetizers like Famous Firestone Shrimp and the Giant Funnel Tower of Piston Onion Rings; plus an extensive selection of local craft beers and cocktails. "We couldn't think of a better community than Chattanooga to introduce Ford's Garage to Tennessee," said Ted Moats, managing partner of TN Legends and franchise owner of Ford's Garage Chattanooga. "We were drawn to Ford's Garage becaus
+
+--- Article 90 ---
+URL: https://whatnow.com/detroit/retail/clean-express-auto-wash-opening-third-livonia-location-this-year/
+Title: Clean Express Auto Wash Opening Third Livonia Location This Year
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 16:36:08
+
+The latest location is under construction.  (Image credit: expresswashconcepts.com) SHARE This winter will be a busy time for car washes, and Express Wash Concepts is taking advantage of this fact. From recent social media posts, the car wash company which owns Clean Express Auto Wash has plans for expansion, with a new location coming to 38888 Six Mile Road in Livonia . Express Wash Concepts already has two locations in the suburb, continuing to be a known name in Metro Detroit . An opening date has not yet been announced. Right now, Express Wash Concepts has over 140 locations around Detroit, as well as Flint, Toledo, Cleveland and Pittsburgh. They have a large presence in Michigan, with around 21 sites in the state. Those pulling into a Clean Express can choose from a range of wash levels, and have access to free car vacuums. The company offers an unlimited club membership for $20-40 a month. This new Livonia location will seemingly have all of the same services as other car washes in the area. The site is on the north side of Six Mile Road, next to Trinity House Theatre . This is also close to Northville Village Shopping Center . It is accessible by exiting off Interstate 275 onto Six Mile. When What Now Detroit reached out to the Express Wash Concepts team, they did not yet have information to release on the location. More updates can be found on their website . Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 38888 Six Mile Rd, Livonia, MI 48152 Be the First to Know From new restaurant openings to exciting retail launches and real estate insights, be the first to know what’s happening in Detroit Subscribe & Stay Ahead Share This Article Facebook Copy Link Print By Evan Gallagher Regional Reporter Evan Gallagher is a reporter with a passion for news writing from the local to national level. He graduated from Ohio University's E.W. Scripps School of Journalism with a B.S. in Journalism and certifi
+
+--- Article 91 ---
+URL: https://www.thenorthernecho.co.uk/news/26630879.jd-confirms-opening-new-middlesbrough-town-centre-store/
+Title: JD confirms relocation to new town centre store as opening date revealed
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 16:30:00
+
+JD Sports Leisure Planning and development Shopping Middlesbrough JD confirms opening of new Middlesbrough town centre store JD Sports Leisure Planning and development Shopping Middlesbrough By 
+            Alex O'Leary Senior Reporter Share 0 Comments 3 Skip to next photo 1 / 1 Show caption 1 / 1 Share 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. What is the Public Notice Portal? Find, save and share Public Notices that affect you in the area. Search the Public Notice Portal What is the Public Notice Portal? What is the Public Notice Portal? The Public Notice Portal carries statutory public notices published in local newspapers and is the fastest and most effective way of finding out what is happening in YOUR neighbourhood. Search the Public Notice Portal JD has announced the opening date of its new Middlesbrough town centre store. The fashion firm is moving from the Cleveland Centre to a new town centre site at the Hillstreet Shopping Centre on Saturday (October 17). The firm has long been expected to relocate after floor plans listed the brand earlier this year, describing it as an "anchor retailer” of the complex. New hoardings were erected for the shop, which was previously empty, in August, teasing that a “bigger and better JD is coming soon”. And now, JD has confirmed that it will be closing its store at the Cleveland Centre on the same day it opens its new location. JD Sports signs at the Hillstreet Centre in Middlesbrough (Image: THE NORTHERN ECHO) Spanning more than 6,531 sq ft, the new modern retail space will offer shoppers a “spacious and contemporary shopping experience with access to their favourite brands”. It will feature major brands including Nike, adidas, New Balance, The North Face, On Running and Montirex. To celebrate the launch, customers are encouraged t
+
+--- Article 92 ---
+URL: https://wgme.com/news/local/westbrook-pickleball-club-to-remain-open-amid-bankruptcy-maine-picklr-riverside-street
+Title: Westbrook pickleball club to remain open amid bankruptcy
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-13 16:25:45
+
+Westbrook pickleball club to remain open amid bankruptcy by WGME Staff Tue, October 13, 2026 at 6:31 AM Updated Tue, October 13, 2026 at 11:35 AM 4 VIEW ALL PHOTOS The Picklr in Westbrook is a pickleball club. (WGME) Comment on this story 7 Comment Share story Share topics: Picklr Chapter 11 Bankruptcy Westbrook Pickleball Court-supervised restructuring Financing Riverside Street WESTBROOK, Maine (WGME) -- An indoor pickleball club in Westbrook has filed for Chapter 11 bankruptcy but says it will remain open. The Picklr, which took over the former Shaw's supermarket off Riverside Street, filed for bankruptcy Tuesday but said it was part of a "court-supervised restructuring" that will "strengthen" its financial foundation. The Picklr in Westbrook is a pickleball club. (WGME) Also read: New England's largest indoor pickleball facility opens in Westbrook The company says its clubs will remain open. Trending Westbrook woman charged with OUI after crashing into school bus, police say Police responded to a crash near 93 County Road involving an SUV and an MSAD 6 school bus around 9:35 a.m. last Friday. Hannaford app goes dark: Parent company shuts down systems after hack Customers cannot order online or through Hannaford's mobile app. 2 killed in wrong-way crash on I-95 in Medway Maine State Police say they got reports about a wrong-way driver on I-95 in Island Falls around 9:20 p.m. on Monday. Wanted Maine woman accused of nearly hitting deputy, crashing into truck Deputies say she managed to get around them, ran a stop sign at the intersection of Harpswell Island Road and Merritt Road and crashed into a pickup truck. Maine Supreme Court hears arguments in case of woman who fell off Scarborough cliff walk The Maine Supreme Court heard arguments Wednesday in the case of a woman who fell to her death more than four years ago. NEWS IN PHOTOS: " Local " 12 Maine's gubernatorial candidates face off on debate stage 5 Thousands of alewives killed after going through turbine at 
+
+--- Article 93 ---
+URL: https://www.northamptonchron.co.uk/business/new-opening-date-revealed-when-major-furniture-retailer-will-open-huge-new-northampton-showroom-9285647
+Title: NEW OPENING DATE REVEALED: When major furniture retailer will open huge new Northampton showroom
+Status hint: Opening | Industry: Furniture / Mattress
+Published: 2026-10-13 16:21:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.northamptonchron.co.uk/business/new-opening-date-revealed-when-major-furniture-retailer-will-open-huge-new-northampton-showroom-9285647]
+
+--- Article 94 ---
+URL: https://www.silive.com/ny-state/2026/10/wegmans-italian-restaurant-in-new-york-will-permanently-close.html
+Title: Wegmans’ Italian restaurant in New York will permanently close
+Status hint: Closing | Industry: Restaurants
+Published: 2026-10-13 16:18:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.silive.com/ny-state/2026/10/wegmans-italian-restaurant-in-new-york-will-permanently-close.html]
+
+--- Article 95 ---
+URL: https://whatnow.com/phoenix/restaurants/a-national-burger-chain-is-expanding-its-presence-in-arizona-with-a-new-location/
+Title: A National Burger Chain Is Expanding Its Presence in Arizona With a New Location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 16:14:13
+
+Representative Image, Burger chain Shake Shack is opening in Buckeye (Image credit: Photo By Caleb Oquendo from Pexels) SHARE Shake Shack is set to launch a new restaurant at Verrado Marketplace in Buckeye, Arizona. The opening will bring Shake Shack’s total to 15 locations in Arizona, including 10 in the Phoenix area. Celebrations during the launch will include custom tote bags for guests and a donation to St. Mary’s Food Bank. Shake Shack Sets Buckeye Opening Date The Buckeye location will welcome the local community on Tuesday, October 20, at 10 a.m. at 1505 N Verrado Way, Suite 102, Buckeye. Hours will be 10 a.m. to 11 p.m. Sunday through Thursday and 10 a.m. to midnight Friday and Saturday. The menu will include ShackBurgers, hand-spun shakes, and crinkle-cut fries. Shake Shack ‘s menu will also feature limited-time offerings throughout the year, including the returning Black Truffle Menu. Opening-Day Promotions and Food Bank Donation The first few guests stopping by the Verrado Marketplace location on opening day will receive the chain’s custom tote bags. The company will also donate $1 for every sandwich sold at the restaurant on October 20 to St. Mary’s Food Bank. This donation will support the organization’s efforts toward nutrition for children, families, and seniors experiencing food insecurity in Arizona. Shake Shack is among several businesses scheduled to open at Verrado Marketplace through the end of 2026. According to a recent announcement , the retail and lifestyle destination will welcome several restaurants, retailers, and entertainment concepts in the coming months. Upcoming openings at the 500,000-square-foot space include SALT and Handel’s Homemade Ice Cream. Safeway and Emersa are expected to open their doors in November. There are several other names on the list, which could open toward the end of 2026. These include Harkins Verrado Theatres and BackLot, BJ’s Restaurant & Brewhouse, Tropical Smoothie Cafe, and OHSO Brewery & Distillery. With 
+
+--- Article 96 ---
+URL: https://www.5newsonline.com/article/life/food/catfish-hole-opening-bentonville-location/527-c6e77a62-dcaf-4393-9947-b44b26016fcf
+Title: Catfish Hole opening Bentonville location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 16:10:00
+
+Food Catfish Hole opening Bentonville location The Fayetteville restaurant said it will be opening a new location near The Momentary in Bentonville and is now hiring. Credit: Catfish Hole Fayetteville BENTONVILLE, Ark. — On Monday, a beloved Fayetteville seafood restaurant announced it will be expanding with a Bentonville location. The Catfish Hole said in a Facebook post on Oct 12 that it will be opening a new location near The Momentary in Bentonville and is now hiring for multiple positions. "Well folks, time to let the Cat..…fish out of the bag! The Catfish Hole is coming to Bentonville! It has been a long time coming! More details coming soon… but here is a hint: near The Momentary," the post reads. The franchise currently has three locations: Fayetteville, Alma, and Kimberling City in Missouri. Their Fayetteville location opened in 1994 and sits off West Wedington Drive. Catfish Hole did not disclose when the Bentonville location is set to open. Close Ad
+
+--- Article 97 ---
+URL: https://bringmethenews.com/minnesota-lifestyle/grand-opening-date-set-for-revivals-return-to-minneapolis
+Title: Grand opening date set for Revival’s return to Minneapolis
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 16:06:11
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://bringmethenews.com/minnesota-lifestyle/grand-opening-date-set-for-revivals-return-to-minneapolis]
+
+--- Article 98 ---
+URL: https://www.facilitiesmanagement-now.com/article/291045/applications-open-for-the-international-safety-awards-2027
+Title: Applications Open for the International Safety Awards 2027
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 16:01:27
+
+Applications Open for the International Safety Awards 2027
+
+--- Article 99 ---
+URL: https://communityimpact.com/georgetown/dining/frankie-s-in-georgetown-holds-ribbon-cutting-2-years-after-the-fire-that-forced-its-closure/
+Title: Frankie’s in Georgetown holds ribbon-cutting 2 years after the fire that forced its closure
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-13 16:00:00
+
+Dining Georgetown Frankie’s in Georgetown holds ribbon-cutting 2 years after the fire that forced its closure Explore Georgetown on the Impact Map stories, offers and more Adrian Gandara
+
+--- Article 100 ---
+URL: https://www.wwltv.com/article/entertainment/dining/restaurants/plume-algiers-to-close-after-6-years-as-owners-focus-on-family/289-cdf1401a-5a60-465f-ad11-cc0e74ef14ef
+Title: Plume Algiers to close after 6 years as owners focus on family
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-13 15:59:00
+
+Powered and protected by Privacy
