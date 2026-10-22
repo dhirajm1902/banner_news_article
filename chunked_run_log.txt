@@ -1,0 +1,100 @@
+-> Loaded 195 stores + 195 analyst mappings + 195 valid industry mappings from analyst.csv
+   -> 18 unique analysts detected
+
+Run date: 2026-07-30
+[CHUNKED VARIANT] Fetching recent (last 2 days) store OPENING + CLOSING news for ALL 195 companies in analyst.csv...
+(7 opening sub-queries + 4 closing sub-queries per store, ~11 RSS calls/store)
+
+  ... 10/195 stores processed, 95 article(s) collected so far
+  ... 20/195 stores processed, 142 article(s) collected so far
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 2s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 4s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 6s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 8s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  [error] checkpoint save failed, will retry at next checkpoint: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  ... 30/195 stores processed, 172 article(s) collected so far
+    [warn] network error on chunk query, retrying in 3s: <urlopen error [Errno 11001] getaddrinfo failed>
+  ... 40/195 stores processed, 217 article(s) collected so far
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 2s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 4s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 6s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 8s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  [error] checkpoint save failed, will retry at next checkpoint: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  ... 50/195 stores processed, 508 article(s) collected so far
+  ... 60/195 stores processed, 598 article(s) collected so far
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 2s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 4s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 6s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 8s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  [error] checkpoint save failed, will retry at next checkpoint: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  ... 70/195 stores processed, 770 article(s) collected so far
+  ... 80/195 stores processed, 797 article(s) collected so far
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 2s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 4s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 6s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 8s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  [error] checkpoint save failed, will retry at next checkpoint: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  ... 90/195 stores processed, 817 article(s) collected so far
+  ... 100/195 stores processed, 817 article(s) collected so far
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 2s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 4s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 6s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 8s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  [error] checkpoint save failed, will retry at next checkpoint: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  ... 110/195 stores processed, 817 article(s) collected so far
+  ... 120/195 stores processed, 817 article(s) collected so far
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 2s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 4s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 6s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 8s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  [error] checkpoint save failed, will retry at next checkpoint: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  ... 130/195 stores processed, 817 article(s) collected so far
+    [warn] network error on chunk query, retrying in 3s: [WinError 10053] An established connection was aborted by the software in your host machine
+  ... 140/195 stores processed, 924 article(s) collected so far
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 2s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 4s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 6s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 8s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  [error] checkpoint save failed, will retry at next checkpoint: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  ... 150/195 stores processed, 1222 article(s) collected so far
+  ... 160/195 stores processed, 1227 article(s) collected so far
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 2s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 4s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 6s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 8s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  [error] checkpoint save failed, will retry at next checkpoint: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] network error on chunk query, retrying in 3s: [WinError 10053] An established connection was aborted by the software in your host machine
+  ... 170/195 stores processed, 1230 article(s) collected so far
+  ... 180/195 stores processed, 1230 article(s) collected so far
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 2s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 4s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+    [warn] daily CSV (banner_news_chunked_2026-07-30.csv) locked, retrying in 6s: [Errno 13] Permission denied: 'data\\store_news_chunked\\banner_news_chunked_2026-07-30.csv'
+  [checkpoint] saved 1230 article(s) -> banner_news_chunked_2026-07-30.csv; master now has 1187 row(s)
+  ... 190/195 stores processed, 1358 article(s) collected so far
+  ... 195/195 stores processed, 1372 article(s) collected so far
+  [checkpoint] saved 1372 article(s) -> banner_news_chunked_2026-07-30.csv; master now has 1324 row(s)
+
+=====================================================================================
+     [CHUNKED] STORE OPENING & CLOSING NEWS – GROUPED BY ANALYST (last 2 days only)
+=====================================================================================
+
+Analyst: Ankit Rawat   (17 article(s))
+Analyst: Ashwin Nair   (7 article(s))
+Analyst: Ayushi Chandel   (23 article(s))
+Analyst: Bhavesh Phulwani   (27 article(s))
+Analyst: Dhiraj Manghani   (110 article(s))
+Analyst: Harsimranjeet Singh Ghelani   (133 article(s))
+Analyst: Kabeer Pandya   (21 article(s))
+Analyst: Kashish Kasar   (60 article(s))
+Analyst: Komal Agrawal   (70 article(s))
+Analyst: Moksh Kashyap   (14 article(s))
+Analyst: Parth Chelani   (88 article(s))
+Analyst: Rahul Shinde   (309 article(s))
+Analyst: Rahul Vasaya   (172 article(s))
+Analyst: Rishi Nagar   (27 article(s))
+Analyst: Shuvechha Dere   (69 article(s))
+Analyst: Suryakant Rajput   (23 article(s))
+Analyst: Vishwas Shah   (202 article(s))
+  [FINAL] saved 1372 article(s) -> banner_news_chunked_2026-07-30.csv; master now has 1324 row(s)
+
+[CHUNKED] Run complete.

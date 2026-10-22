@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git stash *)",
+      "Bash(git pull *)",
+      "Bash(node -e ' *)",
+      "Bash(rm -f ours_head.json theirs_origin.json ours.json.tmp *)",
+      "Bash(awk '/^ *)",
+      "Bash(awk '/^=======/{p=1} {if\\(p\\)print NR\": \"$0} /^>>>>>>>/{exit}' batches/batch_4_output.md)",
+      "Bash(git check-ignore *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(git ls-tree *)",
+      "Bash(python -c ' *)",
+      "Bash(python -m py_compile company_website_comingsoon.py)",
+      "Bash(git merge *)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python build_extraction_masters.py --append)",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('company_website_comingsoon.py', encoding='utf-8'\\).read\\(\\)\\)\")",
+      "Bash(python -c \"import patchright; print\\('installed'\\)\")",
+      "Bash(timeout 60 python -c ' *)",
+      "Bash(grep -n \"table-fixed\\\\|line-clamp-2.*opening_date\\\\|title=\\\\\"\\\\${escapeHtml\\(r.opening_date\" index.html)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Lenovo\\Downloads\\Banner_article_by_analyst"
+    ]
+  }
+}
