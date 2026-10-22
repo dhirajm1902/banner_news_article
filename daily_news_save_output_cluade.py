@@ -94,6 +94,7 @@ _COL_MAP_PATTERNS = {
     "event_type":        r"event.?type|type",
     "event_date":        r"event.?date|^date$",
     "status":            r"status",
+    "footage_size":      r"footage|sq\.? ?ft|square",
     "short_description": r"description|summary|short",
     "article_link":      r"link|url|article",
     "published_date":    r"published",
@@ -127,6 +128,7 @@ for row in all_rows:
         "event_type":        row.get("event_type",        ""),
         "event_date":        row.get("event_date",        "Not specified"),
         "status":            row.get("status",            ""),
+        "footage_size":      row.get("footage_size",      "Not specified"),
         "short_description": row.get("short_description", ""),
         "article_link":      row.get("article_link",      ""),
         "published_date":    row.get("published_date",    ""),
@@ -165,7 +167,7 @@ print(f"    When all batches done:  git add daily_news_extraction_latest.json &&
 # 7. Update extraction master CSV
 # ─────────────────────────────────────────────────────────
 MASTER_COLS = ["store_name", "location", "event_type", "event_date",
-               "status", "short_description", "article_link", "published_date", "Date_Appended"]
+               "status", "footage_size", "short_description", "article_link", "published_date", "Date_Appended"]
 MASTER_FILE = Path("data/daily_news/daily_news_extraction_master.csv")
 MASTER_FILE.parent.mkdir(parents=True, exist_ok=True)
 

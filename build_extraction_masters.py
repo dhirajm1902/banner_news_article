@@ -49,21 +49,9 @@ COLUMN_MAP = {
 
 CSV_COLUMNS = [
     "store_name", "location", "event_type", "event_date",
-    "status", "short_description", "article_link", "published_date",
+    "status", "footage_size", "short_description", "article_link", "published_date",
     "source_batch", "Date_Appended",
 ]
-
-# Extra columns only some sources extract. Kept out of CSV_COLUMNS so the
-# other masters (synced to Supabase) don't gain columns their tables lack.
-EXTRA_COLUMNS = {
-    "restaurant_master_extraction.csv": ["footage_size"],
-}
-
-
-def columns_for(csv_name: str) -> list[str]:
-    extra = EXTRA_COLUMNS.get(csv_name, [])
-    i = CSV_COLUMNS.index("short_description")
-    return CSV_COLUMNS[:i] + extra + CSV_COLUMNS[i:]
 
 BATCH_GROUPS = {
     "restaurant_master_extraction.csv": sorted(
@@ -189,7 +177,7 @@ def load_existing_links(csv_path: Path) -> set[str]:
 def write_csv(csv_path: Path, rows: list[dict], append: bool) -> None:
     existing_links = load_existing_links(csv_path) if append else set()
     new_rows = [r for r in rows if r.get("article_link", "") not in existing_links]
-    fieldnames = columns_for(csv_path.name)
+    fieldnames = CSV_COLUMNS
 
     # Existing CSV written with an older header (e.g. before footage_size was
     # added) → rewrite it with the current columns instead of appending.
