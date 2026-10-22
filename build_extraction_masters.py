@@ -36,6 +36,11 @@ COLUMN_MAP = {
     "event type":                             "event_type",
     "event date":                             "event_date",
     "status":                                 "status",
+    "square footage":                         "footage_size",
+    "square footage size":                    "footage_size",
+    "footage":                                "footage_size",
+    "footage size":                           "footage_size",
+    "sq ft":                                  "footage_size",
     "short description":                      "short_description",
     "article link":                           "article_link",
     "article":                                "article_link",
@@ -47,6 +52,18 @@ CSV_COLUMNS = [
     "status", "short_description", "article_link", "published_date",
     "source_batch", "Date_Appended",
 ]
+
+# Extra columns only some sources extract. Kept out of CSV_COLUMNS so the
+# other masters (synced to Supabase) don't gain columns their tables lack.
+EXTRA_COLUMNS = {
+    "restaurant_master_extraction.csv": ["footage_size"],
+}
+
+
+def columns_for(csv_name: str) -> list[str]:
+    extra = EXTRA_COLUMNS.get(csv_name, [])
+    i = CSV_COLUMNS.index("short_description")
+    return CSV_COLUMNS[:i] + extra + CSV_COLUMNS[i:]
 
 BATCH_GROUPS = {
     "restaurant_master_extraction.csv": sorted(
@@ -172,13 +189,23 @@ def load_existing_links(csv_path: Path) -> set[str]:
 def write_csv(csv_path: Path, rows: list[dict], append: bool) -> None:
     existing_links = load_existing_links(csv_path) if append else set()
     new_rows = [r for r in rows if r.get("article_link", "") not in existing_links]
+    fieldnames = columns_for(csv_path.name)
 
-    mode = "a" if (append and csv_path.exists()) else "w"
+    # Existing CSV written with an older header (e.g. before footage_size was
+    # added) → rewrite it with the current columns instead of appending.
+    old_rows: list[dict] = []
+    if append and csv_path.exists():
+        with csv_path.open(encoding="utf-8", newline="") as f:
+            reader = csv.DictReader(f)
+            if reader.fieldnames != fieldnames:
+                old_rows = list(reader)
+
+    mode = "a" if (append and csv_path.exists() and not old_rows) else "w"
     with csv_path.open(mode, encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=CSV_COLUMNS, extrasaction="ignore")
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
         if mode == "w":
             writer.writeheader()
-        writer.writerows(new_rows)
+        writer.writerows(old_rows + new_rows)
 
     return len(new_rows)
 

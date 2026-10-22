@@ -26,43 +26,101 @@ BATCH_PREFIX     = "batch"          # batch_1.txt, batch_2.txt …
 OUTPUT_SUFFIX    = "_output.md"
 
 EXTRACTION_PROMPT = """\
-You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing ZIP codes, no inferring dates, footage sizes, or statuses.
 
 🔍 Extract these fields
-• Store/Shop/Restaurant Name
-• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
-• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
-• Event Date
-  - For openings → Opening Date
-  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
-• Status
-  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
-  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
-  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
-• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
 
-📊 Output format
-Create ONE clean Markdown table with these exact column headers (in this order):
-| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+Store/Shop/Restaurant Name
+
+Location or Full Address with ZIP Code: If no ZIP code is mentioned, write exactly the address given. If no address is provided, write exactly "Address not specified".
+
+Event Type: Write exactly "Opening", "Closing", or "remodel" based only on the article content.
+
+Event Date:
+
+For openings → Opening Date
+
+For closures → Closing Date
+
+Write the exact date or month/year if mentioned; otherwise write exactly "Not specified".
+
+Status:
+
+For openings → Use phrasing like "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", or "planned for".
+
+For closures → Use phrasing like "closed", "permanently closed", "closing soon", "set to close", "shut down", or "liquidation".
+
+Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize.
+
+Footage Size:
+
+Extract the store, shop, restaurant, or facility's footage size only if it is explicitly mentioned in the provided article text.
+
+Preserve the exact figure and unit as stated, such as "12,000 square feet", "2,500 sq. ft.", or "approximately 8,000 square feet".
+
+If the article mentions multiple relevant footage sizes for the same business, include each size with its context.
+
+Do NOT calculate, convert, estimate, or infer footage size from any other information.
+
+If no footage size is mentioned, write exactly "Not specified".
+
+Do not confuse footage size with acreage, lot size, seating capacity, or other measurements. Include those only if explicitly identified as the business's footage size.
+
+Short Description: Write exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context.
+
+📊 Output Format
+
+
+
+Create ONE clean Markdown table with these exact column headers in this order:
+
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Footage Size | Short Description | Article Link | Published Date |
 
 📌 Rules
-• Add one row per article in the order the articles are given
-• If an article contains multiple businesses, create a separate row for each
-• If an article includes both openings and closures, extract each separately
-• If an article has zero relevant business opening or closure information, still include a row with:
-  - Store Name: "No qualifying business found"
-  - Other columns: "N/A"
 
-🚫 Strict constraints
-• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+Add one row per article in the order the articles are given.
 
-📎 Final section (mandatory)
+If an article contains multiple businesses, create a separate row for each business.
+
+If an article includes both openings and closures, extract each event separately.
+
+If an article has zero relevant business opening or closure information, still include a row with:
+
+Store/Shop/Restaurant Name: "No qualifying business found"
+
+All other columns: "N/A"
+
+If the article contains qualifying business information but does not mention footage size, write "Not specified" in the Footage Size column.
+
+Use only the article text provided. Do not access external sources to fill missing information.
+
+Preserve source URLs and published dates exactly as provided in the article text. If the published date is not provided, write "Not specified".
+
+🚫 Strict Constraints
+
+No assumptions.
+
+No external data.
+
+No inferred addresses, ZIP codes, dates, footage sizes, or statuses.
+
+No rewriting or normalizing status text.
+
+Do not calculate or convert footage sizes.
+
+Do not omit qualifying businesses simply because some fields are missing.
+
+📎 Final Section (Mandatory)
+
 At the very end of your response, add:
-Non-working or unusable articles List:
-• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
-If none, write: None
 
-✅ Articles below — extract now:
+Non-working or unusable articles List:
+
+Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+
+If none, write exactly: None
+
+📥 Articles Below — Extract Now
 """
 
 

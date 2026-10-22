@@ -978,6 +978,7 @@
                             <th class="px-3 py-3 w-28">Event Type</th>
                             <th class="px-3 py-3 w-36">Event Date</th>
                             <th class="px-3 py-3 w-40">Status</th>
+                            <th class="px-3 py-3 w-32">Footage Size</th>
                             <th class="px-3 py-3">Description</th>
                             <th class="px-3 py-3 w-32">Published Date</th>
                             <th class="px-3 py-3 w-20">Link</th>
@@ -2673,13 +2674,13 @@
         }
         document.getElementById('restExtEmptyState').classList.add('hidden');
         container.classList.remove('hidden');
-        tbody.innerHTML = filteredRestExtractionRows.map((r, i) => buildExtractionRow(r, i, term, 'orange')).join('');
+        tbody.innerHTML = filteredRestExtractionRows.map((r, i) => buildExtractionRow(r, i, term, 'orange', true)).join('');
         document.getElementById('restExtRowCount').textContent = filteredRestExtractionRows.length;
     }
 
     function downloadRestExtractionCSV() {
         if (!filteredRestExtractionRows.length) return;
-        csvDownloadExtraction(filteredRestExtractionRows, `restaurant_extraction_${TODAY}.csv`);
+        csvDownloadExtraction(filteredRestExtractionRows, `restaurant_extraction_${TODAY}.csv`, true);
         showToast('Restaurant Extraction CSV downloaded!');
     }
 
@@ -3119,7 +3120,7 @@
     }
 
     // â•â• SHARED HELPERS â•â•
-    function buildExtractionRow(r, i, term, accentColor) {
+    function buildExtractionRow(r, i, term, accentColor, showFootage = false) {
         const isOpening = r.event_type === 'Opening';
         const isClosing = r.event_type === 'Closing';
         const noData    = r.store_name === 'No qualifying business found';
@@ -3155,6 +3156,9 @@
             <td class="px-3 py-2 overflow-hidden" title="${escapeHtml(r.status||'')}">
                 <span class="text-gray-400 text-xs line-clamp-2 block">${highlight(r.status||'—', term)}</span>
             </td>
+            ${showFootage ? `<td class="px-3 py-2 overflow-hidden" title="${escapeHtml(r.footage_size||'')}">
+                <span class="text-gray-400 text-xs line-clamp-2 block">${escapeHtml(r.footage_size||'—')}</span>
+            </td>` : ''}
             <td class="px-3 py-2 overflow-hidden" title="${escapeHtml(r.short_description||'')}">
                 <span class="text-gray-500 text-xs line-clamp-2 block">${highlight(r.short_description||'—', term)}</span>
             </td>
@@ -3172,9 +3176,10 @@
         document.getElementById(extBtnId).classList.toggle('active', !showArticles);
     }
 
-    function csvDownloadExtraction(rows, filename) {
+    function csvDownloadExtraction(rows, filename, withFootage = false) {
         const h = ['store_name','location','event_type','event_date','status','short_description','article_link','published_date'];
         const labels = ['Store/Restaurant Name','Location or Full Address','Event Type','Event Date','Status','Short Description','Article Link','Published Date'];
+        if (withFootage) { h.splice(5, 0, 'footage_size'); labels.splice(5, 0, 'Footage Size'); }
         const csv = [labels.join(','), ...rows.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
         dlCSV('\uFEFF' + csv, filename);
     }
@@ -4180,7 +4185,7 @@
     banner:               { file:'banner_news_master.csv',             search:['Store','Analyst','Industry','Type','Title','Summary'],              fmt:r=>`"¢ ${r.Store} | ${r.Analyst} | ${r.Type} | ${(r.Published||'').split('T')[0]} | ${r.Title} | ${trunc(r.Summary)} | ${r.Link}`,      label:'BANNER STORE NEWS',        desc:'Columns: Store, Analyst, Industry, Type, Title, Published, Summary, Link' },
     daily:                { file:'daily_news_master.csv',              search:['status','industry','region','title','source','keyword'],            fmt:r=>`"¢ [${r.status}] ${r.industry} | ${r.region} | Score:${r.relevance_score} | ${r.title} | ${r.direct_link}`,                             label:'DAILY NEWS',               desc:'Columns: status, industry, region, title, source, published_date, relevance_score, direct_link' },
     restaurant:           { file:'restaurant_master.csv',              search:['title','address'],                                                  fmt:r=>`"¢ ${r.date} | ${r.title} | ${r.address||''} | ${r.url}`,                                                                              label:'RESTAURANT NEWS',          desc:'Columns: date, title, address, url' },
-    restaurant_ext:       { file:'restaurant_master_extraction.csv',   search:['store_name','location','event_type','short_description'],          fmt:r=>`"¢ ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'RESTAURANT EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
+    restaurant_ext:       { file:'restaurant_master_extraction.csv',   search:['store_name','location','event_type','short_description'],          fmt:r=>`"¢ ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${r.footage_size||''} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'RESTAURANT EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, footage_size, short_description, article_link' },
     ct_scoop:             { file:'ct_scoop_master.csv',                search:['heading'],                                                         fmt:r=>`"¢ ${r.date} | ${r.heading} | ${r.link}`,                                                                                              label:'CT SCOOP',                 desc:'Columns: heading, date, link' },
     ct_scoop_ext:         { file:'ct_scoop_master_extraction.csv',     search:['store_name','location','event_type','short_description'],          fmt:r=>`"¢ ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'CT SCOOP EXTRACTION',      desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
     daily_ext:            { file:'daily_news_master_extraction.csv',   search:['store_name','location','event_type','short_description'],          fmt:r=>`"¢ ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'DAILY NEWS EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },

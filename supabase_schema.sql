@@ -177,6 +177,7 @@ CREATE TABLE restaurant_master_extraction (
     event_type        text,
     event_date        text,
     status            text,
+    footage_size      text,
     short_description text,
     article_link      text REFERENCES restaurant_master(url),
     published_date    text,
