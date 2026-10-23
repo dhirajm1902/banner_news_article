@@ -1,0 +1,49 @@
+name: Daily New Banner News Update
+
+# Same as daily-banner-news-update.yml, but for the banners in "New Banner list.xlsx".
+# Runs 30 min after the Banner News job so the two don't race on push.
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 5:30 IST daily
+  workflow_dispatch:  # Allows manual triggering from GitHub Actions tab
+
+permissions:
+  contents: write  # Required to commit and push files
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install feedparser pandas openpyxl python-dateutil
+
+      - name: Run new banner news fetcher
+        run: python fetch_new_banner_news.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add new_banner_news.json
+          git add data/new_banner_news/ || true
+          git add master_file/new_banner_news_master.csv || true
+          git diff --staged --quiet || git commit -m "Auto-update: Daily new banner news fetch $(date +'%Y-%m-%d')"
+          for i in 1 2 3 4 5; do
+            git fetch origin main && git rebase origin/main && git push origin main && break
+            echo "Push attempt $i failed, retrying in 15s..."
+            sleep 15
+          done

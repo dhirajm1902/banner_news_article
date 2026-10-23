@@ -147,6 +147,20 @@
             transform: translateX(-100%);
             animation: badgeSweep 2.5s linear infinite;
         }
+        .badge-priority {
+            display: inline-flex; align-items: center; gap: 4px;
+            background: linear-gradient(135deg, #dc2626, #9333ea, #dc2626);
+            background-size: 200% 200%;
+            color: #fff; font-size: 0.6rem; font-weight: 800;
+            padding: 3px 9px; border-radius: 999px;
+            letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap;
+            animation: badgeShimmer 2.5s linear infinite, priorityGlow 1.8s ease-in-out infinite;
+        }
+        @keyframes priorityGlow {
+            0%, 100% { box-shadow: 0 0 6px rgba(220,38,38,0.7), 0 0 14px rgba(147,51,234,0.35); }
+            50% { box-shadow: 0 0 12px rgba(220,38,38,1), 0 0 24px rgba(147,51,234,0.55); }
+        }
+        .card-priority { border-color: rgba(220,38,38,0.45) !important; }
         @keyframes badgeShimmer {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -333,6 +347,9 @@
             <div class="glass rounded-2xl p-1 flex gap-1 flex-wrap justify-center">
                 <button id="tabStoreBtn" class="tab-btn active" onclick="switchTab('store')">
                     <i class="fas fa-store mr-1.5"></i>Banner News<span id="tabStoreNewCount" class="tab-new-dot hidden"></span>
+                </button>
+                <button id="tabNewBannerBtn" class="tab-btn" onclick="switchTab('newbanner')">
+                    <i class="fas fa-star mr-1.5"></i>New Banner News<span id="tabNewBannerNewCount" class="tab-new-dot hidden"></span>
                 </button>
                 <button id="tabScoopBtn" class="tab-btn" onclick="switchTab('scoop')">
                     <i class="fas fa-bullhorn mr-1.5"></i>CT Scoop<span id="tabScoopNewCount" class="tab-new-dot hidden"></span>
@@ -734,6 +751,89 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- NEW BANNER NEWS TAB -->
+        <div id="newBannerTabContent" class="hidden">
+            <div id="nbStatsContainer" class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 fade-in" style="display:none;">
+                <div class="stats-card rounded-2xl p-6 card-accent-blue">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Articles</p>
+                            <p class="text-3xl font-bold text-white" id="nbTotalArticles">0</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                            <i class="fas fa-file-alt text-blue-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-card rounded-2xl p-6 card-accent-green">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p>
+                            <p class="text-3xl font-bold text-gray-300" id="nbTotalOpenings">0</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center">
+                            <i class="fas fa-arrow-trend-up text-gray-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-card rounded-2xl p-6 card-accent-orange">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p>
+                            <p class="text-3xl font-bold text-gray-300" id="nbTotalClosings">0</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center">
+                            <i class="fas fa-arrow-trend-down text-gray-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-card rounded-2xl p-6" style="background:rgba(220,38,38,0.07);border:1px solid rgba(220,38,38,0.2);">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">High Priority</p>
+                            <p class="text-3xl font-bold text-red-300" id="nbTotalPriority">0</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center">
+                            <i class="fas fa-fire text-red-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                <div class="flex-1 relative">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                    <input type="text" id="nbSearchInput" placeholder="Search by banner, analyst, or title..."
+                        class="input-field w-full pl-11 pr-4 py-3 text-sm"
+                        oninput="debounce(filterNewBannerArticles, 250)()">
+                </div>
+                <select id="nbTypeFilter" onchange="filterNewBannerArticles()" class="input-field px-4 py-3 text-sm">
+                    <option value="all">All Types</option>
+                    <option value="Opening">Opening</option>
+                    <option value="Closing">Closing</option>
+                </select>
+                <select id="nbIndustryFilter" onchange="filterNewBannerArticles()" class="input-field px-4 py-3 text-sm">
+                    <option value="all">All Industries</option>
+                </select>
+                <select id="nbAnalystFilter" onchange="filterNewBannerArticles()" class="input-field px-4 py-3 text-sm">
+                    <option value="all">All Analysts</option>
+                </select>
+                <button onclick="downloadNewBannerCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                    <i class="fas fa-download"></i><span>Download CSV</span>
+                </button>
+            </div>
+
+            <div id="nbLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading...</p></div>
+            <div id="nbEmptyState" class="text-center py-20 hidden">
+                <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-inbox text-3xl text-gray-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-300">No news found</h3>
+                <p class="text-gray-500 text-sm">No recent new-banner opening or closing news in the last 2 days.</p>
+            </div>
+            <div id="nbArticlesContainer" class="hidden"></div>
         </div>
 
         <!-- COMMUNITY IMPACT TAB -->
@@ -1445,6 +1545,7 @@
     })();
 
     const STORE_JSON_URL       = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/latest_news.json';
+    const NEW_BANNER_JSON_URL  = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/new_banner_news.json';
     const SCOOP_JSON_URL       = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/ct_scoop_latest.json';
     const REST_JSON_URL        = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/restaurant_latest.json';
     const SCOOP_EXTRACTION_URL = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/ct_scoop_extraction_latest.json';
@@ -1459,6 +1560,7 @@
     const COMMUNITY_EXTRACTION_URL = 'https://raw.githubusercontent.com/dhirajm1902/banner_news_article/main/community_impact_extraction_latest.json';
 
     let storeArticles = [], filteredStoreArticles = [];
+    let newBannerArticles = [], filteredNewBannerArticles = [];
     let doneKeys = new Set();
     let _currentUserEmail = '';
     let historicalArticles = [], filteredHistoricalArticles = [];
@@ -1531,6 +1633,7 @@
     function markAllRead() {
         // Add all currently known article keys to seenSet
         storeArticles.forEach(a => seenSet.add(a.Link || a.Title || ''));
+        newBannerArticles.forEach(a => seenSet.add(a.Link || a.Title || ''));
         scoopArticles.forEach(a => seenSet.add(a.link || ''));
         restArticles.forEach(a => seenSet.add(a.url || ''));
         bizArticles.forEach(a => seenSet.add(a.link || ''));
@@ -1548,6 +1651,7 @@
     function updateTabNewCounts() {
         const counts = {
             store: storeArticles.filter(a => isNew(a.Published, a.Link || a.Title || '')).length,
+            newbanner: newBannerArticles.filter(a => isNew(a.Published, a.Link || a.Title || '')).length,
             scoop: scoopArticles.filter(a => isNew(a.date, a.link || '')).length,
             restaurant: restArticles.filter(a => isNew(a.date, a.url || '')).length,
             biz: bizArticles.filter(a => isNew(a.date, a.link || '')).length,
@@ -1561,6 +1665,7 @@
             el.classList.toggle('hidden', n === 0);
         };
         updateDot('tabStoreNewCount',      counts.store);
+        updateDot('tabNewBannerNewCount',  counts.newbanner);
         updateDot('tabScoopNewCount',      counts.scoop);
         updateDot('tabRestaurantNewCount', counts.restaurant);
         updateDot('tabBizNewCount',        counts.biz);
@@ -1641,13 +1746,15 @@
 
     function switchTab(tab) {
         activeTab = tab;
-        const tabs = { store: 'storeTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent', daily: 'dailyTabContent', warn: 'warnTabContent', companyweb: 'companywebTabContent', community: 'communityTabContent' };
-        const btns = { store: 'tabStoreBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn', daily: 'tabDailyBtn', warn: 'tabWarnBtn', companyweb: 'tabCompanyWebBtn', community: 'tabCommunityBtn' };
+        const tabs = { store: 'storeTabContent', newbanner: 'newBannerTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent', daily: 'dailyTabContent', warn: 'warnTabContent', companyweb: 'companywebTabContent', community: 'communityTabContent' };
+        const btns = { store: 'tabStoreBtn', newbanner: 'tabNewBannerBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn', daily: 'tabDailyBtn', warn: 'tabWarnBtn', companyweb: 'tabCompanyWebBtn', community: 'tabCommunityBtn' };
         Object.values(tabs).forEach(id => document.getElementById(id).classList.add('hidden'));
         Object.values(btns).forEach(id => document.getElementById(id).classList.remove('active'));
         document.getElementById(tabs[tab]).classList.remove('hidden');
         document.getElementById(btns[tab]).classList.add('active');
-        if (tab === 'scoop') {
+        if (tab === 'newbanner') {
+            if (newBannerArticles.length === 0) loadNewBannerData();
+        } else if (tab === 'scoop') {
             if (activeScoopSubTab === 'articles' && scoopArticles.length === 0) loadScoopData();
             if (activeScoopSubTab === 'extraction' && extractionRows.length === 0) loadScoopExtractionData();
         } else if (tab === 'restaurant') {
@@ -1670,7 +1777,7 @@
     }
 
     function updateNavTotal() {
-        const total = storeArticles.length + scoopArticles.length + restArticles.length + bizArticles.length + dailyNewsArticles.length + warnRows.length + communityArticles.length;
+        const total = storeArticles.length + newBannerArticles.length + scoopArticles.length + restArticles.length + bizArticles.length + dailyNewsArticles.length + warnRows.length + communityArticles.length;
         const badge = document.getElementById('navTotalBadge');
         document.getElementById('navTotalCount').textContent = total;
         badge.classList.toggle('hidden', total === 0);
@@ -2056,13 +2163,16 @@
         const newBadge = articleIsNew ? `<span class="badge-new"><i class="fas fa-bolt" style="font-size:0.5rem"></i>NEW</span>` : '';
         const accentClass = isOpening ? 'card-accent-green' : 'card-accent-orange';
         const newGlowClass = articleIsNew ? ' card-new-glow' : '';
+        // High_Priority only exists on New Banner News articles
+        const priorityBadge = article.High_Priority ? `<span class="badge-priority"><i class="fas fa-fire" style="font-size:0.55rem"></i>High Priority</span>` : '';
+        const priorityClass = article.High_Priority ? ' card-priority' : '';
 
         /* â”€â”€ UPDATED: green style when done, grey border when undone â”€â”€ */
         const btnStyle = isDone ? DONE_STYLE : UNDONE_STYLE;
         const iconOpacity = isDone ? 'opacity-100' : 'opacity-0';
 
         return `
-            <div class="glass-card${newGlowClass} ${accentClass} rounded-2xl p-5 relative">
+            <div class="glass-card${newGlowClass}${priorityClass} ${accentClass} rounded-2xl p-5 relative">
                 <div class="absolute top-3.5 right-3.5 flex items-center gap-2">
                     ${newBadge}
                     <div class="w-8 h-8 rounded-lg cursor-pointer flex items-center justify-center transition-all shadow-sm"
@@ -2076,6 +2186,7 @@
                     <span class="${isOpening ? 'badge-opening' : 'badge-closing'} px-3 py-1 rounded-full text-xs font-bold text-white flex items-center gap-1">
                         <i class="fas ${isOpening ? 'fa-arrow-up' : 'fa-arrow-down'} text-xs"></i>${article.Type}
                     </span>
+                    ${priorityBadge}
                 </div>
                 <h3 class="font-bold text-base mb-1.5 text-white pr-16">${highlight(article.Store || '', term)}</h3>
                 <a href="${escapeHtml(article.Link || '#')}" target="_blank" rel="noopener noreferrer"
@@ -2090,6 +2201,124 @@
                 </div>
                 <p class="text-gray-400 text-xs line-clamp-3 leading-relaxed">${highlight(trunc, term)}</p>
             </div>`;
+    }
+
+    // ══ NEW BANNER NEWS ══
+    async function loadNewBannerData() {
+        try {
+            document.getElementById('nbLoadingState').classList.remove('hidden');
+            document.getElementById('nbArticlesContainer').classList.add('hidden');
+            document.getElementById('nbEmptyState').classList.add('hidden');
+            document.getElementById('nbStatsContainer').style.display = 'none';
+
+            const [res] = await Promise.all([
+                fetch(NEW_BANNER_JSON_URL + '?t=' + Date.now()),
+                doneKeys.size ? Promise.resolve() : loadDoneKeys()
+            ]);
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
+
+            if (activeTab === 'newbanner') document.getElementById('updateDate').textContent = data.last_updated || 'Unknown';
+            newBannerArticles = [];
+            Object.keys(data.data || {}).forEach(analyst => {
+                (data.data[analyst] || []).forEach(a => newBannerArticles.push({ ...a, Analyst: analyst }));
+            });
+            newBannerArticles = newBannerArticles.filter(a => is2026Plus(a.Published || ''));
+
+            const fillSelect = (id, label, values) => {
+                const sel = document.getElementById(id);
+                sel.innerHTML = `<option value="all">${label}</option>`;
+                values.forEach(v => {
+                    const opt = document.createElement('option');
+                    opt.value = opt.textContent = v;
+                    sel.appendChild(opt);
+                });
+            };
+            fillSelect('nbIndustryFilter', 'All Industries', [...new Set(newBannerArticles.map(a => a.Industry || 'Other'))].sort());
+            fillSelect('nbAnalystFilter', 'All Analysts', [...new Set(newBannerArticles.map(a => a.Analyst))].sort());
+
+            filteredNewBannerArticles = newBannerArticles;
+            updateNewBannerStats(newBannerArticles);
+            renderNewBannerArticles();
+            updateNavTotal();
+            updateTabNewCounts();
+            document.getElementById('nbLoadingState').classList.add('hidden');
+        } catch (err) {
+            console.error(err);
+            document.getElementById('nbLoadingState').classList.add('hidden');
+            document.getElementById('nbEmptyState').classList.remove('hidden');
+        }
+    }
+
+    function updateNewBannerStats(articles) {
+        setCount('nbTotalArticles', articles.length);
+        setCount('nbTotalOpenings', articles.filter(a => a.Type === 'Opening').length);
+        setCount('nbTotalClosings', articles.filter(a => a.Type === 'Closing').length);
+        setCount('nbTotalPriority', articles.filter(a => a.High_Priority).length);
+        document.getElementById('nbStatsContainer').style.display = 'grid';
+    }
+
+    function filterNewBannerArticles() {
+        const term      = document.getElementById('nbSearchInput').value.toLowerCase();
+        const typeF     = document.getElementById('nbTypeFilter').value;
+        const industryF = document.getElementById('nbIndustryFilter').value;
+        const analystF  = document.getElementById('nbAnalystFilter').value;
+        filteredNewBannerArticles = newBannerArticles.filter(a => {
+            const ms = !term || ['Store','Analyst','Title','Summary','Industry'].some(k => (a[k] || '').toLowerCase().includes(term));
+            return ms && (typeF === 'all' || a.Type === typeF)
+                      && (industryF === 'all' || (a.Industry || 'Other') === industryF)
+                      && (analystF === 'all' || a.Analyst === analystF);
+        });
+        updateNewBannerStats(filteredNewBannerArticles);
+        renderNewBannerArticles();
+    }
+
+    function renderNewBannerArticles() {
+        const container = document.getElementById('nbArticlesContainer');
+        const term = document.getElementById('nbSearchInput').value.toLowerCase();
+        if (filteredNewBannerArticles.length === 0) {
+            container.classList.add('hidden');
+            document.getElementById('nbEmptyState').classList.remove('hidden');
+            return;
+        }
+        document.getElementById('nbEmptyState').classList.add('hidden');
+        container.classList.remove('hidden');
+        container.innerHTML = '';
+
+        const grouped = {};
+        filteredNewBannerArticles.forEach(a => { (grouped[a.Analyst] = grouped[a.Analyst] || []).push(a); });
+
+        Object.keys(grouped).sort().forEach(analyst => {
+            // High-priority banners first within each analyst
+            const articles = grouped[analyst].slice().sort((x, y) => (y.High_Priority ? 1 : 0) - (x.High_Priority ? 1 : 0));
+            const priorityCount = articles.filter(a => a.High_Priority).length;
+            const sec = document.createElement('div');
+            sec.className = 'analyst-section mb-12 fade-in';
+            sec.innerHTML = `
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="analyst-heading">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                            <i class="fas fa-user-tie text-white text-xs"></i>
+                        </div>
+                        <span class="font-bold text-white">${escapeHtml(analyst)}</span>
+                        <span class="text-xs text-blue-400 font-semibold bg-blue-500/10 px-2.5 py-1 rounded-full">${articles.length}</span>
+                        ${priorityCount ? `<span class="text-xs text-red-300 font-semibold bg-red-500/10 px-2.5 py-1 rounded-full"><i class="fas fa-fire mr-1"></i>${priorityCount}</span>` : ''}
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    ${articles.map(a => createStoreArticleCard(a, term)).join('')}
+                </div>
+            `;
+            container.appendChild(sec);
+        });
+    }
+
+    function downloadNewBannerCSV() {
+        if (!filteredNewBannerArticles.length) return;
+        const h = ['Store','Analyst','Industry','High_Priority','Type','Title','Published','Link','Summary'];
+        const csv = [h.join(','), ...filteredNewBannerArticles.map(r => h.map(k => `"${String(r[k] ?? '').replace(/"/g,'""')}"`).join(','))].join('\n');
+        dlCSV(csv, `new_banner_news_${TODAY}.csv`);
+        showToast('New Banner News CSV downloaded!');
     }
 
     /* â”€â”€ toggleDoneStatus — synced to Supabase so all users share state â”€â”€ */
@@ -3210,6 +3439,8 @@
         let loader;
         if (activeTab === 'store') {
             storeArticles = []; loader = loadStoreData();
+        } else if (activeTab === 'newbanner') {
+            newBannerArticles = []; loader = loadNewBannerData();
         } else if (activeTab === 'scoop') {
             scoopArticles = []; extractionRows = [];
             loader = activeScoopSubTab === 'extraction' ? loadScoopExtractionData() : loadScoopData();
@@ -4005,6 +4236,7 @@
 
         // Load data now that auth is confirmed — ensures loadDoneKeys uses authenticated role
         loadStoreData();
+        loadNewBannerData();
 
         // Display logged-in user email in nav
         const el = document.getElementById('loggedInUser');
