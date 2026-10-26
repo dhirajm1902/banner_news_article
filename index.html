@@ -755,6 +755,18 @@
 
         <!-- NEW BANNER NEWS TAB -->
         <div id="newBannerTabContent" class="hidden">
+            <div class="mb-6 flex justify-center">
+                <div class="glass rounded-2xl p-1 flex gap-1">
+                    <button id="nbSubTabArticlesBtn" class="sub-tab-btn active" onclick="switchNbSubTab('articles')">
+                        <i class="fas fa-newspaper mr-1"></i> Articles
+                    </button>
+                    <button id="nbSubTabHistoricalBtn" class="sub-tab-btn" onclick="switchNbSubTab('historical')">
+                        <i class="fas fa-clock-rotate-left mr-1"></i> Historical
+                    </button>
+                </div>
+            </div>
+
+            <div id="nbArticlesSubTab">
             <div id="nbStatsContainer" class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 fade-in" style="display:none;">
                 <div class="stats-card rounded-2xl p-6 card-accent-blue">
                     <div class="flex items-center justify-between">
@@ -834,6 +846,131 @@
                 <p class="text-gray-500 text-sm">No recent new-banner opening or closing news in the last 2 days.</p>
             </div>
             <div id="nbArticlesContainer" class="hidden"></div>
+            </div><!-- /nbArticlesSubTab -->
+
+            <!-- NEW BANNER HISTORICAL SUB-TAB -->
+            <div id="nbHistoricalSubTab" class="hidden">
+                <div id="nbHistStatsContainer" class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8 fade-in" style="display:none;">
+                    <div class="stats-card rounded-2xl p-6 card-accent-blue">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Records</p>
+                                <p class="text-3xl font-bold text-white" id="nbHistTotal">0</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                                <i class="fas fa-database text-blue-400 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6 card-accent-green">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p>
+                                <p class="text-3xl font-bold text-gray-300" id="nbHistOpenings">0</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center">
+                                <i class="fas fa-arrow-trend-up text-gray-400 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6 card-accent-orange">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p>
+                                <p class="text-3xl font-bold text-gray-300" id="nbHistClosings">0</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center">
+                                <i class="fas fa-arrow-trend-down text-gray-400 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6" style="background:rgba(220,38,38,0.07);border:1px solid rgba(220,38,38,0.2);">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">High Priority</p>
+                                <p class="text-3xl font-bold text-red-300" id="nbHistPriority">0</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center">
+                                <i class="fas fa-fire text-red-400 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6" style="background:rgba(16,185,129,0.07);border:1px solid rgba(16,185,129,0.15);">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Done</p>
+                                <p class="text-3xl font-bold text-emerald-400" id="nbHistDoneCount">0</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center">
+                                <i class="fas fa-circle-check text-emerald-400 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3 flex-wrap">
+                    <div class="flex-1 relative min-w-[180px]">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                        <input type="text" id="nbHistSearchInput" placeholder="Search by banner, analyst, or title..."
+                            class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterNbHistoricalArticles,250)()">
+                    </div>
+                    <select id="nbHistAnalystFilter" onchange="filterNbHistoricalArticles()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Analysts</option>
+                    </select>
+                    <select id="nbHistIndustryFilter" onchange="filterNbHistoricalArticles()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Industries</option>
+                    </select>
+                    <select id="nbHistStoreFilter" onchange="filterNbHistoricalArticles()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Banners</option>
+                    </select>
+                    <select id="nbHistTypeFilter" onchange="filterNbHistoricalArticles()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Types</option>
+                        <option value="Opening">Opening</option>
+                        <option value="Closing">Closing</option>
+                    </select>
+                    <select id="nbHistSortFilter" onchange="filterNbHistoricalArticles()" class="input-field px-4 py-3 text-sm">
+                        <option value="desc">Newest First</option>
+                        <option value="asc">Oldest First</option>
+                    </select>
+                    <select id="nbHistDoneFilter" onchange="filterNbHistoricalArticles()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Status</option>
+                        <option value="done">Done</option>
+                        <option value="undone">Not Done</option>
+                    </select>
+                    <button onclick="downloadNbHistoricalCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                        <i class="fas fa-download"></i><span>Download CSV</span>
+                    </button>
+                </div>
+                <div id="nbHistLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading historical data...</p></div>
+                <div id="nbHistEmptyState" class="text-center py-20 hidden">
+                    <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-inbox text-3xl text-gray-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-300">No historical records found</h3>
+                    <p class="text-gray-500 text-sm">Try adjusting your filters.</p>
+                </div>
+                <div id="nbHistTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
+                    <table class="w-full text-sm text-left data-table">
+                        <thead><tr>
+                            <th class="px-3 py-3 w-10 text-center">✓</th>
+                            <th class="px-3 py-3 w-10 text-center">#</th>
+                            <th class="px-4 py-3 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="toggleNbHistSort()">
+                                Date <i id="nbHistSortIcon" class="fas fa-sort-down text-indigo-400 ml-1"></i>
+                            </th>
+                            <th class="px-4 py-3 whitespace-nowrap">Date Appended</th>
+                            <th class="px-4 py-3">Banner</th>
+                            <th class="px-4 py-3">Analyst</th>
+                            <th class="px-4 py-3">Industry</th>
+                            <th class="px-4 py-3 w-24">Type</th>
+                            <th class="px-4 py-3">Title</th>
+                        </tr></thead>
+                        <tbody id="nbHistTableBody"></tbody>
+                    </table>
+                    <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
+                        <span>Showing <span id="nbHistRowCount" class="text-gray-300 font-semibold">0</span> records</span>
+                        <span>Source: new_banner_news_master.csv</span>
+                    </div>
+                </div>
+            </div><!-- /nbHistoricalSubTab -->
         </div>
 
         <!-- COMMUNITY IMPACT TAB -->
@@ -1561,6 +1698,8 @@
 
     let storeArticles = [], filteredStoreArticles = [];
     let newBannerArticles = [], filteredNewBannerArticles = [];
+    let nbHistArticles = [], filteredNbHistArticles = [];
+    let activeNbSubTab = 'articles';
     let doneKeys = new Set();
     let _currentUserEmail = '';
     let historicalArticles = [], filteredHistoricalArticles = [];
@@ -1598,6 +1737,7 @@
     let dailyVisible     = PAGE_SIZE;
     let dailyExtVisible  = PAGE_SIZE;
     let histVisible      = PAGE_SIZE;
+    let nbHistVisible    = PAGE_SIZE;
     let activeStoreSubTab = 'articles';
     let activeRestSubTab = 'articles', activeBizSubTab = 'articles';
     let activeDailyNewsSubTab = 'articles';
@@ -2069,27 +2209,29 @@
         return 'done-' + (a.Link || (a.Store + '|' + a.Title));
     }
 
+    function afterDoneChange() {
+        updateHistStats();
+        renderHistoricalTable();
+        renderStoreArticles();
+        if (nbHistArticles.length) { updateNbHistStats(); renderNbHistoricalTable(); }
+        if (newBannerArticles.length) renderNewBannerArticles();
+    }
+
     async function toggleHistDone(key) {
         const isDone = doneKeys.has(key);
         if (isDone) {
             doneKeys.delete(key);
-            updateHistStats();
-            renderHistoricalTable();
-            renderStoreArticles();
+            afterDoneChange();
             const { error: delErr } = await _sb.from('article_marks').delete().eq('article_key', key);
             if (delErr) {
                 console.error('article_marks delete failed:', delErr);
                 doneKeys.add(key);
-                updateHistStats();
-                renderHistoricalTable();
-                renderStoreArticles();
+                afterDoneChange();
                 showToast('Failed to save: ' + (delErr.message || delErr.code || 'DB error'), 'error');
             }
         } else {
             doneKeys.add(key);
-            updateHistStats();
-            renderHistoricalTable();
-            renderStoreArticles();
+            afterDoneChange();
             const { error: upsertErr } = await _sb.from('article_marks').upsert({
                 article_key: key,
                 is_done: true,
@@ -2099,9 +2241,7 @@
             if (upsertErr) {
                 console.error('article_marks upsert failed:', upsertErr);
                 doneKeys.delete(key);
-                updateHistStats();
-                renderHistoricalTable();
-                renderStoreArticles();
+                afterDoneChange();
                 showToast('Failed to save: ' + (upsertErr.message || upsertErr.code || 'DB error'), 'error');
             }
         }
@@ -2313,6 +2453,171 @@
         });
     }
 
+    // ── NEW BANNER SUB-TAB SWITCH ──
+    function switchNbSubTab(subTab) {
+        activeNbSubTab = subTab;
+        const isArticles = subTab === 'articles';
+        document.getElementById('nbArticlesSubTab').classList.toggle('hidden', !isArticles);
+        document.getElementById('nbHistoricalSubTab').classList.toggle('hidden', isArticles);
+        document.getElementById('nbSubTabArticlesBtn').classList.toggle('active', isArticles);
+        document.getElementById('nbSubTabHistoricalBtn').classList.toggle('active', !isArticles);
+        if (!isArticles && nbHistArticles.length === 0) loadNbHistoricalData();
+    }
+
+    // ── NEW BANNER HISTORICAL DATA ──
+    async function loadNbHistoricalData() {
+        const loading = document.getElementById('nbHistLoadingState');
+        const empty   = document.getElementById('nbHistEmptyState');
+        const tableC  = document.getElementById('nbHistTableContainer');
+        loading.classList.remove('hidden');
+        tableC.classList.add('hidden');
+        empty.classList.add('hidden');
+        document.getElementById('nbHistStatsContainer').style.display = 'none';
+        try {
+            const res = await fetch('master_file/new_banner_news_master.csv?t=' + Date.now());
+            if (!res.ok) throw new Error('fetch failed');
+            const text = await res.text();
+            nbHistArticles = parseSimpleCSV(text)
+                .filter(a => is2026Plus(a.Date_Appended || a.Published || ''))
+                .map(a => ({ ...a, High_Priority: String(a.High_Priority).toLowerCase() === 'true' }));
+            populateNbHistFilters();
+            filteredNbHistArticles = [...nbHistArticles];
+            nbHistVisible = PAGE_SIZE;
+            sortNbHistoricalArticles();
+            updateNbHistStats();
+            renderNbHistoricalTable();
+        } catch (err) {
+            console.error(err);
+            loading.classList.add('hidden');
+            empty.classList.remove('hidden');
+        }
+    }
+
+    function populateNbHistFilters() {
+        const fill = (id, label, values) => {
+            const sel = document.getElementById(id);
+            sel.innerHTML = `<option value="all">${label}</option>`;
+            values.forEach(n => { const o = document.createElement('option'); o.value = o.textContent = n; sel.appendChild(o); });
+        };
+        const uniq = k => [...new Set(nbHistArticles.map(a => a[k]).filter(Boolean))].sort();
+        fill('nbHistAnalystFilter',  'All Analysts',   uniq('Analyst'));
+        fill('nbHistIndustryFilter', 'All Industries', uniq('Industry'));
+        fill('nbHistStoreFilter',    'All Banners',    uniq('Store'));
+    }
+
+    function sortNbHistoricalArticles() {
+        const dir = document.getElementById('nbHistSortFilter').value;
+        filteredNbHistArticles.sort((a, b) => {
+            const ta = new Date(a.Published || 0).getTime();
+            const tb = new Date(b.Published || 0).getTime();
+            return dir === 'asc' ? ta - tb : tb - ta;
+        });
+        const icon = document.getElementById('nbHistSortIcon');
+        if (icon) icon.className = dir === 'asc' ? 'fas fa-sort-up text-indigo-400 ml-1' : 'fas fa-sort-down text-indigo-400 ml-1';
+    }
+
+    function toggleNbHistSort() {
+        const sel = document.getElementById('nbHistSortFilter');
+        sel.value = sel.value === 'desc' ? 'asc' : 'desc';
+        filterNbHistoricalArticles();
+    }
+
+    function filterNbHistoricalArticles() {
+        const term      = document.getElementById('nbHistSearchInput').value.toLowerCase();
+        const analystF  = document.getElementById('nbHistAnalystFilter').value;
+        const industryF = document.getElementById('nbHistIndustryFilter').value;
+        const storeF    = document.getElementById('nbHistStoreFilter').value;
+        const typeF     = document.getElementById('nbHistTypeFilter').value;
+        const doneF     = document.getElementById('nbHistDoneFilter').value;
+        nbHistVisible = PAGE_SIZE;
+        filteredNbHistArticles = nbHistArticles.filter(a => {
+            const ms     = !term || ['Store','Analyst','Industry','Title','Summary'].some(k => (a[k] || '').toLowerCase().includes(term));
+            const isDone = doneKeys.has(histDoneKey(a));
+            const matchDone = doneF === 'all' || (doneF === 'done' ? isDone : !isDone);
+            return ms
+                && (analystF  === 'all' || a.Analyst  === analystF)
+                && (industryF === 'all' || a.Industry === industryF)
+                && (storeF    === 'all' || a.Store    === storeF)
+                && (typeF     === 'all' || a.Type     === typeF)
+                && matchDone;
+        });
+        sortNbHistoricalArticles();
+        updateNbHistStats();
+        renderNbHistoricalTable();
+    }
+
+    function updateNbHistStats() {
+        document.getElementById('nbHistTotal').textContent     = filteredNbHistArticles.length;
+        document.getElementById('nbHistOpenings').textContent  = filteredNbHistArticles.filter(a => a.Type === 'Opening').length;
+        document.getElementById('nbHistClosings').textContent  = filteredNbHistArticles.filter(a => a.Type === 'Closing').length;
+        document.getElementById('nbHistPriority').textContent  = filteredNbHistArticles.filter(a => a.High_Priority).length;
+        document.getElementById('nbHistDoneCount').textContent = nbHistArticles.filter(a => doneKeys.has(histDoneKey(a))).length;
+        document.getElementById('nbHistStatsContainer').style.display = 'grid';
+    }
+
+    function renderNbHistoricalTable() {
+        const loading = document.getElementById('nbHistLoadingState');
+        const empty   = document.getElementById('nbHistEmptyState');
+        const tableC  = document.getElementById('nbHistTableContainer');
+        const tbody   = document.getElementById('nbHistTableBody');
+        loading.classList.add('hidden');
+        if (!filteredNbHistArticles.length) {
+            tableC.classList.add('hidden');
+            empty.classList.remove('hidden');
+            return;
+        }
+        empty.classList.add('hidden');
+        tableC.classList.remove('hidden');
+        document.getElementById('nbHistRowCount').textContent = filteredNbHistArticles.length;
+        tbody.innerHTML = filteredNbHistArticles.slice(0, nbHistVisible).map((a, i) => {
+            const isOpening = a.Type === 'Opening';
+            const badgeCls = isOpening
+                ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
+                : 'bg-rose-500/15 text-rose-400 border border-rose-500/30';
+            let pubDate = a.Published || '';
+            try {
+                const d = new Date(pubDate);
+                if (!isNaN(d.getTime())) pubDate = d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+            } catch {}
+            const key      = histDoneKey(a);
+            const isDone   = doneKeys.has(key);
+            const safeKey  = key.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+            const rowBg    = isDone ? 'background:rgba(16,185,129,0.06);' : '';
+            const title    = escapeHtml(a.Title || '');
+            const titleCls = isDone ? 'line-through text-gray-600' : 'text-gray-300';
+            const link     = a.Link ? `<a href="${escapeHtml(a.Link)}" target="_blank" rel="noopener" class="${titleCls} hover:text-indigo-300 underline underline-offset-2 transition-colors">${title}</a>` : `<span class="${titleCls}">${title}</span>`;
+            const priority = a.High_Priority ? `<span class="badge-priority mt-1"><i class="fas fa-fire" style="font-size:0.55rem"></i>High Priority</span>` : '';
+            return `<tr style="${rowBg}" class="border-t border-white/5 transition-colors">
+                <td class="px-3 py-3 text-center">
+                    <label class="cursor-pointer inline-flex items-center justify-center w-6 h-6 rounded-md border-2 transition-all ${isDone ? 'bg-emerald-500 border-emerald-500' : 'border-gray-600 hover:border-emerald-500'}" onclick="toggleHistDone('${safeKey}')">
+                        ${isDone ? '<i class="fas fa-check text-white text-xs"></i>' : ''}
+                    </label>
+                </td>
+                <td class="px-3 py-3 text-gray-500 text-center text-xs">${i + 1}</td>
+                <td class="px-4 py-3 text-gray-400 whitespace-nowrap text-xs">${escapeHtml(pubDate)}</td>
+                <td class="px-4 py-3 text-gray-500 whitespace-nowrap text-xs">${escapeHtml(a.Date_Appended || '')}</td>
+                <td class="px-4 py-3 ${isDone ? 'text-gray-600' : 'text-gray-200'} font-medium"><div>${escapeHtml(a.Store || '')}</div>${priority}</td>
+                <td class="px-4 py-3 ${isDone ? 'text-gray-600' : 'text-gray-400'}">${escapeHtml(a.Analyst || '')}</td>
+                <td class="px-4 py-3 text-gray-500 text-xs">${escapeHtml(a.Industry || '')}</td>
+                <td class="px-4 py-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium ${badgeCls}">${escapeHtml(a.Type || '')}</span></td>
+                <td class="px-4 py-3 text-xs leading-snug max-w-xs">${link}</td>
+            </tr>`;
+        }).join('');
+        if (nbHistVisible < filteredNbHistArticles.length) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td colspan="9" class="py-4 text-center"><button onclick="nbHistVisible+=50;renderNbHistoricalTable()" class="px-5 py-2 rounded-xl text-xs font-semibold bg-slate-700 hover:bg-slate-600 text-gray-300 transition-colors">Load more (${filteredNbHistArticles.length - nbHistVisible} remaining)</button></td>`;
+            tbody.appendChild(tr);
+        }
+    }
+
+    function downloadNbHistoricalCSV() {
+        if (!filteredNbHistArticles.length) return;
+        const h = ['Store','Analyst','Industry','High_Priority','Type','Title','Published','Date_Appended','Link','Summary'];
+        const csv = [h.join(','), ...filteredNbHistArticles.map(r => h.map(k => `"${String(r[k] ?? '').replace(/"/g,'""')}"`).join(','))].join('\n');
+        dlCSV(csv, `new_banner_historical_${TODAY}.csv`);
+        showToast('New Banner Historical CSV downloaded!');
+    }
+
     function downloadNewBannerCSV() {
         if (!filteredNewBannerArticles.length) return;
         const h = ['Store','Analyst','Industry','High_Priority','Type','Title','Published','Link','Summary'];
@@ -2322,6 +2627,11 @@
     }
 
     /* â”€â”€ toggleDoneStatus — synced to Supabase so all users share state â”€â”€ */
+    function renderHistoricalTables() {
+        renderHistoricalTable();
+        if (nbHistArticles.length) { updateNbHistStats(); renderNbHistoricalTable(); }
+    }
+
     async function toggleDoneStatus(key, el) {
         const isDone = doneKeys.has(key);
         if (isDone) {
@@ -2330,7 +2640,7 @@
             el.style.cssText = UNDONE_STYLE;
             el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-0 transition-opacity duration-200';
             el.title = 'Mark as done';
-            renderHistoricalTable();
+            renderHistoricalTables();
             const { error: delErr } = await _sb.from('article_marks').delete().eq('article_key', key);
             if (delErr) {
                 console.error('article_marks delete failed:', delErr);
@@ -2339,7 +2649,7 @@
                 el.style.cssText = DONE_STYLE;
                 el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-100 transition-opacity duration-200';
                 el.title = 'Marked as done — click to undo';
-                renderHistoricalTable();
+                renderHistoricalTables();
                 showToast('Failed to save: ' + (delErr.message || delErr.code || 'DB error'), 'error');
             }
         } else {
@@ -2348,7 +2658,7 @@
             el.style.cssText = DONE_STYLE;
             el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-100 transition-opacity duration-200';
             el.title = 'Marked as done — click to undo';
-            renderHistoricalTable();
+            renderHistoricalTables();
             const { error: upsertErr } = await _sb.from('article_marks').upsert({
                 article_key: key,
                 is_done: true,
@@ -2362,7 +2672,7 @@
                 el.style.cssText = UNDONE_STYLE;
                 el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-0 transition-opacity duration-200';
                 el.title = 'Mark as done';
-                renderHistoricalTable();
+                renderHistoricalTables();
                 showToast('Failed to save: ' + (upsertErr.message || upsertErr.code || 'DB error'), 'error');
             }
         }
@@ -3440,7 +3750,8 @@
         if (activeTab === 'store') {
             storeArticles = []; loader = loadStoreData();
         } else if (activeTab === 'newbanner') {
-            newBannerArticles = []; loader = loadNewBannerData();
+            newBannerArticles = []; nbHistArticles = [];
+            loader = activeNbSubTab === 'historical' ? loadNbHistoricalData() : loadNewBannerData();
         } else if (activeTab === 'scoop') {
             scoopArticles = []; extractionRows = [];
             loader = activeScoopSubTab === 'extraction' ? loadScoopExtractionData() : loadScoopData();
