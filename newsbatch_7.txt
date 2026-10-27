@@ -1,4 +1,4 @@
-You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates, footage sizes, or statuses:
 
 🔍 Extract these fields
 • Store/Shop/Restaurant Name
@@ -11,23 +11,30 @@ You are an expert, precise data extractor specialized in retail and restaurant o
   - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
   - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
   👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Footage Size
+  - Extract the store, shop, restaurant, or facility's footage size only if it is explicitly mentioned in the article text
+  - Preserve the exact figure and unit as stated, e.g. "12,000 square feet", "2,500 sq. ft.", "approximately 8,000 square feet"
+  - If the article mentions multiple relevant footage sizes for the same business, include each size with its context
+  - Do NOT calculate, convert, estimate, or infer footage size; do not confuse it with acreage, lot size, seating capacity, or other measurements
+  - If no footage size is mentioned, write exactly "Not specified"
 • Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
 
 📊 Output format
 Create ONE clean Markdown table with these exact column headers (in this order):
-| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Footage Size | Short Description | Article Link | Published Date |
 
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If an article has qualifying business information but no footage size, write "Not specified" in the Footage Size column
 • If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
 
 🚫 Strict constraints
-• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses, dates, or footage sizes  • ❌ No rewriting or normalizing status text
 
 📎 Final section (mandatory)
 At the very end of your response, add:
@@ -39,419 +46,401 @@ If none, write: None
 
 
 --- Article 301 ---
-URL: https://www.abc27.com/news/chicken-wing-franchise-confirms-upcoming-york-county-opening/amp/
-Title: Chicken wing franchise confirms upcoming York County opening
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 11:14:31
+URL: https://freeyork.org/business/pixii-camera-liquidation-french-camera-innovator-p/
+Title: French Camera Innovator Pixii Faces Possible Closure Amid Financial Struggles
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 23:34:44
 
-HANOVER, Pa. (WHTM) — A popular chicken wing franchise will be opening a new restaurant in York County. Earlier this week, a spokesperson with Wing Stop confirmed to ABC27 News their plans to open a new restaurant at the Clearview Shopping Center, located at 1000 Carlisle Street in Hanover, York County. Thanks for signing up! Watch for us in your inbox. Subscribe Now Local Business Beat SIGN UP NOW Wing Stop says this new location is expected to debut “sometime after 2027.” According to information posted by Bennett Williams Commercial Real Estate , the future Wing Stop will occupy a 2,000-square-foot space (suite 1290), which is situated next to the Hanover Floor & Stone store. Once this new location opens, it will become Wing Stop’s first to open in Hanover, Pa. Per Wing Stop’s website, the franchise first opened its doors in 1994 and began offering franchise opportunities just three years later. Today, Wing Stop boasts more than 2,500 restaurants across the world, including 37 in Pennsylvania . This is a developing story. Stay with abc27 News as more information becomes available .
+[Could not fetch: HTTPSConnectionPool(host='freeyork.org', port=443): Max retries exceeded with url: /business/pixii-camera-liquidation-french-camera-innovator-p/ (Caused by NameResolutionError("HTTPSConnection(host='freeyork.org', port=443): Failed to resolve 'freeyork.org' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 302 ---
-URL: https://www.dunfermlinepress.com/news/26643049.dunfermline-pet-store-jollyes-confirms-opening-date/
-Title: Dunfermline pet store Jollyes confirms its opening date
-Status hint: Opening | Industry: Pet Care
-Published: 2026-10-16 11:10:17
+URL: https://www.aol.com/articles/john-daly-topgolf-expand-relationship-233406000.html
+Title: John Daly, Topgolf expand relationship so Masters tradition continues after Hooters bankruptcy
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 23:34:15
 
-Business Pets Planning and development Dunfermline pet store Jollyes confirms its opening date Business Pets Planning and development By 
-            Jamie Szmitz Trainee Reporter Share 0 Comments The pet store will be opening its doors on Thursday 5th November (Image: Jollyes Dunfermline) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
-        and has been written by our American colleagues.
-        It does not necessarily reflect the view of The Herald. What is the Public Notice Portal? Find, save and share Public Notices that affect you in the area. Search the Public Notice Portal What is the Public Notice Portal? What is the Public Notice Portal? The Public Notice Portal carries statutory public notices published in local newspapers and is the fastest and most effective way of finding out what is happening in YOUR neighbourhood. Search the Public Notice Portal Pet superstore Jollyes has confirmed its opening date for the store in Carnegie Retail Park. Jollyes will open its doors on November 5 and will sell a wide range of pet supplies including food, clothes and accessories. The store will be located at Unit 5 which was previously the site of Pagazzi Lighting. As part of their opening weekend, a "Wee Curious Beasties" event will take place on November 6, 7 and 8 where insects and reptiles such as snakes will be showcased for customers. Jollyes operates more than 100 stores across the UK and Ireland and has been in business since the early 1970s. Grooming and veterinary services will also be on offer at the site alongside retail. Customers can also order retail products for delivery on Uber Eats. The planning permission was granted by Fife Council two years ago with an update to the planning paperwork approved as reported in September. Business Pets Planning and development Share 0 Comments Get involved with the news Send your news & photos
+[Could not fetch: HTTPSConnectionPool(host='www.aol.com', port=443): Max retries exceeded with url: /articles/john-daly-topgolf-expand-relationship-233406000.html (Caused by NameResolutionError("HTTPSConnection(host='www.aol.com', port=443): Failed to resolve 'www.aol.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 303 ---
-URL: https://www.luxtimes.lu/luxembourg/lidl-aims-to-open-one-new-store-a-year-in-luxembourg-by-2030/163156009.html
-Title: Lidl aims to open one new store a year in Luxembourg by 2030
+URL: https://www.wdayradionow.com/news/local-news/brew-bird-plans-west-fargo-expansion-commission-approves-75000-in-assistance/
+Title: Brew Bird plans West Fargo expansion; commission approves $75,000 in assistance
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 11:00:00
+Published: 2026-10-20 23:33:04
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.luxtimes.lu/luxembourg/lidl-aims-to-open-one-new-store-a-year-in-luxembourg-by-2030/163156009.html]
+[Could not fetch: HTTPSConnectionPool(host='www.wdayradionow.com', port=443): Max retries exceeded with url: /news/local-news/brew-bird-plans-west-fargo-expansion-commission-approves-75000-in-assistance/ (Caused by NameResolutionError("HTTPSConnection(host='www.wdayradionow.com', port=443): Failed to resolve 'www.wdayradionow.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 304 ---
-URL: https://whatnow.com/nashville/restaurants/puesto-makes-tennessee-debut-with-opening-of-nashville-yards-location/
-Title: Puesto Makes Tennessee Debut with Opening of Nashville Yards Location
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 10:32:01
+URL: https://www.cleveland19.com/2026/10/20/amazon-hire-more-than-300000-seasonal-workers-see-what-positions-are-already-open/?outputType=amp
+Title: Amazon to hire more than 300,000 seasonal workers. See what positions are already open
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 23:31:00
 
-Photo: Official (Image credit: Puesto) SHARE Puesto, the California-born Mexican restaurant known for its fresh take on Mexico City flavors and vibrant atmospheres, will open in Nashville Yards on Friday, Oct. 23. Puesto Nashville will be the first location outside of California for the family-owned restaurant and is now taking reservations online here . Located at 991 Exchange Lane, Puesto Nashville marks a new chapter for the brand as it expands beyond its California roots to a new city that shares the team’s passion and appreciation for food, family and hospitality. Founded by brothers Alex, Eric and Alan Adler alongside cousins Isidoro and Moy Lombrozo, Puesto has built its reputation around serving and sharing elevated Mexican cuisine that honors their family’s heritage. For Isidoro, a Vanderbilt alum, the move is something of a homecoming. Nashville is the city where Isidoro spent formative years and bringing Puesto here feels like a natural next step in sharing the family’s table with a community that the team already knows and loves. “Nashville has always been close to my heart,” said Isidoro Lombrozo, co-founder of Puesto in a statement. “My years at Vanderbilt gave me a real appreciation for this city, its people and its strong sense of community. Coming back to open Puesto with my family feels like a full-circle moment. It’s meaningful to share our Mexican heritage, food and traditions with a city that played such an important role in my life.” Alex Adler added, “Family is at the heart of everything we do at Puesto. Nashville has been a meaningful location to our family over the years, giving the five of us opportunities to visit, make memories and build community. When we started talking about our expansion plans, Nashville felt like the obvious choice. The city’s thriving hospitality scene and strong sense of community felt like a natural fit for our family-focused approach to contemporary dining.” Guests will be transported from downtown Nashville to M
+[Could not fetch: HTTPSConnectionPool(host='www.cleveland19.com', port=443): Max retries exceeded with url: /2026/10/20/amazon-hire-more-than-300000-seasonal-workers-see-what-positions-are-already-open/?outputType=amp (Caused by NameResolutionError("HTTPSConnection(host='www.cleveland19.com', port=443): Failed to resolve 'www.cleveland19.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 305 ---
-URL: https://www.indianretailer.com/franchisetv/archives/news/nom-nom-express-opens-new-pan-asian-outlet-malad-west
-Title: Nom Nom Express Opens New Pan-Asian Outlet in Malad West
+URL: https://en.fnnews.com/news/202610201610535735
+Title: Hongdae Becomes a Beauty Battleground... Olive Young and MUSINSA Enter Round Two of the Store-Opening Race
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 10:31:39
+Published: 2026-10-20 23:22:08
 
-Food and Beverages Nom Nom Express Opens New Pan-Asian Outlet in Malad West BY - Franchise TV Bureau 16 Oct, 2026
-            / 132 / 2 MIN READ Nom Nom Express, the Pan-Asian quick-service restaurant brand operated by Aspect QSR, is set to open a new outlet in Malad West, Mumbai, on October 16, 2026. The opening is part of the brand's expansion strategy, with its network now spanning 50 outlets. To mark the opening, the restaurant is offering its entire menu at Rs 99 or less on October 16. The promotional offer is applicable exclusively at the newly opened Malad West outlet. The menu includes dim sums, baos, wok bowls and Pan-Asian starters. The brand's quick-service format focuses on serving Asian dishes at accessible price points. The new outlet adds to Nom Nom Express's presence in Mumbai's food service market as quick-service restaurant brands continue to expand through neighbourhood outlets and value-led offerings. The Malad West opening also gives the brand an opportunity to reach consumers seeking convenient dining options in the area. The launch-day offer is limited to the Malad West location and will be available on October 16, 2026. For Further Franchise Info Contact Call +91 97176-83838 expansion restaurant Franchise India Stay on top – Get the daily news from Indian Retailer in your inbox Food and Beverages Franchise TV Exclusive: California Based Sourdough & Co. Enters India in Partnership With FranGlobal BY - Franchise TV Bureau Oct, 15 2026 / 5 MIN READ California-based modern casual dining restaurant chain Sourdough & Co. is entering the Indian market in collaboration with FranGlobal , entering the fast-growing Indian market. The brand plans to expand its outlet network across key markets, leveraging a franchise-led growth strategy to establish a strong presence and rapidly scale across the country. Based in California, US, Sourdough & Co . is a modern casual dining restaurant that brings traditionally crafted, naturally fermented bread to its consu
+[Could not fetch: HTTPSConnectionPool(host='en.fnnews.com', port=443): Max retries exceeded with url: /news/202610201610535735 (Caused by NameResolutionError("HTTPSConnection(host='en.fnnews.com', port=443): Failed to resolve 'en.fnnews.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 306 ---
-URL: https://www.news10.com/news/national/aldi-planned-180-new-stores-for-2026-the-newest-are-about-to-open/amp/
-Title: Aldi planned 180 new stores for 2026. The newest are about to open
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 10:19:35
+URL: https://www.wusa9.com/article/money/personal-finance/prince-georges-county-approves-utility-shutoff-resolution-explores-county-owned-grocery-store-pg/65-772fcc06-249e-452a-8ad7-1bef23e60628
+Title: Prince George's County approves utility shutoff resolution, explores county-owned grocery store
+Status hint: Opening | Industry: Grocery
+Published: 2026-10-20 23:16:00
 
-(NEXSTAR) – More than 180 new Aldi stores were expected to open this year, and several of those are gearing up to welcome shoppers just in time for the holidays . The international discount supermarket chain revealed in January that it planned to open dozens of new locations throughout the U.S. with the goal of “making it even easier for customers to shop our aisles first,” CEO Atty McGrath said in a press release. It wasn’t clear at the time, however, where exactly Aldi would expand to. The grocer did share that the supermarkets would open in 31 states, with 80 alone planned for the Southeast. Among the locations that opened this year was Maine’s first-ever Aldi, located in Portland. Multiple stores, listed below, celebrated grand openings this week, according to Aldi’s website. Daphne , Alabama – 30947 Mill Lane Prescott Valley , Arizona – 3330 North Glassford Hill Road Metairie , Louisiana – 215 Veterans Memorial Boulevard Lansing , Michigan – 2110 Lake Lansing Road Glen Allen , Virginia – 10310 Washington Highway Even more are on track to open this month. Customers can get a sneak peek of new stores in Mesa , Arizona (6853 East Elliot Road), and Poughkeepsie , New York (3456 North Road), on Oct. 21, with grand opening events set for Oct. 22. Later this month, Aldi will open new stores in North Little Rock , Arkansas (11201 Maumelle Boulevard), and Bristol , Connecticut (1235 Farmington Avenue). Sneak peeks are set for Oct. 28, with grand opening events the following day, according to Aldi. The new stores coming to Madison (729 West Base Street) and Zephyrhills (38901 County Road 54), Florida, do not have sneak peek events scheduled, webpages show. As of October 2026, Aldi has more than 2,700 stores across the U.S. Florida has the most of any state at 346, followed by Illinois at 217 and Pennsylvania at 174. Ten states do not have an Aldi store: Alaska, Colorado, Hawaii, Idaho, Montana, New Mexico, Oregon, Utah, Washington and Wyoming. For Colorado, however, the 
+[Could not fetch: HTTPSConnectionPool(host='www.wusa9.com', port=443): Max retries exceeded with url: /article/money/personal-finance/prince-georges-county-approves-utility-shutoff-resolution-explores-county-owned-grocery-store-pg/65-772fcc06-249e-452a-8ad7-1bef23e60628 (Caused by NameResolutionError("HTTPSConnection(host='www.wusa9.com', port=443): Failed to resolve 'www.wusa9.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 307 ---
-URL: https://www.wnypapers.com/news/article/current/2026/10/16/167312/lewiston-event-center-reopens-with-new-management-larger-restaurant-menu-bowling-leagues-and-thoughts-to-expand
-Title: and thoughts to expand
+URL: https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-7-brew-sets-opening-date
+Title: NORWALK SCOOP: 7 Brew sets opening date!
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 10:17:05
+Published: 2026-10-20 23:04:05
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.wnypapers.com/news/article/current/2026/10/16/167312/lewiston-event-center-reopens-with-new-management-larger-restaurant-menu-bowling-leagues-and-thoughts-to-expand]
+[Could not fetch: HTTPSConnectionPool(host='www.theconnecticutscoop.com', port=443): Max retries exceeded with url: /all-fairfield-county-posts/norwalk-scoop-7-brew-sets-opening-date (Caused by NameResolutionError("HTTPSConnection(host='www.theconnecticutscoop.com', port=443): Failed to resolve 'www.theconnecticutscoop.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 308 ---
-URL: https://www.theglobeandmail.com/investing/markets/stocks/HBFG-CN/pressreleases/8089098/happy-belly-food-group-s-heal-wellness-qsr-announces-the-grand-opening-of-its-54th-location-in-calgary-s-crowfoot-village/
-Title: Happy Belly Food Group's Heal Wellness QSR Announces the Grand Opening of Its 54th Location in Calgary's Crowfoot Village
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 10:14:16
+URL: https://attheu.utah.edu/announcements/permanent-closure-of-west-arena-road-1800-east/
+Title: Permanent closure of West Arena Road (1800 East)
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 23:04:00
 
-This section contains press releases and other materials from third parties (including paid content). The Globe and Mail has not reviewed this content. Please see disclaimer . Happy Belly Food Group's Heal Wellness QSR Announces the Grand Opening of Its 54th Location in Calgary's Crowfoot Village Newsfile - Newsfile - Fri Oct 16, 5:14AM CDT Toronto, Ontario--(Newsfile Corp. - October 16, 2026) - Happy Belly Food Group Inc. (CSE: HBFG) (OTCQB: HBFGF) ("Happy Belly" or the "Company"), a leader in acquiring and scaling emerging food brands, is pleased to announce the grand opening of its 54 th Heal Wellness (" Heal ") location on October 17th, 2026, at 151 Crowfoot Terrace NW, Calgary, AB. Located in Crowfoot, one of northwest Calgary's premier retail and commercial destinations, this new location further strengthens Heal's presence in the province of Alberta. Heal Wellness is a quick-service restaurant (" QSR ") brand specializing in fresh smoothie bowls, açaí bowls, and smoothies. Happy Belly 1 To view an enhanced version of this graphic, please visit: https://images.newsfilecorp.com/files/6625/319337_004ebb9db4349a35_001full.jpg "The grand opening of Heal in Crowfoot marks another step forward in our expansion across Alberta, and our disciplined approach to organic growth," said Sean Black, Chief Executive Officer of Happy Belly. "Crowfoot's established residential communities, strong household incomes and active retail environment make it a compelling fit for Heal. We look forward to bringing our fresh smoothie bowls, açaí bowls and smoothies to residents and visitors seeking convenient options that complement a busy and active lifestyle." Crowfoot serves Calgary's growing northwest communities, combining established residential neighbourhoods with a major regional shopping centre, convenient CTrain access and a broad mix of national retailers, restaurants, entertainment and professional services. Strong household incomes, daily traffic and year-round consumer acti
+[Could not fetch: HTTPSConnectionPool(host='attheu.utah.edu', port=443): Max retries exceeded with url: /announcements/permanent-closure-of-west-arena-road-1800-east/ (Caused by NameResolutionError("HTTPSConnection(host='attheu.utah.edu', port=443): Failed to resolve 'attheu.utah.edu' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 309 ---
-URL: https://www.maldonandburnhamstandard.co.uk/news/26642865.sainsburys-open-new-burnham-store-creating-30-jobs/
-Title: Sainsbury's to open new store in Burnham with 30 new jobs created
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 10:08:14
+URL: https://www.gmanetwork.com/news/lifestyle/food/1006531/when-this-japanese-restaurant-opened-in-makati-30-years-ago-it-only-had-10-dishes-on-offer/story/
+Title: When this Japanese restaurant opened in Makati 30 years ago, it only had 10 dishes on offer
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 23:00:00
 
-Business Jobs and careers Sainsbury’s to open new Burnham store creating 30 jobs Business Jobs and careers By 
-            Anne Suslak Editor Share 0 Comments 4 Skip to next photo 1 / 1 Show caption 1 / 1 Share 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
-        and has been written by our American colleagues.
-        It does not necessarily reflect the view of The Herald. SAINSBURY'S is opening a new store in Burnham. The Foundry Lane store opens at 9am on Thursday, October 29. The opening has created 30 new jobs, alongside positions filled by former East of England Co-op staff who have joined the Sainsbury’s team. Staff ahead of the opening of the new Sainsbury's in Burnham (Image: Sainsbury's) Store manager Jo Bojas said: "It's been great getting to know Burnham over the last few months and we can't wait to open our doors and start welcoming shoppers in. "There’s been lots of work going on behind the scenes to get the store ready and we can’t wait to see what people think. Staff ahead of the opening of the new Sainsbury's in Burnham (Image: Sainsbury's) "We’re super excited for the 29th." To celebrate the launch, the first 500 customers will receive a limited-edition canvas bag featuring artwork by pupils from St Mary’s Primary School and Burnham Primary School. Read more Nursery reopens after closure with new name and fresh start Halstead Royal British Legion to unveil tribute with more than 500 poppies Before opening, Sainsbury’s supported the community with free drop-in sessions, a social supermarket run with Maldon and District CVS, and headline sponsorship of the Burnham-on-Crouch Carnival. Staff ahead of the opening of the new Sainsbury's in Burnham (Image: Sainsbury's) The store will stock Sainsbury’s full range of fresh food and offer click-and-collect for Argos, Habitat and Tu Clothing orders. Customers can benefit from the Nectar loyalty scheme from day one, with personalised offers 
+[Could not fetch: HTTPSConnectionPool(host='www.gmanetwork.com', port=443): Max retries exceeded with url: /news/lifestyle/food/1006531/when-this-japanese-restaurant-opened-in-makati-30-years-ago-it-only-had-10-dishes-on-offer/story/ (Caused by NameResolutionError("HTTPSConnection(host='www.gmanetwork.com', port=443): Failed to resolve 'www.gmanetwork.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 310 ---
-URL: https://whatnow.com/boston/restaurants/a-vegan-restaurant-in-boston-is-consolidating-its-operations-at-one-location/
-Title: A Vegan Restaurant in Boston Is Consolidating Its Operations at One Location
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-16 10:06:04
+URL: https://futuremedway.co.uk/aldi-confirms-opening-date-for-second-chatham-store/
+Title: Aldi confirms opening date for second supermarket in Maidstone Road, Chatham
+Status hint: Opening | Industry: Grocery
+Published: 2026-10-20 22:48:27
 
-Representative Image, Lulu Green prepares to close its South Boston location (Image credit: Photo by Ella Olsson from Pexels) SHARE A beloved vegan restaurant, Lulu Green, has announced the closure of its South Boston location and will serve its last bowl this weekend. The second location of the restaurant in Kendall Square, Cambridge, will remain open. Lulu Green’s South Boston Cafe Set to Close Boston’s plant-based cafe, Lulu Green, is well known for serving healthy meals and cold-pressed juices. The menu focuses on simple healthy eating and features a wide range of complete vegan dishes. The restaurant says it prepares its food from scratch daily using seasonal ingredients and locally sourced produce. The restaurant also says it limits refined sugar and oil and does not fry its food. The Lulu Green team shared the closure announcement on social media and stated the cafe located at 246 West Broadway in South Boston is closing permanently on Saturday, October 17. The team wrote, “After 7 incredible years, the time has come for us to move on to our next chapter.” The team said the decision was difficult and thanked South Boston residents for their support. In the post, the owners wrote, “South Boston welcomed us with open arms and allowed us to create something truly special – community + connection + friendships that will last a lifetime.” View this post on Instagram A post shared by LULU GREEN (@belulugreen) Second Location in Cambridge Remains Open While the South Boston location bids farewell to the community, Lulu Green’s new second location will continue to serve the community. Located at 675 W Kendall Street in Cambridge, the restaurant opened its doors in early 2026. In the post, the team stated that as a small family-owned business, it wants to concentrate on operating the newly opened second location. “This will allow us to bring our focus under one roof and continue bringing you remarkable plant-based food and drink with lots of fun happenings to come,” s
+[Could not fetch: HTTPSConnectionPool(host='futuremedway.co.uk', port=443): Max retries exceeded with url: /aldi-confirms-opening-date-for-second-chatham-store/ (Caused by NameResolutionError("HTTPSConnection(host='futuremedway.co.uk', port=443): Failed to resolve 'futuremedway.co.uk' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 311 ---
-URL: https://www.lansingstatejournal.com/story/news/local/2026/10/16/24-hour-fitness-chain-to-open-lansing-location/92220766007/
-Title: 24-hour fitness chain to open Lansing location
-Status hint: Opening | Industry: Gyms / Fitness
-Published: 2026-10-16 10:02:00
+URL: https://www.connectcre.com/stories/mexican-restaurant-cantina-monarca-to-open-flagship-location-at-vulcans-lake-union-piers/
+Title: Mexican Restaurant Cantina Monarca to Open Flagship Location at Vulcan’s Lake Union Piers
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 22:38:13
 
-[Could not fetch: 402 Client Error: Payment Required for url: https://www.lansingstatejournal.com/story/news/local/2026/10/16/24-hour-fitness-chain-to-open-lansing-location/92220766007/]
+[Could not fetch: HTTPSConnectionPool(host='www.connectcre.com', port=443): Max retries exceeded with url: /stories/mexican-restaurant-cantina-monarca-to-open-flagship-location-at-vulcans-lake-union-piers/ (Caused by NameResolutionError("HTTPSConnection(host='www.connectcre.com', port=443): Failed to resolve 'www.connectcre.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 312 ---
-URL: https://www.idahostatesman.com/entertainment/restaurants/article317641331.html
-Title: A Boise ‘gem’ for decades, this doughnut shop just opened a new store. Hello, Kuna!
+URL: https://www.bizjournals.com/albuquerque/news/2026/10/20/unm-albuquerque-primary-care-clinic.html
+Title: UNM Health to open $19M primary care clinic on Southwest Mesa
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 10:00:00
+Published: 2026-10-20 22:30:00
 
-DK Donuts has been on State Street for so long that nobody in Boise seems to remember how long. Even its current owner couldn’t say last year. (‘80s? ‘90s? Statesman archives track it back as far as 1994.) But in southwest Ada County, DK Donuts feels as new as freshly squeezed orange juice. After expanding to Nampa in 2025, the local institution just opened its third store — at 1200 N. Meridian Road, suite 140, in Kuna. In Idaho’s capital city, the iconic doughnut shop feels like a well-worn institution in an old building. “A Boise gem,” one Yelp reviewer called it. The Kuna store? It’s in a newly constructed strip mall. It might seem slightly, well, 21st century. Sorry, Kuna, your diet just took a major hit. DK Donuts will not be denied. DK Donuts Kuna/Facebook Two large menu screens behind the counter advertise all sorts of morning goodies. Customers will find the usual array of irresistible doughnuts, including DK’s beloved maple bacon bar. (Yum, $3.49 well spent.) DK also cranks out a large variety of breakfast and lunch sandwiches. And croissants. (The ham and cheese jalapeno croissant looks awfully tempting for $4.89.) There’s also a huge array of coffee, smoothies, juices, fruit teas and slushies. Despite the fact that DK in Kuna has only been open for days, reviews already have begun pouring in on Google. (All are 5 stars. Did you expect anything less?) “Delicious!” raved one. “I am so impressed with this place! Good service and pleasant staff.” “Probably the best donut I’ve ever had,” said another. “… We had a chocolate bar (amazing), maple bar, chocolate croissant, cinnamon roll donut and blueberry cake. We went at 8 a.m. and the donuts were still warm." “This place just opened and I couldn’t be happier,” admitted another reviewer. “Kuna gets a legit donut shop!” Ready for some DK? Hours in Kuna are 5 a.m. to 5 p.m. Monday through Saturday, and 6 a.m. to 3 p.m. Sunday. Menu screens behind the counter list tasty morning options. DK Donuts Kuna/Facebook Rela
+[Could not fetch: HTTPSConnectionPool(host='www.bizjournals.com', port=443): Max retries exceeded with url: /albuquerque/news/2026/10/20/unm-albuquerque-primary-care-clinic.html (Caused by NameResolutionError("HTTPSConnection(host='www.bizjournals.com', port=443): Failed to resolve 'www.bizjournals.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 313 ---
-URL: https://www.bizjournals.com/columbus/news/2026/10/16/downtown-columbus-restaurants-open-closed-coming.html
-Title: Downtown Columbus restaurants in 2026: Due Amici and Mitchell's Steakhouse close, Amara opens
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-16 10:00:00
+URL: https://yourvalley.net/phoenix-independent/stories/new-little-caesars-location-to-open-saturday-in-phoenixs-paradise-valley-neighborhood,730888
+Title: New Little Caesars location to open Saturday in Phoenix’s Paradise Valley neighborhood
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 22:29:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/columbus/news/2026/10/16/downtown-columbus-restaurants-open-closed-coming.html]
+[Could not fetch: HTTPSConnectionPool(host='yourvalley.net', port=443): Max retries exceeded with url: /phoenix-independent/stories/new-little-caesars-location-to-open-saturday-in-phoenixs-paradise-valley-neighborhood,730888 (Caused by NameResolutionError("HTTPSConnection(host='yourvalley.net', port=443): Failed to resolve 'yourvalley.net' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 314 ---
-URL: https://www.travelweekly-asia.com/Travel-News/Resorts/Batam-s-first-integrated-resort-to-open-in-December-2026
-Title: Batam’s first integrated resort to open in December 2026
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-16 09:50:01
+URL: https://nypost.com/2026/10/20/business/bay-area-favorite-zio-fraedos-shutters-in-vallejo-after-rent-dispute/
+Title: Iconic California waterfront restaurant closing after 20-year run, blaming landlord
+Status hint: Closing | Industry: Restaurants
+Published: 2026-10-20 22:27:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelweekly-asia.com/Travel-News/Resorts/Batam-s-first-integrated-resort-to-open-in-December-2026]
+[Could not fetch: HTTPSConnectionPool(host='nypost.com', port=443): Max retries exceeded with url: /2026/10/20/business/bay-area-favorite-zio-fraedos-shutters-in-vallejo-after-rent-dispute/ (Caused by NameResolutionError("HTTPSConnection(host='nypost.com', port=443): Failed to resolve 'nypost.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 315 ---
-URL: https://www.bradenton.com/news/local/article317624212.html
-Title: A new apartment complex is opening soon in this booming part of Manatee County
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 09:50:00
+URL: https://www.newsbreak.com/the-coconut-mama-317784482/4957282071919-california-five-guys-briefly-shut-down-over-sewage-violation-reopened-the-next-day
+Title: California Five Guys briefly shut down over sewage violation
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 22:21:24
 
-The Sinclair at Ellenton apartments, 9515 U.S. 301 N., Parrish, are under construction and targeting an opening date by the end of 2026. Jason Dill jdill@bradenton.com A new apartment complex under construction in the Parrish area is planning to open by the end of the year. The Sinclair at Ellenton, located at 9515 U.S. 301 N., Parrish, has one-, two- and three-bedrooms for rent. According to building records, the complex features 217 units. Each apartment has electronic door locks, smart-connected thermostats, in-unit Wi-Fi, quartz countertops, kitchen islands, vinyl plank flooring, bedroom carpeting, walk-in closets and screened-in balconies. The Sinclair at Ellenton will be a gated community with several community amenities, including a heated resort-style zero-entry pool, a Pilates studio, electric vehicle charging stations, a practice putting green and more, according to the complex’s website. Willow Bridge Property Company, which was founded in 1965 in Texas, manages the Sinclair at Ellenton. A specific opening date has not been announced. For more information, visit www.SinclairEllentonApts.com . The Sinclair at Ellenton apartments, 9515 U.S. 301 N., Parrish, are under construction and targeting an opening date by the end of 2026.                                                                                            Jason Dill jdill@bradenton.com The Sinclair at Ellenton apartments, 9515 U.S. 301 N., Parrish, are under construction and targeting an opening date by the end of 2026.                                                                                            Jason Dill jdill@bradenton.com The Sinclair at Ellenton apartments, 9515 U.S. 301 N., Parrish, are under construction and targeting an opening date by the end of 2026.                                                                                            Jason Dill jdill@bradenton.com The Sinclair at Ellenton apartments, 9515 U.S. 301 N., Parrish, are under construction and targeting a
+[Could not fetch: HTTPSConnectionPool(host='www.newsbreak.com', port=443): Max retries exceeded with url: /the-coconut-mama-317784482/4957282071919-california-five-guys-briefly-shut-down-over-sewage-violation-reopened-the-next-day (Caused by NameResolutionError("HTTPSConnection(host='www.newsbreak.com', port=443): Failed to resolve 'www.newsbreak.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 316 ---
-URL: https://www.wbng.com/2026/10/15/dozens-swarm-chick-fil-a-johnson-city-grand-opening/
-Title: Dozens swarm Chick-fil-A for Johnson City grand opening
+URL: https://www.kjct8.com/2026/10/20/in-person-voting-now-open-mesa-county/
+Title: In-person voting now open in Mesa County
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 09:41:45
+Published: 2026-10-20 22:21:00
 
-Share Add Us On Google Add as a preferred source on Google JOHNSON CITY, N.Y. (WBNG) - Cars began lining up late Wednesday night to be first inside the new Johnson City Chick-fil-A ahead of Thursday morning’s grand opening. Dozens of customers swarmed the restaurant Thursday morning, and the line grew longer as dawn approached. Some customers camped outside the restaurant as early as 9 p.m. Wednesday, dressed in cow costumes resembling the chain’s mascot. They reserved their place in line by standing outside the entrance or filling the drive-thru, with some sleeping in their cars. One customer said, “Once I got down here, I got my trench coat and my cow costume. It was very warm!” Customer Ugwuogo Onwuka arrived at 4:30 a.m. and was among the first customers served. “Well you see the thing about first things is that you could only do a first thing one time, right? So I think being able to come here and say I was here, I think that was important,” Onwuka said. Asked if he had gone to similar lengths for another restaurant before, Onwuka said, “None of the others were worth it!” Owner wants restaurant to be a community gathering place Danielle Cannella, local owner and operator of the Johnson City franchise, said she wants the location to be more than a fast food restaurant. “For Johnson City, I hope it just means a safe place to come. Like I just want it to be a welcoming environment, I want everyone to walk in these doors and just feel super welcomed. We have games and a playground -- I want families to feel comfortable! And I hope to do some really fun events in the future like bingo and trivia night,” Cannella said. Staff at the Chick-fil-A said Johnson City police will remain at the location for about the first week to direct traffic. Staff said they expect traffic to ease after that period. Copyright 2026 WBNG. All rights reserved.
+[Could not fetch: HTTPSConnectionPool(host='www.kjct8.com', port=443): Max retries exceeded with url: /2026/10/20/in-person-voting-now-open-mesa-county/ (Caused by NameResolutionError("HTTPSConnection(host='www.kjct8.com', port=443): Failed to resolve 'www.kjct8.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 317 ---
-URL: https://www.actionnetwork.com/news/cedar-crossing-casino-opens-november-cedar-rapids-iowa
-Title: Cedar Crossing Casino Opening Date, Games & Entertainment
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 09:33:00
+URL: https://williamsonsource.com/spring-hills-grecian-family-restaurant-reopens-wednesday-after-closure-fueling-gordon-ramsay-speculation/
+Title: Spring Hill’s Grecian Family Restaurant Reopens Wednesday After Closure, Fueling Gordon Ramsay Speculation
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 22:16:14
 
-Turn your sports knowledge into winning
-                  predictions 21+ or 18+ in Certain Locations. 19+ in ON. Please Play Responsibly. Gambling Problem? Call 1-800-GAMBLER. Visit connexontario.ca or Call 1-866-531-2600 in ON. No Code Needed Home Right Arrow News Cedar Crossing Casino Will Open in November Dave Grendzynski Betting News Writer Download App Updated: Oct 16, 2026, 05:33 AM EDT Updated: Oct 16, 2026, 05:33 AM EDT 4 min read Credit: R2 Architecture Cedar Crossing Casino & Entertainment Center is Cedar Rapids’ long-awaited new destination for gaming, live music, dining, and community events. The $275 million casino in Iowa will open to the public on November 19, 2026, followed by a ribbon-cutting and grand opening on December 5. It will be Linn County’s first casino. It is also expected to become Iowa’s 20th commercial casino, bringing a major new entertainment option to eastern Iowa. The news comes in the wake of the opening of a new Bally's casino in Marquette. It ended of the era for true riverboat casinos in Iowa. When Does Cedar Crossing Casino Open? The November opening comes about six weeks earlier than the casino’s original New Year’s Eve target. Casino leaders said local contractors, favorable weather, and strong planning helped construction finish ahead of schedule. Sports betting kiosks will not be available during the November soft opening. They are expected to launch around the December 5 grand opening, after the Iowa Racing and Gaming Commission approved a sports wagering license for the property. The casino will offer 22 table games, including blackjack and other live dealer games. Image Credit: R2 Architecture What Is Inside Cedar Crossing? Cedar Crossing Casino & Entertainment Center is designed as more than a casino in Iowa. The development includes gaming, entertainment, restaurants, arts programming, and educational spaces. Visitors can expect: About 700 slot machines 22 table games A 1,500-seat entertainment venue for concerts, com
+[Could not fetch: HTTPSConnectionPool(host='williamsonsource.com', port=443): Max retries exceeded with url: /spring-hills-grecian-family-restaurant-reopens-wednesday-after-closure-fueling-gordon-ramsay-speculation/ (Caused by NameResolutionError("HTTPSConnection(host='williamsonsource.com', port=443): Failed to resolve 'williamsonsource.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 318 ---
-URL: https://www.facebook.com/sunstardavaonews/posts/hotel101-davao-begins-operations-after-july-soft-openinghotel101-davao-began-ope/1595644865937056/
-Title: HOTEL101-DAVAO BEGINS OPERATIONS AFTER JULY SOFT OPENING Hotel101-Davao began operations following its soft opening on July 30, 2026, adding 519 rooms to Davao City’s accommodation sector. The hotel is located along Eco West Drive, acr
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-16 09:26:35
+URL: https://triblive.com/business/local-stories/riverstone-books-continues-its-story-at-larger-location-in-mccandless/
+Title: Riverstone Books continues its story at larger location in McCandless
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 22:11:36
 
-SunStar Davao - HOTEL101-DAVAO BEGINS OPERATIONS AFTER...
+[Could not fetch: HTTPSConnectionPool(host='triblive.com', port=443): Max retries exceeded with url: /business/local-stories/riverstone-books-continues-its-story-at-larger-location-in-mccandless/ (Caused by NameResolutionError("HTTPSConnection(host='triblive.com', port=443): Failed to resolve 'triblive.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 319 ---
-URL: https://whatnow.com/atlanta/retail/an-online-first-fashion-brand-opens-its-first-store-at-ponce-city-market/
-Title: An Online-First Fashion Brand Opens Its First Store at Ponce City Market
+URL: https://communityimpact.com/spring-klein/dining/buren-bakery-expands-with-second-location-in-spring-klein/
+Title: Buren Bakery expands with second location in Spring-Klein
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 09:24:19
+Published: 2026-10-20 22:05:00
 
-Representative Image, Dragon Denim opens in Ponce City Market (Image credit: Photo by MART PRODUCTION from Pexels) SHARE Dragon Denim has opened its first store in Atlanta. The store marks the brand’s expansion from an online business to physical retail. The new store will elevate the brand’s shoppers’ experience, letting them browse the products in person. Dragon Denim Opens Its Brick-and-Mortar Store in Atlanta Dragon Denim has opened its first brick-and-mortar store on the second floor of the Central Food Hall, next to Rhen’s Nest in Ponce City Market . The store operates under a short-term lease, an arrangement that Parks said gives the business flexibility as it grows. The store will carry ready-to-wear and custom denim jackets. “Dragon Denim was born as a creative project that I didn’t expect to grow into a business, so opening our first dedicated storefront is an incredibly meaningful milestone,” said Rayna Lee Parks. “It feels exciting to continue our journey at Ponce City Market, where I started in Citizen Supply with other entrepreneurs, and now have grown into my own space with a short-term lease that allows flexibility as we scale the business.” Ponce City Market is a mixed-use destination in Atlanta. It features restaurants, retail stores, offices, residences, and public spaces. The destination also helped small businesses grow by providing opportunities to start in shared retail spaces before moving into their own storefronts. View this post on Instagram A post shared by Dragon Denim (@dragondenim) About the Brand Designer Rayna Lee Parks launched Dragon Denim in 2018. She gained attention online for adding hand-painted artwork to a thrifted denim jacket. Parks later developed the project into a business and sold her designs through Citizen Supply at Ponce City Market. Dragon Denim describes its approach as slow fashion, with denim jackets featuring decorative and customized details. Its jackets feature details such as lace, embroidery, and printed des
+[Could not fetch: HTTPSConnectionPool(host='communityimpact.com', port=443): Max retries exceeded with url: /spring-klein/dining/buren-bakery-expands-with-second-location-in-spring-klein/ (Caused by NameResolutionError("HTTPSConnection(host='communityimpact.com', port=443): Failed to resolve 'communityimpact.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 320 ---
-URL: https://www.app.com/story/money/business/main-street/2026/10/16/mutiny-beach-bbq-restaurant-asbury-park-convention-hall-closes/92265023007/
-Title: Asbury Park BBQ restaurant shutters Convention Hall location
-Status hint: Closing | Industry: Restaurants
-Published: 2026-10-16 09:15:00
+URL: https://www.aol.com/articles/aurora-movie-theater-permanently-close-214615000.html
+Title: Aurora movie theater to permanently close on Halloween
+Status hint: Closing | Industry: Movie Theatres
+Published: 2026-10-20 21:52:53
 
-[Could not fetch: 402 Client Error: Payment Required for url: https://www.app.com/story/money/business/main-street/2026/10/16/mutiny-beach-bbq-restaurant-asbury-park-convention-hall-closes/92265023007/]
+[Could not fetch: HTTPSConnectionPool(host='www.aol.com', port=443): Max retries exceeded with url: /articles/aurora-movie-theater-permanently-close-214615000.html (Caused by NameResolutionError("HTTPSConnection(host='www.aol.com', port=443): Failed to resolve 'www.aol.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 321 ---
-URL: https://www.app.com/story/money/business/main-street/whats-going-there/2026/10/16/krispy-kreme-monmouth-shops-marlboro-ocean-township/92268762007/
-Title: Krispy Kreme opening its first Monmouth shops at these two locations
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 09:15:00
+URL: https://whatnow.com/toronto/restaurants/mezzmiz-expanding-with-first-toronto-restaurant/
+Title: Mezzmiz Expanding With First Toronto Restaurant
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 21:51:21
 
-[Could not fetch: 402 Client Error: Payment Required for url: https://www.app.com/story/money/business/main-street/whats-going-there/2026/10/16/krispy-kreme-monmouth-shops-marlboro-ocean-township/92268762007/]
+[Could not fetch: HTTPSConnectionPool(host='whatnow.com', port=443): Max retries exceeded with url: /toronto/restaurants/mezzmiz-expanding-with-first-toronto-restaurant/ (Caused by NameResolutionError("HTTPSConnection(host='whatnow.com', port=443): Failed to resolve 'whatnow.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 322 ---
-URL: https://www.broadsheet.com.au/melbourne/food-and-drink/article/bar-adri-coming-soon
-Title: Coming Soon: Two Former Osteria Ilaria Chefs Are Opening a Wine Bar in St Kilda
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 09:12:58
+URL: https://www.theconnecticutscoop.com/all-windham-county-posts/killingly-scoop-staples-closing-in-december
+Title: KILLINGLY SCOOP: Staples closing in December
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 21:47:31
 
-Subscribe Login Subscribe Login Subscribe Login Coming Soon: A Former Osteria Ilaria Chef Is Opening a Wine Bar in St Kilda Mattia Aloisio and Tommy Barreault · Photo: Courtesy of Bar Adri / Kit Edwards Just when we thought the suburb couldn’t get any better, here comes Bar Adri, an 80-seat spot on Fitzroy Street with European flair. Words by Dan Cunningham · Updated on 19 Oct 2026 · Published on 16 Oct 2026 Read later There’s something in the water in St Kilda. Stokehouse is about to enter a new era under Andrew McConnell and Jo McGann. Meanwhile, The Prince is about to do the same with Marmont’s Grant Smillie at the wheel. The Saint Hotel is also set for a major transformation in November. Next up: a wine bar on Fitzroy Street by Lasagna Lab founder and Osteria Ilaria alum Mattia Aloisio. Former Tipo 00 head chef Tommy Barreault will support Mattias in the kitchen during the launch, while Mattia’s partner Adriana Aloisio is leading the venue’s design and will steer service as restaurant manager. Mattia says the team is aiming for a soft launch at the end of October. “Fitzroy Street is changing and we’re really proud to be part of this block. I’m a local, and even though we’re a wine bar, I’ve always felt like a good food offering was missing.” With Bar Adri, the team hopes to fill the gap with a broad European menu, featuring mains below the $45 mark. A late-night menu on Fridays and Saturdays is also on the agenda. Opening dishes will include charred Skull Island prawns with Tassie Mountain pepper sugo and burnt chilli; cordon bleu with potato terrine and veal jus; and a hibachi-grilled calamari with a caper and anchovy dressing – a favourite from Mattia’s time cooking at The Grand Hotel in Richmond. “We don’t want people to come to Bar Adri and feel like they’re forced to have the full menu experience,” he says. “If people want to come in and have half a dozen oysters and a glass of champagne, we’re happy.” Speaking of which, good plonk is a big focus. A keenly 
+[Could not fetch: HTTPSConnectionPool(host='www.theconnecticutscoop.com', port=443): Max retries exceeded with url: /all-windham-county-posts/killingly-scoop-staples-closing-in-december (Caused by NameResolutionError("HTTPSConnection(host='www.theconnecticutscoop.com', port=443): Failed to resolve 'www.theconnecticutscoop.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 323 ---
-URL: https://www.tuscaloosanews.com/story/news/local/2026/10/16/a-town-wings-opening-new-location-in-northport/92231261007/
-Title: A-Town Wings opening new location in Northport
+URL: https://whatnow.com/denver/restaurants/peak-pizza-brings-a-new-slice-to-the-outlets-at-castle-rock/
+Title: Peak Pizza Brings a New Slice to the Outlets at Castle Rock
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 09:08:00
+Published: 2026-10-20 21:42:24
 
-[Could not fetch: 402 Client Error: Payment Required for url: https://www.tuscaloosanews.com/story/news/local/2026/10/16/a-town-wings-opening-new-location-in-northport/92231261007/]
+[Could not fetch: HTTPSConnectionPool(host='whatnow.com', port=443): Max retries exceeded with url: /denver/restaurants/peak-pizza-brings-a-new-slice-to-the-outlets-at-castle-rock/ (Caused by NameResolutionError("HTTPSConnection(host='whatnow.com', port=443): Failed to resolve 'whatnow.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 324 ---
-URL: https://www.nola.com/news/gulf_coast/mississippi-gulf-coast-hotels/article_3a3568d2-19f0-4939-8139-b5bd66fd450f.html
-Title: Boutique stays, historic rebirths: Why so many new hotels are opening on the Mississippi Coast
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-16 09:00:00
+URL: https://www.fox61.com/video/life/food/waterbury-restaurant-closing-after-almost-40-years-customers-share-what-theyll-miss/520-8a1072c1-a828-4b0e-b78e-8c67db03dd0b
+Title: Waterbury restaurant closing after almost 40 years, customers share what they'll miss
+Status hint: Closing | Industry: Restaurants
+Published: 2026-10-20 21:42:00
 
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.nola.com/news/gulf_coast/mississippi-gulf-coast-hotels/article_3a3568d2-19f0-4939-8139-b5bd66fd450f.html]
+[Could not fetch: HTTPSConnectionPool(host='www.fox61.com', port=443): Max retries exceeded with url: /video/life/food/waterbury-restaurant-closing-after-almost-40-years-customers-share-what-theyll-miss/520-8a1072c1-a828-4b0e-b78e-8c67db03dd0b (Caused by NameResolutionError("HTTPSConnection(host='www.fox61.com', port=443): Failed to resolve 'www.fox61.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 325 ---
-URL: https://madridsecreto.co/en/lidl-to-open-a-supermarket-in-madrid/
-Title: Lidl will open a supermarket spanning more than 1,000 m² in the heart of Madrid later this month
-Status hint: Opening | Industry: Grocery
-Published: 2026-10-16 08:54:31
+URL: https://www.usatoday.com/story/money/retail/2026/10/20/ollies-bargain-outlet-new-store-openings-october-2026/92351534007/
+Title: Ollie's Bargain Outlet opening stores in these 7 states in October
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 21:39:00
 
-Editorial credit: Lidl Save Share Elena Francés – Editor · October 16, 2026 Add us as a preferred source Until a few years ago, going to Lidl meant leaving the city center and almost certainly having to drive to get there; however, since 2021, the company has been focusing on urban centers. Now, San Bernardo Street in Madrid will have a new supermarket from the German brand before the end of October. Lidl has announced that it will open on Thursday, October 29, at number 95, with a store area of more than 1,000 square meters. The store will be open Monday through Sunday, from 9:00 a.m. to 10:00 p.m., according to the schedule released by the chain. The opening will strengthen its presence in downtown Madrid with a location that the company describes as a space that stands out for its “spaciousness and uniqueness.” One of Lidl’s five openings in October Lidl Supermarkets in Spain. The opening in San Bernardo is part of a schedule that includes new stores in Llinars del Vallès, Barcelona; Pilar de la Horadada, Alicante; Cee, A Coruña; and Vélez-Málaga, Málaga. The five stores will total more than 6,600 square meters of retail space, representing a combined investment of over 30 million euros and the creation of more than 100 jobs. The company plans to invest more than 440 million euros and carry out more than 60 projects across its retail network, including new openings, expansions, and renovations. As part of this program, it plans to open nearly 50 new stores , with a special focus on the islands and major urban centers. You might be interested in: The Thyssen Museum is opening reservations today for new free guided tours: there are only 25 spots per session
+[Could not fetch: HTTPSConnectionPool(host='www.usatoday.com', port=443): Max retries exceeded with url: /story/money/retail/2026/10/20/ollies-bargain-outlet-new-store-openings-october-2026/92351534007/ (Caused by NameResolutionError("HTTPSConnection(host='www.usatoday.com', port=443): Failed to resolve 'www.usatoday.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 326 ---
-URL: https://www.whitehavennews.co.uk/news/26642196.tj-hughes-open-new-egremont-store-christmas/
-Title: TJ Hughes to open new store before Christmas and recruit 15 staff
+URL: https://www.redbooklumberdata.com/2026/10/20/floor-decor-announces-new-store-opening-in-cape-coral-florida/
+Title: Floor & Decor Announces New Store Opening in Cape Coral, Florida
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 08:33:27
+Published: 2026-10-20 21:38:59
 
-Business Leisure Shopping TJ Hughes to open new Egremont store before Christmas Business Leisure Shopping By 
-            Sonia Veneziani-Rocha Reporter Share 0 Comments The site will move into the old Original Factory Shop unit (Image: Google) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
-        and has been written by our American colleagues.
-        It does not necessarily reflect the view of The Herald. National discount department store TJ Hughes is coming to West Cumbria before Christmas. The brand, originally founded in Liverpool, is taking over the old Original Factory Shop unit. The move was first announced by Egremont Town Council in a Facebook post, where they said: "Here goes: TJ Hughes are advertising for a store manager for their NEW store in Egremont. "For those who know TJ Hughes is a national store very similar to our previous Plastic Factory and rumour is they are planning to take over the old plastic site, which would be great for the Town." A spokesperson from TJ Hughes confirmed the move. They said: "TJ Hughes is coming to Egremont and we hope it is to the delight of local shoppers. "Moving into the Original Factory Shop unit, the store is due to open before the end of November, which means Egremont’s Christmas shopping options just got even better." Jason Harmer, COO of TJ Hughes, said: “This represents an important step for us. "Egremont is a fantastic location with a great community reputation and we are opening in a site that has served the town well for several years so we believe this move will be good for both the town and for our brand. "Coming to Egremont, which a new location for our brand, is something we’re really excited about. "We are recruiting upto 15 members of staff for the new store, and this move is part of the broader growth of the TJ Hughes estate.” TJ Hughes offers a range of products such as fashion, beauty, homeware, pet care and everyday goods. Business Leisure 
+[Could not fetch: HTTPSConnectionPool(host='www.redbooklumberdata.com', port=443): Max retries exceeded with url: /2026/10/20/floor-decor-announces-new-store-opening-in-cape-coral-florida/ (Caused by NameResolutionError("HTTPSConnection(host='www.redbooklumberdata.com', port=443): Failed to resolve 'www.redbooklumberdata.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 327 ---
-URL: https://www.retailgazette.co.uk/blog/2026/10/oliver-bonas-clapham-junction/
-Title: Oliver Bonas launches new store at Clapham Junction station
+URL: https://whatnow.com/austin/retail/pilates-addiction-franchisee-planning-new-cedar-park-location/
+Title: Pilates Addiction Franchisee Planning New Cedar Park Location
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 08:33:24
+Published: 2026-10-20 21:37:08
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.retailgazette.co.uk/blog/2026/10/oliver-bonas-clapham-junction/]
+[Could not fetch: HTTPSConnectionPool(host='whatnow.com', port=443): Max retries exceeded with url: /austin/retail/pilates-addiction-franchisee-planning-new-cedar-park-location/ (Caused by NameResolutionError("HTTPSConnection(host='whatnow.com', port=443): Failed to resolve 'whatnow.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 328 ---
-URL: https://docksiderestaurant.com.au/golden-corral-closing-locations-in-2026/
-Title: Golden Corral Closing Locations in 2026: Why Some Buffets Are Shutting While New Ones Open!
+URL: https://www.fox2detroit.com/news/hundreds-gather-sign-beefcarver-royal-oak-before-iconic-restaurant-shuts-down
+Title: Sign of the Beefcarver customers share memories ahead of closing
 Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-16 08:21:31
+Published: 2026-10-20 21:33:14
 
-If you’ve pulled up to your local buffet and found a “permanently closed” notice on the door, you’re not imagining things. Golden Corral closing a handful of restaurants has been a recurring local news story this year. Yet the chain hasn’t collapsed. It is shutting some older locations while planning new ones, and the two trends are connected. Here is what the situation looks like and what it means for regular diners. Is Golden Corral Closing for Good? The Short Answer No. Golden Corral is not going out of business. Founded in 1973 and based in Raleigh, North Carolina, it is still the largest grill-buffet chain in the country, with roughly 400 restaurants. What’s happening is a reshuffle. Individual restaurants, often run by franchisees, have closed their doors, including locations in Maple Grove, Minnesota, and Alton, Illinois, and several in Maryland. In the same period, the company has talked openly about building new restaurants that stretch into 2027. Super Soft Eggless Coconut Semolina Cake Made With Simple Ingredients A closure notice at one address says more about that site than about the whole brand. Aging buildings, expiring leases, and a local owner deciding to retire all produce the same headline. Why Are Golden Corral Restaurants Closing? Buffets carry a unique cost structure. They prepare large quantities of food before knowing how many people will walk in, and they need big dining rooms and plenty of staff. When food costs, wages, and rent rise together, the margin on a fixed-price meal shrinks quickly. Canned Beef Stew Tastes Gourmet With These Simple Kitchen Upgrades Some of the pressure is not new. The pandemic hit buffet chains harder than most restaurants, and Golden Corral closed its company-owned restaurants in early 2021 while major franchisees filed for bankruptcy protection. The recovery since then has been uneven, and the effects still show up in local closings. Common reasons behind individual closures include: Older, oversized buildings t
+[Could not fetch: HTTPSConnectionPool(host='www.fox2detroit.com', port=443): Max retries exceeded with url: /news/hundreds-gather-sign-beefcarver-royal-oak-before-iconic-restaurant-shuts-down (Caused by NameResolutionError("HTTPSConnection(host='www.fox2detroit.com', port=443): Failed to resolve 'www.fox2detroit.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 329 ---
-URL: https://www.heraldnews.com/story/news/2026/10/16/aldi-gearing-up-to-open-its-third-southcoast-grocery-store/92266020007/
-Title: Aldi says Swansea grocery store to open 'by end of year'; hiring now
-Status hint: Opening | Industry: Grocery
-Published: 2026-10-16 08:03:00
+URL: https://fox5sandiego.com/san-diego-guide/westfield-utc-luxury-wing-opening/
+Title: New luxury wing at Westfield UTC in San Diego celebrates grand opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 21:28:22
 
-[Could not fetch: 402 Client Error: Payment Required for url: https://www.heraldnews.com/story/news/2026/10/16/aldi-gearing-up-to-open-its-third-southcoast-grocery-store/92266020007/]
+[Could not fetch: HTTPSConnectionPool(host='fox5sandiego.com', port=443): Max retries exceeded with url: /san-diego-guide/westfield-utc-luxury-wing-opening/ (Caused by NameResolutionError("HTTPSConnection(host='fox5sandiego.com', port=443): Failed to resolve 'fox5sandiego.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 330 ---
-URL: https://wpst.com/ixp/394/p/chick-fil-a-coming-toms-river/
-Title: Toms River Planning Board Approves Chick-fil-A For Ocean County Mall Location
+URL: https://flatheadbeacon.com/newsletters/the-daily-roundup-three-new-miles-of-whitefish-trail-open-on-big-mountain/
+Title: The Daily Roundup: Three New Miles of Whitefish Trail Open on Big Mountain
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 07:50:53
+Published: 2026-10-20 21:22:56
 
-Chick-fil-A is Coming to the Ocean County Mall Chick-fil-A is Coming to the Ocean County Mall Shawn Michaels Shawn Michaels Published: October 16, 2026 Shawn Michaels Share on Facebook Share on Twitter Print this page The Ocean County Mall continues to evolve and the latest addition announced is the addition of the very popular food chain, Chick-fil-A. I recently went and checked out the new location for the Chick-fil-A , the site of the former Bahama Breeze restaurant. Shawn Michaels Shawn Michaels In May of 2025 Bahama Breeze closed it's doors at the Ocean County Mall and has sat there since. According to a report from app.com, "Chick-fil-A asked Toms River Planning Board for the go-ahead to demolish the vacant Bahama Breeze Island Grille restaurant at Ocean County Mall and build a restaurant with a drive-through lane in its place. A hearing was held on Oct. 7." 92.7 WOBM via Facebook Some of the comments from readers: Jaynie: Yay! Just Me Salonie: Long overdue! Hopefully Cracker Barrel is next! Rachel: No boo! They need an allergy friendly restaurant! And something we don't already have in ocean county! Keith: I hope this isn't BS Jim: BOYCOTTING!! These are the BULLSHIT CHRISTIANS who HIDE their HATE behind their FAKE BULLSHIT CHRISTIAN CHURCH! GOD sees your BULLSHIT!!! HELL AWAITS YALL !!!! Daniel: Grotesque, take a perfectly functioning building tear it down to put in some homophobic slop, Toms River you're better than this Carlo: yes better than mexican there are too many mexican food restaurants William: We don’t need another chicken joint This will be the first Chick-fil-A to open in Toms River . In Ocean County there are two other locations in Manahawkin and Brick Township . According to app.com , "Chick-fil-A recently got the OK to build a new restaurant at the Ocean County Mall." So what do YOU think? post your comments and let us know. There was no word on when this construction will begin. LOOK: Top pizza chains in the US To help you find your next sli
+[Could not fetch: HTTPSConnectionPool(host='flatheadbeacon.com', port=443): Max retries exceeded with url: /newsletters/the-daily-roundup-three-new-miles-of-whitefish-trail-open-on-big-mountain/ (Caused by NameResolutionError("HTTPSConnection(host='flatheadbeacon.com', port=443): Failed to resolve 'flatheadbeacon.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 331 ---
-URL: https://safariindia.com/hyatt-all-inclusive-resorts-in-mexico/
-Title: Hyatt to Open Two All-Inclusive Resorts in Mexico by Late 2026
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-16 07:42:12
+URL: https://siouxfalls.business/in-new-location-good-natured-thrives-as-third-place-as-food-offerings-launch/
+Title: In new location, Good NAtured thrives as ‘third place’ as food offerings launch
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 21:22:25
 
-[Could not fetch: HTTPSConnectionPool(host='safariindia.com', port=443): Read timed out. (read timeout=15)]
+[Could not fetch: HTTPSConnectionPool(host='siouxfalls.business', port=443): Max retries exceeded with url: /in-new-location-good-natured-thrives-as-third-place-as-food-offerings-launch/ (Caused by NameResolutionError("HTTPSConnection(host='siouxfalls.business', port=443): Failed to resolve 'siouxfalls.business' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 332 ---
-URL: https://www.evz.ch/en/news/medientyp/news-flash/2026/10/the-new-evz-store-opens-on-wednesday/
-Title: The new EVZ STORE opens on Wednesday!
+URL: https://www.northjersey.com/press-release/story/256213/hd-escape-rooms-opens-fifth-colorado-location-bringing-year-round-horror-experience-to-broomfield-co/
+Title: HD ESCAPE ROOMS OPENS FIFTH COLORADO LOCATION, BRINGING YEAR-ROUND HORROR EXPERIENCE TO BROOMFIELD, CO
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 07:41:37
+Published: 2026-10-20 21:14:30
 
-We’re opening our brand-new EVZ STORE on Wednesday afternoon at 2 pm. Come along, pick up your EVZ fan merchandise for the triple home opener and meet Gregory Hofmann and Noemi Ryhner. Keep Building heads towards its next milestone: Over the weekend of 23–25 October, the EVZ Men’s and Women’s Teams will make their triple home debut. The new South Wing will also be opened on this occasion. Over the next few days, we’ll be introducing you to the key new features. Today: The new EVZ STORE. With the brand relaunch in February and the completely revamped online fan shop, the new EVZ world has already taken shape. Now it’s getting a physical home too: this coming Wednesday, 21 October at 2.00 pm , the new EVZ STORE, located at the main entrance to the OYM hall on Arenaplatz in Zug, will open its doors to the public for the first time. It replaces the previous fan shop, which was closed in spring 2026 as part of the Keep Building construction works. A NEW SHOPPING EXPERIENCE EVZ fans can look forward to a new shopping experience. From the official home and away jerseys to the 67 Bull cap and the EVZ car sticker, the new STORE has everything a blue-and-white fan could wish for. The EVZ STORE is accessible directly from the stadium on home match days for both the men’s and women’s teams, and invites you to browse before, during and after the match. VISIT THE ONLINE SHOP MEET GREGORY HOFMANN AND NOEMI RYHNER Gregory Hofmann and Noemi Ryhner will also be there for the opening on Wednesday, 21 October at 2 pm. Make the most of this opportunity to meet the two EVZ stars and discover the new EVZ STORE. We look forward to seeing you there! IT’S ALL NEW
+[Could not fetch: HTTPSConnectionPool(host='www.northjersey.com', port=443): Max retries exceeded with url: /press-release/story/256213/hd-escape-rooms-opens-fifth-colorado-location-bringing-year-round-horror-experience-to-broomfield-co/ (Caused by NameResolutionError("HTTPSConnection(host='www.northjersey.com', port=443): Failed to resolve 'www.northjersey.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 333 ---
-URL: https://corridorbusiness.com/cedar-crossing-casino-sets-soft-opening-for-nov-19-six-weeks-ahead-of-schedule/
-Title: Cedar Crossing casino sets ‘soft opening’ for Nov. 19, six weeks ahead of schedule
+URL: https://www.newsbreak.com/idaho-state-journal-1591702/4957983315485-raising-cane-s-to-open-first-location-in-idaho-falls-on-tuesday
+Title: Raising Cane’s to open first location in Idaho Falls on Tuesday
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 07:16:51
+Published: 2026-10-20 21:14:07
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://corridorbusiness.com/cedar-crossing-casino-sets-soft-opening-for-nov-19-six-weeks-ahead-of-schedule/]
+[Could not fetch: HTTPSConnectionPool(host='www.newsbreak.com', port=443): Max retries exceeded with url: /idaho-state-journal-1591702/4957983315485-raising-cane-s-to-open-first-location-in-idaho-falls-on-tuesday (Caused by NameResolutionError("HTTPSConnection(host='www.newsbreak.com', port=443): Failed to resolve 'www.newsbreak.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 334 ---
-URL: https://news.futunn.com/en/post/1001349599/sanfrontier-real-estate-to-open-second-hiyori-hotel-flex-property
-Title: Sanfrontier Real Estate to Open Second "Hiyori Hotel Flex" Property in Hakata as Part of Hotel Business Expansion
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-16 07:13:51
+URL: https://whatnow.com/denver/restaurants/santos-cafe-grill-expands-to-capitol-hill-with-second-denver-location/
+Title: Santos Café & Grill Expands to Capitol Hill With Second Denver Location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 21:12:35
 
-Document 请启用 JavaScript
+[Could not fetch: HTTPSConnectionPool(host='whatnow.com', port=443): Max retries exceeded with url: /denver/restaurants/santos-cafe-grill-expands-to-capitol-hill-with-second-denver-location/ (Caused by NameResolutionError("HTTPSConnection(host='whatnow.com', port=443): Failed to resolve 'whatnow.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 335 ---
-URL: https://www.tradingview.com/news/reuters.com,2026-10-16:newsml_Zaw5fkDFB:0-zawya-oman-115-6mln-projects-launch-in-al-irfan-s-expansion/
-Title: ZAWYA: Oman: $115.6mln projects launch in Al Irfan’s expansion
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 07:03:40
+URL: https://www.cbsnews.com/detroit/video/diners-pack-sign-of-the-beefcaver-ahead-of-restaurants-closing/
+Title: Diners pack Sign of the Beefcaver ahead of restaurant's closing
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 21:04:00
 
-ZAWYA: Oman: $115.6mln projects launch in Al Irfan’s expansion Refinitiv 3 min read By Staff Writer MUSCAT - Madinat Al Irfan is seeking to turn its growing corporate presence into demand for homes through RO 44.5 million in residential projects, as development partner Hassan Allam Holding prepares to expand its investment in Oman. The Muscat destination already accommodates almost 3,000 employees, while the Oman Convention and Exhibition Centre attracts around 1.8 million visitors annually, Mohammed al Salmi, General Manager of Madinat Al Irfan, said in an interview with Observer. The next phase will bring the destination’s first residents into an area that has established itself as a business and hospitality hub, creating demand for schools, shops and other community services. “We always focus on the quality of the unit and building a community rather than just houses,” Al Salmi said. The expansion follows two agreements between Omran Group and Hassan Allam Holding, through its real estate development arm Grova Developments. They cover a RO 29 million residential neighbourhood and a RO 15.5 million branded residences project. Al Salmi said Grova would handle development execution, financing and capital investment, with further details of the residential offerings expected in the coming months. The projects will establish the first housing phase within Madinat Al Irfan’s wider masterplan, which envisages 10,000 residential units across a 7 million-square-metre destination combining homes, offices, hospitality, retail and public spaces. Target buyers include Omanis and foreign nationals, particularly people seeking homes close to their workplaces. Al Salmi said the development’s integrated tourism complex framework would accommodate both local and international buyers. The planned International Financial Centre of Oman is also generating interest in the destination, with enquiries from companies considering relocating their headquarters. “We’re expecting more demand
+[Could not fetch: HTTPSConnectionPool(host='www.cbsnews.com', port=443): Max retries exceeded with url: /detroit/video/diners-pack-sign-of-the-beefcaver-ahead-of-restaurants-closing/ (Caused by NameResolutionError("HTTPSConnection(host='www.cbsnews.com', port=443): Failed to resolve 'www.cbsnews.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 336 ---
-URL: https://nomsmagazine.com/vancouver-restaurants-closed/
-Title: 15+ Vancouver Restaurants That Closed Recently in 2026 [UPDATED Oct]
+URL: https://www.cbsnews.com/detroit/video/diners-pack-sign-of-the-beefcarver-ahead-of-restaurants-closing/
+Title: Diners pack Sign of the Beefcarver ahead of restaurant's closing
 Status hint: Opening | Industry: Restaurants
-Published: 2026-10-16 06:08:23
+Published: 2026-10-20 21:04:00
 
-Jason Yeh · British Columbia Canada Restaurants · October 15, 2026 15+ Vancouver Restaurants That Closed Recently in 2026 [UPDATED Oct] Photo credits: Bayside Lounge It’s no secret that the restaurant industry has been hit HARD by the pandemic and post-pandemic economic downturn… It has been basically a constant barrage of bad news for restaurant owners. And it has become the reason that many beloved restaurants permanently close their doors. Below we’ve compiled a list of 15+ Vancouver restaurants and food spots that are on their way out or have closed recently: Photo credits: Tocador ð¸ Longtime retro West End English Bay lounge to close – Bayside Lounge shuts at the end of October after 47 years. ð¹Â A Main Street bar’s last night is “probably” Halloween – Tocador is closing out nine years with a menu of old favourite cocktails. ðÂ Granville’s late-night slice corner still sits empty – Megabite Pizza closed in late July after 15-plus years at Nelson. ð¥Â Cambie’s shengjianbao spot has until October 15 – Dong Tai Xiang Shanghai Dim Sum , the Shanghai brand’s first North American shop, has reached the end of its lease. â An under-$5 Korean coffee chain quietly went dark downtown – theVenti on Dunsmuir lasted a year, but Davie Street is still pouring. ðÂ Richmond’s Hamburg steak and gyudon spot closes October 31 – Pound Steak on Leslie Road is wrapping up after two years. ð· Michelin-recommended spot at UBC announces its closure – Wildlight Kitchen + Bar shuts November 28 after nearly four years in Lelem Village. â Four local stores go in a 250-store cut – Starbucks closed three downtown Vancouver and one Burnaby location September 26. ð¥­ Mango tea chain abruptly closes its only Richmond shop – Sweet7 closed September 30 at Union Square after 19 months. ð¥£ Market noodle stall closes after just three months – Jiawei Big Bowl Rice Noodle gave way to Pho 7 Vietnamese Kitchen at Richmond Public Market. ð§ Late-night Taiwanese dessert shop has a d
+[Could not fetch: HTTPSConnectionPool(host='www.cbsnews.com', port=443): Max retries exceeded with url: /detroit/video/diners-pack-sign-of-the-beefcarver-ahead-of-restaurants-closing/ (Caused by NameResolutionError("HTTPSConnection(host='www.cbsnews.com', port=443): Failed to resolve 'www.cbsnews.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 337 ---
-URL: https://www.countryinsider.com/news/rusty-walker-scholarship-application-for-crs-2027-now-open/article_c7f84ab6-9a40-4863-a828-d11205797f90.html
-Title: Rusty Walker Scholarship Application For CRS 2027 Now Open.
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 06:00:00
+URL: https://www.bizjournals.com/denver/news/2026/10/20/wayfair-sets-opening-date-denver-store.html
+Title: Wayfair sets opening date for store in Avenues at Northfield shopping center
+Status hint: Opening | Industry: Retail REITs
+Published: 2026-10-20 21:04:00
 
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.countryinsider.com/news/rusty-walker-scholarship-application-for-crs-2027-now-open/article_c7f84ab6-9a40-4863-a828-d11205797f90.html]
+[Could not fetch: HTTPSConnectionPool(host='www.bizjournals.com', port=443): Max retries exceeded with url: /denver/news/2026/10/20/wayfair-sets-opening-date-denver-store.html (Caused by NameResolutionError("HTTPSConnection(host='www.bizjournals.com', port=443): Failed to resolve 'www.bizjournals.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 338 ---
-URL: https://media.unisba.ac.id/7db65aaf/6ceec67c_M9cAwd83Wc/?share=telegram&nb=1
-Title: These 10 Big US Grocery Chains Are Closing Stores Across The Country Jitesh Sharma (MznsbY2Kjm)
-Status hint: Closing | Industry: Grocery
-Published: 2026-10-16 05:46:44
+URL: https://www.businessdebut.com/darias-german-restaurant-opening-in-cape-coral-2/
+Title: Daria's German Restaurant Opening in Cape Coral
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 21:03:05
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://media.unisba.ac.id/7db65aaf/6ceec67c_M9cAwd83Wc/?share=telegram&nb=1]
+[Could not fetch: HTTPSConnectionPool(host='www.businessdebut.com', port=443): Max retries exceeded with url: /darias-german-restaurant-opening-in-cape-coral-2/ (Caused by NameResolutionError("HTTPSConnection(host='www.businessdebut.com', port=443): Failed to resolve 'www.businessdebut.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 339 ---
-URL: https://www.tonetoatl.com/2026/10/Rumble-Boxing-Closed-Alpharetta-Studio-Atlanta.html
-Title: [TKO] Apparently Not Ready to Rumble, Boxing Franchise Closes Third and Final Atlanta Location
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-16 05:30:16
+URL: https://www.al.com/news/2026/10/mediterranean-restaurant-announces-grand-opening-in-hoover.html
+Title: Mediterranean restaurant announces grand opening in Hoover
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 21:03:00
 
-Pages Home About Legal Advertising Thursday, October 15, 2026 [TKO] Apparently Not Ready to Rumble, Boxing Franchise Closes Third and Final Atlanta Location Looks like a TKO for Rumble Boxing in metro Atlanta.  The boxing club franchise at 6110 North Point Parkway in Northpoint Market Center is closing October 15 after about three and a half years in business. The Alpharetta closure follows the closure of the Sandy Springs location on Roswell Road this past August and the West Midtown location off Howell Mill Road this past June.  The Rumble website suggests that the company continues to operate one Georgia location in Columbus. No specific reason has been provided for any of the closures, but several fitness franchises have struggled in recent months and years to continue operating in metro Atlanta and around the country. The first Rumble Boxing opened in New York City in 2017.  The brand was acquired by private equity-backed Xponential Fitness in 2021 who grew the business through franchising before selling it (and sibling brand CycleBar) to Extraordinary Brands in August 2025. Fellow boxing studio, Atlanta-based Pepper Boxing, in July closed its short-lived location at Park Place in Dunwoody after previously closing locations in Midtown and at The Battery Atlanta, leaving only their Buckhead location still open. YogaSix previously closed all of its Atlanta area locations including those in Midtown, Dunwoody, and at The Battery Atlanta.  AKT, too, previously closed both of its Atlanta area studios along the Beltline in Inman Park and in Sandy Springs. Even F45, one of the more well-known fitness franchises, has seen several closures in metro Atlanta including those in Summerhill and Emory Point.  One of its largest franchisees, Mad Fitness Group, which at its peak operated more than 30 F45 studios across six states, filed for Chapter 11 bankruptcy in August . Are you surprised to see so many fitness franchises close in metro Atlanta?  Is there a certain type of fi
+[Could not fetch: HTTPSConnectionPool(host='www.al.com', port=443): Max retries exceeded with url: /news/2026/10/mediterranean-restaurant-announces-grand-opening-in-hoover.html (Caused by NameResolutionError("HTTPSConnection(host='www.al.com', port=443): Failed to resolve 'www.al.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 340 ---
-URL: https://www.surinenglish.com/malaga/antequera/antequera-reopens-33room-20261015000500-nt.html
-Title: Antequera reopens 33-room hotel that closed during Covid-19 pandemic
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-16 05:27:01
+URL: https://www.asiae.co.kr/en/article/distribution/2026102021225294971
+Title: E-Mart Ramps Up 'Wow Shop' Expansion, Extending Its Under-10,000-Won Price Push to Appliances
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 21:00:00
 
-Hospitality Antequera reopens 33-room hotel that closed during Covid-19 pandemic The former Las Villas de Antikaria is reopening as Villa de Antequera following a change of ownership and plans to open a café-restaurant Añádenos en Google Hotel Villa de Antequera during the reopening ceremony. (SUR) Julio J. Portabales 16/10/2026 Actualizado a las 07:27h. Six years after closing its doors, the former Las Villas de Antikaria hotel in Antequera is once again welcoming guests. The hotel has resumed operations ... under the name Villa de Antequera, with 33 rooms and new owners. The reopening brings back into use an accommodation venue with more than two decades of history, whose operations were suspended in 2020 due to the pandemic. The first guests arrived on 10 October, one day after the reopening ceremony. Leading the initiative is entrepreneur José María Echániz, who has spearheaded the return to business. The initial focus is on accommodation, while other services are planned for a later date. The reopening has taken several months of preparation. The developer and operator, ETXA, was granted the new municipal operating licence in February, while the refurbishment of the building included improvements to the fire safety systems and evacuation routes. In addition to accommodation, the project includes spaces for meetings, celebrations and other events. These include the café-restaurant, the launch of which forms part of the plans announced by the hotel's management. There are also plans for a subsequent increase in the number of hotel rooms, although the details released so far do not specify how many will be added or the timetable for this development. Initially known as Las Villas de Antikaria, in its final period before closing it operated as Hotel MM Antequera. Now, the name Villa de Antequera marks the return of an establishment the history of which stretches back more than 20 years and which is embarking on this new phase under new management. The hotel is reop
+[Could not fetch: HTTPSConnectionPool(host='www.asiae.co.kr', port=443): Max retries exceeded with url: /en/article/distribution/2026102021225294971 (Caused by NameResolutionError("HTTPSConnection(host='www.asiae.co.kr', port=443): Failed to resolve 'www.asiae.co.kr' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 341 ---
-URL: https://www.timesrepublican.com/news/todays-news/2026/10/the-coop-celebrates-grand-opening-thursday/
-Title: The Coop celebrates grand opening Thursday
+URL: https://www.businessdebut.com/darias-german-bakery-and-bistro/
+Title: Daria's German Bakery and Bistro Opening in Downtown Fort Myers
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 05:21:32
+Published: 2026-10-20 20:57:12
 
-Todays News The Coop celebrates grand opening Thursday By Times-Republican October 16, 2026 0 min read T-R PHOTO BY ROBERT MAHARRY
-In its first week of operations here, The Coop Chicken Fingers has taken Marshalltown by storm as the owners have been overwhelmed by the success thus far. On Thursday morning, the Chamber Ambassadors held a ribbon cutting to celebrate the grand opening of the fast food restaurant located at 3010 S. Center St., and the first 400 customers received scratch tickets with prizes going all the way up to free chicken for a year. Trending
+[Could not fetch: HTTPSConnectionPool(host='www.businessdebut.com', port=443): Max retries exceeded with url: /darias-german-bakery-and-bistro/ (Caused by NameResolutionError("HTTPSConnection(host='www.businessdebut.com', port=443): Failed to resolve 'www.businessdebut.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 342 ---
-URL: https://www.fijivillage.com/business/hot-bread-kitchen-opens-24-hour-branch-in-pacific-harbour-8af1b9/
-Title: Hot Bread Kitchen opens 24-hour branch in Pacific Harbour
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 05:20:30
+URL: https://www.bizjournals.com/albany/news/2026/10/20/daisy-baker-troy-restaurant-to-reopen-bacchus-wood.html
+Title: Long-closed restaurant set to return to downtown Troy
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 20:38:00
 
-Good news for the people of Serua as Hot Bread Kitchen Fiji has opened their first 24 hour branch at Damodar Arts Village in Pacific Harbour. Vanessa Charters, Group Managing Director of Hot Bread Kitchen , says a total of 18 staff members are currently employed at the branch. She also highlighted that the staff who were hired previously worked at their branches in Navua, Lami, and RB Harbour Point, and have been honing their skills over the past two months. She says the opening of the branch provides opportunities for those living along Pacific Harbour and in Serua to find employment. Charters adds that Hot Bread Kitchen Fiji’s aim is to employ Fijians. Serua Provincial Council Chairman, Tevita Boseiwaqa says the opening of Hot Bread Kitchen in Pacific Harbour opens up opportunities for his people living in Serua. Boseiwaqa says it is a testament to the iTaukei community and an encouragement to thrive in business ventures like this to help lift their standard of living.
+[Could not fetch: HTTPSConnectionPool(host='www.bizjournals.com', port=443): Max retries exceeded with url: /albany/news/2026/10/20/daisy-baker-troy-restaurant-to-reopen-bacchus-wood.html (Caused by NameResolutionError("HTTPSConnection(host='www.bizjournals.com', port=443): Failed to resolve 'www.bizjournals.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 343 ---
-URL: https://www.grampianonline.co.uk/news/you-name-it-and-theyve-done-it-public-toilets-face-closu-447478/
-Title: ‘You name it and they've done it’: Public toilets face closure risk over vandalism
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-16 05:00:00
+URL: https://www.wlwt.com/article/the-goddard-school-open-new-location-crestview-hills-kentucky/74196336
+Title: The Goddard School set to open new location in Crestview Hills
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 20:31:22
 
-Keith public toilets face closure risk due to vandalism problems By Jessica Urquhart - jessica.urquhart@hnmedia.co.uk Published: 06:00, 16 October 2026 A community group responsible for cleaning public toilets in Keith have urged locals to stop vandalising the facility, or they will be closed. In Keith and Strathisla takes care of the standalone public toilets at Reidhaven Square in Keith after a local shop approached the group to take the facility on. The toilets in Reidhaven Square are run by In Keith and Strathisla. After a few years of maintaining the toilets for public use, the group are now struggling with a rise in vandalism, as well as the toilets being left in a "disgusting" state. The group, which is volunteer-led, has had to resort to paying for private cleaners for the facility, a move that their director says is "not sustainable". Rhona Patterson , director at In Keith and Strathisla, spoke about the problems with the toilets. She said: "It's not just vandalism, it's people being disgusting. "I don't know what they are like at home, but I wouldn't leave my own toilet in that state. "I don't know how people could walk away and leave a public convenience in the states that they do, knowing that somebody else is going to have to come in behind them and use that facility. "So, we've had to clean some awful messes, which is not pleasant". As well as service users leaving a mess, the toilets are also facing a vandalism problem, meaning that the facility requires repairs as well as a deep-clean. Rhona said: "The latest is the door opener has been broken, so we're going to have to replace that. "There's been various things; toilet-roll holders broken off of the walls, soap dispensers broken, and soap smeared all over the walls. Basically, you name it and they've done it". The problem is ongoing, with a post in August from In Keith and Strathisla's Facebook page stating that the toilets had been left in a "horrendous state", with permanent closure threatened if 
+[Could not fetch: HTTPSConnectionPool(host='www.wlwt.com', port=443): Max retries exceeded with url: /article/the-goddard-school-open-new-location-crestview-hills-kentucky/74196336 (Caused by NameResolutionError("HTTPSConnection(host='www.wlwt.com', port=443): Failed to resolve 'www.wlwt.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 344 ---
-URL: https://www.theboltonnews.co.uk/news/26630540.new-westhoughton-restaurant-pata-plans-spectacular-grand-opening/
-Title: Big plans revealed for grand opening of new restaurant
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-16 04:51:00
+URL: https://hoodline.com/2026/10/flower-cat-team-plans-filipino-bistro-for-shuttered-greenpoint-sushi-spot/
+Title: Bistro Cat Aims To Open By End Of 2026 In Former Sakura 6 Space
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 20:30:08
 
-Business Food and drink Leisure Bolton Westhoughton New Westhoughton restaurant Pata plans spectacular grand opening Business Food and drink Leisure Bolton Westhoughton By 
-            Isobel Forbes Reporter Share 0 Comments 3 Skip to next photo 1 / 1 Show caption 1 / 1 Share 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
-        and has been written by our American colleagues.
-        It does not necessarily reflect the view of The Herald. A new Indian restaurant which has opened in Westhoughton is preparing to mark its official launch with fire performers, live drummers and a magician. Pata Indian Restaurant, which replaced the former Mangrove restaurant on Manchester Road , has announced plans for a grand opening celebration on Friday, October 23. The restaurant is run by Mohammed Naeem Khan, who spent around four months transforming the premises before welcoming customers. It's kitchen is led by head chef Saiful Alom. Now, the owners have revealed plans for an evening of entertainment to celebrate the opening. The event will feature a live DJ, fire show, drummers and magician, alongside welcome drinks and a photographer. Two sittings are planned, with the first running from 5pm until 7.30pm and the second beginning at 8pm. Customers will pay £40 per adult for a set menu featuring Indian dishes including chicken tikka masala, lamb rogan josh and chicken balti. The grand opening event is booking-only. Business Food and drink Leisure Bolton Westhoughton Share 0 Comments Get involved with the news Send your news & photos
+[Could not fetch: HTTPSConnectionPool(host='hoodline.com', port=443): Max retries exceeded with url: /2026/10/flower-cat-team-plans-filipino-bistro-for-shuttered-greenpoint-sushi-spot/ (Caused by NameResolutionError("HTTPSConnection(host='hoodline.com', port=443): Failed to resolve 'hoodline.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 345 ---
-URL: https://www.noozhawk.com/bizhawk-casitas-cleaners-closing-after-nearly-40-years-in-carpinteria/
-Title: BizHawk: Casitas Cleaners Closing After Nearly 40 Years in Carpinteria
+URL: https://www.indystar.com/story/grocery/stores/supermarkets/2026/10/20/new-kroger-stores-giant-eagle-acquisition-cost-savings/92350536007/
+Title: Kroger plans to open new stores in effort to boost sales
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 04:47:00
+Published: 2026-10-20 20:24:00
 
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.noozhawk.com/bizhawk-casitas-cleaners-closing-after-nearly-40-years-in-carpinteria/]
+[Could not fetch: HTTPSConnectionPool(host='www.indystar.com', port=443): Max retries exceeded with url: /story/grocery/stores/supermarkets/2026/10/20/new-kroger-stores-giant-eagle-acquisition-cost-savings/92350536007/ (Caused by NameResolutionError("HTTPSConnection(host='www.indystar.com', port=443): Failed to resolve 'www.indystar.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 346 ---
-URL: https://www.theage.com.au/national/queensland/from-yum-cha-to-ping-pong-opening-date-set-for-5-million-venue-20261016-p6164h.html
-Title: From yum cha to ping-pong: Opening date set for $5 million venue
+URL: https://hoodline.com/2026/10/rural-king-eyes-former-macy-s-space-at-salisbury-mall-for-new-store/
+Title: Rural King Eyes Former Macy's Space at Salisbury Mall for New Store
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 04:37:08
+Published: 2026-10-20 20:17:04
 
-Advertisement The $5 million transformation of Brisbane’s most famous yum cha restaurant into an adult’s playground is almost complete, as operators plan a homage to Fortitude Valley’s most famous arrest. King of Kings Seafood Restaurant operated at the Wickham Street site, which also had frontage on the Chinatown Mall, between the 1980s and its closure in 2020. Come February, it will be home to Ballers Clubhouse, a “competitive socialising” venue full of interactive games such as darts, ping-pong, shuffleboard and ball pit karaoke (exactly what it sounds like) and a sports bar featuring large LED screen walls. Ballers Clubhouse is expected to open on February 1 next year, at the former site of Chinatown’s famous King of Kings yum-cha restaurant. Ballers Clubhouse Just across the mall, the late Jack Karlson was arrested in 1991, eventually sparking global memes about succulent Chinese meals. Advertisement “We’re planning on using that moment in a sort of homage, and we might be naming something on the menu after that moment and that guy,” Ballers chief executive Joshua Lefers said. “So look out for that.” The 600-capacity, 1083-square-metre venue was approved in late 2023, and the opening date has now been set at February 1, 2027 – almost two years later than originally planned . The long timeframe between approval and completion was down to several factors, including what Ballers co-founder and chief commercial officer Stephen Wools described as the “skeletons” they found during the refurbishment. Advertisement “Not literal skeletons,” Wools was quick to point out. “There was so much more complexity to look at with this site than we’re probably used to. “Three years is a long time. The positives that came out of that was we were able to optimise the design. We feel this is probably our best design to date.” The planned penthouse at the Ballers Clubhouse, under construction in Fortitude Valley. Ballers Clubhouse Lefers said he hoped Ballers would be the start of a r
+[Could not fetch: HTTPSConnectionPool(host='hoodline.com', port=443): Max retries exceeded with url: /2026/10/rural-king-eyes-former-macy-s-space-at-salisbury-mall-for-new-store/ (Caused by NameResolutionError("HTTPSConnection(host='hoodline.com', port=443): Failed to resolve 'hoodline.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 347 ---
-URL: https://www.newsbreak.com/easy-everyday-recipes-380399510/4948175792837-which-golden-corral-locations-have-closed-in-2026-here-s-what-we-know-so-far
-Title: Which Golden Corral Locations Have Closed in 2026? Here’s What We Know So Far
+URL: https://communityimpact.com/conroe-montgomery/business/the-core-movement-studio-now-serving-conroe/
+Title: The Core Movement Studio now open in Conroe
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 03:55:18
+Published: 2026-10-20 20:13:31
 
-7K Posts 30K Followers Easy Everyday Recipes Website Oakland, CA A food-focused site covering viral, trending, politics, spirituality, dating, and other talked-about topics with factual, non-divisive, and insightful content. easyeverydayrecipes.com Boise Which Golden Corral Locations Have Closed in 2026? Here’s What We Know So Far By Dennis Mongoi , 3 days ago Another Golden Corral gone? At least six Golden Corral restaurants across six states have closed in 2026, and the company acknowledges that closures have been more frequent than usual this year. But there’s an important distinction: Golden Corral is not shutting down nationwide, and the company says it still operates 330 restaurants while pursuing six new locations. The closures come as Americans continue facing higher restaurant prices. According to the U.S. Bureau of Labor Statistics , prices for food away from home increased 3.5% in the 12 months ending September 2026. That broader trend provides context for the pressures restaurants face, although the reasons behind Golden Corral’s individual closures vary. Which Golden Corral Locations Have Closed in 2026? Photo by dragonimages/123rf Local newspapers and television stations report six Golden Corral locations that have permanently closed this year. Some operated for decades, while others faced lease issues, staffing challenges, or rising costs. Here’s a closer look at the confirmed closures, including when they happened and what operators have publicly explained. Canton, Ohio The Golden Corral at 4910 Dressler Road NW closed on February 1, 2026, after serving the Canton area since 2002. Franchise owner Nikki Zehner confirmed the closure but did not publicly disclose the reason. Speaking to the Canton Repository, she said, “It’s sad. We had a really good run here.” Some employees were expected to pursue positions at the Golden Corral in Akron. Alton, Illinois The restaurant at 350 Homer M. Adams Parkway permanently closed on April 23 , a week earlier than i
+[Could not fetch: HTTPSConnectionPool(host='communityimpact.com', port=443): Max retries exceeded with url: /conroe-montgomery/business/the-core-movement-studio-now-serving-conroe/ (Caused by NameResolutionError("HTTPSConnection(host='communityimpact.com', port=443): Failed to resolve 'communityimpact.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 348 ---
-URL: https://www.wkbn.com/news/local-news/warren-news/pedestrian-bridge-over-mahoning-river-in-warren-now-open/
-Title: Pedestrian bridge over Mahoning River in Warren now open
+URL: https://www.delawareonline.com/videos/news/local/2026/10/20/dash-in-expands-delaware-footprint-with-grand-opening-in-pike-creek/92329276007/
+Title: Dash In expands Delaware footprint with grand opening in Pike Creek
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 03:16:47
+Published: 2026-10-20 20:12:49
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.wkbn.com/news/local-news/warren-news/pedestrian-bridge-over-mahoning-river-in-warren-now-open/]
+[Could not fetch: HTTPSConnectionPool(host='www.delawareonline.com', port=443): Max retries exceeded with url: /videos/news/local/2026/10/20/dash-in-expands-delaware-footprint-with-grand-opening-in-pike-creek/92329276007/ (Caused by NameResolutionError("HTTPSConnection(host='www.delawareonline.com', port=443): Failed to resolve 'www.delawareonline.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 349 ---
-URL: https://www.thecomet.net/news/26638964.5-herts-businesses-opened-closed-month/
-Title: 5 Hertfordshire businesses that have opened or closed this month
+URL: http://www.doverpost.com/picture-gallery/news/local/2026/10/20/dash-in-opens-newest-delaware-location-in-pike-creek/92329239007/
+Title: Dash In opens newest Delaware location in Pike Creek
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 03:01:00
+Published: 2026-10-20 20:09:00
 
-Business Food and drink Leisure Hertfordshire 5 Herts businesses that have opened or closed this month Business Food and drink Leisure Hertfordshire By 
-            Dan Mountney Reporter Share 0 Comments Plenty of exciting new businesses have opened in Hertfordshire. (Image: Dan Mountney/Huw Richards) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
-        and has been written by our American colleagues.
-        It does not necessarily reflect the view of The Herald. This past month has seen plenty of excitement as new businesses opened across Hertfordshire, but lots of sadness as beloved stores set to close. Here's five businesses that have opened or closed this month. 1 - Søstrene Grene Customers flocked to the Howard Centre as Søstrene Grene opened its new Welwyn Garden City store. Queues stretched out of the centre as shoppers waited to browse the Danish brand’s homeware, kitchenware, arts, crafts and teas. "Søstrene Grene is a shop where anyone can come in and find something that they might like because we've got such a wide variety of products," said store manager Ieva. Søstrene Grene has opened its new Welwyn Garden City store. (Image: Dan Mountney) "I think anyone coming into the store will find something they definitely like." The Welwyn Garden City store is part of Søstrene Grene's expansion into Hertfordshire, with a store in St Albans already open and another on the way soon in Hitchin. "I think people just love what we can offer and I think people of Hertfordshire just enjoy shopping which makes us great for this area." 2 - Bread Ahead A bakery brand seen by millions on social media and known for its indulgent doughnuts has launched in Harpenden. Bread Ahead is the newest addition to High Street, bringing its sourdough, pastries and cooking classes to the town. The 2,500 sqft site includes a bakery, baking school and all-day dining space serving breakfast, brunch and coffee from 7am to 6pm daily. B
+[Could not fetch: HTTPConnectionPool(host='www.doverpost.com', port=80): Max retries exceeded with url: /picture-gallery/news/local/2026/10/20/dash-in-opens-newest-delaware-location-in-pike-creek/92329239007/ (Caused by NameResolutionError("HTTPConnection(host='www.doverpost.com', port=80): Failed to resolve 'www.doverpost.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 350 ---
-URL: https://www.snowindustrynews.com/newsrepository/2026/october/l-alpe-du-grand-serre-avoids-closure-as-sata-signs-30-year-lease/
-Title: L’Alpe du Grand Serre avoids closure as SATA signs 30-year lease
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-16 02:58:05
+URL: https://mynorthwest.com/lifestyle/portage-bay-cafe-close/4288432
+Title: Portage Bay Cafe had a strong summer. It’s closing a cafe anyway
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 20:00:43
 
-L’Alpe du Grand Serre avoids closure as SATA signs 30-year lease France 16/October/2026 L’Alpe du Grand Serre, one of the Dauphiné’s oldest ski resorts, has been saved from permanent closure after the commune of La Morte signed a 30-year public-service concession with SATA Group. The agreement, signed on 30 September 2026, gives the Isère resort a long-term operator and clears the way for a planned reopening on 19 December 2026. The deal ends more than two years of uncertainty for the resort and the surrounding village. SATA, which already operates Alpe d’Huez, Les 2 Alpes and La Grave, will take responsibility for running the ski area through a délégation de service public, or public-service delegation, rather than a conventional commercial lease. For La Morte, the agreement is about far more than lift operations. The resort is central to the local economy, and its future had become inseparable from the future of the village itself. From temporary rescue to long-term plan The new contract follows a period in which L’Alpe du Grand Serre survived only through short-term interventions. SATA had already operated the resort during the 2025–26 winter under what was described as a temporary arrangement, allowing the lifts to turn while the commune sought a durable solution. In April 2026, La Morte took direct control of the resort after the previous operating arrangement ended. That transfer brought with it a debt of nearly €1 million, spread over 10 years, plus around €80,000 in transferred charges. The commune then launched a tender process for a long-term concessionaire. SATA emerged as the only bidder. After roughly two months of negotiation, the municipal council voted unanimously on 28 September to proceed, and the formal agreement was signed two days later with the communes of La Morte and Villard-Saint-Christophe. The 30-year term is the decisive change. Previous rescue deals had offered only seasonal certainty; the new concession gives SATA time to plan investmen
+[Could not fetch: HTTPSConnectionPool(host='mynorthwest.com', port=443): Max retries exceeded with url: /lifestyle/portage-bay-cafe-close/4288432 (Caused by NameResolutionError("HTTPSConnection(host='mynorthwest.com', port=443): Failed to resolve 'mynorthwest.com' ([Errno 11001] getaddrinfo failed)"))]

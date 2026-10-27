@@ -1,4 +1,4 @@
-You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates, footage sizes, or statuses:
 
 🔍 Extract these fields
 • Store/Shop/Restaurant Name
@@ -11,23 +11,30 @@ You are an expert, precise data extractor specialized in retail and restaurant o
   - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
   - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
   👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Footage Size
+  - Extract the store, shop, restaurant, or facility's footage size only if it is explicitly mentioned in the article text
+  - Preserve the exact figure and unit as stated, e.g. "12,000 square feet", "2,500 sq. ft.", "approximately 8,000 square feet"
+  - If the article mentions multiple relevant footage sizes for the same business, include each size with its context
+  - Do NOT calculate, convert, estimate, or infer footage size; do not confuse it with acreage, lot size, seating capacity, or other measurements
+  - If no footage size is mentioned, write exactly "Not specified"
 • Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
 
 📊 Output format
 Create ONE clean Markdown table with these exact column headers (in this order):
-| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Footage Size | Short Description | Article Link | Published Date |
 
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If an article has qualifying business information but no footage size, write "Not specified" in the Footage Size column
 • If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
 
 🚫 Strict constraints
-• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses, dates, or footage sizes  • ❌ No rewriting or normalizing status text
 
 📎 Final section (mandatory)
 At the very end of your response, add:
@@ -39,91 +46,401 @@ If none, write: None
 
 
 --- Article 401 ---
-URL: https://rollingout.com/2026/10/15/plaza-hotel-closing-4-year-restoration/
-Title: Plaza Hotel closure disrupts May wedding and 378 jobs
-Status hint: Closing | Industry: Hospitality
-Published: 2026-10-15 13:22:18
+URL: https://lufkindailynews.com/news_reuters/national/portos-bakery-cafe-is-expanding-to-the-city-of-ontario-the-bakery-announced-on-oct/image_8c6dfa8d-22d8-5b88-a97d-d38824a23a27.html
+Title: Porto's Bakery & Cafe is expanding to the city of Ontario, the bakery announced on Oct. 20, 2026. The Cuban-bakery chain is known for their affordable cakes and pastries in Southern California.
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 17:11:49
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://rollingout.com/2026/10/15/plaza-hotel-closing-4-year-restoration/]
+[Could not fetch: HTTPSConnectionPool(host='lufkindailynews.com', port=443): Max retries exceeded with url: /news_reuters/national/portos-bakery-cafe-is-expanding-to-the-city-of-ontario-the-bakery-announced-on-oct/image_8c6dfa8d-22d8-5b88-a97d-d38824a23a27.html (Caused by NameResolutionError("HTTPSConnection(host='lufkindailynews.com', port=443): Failed to resolve 'lufkindailynews.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 402 ---
-URL: https://www.luxtimes.lu/yourluxembourg/foodandnightlife/michelin-star-restaurant-in-luxembourg-to-close-days-before-christmas/163105362.html
-Title: Michelin-star restaurant in Luxembourg to close days before Christmas
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-15 13:00:00
+URL: https://www.crosstimbersgazette.com/2026/10/20/dallas-based-brunch-spot-preparing-for-new-location-in-justin/
+Title: Dallas-based brunch spot preparing for new location in Justin
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 17:10:03
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.luxtimes.lu/yourluxembourg/foodandnightlife/michelin-star-restaurant-in-luxembourg-to-close-days-before-christmas/163105362.html]
+[Could not fetch: HTTPSConnectionPool(host='www.crosstimbersgazette.com', port=443): Max retries exceeded with url: /2026/10/20/dallas-based-brunch-spot-preparing-for-new-location-in-justin/ (Caused by NameResolutionError("HTTPSConnection(host='www.crosstimbersgazette.com', port=443): Failed to resolve 'www.crosstimbersgazette.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 403 ---
-URL: https://whatnow.com/chicago/restaurants/a-chicago-restaurant-will-close-its-west-town-location-in-december-after-the-building-was-sold/
-Title: A Chicago Restaurant Will Close Its West Town Location in December After the Building Was Sold
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-15 12:33:15
+URL: https://www.usatoday.com/story/news/state/florida/2026/10/20/trader-joes-new-florida-stores-boynton-beach/92343990007/
+Title: Trader Joe's to open new Florida stores, including one in South Florida
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:59:00
 
-Representative Image, Flo Cafe and Bar is closing in Chicago  (Image credit: Photo by Amy Farías from Pexels) SHARE An iconic Southwestern comfort food spot, Flo Cafe and Bar announced the closure of its Chicago West Town location because the building has been sold. The restaurant will serve its final meal in December and mark the end of its more than two decades-long journey. Flo Cafe and Bar on Chicago Avenue Set to Close Founded in 1999, Flo Cafe and Bar has been a vibrant dining destination for the West Town Chicago Avenue community. It offers authentic Tex-Mex cuisine along with New Mexican dishes. Menu options include green chile stew, chicken enchiladas, and pulled pork tacos. The space features a lively and casual atmosphere during the day, and by evening it transforms into an intimate and social setting. The restaurant also has a well-curated bar program and offers classic cocktails, beers, and wines. The restaurant announced the closure in a social media post. Flo’s final day of service is scheduled for December 20, 2026. The team behind the restaurant thanked the community for their 25 years of support and said, “Thank you to all of you that have walked through the doors for a meal with friends and family, and have continued to show your support. Thank you for filling the space with laughs, cries, smiles, and hugs.” View this post on Instagram A post shared by Flo Cafe & Bar – Brunch (@florestaurant) What Led to the Closure In the post, the restaurant explained, “The historic building at 1434 W. Chicago Avenue that we called home has been sold, and after a wild and loving 15 years, Flo will be closing our doors.” According to a Hoodline , Renee and Rodney Carswell opened Flo in 1998 and sold the business to Leonard Sanchez and Amy Laria in 2011. The report mentioned that Leonard and Amy also opened a second Flo location on North Ashland Avenue in Lakeview in 2015. However, it was closed a little over a year later. In the post, the team added that, “Someti
+[Could not fetch: HTTPSConnectionPool(host='www.usatoday.com', port=443): Max retries exceeded with url: /story/news/state/florida/2026/10/20/trader-joes-new-florida-stores-boynton-beach/92343990007/ (Caused by NameResolutionError("HTTPSConnection(host='www.usatoday.com', port=443): Failed to resolve 'www.usatoday.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 404 ---
-URL: https://www.facebook.com/sunstardavaonews/posts/davaos-resort-style-pickleball-venue-holds-soft-opening-in-tacunan-a-new-pickleb/1594717686029774/
-Title: DAVAO'S RESORT-STYLE PICKLEBALL VENUE HOLDS SOFT OPENING IN TACUNAN 🏓 A new pickleball destination is now in its soft opening phase in Davao City. Lakeside Pickle Davao, located just beside Deca Wakeboard Park, held its soft opening an
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-15 11:58:51
+URL: https://megaproject.com/news/skyscraper/perenn-to-open-new-store-in-nashville
+Title: Perenn to Open New Store in Nashville
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:54:54
 
-SunStar Davao - DAVAO'S RESORT-STYLE PICKLEBALL VENUE...
+[Could not fetch: HTTPSConnectionPool(host='megaproject.com', port=443): Max retries exceeded with url: /news/skyscraper/perenn-to-open-new-store-in-nashville (Caused by NameResolutionError("HTTPSConnection(host='megaproject.com', port=443): Failed to resolve 'megaproject.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 405 ---
-URL: https://cdispatch.com/?p=331866
-Title: Mary Means Business: Mobile bookstore prepares for Starkville opening
-Status hint: Opening | Industry: Books / Toys / Gaming
-Published: 2026-10-15 11:49:40
+URL: https://njbiz.com/raising-canes-brick-opening-80-jobs/
+Title: Raising Cane’s sets Brick opening, plans 80 hires
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:52:35
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://cdispatch.com/?p=331866]
+[Could not fetch: HTTPSConnectionPool(host='njbiz.com', port=443): Max retries exceeded with url: /raising-canes-brick-opening-80-jobs/ (Caused by NameResolutionError("HTTPSConnection(host='njbiz.com', port=443): Failed to resolve 'njbiz.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 406 ---
-URL: https://www.toronto.com/things-to-do/food-and-drink/grandma-loves-you-toronto-yorkville-village-kitchen-hub/article_cce5f0dd-d940-51d9-a385-c2d04db6ca60.html
-Title: A beloved Toronto sandwich shop is expanding to Yorkville with a free food giveaway
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 11:30:00
+URL: https://greenpointers.com/2026/10/20/greenpoints-lingo-closing-with-plans-to-pivot-to-a-new-concept/
+Title: Greenpoint’s Lingo Closing, With Plans to Pivot to a New Concept
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 16:49:45
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.toronto.com/things-to-do/food-and-drink/grandma-loves-you-toronto-yorkville-village-kitchen-hub/article_cce5f0dd-d940-51d9-a385-c2d04db6ca60.html]
+[Could not fetch: HTTPSConnectionPool(host='greenpointers.com', port=443): Max retries exceeded with url: /2026/10/20/greenpoints-lingo-closing-with-plans-to-pivot-to-a-new-concept/ (Caused by NameResolutionError("HTTPSConnection(host='greenpointers.com', port=443): Failed to resolve 'greenpointers.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 407 ---
-URL: https://www.ggrasia.com/mgm-osaka-endorses-casino-dealer-course-ahead-of-ir-opening
-Title: MGM Osaka endorses casino dealer course ahead of IR opening
+URL: https://www.kera.org/2026/10/20/plano-restaurant-still-open-willow-bend/
+Title: The Shops at Willow Bend in Plano have closed, but Knife Steakhouse is still open for business
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 11:26:18
+Published: 2026-10-20 16:47:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.ggrasia.com/mgm-osaka-endorses-casino-dealer-course-ahead-of-ir-opening]
+[Could not fetch: HTTPSConnectionPool(host='www.kera.org', port=443): Max retries exceeded with url: /2026/10/20/plano-restaurant-still-open-willow-bend/ (Caused by NameResolutionError("HTTPSConnection(host='www.kera.org', port=443): Failed to resolve 'www.kera.org' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 408 ---
-URL: https://www.charlotteobserver.com/news/business/article317624326.html
-Title: I’d never been to Wegmans before. Here’s how the new Charlotte store converted me.
+URL: https://www.wfmz.com/features/eat-sip-shop/new-lehigh-valley-medical-marijuana-dispensary-to-hold-grand-opening-with-deals-giveaways-food-truck/article_6df773b3-4e79-4fe7-9e35-62d859f094e8.html
+Title: New Lehigh Valley medical cannabis dispensary to hold grand opening with deals, giveaways, food truck
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 09:05:00
+Published: 2026-10-20 16:45:00
 
-After months of anticipation , I was able to see what all the hype was about during my second trip to Wegmans as a reporter. This time the store was fully stocked, and it was cool to see the grand opening of the Rochester, N.Y.-based grocer welcome happy shoppers to the first Charlotte store. Many transplants showed off their home pride. Many wore Buffalo Bills gear, such as Josh Allen jerseys, while several others represented Syracuse University. One of them was Buffalo native Kwesi Jackson. Wegmans employees make their first sub sandwich at the new grocery store in Charlotte on Wednesday, Oct. 14, 2026                                                                                            TRACY KIMBALL tkimball@charlotteobserver.com “There’s a couple of things that I’m used to; that I have family bring to me that I don’t need them to bring to me anymore (with Wegmans here),” Jackson said about getting items he grew up with. “They got the best subs in town.” I wanted to try one, but the line for subs was really long on opening day. I’ll have to go back when things calm down a little to get the full shopping experience when I’m off the clock. I grew up in Kansas City, Missouri, and was never a grocery store fanatic. In my neighborhood, Price Chopper and IGA were the local go-tos. And when I moved to North Carolina, it was a mix of Food Lion, Harris Teeter and a few others among my friends. Here are a few things that stood out to me walking through as a Wegmans newbie. Beyond the basics As a Wegmans first-timer, here are some of the cool things I observed beyond the typical bread, meat, and milk stuff: Wine Selection: I’m not a big wine connoisseur, but if you are, this is the place for you, with many options at all price points. My co-worker Tracy spotted a bottle priced at $1,000, which definitely stopped us in our tracks. Live Lobsters: Maybe I overlooked it at other stores, but I enjoyed seeing the live lobsters in the tank. It brought back memories of going t
+[Could not fetch: HTTPSConnectionPool(host='www.wfmz.com', port=443): Max retries exceeded with url: /features/eat-sip-shop/new-lehigh-valley-medical-marijuana-dispensary-to-hold-grand-opening-with-deals-giveaways-food-truck/article_6df773b3-4e79-4fe7-9e35-62d859f094e8.html (Caused by NameResolutionError("HTTPSConnection(host='www.wfmz.com', port=443): Failed to resolve 'www.wfmz.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 409 ---
-URL: https://www.spot.ph/shopping/the-latest-shopping/look-national-book-store-festival-mall-superbranch-a5109-20261014-bsc
-Title: LOOK: National Book Store Opens Another Superbranch Down South
-Status hint: Opening | Industry: Books / Toys / Gaming
-Published: 2026-10-15 06:57:07
+URL: https://abc3340.com/news/entertainment/mobay-beignet-burger-co-plans-new-location-in-chelsea
+Title: Mo Bay Beignet & Burger Co. plans new location in Chelsea
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:39:10
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.spot.ph/shopping/the-latest-shopping/look-national-book-store-festival-mall-superbranch-a5109-20261014-bsc]
+[Could not fetch: HTTPSConnectionPool(host='abc3340.com', port=443): Max retries exceeded with url: /news/entertainment/mobay-beignet-burger-co-plans-new-location-in-chelsea (Caused by NameResolutionError("HTTPSConnection(host='abc3340.com', port=443): Failed to resolve 'abc3340.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 410 ---
-URL: https://www.businesstimes.com.sg/property/new-york-citys-plaza-hotel-shut-four-year-clean-its-celebrated-facade
-Title: New York City’s Plaza Hotel to shut for four-year clean-up of its celebrated facade
-Status hint: Closing | Industry: Hospitality
-Published: 2026-10-15 05:49:00
+URL: https://www.northamptonchron.co.uk/news/people/men-are-defecating-in-the-street-residents-concerned-as-proposed-nightclub-submits-plans-to-open-until-430am-at-former-bank-in-busy-northampton-street-9299823
+Title: 'Men are defecating in the street': Residents concerned as proposed nightclub submits plans to open until 4.30am at former bank in busy Northampton street
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:39:00
 
-New York City’s Plaza Hotel to shut for four-year clean-up of its celebrated facade The Fifth Avenue landmark, which opened in 1907, requires a restoration of its exterior, its operators say Summarise Share Add to Preferred
-Sources Add to Preferred
-Sources Published Thu, Oct 15, 2026 · 01:49 PM The Plaza Hotel, which has had at least half a dozen owners over the years – including Donald Trump, who took it into bankruptcy in the 1990s – has undergone several rounds of renovation. PHOTO: NYTIMES [NEW YORK] One of New York City’s most iconic hotels is closing for four years for a facelift. The 119-year-old Plaza Hotel will shut its gilded doors in January for a restoration of the 18-storey building’s landmark facade, the hotel’s operators, Fairmont Hotels & Resorts, announced on Wednesday (Oct 14). Since the hotel’s opening day in 1907, when a Vanderbilt scion signed the guest register with a flourish, the Plaza, at the corner of Central Park South and Fifth Avenue, has been synonymous with a particular New York brand of opulence. But maintaining that elegance requires periodic upkeep. The hotel, which has had at least half a dozen owners over the years – including Donald Trump, who took it into bankruptcy in the 1990s – has undergone several rounds of renovation. It was partly converted into condominiums in the early 2000s, and now has 282 hotel rooms and 181 condos. The fortresslike Plaza was created by architect Henry Janeway Hardenbergh, who also designed the Dakota on Central Park West. The New York Times architecture critic Paul Goldberger wrote in 1982 that the hotel had been “designed in a style that is generally described as French Renaissance but is essentially New York eclectic – a French chateau blown up to the size of a small skyscraper and embellished with myriad classical details”. The Business Times turns 50 Five decades of milestones and moments that shaped Singapore’s success story - told through our headlines. Explore BT50 » He called the Plaza “the 
+[Could not fetch: HTTPSConnectionPool(host='www.northamptonchron.co.uk', port=443): Max retries exceeded with url: /news/people/men-are-defecating-in-the-street-residents-concerned-as-proposed-nightclub-submits-plans-to-open-until-430am-at-former-bank-in-busy-northampton-street-9299823 (Caused by NameResolutionError("HTTPSConnection(host='www.northamptonchron.co.uk', port=443): Failed to resolve 'www.northamptonchron.co.uk' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 411 ---
-URL: https://www.excelsiorcitizen.com/business/fowlers-fine-furniture-closing-after-39-years-ending-a-century-old-family-retail-tradition-ebf5cf07
-Title: Fowler’s Fine Furniture Closing After 39 Years, Ending a Century-Old Family Retail Tradition
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-15 04:08:44
+URL: https://www.arabtimesonline.com/news/aaw-opens-kuwaits-first-intersport-run-store-at-al-shaheed-park-phase-3/
+Title: AAW opens Kuwait’s first INTERSPORT RUN store at Al Shaheed Park
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:36:15
 
-Business October 14, 2026 Fowler’s Fine Furniture Closing After 39 Years, Ending a Century-Old Family Retail Tradition Fowler's Fine Furniture is closing after 39 years, ending a retail tradition dating to 1900. Owner Isaiah Fowler discusses the decision, employee impacts, and the liquidation sale beginning Oct. 15 in Excelsior Springs. Jason Cole Co-founder/Editor EXCELSIOR SPRINGS, Mo. (Oct. 14, 2026) — After nearly four decades in business and a history stretching back more than a century, Fowler’s Fine Furniture is preparing to close its doors for good. The family-owned retailer has announced the closure of its remaining Excelsior Springs location, bringing an end to a business that has served generations of customers throughout the region. A going-out-of-business liquidation sale begins Thursday, Oct. 15, at 156 Crown Hill Road in Excelsior Springs. The store must vacate its space before the end of the year, although owner Isaiah Fowler hopes to sell the remaining inventory and close sooner. The announcement follows the closure of the company's other two locations. The Odessa store closed in 2025, while the Richmond location shut down in May 2026 after Special Needs Services of Ray County purchased their building. While economic challenges played a role in the decision, Fowler said the approaching expiration of the Excelsior Springs store's lease ultimately determined the timing. "Although we've certainly been impacted by the economic headwinds in our market (both national and local), ultimately, the timing was determined by the expiration of our lease in the shopping center," Fowler said. The closure will affect four full-time and three part-time employees. Fowler himself has spent more than 18 years in the furniture business, beginning under previous owner Louis Eagan in Richmond. Another longtime employee has been with the operation for nearly 14 years, also dating back to the previous ownership. Isaiah Fowler, owner of Fowler’s Fine Furniture, stands inside
+[Could not fetch: HTTPSConnectionPool(host='www.arabtimesonline.com', port=443): Max retries exceeded with url: /news/aaw-opens-kuwaits-first-intersport-run-store-at-al-shaheed-park-phase-3/ (Caused by NameResolutionError("HTTPSConnection(host='www.arabtimesonline.com', port=443): Failed to resolve 'www.arabtimesonline.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 412 ---
+URL: https://gamerant.com/ubisoft-redlynx-shutting-down/
+Title: Ubisoft Game Studio is Permanently Shutting Down
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 16:30:15
+
+[Could not fetch: HTTPSConnectionPool(host='gamerant.com', port=443): Max retries exceeded with url: /ubisoft-redlynx-shutting-down/ (Caused by NameResolutionError("HTTPSConnection(host='gamerant.com', port=443): Failed to resolve 'gamerant.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 413 ---
+URL: https://hauteliving.com/2026/10/guest-house-aspen-cedric-gervais/800016/
+Title: Cedric Gervais is Opening Guest House Aspen on New Year’s Eve in the Former Madame Ushi Space
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:27:10
+
+[Could not fetch: HTTPSConnectionPool(host='hauteliving.com', port=443): Max retries exceeded with url: /2026/10/guest-house-aspen-cedric-gervais/800016/ (Caused by NameResolutionError("HTTPSConnection(host='hauteliving.com', port=443): Failed to resolve 'hauteliving.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 414 ---
+URL: https://www.morningsentinel.com/news/shoe-stop-in-mv-plans-re-grand-opening-at-new-site-8986ad92
+Title: Shoe Stop in MV plans ‘re-grand opening’ at new site
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:26:24
+
+[Could not fetch: HTTPSConnectionPool(host='www.morningsentinel.com', port=443): Max retries exceeded with url: /news/shoe-stop-in-mv-plans-re-grand-opening-at-new-site-8986ad92 (Caused by NameResolutionError("HTTPSConnection(host='www.morningsentinel.com', port=443): Failed to resolve 'www.morningsentinel.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 415 ---
+URL: https://www.blogto.com/eat_drink/2026/10/turkey-inspire-bakery-toronto-opening/
+Title: Toronto's newest Turkish bakery is celebrating its grand opening with $3 treats
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:23:44
+
+[Could not fetch: HTTPSConnectionPool(host='www.blogto.com', port=443): Max retries exceeded with url: /eat_drink/2026/10/turkey-inspire-bakery-toronto-opening/ (Caused by NameResolutionError("HTTPSConnection(host='www.blogto.com', port=443): Failed to resolve 'www.blogto.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 416 ---
+URL: https://chainstoreage.com/trader-joes-open-30-stores-across-16-states-heres-complete-list
+Title: Trader Joe’s to open 30 stores across 16 states
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:22:50
+
+[Could not fetch: HTTPSConnectionPool(host='chainstoreage.com', port=443): Max retries exceeded with url: /trader-joes-open-30-stores-across-16-states-heres-complete-list (Caused by NameResolutionError("HTTPSConnection(host='chainstoreage.com', port=443): Failed to resolve 'chainstoreage.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 417 ---
+URL: https://thelafayettesun.com/news/aldi-to-open-new-location-in-valley-in-summer-2027
+Title: ALDI to open new location in Valley in Summer 2027
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:21:53
+
+[Could not fetch: HTTPSConnectionPool(host='thelafayettesun.com', port=443): Max retries exceeded with url: /news/aldi-to-open-new-location-in-valley-in-summer-2027 (Caused by NameResolutionError("HTTPSConnection(host='thelafayettesun.com', port=443): Failed to resolve 'thelafayettesun.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 418 ---
+URL: https://www.memphisflyer.com/we-saw-you-soft-opening-at-gussied-up/
+Title: We Saw You: Soft Opening at Gussied Up
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:21:45
+
+[Could not fetch: HTTPSConnectionPool(host='www.memphisflyer.com', port=443): Max retries exceeded with url: /we-saw-you-soft-opening-at-gussied-up/ (Caused by NameResolutionError("HTTPSConnection(host='www.memphisflyer.com', port=443): Failed to resolve 'www.memphisflyer.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 419 ---
+URL: https://www.kentucky.com/news/state/kentucky/article317701244.html
+Title: Jeffersonville Kroger gets $3.3M update, store refresh
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:20:00
+
+[Could not fetch: HTTPSConnectionPool(host='www.kentucky.com', port=443): Max retries exceeded with url: /news/state/kentucky/article317701244.html (Caused by NameResolutionError("HTTPSConnection(host='www.kentucky.com', port=443): Failed to resolve 'www.kentucky.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 420 ---
+URL: https://blueribbonnews.com/2026/10/little-caesars-to-celebrate-lavon-grand-opening-with-free-pizza-for-a-year-giveaway/
+Title: Little Caesars to celebrate Lavon grand opening with free pizza for a year giveaway
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:17:11
+
+[Could not fetch: HTTPSConnectionPool(host='blueribbonnews.com', port=443): Max retries exceeded with url: /2026/10/little-caesars-to-celebrate-lavon-grand-opening-with-free-pizza-for-a-year-giveaway/ (Caused by NameResolutionError("HTTPSConnection(host='blueribbonnews.com', port=443): Failed to resolve 'blueribbonnews.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 421 ---
+URL: https://www.nrn.com/independent-restaurants/panciuto-is-open-in-austin-serving-italian-american-comfort-food
+Title: Panciuto is open in Austin, serving Italian American comfort food
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:14:32
+
+[Could not fetch: HTTPSConnectionPool(host='www.nrn.com', port=443): Max retries exceeded with url: /independent-restaurants/panciuto-is-open-in-austin-serving-italian-american-comfort-food (Caused by NameResolutionError("HTTPSConnection(host='www.nrn.com', port=443): Failed to resolve 'www.nrn.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 422 ---
+URL: https://siouxfalls.business/raising-canes-sets-opening-date/
+Title: Raising Cane’s sets opening date
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:11:50
+
+[Could not fetch: HTTPSConnectionPool(host='siouxfalls.business', port=443): Max retries exceeded with url: /raising-canes-sets-opening-date/ (Caused by NameResolutionError("HTTPSConnection(host='siouxfalls.business', port=443): Failed to resolve 'siouxfalls.business' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 423 ---
+URL: https://www.fox35orlando.com/news/fresh-kitchen-sets-opening-date-winter-park-restaurant
+Title: Fresh Kitchen sets opening date for Winter Park restaurant
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 16:05:57
+
+[Could not fetch: HTTPSConnectionPool(host='www.fox35orlando.com', port=443): Max retries exceeded with url: /news/fresh-kitchen-sets-opening-date-winter-park-restaurant (Caused by NameResolutionError("HTTPSConnection(host='www.fox35orlando.com', port=443): Failed to resolve 'www.fox35orlando.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 424 ---
+URL: https://patch.com/illinois/glenellyn/new-nordstrom-rack-store-coming-il
+Title: New Nordstrom Rack Store Coming To IL
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:04:32
+
+[Could not fetch: HTTPSConnectionPool(host='patch.com', port=443): Max retries exceeded with url: /illinois/glenellyn/new-nordstrom-rack-store-coming-il (Caused by NameResolutionError("HTTPSConnection(host='patch.com', port=443): Failed to resolve 'patch.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 425 ---
+URL: https://witl.com/ixp/691/p/michigan-wendys-closures-2026/
+Title: The List of Closed Michigan Wendy’s Keeps Growing
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 16:01:58
+
+[Could not fetch: HTTPSConnectionPool(host='witl.com', port=443): Max retries exceeded with url: /ixp/691/p/michigan-wendys-closures-2026/ (Caused by NameResolutionError("HTTPSConnection(host='witl.com', port=443): Failed to resolve 'witl.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 426 ---
+URL: https://www.adirondackexplorer.org/communities/housing/two-affordable-housing-units-set-to-open-oct-30-in-schroon-lake/
+Title: Two affordable housing units set to open Oct. 30 in Schroon Lake
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 16:00:00
+
+[Could not fetch: HTTPSConnectionPool(host='www.adirondackexplorer.org', port=443): Max retries exceeded with url: /communities/housing/two-affordable-housing-units-set-to-open-oct-30-in-schroon-lake/ (Caused by NameResolutionError("HTTPSConnection(host='www.adirondackexplorer.org', port=443): Failed to resolve 'www.adirondackexplorer.org' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 427 ---
+URL: https://westseattleblog.com/2026/10/biznote-seaside-grill-closed/
+Title: BIZNOTE: Seaside Grill closed
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 15:59:00
+
+[Could not fetch: HTTPSConnectionPool(host='westseattleblog.com', port=443): Max retries exceeded with url: /2026/10/biznote-seaside-grill-closed/ (Caused by NameResolutionError("HTTPSConnection(host='westseattleblog.com', port=443): Failed to resolve 'westseattleblog.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 428 ---
+URL: https://bhamnow.com/2026/10/20/onelife-fitness-in-lee-branch-now-open/
+Title: Onelife Fitness in Lee Branch now open + featuring reformer Pilates
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 15:55:46
+
+[Could not fetch: HTTPSConnectionPool(host='bhamnow.com', port=443): Max retries exceeded with url: /2026/10/20/onelife-fitness-in-lee-branch-now-open/ (Caused by NameResolutionError("HTTPSConnection(host='bhamnow.com', port=443): Failed to resolve 'bhamnow.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 429 ---
+URL: https://www.courier-journal.com/story/entertainment/dining/restaurant/2026/10/20/please-thank-you-closes-frankfort-avenue-location-in-louisville/92344891007/
+Title: Please & Thank You closes one of its Louisville locations
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 15:54:00
+
+[Could not fetch: HTTPSConnectionPool(host='www.courier-journal.com', port=443): Max retries exceeded with url: /story/entertainment/dining/restaurant/2026/10/20/please-thank-you-closes-frankfort-avenue-location-in-louisville/92344891007/ (Caused by NameResolutionError("HTTPSConnection(host='www.courier-journal.com', port=443): Failed to resolve 'www.courier-journal.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 430 ---
+URL: https://myfox8.com/news/north-carolina/greensboro/piggly-wiggly-set-to-open-on-oct-21-in-greensboro/amp/
+Title: Piggly Wiggly set to open on Oct. 21 in Greensboro
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 15:51:46
+
+[Could not fetch: HTTPSConnectionPool(host='myfox8.com', port=443): Max retries exceeded with url: /news/north-carolina/greensboro/piggly-wiggly-set-to-open-on-oct-21-in-greensboro/amp/ (Caused by NameResolutionError("HTTPSConnection(host='myfox8.com', port=443): Failed to resolve 'myfox8.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 431 ---
+URL: https://www.thetelegraphandargus.co.uk/news/26654616.popular-shop-broadway-bradford-shut-weekend/
+Title: Popular shop in the Broadway Bradford to permanently shut this weekend
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 15:45:00
+
+[Could not fetch: HTTPSConnectionPool(host='www.thetelegraphandargus.co.uk', port=443): Max retries exceeded with url: /news/26654616.popular-shop-broadway-bradford-shut-weekend/ (Caused by NameResolutionError("HTTPSConnection(host='www.thetelegraphandargus.co.uk', port=443): Failed to resolve 'www.thetelegraphandargus.co.uk' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 432 ---
+URL: https://www.wvnews.com/theet/news/the-goat-wv-to-hold-grand-opening-celebration-in-bridgeport/article_a51c7055-7009-4091-b93d-f94c6cace9e1.html
+Title: The GOAT WV to hold grand opening celebration in Bridgeport
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 15:41:00
+
+[Could not fetch: HTTPSConnectionPool(host='www.wvnews.com', port=443): Max retries exceeded with url: /theet/news/the-goat-wv-to-hold-grand-opening-celebration-in-bridgeport/article_a51c7055-7009-4091-b93d-f94c6cace9e1.html (Caused by NameResolutionError("HTTPSConnection(host='www.wvnews.com', port=443): Failed to resolve 'www.wvnews.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 433 ---
+URL: https://www.nbclosangeles.com/news/local/portos-bakery-set-to-open-its-first-inland-empire-location-in-ontario/3958426/
+Title: Porto's Bakery set to open its first Inland Empire location in Ontario
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 15:32:05
+
+[Could not fetch: HTTPSConnectionPool(host='www.nbclosangeles.com', port=443): Max retries exceeded with url: /news/local/portos-bakery-set-to-open-its-first-inland-empire-location-in-ontario/3958426/ (Caused by NameResolutionError("HTTPSConnection(host='www.nbclosangeles.com', port=443): Failed to resolve 'www.nbclosangeles.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 434 ---
+URL: https://www.ocregister.com/2026/10/20/jose-andres-group-to-open-restaurant-at-ocvibe/
+Title: José Andrés Group to open restaurant at OCVibe
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 15:30:01
+
+[Could not fetch: HTTPSConnectionPool(host='www.ocregister.com', port=443): Max retries exceeded with url: /2026/10/20/jose-andres-group-to-open-restaurant-at-ocvibe/ (Caused by NameResolutionError("HTTPSConnection(host='www.ocregister.com', port=443): Failed to resolve 'www.ocregister.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 435 ---
+URL: https://macaubusiness.com/rem-luxury-hotel-holds-grand-opening-at-city-of-dreams-with-avant-garde-sensory-concept/
+Title: REM luxury hotel holds ‘grand opening’ at City of Dreams with avant-garde sensory concept
+Status hint: Opening | Industry: Hospitality
+Published: 2026-10-20 15:22:52
+
+[Could not fetch: HTTPSConnectionPool(host='macaubusiness.com', port=443): Max retries exceeded with url: /rem-luxury-hotel-holds-grand-opening-at-city-of-dreams-with-avant-garde-sensory-concept/ (Caused by NameResolutionError("HTTPSConnection(host='macaubusiness.com', port=443): Failed to resolve 'macaubusiness.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 436 ---
+URL: https://www.the-sun.com/money/17176698/kroger-rival-wegmans-new-store-north-carolina
+Title: Kroger rival opens first store in bustling city with 110,000 square feet & market café featuring sushi, pizza, and subs
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 15:17:22
+
+[Could not fetch: HTTPSConnectionPool(host='www.the-sun.com', port=443): Max retries exceeded with url: /money/17176698/kroger-rival-wegmans-new-store-north-carolina (Caused by NameResolutionError("HTTPSConnection(host='www.the-sun.com', port=443): Failed to resolve 'www.the-sun.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 437 ---
+URL: https://patch.com/florida/sarasota/sarasota-jeweler-retire-close-store-after-47-years
+Title: Sarasota Jeweler To Retire, Close Store After 47 Years
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 15:06:34
+
+[Could not fetch: HTTPSConnectionPool(host='patch.com', port=443): Max retries exceeded with url: /florida/sarasota/sarasota-jeweler-retire-close-store-after-47-years (Caused by NameResolutionError("HTTPSConnection(host='patch.com', port=443): Failed to resolve 'patch.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 438 ---
+URL: https://wcrz.com/ixp/84/p/trader-joes-farmington-hills-opening/
+Title: Trader Joe’s Bringing 10th Michigan Location to Farmington Hills
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 15:04:02
+
+[Could not fetch: HTTPSConnectionPool(host='wcrz.com', port=443): Max retries exceeded with url: /ixp/84/p/trader-joes-farmington-hills-opening/ (Caused by NameResolutionError("HTTPSConnection(host='wcrz.com', port=443): Failed to resolve 'wcrz.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 439 ---
+URL: https://www.wlwt.com/article/new-whole-foods-market-opening-in-west-chester-ohio/74193228
+Title: New Whole Foods Market opening in West Chester
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 15:04:00
+
+[Could not fetch: HTTPSConnectionPool(host='www.wlwt.com', port=443): Max retries exceeded with url: /article/new-whole-foods-market-opening-in-west-chester-ohio/74193228 (Caused by NameResolutionError("HTTPSConnection(host='www.wlwt.com', port=443): Failed to resolve 'www.wlwt.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 440 ---
+URL: https://www.pennlive.com/news/2026/10/budget-friendly-grocery-chain-to-open-30-new-stores-soon.html?outputType=amp
+Title: Budget-friendly grocery chain to open 30 new stores ‘soon’
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 15:02:00
+
+[Could not fetch: HTTPSConnectionPool(host='www.pennlive.com', port=443): Max retries exceeded with url: /news/2026/10/budget-friendly-grocery-chain-to-open-30-new-stores-soon.html?outputType=amp (Caused by NameResolutionError("HTTPSConnection(host='www.pennlive.com', port=443): Failed to resolve 'www.pennlive.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 441 ---
+URL: https://www.ocregister.com/2026/10/20/trader-joes-opening-larger-store-at-ocean-ranch-shopping-center/
+Title: Trader Joe’s swapping stores this week at Laguna Niguel shopping center
+Status hint: Opening | Industry: Retail REITs
+Published: 2026-10-20 15:00:14
+
+[Could not fetch: HTTPSConnectionPool(host='www.ocregister.com', port=443): Max retries exceeded with url: /2026/10/20/trader-joes-opening-larger-store-at-ocean-ranch-shopping-center/ (Caused by NameResolutionError("HTTPSConnection(host='www.ocregister.com', port=443): Failed to resolve 'www.ocregister.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 442 ---
+URL: http://www.highland-news.co.uk/news/5m-hotel-expansion-approved-despite-traffic-worries-447902/
+Title: £5m hotel expansion approved despite traffic worries
+Status hint: Opening | Industry: Hospitality
+Published: 2026-10-20 15:00:00
+
+[Could not fetch: HTTPConnectionPool(host='www.highland-news.co.uk', port=80): Max retries exceeded with url: /news/5m-hotel-expansion-approved-despite-traffic-worries-447902/ (Caused by NameResolutionError("HTTPConnection(host='www.highland-news.co.uk', port=80): Failed to resolve 'www.highland-news.co.uk' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 443 ---
+URL: https://www.kilmarnocktoday.co.uk/news/26649757.discount-store-sids-super-savers-open-galston/
+Title: New discount store set to open in Galston's former Original Factory Shop
+Status hint: Opening | Industry: Mass Merchandisers
+Published: 2026-10-20 15:00:00
+
+[Could not fetch: HTTPSConnectionPool(host='www.kilmarnocktoday.co.uk', port=443): Max retries exceeded with url: /news/26649757.discount-store-sids-super-savers-open-galston/ (Caused by NameResolutionError("HTTPSConnection(host='www.kilmarnocktoday.co.uk', port=443): Failed to resolve 'www.kilmarnocktoday.co.uk' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 444 ---
+URL: https://www.click2houston.com/news/local/2026/10/20/trader-joes-plans-3-new-texas-stores-including-one-in-the-houston-area/
+Title: Trader Joe’s plans 3 new Texas stores, including one in the Houston area
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 14:57:28
+
+[Could not fetch: HTTPSConnectionPool(host='www.click2houston.com', port=443): Max retries exceeded with url: /news/local/2026/10/20/trader-joes-plans-3-new-texas-stores-including-one-in-the-houston-area/ (Caused by NameResolutionError("HTTPSConnection(host='www.click2houston.com', port=443): Failed to resolve 'www.click2houston.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 445 ---
+URL: https://patch.com/illinois/naperville/kitakata-ramen-ban-nai-now-open-naperville
+Title: Kitakata Ramen Ban Nai Now Open In Naperville
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 14:55:35
+
+[Could not fetch: HTTPSConnectionPool(host='patch.com', port=443): Max retries exceeded with url: /illinois/naperville/kitakata-ramen-ban-nai-now-open-naperville (Caused by NameResolutionError("HTTPSConnection(host='patch.com', port=443): Failed to resolve 'patch.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 446 ---
+URL: https://www.conveniencestore.co.uk/stores/co-op-wholesale-opens-new-nisa-store-in-ollerton/725016.article
+Title: Co-op Wholesale opens new Nisa store in Ollerton, Nottinghamshire
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 14:54:06
+
+[Could not fetch: HTTPSConnectionPool(host='www.conveniencestore.co.uk', port=443): Max retries exceeded with url: /stores/co-op-wholesale-opens-new-nisa-store-in-ollerton/725016.article (Caused by NameResolutionError("HTTPSConnection(host='www.conveniencestore.co.uk', port=443): Failed to resolve 'www.conveniencestore.co.uk' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 447 ---
+URL: https://1035kissfmboise.com/miss-a-officially-opens-boise-mall/
+Title: New Affordable Beauty Store Now Open At Boise Towne Square Mall
+Status hint: Opening | Industry: Health / Beauty
+Published: 2026-10-20 14:51:46
+
+[Could not fetch: HTTPSConnectionPool(host='1035kissfmboise.com', port=443): Max retries exceeded with url: /miss-a-officially-opens-boise-mall/ (Caused by NameResolutionError("HTTPSConnection(host='1035kissfmboise.com', port=443): Failed to resolve '1035kissfmboise.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 448 ---
+URL: https://mynorthwest.com/lifestyle/trader-joes-new-locations/4288309
+Title: Trader Joe’s plans 2 new stores in Washington as its footprint grows
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 14:47:59
+
+[Could not fetch: HTTPSConnectionPool(host='mynorthwest.com', port=443): Max retries exceeded with url: /lifestyle/trader-joes-new-locations/4288309 (Caused by NameResolutionError("HTTPSConnection(host='mynorthwest.com', port=443): Failed to resolve 'mynorthwest.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 449 ---
+URL: https://greaterlongisland.com/homegoods-opening-new-shirley-store-thursday-bringing-65-jobs/
+Title: HomeGoods opening new Shirley store Thursday, bringing 65 jobs
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 14:45:10
+
+[Could not fetch: HTTPSConnectionPool(host='greaterlongisland.com', port=443): Max retries exceeded with url: /homegoods-opening-new-shirley-store-thursday-bringing-65-jobs/ (Caused by NameResolutionError("HTTPSConnection(host='greaterlongisland.com', port=443): Failed to resolve 'greaterlongisland.com' ([Errno 11001] getaddrinfo failed)"))]
+
+--- Article 450 ---
+URL: https://www.yogonet.com/international/news/2026/10/20/126920-iowa-cedar-crossing-casino-to-hold-soft-launch-on-nov-19-ahead-of-december-grand-opening
+Title: Iowa: Cedar Crossing Casino to hold soft launch on Nov. 19 ahead of December grand opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 14:42:10
+
+[Could not fetch: HTTPSConnectionPool(host='www.yogonet.com', port=443): Max retries exceeded with url: /international/news/2026/10/20/126920-iowa-cedar-crossing-casino-to-hold-soft-launch-on-nov-19-ahead-of-december-grand-opening (Caused by NameResolutionError("HTTPSConnection(host='www.yogonet.com', port=443): Failed to resolve 'www.yogonet.com' ([Errno 11001] getaddrinfo failed)"))]

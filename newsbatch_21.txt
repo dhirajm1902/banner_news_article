@@ -1,4 +1,4 @@
-You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates, footage sizes, or statuses:
 
 🔍 Extract these fields
 • Store/Shop/Restaurant Name
@@ -11,23 +11,30 @@ You are an expert, precise data extractor specialized in retail and restaurant o
   - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
   - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
   👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Footage Size
+  - Extract the store, shop, restaurant, or facility's footage size only if it is explicitly mentioned in the article text
+  - Preserve the exact figure and unit as stated, e.g. "12,000 square feet", "2,500 sq. ft.", "approximately 8,000 square feet"
+  - If the article mentions multiple relevant footage sizes for the same business, include each size with its context
+  - Do NOT calculate, convert, estimate, or infer footage size; do not confuse it with acreage, lot size, seating capacity, or other measurements
+  - If no footage size is mentioned, write exactly "Not specified"
 • Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
 
 📊 Output format
 Create ONE clean Markdown table with these exact column headers (in this order):
-| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Footage Size | Short Description | Article Link | Published Date |
 
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If an article has qualifying business information but no footage size, write "Not specified" in the Footage Size column
 • If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
 
 🚫 Strict constraints
-• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses, dates, or footage sizes  • ❌ No rewriting or normalizing status text
 
 📎 Final section (mandatory)
 At the very end of your response, add:
@@ -38,404 +45,402 @@ If none, write: None
 ✅ Articles below — extract now:
 
 
---- Article 51 ---
-URL: https://352today.com/news/257752-racetrac-to-open-new-location-give-out-gift-cards-in-oxford-oct-15/
-Title: RaceTrac to open new location, give out gift cards in Oxford Oct. 15
+--- Article 201 ---
+URL: https://pr.chinookobserver.com/article/THE-BIG-GREEK-CAFE-SELECTS-WESTVIEW-PROMENADE-FOR-SECOND-LOCATION-IN-FREDERICK-COUNTY-MARYLAND/6adbac05dba4ed9cc76d9511
+Title: THE BIG GREEK CAFÉ SELECTS WESTVIEW PROMENADE FOR SECOND LOCATION IN FREDERICK COUNTY, MARYLAND
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 19:24:44
+Published: 2026-10-23 19:27:29
 
-[Could not fetch: 401 Client Error: Unauthorized for url: https://352today.com/news/257752-racetrac-to-open-new-location-give-out-gift-cards-in-oxford-oct-15/]
+THE BIG GREEK CAFÉ SELECTS WESTVIEW PROMENADE FOR SECOND LOCATION IN FREDERICK COUNTY, MARYLAND PR Newswire Friday, October 23, 2026 at 6:46pm UTC THE BIG GREEK CAFÉ SELECTS WESTVIEW PROMENADE FOR SECOND LOCATION IN FREDERICK COUNTY, MARYLAND PR Newswire FREDERICK, Md., Oct. 23, 2026 Quick-service restaurant at 200,000 square foot lifestyle center to join existing site in Urbana FREDERICK, Md. , Oct. 23, 2026 /PRNewswire/ -- The Big Greek Café has selected Westview Promenade for the quick-service restaurant's second location in Frederick County, joining an existing location in Urbana, and will celebrate its grand opening on Friday, October 16. The Big Greek Café signed a lease with Hill Management Services, Inc. for 2,500 square feet of space within the 200,000 square foot outdoor lifestyle center located at the intersection of Maryland Route 85 (Buckeystown Pike) and Crestwood Boulevard. Danielle Bridge , Leasing Manager for Hill Management Services and KLNB's Mason Bernstein represented the landlord, and KLNB's Michael Ginsburg represented the tenant in this transaction. The Big Greek Café, which operates 15 locations throughout the Maryland and Virginia region, specializes in gyro pitas; Big Greek Bowls filled with gyro, chicken, pork, falafel, and shrimp; salads such as grilled salmon, grilled chicken and grilled shrimp; and Big Greek French fries which includes feta cheese, parsley and herbs and tzatziki sauce. The restaurant also serves a variety of other traditional Greek dishes such as Moussaka, Pasticho and Spanakopita. According to Director of Operations Niko Kontos, The Big Greek Cafe' selected Westview Promenade based on "its family-oriented environment, movie theatre and strong foot traffic during all day parts." Kontos added, "we consider Westview Promenade as the premiere shopping center venue in the greater Frederick area, with a highly-attractive tenant mix that draws businesspeople, families, and visitors to the area. Several strong and traffic-gen
 
---- Article 52 ---
-URL: https://www.pryorcashman.com/news/pryor-cashman-represents-carnegie-diner-cafe-in-opening-of-hudson-yards-location
-Title: Pryor Cashman Represents Carnegie Diner & Cafe in Opening of Hudson Yards Location
+--- Article 202 ---
+URL: https://www.newsday.com/business/homegoods-shirley-store-south-port-shopping-center-j403iynv
+Title: HomeGoods' Shirley store is retailer's 17th on Long Island
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 19:25:22
+
+A new HomeGoods is set to open Thursday in Shirley. Credit: Elizabeth Sagarin By Tory N. Parrish tory.parrish@newsday.com ToryParrish1 Updated October 23, 2026 3:25 pm Share Off-price retailer HomeGoods opened its 17th Long Island store Thursday. The store is in the South Port Shopping Center in Shirley, at 999 Montauk Hwy. The retailer, which sells home decor and furniture, occupies 23,482 square feet of space. The new store held a grand opening Thursday. Its regular hours will be 9:30 a.m. to 9:30 p.m. daily, according to a statement from the retailer. "Our amazing values, brand names, and vast assortment make HomeGoods an exciting destination for shoppers," John Ricciuti, president of HomeGoods, said in the statement. "With a large variety of merchandise from around the world, customers will always find thrilling values in our treasure hunt shopping experience." About 65 full- and part-time workers are expected to be hired for the Shirley store, HomeGoods said. Sign up for the Daily Business newsletter Stay in the know on jobs, retail and all things business across Long Island. By clicking Sign up, you agree to our privacy policy . The retailer’s Shirley store is located in a space vacated by a Michaels arts and crafts store in May 2025, Thomas Rettaliata, vice chairman of Ripco Real Estate LLC in Woodbury, said in an email. Rettaliata is one of the brokers representing the landlord, Heidenberg Properties Group in Closter, New Jersey, in leasing the shopping center. The HomeGoods store in Shirley is among 14 the chain is opening in 11 states in October and November, according to the retailer's website. The more than 970 HomeGoods stores nationwide are owned by The TJX Companies Inc., a Framingham, Massachusetts-based company whose 5,200 off-price stores, including TJ Maxx, Marshalls, Homesense and Sierra, span 10 countries. Last year, the company announced a plan to reach 7,000 stores. But in August, the company announced it had raised that goal to 7,500, followi
+
+--- Article 203 ---
+URL: https://dailyhive.com/vancouver/kith-vancouver-flagship-store-treats-ice-cream-oakridge-park
+Title: Inside Kith's new Vancouver flagship store and ice cream shop at Oakridge Park mall
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 19:22:00
+
+Kith Vancouver flagship store and ice cream shop at Oakridge Park mall, during the media preview on Oct. 22, 2026. (Kenneth Chan) New York City-based upscale fashion and lifestyle brand Kith is making its debut in Western Canada today, bringing clothing, sneakers, and its signature ice cream shop concept — Kith Treats — to Vancouver’s new Oakridge Park mall . The Vancouver flagship store opened this morning within the northwest corner of the indoor mall, and it is the retailer’s second Canadian flagship location. The expansion comes just over three years after Kith entered Canada with its first store in Toronto’s Yorkville district in September 2023. Kith combines its own in-house fashion collection creations with collaborations spanning fashion, sports, entertainment, pop culture, and other inspirations. Its past partners include Nike, BMW, Disney, Versace, and Giorgio Armani. You might also like: 'A Safeway unlike any other': Inside Oakridge Park's newly opened 50,000+ sq. ft. flagship grocery store This dead-end Oakridge Park mall corridor will soon funnel thousands of people past fast food and service-based businesses daily Colourful nighttime lighting transforms Oakridge Park's giant mushroom sculptures Big area of Oakridge Park mall's 7.5-acre rooftop urban public park opens An in-depth look inside the new Oakridge Park, the rebirth of Vancouver's second major mall Oakridge Park developers ask City of Vancouver to ease parking and transportation requirements Kith is marking the store opening at Oakridge Park with its latest footwear collaboration with Salomon, and a Vancouver-themed collection of clothing, accessories, and collectibles, including pieces with Vancouver Grizzlies branding. At Oakridge Park, the store occupies a single level, with dedicated offerings for men, women, and children, alongside footwear displays, accessories, and designer clothing. The 9,000 sq. ft. space also has a secondary entrance, accessible from a future outdoor retail promenade
+
+--- Article 204 ---
+URL: https://hoodline.com/2026/10/kansas-city-grocery-chain-launches-discount-store/
+Title: A Kansas City grocery chain has launched a discount store
+Status hint: Opening | Industry: Mass Merchandisers
+Published: 2026-10-23 19:17:40
+
+8700 E. 63rd St. — Approximate Street Scene Google Street View A Kansas City grocery chain has launched a discount store. The soft opening took place at 8700 E. 63rd St. in Brywood Center, the same building that housed a traditional Price Chopper until recently, according to Startland News . Cosentino's Food Stores, the family-owned company behind the brand, says the new format will still carry quality meats, triple-inspected fresh produce, deli and hot food selections, national brands, private labels, and bakery items — the full lineup of a conventional grocery store, just priced differently. John Cosentino, a co-owner of Cosentino's Food Stores, discussed the new format with the outlet. He said he spent more than a year studying the no-frills, cost-plus-10-percent model as it played out in other markets before bringing it to Kansas City, calling it a “proven game-changer” for independent retailers. Staffing Shrank Through Attrition, Not Layoffs The shift to a leaner operating model also means a leaner staff. The former Price Chopper at the site employed about 100 people a year ago; ChopMore! now runs with roughly 60. Cosentino said the company did not lay off any workers to get there — instead, staffing was gradually reduced through attrition as the format was developed. Casie Broker was recently promoted to chief marketing officer at Price Chopper Enterprises . Rising Food and Fuel Costs Are Squeezing Shoppers The timing lines up with a rough stretch for grocery budgets. As reported by KSHB , the Producer Price Index showed goods prices jumped 2.6 percent in September — the largest monthly increase since December 2009 — with fresh food costs up more than 8 percent and fuel prices up 21 percent. Shoppers interviewed by that station described adjusting their habits in response: leaning more on generic and store brands, and buying groceries as needed instead of stocking up the way they once did. A Family Grocery Legacy The Cosentino's business was developed 61 years
+
+--- Article 205 ---
+URL: https://www.sfchronicle.com/food/restaurants/article/el-buen-comer-chase-center-sf-22491344.php
+Title: This beloved homestyle S.F. Mexican restaurant is expanding for the first time. Here’s where
 Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 19:23:11
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.pryorcashman.com/news/pryor-cashman-represents-carnegie-diner-cafe-in-opening-of-hudson-yards-location]
-
---- Article 53 ---
-URL: https://nowgeorgia.com/hundreds-welcome-food-lion-to-lavonia-at-grand-opening/
-Title: Hundreds welcome Food Lion to Lavonia at grand opening
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 19:15:28
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://nowgeorgia.com/hundreds-welcome-food-lion-to-lavonia-at-grand-opening/]
-
---- Article 54 ---
-URL: https://www.kgun9.com/news/local-news/salad-go-founder-moves-to-reopen-some-arizona-locations-after-bankruptcy-abrupt-closure
-Title: Salad & Go founder moves to reopen some Arizona locations after bankruptcy, abrupt closure
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 19:13:43
-
-KGUN 9 News Local News Actions Facebook Tweet Email Salad & Go founder moves to reopen some Arizona locations after bankruptcy, abrupt closure The hospitality group behind the chain aims to open at least one restaurant by the end of the year. Prev Next There were long lines at many Salad and Go locations around the Valley Wednesday as people came out to have the area staple one last time before all of their locations close their doors. By: abc15.com staff Posted and last updated PHOENIX — Salad & Go's original founder and corporate chef has announced that he is moving to reopen some Arizona locations after a recent bankruptcy and abrupt closure of all locations. On Wednesday, Chef Daniel Patino, Mike Myers, and Tom Misitano, the original founder and corporate chef and co-founders of Hospitality First Concepts, announced on social media and on a podcast that they have acquired rights to operate and expand Salad & Go throughout North America. "We're looking forward to bringing back the fresh, quality food, great value, and genuine hospitality that made Salad & Go such a special part of so many Arizona communities," a message from the trio read. In August, the popular Arizona salad chain announced that it would be closing its doors after filing for Chapter 11 bankruptcy . Several dozen former store locations will be converted to 7 Brew locations after the Arkansas-based drive-thru coffee chain outbid Tempe-based Dutch Bros in an auction for the sites. Daniel Patino, who has been behind Salad & Go as co-founder and corporate chef since it launched in Gilbert in 2013, explained to ABC15 that his team will try to secure some of those old locations, but also build new ones. "Our goal is to open at least one location before the year ends," Patino said. The group is not offering details right now on how many spots will reopen across Arizona or if they will be in other states too. "It is honestly a roller coaster of emotions," Patino said. "A little bit of butterflies too. Be
-
---- Article 55 ---
-URL: https://www.inc.com/amaya-nichole/petsmart-closing-locations-2026-list-doomed-stores/91418137
-Title: PetSmart Is Closing Locations in 2026: See Updated List of Doomed Stores
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 19:11:03
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.inc.com/amaya-nichole/petsmart-closing-locations-2026-list-doomed-stores/91418137]
-
---- Article 56 ---
-URL: https://www.kansas.com/entertainment/restaurants/dining-with-denise-neil/article317623615.html
-Title: Owner of Wichita restaurant that closed last month has had a change of heart
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 19:09:00
-
-Scratch that. Barrel Boys BBQ’s owner Buddy King said that his restaurant, which he announced two and a half weeks ago on Facebook was permanently closing, will actually reopen this Saturday. It turned out that King just needed a break. “I was overwhelmed and putting too much pressure on my family,” he said. “It was a hasty post.” Barrel Boys will reopen on Saturday at 13th and McLean but will have reduced hours. Until November, it will open from 11:30 to 6 p.m. on Saturdays only. Then, it will add 11:30 to 4 p.m. on Sundays. Previously, the restaurant was open Thursdays through Sundays then dropped to Fridays through Sundays when King’s work schedule changed. Barrel Boys BBQ will reopen Saturday.                                                                                            Denise Neil The Wichita Eagle King said he also will start renting out the building for private parties. He and his wife were struggling recently to keep up with their two full-time jobs and their two boys, who play multiple sports. “We attend all of their games, so family trumps hours of operation as well as keeping the high quality of our food,” he said. The post announcing the closing went up on Sept. 27. In it, King said food cost, labor and trying to keep up with the restaurant and his job had taken a toll. King, a successful competition pit master whose specialty is brisket, started out with a Barrel Boys BBQ food truck nine years ago. Then, in early 2022, he decided to lease a little building at 2202 W. 13th St. and open a restaurant. He gave the building a makeover, adding red trim, new front windows and a large covered patio with picnic tables. He also added a big new parking lot. The ribbon cutting for the restaurant was in June 2024. Barrel Boys got positive word-of-mouth reviews. Many of Barrel Boys’ fans lamented its closing in the comments of the social media post announcing the decision. Read Next Dining With Denise Neil Heroes space to be taken over by a bar that firs
-
---- Article 57 ---
-URL: https://www.marketscreener.com/news/albertsons-companies-inc-announces-plans-to-build-new-albertsons-grocery-store-in-valley-center-ce785dd2d18ff227
-Title: Albertsons Companies, Inc. Announces Plans to Build New Albertsons Grocery Store in Valley Center
-Status hint: Opening | Industry: Grocery
-Published: 2026-10-14 19:05:26
-
-Albertsons Companies, Inc. Announces Plans to Build New Albertsons Grocery Store in Valley Center Published on 10/14/2026
-                    at 03:05 pm EDT S&P Capital IQ Add MarketScreener to your sources Share ALBERTSONS COMPANIES, INC. +2.83% Albertsons Companies, Inc. announced plans to build a new Albertsons grocery store in Valley Center, bringing fresh food, pharmacy services, ecommerce services and everyday essentials closer to residents in a growing San Diego County community. Scheduled to open in spring 2028, the new approximately 51,000-square-foot store will be located on property owned by the San Pasqual Economic Development Corporation. The project represents a significant investment in the Valley Center, a community of approximately 22,000 residents where many families currently travel several miles to access a full-service grocery store. The new Albertsons store will offer residents a convenient destination for fresh produce, quality meat and seafood, bakery and deli offerings, pharmacy services and a wide selection of grocery and household products. The project reflects a collaborative effort between Albertsons and the San Pasqual Economic Development Corporation to support the long-term growth and well-being of the Valley Center community. In addition to expanding access to fresh food, ecommerce services and pharmacy services, the new store is expected to create local employment opportunities and contribute to economic development in the region. Additional information regarding construction milestones, hiring opportunities and grand opening celebrations will be shared as the project moves forward. © S&P Capital IQ -
-                                                                    2026 Add MarketScreener to your sources Share
-
---- Article 58 ---
-URL: https://www.nny360.com/top_stories/renovated-watertown-hotel-opens-as-spark-by-hilton-grand-opening-in-november/article_83a53b4f-2114-549e-84d6-74c08faaa676.html
-Title: Renovated Watertown hotel opens as Spark by Hilton, Grand Opening in November
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-14 19:04:21
-
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.nny360.com/top_stories/renovated-watertown-hotel-opens-as-spark-by-hilton-grand-opening-in-november/article_83a53b4f-2114-549e-84d6-74c08faaa676.html]
-
---- Article 59 ---
-URL: https://www.wfmz.com/features/eat-sip-shop/trading-card-retailer-opening-1st-brick-and-mortar-shop-at-former-lehigh-valley-florist-spot/article_71a8fdf2-fab6-48ca-8dc5-815d751c47f3.html
-Title: Trading card retailer opening 1st brick-and-mortar shop at former Lehigh Valley florist spot
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 18:55:00
-
-Facebook Twitter WhatsApp LinkedIn SMS Email The first brick-and-mortar location of T-Rex Sports Cards & Gaming is coming soon to 202 Main St. in Hellertown. Ryan Kneller Facebook Twitter WhatsApp LinkedIn SMS Email Print Copy article link Save HELLERTOWN, Pa. – A one-time destination for roses, carnations, and sunflowers will soon be home to Pokémon, Star Wars, and sports cards in Northampton County. T-Rex Sports Cards & Gaming, offering a wide array of sports and non-sports trading cards, will hold its grand opening from 11 a.m. to 6 p.m. on Saturday, Nov. 14, at 202 Main St. in Hellertown. The store will occupy an updated space that was previously home to Pondelek’s Florist & Gifts, which closed in June after more than 80 years of operation. The first brick-and-mortar location of T-Rex Sports Cards & Gaming is coming soon to 202 Main St. in Hellertown. Ryan Kneller Shoppers will be able to browse a wide assortment of sports cards, including baseball, basketball, football and tennis, along with non-sports cards such as Pokemon. “I’m very eclectic as a collector,” T-Rex Sports owner Robert Parsons told 69 News. “So, my store is going to be very eclectic as well. We’ll have sports cards and non-sports cards like Star Wars, Game of Thrones, and Pokémon. There will also be some UFC, WWE, F-1, and One Piece. So, we’ll have a little bit of everything when it comes to cards.” The Hellertown store will be T-Rex Sports’ first brick-and-mortar location. Parsons has been operating T-Rex Sports in a mobile format, setting up stands at card shows across the country, for the past several years. “I started the business in 2013,” Parsons said. “It was originally just a baseball and softball equipment company that we transitioned into sporting equipment and sports cards, and then eventually, it became just cards. When I stopped playing softball as seriously as I played it for a long time, traveling to do the sports equipment stuff didn’t really make much sense anymore.” Parsons ha
-
---- Article 60 ---
-URL: https://movie-locations.com/movies/p/Project-Hail-Mary.php
-Title: Discover the film locations for Project Hail Mary (2026), in Cambridgeshire, Dorset, Hertfordshire and Hampshire.
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 18:33:15
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://movie-locations.com/movies/p/Project-Hail-Mary.php]
-
---- Article 61 ---
-URL: https://www.yahoo.com/lifestyle/articles/top-texas-barbecue-restaurant-reveals-182807331.html
-Title: Top Texas barbecue restaurant reveals update on new location
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 18:28:07
-
-A platter with brisket, turkey, sausage, chicken, meatloaf and various sides at Yearby's Barbecue and Waterice. The restaurant is close to finalizing its move to Allen, Texas. (Juan Figueroa/Dallas Morning News) One of Texas' most fascinating barbecue stories may finally be finding its happy ending. Yearby's Barbecue & Waterice , the top-50 barbecue smokehouse that dares to combine Central Texas' most famous foodstuff with Philadelphia's most delicious dessert , is close to opening the doors of its new location in Allen, about 26 miles north of Dallas and only six north of its former home in Plano. "Thank you all for your patience, support, and excitement as we prepare to welcome you to Yearby's Barbecue & Waterice in Allen, Texas!" read the restaurant's update in a Facebook post Tuesday evening. "We're excited to share that we plan to host our inaugural soft opening very soon!" The update continued to note that interested folks will get an RSVP to the soft opening. Advertisement Advertisement Advertisement Advertisement "We can't wait to open our doors, fire up the pits, and share this new chapter with you," the post continued. Sabrina and CJ Henley opened Yearby's in 2021 in Pilot Point, focusing on halal beef as both owners are Muslim. Their food, including brisket, beef short ribs and smoked meatloaf, earned plentiful praise and helped lead them to a coveted spot in Texas Monthly's 2025 Top 50 Texas BBQ Joints list. Along with the 'cue, the Henleys serve homemade water ice, a treat born in Philadelphia, which is where Sabrina is from originally. Bob Morris feeds Carla Morris from their platter at Yearby's Barbecue and Waterice in Pilot Point, Texas on Saturday, May 24, 2025. (Juan Figueroa/Dallas Morning News) But just as the plaudits came in, moves were being made. Yearby's announced in August 2025 it was heading to Plano, with an opening date set for October of the same year. But things changed less than one year later. In June, the Henleys decided "to abruptl
-
---- Article 62 ---
-URL: https://www.kansascity.com/news/business/openings-closings/article317620524.html
-Title: Toys”R”Us is opening stand-alone store in this Kansas City area shopping center
-Status hint: Opening | Industry: Retail REITs
-Published: 2026-10-14 18:27:22
-
-A popular children’s toy store is opening a stand-alone location soon inside a Kansas City shopping center. Toys“R”Us is coming to the Oak Park Mall, according a post on the mall’s Instagram. “Look who’s coming soon 👀🦒 @ToysRUs is opening at Oak Park Mall! Get ready to relive the magic, and share it with your kids,” the post said. There are three Toys”R”Us locations in Kansas City. The most recent one opened last October at Tanger Kansas City Legends. The Macy’s inside the Oak Park Mall and Leawood’s Town Center Plaza have had the toy store inside the department stores for years, according to Macy’s employees. News about the new KC store comes after Toys“R”Us announced a national expansion last month. The Oak Park Mall did not give The Star an exact date, but said it would open in the next week. Toys “R” Us will be on the first floor near the JCPenney, according to the Oak Park Mall website. It will be open from 10 a.m. to 8 p.m. Monday through Saturday, and 11 a.m. to 6 p.m. Sunday. For over 70 years, Toys”R”Us has been a leader in the toy industry with its mascot Geoffrey the Giraffe. Today there are over 1,680 locations across 37 countries. The Star reached out to Oak Park Mall but did not immediately hear back. Related Stories from  Kansas City Star Local Plan your routes now: Kansas City’s I-670 to close for nearly 2 years for Luminary Park October 13, 2026 4:02 PM Openings & Closings Longtime Power & Light bar will close after 18 years in Kansas City October 13, 2026 4:44 PM Noelle Alviz-Gransee The Kansas City Star Email this person Noelle Alviz-Gransee is a food, arts and business reporter for the Kansas City Star. She studied journalism and political science at MU and has previously written for the Des Moines Register, the Wisconsin Center for Investigative Journalism, The Missourian, Startland News and the Missouri Business Alert.
-
---- Article 63 ---
-URL: https://www.delawareonline.com/story/news/2026/10/14/what-tj-maxx-stores-are-closing-updated-2026-store-closure-list-locations/92251497007/
-Title: What TJ Maxx stores are closing? Updated 2026 store closure list
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 18:25:00
-
-[Could not fetch: 402 Client Error: Payment Required for url: https://www.delawareonline.com/story/news/2026/10/14/what-tj-maxx-stores-are-closing-updated-2026-store-closure-list-locations/92251497007/]
-
---- Article 64 ---
-URL: https://www.bizjournals.com/sanantonio/news/2026/10/14/hopdoddy-schertz-station-retail-development-chain.html
-Title: Hopdoddy Burger Bar files plans for new location at major Schertz development
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 18:24:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/sanantonio/news/2026/10/14/hopdoddy-schertz-station-retail-development-chain.html]
-
---- Article 65 ---
-URL: https://www.sfchronicle.com/bayarea/article/grocery-outlet-oakland-lake-merritt-opening-22476992.php
-Title: Grocery Outlet is taking over a shuttered Oakland Walgreens. Here’s when it opens
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 18:23:56
+Published: 2026-10-23 19:17:09
 
 JavaScript is disabled in your browser. Please enable JavaScript to proceed.
 
---- Article 66 ---
-URL: https://www.nj.com/news/2026/10/bass-pro-shops-seeks-120-restaurant-workers-for-soon-to-open-nj-store.html
-Title: Bass Pro Shops seeks 120 restaurant workers for soon-to-open N.J. store
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 18:23:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.nj.com/news/2026/10/bass-pro-shops-seeks-120-restaurant-workers-for-soon-to-open-nj-store.html]
-
---- Article 67 ---
-URL: https://www.disneyfoodblog.com/2026/10/14/the-newest-restaurant-at-disney-springs-is-having-its-grand-opening-this-weekend/
-Title: The NEWEST Restaurant at Disney Springs Is Having Its Grand Opening This Weekend
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 18:20:28
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.disneyfoodblog.com/2026/10/14/the-newest-restaurant-at-disney-springs-is-having-its-grand-opening-this-weekend/]
-
---- Article 68 ---
-URL: https://glamadelaide.com.au/coming-soon-ricehome-expanding-to-firle-with-new-claypot-rice-dishes-and-asian-desserts/
-Title: COMING SOON: Ricehome expanding to Firle with new claypot rice dishes and Asian desserts
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 18:20:07
-
-The popular CBD restaurant is expanding to Firle, with new claypot rice flavours and Asian-inspired desserts from sister brand Sugar Trend. Share Tweet Share Share Email Comments Ricehome is putting the finishing touches on its second location in Firle, with a grand opening scheduled for October 25, 2026. Known for its freshly cooked claypot rice, the expansion follows the success of its original CBD restaurant, which opened in January and introduced Adelaide diners to the traditional Chinese dish, cooked individually in claypots. “Rice Home was born from our love of traditional Chinese comfort food, particularly claypot rice,” the team said. “We wanted to bring the authentic flavours of Chinese home-style cooking to Adelaide and create a place where people can enjoy delicious, comforting meals that remind them of home.” For owners Annie and Kary, the expansion marks another milestone in a business inspired by the flavours of their childhood in Guangzhou, China. Before opening their first restaurant on Field Street earlier this year, the pair spent almost two years refining their recipes and cooking techniques, determined to recreate the comforting claypot rice dishes they grew up eating. Unlike restaurants that prepare rice in advance, Ricehome cooks each serving from scratch, adding raw rice directly to individual claypots with the selected ingredients. The process takes approximately 15 to 20 minutes, allowing the rice to absorb the flavours of the meat and seasonings while developing a golden crust underneath. Diners can also customise their meals with the restaurant’s house-made chilli and soy sauces. The restaurant’s approach centres on food as a way to bring people together, with the team saying its goal is to introduce more Adelaide diners to the flavours and traditions of Chinese claypot rice while making it accessible to everyone. Two customer favourites at the existing CBD restaurant are Chinese sausage and chicken with shiitake mushroom claypot rice, and
-
---- Article 69 ---
-URL: https://www.theadvocate.com/baton_rouge/news/planned-paarenthood-reopens-louisiana/article_94edd8f8-484c-5999-aa85-ea0cf0433a9a.amp.html
-Title: After a yearlong closure, Planned Parenthood reopens New Orleans clinic and makes Louisiana return
+--- Article 206 ---
+URL: https://insidethemagic.net/2026/10/disney-jungle-cruise-closure-cj1/
+Title: Disney’s Jungle Cruise Closure Confirmed Amid Rumors of Major Park Overhaul
 Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 18:15:00
+Published: 2026-10-23 19:10:56
 
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.theadvocate.com/baton_rouge/news/planned-paarenthood-reopens-louisiana/article_94edd8f8-484c-5999-aa85-ea0cf0433a9a.amp.html]
+Home » Theme Parks » Disney Parks Credit: Tokyo Disney Resort Another classic Disney attraction is preparing for an extended closure, with questions already circulating about its long-term future. Jungle Cruise is one of Disney’s oldest surviving attractions. The original debuted at Disneyland Park in 1955, taking guests on a boat tour through exotic rivers populated by animatronic wildlife. Its combination of elaborate scenery and joke-cracking skippers eventually became one of Disney’s most recognizable experiences. Credit: Justin Ennis, Flickr The attraction expanded to Magic Kingdom in 1971 and Tokyo Disneyland in 1983, followed by Hong Kong Disneyland in 2005. While each version has its differences, all four retain the original premise of exploring the jungle aboard a guided riverboat. Tokyo Disneyland’s version received a significant overhaul in 2014, reopening as Jungle Cruise: Wildlife Expeditions. The refurbishment introduced new lighting effects, an original soundtrack, and an enhanced nighttime experience. Today, guests embark on a 10-minute journey through Adventureland, encountering elephants, crocodiles, lions, and other animals. Each boat accommodates up to 32 passengers, with Cast Members guiding the expedition. Credit: Tokyo Disney Resort However, the Japanese attraction is now preparing to close for almost three months. Disney Confirms Jungle Cruise Closure for 2027 Tokyo Disney Resort has confirmed that Jungle Cruise: Wildlife Expeditions will close on January 6, 2027. According to the resort’s official refurbishment schedule, the attraction will remain unavailable through March 31, 2027. It is currently expected to resume operations in April, provided the schedule remains unchanged. This is an unusually lengthy refurbishment compared to many of the shorter maintenance closures scheduled across Tokyo Disneyland. Credit: Tokyo Disney Resort The resort has not specified exactly what work will take place during the shutdown. However, there is current
 
---- Article 70 ---
-URL: https://www.nrn.com/independent-restaurants/parkwood-american-grille-is-now-open-in-friendswood-texas
-Title: Parkwood American Grille is now open in Friendswood, Texas
+--- Article 207 ---
+URL: https://www.sfgate.com/renotahoe/article/ski-resorts-early-snow-22491070.php
+Title: Early snow arrived this week as California ski resorts prepare to open
+Status hint: Opening | Industry: Hospitality
+Published: 2026-10-23 19:09:51
+
+JavaScript is disabled in your browser. Please enable JavaScript to proceed.
+
+--- Article 208 ---
+URL: https://www.dallasobserver.com/food-drink/granada-theater-and-sundown-at-granada-are-closing-40726395/
+Title: The Granada Theater and Sundown at Granada are Closing on Lower Greenville
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-23 19:00:11
+
+Restaurants The Granada Theater and Sundown at Granada are closing After 80 years, the Granada Theater is closing. Concerts will continue through April, but the restaurant is closing on Nov. 1. By Desiree Gutierrez October 23, 2026 The Granada Theater will close next spring. Lauren Drewes Daniels Add the Observer as a preferred source on Google Tags: Openings & Closings Audio By Carbonatix Owners Mike Schoder and Julia Garton have confirmed with the Observer that both the Granada Theater and its sister restaurant Sundown at Granada are closing. Both businesses have been sold. The last day of service at Sundown at Granada is Nov. 1. The Granada Theater will continue to host shows and events until April 17, 2027. Sundown at Granada’s private events will continue until Dec. 31. “For 22 years at Granada and 15 years at Sundown, we’ve poured our hearts into these places, the music, the people, and the thousands of unforgettable nights and memories made within their walls,” Schoder and Garton wrote in an announcement. “Walking away isn’t easy. But sometimes knowing when to turn the page is as important as knowing when to start the story.” Named the Observer’s Best Live Music Venue from 2007 through 2010, and in 2015, the Granada Theater and Sundown at Granada have been a staple at Lower Greenville, hosting more than 3,000 events and concerts to date. GET MORE COVERAGE LIKE THIS Sign up for the Food & Drink newsletter to get the latest stories delivered to your inbox Notice of Collection | Terms | Privacy THANK YOU! You're all set. CLOSE Editor's Picks A top-talent Dallas dining team quietly closed its Plano restaurant after just over a year Forget Buc-ee’s: A roadside sushi dive in Ennis is America’s No. 1 gas station restaurant Phil Isley Enterprises opened the theater in 1946 with a showing of “Mildred Pierce.” In 1977, it briefly became a concert hall before returning to a movie theater. In August 2004, Schoder reopened the Granada Theater as a full-time concert venue.
+
+--- Article 209 ---
+URL: https://www.berkeleyside.org/2026/10/23/souled-out-signal-el-charro-go-banh-mi-la-familia-closed
+Title: Souled Out, Signal’s pastry provider, is shutting down, and more East Bay closures
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-23 19:00:00
+
+Editor’s note: Nosh covers food and restaurant news across the East Bay, and each week we publish one article covering all the restaurant openings and one article covering closings. Have a tip for Nosh? Submit it here . Subscribing to the Nosh newsletter is the best way to stay up to date on all of the openings and closings, breaking news, deeper developments, and events in the East Bay food scene. El Charro Super Mercado El Charro market on Fruitvale is listed as permanently closed on Yelp. Nosh reader Sarah alerted us to this closure. The owner said it was due to a fire, and that he plans to reopen a shop in Oakland months down the road. The shop sold grocery items, meat, salsas and guacamole, and grilled food. El Charro Super Mercado , 1502 Fruitvale Ave., Oakland Go Banh Mi A banh mi shop operating inside Emeryville’s Lanesplitter Pizza has closed, according to E’ville Eye . The shop opened earlier this year. Go Banh Mi, 3645 San Pablo Ave., Emeryville Souled Out Pastries If you’ve ever been to a Signal Coffee shop and enjoyed the creative pastries, well, you may be out of luck soon. Souled Out provided seasonal cookies, donuts, and pastries to Signal Coffee Roasters in Berkeley, Alameda and San Francisco. Souled Out’s baker Kelsey Soule shared on Instagram that they are taking a break after six years, and the last day to get the treats at Signal is Oct. 25. However, the baker still plans to hold pop-ups and other events, and hopes to find an investor to open a bakery one day. Souled Out Pastries (pastries inside Signal Coffee Roasters in various locations in the East Bay and SF) Taqueria La Familia As Nosh reported earlier this week , Taqueria La Familia has sold to a new owner who has kept the old staff and menu while also adding Thai dishes to reflect their background as well. The restaurant is now called BKK Mexican and Thai. Taqueria La Familia, 2971 Shattuck Ave. (at Ashby Avenue), Berkeley Related stories I ate my way through the Richmond Flea Market. Her
+
+--- Article 210 ---
+URL: https://www.nbcboston.com/news/local/saus-bow-market-restaurant-somerville-closing/4036446/
+Title: Bow Market restaurant in Somerville is closing: ‘time to move on'
+Status hint: Closing | Industry: Restaurants
+Published: 2026-10-23 18:53:32
+
+Food & Drink Bow Market restaurant in Somerville is closing: ‘time to move on' The original Saus in downtown Boston, from 2011 until 2024, was known for such items as burgers, hot dogs, fries, chicken nuggets, and chicken sandwiches, while the Somerville location has focused on vegetarian fare since opening in 2018. By Boston Restaurant Talk • Published October 23, 2026 • Updated on October 23, 2026 at 8:40 pm BOOKMARKER Wicked Local Staff Photo/David Sokol / USA TODAY NETWORK, file Saus at Bow Market in Somerville was once voted best French fries in the Greater Boston area. [This story first appeared on Boston Restaurant Talk.] What was once a pair of comfort food spots will soon no longer exist, as its sole remaining location is shutting down. Stream NBC10 Boston news for free, 24/7, wherever you are. WATCH HERE According to an article from What Now Boston, Saus at Bow Market in Somerville is going to be closing, with an Instagram post from the business saying the following: It's with both lots of excitement and a little bit of tears that we let you all know that Saus at Bow Market will be closing this December. (Exact date TBD.) Between our Boston location and this one, Chin and I (Tanya) have been doing this for 15 years. It's been a privilege, a wonderful dream, an emotional rollercoaster....We made real friendships, learned a lot from the other businesses, and made some core memories. And as sad as we are to close this chapter of our lives, it's time to move on....When we have a final day, we'll let ya’ll know. And as we do, we’ll throw a giant last-day-of-service party. Come celebrate with us. Cry with us. Eat and drink with us. Pour one out for 15 years of Saus. Love you all, Tanya and Chin The original Saus, which resided in downtown Boston from 2011 until 2024, was known for such items as burgers, hot dogs, fries, chicken nuggets and chicken sandwiches, while the Somerville location has focused on vegetarian fare since opening in 2018. The website for the 
+
+--- Article 211 ---
+URL: https://flickdirect.com/news/8854/barco-and-vue-expand-epic-hdr-cinema-to-five-german-cinemaxx-theaters/article.ashx
+Title: Barco and Vue Expand EPIC HDR Cinema to Five German CinemaxX Theaters
+Status hint: Opening | Industry: Movie Theatres
+Published: 2026-10-23 18:52:40
+
+An EPIC premium large-format auditorium featuring HDR by Barco projection and immersive sound. Photo courtesy of Barco. All Rights Reserved. Three EPIC auditoriums are open in Stuttgart, Berlin and Magdeburg, with Freiburg and Bielefeld next as Vue continues its investment in laser projection across Europe. Barco and Vue are expanding their EPIC premium large-format cinema experience to Germany, with five CinemaxX locations scheduled to receive the technology. The rollout comes as EPIC marks its first anniversary, combining high dynamic range (HDR) laser projection with immersive sound to improve the theatrical experience. The first three German locations, in Stuttgart, Berlin and Magdeburg, are now open. CinemaxX theaters in Freiburg and Bielefeld are expected to introduce EPIC in the coming months. Developed by Vue and powered by HDR by Barco, EPIC combines a large cinema screen with advanced projection and an immersive sound system. The audio extends around and above the audience, while HDR projection is designed to deliver brighter highlights, deeper contrast and greater detail in darker scenes. Frank Thomsen, Managing Director of CinemaxX Germany, Vue Netherlands and Vue Denmark, said the investment reflects the company's plans for improving theatrical presentation. "With EPIC, we are setting new standards in picture quality, sound, and immersion," Thomsen said. "We are laying the foundation for the cinema experience of the future, redefining the way audiences experience films and taking cinema to a whole new dimension." The expansion adds Germany to the growing European presence of HDR by Barco, which is already operating in the United Kingdom, Italy and the Netherlands. In June, FlickDirect reported that Vue's EPIC format had surpassed 400,000 admissions in less than a year, with plans to expand to more than 60 screens across Europe. The partnership also extends beyond EPIC. Barco and Vue are working to transition the operator's wider cinema network to laser 
+
+--- Article 212 ---
+URL: https://www.bizjournals.com/houston/news/2026/10/23/academy-sports-outdoors-magnolia-store-opening.html
+Title: Academy Sports and Outdoors to open 55,000-square-foot store in Magnolia next month
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 18:14:29
+Published: 2026-10-23 18:50:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/houston/news/2026/10/23/academy-sports-outdoors-magnolia-store-opening.html]
+
+--- Article 213 ---
+URL: https://patch.com/california/across-ca/trader-joes-announces-4-new-ca-locations-see-where
+Title: Trader Joe's Announces 4 New CA Locations: See Where
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 18:49:46
+
+Business & Tech Trader Joe's Announces 4 New CA Locations: See Where The grocery store well-loved for its trademarked snacks and tote bags is opening up four new spots in California. Miranda Ceja , Patch Staff Posted Fri, Oct  23, 2026 at 11:49 am PT Amid rising inflation and increasing prices, a grocery chain popular for its affordable prices and viral tote bags is opening four new stores in California. The Monrovia-based Trader Joe's plans to open the four new stores in California, part of a slew of 16 new nationwide locations the company announced this week , People reported. The new stores are part of the company's growing nationwide expansion. Find out what's happening in Across California for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . According a 2025 report published by the Los Angeles Times, the grocery chain plans to unveil at least 20 locations in 2026, several of which have already opened their doors. Just this week, a Trader Joe's in Anaheim Hills announced plans for a Thursday grand opening. In nearby Laguna Niguel, the longstanding Trader Joe's at Ocean Ranch Village moved to a roomier location in the same marketplace. Find out what's happening in Across California for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . A store in Costa Mesa opened last December and another Los Angeles location opened in June. The Monrovia-based grocery chain's new locations include stores in Texas, Kansas, Washington, Arizona, Florida, Georgia and Louisiana. Here's a run-down on the four new Trader Joe's locations in California: Encinitas, 1590 Leucadia Blvd. Riverbank, 2135 Claribel Rd. San Diego, 2962 Clairemont Mesa Blvd. Anaheim, 6336 E. Santa Ana Canyon Rd. When the company chooses to open a new store, it takes into account population density and draw, site access, traffic patterns and parking, marketing executives Tara Miller and Matth
+
+--- Article 214 ---
+URL: https://www.giant.fm/parke-county/news/local-news/triton-central-graduate-celebrating-with-grand-opening-event-at-formhouse-fitness/
+Title: Triton Central graduate celebrating with Grand Opening event at FormHouse Fitness
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 18:40:06
+
+Friday, October 23, 2026 at 12:00 PM By Jeff Brown X @GIANTfmnews Share on Facebook Share on Messenger Share on Messenger Share on X As a Division I athlete, Rylie Stephens spent countless hours strength training and conditioning. Once her collegiate basketball career ended, Stephens wanted to invest more time into personal training. She secured an internship in the strength training department at the University of Delaware. Through that internship she was introduced to a staff member of 3&D Personal Training, located in Wilmington, Delaware, which opened up an avenue for Stephens she never envisioned. “I was with them when they grew from 48 to 127 members. It was a small business where I learned a lot,” said Stephens. “I got my certificate as a personal trainer. It led to a job with them. I got to experience coaching for two years … how to run a business, treat members, how to get them to stay, and doing movements correctly.” The Triton Central graduate was longing for family and home, though. She soaked up as much advice as she could, and then returned to Shelby County to start her own business. “I felt like I had to take the leap. You are never going to know everything,” she said. “I am still continuing to try and learn.” What Stephens learned quickly was her local story and love of personal training translated quickly to a clientele base that first met in a barn for training sessions. “I really thought I would open (my business) up and it would be a slow burn and I was going to train my family members, which was really important to me, and open it up to my friends and family,” said Stephens, who played two years of college basketball at Evansville and two years at Samford (Ala.) before finishing up her eligibility at the University of West Florida in Pensacola. “It happened way faster. I told myself once I hit 20 members, I was going to open up a space.” Stephens’ newly-created FormHouse Fitness recently opened its doors at 26 W. Broadway St. in Shelbyville. The
+
+--- Article 215 ---
+URL: https://www.mcall.com/2026/10/23/nearly-120-year-old-newsstand-and-stationery-store-closing-in-the-lehigh-valley-ill-miss-the-community/
+Title: Nearly 120-year-old newsstand and stationery store closing in the Lehigh Valley: ‘I’ll miss the community’
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-23 18:28:25
+
+Harry Bray stands in front of the original Bray's store on Main Street in Bangor. Date unknown, scanned Feb. 12, 2000. (Pete Shaheen/The Morning Call) By Graysen Golter | ggolter@mcall.com | The Morning Call PUBLISHED: October 23, 2026 at 2:27 PM EDT | UPDATED: October 23, 2026 at 7:55 PM EDT Getting your Trinity Audio player ready... A nearly 120-year-old newsstand and stationery store will say goodbye to the community later this year in the Lehigh Valley. Bray’s News Agency will close Dec. 31 at 36 Broadway in Bangor, owner Patti Bray told The Morning Call. The store offers newspapers, magazines, lottery tickets, cigarettes, candies and bill payment. The newspaper circulation will move across the street to the Bangor General Store, Bray said. Harry Bray’s uncle ran a newsstand and stationery store at 44 S. Main St. from 1909 to 1926, when Harry bought the business. Harry worked with his son Earl until Earl joined the armed forces in 1943 . When he returned, Earl worked with Harry and Earl’s mother Lillian, and inherited the business after their deaths. In 1992, after his wife and fellow co-owner Pauline died in 1991, Earl moved the store to 36 Broadway, where he ran it until shortly before his death in 2000 . Patti, Earl’s daughter-in-law, has worked at the store since the late 1970s, and took over after Earl’s death. Over 25 years later and at 70 years old herself, “it’s just time for me to move on,” she said. Aside from the occasional help from her children, Bray’s News Agency is a one-person operation. She gets up at 4:30 a.m. every day to ready the newspapers, the lottery machine and the bill payment. Closing the store will let her sleep in later, she said, but she also wants to spend more time with family and have more of a full life. Bray also acknowledged that the business isn’t what it used to be, and a store like hers is rare in the Lehigh Valley. It once sold things like toys, school supplies, typewriter ribbons and baseball cards. That changed as stores
+
+--- Article 216 ---
+URL: https://www.nrn.com/independent-restaurants/hai-hospitality-to-open-an-uchi-restaurant-in-boston-next-year
+Title: Hai Hospitality to open an Uchi restaurant in Boston next year
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-23 18:18:22
 
 Top 500 Restaurants Content Spotlight The Technomic Top 500: Another tough year for chain restaurants Top 500 chain restaurant sales slowed again in 2025 as consumers cut back on dining, but sectors like coffee, beverages and snacks and chicken thrived Read More
 
---- Article 71 ---
-URL: https://theshelbyreport.com/2026/10/14/albertsons-to-build-new-store-in-valley-center-california/
-Title: Albertsons To Build New Store In Valley Center, California
+--- Article 217 ---
+URL: https://www.ctvnews.ca/toronto/edmonton/article/convenience-store-robber-still-at-large-rcmp/
+Title: Convenience store robber still at large: RCMP
+Status hint: Opening | Industry: Convenience Stores / Distributors
+Published: 2026-10-23 18:17:09
+
+
+
+--- Article 218 ---
+URL: https://www.westword.com/food-drink/new-bakery-edgewater-denver-bucees-40952234/
+Title: Coming Soon: Black Box Cafe sets an opening date
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 18:04:06
+Published: 2026-10-23 18:15:16
 
-Grocery MarketMoves LinkedIn Facebook X Email Copy link Albertsons has announced plans to build a new grocery store in Valley Center, California, a growing San Diego County community. Scheduled to open in spring 2028, the approximately 51,000-square-foot store will be located on property owned by the San Pasqual Economic Development Corporation. Valley Center is home to about 22,000 residents, many of whom currently travel several miles to reach a full-service grocery store. The store will offer fresh produce, meat and seafood, bakery and deli offerings, pharmacy services and a selection of grocery and household products. “Albertsons is proud to expand our presence in Valley Center and help meet the community’s need for greater access to fresh, affordable food,” said Wayne Denningham, EVP of the California region. “This new store will provide greater convenience for families, create local jobs and serve as an important community resource for years to come.” Collaborative project The project is a collaboration between Albertsons and the San Pasqual Economic Development Corporation to support the long-term growth of the Valley Center community. In addition to expanding food access, the store is expected to create local jobs and contribute to economic development in the region. The grocer said information on construction milestones, hiring and grand opening celebrations will be shared as the project moves forward. Albertsons, Vons and Pavilions, part of Albertsons Companies, operate 325 stores and employ more than 33,000 people in Southern California. As of Sept. 12, Albertsons Companies operated 2,240 retail stores with 1,709 in-store pharmacies in 35 states and the District of Columbia under 22 banners. Related: Albertsons Pulls Fiscal 2026 Outlook, Launches Business Review As Q2 Net Income Falls
+Restaurants Coming Soon: Black Box Cafe sets an opening date Plus: Progress on a second Colorado Buc-ee’s, and a new food hall is coming to Sun Valley. By Antony Bruno October 23, 2026 Arielle Israel (left) and Marcio Paulucci (right) outside the soon-to-open Black Box Café in Edgewater. Provided by HardKnochPR Add Westword as a preferred source on Google Tags: Bakery Business Openings & Closings Audio By Carbonatix While there’s still plenty of long-term activity on the Denver restaurant horizon, this week we have updates on a few new eateries scheduled to open in the immediate future. Here’s all the news we found this week for what’s to come. Black Box Cafe to open next month In August, we learned that Black Box Bakery in the Edgewater Public Market was expanding to a second location , taking over the old Suzette space, also in Edgewater (in fact, the two locations are less than a mile away from each other). This week, we’ve learned the new space will open on Nov. 7. Technically, it’ll be open a bit earlier, with a “soft opening” the week prior. Soft openings usually have limited hours and products available, but once fully engaged, expect the same range of baked goods and laminated pastries fans have lined up for at the food hall stand, along with ice cream, chocolates and an expanded sandwich program. What’s more, the new cafe will have tables where you can sit and enjoy all the goods. GET MORE COVERAGE LIKE THIS Sign up for the Food & Drink newsletter to get the latest stories delivered to your inbox Notice of Collection | Terms | Privacy THANK YOU! You're all set. CLOSE Editor's Picks The most anticipated Denver restaurant openings left this year Edgewater bakery expanding to a second Denver location this fall Second Colorado Buc-ee’s in the Works Second Buc-ee’s makes progress First it was up in Johnstown , and then two years ago we heard that Buc-ee’s was planning a second location between Larkspur and Monument. That effort just passed a big milestone last w
 
---- Article 72 ---
-URL: https://hellowoodlands.com/homesense-to-open-new-store-in-shenandoah-on-october-22/
-Title: Homesense to open New Store in Shenandoah on October 22
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 18:04:05
-
-Advertisement
-
---- Article 73 ---
-URL: https://www.sunjournal.com/2026/10/14/toys-r-us-opening-soon-in-the-auburn-mall-as-store-brand-comes-back-to-life/
-Title: Toys R Us opening soon in the Auburn Mall as store brand comes back to life
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 17:57:17
-
-Toys R Us, seen Wednesday, has leased space at the Auburn Mall and is in the process of opening before the holiday season. (Christopher Wheelock/Staff Writer) AUBURN — The toy store that many people thought was gone for good is making a comeback nationally, and getting ready to open its doors inside the Auburn Mall. Toys R Us has leased a 3,600-square-foot space next to the women’s clothing store Maurices. Inventory is being stocked, but no employees were present Wednesday. It’s unclear when the store will open. According to management at the mall, which has been aggressively recruiting new businesses , Toys R Us has committed to being open year-round. Efforts to contact the company were unsuccessful. The new Toys R Us store in the Auburn Mall, seen Wednesday, is next to Maurices and close to JC Penney. (Christopher Wheelock/Staff Writer) The chain filed for Chapter 11 bankruptcy in 2017 and closed all its stores by 2018. WHP Global , a brand management firm based in New York City, acquired a controlling stake in 2021 and has been steadily regrowing the brand. Toys R Us partnered with retail giant Macy’s and now has stores-within-stores in more than 400 Macy’s locations, including at the Maine Mall in South Portland. An additional 160 stand-alone stores are coming online through a partnership with Go! Retail Group . Some of its stores are seasonal. In 2018, Toys R Us stores in South Portland and Bangor were closed as part of the company’s bankruptcy filing. Toys R Us used to be known as the “big box” of toy stores, but the new format features smaller footprints, collectibles, LEGO sets, and interactive Creator Studios. The Buzz offers quick hits about trending area business happenings . Have a Buzzable tip? Contact business writer Christopher Wheelock at 689-2817 or [email protected] Christopher Wheelock Staff Writer A long-time journalist, Christopher got his start with Armed Forces Radio & Television after college. Seventeen years at CNN International brought expo
-
---- Article 74 ---
-URL: https://www.notllocal.com/local-news/air-canada-landline-motorcoach-service-expanding-to-five-daily-departures-12890609
-Title: Air Canada Landline motorcoach service expanding to five daily departures
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 17:49:23
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.notllocal.com/local-news/air-canada-landline-motorcoach-service-expanding-to-five-daily-departures-12890609]
-
---- Article 75 ---
-URL: https://www.flamboroughtoday.com/the-dirt/taco-bell-hiring-for-new-store-at-former-kfc-site-in-waterdown-12886072
-Title: Taco Bell hiring for new store at former KFC site in Waterdown
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 17:49:14
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.flamboroughtoday.com/the-dirt/taco-bell-hiring-for-new-store-at-former-kfc-site-in-waterdown-12886072]
-
---- Article 76 ---
-URL: https://lacrossetribune.com/news/local/business/article_658aaee5-7618-4d43-b494-50ad6d4f918c.html
-Title: P.M. Sleep Center to close after 41 years of business in La Crosse
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 17:45:00
-
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://lacrossetribune.com/news/local/business/article_658aaee5-7618-4d43-b494-50ad6d4f918c.html]
-
---- Article 77 ---
-URL: https://www.latimes.com/food/story/2026-10-14/sora-craft-kitchen-permanent-closure-downtown-los-angeles
-Title: Sora Craft Kitchen, one of L.A.’s best restaurants, to close this month
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 17:33:46
-
-Okay Inak at Sora Craft Kitchen in 2025. The chef-founder hopes to reopen his restaurant in a new location as soon as possible. (Yasara Gunawardena / For The Times) By Stephanie Breijo Staff Writer Follow Oct. 14, 2026 10:33 AM PT 1 5 min Click here to listen to this article Share via Close extra sharing options Email Facebook X LinkedIn Threads Reddit WhatsApp Copy Link URL Copied! Print 0:00 0:00 1x This is read by an automated voice. Please report any issues or inconsistencies here . See more from the L.A. Times in Google Search. Set us as preferred One of L.A.’s best restaurants is closing, but owner Okay Inak hopes that it won’t be the end of Sora Craft Kitchen. On Sunday, Inak shared the news on social media: His lauded 16-seat Turkish restaurant in downtown L.A. — included in The L.A. Times 101 List as well as Esquire’s guide to the country’s best new restaurants — will shutter in two weeks. Inak primarily cites unresolved maintenance issues with his restaurant space, including habitual flooding. “After I rent, I saw so many issues in the building,” Inak said by phone. “I put in my own money. I’m just stuck. I work hard, I try to take care of everything, but it’s very hard after three years.” Advertisement The building repairs and temporary closures caused Inak to announce Sora Craft Kitchen’s closure, slated for Oct. 25, and his search for a new space  in Los Angeles. Shrimp in tarhana butter at Sora Craft Kitchen, pictured in 2025. (Yasara Gunawardena / For The Times) Inak self-funded the restaurant with his wife, Sezen Vatansever, after his years of training in the likes of Eleven Madison Park and Mélisse. He decorated the space with $25 tables from Ikea in order to invest in high-quality, local ingredients for his içli köfte, kirecte kabak and garlic-spiced kebab. Inak, who grew up in southeastern Turkey in a town called Bitlis, injects his family recipes and flavors into fine dining interpretations of Turkish cuisine, resulting in “a Turkish restaurant l
-
---- Article 78 ---
-URL: https://www.basinnow.com/ubtech-celebrates-launch-of-nail-tech-program-with-salon-open-house/
-Title: UBTech Celebrates Launch Of Nail Tech Program With Salon Open House
-Status hint: Opening | Industry: Health / Beauty
-Published: 2026-10-14 17:16:06
-
-UBTech Celebrates Launch Of Nail Tech Program With Salon Open House by Kristin Forbis | Oct 14, 2026 | News Students, instructors, local stakeholders, and the community gathered on the UBTech campus in Vernal on Tuesday for the ribbon cutting and open house of the new on campus Salon along with the launch of the new Nail Technician Program. Community remarks, congratulating UBTech and encouraging students, were delivered by Keith Foley and Darlene Burns. UBTech Board of Trustees Chair Cuch and new program director Sheena Earl both shared their excitement for the new program and shared appreciation for the support and continued growth of UBTech offerings. UBTech President Aaron Weight said this day was years in the making and that this is just the beginning. Additional programming will be added, including hair and master barber programs. For now, the first group of nail technician students begins in November and applications are being accepted for future cohorts. Students must be at least 16 years old and scholarships are available. Learn more at www.ubtech.edu . Photos Share on Facebook Share on X Share on LinkedIn Comments are currently closed. Contact us about this story. ← Previous Story
-
---- Article 79 ---
-URL: https://www.kolotv.com/2026/10/14/open-business-osteria-sierra-tahoe-provisions-inside-hyatt-regency-lake-tahoe/
-Title: Open for Business: Osteria Sierra, Tahoe Provisions inside Hyatt Regency Lake Tahoe
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 17:14:00
-
-Share Add Us On Google Add as a preferred source on Google RENO, Nev. (KOLO) - The staff at Osteria Sierra and Tahoe Provisions are excited to welcome guests and our local community to experience the incredible dining opportunities at Hyatt Regency Lake Tahoe Resort, Spa and Casino . KOLO 8’s Jayde Ryan visited the restaurant to learn how the culinary team combines a global perspective with fresh, local flavors to create menus that reflect the stunning North Lake Tahoe setting. At Osteria Sierra, they offer a modern take on Italian cuisine with the warm, welcoming atmosphere of a traditional osteria. It features house-made dishes, family-style dining, and an opportunity to gather around the table over a great meal. One of the menu highlights is the pasta, which is made fresh every day. For something more casual, Tahoe Provisions offers pastries and desserts prepared daily by Chef David Campbell whose experience has taken him all over the globe, from Abu Dhabi to France. Tahoe Provisions also offers homemade bagels every day, grab-and-go salads, sandwiches and other options that are perfect for taking along on a hike or picnic on the lake. And guests can also enjoy coffee made with beans from local roaster Drink Coffee Do Stuff. Copyright 2026 KOLO. All rights reserved.
-
---- Article 80 ---
-URL: https://hoodline.com/2026/10/costa-s-trussville-faces-possible-permanent-closure-amid-health-concerns/
-Title: Costa's Trussville Faces Possible Permanent Closure Amid Owner's Health Concerns
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 17:11:08
-
-3443 Lorna Rd. — Neutral Street Scene Google Street View Costa's Trussville location on U.S. 11 has gone dark, and the restaurant could close permanently. Its owner says health concerns and the physical demands of running a restaurant are factors in the decision. Health Concerns Drive the Decision The restaurant's owner told the Birmingham Business Journal that health issues and the physical demands of running a restaurant are factors in the possibility of a permanent closure. The Trussville location's future remains uncertain as a permanent closure remains possible. Hoover Location Remains Open Costa's Hoover location remains open, but it is not affiliated with the Trussville location. The Hoover location is at 3443 Lorna Road. A History of Barbecue Recognition The restaurant's barbecue concept was named the top barbecue eatery in the area by The Birmingham News in 1985, per the Hoover Sun's reporting. Alabama has food establishment sanitation rules. Part of a Broader Suburban Dining Shuffle Trussville established a municipal entertainment district in 2020, part of a regional push, alongside Hoover and Mountain Brook, to keep dining and leisure spending within city limits rather than losing it to neighboring areas, as Hoodline previously reported . The Trussville location's future remains uncertain. Costa's Hoover location remains open and serves a Mediterranean menu. Trussville / Greater Birmingham - Food & Drinks Food & Drinks in ... All Cities Trussville Greater Birmingham
-
---- Article 81 ---
-URL: https://www.acadiananewsfirst.com/2026/10/14/wheres-al-shade-tree-broussard-grand-opening-preview/
-Title: Where’s Al? Shade Tree in Broussard Grand Opening Preview
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 17:05:00
-
-Share Add Us On Google Add as a preferred source on Google BROUSSARD, La. (Acadiana News First) - The Broussard Chamber of Commerce will welcome Shade Tree by D.R.E.A.M.S. to the local business community with a grand opening and ribbon-cutting. Al Hebert visited the restaurant to get a preview. Individuals with special needs staff the new eatery, which supports the D.R.E.A.M.S. Foundation of Acadiana. Shade Tree is located at 219 South Eola Road in Broussard. The ceremony will be held on Friday, Oct. 16, at 11 a.m. Where’s Al is brought to you by Bayou Vermilion District . Copyright 2026 Acadiana News First. All rights reserved.
-
---- Article 82 ---
-URL: https://www.ibj.com/articles/bocado-brunch-tekila-to-open-in-former-root-bone-space
-Title: Bocado Brunch & Te’Kila to open in former Root & Bone space
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 17:04:58
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.ibj.com/articles/bocado-brunch-tekila-to-open-in-former-root-bone-space]
-
---- Article 83 ---
-URL: https://www.acadiananewsfirst.com/video/2026/10/14/wheres-al-shade-tree-broussard-grand-opening-preview-part-1/?outputType=amp
-Title: Where’s Al? Shade Tree in Broussard Grand Opening Preview- Part 1
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 17:02:00
-
-
-
---- Article 84 ---
-URL: https://mocoshow.com/2026/10/14/popular-maryland-restaurant-expanding-to-northern-virginia/
-Title: Popular Maryland Restaurant Expanding to Northern Virginia
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 17:00:21
-
-Glenwood’s, with locations in Rockville, Columbia, and Owings Mills, has announced plans to open its first restaurant outside Maryland. The new location will open at Chesterbrook Shopping Center in McLean, Virginia, with an anticipated opening in fall 2027. Blueridge Restaurant Group, the Maryland-based hospitality company behind Glenwood’s, has signed a lease for the approximately 7,000-square-foot restaurant, which is expected to accommodate about 170 guests. The new location will feature nightly live entertainment, an outdoor patio, valet parking, and a private dining room with a temperature-controlled, floor-to-ceiling wine display. Construction is expected to begin in early 2027, with the restaurant anticipated to create approximately 90 full-time and part-time jobs. Blueridge Restaurant Group also owns Copper Canyon Grill, which operates Montgomery County locations at Rio Washingtonian Center in Gaithersburg (100 Boardwalk Place) and downtown Silver Spring (928 Ellsworth Drive). Additional Copper Canyon Grill locations operate in Glenarden and Arundel Mills. Glenwood’s is known for its made-from-scratch American cuisine, upscale atmosphere, and attentive service. Its Rockville location previously operated under the name Stanford Grill before being rebranded as Glenwood’s. “We’ve spent years building Glenwood’s into a trusted regional dining brand known for exceptional hospitality and consistently high-quality experiences,” said David Jones, managing member of Blueridge Restaurant Group. “McLean is an important next step for us. It is a community that values quality, hospitality, and great restaurants, and Chesterbrook provides an exceptional setting to introduce Glenwood’s to Northern Virginia.” Author Patrick Herron
-
---- Article 85 ---
-URL: https://www.tallahassee.com/story/grocery/stores/2026/10/14/aldi-florida-grand-openings/92229126007/
-Title: Aldi to open 2 more Florida stores in October, here's where
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 16:59:00
-
-[Could not fetch: 402 Client Error: Payment Required for url: https://www.tallahassee.com/story/grocery/stores/2026/10/14/aldi-florida-grand-openings/92229126007/]
-
---- Article 86 ---
-URL: https://whatnow.com/seattle/restaurants/shawn-odonnells-plans-seventh-location-in-bellingham/
-Title: Shawn O’Donnell’s Plans Seventh Location in Bellingham
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 16:55:28
-
-Dishes served at Shawn O’Donnell’s (Image credit: Shawn O’Donnell’s) SHARE Shawn O’Donnell’s American Grill and Irish Pub plans to open its seventh restaurant in spring 2027 at 5645 Guide Meridian Road in Bellingham. The restaurant will occupy the former Hilltop Restaurant . In an October 5 Facebook post, the company said it had received the keys and was beginning renovations. An exact opening date has not yet been announced. Founder Shawn O’Donnell Sr. , the grandson of Irish immigrants, started his restaurant career with The Lunch Box , a 48-seat sandwich shop he opened in Mountlake Terrace in 1982. He later bought an Everett restaurant and renamed it Shawn O’Donnell’s in 1996. “Just 22 years old with not much money, I wasn’t sure how we did it, but with help from family and friends, we somehow made it work,” the owner recalls in the history published on the company’s website. His children, Shawn Jr. and Sophie Taylor , grew up bussing tables and later joined the family business. The group remains family-owned and operated. Shawn O’Donnell’s serves breakfast, Irish dishes, burgers, sandwiches, wraps, and salads. The bar offers Irish beer and whiskey. Its six existing restaurants are in Everett, Spokane, the Skagit Valley, and Butte, Montana, with two Seattle locations in Pioneer Square and Fremont. “ The journey continues, and with each new location, we carry forward the same spirit we started with: family, community, and a love for sharing a meal together,” their website reads. Follow Shawn O’Donnell’s on Instagram for construction and opening updates. The O’Donnell family in front of the former Hilltop Restaurant, future home of Shawn O’Donnell’s in Bellingham (Image Credit: Shawn O’Donnell’s) Burger and fries from Shawn O’Donnell’s (Image Credit: Shawn O’Donnell’s) Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 5645 Guide Meridian Rd, Bellingham, WA 98226 Be the First to Know From new restauran
-
---- Article 87 ---
-URL: https://nypost.com/2026/10/14/business/popular-chicken-chains-debut-in-socal-college-town-draws-long-lines/
-Title: Cult favorite fast food chain arrival in SoCal college town attracts campers for grand opening
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 16:55:00
-
-It was a party in the parking lot. A large crowd gathered in the wee hours of Monday morning for the grand opening of a Raising Cane’s in the college town of Goleta. The store marks the chain’s first location in Santa Barbara County. Hordes of young people camped out in the new restaurant’s parking lot, eager to claim their spot in line — and hopefully win free chicken. Sign up for the California Morning Report newsletter The biggest news, opinion and culture shaping California right now. Thanks for signing up! 5 People camped out overnight for the first taste of Raising Cane’s in Goleta. The grand opening event kicked off at 8 a.m. on October 12 with music, free merchandise, and a raffle for 20 lucky winners to receive free Raising Cane’s for a whole year, Noozhawk reported. Dos Pueblos High School student Rex Belvins and a group of friends arrived at 9 p.m. the night before to camp out, an entire 11 hours before the event began. His promptness paid off — he was the first in line and the first to win free Raising Cane’s for a year. “I’m just so excited. It’s been great already; I get to hang out with my best friend outside of Raising Cane’s,” Blevins told Noozhawk. “First in line, and I win, this is just amazing.” 5 20 lucky winners received free Raising Cane’s for a year. UC Santa Barbara student Jordan Nicodemus, who arrived at 7 a.m. that morning, also won the raffle. “This opening is the best day of our lives, and we did not think we were gonna win this,” Nicodemus said. The raffle winner says she’s excited to not have to drive all the way up to Santa Maria for Raising Cane’s anymore. She plans to eat at the restaurant at least once a week. 5 The restaurant is Raising Cane’s first location in Santa Barbara County. Instagram/@raisingcanes The location is a welcome addition to the college town’s food options. “I’m not the biggest fan of Cane’s, but when I heard that there was free Cane’s for a year, that’s when I was like, ‘I need to be there,’” UCSB student Bret
-
---- Article 88 ---
-URL: https://www.phoenixnewtimes.com/food-drink/phoenixs-oldest-chinese-restaurant-to-close-after-84-years-40707166/
-Title: Phoenix’s oldest Chinese restaurant to close after 84 years
+--- Article 219 ---
+URL: https://patch.com/new-jersey/moorestown/maple-shade-restaurant-close-good-sunday
+Title: Maple Shade Restaurant To Close For Good Sunday
 Status hint: Closing | Industry: Restaurants
-Published: 2026-10-14 16:47:57
+Published: 2026-10-23 18:07:28
 
-Restaurants Phoenix’s oldest Chinese restaurant to close after 84 years The neighborhood spot has served massive egg rolls and savory pork noodles for generations. Soon, it will say goodbye. By Sara Crocker October 14, 2026 New Garden Restaurant will close after more than 80 years in business. Sara Crocker Add New Times as a preferred source on Google Tags: History & Nostalgia Openings & Closings Audio By Carbonatix After more than eight decades in business, New Garden Restaurant will soon close. The venerable South Phoenix Chinese restaurant is the city’s oldest in operation. It was known for cooking the fusion stir-fry, chop suey. “It is with a heavy heart that we announce the permanent closure of New Garden,” a sign on the restaurant’s door reads. A staff member confirmed New Garden will close in the next two weeks, but was unsure of an exact last day of service. Kam Yee Tse, who went by Mary, founded New Garden Restaurant in 1942, according to The Arizona Republic . The restaurant resides in a brick building painted a rusty terracotta on South Central Avenue and Hadley Street, just south of downtown Phoenix in the Valley’s historic Chinatown. On Tuesday afternoon, Rachel Celaya, a South Phoenix resident, visited the restaurant with her grandmother. Celaya learned of the impending closure from her daughter, who saw the news shared on social media. She wanted to visit one last time. Our dining newsletter is a tasty treat Sign up now for free updates on openings, closings and all the food news that matters. Notice of Collection | Terms | Privacy THANK YOU! You're all set. CLOSE Editor's Picks After nearly 40 years, this Jewish deli will soon close in Phoenix These 12 Phoenix restaurants are now closed, one after 30 years ‘I am heartbroken.’ Longstanding Tempe restaurant and Valley staple has closed Celaya, 37, has eaten at the restaurant since she was a kid. She remembers her dad taking her there on Friday nights and giving her money to put in the restaurant’s juke
+Business & Tech Fondue Restaurant Closing For Good Sunday In South Jersey The eatery is known for its cheese and chocolate dipping dishes. Eddie Callahan , Patch Staff Posted Fri, Oct  23, 2026 at 2:07 pm ET MAPLE SHADE, NJ — The "Melting Pot" restaurant is set to close its Maple Shade location on Sunday, according to the restaurant's TikTok account. While a reason for shutting down was not given in the post, 42Freeway reported that the restaurant chose not to renew its lease after 11 years. Istanbul Bay Premium Mediterranean Turkish Restaurant is already on board to take over the location on an unannounced timetable. Find out what's happening in Moorestown for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . Known for its variety of cheese and chocolate dipping dishes, the Melting Pot also has a location in Red Bank and in both King of Prussia, Pennsylvania and Wilmington, Delaware MORE FROM PATCH : Shouting NJ Mayor Charges Resident At Council Meeting, See Video Find out what's happening in Moorestown for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . HAVE A STORY IDEA OR NEWS TO SHARE? Contact Editor Eddie Callahan at edward.callahan@patch.com to connect with Patch in your area. Get more local news delivered straight to your inbox. Sign up for free Patch newsletters and alerts. Share Join the conversation
 
---- Article 89 ---
-URL: https://www.wdtn.com/news/restaurants-bars/pita-n-more-opening-at-kettering-shopping-center/amp/
-Title: Pita N More opening at Kettering shopping center
-Status hint: Opening | Industry: Retail REITs
-Published: 2026-10-14 16:47:15
+--- Article 220 ---
+URL: https://clarksvillenow.com/local/shoppers-line-up-before-dawn-for-sprouts-opening-in-clarksville-photos/
+Title: Shoppers line up before dawn for Sprouts opening in Clarksville
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 18:07:00
 
-WDTN KETTERING, Ohio ( WDTN ) — A Riverside restaurant devastated by a fire in 2024 is opening in Kettering. Pita ‘N More is preparing to serve customers in the Woodlane Plaza at 2318 East Dorothy Lane. The space was previously occupied by Rum Runners Cafe. Patrons can expect the same recipes and the restaurant operated by the same family. The only difference is the new location. In 2024, a fire devastated its previous location on Airway Road in Riversde. “Thank you for never giving up on us,” said the business. “We can’t wait to welcome you back and serve you again.” The owners are currently remodeling the space before opening the doors. An official opening date has not yet been announced.
+[Could not fetch: 401 Client Error: Unauthorized for url: https://clarksvillenow.com/local/shoppers-line-up-before-dawn-for-sprouts-opening-in-clarksville-photos/]
 
---- Article 90 ---
-URL: https://www.kentucky.com/lexgoeat/restaurants/article317619671.html
-Title: Berea gourmet grilled cheese restaurant closing. What the owner is focusing on next
-Status hint: Closing | Industry: Restaurants
-Published: 2026-10-14 16:42:47
+--- Article 221 ---
+URL: https://youarecurrent.com/2026/10/23/snapshot-hawaiian-bros-island-grill-now-open/
+Title: Snapshot: Hawaiian Bros Island Grill now open
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 18:05:21
 
-Key Takeaways Key Takeaways AI-generated summary reviewed by our newsroom. Read our AI Policy. Bert’s Speakcheezy will close its Berea restaurant on Oct. 30. Its Lexington location closed in December after about three months and weak traffic. Bertrand will focus on four food trucks and expand communication on social media. A popular Central Kentucky restaurant that briefly had a location in Lexington is closing its original brick-and-mortar spot. Bert’s Speakcheezy announced on social media that it will be closing its Berea location at the end of the month. The last day for the restaurant at 124 S. Main St. in Berea will be Oct. 30, owner Logan Bertrand confirmed. Bert’s SpeakCheezy restaurant at College Square, Monday, July 14, 2025 in Berea, Ky.                                                                                            Brian Simms bsimms@herald-leader.com The Lexington location at 2985 Liberty Road closed in December after being open only about three months . It just didn’t get enough foot traffic, he said. Bertrand said he wants to focus on his four food trucks, which originally built the fan base for the gourmet grilled cheese sandwiches such as the Blind Pig made with pork barbecue. Bert’s SpeakCheezy serves a menu of cheesy favorites such as the Blind Pig, with pork barbecue served between layers of melted Monterey Jack cheese on Texas toast, served with a barbecue Ranch dipping sauce.                                                                                            Scott Hayes “That’s where our bread and butter is, no pun intended,” he said. “The uniqueness is in our simplicity. I love being out in the community with our trucks, and I haven’t been able to do that because of the storefronts.” He said several other factors, such as the higher gas and product prices also made the current business plan unworkable. The Sinker is a glazed doughnut filled with Cheddar Cheese and bacon. Pair with tomato soup and that could be breakfast or lun
+[Could not fetch: 403 Client Error: Forbidden for url: https://youarecurrent.com/2026/10/23/snapshot-hawaiian-bros-island-grill-now-open/]
 
---- Article 91 ---
-URL: https://www.thetimesweekly.com/business/la-hacienda-grocery-store-coming-to-romeovilles-weber-road-5e5d6e54
-Title: La Hacienda grocery store coming to Romeoville’s Weber Road
+--- Article 222 ---
+URL: https://hoodline.com/2026/10/taylor-s-bar-table-to-open-in-carmel-city-center-this-december/
+Title: Taylor's Bar & Table to Open in Carmel City Center This December
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 18:04:23
+
+Source: Google Street View A new restaurant blending family dining with a 21-and-older bar scene is headed to Carmel City Center this December. Taylor's Restaurant Group plans to open Taylor's Bar & Table in the former Aroma Experience space at 885 Monon Green Blvd., Suite 108, and expects to hire 30 to 40 employees to staff it. According to Current Publishing , the Carmel location is targeting the first part of December 2026 for its opening. The restaurant will split its footprint down the middle, dedicating half the space to family dining and reserving the other half for bar seating limited to guests aged 21 and older. A Different Kind of Taylor's Clinton Hiatt, president of Taylor's Restaurant Group, described the Carmel project as a departure from the company's existing Pub & Grill locations, which operate strictly as 21-and-older establishments. “This is the next evolution of what Taylor's is,” Hiatt said, per the same outlet's report. He added that “what the space is going to be is really something people won't expect from Taylor's.” The new restaurant is meant to give guests an atmosphere suited for watching games or settling in for a date night, Current Publishing's report notes. Hiatt said the company is aiming for food and service quality comparable to some upscale Carmel restaurants, but at a different price point, and that the menu will take shape in part around the strengths of its culinary and hospitality team. “I think we can find that sweet spot within the talent and product and atmosphere and vibe,” he said. From Two Indianapolis Pubs to a Statewide Footprint Taylor's traces back to 1995, when the company opened its first Pub & Grill at 86th and Ditch roads in Indianapolis, followed by a second location at 86th Street and Westfield Boulevard in 1997. The company didn't introduce its hybrid bar-and-family concept until 2022, when it opened the first Taylor's Bar & Table in Ingalls, Indiana, pairing a family area with a 21-and-over section, pub food a
+
+--- Article 223 ---
+URL: https://wgrd.com/timbers-market-opens-sheridan-michigan/
+Title: New Grocery Store and Fresh Deli Opening in Former Montcalm County Restaurant
+Status hint: Opening | Industry: Grocery, Restaurants
+Published: 2026-10-23 18:03:53
+
+New Grocery Store and Fresh Deli Opening in Former Montcalm County Restaurant New Grocery Store and Fresh Deli Opening in Former Montcalm County Restaurant Janna Janna Published: October 23, 2026 Timbers Market via Facebook Share on Facebook Share on Twitter A familiar Montcalm County spot is officially kicking off its next chapter. Sheridan now has a new reason to pull off the road, grab a quick, fresh bite, and stock up on household groceries. Get our free mobile app From Timbers Event Center to Sheridan’s New Market Back in 2004, the property at 7033 S. Sheridan Road first came to life as the Timbers Event Center and Restaurant . For years, owners Rich and Lori Foreman ran the rustic venue as a go-to local gathering spot for hearty meals, weddings, and weekend celebrations. Timbers Event Center Timbers Event Center Before retiring this summer, they completed extensive updates throughout the building, including a full kitchen makeover, new flooring, updated plumbing, and modernized climate control systems. READ MORE: This Grand Rapids Grocery Store Has Been Crowned the Best in Michigan Those improvements set up a smooth transition when new owner Melissa Martin bought the property in late July and pivoted the concept toward a community market . What to Expect at Timbers Market: Deli, Groceries, and Bakery The building has now reopened as Timbers Market , offering pantry staples, produce, a deli counter, hot food, bakery items, and local catering. The shop is currently running a soft opening while new inventory arrives to fill out the shelves. Starting this Saturday, crew members are firing up the deli station to start serving fresh toasted subs and paninis. 👇BELOW: 20+ NEW WEST MICHIGAN RESTAURANTS THAT HAVE OPENED SO FAR IN 2026👇 While the team is still fine-tuning the full daily menu, they recently shared a behind-the-scenes sneak peek on Facebook, showing off a practice run of smoked ribs and brisket to tease what is coming to the hot food station. Timbers Marke
+
+--- Article 224 ---
+URL: https://nottinghammd.com/2026/10/23/wawa-to-open-new-store-in-rosedale-with-grand-opening-festivities/
+Title: Wawa to open new store in Rosedale with grand opening festivities
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 18:01:29
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://nottinghammd.com/2026/10/23/wawa-to-open-new-store-in-rosedale-with-grand-opening-festivities/]
+
+--- Article 225 ---
+URL: https://www.smh.com.au/goodfood/melbourne-eating-out/agnii-sri-lankan-restaurant-now-open-20261024-p61769.html
+Title: With a hopper station, curry trolley and open flames, this Sri Lankan spot’s one to watch
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 18:00:00
+
+Advertisement For seven years, Sri Lankan chef Gayan Pieris has been expanding Victoria’s understanding of the food of his homeland at hatted Mornington Peninsula wine-diner Many Little , where he serves more than just the cuisine’s familiar pan rolls and hoppers. Pieris has even bigger ambitions for his second restaurant. Chef Gayan Pieris has big dreams for his first Melbourne restaurant. Simon Schluter The 160-seat Agnii, which opens today at Chapel Street’s Windsor end, has been 18 months in the making. “The issue is that not too long ago most [Sri Lankan] restaurants here were buffets, and it was branded as a ‘cheaper’ option,” says Pieris. The tide is well and truly turning, with openings such as Dutch Rules and Hopper Joint . But Pieris wants to change people’s perceptions “by introducing more technique and setting [Agnii] up as a new benchmark”. Advertisement Many Little is Victoria’s only hatted restaurant serving an entirely Sri Lankan menu. Could Agnii be the second? Restaurant reviews, news and the hottest openings served to your inbox. Sign up 1 / 7 A curry trolley is loaded with Sri Lankan regional specialties. Simon Schluter 2 / 7 Agnii is a showcase of wood-fired cooking and Sri Lankan flavours. Simon Schluter 3 / 7 A pastry-wrapped lamb cutlet is seasoned with 16 spices. Simon Schluter 4 / 7 Sri Lankan love cake provides the base of this cocktail. Simon Schluter 5 / 7 Chicken cooked over redgum with lentil thosai (similar to a dosa). Simon Schluter 6 / 7 Kokis made from smoked kingfish and eel. Simon Schluter 7 / 7 A large custom-built hearth is the driving force of the menu. Simon Schluter Previous Slide Next Slide Agnii means “fire” in Sanskrit, and that’s its superpower. “Woodfire cooking has become trendy, but I haven’t really seen much of it in Sri Lankan places,” says Pieris. The restaurant’s defining feature is a flame-throwing open hearth built by Samuel Fraraccio, aka The Brick Chef, who won this year’s Good Food Guide Trailblazer award . K
+
+--- Article 226 ---
+URL: https://www.localprofile.com/food-drink/the-brass-tap-is-coming-to-anna-with-a-late-2027-opening-planned-12931085
+Title: The Brass Tap Is Coming To Anna With A Late 2027 Opening Planned
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 18:00:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.localprofile.com/food-drink/the-brass-tap-is-coming-to-anna-with-a-late-2027-opening-planned-12931085]
+
+--- Article 227 ---
+URL: https://patch.com/illinois/wilmette/airbnb-nixes-guest-chores-famous-chef-celebrates-new-woodmans-new-department-store
+Title: New Department Store: IL Business News
+Status hint: Opening | Industry: Department Stores
+Published: 2026-10-23 17:57:15
+
+Business & Tech Airbnb Nixes Guest Chores | Famous Chef Celebrates New Woodman's | New Department Store: IL Business News Airbnb hosts can't make you do chores, and a luxury department store is opening a new IL location. Rachel Barnes , Patch Staff Posted Fri, Oct  23, 2026 at 12:57 pm CT This week in Illinois business news: Airbnb is putting a stop to guest chores; a luxury department store is expanding in Illinois; and a celebrity chef celebrates the opening of a new grocery store. Check out this week's top headlines for Illinois business news on Patch: Find out what's happening in Wilmette-Kenilworth for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . Find out what's happening in Wilmette-Kenilworth for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . New Nordstrom Rack Store Coming To IL Celebrity Chef Tailgating At New Woodman's In Celebration Of Grand Opening Airbnb Sets New Rules That Limit Checkout Chores: What IL Travelers Need To Know The Bottom Line Lime, the electric scooter company, has deployed foot patrols to fix badly parked scooters and help clean up Chicago's streets. The Young Women's Christian Association in Evanston is training domestic violence survivors for careers in the food-service industry. Deal of the Week Halloween is on Saturday, and several restaurants are offering food deals to people who show up in costume. Some deals include: Chipotle will give customers a $6 entrée to those who show up in costume. Krispy Kreme is offering a free Original Glazed or Classic ring Doughnut to those who come in costume between Oct. 30 and 31. Insomnia Cookies is offering anyone who wears a costume on Oct. 31 a free classic cookie with any purchase. More Restaurant News Kitakata Ramen Ban Nai Now Open In Naperville The restaurant hosted its grand opening even on Oct. 10. St. Charles Restaurant Week Returns In February; Restaurant
+
+--- Article 228 ---
+URL: https://progressivegrocer.com/brookshire-brothers-newest-texas-location-more-grocery-store
+Title: Brookshire Brothers’ Newest Texas Location Is More Than a Grocery Store
 Status hint: Opening | Industry: Grocery
-Published: 2026-10-14 16:39:46
+Published: 2026-10-23 17:54:31
 
-Business October 14, 2026 La Hacienda grocery store coming to Romeoville’s Weber Road Romeoville approved a 12,000-square-foot La Hacienda grocery store and restaurant on Weber Road, adding a new full-service grocer after years of recruitment efforts. Janice Black Romeoville is getting a new grocery store. The Village Board recently gave final approval to a La Hacienda grocery store and restaurant at the southwest corner of Weber Road and Creekside Drive, ending a yearslong search for another grocer. The board also approved a separate four-tenant retail center farther north on Weber Road. “Our team has been reviewing these plans since February and we are very excited to give them their final approval,” Mayor John Noak said. “We look forward to welcoming more businesses to the community and especially the addition of another grocery store.” No opening date has been announced. When the board first reviewed the project in February, village staff expected construction to begin as early as May and the store to open by September. Noak also highlighted the project in his State of the Village address this spring as one of three new shopping centers planned along Weber Road. The 12,000-square-foot La Hacienda will be a full-service grocery store with an in-house butcher who cuts meat to order. It will be open daily from 8 a.m. to 9 p.m. The family-owned chain has five other Chicago-area stores. The grocery was originally planned at 17,000 square feet. The store will share its building with a 2,500-square-foot restaurant with a drive-thru, open daily from 8 a.m. to 10 p.m. The restaurant will also include a speakeasy, a first for Romeoville, open Thursday through Sunday from 5 to 11 p.m. The development includes two more retail spaces for future tenants. Keep up or miss out Get local stories that matter: community news, politics, education, business, health, and more, delivered free 5 days a week. The second project is a 7,200-square-foot retail building just north of the Ald
+[Could not fetch: 403 Client Error: Forbidden for url: https://progressivegrocer.com/brookshire-brothers-newest-texas-location-more-grocery-store]
 
---- Article 92 ---
-URL: https://www.moneycontrol.com/entertainment/yami-gautam-s-nayyi-navelli-advance-bookings-now-open-ahead-of-october-16-release-article-14052335.html
-Title: Yami Gautam's Nayyi Navelli advance bookings now open ahead of October 16 release
+--- Article 229 ---
+URL: https://www.binghamtonhomepage.com/news/local-news/halal-bites-opens-new-location-in-former-sharkeys-spot/amp/
+Title: Halal Bites opens new location in former Sharkey’s spot
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 16:39:12
+Published: 2026-10-23 17:50:58
 
-Nayyi Navelli Yami Gautam Dhar's upcoming film Nayyi Navelli is gearing up for its theatrical release on October 16, 2026. The fantasy-comedy, directed by Balaji Mohan and produced by Aanand L Rai and Himanshu Sharma, has officially opened advance bookings ahead of its arrival in cinemas this Friday. Bollywood actress Yami Gautam Dhar is preparing to return to the big screen with Nayyi Navelli, which is scheduled to release in theatres on October 16, 2026. With just two days remaining before its release, the makers have announced that advance ticket bookings are now open. The film promises a mix of fantasy, humour and family entertainment, making it one of the festive releases arriving during the Dussehra season. The makers of Nayyi Navelli have officially opened advance bookings, allowing audiences to reserve their seats before the film's theatrical debut. The announcement comes as the film prepares for its Friday release, with the makers positioning it as a family entertainer featuring unexpected twists, humour and entertaining situations. Related Stories Salman Khan breaks silence on marriage: 'That person goes ahead and gets married to somebody else...... 'Jisne Phone ke andar camera banaya hai woh agar mujhe mil jaye...': Salman Khan slams paparazzi for... Drishyam 4 on the cards? Director Abhishek Pathak breaks silence Moviegoers can check ticket availability, show timings and cinema listings through their preferred ticket-booking platforms. Also Read: 'Jisne Phone ke andar camera banaya hai woh agar mujhe mil jaye...': Salman Khan slams paparazzi for filming actresses in inappropriate angles Directed by Balaji Mohan, Nayyi Navelli features Yami Gautam Dhar in the lead role. The film brings together fantasy and comedy, with its story promising unusual situations and entertaining moments. While the makers have highlighted the film's humour and family-friendly appeal, further details about its storyline and characters have not been disclosed in the announcement.
+BINGHAMTON, N.Y. (WIVT/WBGH) – A new eatery has moved into the former home of the iconic Sharkey’s restaurant in Binghamton’s First Ward, and while the exterior looks much the same, the inside is completely different. Halal Bites opened its second location on Tuesday. It has operated on Riverside Drive in Johnson City since 2019, but soon will close that restaurant in favor of the new Glenwood Avenue location. Halal Bites sells a variety of cuisines from the Middle East, Pakistan, India and Afghanistan. Dishes include schwarma, kabobs and tikka. Co-Owner Mashal Bacha and his partners bought the building in March 2023. They initially hoped to maintain much of the feel of the old Sharkey’s. But when they started to remodel, they discovered that the structure was in much worse shape than they realized. In the end, in order to comply with code, Bacha says they had to gut the entire interior. They removed the bar, expanded the kitchen and moved the bathrooms. “I would say it was a roller coaster ride, a lot of ups and downs. But, at the end, it was worth it,” Bacha says. Bacha says customers have been sharing their Sharkey’s memories when they visit the restaurant. Halal Bites offers dine-in, takeout and delivery apps. It’s open every day from 11 to 11. Broome County Law Enforcement graduates 28 recruits Local food pantry sees food shortages amid influx of people Halal Bites opens new location in former Sharkey’s spot New Vestal food, tobacco business set to open Harpur’s Ferry receives new ambulance honoring co-founder
 
---- Article 93 ---
-URL: https://www.itemonline.com/albertsons-announces-new-store-in-valley-center-bringing-fresh-food-pharmacy-services-and-jobs-to/article_ae2c093e-f8f4-56ce-a825-3b4a8205160c.html
-Title: Albertsons® Announces New Store in Valley Center, Bringing Fresh Food, Pharmacy Services and Jobs to Growing Community
+--- Article 230 ---
+URL: https://dailyhive.com/edmonton/poppys-coffee-and-juice-opening-edmonton
+Title: There's a new coffee and fresh-pressed juice spot opening in Edmonton
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 16:32:37
+Published: 2026-10-23 17:25:00
 
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.itemonline.com/albertsons-announces-new-store-in-valley-center-bringing-fresh-food-pharmacy-services-and-jobs-to/article_ae2c093e-f8f4-56ce-a825-3b4a8205160c.html]
+@poppys_yeg/Instagram Poppy’s Coffee and Juice has been teasing its arrival for weeks now, and it’s finally about time for the new cafe to open its doors in Edmonton. Poppy’s is a new cafe opening in Edmonton that, according to its Instagram , will be serving up “thoughtfully prepared food and coffee.” Located in the downtown core, this space will be offering a comforting space built for nourishment, gathering, and those quiet moments in the city. The cafe was originally slated to open in August ; however, the tentative opening date has been pushed back to this October. According to a post made by the cafe on Oct. 21 , the opening is “a little over a week away.” View this post on Instagram A post shared by Poppy’s coffee and Juice (@poppys_yeg) Although the exact menu hasn’t been released anywhere online, we know we can expect pastries , fresh juice with clean ingredients , and, of course, coffee. The experience doesn’t end at the food, however, as this new spot will feature one of the most comfortable interiors you can find at any cafe in Edmonton. According to its Instagram , the cafe is going to feature custom banquette seating, chairs, and counter stools for guests to sit and enjoy the vibes. Keep an eye out for the exact opening date coming up this October, because this carefully crafted cafe is getting ready to show up and show out. “We’re making sure everything is just right before we welcome you in, and we can’t wait for you to experience it all,” reads their post on Instagram . “Just a little longer, Edmonton. Your new favourite meeting spot is almost ready.” Poppy’s Coffee and Juice Address: 10621 100th Ave. NW, Edmonton Instagram Still hungry? Discover Dished Edmonton on TikTok
 
---- Article 94 ---
-URL: https://www.mahoningmatters.com/news/local/article317526969.html
-Title: Flexible, private salon suites open at Laurel House Beauty & Wellness Columbiana
-Status hint: Opening | Industry: Health / Beauty
-Published: 2026-10-14 16:30:52
-
-Jessica Rohm is the owner of Laurel House Beauty & Wellness Suites. She’s been a hairstylist for over a decade and co-owner of Salon Anthurium in Columbiana since 2019. Laurel House Beauty & Wellness Suites Laurel House Beauty & Wellness Suites is debuting at 204 East Railroad St. in Columbiana. Owner Jessica Rohm has been a hairstylist for over a decade and co-owner of Salon Anthurium in Columbiana since 2019. “Over the years, I’ve watched more and more beauty and wellness professionals want the independence of running their own businesses, but opening an entire salon or commercial space comes with a huge amount of overhead and responsibility,” Rohm said. “I wanted to create something in between traditional booth rental and taking on an entire storefront, a place where professionals could have a private space that truly feels like their own, while still being part of a larger community.” Laurel House has 10 private suites designed for hairstylists, estheticians, massage therapists, lash artists and other beauty and wellness professionals. “I am not limiting it to that though. If there are any young professionals looking for a Suite space in Columbiana, I am happy to bring them in if it would not be disruptive to the other renters,” Rohm said. “We currently have two independent businesses operating here: RJ Color Studio, with cosmetologist Rileigh Altman and Glazed Skin LLC, with esthetician Aubrey Craig.” The remaining suites are currently available for rent; sizes and pricing information are available online . Laurel House Beauty & Wellness Suites’ grand opening and ribbon cutting begins at 1 p.m. on Oct. 18 with the Youngstown/Warren Regional Chamber. Rohm said the building on East Railroad Street required renovations to transform from an office space into professional, private beauty suites. “The building was previously an office with nine office spaces and a conference room. From that we created the private suites, added extensive plumbing so every suite has a 
-
---- Article 95 ---
-URL: https://nypost.com/2026/10/14/business/hooters-restaurants-keep-closing-but-ceo-says-theres-more-to-the-story/
-Title: Hooters restaurants keep closing across US
+--- Article 231 ---
+URL: https://www.boston.com/food/restaurants/2026/10/23/xian-famous-foods-is-opening-its-first-boston-restaurant/
+Title: Xi’an Famous Foods is opening its first Boston restaurant
 Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 16:24:00
+Published: 2026-10-23 17:22:33
 
-Hooters restaurants continue to disappear across America, including several longtime locations in Florida — but the iconic chain’s CEO insists the closures aren’t a sign that the brand is losing its appeal. Neil Kiefer, CEO of Florida-based Hooters Inc., told Fox News Digital the company is focused on rebuilding the restaurant chain after its original founders regained control of the brand following its 2025 bankruptcy. “The number of stores will go up and down, but the longevity of our commitment will not,” Kiefer said. “These store closures are not an indication of brand strength.” His remarks come after Fox News Digital reported that Hooters closed its last remaining restaurant in Jacksonville, Florida, ending a 40-year presence in the city. The closure followed the September shutdown of a Hooters in Panama City Beach, which had operated for more than three decades. Other longtime locations have also disappeared, including a Hooters in Boca Raton, Florida, which closed earlier this year after 16 years when its landlord declined to renew the lease. 5 Hooters restaurants continue to disappear across America — but the iconic chain’s CEO insists the closures aren’t a sign that the brand is losing its appeal. USA TODAY Network via Reuters Connect 5 Neil Kiefer, CEO of Florida-based Hooters Inc., said the company is focused on rebuilding the restaurant chain after its original founders regained control of the brand following its 2025 bankruptcy. Fox News Digital But Kiefer said the recent closures need to be viewed in the context of the company’s ownership changes. “In March 2025, Hooters of America filed for bankruptcy,” he said. “Hooters of America was a separate corporate entity from the original Hooters team that first founded the brand and their first restaurant in Clearwater, Florida, in 1983,” he went on. “While these two groups may have shared a name, they shared nothing else. The original founders saw an opportunity to step in and reclaim their brand, integrit
+Add Boston.com on Google (opens in a new tab) Add Boston.com as your preferred source on Google to see more of our stories. Sichuan peppercorns. Cardamom. Star anise. Even peppers better known for their use in Chinese medicine than in the kitchen. These ingredients, and close to thirty others, go into the secret chili sauce that David Wang, founder of Xi’an Famous Foods , still makes in small batches. Wang keeps the recipe close, but one secret is out: The fast-casual spot that specializes in cuisine from his hometown of Xi’an, a city in China’s Shaanxi Province that was once an imperial capital, is opening in Boston. 5 best new restaurant openings and dining updates in Boston (October 22, 2026) After popping up in Roxbury, a permanent restaurant soft-opens in Downtown Crossing Friday, with a grand opening coming the first week of November. Stop in for noodles, dumplings, and more — including that pepper-flecked chili oil. Advertisement: “It’s characterized by spicy and sour, and a fragrantly spicy flavor profile,” Jason Wang, the brand’s CEO and David’s son, told Boston.com of Xi’an- and Shaanxi-style cuisine. He helped his father expand Xi’an Famous Foods from its humble beginnings in a Flushing, Queens mall food court in 2005 to a brand with nearly 20 restaurants in New York, Pennsylvania, Virginia, and Washington, D.C. Now, the restaurant has made its long-awaited debut in Boston. “The ‘fragrantly spicy’ is quite important for the region because it means that [the dishes] look very fiery, but it’s not actually supposed to be super spicy,” Wang said. “So, it should be pretty approachable.” “Approachability” is relative when it comes to heat. Chili peppers are measured in Scoville Heat Units. Jalapeños, for example, might reach around 8,000 Scoville Units, while the peppers imported by the restaurant from Shaanxi province clock in around 3,000.  Think less, “my mouth is burning off” and more “oh, that’s got a kick.” Advertisement: Dishes like the spicy beef muscle
 
---- Article 96 ---
-URL: https://www.bizjournals.com/dayton/news/2026/10/14/nothing-bundt-cakes-town-and-country-kettering.html
-Title: Gourmet bakery chain plans new location at Town & Country Shopping Center
-Status hint: Opening | Industry: Retail REITs
-Published: 2026-10-14 16:19:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/dayton/news/2026/10/14/nothing-bundt-cakes-town-and-country-kettering.html]
-
---- Article 97 ---
-URL: https://www.theadvocate.com/baton_rouge/entertainment_life/food_restaurants/historic-highland-road-grill-opening/article_07f40df7-a345-4a1b-8c49-c6474caa0a50.html
-Title: Opening soon, the Historic Highland Road Grill pays homage to Louisiana roots. See inside.
+--- Article 232 ---
+URL: https://whatnow.com/san-antonio/restaurants/laynes-chicken-fingers-targets-april-2027-opening-near-marbach-road-in-san-antonio/
+Title: Layne’s Chicken Fingers Targets April 2027 Opening Near Marbach Road in San Antonio
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 16:05:00
+Published: 2026-10-23 17:20:57
 
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.theadvocate.com/baton_rouge/entertainment_life/food_restaurants/historic-highland-road-grill-opening/article_07f40df7-a345-4a1b-8c49-c6474caa0a50.html]
+Layne’s Chicken Fingers Targets April 2027 Opening Near Marbach Road in San Antonio (Image credit: Layne’s Chicken Fingers) SHARE Layne’s Chicken Fingers is preparing to expand its presence in San Antonio with a third location planned near the Marbach Road exit off Loop 1604 , targeting an April 2027 opening. The upcoming restaurant will be part of a new development featuring Target and Sam’s Club. Although the full street address has not yet been assigned, the location will mark an important step in the brand’s expansion across the San Antonio market. Eli Cohen , a partner in the franchise group C5 Restaurants , told WhatNow San Antonio in an interview that the company is excited about the opportunity to introduce the Texas-based chicken chain to more residents. “We feel great about this market and how the brand is going to resonate in San Antonio. That’s why we’re not just starting with one. We’re coming in with three restaurants,” he said. The Marbach Road location is part of a three-restaurant expansion that also includes a location at 7249 Bandera Road, which was scheduled to open Oct. 27, 2026 , and another at 742 Southwest Military Drive , expected to open in March 2027 . The Marbach Road restaurant is the third planned location and is targeting April 2027. Unlike the other two San Antonio locations, the Marbach Road restaurant will be built from the ground up using Layne’s Chicken Fingers’ prototype design. The project represents a significant investment for C5 Restaurants, which has already established the brand in Lubbock , Texas, where it operates three restaurants. “Marbach is exciting because it’s our third restaurant that we’re bringing to San Antonio, and it will be the first one that we build from the ground up using the Layne’s Chicken Fingers prototype,” Cohen said. “It has open spaces and great natural light. The drive-thru is designed for a very effective speed of service, and we’re really excited to showcase a brand-new build,” he added. Cohen s
 
---- Article 98 ---
-URL: https://www.wbtv.com/2026/10/14/charlottes-first-wegmans-draws-overnight-campers-grand-opening/?outputType=amp
-Title: Charlotte’s first Wegmans draws overnight campers for grand opening
+--- Article 233 ---
+URL: https://www.kansascity.com/news/local/article317738874.html
+Title: Grand opening set for historic downtown Kansas City hotel converted to 122 apartments
+Status hint: Opening | Industry: Hospitality
+Published: 2026-10-23 17:12:39
+
+Already open and leasing, the development team behind the conversion of a historic hotel into more than 100 apartments is getting ready to celebrate the high-profile project’s completion. The development team — which includes Zach Molzer’s Molzer Development, Free Heel Capital and Cardinal Crest — announced a grand opening event for the Aladdin apartment project at 1215 Wyandotte St. The former hotel, which was built in 1925, closed under its last banner during the COVID-19 pandemic. The Aladdin is open and leasing now after a redevelopment project to convert the historic downtown Kansas City hotel into apartments. Aladdin KC The Aladdin apartment project A group led by Molzer then launched the $38 million project, and internal demolition began in late 2024 to begin transforming the building into apartments near Barney Allis Plaza , where renovation work has been underway. “It needed love, the right vision, and the right team to come in and breathe new life into it. We are honored we get to be part of that,” Molzer said in a statement. Zach Molzer, of Molzer gave a tour of the fourth floor Wednesday, January 22, 2025 at the Aladdin hotel groundbreaking. The Aladdin, opened in 1925 and closed in 2022, is being converted into apartments and is scheduled to open in the Spring of 2026.                                                                                            Susan Pfannmuller Special to The Star The project preserved architectural details and the 16-story building’s historic character while adding modern flourishes, new amenities for residents and a rooftop cocktail bar. What was once a 193-room hotel became an apartment building with 122 units, bringing new residents to the downtown area. “For much of its history, the Aladdin welcomed people visiting Kansas City,” Ben Gordon, partner with Free Heel Capital said in a statement. “Now, it will welcome people making their lives here. I’m excited to see residents discover the building, make it their own and
+
+--- Article 234 ---
+URL: https://www.aol.com/articles/costco-opening-9-warehouses-november-170800000.html
+Title: Costco Is Opening 9 New Warehouses in November Including a Different Kind of Store
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 16:03:00
+Published: 2026-10-23 17:08:00
 
-Add Us On Google Add as a preferred source on Google CHARLOTTE, N.C. (WBTV) - The hype is real for Wegmans’ first Charlotte location , with people camping out as early as Tuesday night ahead of Wednesday’s grand opening. The popular grocery chain officially opened at 9 a.m. on Oct. 14, along North Community House Road in Ballantyne. Wegmans is opening its first Charlotte store in the Ballantyne area on Oct. 14, 2026. (WBTV) Wegmans’ 110,000-square-foot store features all the traditional departments, plus its well-known prepared foods section spanning nearly half the building. --> Related: Charlotte’s first Wegmans opens next week: See inside the new store Cari Morris, the first person in line, said she couldn’t be more excited for the new Wegmans. “I wanted to be first in line because I found out the store was opening on my birthday,” said Cari Morris. “This store is epic; it’s huge. They have everything.” The first people in line for opening day at Charlotte's first Wegmans. (WBTV) She said the store hits close to home as it reminds her of growing up in the north. “The best thing is, they have products from my hometown, Buffalo. I grew up with Wegmans as my hometown grocery store,” Morris said. Employees welcomed hundreds of shoppers with smiles once the doors opened, and video from inside captured just how crowded it was. Copyright 2026 WBTV. All rights reserved.
+Natalia Costa Fri, October 23, 2026 at 5:08 PM UTC 0 (jetcityimage &sol; Getty Images) Costco shoppers have more reasons to get excited this November, following a busy October of new openings. The warehouse giant is preparing to open nine locations across the United States and Canada, including a special type of store that many members may never have visited. According to Costco’s official list of upcoming locations, five openings are planned for the United States and four for Canada. The complete November lineup includes South Meridian, Idaho; Vallejo, California; Chandler, Arizona; Newport News, Virginia; and Franklin, Wisconsin. In Canada, Costco is adding locations in northeast Edmonton and Lloydminster, Alberta, as well as east Windsor and Wasaga Beach, Ontario. But the Chandler location is particularly interesting. Unlike a traditional warehouse, it will be a Costco Business Center, designed primarily for restaurants, offices, convenience stores and other businesses. Despite the name, you don’t need to own a business to shop there. Anyone with a regular Costco membership can visit. What really sets these stores apart is what they sell. According to Costco, approximately 70% of the merchandise at its Business Centers differs from what shoppers find at traditional warehouses. Instead of focusing on televisions, clothing, furniture and seasonal decorations, these locations emphasize restaurant supplies, commercial kitchen equipment, cleaning products, beverages, individually packaged snacks and food sold in larger quantities. That makes them particularly useful for people stocking up for parties, large families or community events, even if they don’t run a business. The new Chandler Business Center is located at 1111 West Pecos Road and is scheduled to open November 7, according to Costco’s warehouse page . Meanwhile, the new Vallejo warehouse is scheduled to open November 6 at 860 Admiral Callaghan Lane. Costco says it will include a pharmacy, optical department
 
---- Article 99 ---
-URL: https://www.morningstar.com/news/pr-newswire/20261014la71648/vallarta-supermarkets-opens-first-duarte-store-marking-its-66th-location
-Title: Vallarta Supermarkets Opens First Duarte Store, Marking Its 66th Location
+--- Article 235 ---
+URL: https://www.ctpost.com/news/article/stratford-ct-rite-aid-key-food-22489741.php
+Title: A vacant Stratford Rite Aid could become a Key Food grocery store
+Status hint: Closing | Industry: Grocery
+Published: 2026-10-23 17:05:21
+
+JavaScript is disabled in your browser. Please enable JavaScript to proceed.
+
+--- Article 236 ---
+URL: https://dailyhive.com/calgary/calgary-shelbys-shawarma
+Title: Restaurant chain opening first location in Western Canada and it's in Calgary
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-23 17:03:00
+
+Shelby's Canada﻿/Facebook A popular Canadian shawarma chain is expanding into Western Canada this weekend, and Calgary will be home to its first location. Shelby’s Shawarma is set to open at 9110 Macleod Trl. SE on Sunday, Oct. 25, with a grand opening bringing its signature shawarma wraps, bowls, and loaded fries to Calgary. To celebrate, the first 100 customers will get a free Shawarma Boutine, which comes loaded with crispy fries, chicken, garlic sauce, boutine sauce, chipotle sauce, and feta cheese. The restaurant will also offer 50 per cent off wraps, bowls, and signature menu items throughout opening day, from 12 to 9 p.m. Both deals are available in-store only, and the free Boutines are available while supplies last. View this post on Instagram A post shared by Shelby’s Canada (@shelbyscanada) You might also like: 11 Calgary restaurants that serve some of the best ramen in the city Alberta eatery named one of the best casual dining restaurants in the world Alberta spot named the best landmark restaurant in North America There will also be a few other things happening throughout the day, with face painting, live caricature artists, games, and prizes planned for the grand opening. The event is free to attend and will run from noon to 9 p.m. Shelby’s started as a food trailer in Lambeth, Ont., in 2015, founded by two friends, Yazan El-Shalabi and Yasser Ali. The chain now has more than 50 locations across Canada, and Calgary marks its first step into Alberta and Western Canada. According to the company, more locations are planned across Alberta in the coming years. Shelby’s Shawarma is joining a long list of chains that have opened on Macleod Trail this year, including Shake Shack , Dave’s Hot Chicken , and most recently, Wingstop, which just opened its largest Canadian location at Chinook Centre . Shelby’s Shawarma Address: 9110 Macleod Trl. SE Instagram Still hungry? Discover Dished Calgary on TikTok
+
+--- Article 237 ---
+URL: https://www.shawlocal.com/the-herald-news/2026/10/23/silver-cross-hospital-opening-new-lemont-health-center/
+Title: Silver Cross Hospital opening new Lemont Health Center
+Status hint: Opening | Industry: Pharmaceutical / Medical
+Published: 2026-10-23 17:00:00
+
+Silver Cross Hospital is opening a new $20 million, 20,000-square-foot healthcare facility in Lemont , which will offer urgent care, labs and imaging services, hospital officials said. The public is invited to tour the new center during an open house from 10 a.m. to 1 p.m. on Saturday. The event will include screenings, self-guided tours, refreshments and giveaways, according to the hospital. Silver Cross Hospital opened a new $20 million, 20,000-square-foot healthcare facility on 127th Street in Lemont in October 2026. The new building offers 22 exam rooms, a full-service lab, comprehensive imaging, and an urgent care center. (Photo provided by Silver Cross Hospital) The center replaces the hospital ’s existing building on 127th Street, which is slated for demolition sometime in the next six to nine months, according to Michael Mutterer, president and chief executive officer at Silver Cross Hospital in New Lenox . After the demolition, the former site will be used for parking , he said. The new center is almost twice as large as the existing building and adds urgent care services, Mutterer said. “There’s definitely a need in the community – and to bring imaging services and lab services to the community ,” is a plus, he said. The new building offers 22 exam rooms, a full-service lab, comprehensive imaging – including X-ray and eventually CT, MRI and ultrasound. – and an urgent care center with five exam rooms and a procedure room, according to the hospital. Silver Cross Health Center and Urgent Care at 15505 E. 127th St. in Lemont offers 22 exam rooms, a full-service lab, comprehensive imaging – including X-ray and eventually CT, MRI and ultrasound. – and an urgent care center with five exam rooms and a procedure room. (Photo provided by Silver Cross Hospital) Molly Brusca, associate vice president of Silver Cross Medical Group, said the Lemont center is the hospital’s fifth urgent care in its service area, which “expands services into evenings and weekends so pati
+
+--- Article 238 ---
+URL: https://www.springfieldbusinessjournal.com/columns/taco-bell-opening-soon-in-chatham/
+Title: Taco Bell opening soon in Chatham
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 16:57:22
+
+The first Taco Bell in Chatham could be open by the end of the year. The restaurant is under construction at the site of the former Hardee’s on North Main Street. LucWork Enterprises Inc., a Peoria-based Taco Bell franchise owner, will be the restaurant’s owner and operator. “Obviously weather can play into it, but the target time frame is by the end of December,” said Mark Witzke, LucWork chief operating officer. The restaurant will be LucWork’s 18 th Taco Bell franchise. The company also operates three Taco Bells in Springfield, on North Dirksen Parkway, Adlai Stevenson Drive and West White Oaks Drive. “We’ve been looking at Chatham for a number of years,” Witzke said. “It looks like a very promising trade area for us. It was just a matter of finding the right location and getting a deal done.” LucWork, which has operated Taco Bell restaurants for more than 40 years, continues to look for other potential sites for new restaurants, with a goal to have more than 20 locations. “We’ve got other pieces of property we’re looking at,” Witzke said. “We’ll continue to grow as appropriate.” The Chatham Hardee’s at 331 N. Main St. closed suddenly in February 2024. It was one of five central Illinois Hardee’s locations to close at the time. Related
+
+--- Article 239 ---
+URL: https://patch.com/maryland/columbia/new-observation-unit-howard-co-medical-center-opening-soon
+Title: New Observation Unit At Howard Co. Medical Center Opening Soon
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 16:55:53
+
+Business & Tech New Observation Unit At Howard Co. Medical Center Opening Soon Leaders gathered this week for a ribbon-cutting to celebrate the new 29-bed observation unit opening soon at JHHCMC. Kristin Danley-Greiner , Patch Staff Posted Fri, Oct  23, 2026 at 12:55 pm ET | Updated Fri, Oct  23, 2026 at 5:55 pm ET Officials gathered this week to cut the ribbon for the new observation unit, which can be found on the hospital pavilion's first floor. It's designed to expedite patient care and help patients move from the emergency room to other hospital units faster. (Photo courtesy of Howard County Government) COLUMBIA, MD — A 29-bed observation unit will officially open in December at Johns Hopkins Howard County Medical Center. Officials gathered this week to cut the ribbon on the new unit, located on the hospital pavilion's first floor. It's designed to speed patient care and move patients from the emergency room to other hospital units faster. The observation unit marks the hospital's first significant bed expansion in the emergency department since 2009, leaders said, with a price tag of $28 million. The county contributed $15 million to the project over the past three years. Find out what's happening in Columbia for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . "Hospitals around our country are experiencing longer wait times in their emergency departments, and Howard County’s one and only hospital is no exception. The opening of this observation unit will deliver much-needed relief to patients and staff in our emergency department," said Howard County Executive Calvin Ball at the ribbon-cutting. Johns Hopkins Howard County Medical Center also received a $3 million grant from The Kahlert Foundation to help fund the project. The foundation planned to match additional donations up to $600,000. Find out what's happening in Columbia for free with the latest updates from Patch. By subscribing, you agree 
+
+--- Article 240 ---
+URL: https://bhamnow.com/2026/10/23/fountain-heights-to-get-first-new-grocery-store-in-70-years/
+Title: Fountain Heights to get first new grocery store in 70 years
 Status hint: Opening | Industry: Grocery
-Published: 2026-10-14 16:02:00
+Published: 2026-10-23 16:50:35
 
-Vallarta Supermarkets Opens First Duarte Store, Marking Its 66th Location Vallarta Supermarkets Opens First Duarte Store, Marking Its 66th Location PR Newswire DUARTE, Calif., Oct. 14, 2026 The supermarket chain will celebrate the brand new Duarte location with a ribbon-cutting ceremony and community celebration on Wednesday, October 21st DUARTE, Calif. , Oct. 14, 2026 /PRNewswire/ -- Vallarta Supermarkets, the family-owned Latin grocery chain known for its authentic and fresh offerings across California and Arizona, is celebrating the opening of its first Duarte location with a ribbon-cutting ceremony on Wednesday, October 21st . Located at 1470 Mountain Ave, Duarte, CA 91010 , the new store marks Vallarta Supermarkets' 66th location and continues the company's growth across Southern California. The grand opening celebration will bring the Duarte community together with live entertainment, special giveaways, community contributions, and a chance to experience Vallarta's fresh and authentic offerings. The first 300 customers through the doors on grand opening day will receive a complimentary reusable grocery bag filled with groceries. In celebration of the new location, five local schools and charitable organizations will receive a share of $10,000 in donations from Vallarta, furthering the company's commitment to supporting the communities it serves. "We're excited to open our doors in Duarte and become part of this community," said Allie Garcia, Vice President of Marketing at Vallarta Supermarkets . "With every new store, our goal is to create a welcoming destination where families can find fresh, high-quality ingredients that reflect the cultures and traditions they love. We're equally proud to give back to the communities we join, and we look forward to building lasting connections with Duarte residents and local organizations." The new store will also introduce SushiOro , Vallarta Supermarkets' new in-store sushi concept featuring rolls with flavors developed b
+[Could not fetch: 403 Client Error: Forbidden for url: https://bhamnow.com/2026/10/23/fountain-heights-to-get-first-new-grocery-store-in-70-years/]
 
---- Article 100 ---
-URL: https://www.gamesradar.com/games/simulation/pet-store-tycoon-codes/
-Title: Pet Store Tycoon codes (October 2026) for cash and pets
-Status hint: Opening | Industry: Pet Care
-Published: 2026-10-14 16:01:45
+--- Article 241 ---
+URL: https://www.kvue.com/article/news/nation-world/trader-joes-opening-28-new-stores-locations/507-f7ade435-57cc-4c61-af48-d8d6a4f2cf45
+Title: Trader Joe's opening 28 new stores across 15 states. See the full list of locations
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 16:49:00
 
-(Image credit: Already Arrived Studios) Jump To: All Pet Store Tycoon codes How to redeem codes Copy link Facebook X Pinterest Flipboard Email Share this article 0 Join the conversation Follow us Add us as a preferred source on Google Newsletter Subscribe to our newsletter Disclaimer October 14, 2026: I looked around for new Pet Store Tycoon codes and added the latest new promo to our list. Redeeming the latest Pet Store Tycoon codes is crucial to keeping your store at its best, as you'll get some bonus cash and even free pets to sell, with both having a considerable impact on your profit for the day. And, as a Pet Store Tycoon, making a profit is essential for growth! Whether you're still going it alone in your early days or you have a full team working the store for you in the Roblox simulation game, you can still never underestimate the importance of a deal when running a shop. Either way, then, these Pet Store Tycoon freebies shouldn't be overlooked, and I'd recommend redeeming them as soon as possible. If you're after some more general rewards that can be used in all of your experiences, then check out the latest Roblox promo codes in our separate guide. All Pet Store Tycoon codes (Image credit: Already Arrived Studios) These are the Pet Store Tycoon codes you can redeem right now: TY10MIL - Cashier (30 minutes), Stocker (30 minutes), Curbside Runner (30 minutes), Double Traffic (30 minutes), 10m Visits Plaque new! WHALE - Cashier (30 minutes) PETS - Deluxe Pet Pack, $500 SNEK - Deluxe Pet Pack Pet Store Simulator codes grant different rewards, but usually you'll find they either offer pet packs or money. While both are great, getting your hands on Deluxe Pet Packs is always exciting, especially since your rewards are a surprise. Latest Videos From GamesRadar+ Watch full video here: How to redeem Pet Store Simulator codes (Image credit: Already Arrived Studios) When redeeming Pet Store Tycoon codes, you must first open your in-game cell phone by clicking on the
+Nation/World Trader Joe's opening 28 new stores across 15 states. See the full list of locations Trader Joe's plans to open 28 new stores across 15 states in the coming months. Here's where the popular grocery store is headed. Credit: AP FILE - People stand in line waiting to enter Trader Joe's to buy groceries in Pembroke Pines, Fla., on March 24, 2020. (AP Photo/Brynn Anderson, File) WASHINGTON — Trader Joe's is preparing to open 28 new stores across the United States in the coming months, continuing its steady expansion. The California-based grocer opened two new stores this week in Anaheim Hills, California, and West Jordan, Utah. "We are actively looking at hundreds of neighborhoods across the country as we hope to open more new neighborhood stores each year," a spokesperson for Trader Joe's said in a release. Trader Joe's currently operates in more than 42 states and the District of Columbia; they have opened several new locations in 2026 across the United States. The new stores will open across 15 states, including Arizona, California, Colorado, Florida, Illinois, Massachusetts, Maryland, Michigan, Nebraska, New Jersey, New York, Ohio, Oregon, Texas, and Washington. Trader Joe's did not disclose the exact opening dates for each location. In late March, Trader Joe's previously announced 18 new stores in 12 states. Trader Joe's stores opening soon: Full list of new locations Phoenix (Desert Ridge), Arizona Phoenix (44th St & Thomas), Arizona San Diego (Clairemont), California Riverbank, California Leucadia, California Denver (Central Park), Colorado Orlando (Alafaya), Florida Sarasota (South), Florida Boynton Beach, Florida Oswego, Illinois Chicago (Uptown), Illinois Joliet, Illinois Chicago (North Park), Illinois Quincy, Massachusetts Baltimore (Anneslie), Maryland Farmington Hills, Michigan Omaha (West), Nebraska Jersey City, New Jersey West Orange, New Jersey Syracuse (Fairmount), New York Yonkers, New York University Heights, Ohio Bend (South), Oregon Mansf
+
+--- Article 242 ---
+URL: https://whatnow.com/dallas/retail/h-e-b-plans-construction-on-new-garland-store/
+Title: H-E-B Plans Construction on New Garland Store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 16:45:25
+
+H-E-B storefront at Rio Grande, Euless (Image credit: H-E-B's website) SHARE According to public filings, H-E-B is preparing to bring a new grocery store to Garland , with construction expected to begin next spring. The proposed store is planned for a 21-acre site between Crist Road and Firewheel Parkway , near President George Bush Turnpike. H-E-B is a Texas-based supermarket chain headquartered in San Antonio. Founded in 1905, the company operates grocery stores throughout Texas and Mexico, offering fresh produce, meat, seafood, bakery items, household essentials and other products. What Now Dallas reached out to H-E-B representatives for information about the opening timeline but did not receive a response before publication. Permitting records list a construction completion date of March 2028. However, dates listed in public filings are not always definitive. According to its website , H-E-B operates more than 440 stores and has continued expanding across North Texas, bringing its stores to communities throughout the Dallas-Fort Worth area. The Garland location would add to H-E-B’s growing North Texas footprint. The San Antonio-based grocer has expanded into communities including Prosper, Forney and Fort Worth as it continues building its presence in the Dallas-Fort Worth area. What Now Houston has previously covered Joe V’s Smart Shop’s plans for two Houston-area stores . The publication has also reported on businesses planned for H-E-B developments, including JuiceLand’s planned location at H-E-B Alliance in Fort Worth. For more information, follow H-E-B on Instagram . Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. Be the First to Know From new restaurant openings to exciting retail launches and real estate insights, be the first to know what’s happening in Dallas Subscribe & Stay Ahead Share This Article Facebook Copy Link Print By Daniela Velez Daniela Velez is a bilingual journalist and com
+
+--- Article 243 ---
+URL: https://www.fresnobee.com/living/food-drink/bethany-clough/article317720267.html
+Title: Several little coffee shops are opening in Clovis. You have to know where to look
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 16:44:25
+
+Key Takeaways Key Takeaways AI-generated summary reviewed by our newsroom. Read our AI Policy. Several new local coffee shops opened in Clovis, with most near Old Town. Three new coffee shops opened inside existing restaurants, bars, or shops. Noc Box Coffee Studio plans a Clovis opening after about three years as a pop-up. New mom-and-pop coffee shops are popping up in Clovis — but they’re not on busy high-profile corners you pass on your way home. They’re tucked away inside a restaurant, a bar, a market and in the back of a shopping center. You need to know where to look. Most are in Old Town Clovis or not far from it. Of course, Old Town already has thriving local coffee shops, including Two Cities Coffee Roasters , On The Edge , and Kuppa Joy . But if you’re looking to check out the newbies doing something different in town — including an adults only coffee shop — take a look at these places and their drink menus. New or coming soon coffee shops in Clovis The Cafe at Dosan The Cafe at Dosan opened about a month ago inside the restaurant Dosan A Social Eatery on Shaw Avenue in Clovis.                                                                                            Bethany Clough The Fresno Bee About a month ago, Dosan A Social Eatery at 80 W. Shaw Ave. added a coffee shop inside its restaurant. The building (once home to a Straw Hat Pizza) has a coffee shop that’s open from 7 a.m. to 3 p.m. weekdays and from 7 a.m. to 7 p.m. weekends. It’s got espresso-based drinks, matcha, cold brew, tea and its signature lattes in flavors such as crème brûlée, banana, and salted brown sugar. The cafe also serves bagels and croissants. Dosan recently tried out a buffet concept , combining hofbrau-style meat-carving stations with a Sweet Tomatoes-style salad bar. It didn’t work out, and the restaurant switched to an upscale restaurant serving lunch and dinner. The counter where its meat stations were has been converted into the coffee counter where the drinks are made. 
+
+--- Article 244 ---
+URL: http://sbj.net/stories/open-for-business-sugar-glow,106244
+Title: Open For Business: Sugar & Glow
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 16:35:47
+
+Open For Business: Sugar & Glow BY: Mike Cullinan, Reporter mcullinan@sbj.net Posted 10/16/26 Boutique and beauty services shop Sugar & Glow moved Sept. 4 to newly constructed space at 411 W. Commercial St., Ste. B. This item is for subscribers only. Continue reading with your subscription Access exclusive local business news and insights Annual and monthly subscriptions available Subscribe Already have a paid subscription? Sign in Having trouble logging in to your subscription? Get help from our circulation team More from SBJ Daily Update Care to Learn nears $8.5M goal for capital campaign Springfield chamber opposes Amendment 6 Great Southern profits impacted by accounting adjustment Hank Molinengo named 2026 Humanitarian of the Year Other stories that may interest you Open For Business: Southway Storage Open For Business: Sumits Hot Yoga Open For Business: EnCompass Academy Open for Business: MD Hyperbaric Open For Business: Uncorked Open For Business: Gabriela Cocina Mexicana Contemporanea Open For Business: Fetch Pet Supplies & Gifts Open for Business: Southside Acres Wedding and Event Center
+
+--- Article 245 ---
+URL: https://mix941kmxj.com/ixp/195/p/bath-body-works-opens-soncy-road/
+Title: Get Ready to Shop! Amarillo's Second Bath & Body Works is Opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 16:30:04
+
+New Bath & Body Works Opens Saturday on Soncy Road in Amarillo New Bath & Body Works Opens Saturday on Soncy Road in Amarillo Lori Crofford Lori Crofford Published: October 23, 2026 Lori Crofford Share on Facebook Share on Twitter Back in April 2026, we shared with you that a new store was opening up at the Westgate Village Shopping Center on Soncy. It's not brand new, but it is new to the location, and it will be store number two for this popular retailer. The new Bath & Body Works is almost here. When Does the New Bath & Body Works in Amarillo Open? We can confirm that this location will be opening tomorrow, Saturday, October 24 - Bath & Body Works Spokesperson It's official: the new store is opening on Saturday, October 24. That means the residents of Amarillo have another Bath & Body Works store option. So if you don't want to go into Westgate Mall, you can drive down Soncy and walk into the store from the parking lot. Where Is the New Bath & Body Works on Soncy Road? The new store is located at 2812 S Soncy Road, Spaces 2810 and 2812. This space was formerly a Merle Norman, which has since relocated. Read More: Merle Norman Soncy: New Location, Same Legacy Holiday Shopping and Candle Day in Amarillo This is a great addition for Amarillo. It's opening just in time for the holiday season, which means wonderful scents and fragrances. Plus, it'll be a new place to stock up on all those great candles when Bath & Body Works Candle Day rolls around. Candle Day falls on the first Friday in December. This year, it looks to be Friday, December 4 through Sunday, December 6. Bath & Body Works Amarillo Store Hours The new Bath & Body Works will be open Monday through Saturday, 10 am to 9 pm, and Sundays, 11 am to 6 pm. Personally, I have a Bath & Body Works soap addiction. I have a cabinet dedicated to hand soaps, and I have many of them. I buy some every time I step into a Bath & Body Works store. I guess the new store means I'll have even more soap in that cabinet. Make p
+
+--- Article 246 ---
+URL: https://globetrender.com/2026/10/23/no1-lounges-open-flagship-heathrow-terminal-5-lounge-spring-2027/
+Title: No1 Lounges to open flagship Heathrow Terminal 5 lounge in spring 2027
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 16:24:03
+
+
+
+--- Article 247 ---
+URL: https://www.kjas.com/news/local_news/article_52976a89-865f-4595-906d-1c70633207d8.html
+Title: Beall's Grand Opening On Saturday
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 16:20:00
+
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.kjas.com/news/local_news/article_52976a89-865f-4595-906d-1c70633207d8.html]
+
+--- Article 248 ---
+URL: https://www.the-sun.com/money/17196299/texas-roadhouse-relocating-first-restaurant-clarksville-indiana/
+Title: Texas Roadhouse's original location is moving to 'legendary' spot that fits 54 more diners & has super-sized kitchen
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-23 16:16:38
+
+Verifying Device Verifying your device, please wait Verification failed. Please try again. Try Again Verification failed. Please try again.
+
+--- Article 249 ---
+URL: https://www.northamptonchron.co.uk/news/people/open-soon-signage-suggests-new-plans-for-former-thackerays-store-in-busy-northampton-street-9307200
+Title: 'Open soon': Signage suggests new plans for former Thackerays store in busy Northampton street
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-23 16:16:00
+
+'Open soon': Signage suggests new plans for former Thackerays store in busy Northampton street By Logan MacLeod Chief Reporter Published 23rd Oct 2026, 17:16 BST Signage has appeared at the former Thackerays store on a busy Northampton street, suggesting a new venue could ‘open soon’. Signs outside the former boutique on Wellingborough Road suggest the empty premises could become a European supermarket. The signage features the name “Traditia”, a Romanian flag and references to a butchers and bakery. It also says “open soon”. The site was most recently home to Flannels, which closed in June 2026, less than two years after opening. Signage has appeared at the former Thackerays store on a busy Northampton street, suggesting a new venue could “open soon”. The designer retailer took over the premises in autumn 2024, following the closure of Thackerays, which had traded in Northampton since 1972. The historic building dates back to Northampton’s Victorian boot and shoe manufacturing era. The building is currently empty following Flannels’ closure. Continue Reading Related topics: Northampton
+
+--- Article 250 ---
+URL: https://patch.com/maryland/gaithersburg/longtime-moco-jewelry-shop-close-after-30-years
+Title: Longtime MoCo Jewelry Shop To Close After 30 Years
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-23 16:10:32
+
+Business & Tech Longtime MoCo Jewelry Shop To Close After 30 Years A jewelry shop that's been around for more than 30 years is permanently closing at the Kentlands Market Square shopping center. Gaby Arancibia , Patch Staff Posted Fri, Oct  23, 2026 at 12:10 pm ET | Updated Fri, Oct  23, 2026 at 5:54 pm ET Kentlands Jewelers-Daviko Gems has announced it will close by the end of the year after serving the Gaithersburg community for decades. (Google Maps) GAITHERSBURG, MD — A staple jeweler based in the Kentlands community is closing its doors after operating for more than three decades. Kentlands Jewelers-Daviko Gems , located at 109 B Market St. in the Kentlands Market Square shopping center, will permanently close Dec. 24. The shop specializes in diamonds, gems and precious stones imported from around the world and offers repair work. It also houses an on-site gemologist for appraisals. Find out what's happening in Gaithersburg for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . "Thank you for all of your support over the years and we cannot wait to see you during our retirement sale," reads an announcement shared on the company's Facebook page . The brand says it will discount its products by up to 70%, noting, "everything must go." Find out what's happening in Gaithersburg for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . Until it closes, the shop will operate from 12 p.m. to 6 p.m. Tuesday through Saturday. Are you a local business owner? Post a business listing on Patch! It’s an easy way to reach a local audience and connect with customers close to home. Go here to get started today. Get more local news delivered straight to your inbox. Sign up for free Patch newsletters and alerts. Related: MD Business News MD Store Closings Share Join the conversation

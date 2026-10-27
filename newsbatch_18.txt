@@ -1,4 +1,4 @@
-You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates, footage sizes, or statuses:
 
 🔍 Extract these fields
 • Store/Shop/Restaurant Name
@@ -11,23 +11,30 @@ You are an expert, precise data extractor specialized in retail and restaurant o
   - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
   - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
   👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Footage Size
+  - Extract the store, shop, restaurant, or facility's footage size only if it is explicitly mentioned in the article text
+  - Preserve the exact figure and unit as stated, e.g. "12,000 square feet", "2,500 sq. ft.", "approximately 8,000 square feet"
+  - If the article mentions multiple relevant footage sizes for the same business, include each size with its context
+  - Do NOT calculate, convert, estimate, or infer footage size; do not confuse it with acreage, lot size, seating capacity, or other measurements
+  - If no footage size is mentioned, write exactly "Not specified"
 • Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
 
 📊 Output format
 Create ONE clean Markdown table with these exact column headers (in this order):
-| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Footage Size | Short Description | Article Link | Published Date |
 
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If an article has qualifying business information but no footage size, write "Not specified" in the Footage Size column
 • If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
 
 🚫 Strict constraints
-• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses, dates, or footage sizes  • ❌ No rewriting or normalizing status text
 
 📎 Final section (mandatory)
 At the very end of your response, add:
@@ -38,410 +45,411 @@ If none, write: None
 ✅ Articles below — extract now:
 
 
---- Article 401 ---
-URL: https://patch.com/connecticut/across-ct/popular-ct-eatery-community-hub-close-sooner-expected
-Title: Popular CT Eatery, 'Community Hub' To Close Sooner Than Expected
+--- Article 51 ---
+URL: https://www.telegraphherald.com/news/features/article_d46df048-fcab-42cd-a645-98ecd4703d78.amp.html
+Title: Home goods store in Elkader wins $15,000 state grant with support of local, state organizations
+Status hint: Opening | Industry: Housewares & Home Furnishings
+Published: 2026-10-25 06:00:00
+
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.telegraphherald.com/news/features/article_d46df048-fcab-42cd-a645-98ecd4703d78.amp.html]
+
+--- Article 52 ---
+URL: https://www.breakingtravelnews.com/news/article/fusion-launches-legacy-hanoi-a-fusion-original-with-grand-opening/
+Title: A FUSION ORIGINAL WITH GRAND OPENING
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-25 05:43:08
+
+LÈGACY Hanoi - A Fusion Original, a stylish 218-room hotel and wellness sanctuary, offering spectacular views of the city and West Lake, is opening its doors to guests this month in the heart of the Vietnamese capital. The new hotel marks the latest chapter in the Fusion Hotel Group’s expansion and reinforces its leadership role in Vietnam’s dynamic wellness-inspired hospitality landscape. Located in the city’s historic Ngoc Ha ward, LÈGACY Hanoi pays tribute to Hanoi’s rich heritage with design elements inspired by the historic O Quan Chuong Gate, the Red River, and the iconic five-petal peach blossom. Here, guests can enjoy a curated selection of experiences, from cutting-edge dining and bar concepts to restorative spa treatments and wellness rituals. “Hanoi has an extraordinary sense of history, culture and identity. Our ambition with LÈGACY was to create a destination that feels truly connected to Hanoi — one that respects the character and heritage of the city while offering a fresh and contemporary hospitality experience,” Christopher Hur, CEO of Fusion Hotel Group, said during the Grand Opening Ceremony on September 16. “This opening is also a testament to the vision, dedication and trust of our ownership partners. Bringing a hotel of this scale and ambition to life requires tremendous commitment and collaboration, and we are grateful for the confidence they have placed in Fusion. Today is not the end of a project. It is the beginning of a new chapter — for this hotel, for our partnership with the ownership team, and for Fusion here in Hanoi.” ADVERTISEMENT A Heritage Escape That Feels Like Home Upon arrival, guests will be captivated by a grand interpretation of the legendary chim hac (crane), gliding above the shimmering reception space. Throughout the lobby, abstract patterns and textures offer timeless Vietnamese cultural references with an elevated, artistic touch. Guest experience is further enhanced by a complimentary refreshments service in the main l
+
+--- Article 53 ---
+URL: https://www.bournemouthecho.co.uk/news/26665366.italian-sofa-retailer-creates-jobs-new-poole-store/
+Title: New jobs created as Italian sofa retailer opens Poole store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-25 05:00:00
+
+Business Leisure Shopping Poole Italian sofa retailer creates jobs with new Poole store Business Leisure Shopping Poole By 
+            Jess Skelton Reporter Share 0 Comments poltronesofà opens in Poole (Image: poltronesofà) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. AN Italian sofa retailer has opened a new store in Poole. Described as 'Italy's favourite sofa retailer', poltronesofà officially welcomed customers to its latest branch at Wessex Gate Retail Park on October 23. The store launch has created seven new jobs, including roles for a branch manager, deputy manager, and five home advisors. poltronesofà opens in Poole (Image: poltronesofà) Lee Orton, branch manager at poltronesofà Poole, said: "We’re delighted to bring poltronesofà to Poole and welcome local customers into our new store. "With 84 ranges to explore and a wide choice of fabrics, real leathers and colours, visitors can discover the Italian Touch and find a sofa that feels right for them. "We look forward to offering a warm welcome and, of course, Italian coffee to our customers." Read more Barclays opens a new banking branch in Poole Major new M&S Foodhall to open next week UK pet retailer targets Bournemouth for new store as part of expansion With existing poltronesofà stores in Southampton and Plymouth, the new Poole location brings the brand even closer to customers in the town and surrounding area. Poltronesofà offers 84 sofa ranges, including recliners, corner sofas and sofa beds. Customers can personalise their choices with more than 200 options in colours, fabrics, and real leathers. Each sofa comes with a 20-year frame guarantee, and selected models are available for delivery within seven days. Full-time and part-time home advisor positions are currently available, with details listed on the company’s careers w
+
+--- Article 54 ---
+URL: https://www.disneyfanatic.com/disney-peter-pan-ride-closure-cj1/
+Title: Disney Confirms Peter Pan Ride Will Shut Down Just 33 Months After Opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-25 03:32:46
+
+Credit: Tokyo Disney Resort Disney is preparing to close one of its most popular recent attractions: Peter Pan's Never Land Adventure. Peter Pan has been part of Disney's theme parks since 1955, when Peter Pan's Flight debuted as an opening-day attraction at Disneyland . Based on the 1953 animated film, the ride sends guests flying over London and Never Land aboard suspended pirate ships. Credit: Disney The attraction subsequently opened at Magic Kingdom, Tokyo Disneyland, Disneyland Paris, and Shanghai Disneyland. While each version has its differences, all five follow the same basic format, taking guests through scenes inspired by the original film. Disney eventually decided to expand Peter Pan's presence beyond the classic Fantasyland dark ride. Its latest interpretation arrived in 2024 as part of a massive expansion featuring several of the company's most successful animated properties. Now, Disney has confirmed that the newer attraction will temporarily shut down in March 2027, just 33 months after its grand opening. Disney Sets March 2027 Closure for Peter Pan Attraction Peter Pan's Never Land Adventure opened at Tokyo DisneySea on June 6, 2024, as part of Fantasy Springs , the park's eighth themed port. The expansion cost approximately 320 billion yen, equivalent to roughly $2.1 billion at the time, and introduced three themed areas inspired by Frozen (2013), Tangled (2010), and Peter Pan (1953). Credit: Tokyo Disney Resort Alongside Peter Pan's Never Land Adventure, the expansion added Anna and Elsa's Frozen Journey, Rapunzel's Lantern Festival, and Fairy Tinker Bell's Busy Buggies. It also introduced the Tokyo DisneySea Fantasy Springs Hotel, which offers 475 guest rooms. Unlike Peter Pan's Flight, the newer attraction uses a motion-based boat ride system, 3D visuals, and physical sets to recreate Never Land. Guests board 12-person boats and join Peter Pan, Tinker Bell, and the Lost Kids on a mission to rescue John Darling from Captain Hook. The experience 
+
+--- Article 55 ---
+URL: https://sethlui.com/ugg-first-southeast-asia-store-opening-suria-klcc-malaysia-oct-2026/
+Title: UGG’s 1st Southeast Asia store has landed in Malaysia, right at Suria KLCC
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-25 02:52:37
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://sethlui.com/ugg-first-southeast-asia-store-opening-suria-klcc-malaysia-oct-2026/]
+
+--- Article 56 ---
+URL: https://en.sedaily.com/finance/2026/10/25/korean-fashion-platforms-race-to-open-offline-stores
+Title: Korean Fashion Platforms Race to Open Offline Stores
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-25 01:00:05
+
+| Summary | Save A A A Musinsa's Bag & Cap Club at Lotte Mall Belly Town Cheongnyangni. Photo courtesy of Musinsa Fashion platforms that grew mainly online are accelerating their push into brick-and-mortar retail. They are creating spaces where shoppers can try out brands that gained popularity online, while also adding specialty stores focused on specific product categories such as bags, caps and stationery. The moves extend beyond short-term pop-ups into permanent stores. Musinsa opened the second location of Musinsa Bag & Cap Club, a bag and cap specialty select shop, at Lotte Mall Vellitown Cheongnyangni in Seoul's Dongdaemun District this month, according to the fashion industry on the 25th. The opening comes about six months after the first store debuted at Seoul Forest in April. It is the first time Bag & Cap Club has entered a large mixed-use shopping mall. The store spans about 125 square meters, or 38 pyeong, and carries 94 brands including New Era and JanSport. It is laid out so customers can try on bags and caps that have drawn interest online, and it also offers collaboration items sold exclusively at Musinsa, such as the New Era running cap and the JanSport x LG Twins bag. Musinsa plans to broaden its customer base beyond shoppers in their 20s and 30s to include families. 29CM, Musinsa's fashion and lifestyle platform, is also expanding its store network. After opening the second 29 Home location in Seoul's Seongsu-dong in January, it opened another store at Times Square in Yeongdeungpo in August. The strategy is to widen offline touchpoints so customers can examine and buy home and lifestyle products previously sold online. The second 29 Home store in Seongsu-dong has performed well as a stationery-focused outlet. From Sept. 18 through the 11th of this month, transaction value in the stationery category rose more than tenfold from the preceding comparable period. More than 60% of the merchandise is stationery, and customers can test items such as pens
+
+--- Article 57 ---
+URL: https://www.vietnam.vn/en/chi-trong-2-ngay-california-thong-bao-tam-ngung-gan-10-chi-nhanh
+Title: In just two days, California announced the temporary closure of nearly 10 branches.
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-25 00:53:38
+
+In just two days, California announced the temporary closure of nearly 10 branches. In just the last two days, California Fitness & Yoga has announced the temporary closure of nearly 10 branches, causing concern among its members. ZNews • 24/10/2026 Follow Vietnam.vn on G o o g l e Add Vietnam.vn on G o o g l e 0 On the evening of October 24th, Ms. PM, a long-time member who had spent hundreds of millions of VND on gym memberships at the Cali Tower branch (Cau Kieu Ward, Ho Chi Minh City), was shocked to find the gym closed and deserted. After asking around, she learned that the gym had temporarily ceased operations that same day. Going to another branch is also impossible because it's very far from Ms. M's house, and she also didn't have time to register for other yoga classes. Another female member also stated that she was unaware of the branch closing because she had come to train as usual yesterday. "I don't know anything about it. I checked my phone messages and didn't see any notification from the gym about closing this branch," she added. Even after paying hundreds of millions of dong upfront, members are still struggling to find a gym. Also on the evening of October 24th, California Fitness & Yoga unexpectedly announced the temporary closure of 5 gyms in Ho Chi Minh City and Hanoi . These include 4 locations in Ho Chi Minh City (Landmark 81, Cali Tower, Gigamall, Thao Dien Pearl) and 1 location in Hanoi (Vincom Star City). The closure period is announced to last until October 31st. Later that evening, the system further announced the temporary closure of two more clubs, Cali 3/2 and Cali Thu Duc, from October 25th to October 31st due to operational issues. The Cali Tower branch (Cau Kieu ward) was closed and locked on the evening of October 24th. Photo: Anh Nguyen. This latest temporary closure follows a series of California branches in Ho Chi Minh City, Hanoi, Da Nang , and Dong Nai that announced closures starting in mid-October. The Centuryon Saigon Centr
+
+--- Article 58 ---
+URL: https://patch.com/new-jersey/hoboken/owner-closed-maroons-ice-cream-restaurant-hoboken-reveals-its-future
+Title: Owner Of Closed Maroons Ice Cream Restaurant In Hoboken Reveals Its Future
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-24 23:32:38
+
+Restaurants & Bars Owner Of Closed Ice Cream Spot In Hoboken Reveals Its Future Will Maroons ice cream return in Hoboken, and what about the Ridgewood location? An owner told all. Caren Lissner , Patch Staff Posted Sat, Oct  24, 2026 at 7:32 pm ET | Updated Sun, Oct  25, 2026 at 11:48 am ET (Patch) HOBOKEN, NJ — Another Hoboken ice cream shop has closed, its owner confirmed, although their Ridgewood location will remain open. Maroons ice cream on upper Washington Street shut down earlier this month. The shop opened at 1122 Washington St. in March 2024, specializing in large sundaes and shakes with ample toppings. Find out what's happening in Hoboken for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . But the spot cleared out this month. M. Patel, a co-owner, told Patch on Friday that the lease was to end in December and the landlord indicated that he had another idea for the spot. Find out what's happening in Hoboken for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . Rather than wait around until December, Patel said, he and his partner decided to close because the colder season is coming. But he said they hope to open elsewhere in Hoboken. And he stressed that their location in Ridgewood, which also opened in 2024, will continue. "It has a very long lease and it's going to be open forever," he said. "We're not planning to close." He said they already extended their lease in Ridgewood. Other Ice Cream Spots Closing, And Coming Soon The shop is the second ice cream spot on Washington Street to close this year. Il Laboratorio del Gelato at 500 Washington St. closed with little fanfare on July 7, after being open since 2022. The owner, Jon Snyder, said too many other ice cream shops were opening nearby. Snyder has other locations to nurture. ( Read more about that here .) Several new ice cream spots have opened in Hoboken recently, including 
+
+--- Article 59 ---
+URL: https://abc11.com/post/fertile-ground-food-cooperative-breaks-community-owned-grocery-store-southeast-raleigh/19976004/
+Title: Fertile Ground Food Cooperative breaks ground on community-owned grocery store in Southeast Raleigh
+Status hint: Opening | Industry: Grocery
+Published: 2026-10-24 23:13:47
+
+Fertile Ground Food Cooperative breaks ground on community-owned grocery store in Southeast Raleigh - ABC11 Raleigh-Durham SOCIETY Fertile Ground Food Cooperative breaks ground on community-owned grocery store in Southeast Raleigh By Bianca Holman Saturday, October 24, 2026 11:09PM A community-owned grocery store and gathering space is one step closer to opening in Southeast Raleigh. RALEIGH, N.C. (WTVD) -- A new community-owned grocery store and garden is taking root in Southeast Raleigh. The Fertile Ground Food Cooperative broke ground on Garner Road for a space designed to serve as both a grocery store and community gathering place. The cooperative says it is working toward opening the store with support from its member-owners. The cooperative began in 2011 as an idea among a group of neighbors who recognized the need for greater access to healthier food options in the community. Architect Andre Johnson helped bring the group's vision for the property to life. "We are just really fortunate to be a part of it and to help them take their vision into reality in the groundbreaking," Johnson said. The plans extend beyond providing a place to buy groceries. Johnson said the building is designed to serve as a community center and hub for activity. "The building is designed to both be a grocery store, but also a community center," Johnson said. "It's almost like a center hub of activity. So, what this means is being able to demonstrate to the next generation what the possibilities are." Children in the community have also had a role in imagining what the cooperative could become. Johnson said organizers held a community-based challenge that invited students in kindergarten through 12th grade to dream up ideas for a community grocery store cooperative. NC State parts ways with defensive coordinator DJ Elliot, football general manager 2 hours ago Man killed on I-540 after stopping to help driver in crashed car A Dry End to October 2 hours ago "It was amazing to see what th
+
+--- Article 60 ---
+URL: https://hoodline.com/2026/10/valencia-s-solita-tacos-vanishes-overnight-gutted-by-the-next-morning/
+Title: Solita Tacos Closes Valencia Town Center Location Suddenly
 Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 11:31:44
+Published: 2026-10-24 23:00:35
 
-Business & Tech Popular CT Eatery, 'Community Hub' To Close Sooner Than Expected The establishment will close after this weekend due to "unforeseen staff shortages." Chris Rhatigan , Patch Staff Posted Wed, Oct  14, 2026 at 7:31 am ET | Updated Wed, Oct  14, 2026 at 7:33 am ET NORFOLK, CT — Berkshire Country Store is closing Sunday after a decade in business. The restaurant and store was originally supposed to close at the end of the month but has bumped up the closing date due to "unforeseen staff shortages," according to a social media post from the store. The store is holding a closing sale, offering 40% off on apparel and 25% off grocery items. The last day will be Sunday, Oct. 18, with the store closing at 2 p.m. Find out what's happening in Across Connecticut for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . "For nearly a decade in Norfolk and two years before that in Cornwall, this store has been much more than a business to us," the owners wrote on Facebook. "We’ve watched families grow, made friendships, shared plenty of laughs, and had the privilege of being a small part of everyday life in the community. "We can’t thank our customers, employees, friends, and neighbors enough for all the support you’ve given us over the years. We truly could not have done it without you." Find out what's happening in Across Connecticut for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . The post had garnered over 300 reactions and 100 comments as of Wednesday morning. "So sad to hear this news," one commenter wrote. "Your food is delicious and the store is so quaint, homie, and friendly." Berkshire Country Store serves breakfast, lunch and dinner and "also acts as a community hub where you can relax with friends..." according to its website. The store serves coffee, sandwiches, pizza, ice cream and more. Get more local news delivered straight to
+Source: Sony 1992 / Wikimedia Commons Diners sitting down for lunch at Solita Tacos in Valencia Town Center on Thursday got an unexpected ending to their meal: the restaurant abruptly closed its doors mid-service, leaving both customers and employees caught off guard. By Friday morning, the space had been stripped bare. Employees and customers were surprised Thursday when Solita Tacos abruptly closed during lunch service, according to KHTS Radio . Passersby reported seeing a paper sign taped to the door that read “sorry, we’re closed” in red marker, a blunt and informal farewell for a restaurant that had served the Valencia Town Center for more than a decade. The cleanup moved fast. A U-Haul truck and dumpster were seen outside the restaurant Thursday as a team of nearly a dozen people worked to clear out the space, the station reported. By Friday morning, the restaurant had been gutted entirely, leaving little trace of the business that once stood there. A Permanent Closure, With Guests Redirected to Northridge A poster taped to the front window confirmed what the hasty teardown suggested: the closure was permanent. The notice invited guests to visit the chain's sister location, El Torito, in Northridge instead. Solita Tacos had opened its Valencia location in February 2015, building a following around what the brand describes elsewhere as casual dining, reimagined Mexican favorites and a wide range of margaritas. KHTS reached out to Solita Tacos for comment about the sudden closure but had not received a response as of publication. No explanation for the shutdown — financial, lease-related, or otherwise — has been made public. Part of a Larger Restaurant Group's Portfolio Solita Tacos & Margaritas has been under the ownership of Xperience Restaurant Group since December 2019, when the company, also the parent of El Torito and Chevys Fresh Mex, acquired both Sol Cocina and Solita Tacos & Margaritas, according to the Orange County Register . That acquisition brought
 
---- Article 402 ---
-URL: https://www.mensjournal.com/news/ski-season-2026-27-opening-dates-us-resorts-race-to-open
-Title: Lift Tickets Are Already on Sale for Oct. 24 as US Resorts Race to Open Ski Season
+--- Article 61 ---
+URL: https://www.ctvnews.ca/winnipeg/article/winnipeg-furniture-store-reopens-months-after-fire-caused-shutdown/
+Title: Winnipeg furniture store reopens months after fire caused shutdown
+Status hint: Opening | Industry: Furniture / Mattress
+Published: 2026-10-24 22:46:49
+
+
+
+--- Article 62 ---
+URL: https://totallythebomb.com/is-crumbl-closing-stores/
+Title: Is This the End of Crumbl? Here’s What the Store Closures Actually Mean
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-24 22:17:07
+
+Delicious Food Is This the End of Crumbl? Here’s What the Store Closures Actually Mean By Jamie Slack October 24, 2026 This post may contain affiliate links. For more information, please read our affiliate disclosure policy . Company imagery: Crumbl’s Winnipeg storefront (left) and a Value Menu promotional still (right). Neither image depicts a closure. Crumbl really is closing stores, and some of those closures are permanent. But the pink boxes are not disappearing everywhere. As of October 24, 2026, the reporting reviewed for this story does not establish that Crumbl is shutting down the entire chain. Its official website is still offering a weekly dessert lineup, and its press page describes a business with more than 1,000 stores. There is plenty of reason to pay attention to the closures. There is also a big difference between a struggling franchise location and the end of a brand. How many Crumbl stores have closed? KUTV’s October 8 coverage of Restaurant Business’s October 1 investigation reported at least 57 closures in 2026 alongside 20 openings. KUTV also reported a net decline of 37 locations, comparing a year-end 2025 franchise disclosure document total of 1,101 with Restaurant Business’s tally of 1,064 stores on Crumbl’s website. Those are figures from that reporting period, not a fresh October 24 count. They also describe stores that had already closed, rather than a new announcement that 57 more are about to shut their doors. Another number making the rounds is at least 55 franchises listed for sale , also reported by Restaurant Business and covered by KUTV . A sale listing does not confirm that a store will close. Adding those listings to the closure total would give readers the wrong picture. Where have Crumbl stores closed? Here are two closures documented by local reporters: Montgomery, Alabama: The Montgomery Advertiser reported October 16 that the Zelda Road bakery had posted a handwritten permanent-closure notice earlier that week. Its report di
+
+--- Article 63 ---
+URL: https://www.hometownregister.com/rob_daily_news/local_news/mullen-s-breaks-ground-for-expansion/article_ec87821c-5b0d-5b7d-9cf1-dce7be512801.html
+Title: Mullen’s breaks ground for expansion
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 21:27:24
+
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.hometownregister.com/rob_daily_news/local_news/mullen-s-breaks-ground-for-expansion/article_ec87821c-5b0d-5b7d-9cf1-dce7be512801.html]
+
+--- Article 64 ---
+URL: https://theburn.com/2026/10/24/loudn-roasted-coffee-expanding-into-herndon/
+Title: Loud’n Roasted Coffee expanding into Herndon
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 20:46:35
+
+A local coffee roaster and coffee shop operator is planning a new location – this time in Herndon. We’re talking about Loud’n Roasted Coffee Roasters . If all goes smoothly, Loud’n Roasted will move into the Woodland Park Crossing shopping center. It appears the coffee shop will take over the roughly 1,500 s.f. space that previously the home to Meanwhile Coffee. As reported here on The Burn, Meanwhile Coffee closed back in August. Loud’n Roasted currently has a location in Ashburn and another one in Chantilly. The shop offers all the usual coffee beverages one expects at a coffee shop. They also carry their various coffees packaged for you to take with you and brew at home. As the plans for Herndon are still preliminary, no word yet when that store might open. (Image at top: Loud’n Roasted Coffee Roasters) Tags: herndon , loud'n roasted , woodland park crossing
+
+--- Article 65 ---
+URL: https://www.disneydining.com/universal-animal-actors-closure-emd1/
+Title: 1990 Universal Attraction Set to Close Forever in 10 Days
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-24 20:41:40
+
+Universal Orlando Resort is permanently closing Animal Actors on Location! at Universal Studios Florida on November 3, 2026. For guests hoping to see the live animal show again, that leaves a short window to visit before another connection to the park’s earliest years disappears. The Animal Actors closure is confirmed on Universal’s official attraction page , which says the show will make way for a new experience. Universal has identified a future use for the space, but that notice does not name the replacement or provide its opening date. Credit: Universal Animal Actors Closure: What Universal Has Confirmed This is a permanent retirement, rather than a scheduled refurbishment. Universal’s operating calendar separately lists November 3 as the permanent closure date, giving visitors a clear boundary when planning upcoming trips. Inside the Magic’s previous closure coverage reports final performances on November 2. Guests should distinguish that reported final operating day from November 3, when Universal lists the attraction as permanently closed, and check the current entertainment schedule before traveling specifically for a farewell performance. The announcement is already public. What makes it urgent now is the approaching deadline, rather than a newly revealed decision or a newly announced replacement. Credit: Universal Another Link to Universal’s Early Identity Disappears Inside the Magic’s reporting on the show’s history traces Animal Actors to Universal Studios Florida’s 1990 opening. That makes its departure relevant beyond the loss of one entertainment option: it removes a surviving connection to the park’s original emphasis on showing audiences how entertainment gets made. The current production puts animals and their trainers in front of visitors, presenting skills associated with film and television performances. That offers a different relationship with movie magic from simply entering a fictional setting or following a familiar character through a ride
+
+--- Article 66 ---
+URL: https://simpleflying.com/united-airlines-planning-open-new-crew-bases-dallas-fort-worth-sacramento/
+Title: Reports: United Airlines Planning To Open New Crew Bases In Dallas/Fort Worth & Sacramento
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 20:27:19
+
+Add Simple Flying on Google Add as Preferred Source Follow on Google Discover By Paul Thompson Published Oct 24, 2026, 4:27 PM EDT Paul Thompson is an aviation & travel journalist, photographer, & airplane geek with over 25 years of experience at a large domestic US carrier. He is based in Denver, Colorado. Sign in to your Simple Flying account United Airlines is reportedly opening two new crew bases, and the locations may come as a surprise to a lot of people. The chosen locations of Dallas/Fort Worth International Airport (DFW) and Sacramento International Airport (SMF) will bring the airline's total number of bases to 21. The two new bases will be smaller than their large hubs, which operate hundreds of daily flights. Add Simple Flying on Google Add as Preferred Source Follow on Google Discover The new flight attendant bases will supplement its network, which includes 19 other hub and satellite bases. United says DFW will open first, followed by SMF. United plans to open both bases early next year, according to a video announcement on Instagram. Is United Moving Into American's Backyard? Credit: Shutterstock The DFW announcement has raised some eyebrows because the airport is home to American Airlines . However, United only operates 31 daily departures at DFW. United operates from six gates at DFW in Terminal E — E4-E9. Each gate can support 10-12 daily flights, so United has room to grow if it chooses. These DFW flights currently serve United's hub cities in Chicago, Denver, Houston, Los Angeles, Newark, San Francisco, and Washington, DC. From SMF, United operates only 19-20 daily departures, also to its hub cities. United has hundreds of flight attendants based at San Francisco International Airport SFO who may not live near the airport. This would appeal to people living in the Sacramento area, which has a lower cost of living than San Francisco. It's about a 2-hour drive from Sacramento to SFO (103 miles), but United flies the route in about 40 minutes. Conve
+
+--- Article 67 ---
+URL: https://www.seminci.com/en/2026/news/seminci-raises-a-toast-to-jose-luis-cienfuegos-at-an-opening-gala-featuring-music-memories-and-art-house-cinema/
+Title: SEMINCI Raises a Toast to José Luis Cienfuegos at an Opening Gala Featuring Music, Memories, and Art House Cinema
+Status hint: Closing | Industry: Movie Theatres
+Published: 2026-10-24 19:42:28
+
+Home 2026 News SEMINCI Raises a Toast to José Luis Cienfuegos at an Opening Gala Featuring Music, Memories, and Art House Cinema
+
+--- Article 68 ---
+URL: https://www.2news.com/news/local/outback-steakhouse-closing-reno-location/article_be354ba3-4316-4acb-96d6-51a32d4a224c.html
+Title: Outback Steakhouse closing Reno location
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-24 18:30:00
+
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.2news.com/news/local/outback-steakhouse-closing-reno-location/article_be354ba3-4316-4acb-96d6-51a32d4a224c.html]
+
+--- Article 69 ---
+URL: https://www.disneyfanatic.com/universal-animal-actors-closure-emd1/
+Title: Universal 1990 Attraction Sets Closure Date, Entire Location to Be Demolished
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-24 18:17:02
+
+Credit: Universal Universal Orlando Resort is permanently closing Animal Actors On Location! at Universal Studios Florida beginning November 3, 2026, ending another attraction with roots in the park’s opening year. For guests hoping to watch the animals perform once more, November 3 is already too late. Universal’s official attraction page confirms the Animal Actors closure and says the show will make way for a new experience. The immediate consequence is straightforward: families visiting after the shutdown lose this live entertainment option, while returning visitors have a shrinking window to revisit a connection to Universal’s filmmaking past. Credit: Universal Animal Actors on Location! Closure Sets a Firm Deadline Universal’s operating calendar also lists November 3 as the permanent closure date. That wording matters when planning a farewell visit: it identifies when the attraction becomes unavailable, rather than promising performances that day. Inside the Magic’s previous closure coverage identifies November 2 as the final performance date. Guests should still consult Universal’s current entertainment schedule before traveling, because a final operating date doesn’t establish the time of the last show or guarantee a particular performance. This is a permanent retirement, rather than a refurbishment with an announced return. Universal has disclosed a future use for the space in broad terms, but its attraction page does not identify a replacement, opening date, or construction timetable. Credit: Universal Another Link to Opening-Day Universal Disappears Animal Actors’ history gives the closure significance beyond a changing daily schedule. Inside the Magic’s historical coverage traces the attraction to June 7, 1990, when it debuted as Animal Actors Stage alongside Universal Studios Florida. The attraction later operated as Animal Planet Live before adopting its current name. That history supports describing an opening-day lineage; it doesn’t mean today’s produ
+
+--- Article 70 ---
+URL: https://www.yourobserver.com/news/2026/oct/24/ribbon-cutting-first-quad-parcel-celery-fields/
+Title: Ribbon-cutting marks the first quad parcel opening at Celery Fields
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 18:10:00
+
+Loading
+
+--- Article 71 ---
+URL: https://mocoshow.com/2026/10/24/popular-new-virginia-restaurant-to-make-expansion-into-maryland/
+Title: Popular New Virginia Restaurant to Make Expansion Into Maryland
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-24 18:00:03
+
+Eat More Taco is expanding into Maryland, with a new restaurant planned for College Park. The 100% halal taco and Mexican street food concept announced that it has signed a lease at Union on Knox in College Park. An opening date has not yet been announced, with the restaurant currently listed as “coming soon.” Eat More Taco has gained popularity since opening its first location earlier this year in Virginia at 708 N. Glebe Rd in Arlington’s Ballston neighborhood, taking over the former Grill Kabob space. The restaurant specializes in Mexican street food, with a menu that includes tacos, burritos, birria pizza, quesadillas and bowls. Options include carne asada, chicken and other marinated meats, along with handcrafted tortillas, salsas and house-made sauces. Eat More Taco has also attracted attention for its oversized 20-inch taco. According to the restaurant, “Eat More TACO is all about bold, fresh street tacos that is 100% Halal,” with its menu inspired by authentic Mexican street food. The College Park restaurant will be Eat More Taco’s first location in Maryland. Additional details, including an anticipated opening date, will be shared when available. Author MCS Staff
+
+--- Article 72 ---
+URL: https://midvalleytimes.com/article/business/2026/10/24/visalia-golf-venue-tees-up-fresno-expansion/
+Title: Visalia golf venue tees up Fresno expansion
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 17:59:47
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://midvalleytimes.com/article/business/2026/10/24/visalia-golf-venue-tees-up-fresno-expansion/]
+
+--- Article 73 ---
+URL: https://www.castlerocknewspress.net/local-events/?_evDiscoveryPath=/event/3887822-castle-rock-dunkin-celebrates-grand-opening-with-free-coffee-for-100-days-giveaway
+Title: Castle Rock Dunkin' Celebrates Grand Opening with Free Coffee for 100 Days Giveaway
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 17:41:19
+
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.castlerocknewspress.net/local-events/?_evDiscoveryPath=/event/3887822-castle-rock-dunkin-celebrates-grand-opening-with-free-coffee-for-100-days-giveaway]
+
+--- Article 74 ---
+URL: https://progameguides.com/roblox/eat-everything-in-a-grocery-store-codes/
+Title: Eat Everything In A Grocery Store Codes (October 2026)
+Status hint: Opening | Industry: Grocery
+Published: 2026-10-24 17:35:40
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://progameguides.com/roblox/eat-everything-in-a-grocery-store-codes/]
+
+--- Article 75 ---
+URL: https://www.wlky.com/article/empanadas-alchemy-nulu-location-louisville/74235844
+Title: Empanadas Alchemy ready to serve up more customers with new location in NuLu
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 16:52:00
+
+Empanadas Alchemy ready to serve up more customers with new location in NuLu Advertisement Updated: 12:52 PM EDT Oct 24, 2026 Editorial Standards ⓘ Renee Maloney Empanadas Alchemy ready to serve up more customers with new location in NuLu Updated: 12:52 PM EDT Oct 24, 2026 Editorial Standards ⓘ Renee Maloney LOUISVILLE, Ky. — A popular spot for empanadas in the metro is ready to serve even more customers. Empanadas Alchemy is now open on East Liberty Street in NuLu. Advertisement The owners first started selling their creations at Logan Street Market but had to stop during the COVID-19 pandemic. Empanada food truck opens full-service restaurant in Norton Commons They took their empanadas on the road, selling out of a food truck before opening a restaurant in Norton Commons. They say they're excited to be a part of the growth in the city. Make WLKY a preferred source on Google Add Preferred Source Share Infinite Scroll Enabled Top Picks VIDEO | 'Not all cat rescues happen in trees': Kitten rescued from busy freeway Musk accuses Ukraine of violating Starlink's terms of service following dispute over coverage 'Big, furry pillow lounging next to that tree': Man snaps selfie with black bear VIDEO: Deer crashes through window after entering apartment unit
+
+--- Article 76 ---
+URL: https://www.cachevalleydaily.com/news/ribbon-cutting-marks-opening-of-safe-passage-under-main-street-for-cyclists-pedestrians/article_5a52a24a-ea1a-4592-b8b4-9d902e3f36d0.html
+Title: Ribbon-cutting marks opening of safe passage under Main Street for cyclists, pedestrians
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 16:45:00
+
+Facebook Twitter WhatsApp SMS Email Municipal Council member Ernesto Lopez formally inaugurated the opening the long-awaited underpass trail spanning Main Street in Logan with a ribbon-cutting on Saturday, Oct. 24. Looking on (from left) are Russ Akina, Julie Hollist Terrill, Joann Bennett and Jamie Andrus (Cache Valley Daily photo by Charlie Schill). Facebook Twitter WhatsApp SMS Email Print Copy article link Save Facebook Twitter WhatsApp SMS Email Print Copy article link Save LOGAN – Representing the leadership and staff of Logan City, Municipal Council member Ernesto Lopez formally inaugurated the opening the long-awaited underpass trail spanning Main Street in Logan on Saturday, Oct. 24. In a brief ceremony orchestrated by the Cache Chamber of Commerce prior to the ribbon cutting, Lopez thanked community partners, state officials and the construction firms who helped make the new safe pedestrian crossing of Logan’s busiest street possible. In addition to Lopez, other notables present at the early morning event included Jamie Andrus, present of the Cache Chamber; Russ Akina, director of Logan Parks & Recreation; Paul Lindhardt, Logan’s director of Public Works; Julie Hollist Terrill of the Cache Valley Visitors’ Bureau; and Joann Bennett, representing the Cache County Council. Following the ribbon cutting, the participants in a Breast Cancer Awareness Five-Kilometer Race and Fun Run jointly sponsored by Logan and the Cache Chamber paraded through the new underpass. The well-lighted tunnel under Main Street now connects more than 17 miles of existing east and west trail segments with new trail sections at the Riverwalk and Gateway developments near the entrance to Logan. Construction of the more than $4 million project began in September of 2025 as a cooperative effort by Logan City officials and the Utah Department of Transportation to create a safe way for cyclists and pedestrians to cross Main Street. The five-kilometer race and fund run was also planned to ce
+
+--- Article 77 ---
+URL: https://ng.headtopics.com/news/shoprite-set-to-open-neighbourhood-stores-after-shutdown-89158814
+Title: Shoprite set to open neighbourhood stores after shutdown
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 16:39:00
+
+Advertisement Nigeria News Shoprite set to open neighbourhood stores after shutdown MobilePunch #8 in Nigeria 24/10/2026 17:39:00 3 min read Nigeria Latest News, Nigeria Headlines Advertisement Shoprite Nigeria plans to open standalone neighbourhood stores as part of its recovery plan after financial difficulties forced a temporary shutdown of ope Share on WhatsApp Shoprite Nigeria is planning to open standalone neighbourhood stores as part of efforts to revive its operations, following financial difficulties that forced the retailer to restructure its business. Adekunle Adebiyi, the Executive Director, Investments at MBO Capital Management Limited, an investor in Shoprite Nigeria, disclosed this during an interview on Nairametrics’ Drinks and Mics on Friday, where he discussed the supermarket chain’s financial challenges and recovery plans. Adebiyi said three Shoprite outlets had reopened after the company temporarily shut its operations to negotiate with suppliers and address outstanding financial obligations. Also read Nigeria, UK deepen collaboration on AI standards, digital economy “We took a very, very drastic decision to just shut everything down whilst we negotiated with suppliers. Now three stores are back open,” he said. He explained that the company planned to expand through smaller standalone outlets in residential neighbourhoods rather than relying primarily on large shopping malls. “We’re going to be opening standalone neighbourhood stores, which was always the plan,” Adebiyi said. The approach is expected to allow the retailer to concentrate its resources on supermarket operations rather than committing substantial capital to property development. Adebiyi said supermarkets typically operate from leased premises, with investments focused on equipment such as shelves and refrigeration systems. Advertisement However, he noted that this business model could create financing difficulties in Nigeria, where banks often require tangible assets as collateral f
+
+--- Article 78 ---
+URL: https://communityimpact.com/central-austin/dining/bar-peached-to-reopen-next-year-in-a-new-location/
+Title: Bar Peached to reopen next year in a new location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 16:28:03
+
+Dining Central Austin Bar Peached to reopen next year in a new location Explore Central Austin on the Impact Map stories, offers and more Katlynn Fox 1 min read Published October 24, 2026 at 6:28 a.m. CT The team behind Bar Peached also owns The Peached Tortilla, which serves Asian Fusion in Cedar Park and north Austin. After the fire, the restaurant's team encouraged diners to check out The Peached Tortilla while Bar Peached remained closed. ( Courtesy Bar Peached ) Bar Peached is planning to reopen in a new location after a fire damaged the restaurant’s structure this summer. The restaurant will relaunch just steps away from its original location. How we got here Bar Peached caught fire at its original location at 1315 W. Sixth St., Austin on May 31. Malfunctioning kitchen equipment caused the fire, destroying the building’s roof. Bar Peached has been closed ever since. What we know Bar Peached will soon take over the space formerly occupied by Nightcap, another local restaurant, also located on W. Sixth Street. Nightcap closed on Oct. 22, according to a news release. The Bar Peached team will begin renovating the space next month. “I don’t see this as Nightcap closing, but more so as one chapter ending to make room for the next,” Christin Rowan, owner of Nightcap, shared in the news release. What’s new Upon the relaunch, Bar Peached will evolve into a new concept: a vinyl bar serving craft cocktails and Asian-American tapas. The restaurant previously offered a selection of tacos, Asian-inspired comfort food and cocktail options. “The fire was devastating for us, but it also gave us the unique opportunity to rethink what Bar Peached could be,” Eric Silverstein, founder of Bar Peached, said in a statement. “We’re taking the heart of what made Bar Peached special and giving it a new home, a new energy and a new direction.” Opening spring 2027 1401 W. Sixth St., Austin www.barpeached.com
+
+--- Article 79 ---
+URL: https://www.aol.com/articles/bravocon-2027-everything-know-dates-153504000.html
+Title: BravoCon 2027: Everything to Know (Dates, Location, Hotel Reservations & More)
 Status hint: Opening | Industry: Hospitality
-Published: 2026-10-14 11:30:10
+Published: 2026-10-24 16:00:13
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.mensjournal.com/news/ski-season-2026-27-opening-dates-us-resorts-race-to-open]
+Allison Crist Updated Sat, October 24, 2026 at 4:00 PM UTC 0 BravoCon 2027 in Las Vegas is officially a go, as details of the highly-anticipated event were announced by Andy Cohen at Bravo Fan Fest 2026 on Oct. 24. In what will be the fifth BravoCon experience, fans will enjoy unparalleled access to their favorite Bravolebrities through must-see panels, immersive activations, exclusive meet-and-greets, photo opportunities, exciting surprises, and can't-miss announcements. Get more details on BravoCon 2027 below. Photo: 
+            Bravo When is BravoCon 2027? BravoCon 2027 will take place on Friday, October 22 – Sunday, October 24, 2027. Where is BravoCon 2027? BravoCon will once again take place at Caesars Forum in Las Vegas, Nevada. RELATED: How to Watch and Stream Bravo Fan Fest 2026 How do I get tickets for BravoCon 2027? Ticket information and additional details will be provided at a later date. Advertisement Where can I stay during BravoCon 2027? Stay where all the action is during BravoCon weekend. Hotel reservations are now open at participating Caesars Entertainment properties, subject to availability. Fans can explore available hotel options via bravocon.com . Who will be attending BravoCon 2027? It has not yet been announced which Bravolebs will be attending BravoCon 2027. Stay tuned for details. How can I learn more about BravoCon 2027? Be the first to get the latest BravoCon news by texting ‘BravoCon2027’ to 917-809-2240. Message and data rates may apply. Bravo Fan Fest 2026: What to Know Bravo Fan Fest is back! The one-day event takes place on Saturday, October 24 in Charleston, South Carolina and will stream exclusively on Peacock . Watch What Happens Live with Andy Cohen will also be taping shows leading up to the event, on Thursday, Oct. 22, and Friday, Oct. 23. Stay up to date about all things Bravo Fan Fest 2026 here . As you await BravoCon 2027, check out everything going down at Bravo Fan Fest 2026 .
 
---- Article 403 ---
-URL: https://www.crainsdetroit.com/retail/cdb-sprouts-farmers-market-20261014/
-Title: Sprouts Farmers Market expanding into Michigan with Macomb County store
+--- Article 80 ---
+URL: https://www.hampshirechronicle.co.uk/news/26667373.sushi-fans-queue-rain-iro-sushi-salisbury-opening/
+Title: Sushi fans queue in the rain for Salisbury's new IRO Sushi grand opening
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 11:23:00
+Published: 2026-10-24 15:23:07
 
-Retail Sprouts Farmers Market expanding into Michigan with Macomb County store Share Expand Arizona-based Sprouts Farmers Market plans to open a store in St. Clair Shores in 2029. (Sprouts Farmers Market) By Jay Davis October 14, 2026  07:23 AM EDT Featured Stories Lists & Rankings Fifth Third-Comerica deal reshapes ranking of Michigan’s largest banks Consolidation continues to shift the list of the largest players in Michigan's banking industry. AF By Anna Fifelski 40 Under 40 Meet Crain’s 40 Under 40 class of 2026 Lists & Rankings These are Detroit’s 50 fastest-growing companies for 2026 DW By Dustin Walsh Lists & Rankings This company keeps its crown as metro Detroit’s largest commercial property manager KP By Kirk Pinho
-
---- Article 404 ---
-URL: https://www.newsday.com/business/fortunoff-backyard-store-sam-ash-music-stores-carle-place-westbury-gixnyhtq
-Title: Fortunoff Backyard Store moving from Westbury to former Sam Ash Music in Carle Place
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 11:22:56
-
-Fortunoff Backyard Store is moving from Westbury, pictured, to a former Sam Ash Music location in Carle Place. Credit: Newsday/Howard Schnapp By Tory N. Parrish tory.parrish@newsday.com ToryParrish1 Updated October 14, 2026 7:22 am Share Fortunoff Backyard Store is relocating a third Long Island store to a smaller site that its president said will offer more visibility to customers. This latest relocation will be the outdoor-furniture retailer’s second takeover of a former Sam Ash Music equipment store. Fortunoff will move its store in Westbury, at 1500 Old Country Rd., less than half a mile away to a former Sam Ash in Carle Place, at 385 Old Country Rd., the outdoor-furniture retailer said in a statement Tuesday. Its 26,000-square-foot store in Carle Place will open early next year. Hicksville-based Sam Ash Music Corp. closed its remaining 25 stores, including the Carle Place location, in July 2024, after filing for Chapter 11 bankruptcy protection about two months earlier. It closed its Huntington Station store, a space now occupied by a Fortunoff Backyard Store, in March 2024. Fortunoff’s 36,000-square-foot Westbury store opened in 2010, at what was then known as The Mall at The Source but is now called Samanea New York. The store opened after the grandchildren of the founders of the Fortunoff department store chain reacquired the brand name and licensing, following a shutdown of the chain and bankruptcy filing in 2009. Sign up for the Daily Business newsletter Stay in the know on jobs, retail and all things business across Long Island. By clicking Sign up, you agree to our privacy policy . The outdoor-furniture store was previously inside the flagship Fortunoff department store, which opened in Westbury in 1964. Alan Fortunoff, then president and CEO of Fortunoff stores, was a driving force behind Simon Property Group Inc.'s 1997 development of The Mall at the Source, which was connected to the flagship Fortunoff store. The mall's name was a play on the Fortunof
-
---- Article 405 ---
-URL: https://www.gazetteandherald.co.uk/news/26632308.shelves-empty-tg-jones-shut-marlborough-shop-days/
-Title: Shelves nearly empty at popular town centre store closing down this week
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 11:12:00
-
-Business Leisure Shopping Marlborough Shelves empty as TG Jones to shut Marlborough shop in days Business Leisure Shopping Marlborough By 
-            Jamie Singleton News Reporter Share 0 Comments 4 Skip to next photo 1 / 1 Show caption 1 / 1 Share 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+Business Events Food and drink Leisure Salisbury Sushi fans queue in rain for IRO Sushi Salisbury opening Business Events Food and drink Leisure Salisbury By 
+            Eve Thompson Reporter Share 0 Comments 12 Skip to next photo 1 / 1 Show caption 1 / 1 Share 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
         and has been written by our American colleagues.
-        It does not necessarily reflect the view of The Herald. A national chain is set to shut down its high street shop in a Wiltshire town in a matter of days. Shelves are emptying out at the TG Jones branch on Marlborough High Street, where steep discounts are available up until the branch closes its doors for good on October 17. On Tuesday, October 13, the branch was advertising ‘Days to Go’ in its shopfront, with the countdown now on the home straight. A spokesperson for the company said they understood the news would be “disappointing”, but that it was a necessary step for the business to take. In a statement shared with this paper last month, a spokesperson for TG Jones said: “As we work to secure the long-term future of TG Jones, we have confirmed that our Marlborough store will close. “We know this will be disappointing news for our colleagues, customers, and the local community. “Our focus now is on supporting those affected and continuing to serve customers throughout the closure period. “We would like to thank all of our colleagues in Marlborough for their commitment and the contribution they have made to TG Jones.” As previously reported, TG Jones, owned by Modella, took over the WHSmith franchise, which has its HQ in Swindon, in June 2025. The TG Jones on Marlborough High Street is getting ready to shut down. (Image: NQ) Full access to all of our articles online and on the app, fewer adverts, a better reading experience, exclusive competitions and more - all for less than the price of a cup of coffee. ☕️ Subscribe now! - https://t.co/AQ9
+        It does not necessarily reflect the view of The Herald. Hundreds of sushi fans queued in the rain in anticipation of a new sushi restaurant opening in Salisbury. IRO Sushi opened its doors on New Canal on Saturday, October 24, with a one-off giveaway of 100 free sushi boxes, drawing eager customers who lined up early despite the weather. Sivira Lama, operations manager for IRO Sushi, said: "The insights on social media have been good for this area. There is definitely a demand. "Our first customer was at the door an hour and a half early today and was really excited to have a place in Salisbury selling fresh sushi. I think we have a very good prospect. Anita Pun and Sivira Lama, staff at IRO Suhi, were welcoming customers and giving discount flyers for the new store. (Image: Eve Thompson) "People who like sushi won't be disappointed by our quality and customer service." The Dunne family were first in the queue, arriving at around 10.30am. Originally from California, Natacha Dunne said her family are long-time sushi fans and welcomed the new addition to the city. She said: "We are big sushi fans. Especially being from California, they know what they are doing. "We are excited to have good place in Salisbury, with fresh sushi, we like that there’s eel too." The Dunne family were the first in line for sushi and were queueing outside the shop from 10.30am. (Image: Eve Thompson) Read more ‘Extraordinary privilege’ - Stonehenge celebrant wins national award Fordingbridge Art Club celebrates 80 years with major exhibition Plans to turn fo
 
---- Article 406 ---
-URL: https://www.chron.com/food/article/food-town-houston-texas-closing-22475831.php
-Title: Houston-area grocery store location closing by end of the year
-Status hint: Opening | Industry: Grocery
-Published: 2026-10-14 11:04:04
+--- Article 81 ---
+URL: https://www.aol.co.uk/articles/high-street-fashion-chain-223-151800000.html
+Title: High street fashion chain with 223 stores confirms new location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 15:18:00
 
-JavaScript is disabled in your browser. Please enable JavaScript to proceed.
+Brian Dillon Sat, October 24, 2026 at 3:18 PM UTC 0 Lakeside Shopping Centre is set to welcome a new store (Image: Getty) A high street fashion chain that has only recently arrived in the UK is expanding with its first store in the south of the country. The major international fashion brand opens its first southern store at Lakeside Shopping Centre on Thursday, October 29. Lefties is an international retailer that is part of the Inditex Group, which also includes Zara and Pull&Bear. Lefties has been dubbed a Primark rival thanks to its affordable fashion offering, and it opened its first UK store this year in Liverpool. It will now open its second UK store in the iconic Essex shopping centre . The new store will be located on Level 2, Central Atrium. It will bring together the brand's full offering of Woman, Man, Teen, Girl, Boy, Baby, and Newborn lines, with clothing, footwear, and accessories collections. The new store will also feature the HOME Collection, the brand's line that extends its identity into the home with textiles, décor, fragrances, and items designed for a functional environment. It joins several other well-known brands that recently opened at Lakeside Shopping Centre , including Hollister, Urban Outfitters and Space NK. Nancy Foster, Centre Director at Lakeside Shopping Centre, said: "Lefties is one of the most exciting fashion arrivals of the year, and we're proud that Lakeside will be home to its first store in the South. From fashion and footwear to children's wear and homeware, it is a brand with something for everyone. "Its arrival gives our visitors another major reason to look again at Lakeside and spend the day, discover something new and update their Autumn Winter wardrobes." Lefties already operates hundreds of stores across Europe, the Middle East and North Africa, and has built a strong online presence in recent years. Lefties opened in Liverpool in September (Image: Getty) Lefties was originally launched in 1999 as an outlet for leftov
 
---- Article 407 ---
-URL: https://www.nettosgameroom.com/2026/10/console-archives-drug-store-launches.html
-Title: Console Archives THE DRUG STORE Launches October 15th
-Status hint: Opening | Industry: Drug Retailers
-Published: 2026-10-14 11:01:00
+--- Article 82 ---
+URL: https://www.thesun.ie/money/17816162/cork-city-food-fried-chicken-mad-egg/
+Title: Major boost to locals as award-winning fried chicken chain opens new location in city as bank holiday festival kicks off
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 15:13:47
 
-Console Archives THE DRUG STORE Launches October 15th Benjamin B Wednesday, October 14, 2026 0 HAMSTER Corporation has announced Console Archives THE DRUG STORE launches on October 15th, 2026 for Nintendo Switch 2 and PlayStation 5 . You can learn more about the game below. Note: The game includes only the Japanese version. All in-game text is in Japanese only. About: “THE DRUG STORE” was released by HUMAN in 1998 for a 32 -bit home console. This is a simulation game where you manage a drug store, aim to open many stores, and increase your capital. Manage your business while considering locations, the types of products sold, customer demographics, and build the ultimate drug store! Sometimes, an employee you've become close with might even propose Original products...? Screenshots: Trailer: Labels Console Archives HAMSTER News Nintendo Playstation PS5 Switch 2 Trailer Share Benjamin B Ben is the founder of Netto's Game Room and is an avid video game player who enjoys sharing his passion with the world. You Might Like View all
+Credit: Alamy Comment now Next A POPULAR fast food chain has just opened its doors in Co Cork – just in time for the Guinness Cork Jazz Festival. Founded in 2018, Mad Egg has become a favourite amongst Irish foodies . The award-winning chicken spot has opened its doors in Marina Market Credit: Mad Egg Locals are sharing their excitement online Credit: Mad Egg Advertisement The business was founded by Conor Sheridan and Stephen O’Reilly, and since launching, their food has won them a number of glowing titles. These include the ‘Best Chicken in Ireland’ at the Deliveroo Restaurant Awards 2025, and Best Burger & American at this year’s Just Eat Awards. Sign up to The Irish Sun’s daily newsletter Thank you! The popular food spot is in several Dublin locations including Dundrum Town Centre, Liffey Valley and Dublin Zoo . Marina Market is the chain’s first outlet outside of the capital. READ MORE IN MONEY EURO WINNER Irish punter wins €500k as Lotto bosses reveal location where ticket was sold CHECK IT Irish October bank hol 2026 opening hours for Dunnes Stores, Lidl, Aldi & Tesco One local said the news is “unbelievable”. The award-winning chicken chain took to social media to show fans a sneak peek at the new location. Mad Egg bosses said: “Welcome to our first customer facing site outside of Dublin : Marina Market. “We’re beyond excited to have Luke taking care of the new space and we know you guys will love him just as much as we do! Advertisement Most read in Money BE AWARE Popular toys sold on TEMU recalled over health fears as parents told to stop use LOTTO LUCK Two lucky Irish Lotto punters bag 5-figure prizes but narrowly miss out on €3.5m BARGAIN BUY Lidl Ireland to sell winter clothing essential to keep warm - and it's on sale GREAT BUY Inside Irish pub in heart of busy town on market for €250k with living areas “Come say hi and have some fried chicken whilst you’re at it.” Locals in Cork can expect Mad Egg favourites including tenders, burgers made with ‘Amish
 
---- Article 408 ---
-URL: https://www.fantasylandnews.com/2026/10/14/epcot-candlelight-processional-dining-packages-2026-now-open-every-restaurant-and-price/
-Title: EPCOT Candlelight Processional Dining Packages 2026 Now Open: Every Restaurant and Price
+--- Article 83 ---
+URL: https://www.tapinto.net/towns/phillipsburg/sections/economic-development/articles/a-taste-of-havana-on-main-street-buena-vista-a-cuban-experience-celebrates-grand-opening
+Title: A Taste of Havana on Main Street: Buena Vista, A Cuban Experience Celebrates Grand Opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 15:00:00
+
+A Taste of Havana on Main Street: Buena Vista, A Cuban Experience Celebrates Grand Opening | Phillipsburg, NJ News TAPinto | TAPinto
+
+--- Article 84 ---
+URL: https://www.kansascity.com/latest-news/article317748758.html
+Title: Let’s Dish: A BBQ guru in KC + Restaurant closing in iconic spot
 Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 11:00:28
+Published: 2026-10-24 15:00:00
 
-EPCOT Candlelight Processional Dining Packages 2026 Now Open: Every Restaurant and Price October 14, 2026 Written by Greg Gately EPCOT Candlelight Processional dining packages for the 2026 International Festival of the Holidays are now open to book. Booking opened this morning, October 14, at 6 a.m., with 16 EPCOT restaurants taking part and prices from $43 to $109 per adult. The festival itself runs November 27 through December 30, as we laid out in our Festival of the Holidays 2026 guide , and the Candlelight Processional performs nightly at 4:45, 6:30 and 8 p.m. at America Gardens Theatre. The show retells the Christmas story with a celebrity narrator, a massed choir, a 50-piece orchestra, herald trumpets and the Voices of Liberty. Each package includes one guaranteed seat per person to a Candlelight Processional performance the same day, plus a meal. At most restaurants that means an entrée and dessert, or a full buffet where offered, along with a nonalcoholic drink or an alcoholic drink for guests 21 and older. Spice Road Table does it a little differently, with two small plates, a shared tagine, a shared dessert platter and a drink. You pick up your Candlelight seating badges at the restaurant after your meal, then enter America Gardens Theatre through a separate queue. Seating inside the package section is first come, first served. Restaurant Pavilion Adult (10+) Child (3 to 9) Akershus Royal Banquet Hall Norway $87 $59 Biergarten Restaurant Germany $75 $40 Chefs de France France $89 $37 Coral Reef Restaurant The Living Seas $82 $34 Garden Grill Restaurant, breakfast The Land $73 $46 Garden Grill Restaurant, lunch or dinner The Land $86 $55 La Crêperie de Paris France $59 $31 La Hacienda de San Angel Mexico $86 $37 Le Cellier Steakhouse Canada $109 $44 Nine Dragons Restaurant China $70 $30 Regal Eagle Smokehouse, same day only American Adventure $43 $26 Rose & Crown Dining Room United Kingdom $68 $31 Shiki-Sai: Sushi Izakaya Japan $85 $40 Spice Road Table Mor
+Editor’s note: The following is from the Let’s Dish newsletter from Jenna Thompson, published weekly on Fridays. Let’s Dish also publishes on Tuesdays from Food Insider Katelyn Umholtz. You can sign up here to get them delivered to your inbox. Welcome back to Let’s Dish — your one-stop shop for all things eats in Kansas City. I’m Jenna Thompson, one of the restaurant reporters for The Star. Someone ought to inform the weather it’s nearly the end of October! Either way, I’m still sipping pumpkin drinks and butternut squash soup like it’s chilly. You’re not here for the latest weather update, though — you want snacks! Good news: you’re in for a treat this week. We’re shucking oysters , courtesy of Food Insider Katelyn Umholtz, and chomping on Kansas City’s best barbecue . I have fantastic news for anyone who’s tried this French cafe in Texas: It’s coming to the KC metro ! Plus, did parking issues squash this River Market restaurant ? All that and more in today’s meal. Slurp! A BBQ expert’s trek through Kansas City If you’re going to call yourself a barbecue aficionado, you’ll need to learn the name Steven Raichlen — a food writer and Barbecue Hall of Fame inductee. You can have a chance to hear from the man who “found the meaning of life” through BBQ on Monday if you attend an area event. A burnt ends sandwich at LC’s Bar-B-Q.                                                                                            Tammy Ljungblad tljungblad@kcstar.com But to answer your more pressing question: Where’s he eating while he’s in town? Some of his choices may surprise you. My colleague Katelyn Umholtz has the scoop on all this in her recent story. Restaurant closes in historic spot It’s the end of the line for a restaurant in the River Market. “Trolley Tom,” a revamped 1940s streetcar, has hosted a few different concepts from its River Market perch the past few years. Just a year ago, a new concept signed a lease to bring deli sandwiches and BBQ to the vintage car. Now i
 
---- Article 409 ---
-URL: https://www.conveniencestore.co.uk/news/convenience-awards-2027-entry-deadline-extended-by-a-week/724794.article
-Title: Convenience Store
-Status hint: Opening | Industry: Convenience Stores / Distributors
-Published: 2026-10-14 10:58:24
-
-No comments The deadline for entering the Convenience Awards 2027 has been extended by one week. The new deadline for entries is now Tuesday 20 October. Taking place on 3 March 2027 at the Rum Warehouse at The Titanic Hotel in Liverpool, the ceremony is one of the highlights of the industry calendar, and sees the entire convenience community gather under one roof for a night of networking, celebration and recognition. Powered by Convenience Store, Lumina Intelligence and The Grocer, these awards celebrate the entire convenience community - from stores with the self-entry categories to head offices with categories powered by Lumina Intelligence insight. Enter here now! Confused about your entry? Here’s some help! The Convenience Awards 2027 Categories: Refit of the Year New Store of the Year Community Retailer of the Year Community Initiative of the Year Food To Go Store of the Year Responsible Retailer of the Year – back for 2027! Retailers’ Retailer of the Year Store Team of the Year Sales Colleague of the Year Outstanding Contribution to Convenience Award Rising Star of the Year Britain’s Favourite Managed Convenience Group Britain’s Favourite Convenience Symbol Group Britain’s Favourite Convenience Store Group Retailers’ Favourite Symbol Group Independent Convenience Store of the Year Small Convenience Store of the Year Large Convenience Store of the Year Multiple Managed Convenience Store of the Year Convenience Retailer of the Year# Topics The Convenience Awards No comments
-
---- Article 410 ---
-URL: https://www.indianretailer.com/franchisetv/archives/news/krispy-kreme-announces-franchise-development-deal-expand-across-new-york-metro-areas
-Title: Krispy Kreme Announces Franchise Development Deal to Expand Across the New York Metro Areas
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 10:40:44
-
-Franchising Krispy Kreme Announces Franchise Development Deal to Expand Across the New York Metro Areas BY - Franchise TV Bureau 14 Oct, 2026
-            / 146 / 4 MIN READ Krispy Kreme, Inc. has announced a franchise development agreement with Original Entrepreneurs LLC (“Original Entrepreneurs”) to open 33 Krispy Kreme shops across the New York metro area over the next five years, expanding the brand's presence in one of the country's largest consumer markets. The shops will be developed in New York City and the surrounding region, including Long Island and New Jersey. The Original Entrepreneurs group, a long-time Krispy Kreme franchisee and experienced quick-service restaurant operator, currently operates 12 Krispy Kreme shops. “We're pleased to continue growing with Original Entrepreneurs,” said Krispy Kreme CEO Josh Charlesworth . “This development agreement reflects our focus on capital-light franchise growth and enables us to expand with an operator that has deep expertise building and operating Krispy Kreme shops in a competitive market.” “We're proud of our long-standing relationship with Krispy Kreme and confident in the strength of the brand,” said Karl Halligan, Principal of Original Entrepreneurs. “We look forward to building on that relationship and continuing to expand Krispy Kreme’s presence across the New York metro area,” said J ohn Mondry, Principal of Original Entrepreneurs. Headquartered in Charlotte, N.C., Krispy Kreme is one of the most beloved and well-known sweet treat brands in the world. The iconic Original Glazed® doughnut is universally recognized for its hot-off-the-line, melt-in-your-mouth experience. Krispy Kreme operates in more than 40 countries through its unique network of fresh doughnut shops, partnerships with leading retailers , and a rapidly growing digital business. ''Our purpose of touching and enhancing lives through the joy that is Krispy Kreme guides how we operate every day and is reflected in the love we have for our pe
-
---- Article 411 ---
-URL: https://www.hospitalityandcateringnews.com/2026/10/pendry-tampa-tops-out-ahead-of-2027-opening/
-Title: Pendry Tampa Tops Out Ahead of 2027 Opening
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 10:26:39
-
-Hotel News is brought to you by Guarantee Laundries Pendry Hotels & Resorts and Two Roads Development have marked the topping out of Pendry Tampa and Pendry Residences Tampa ahead of the development’s planned opening in 2027. Located on Tampa Riverwalk in the city’s downtown district, the project will mark Pendry’s first hotel in Florida. Designed by Arquitectonica with interiors by Studio Munge, Pendry Tampa will comprise 218 guest rooms and suites alongside 190 Pendry Residences. Food and beverage operations will be led by Clique Hospitality, with four concepts planned across the development. These will include a signature restaurant, a modern Mexican restaurant, a speakeasy-style lounge and a poolside dining venue. Further hotel facilities will include Spa Pendry, a fitness centre and wellness facilities, the brand’s Paintbox children’s programme and more than 14,000 sq ft of meeting and event space. “Reaching the topping off of Pendry Tampa brings us one step closer to opening our doors and introducing the Pendry brand to Florida for the first time,” said Michael Fuerstman, co-founder of Pendry Hotels & Resorts. “With its exceptional Riverwalk setting, we look forward to creating a destination that celebrates Tampa’s energy and character while delivering the thoughtful design, intuitive service, and vibrant guest experience that define Pendry.” Pendry Residences Tampa will comprise 190 private homes ranging from one to three bedrooms, with prices starting at $1.7 million. More than 80% of the residences are currently under contract, representing more than $400 million in sales to date. The residences will feature floor-to-ceiling windows and private terraces, with owners also receiving access to a dedicated residential lobby and lounge, swimming pools, fitness, spa and wellness facilities, private dining and social spaces. Residents will also have access to the facilities and services offered within the wider hotel development. “This milestone reflects the treme
-
---- Article 412 ---
-URL: https://whatnow.com/miami/restaurants/common-room-and-the-brooklyn-room-speakeasy-celebrate-grand-opening/
-Title: Common Room and The Brooklyn Room Speakeasy Celebrate Grand Opening
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 10:25:36
-
-Photo: Official (Image credit: Common Room) SHARE BOL Ho spitality Group (BHG) celebrated the grand opening of Common Room , a modern neighborhood American restaurant and The Brooklyn Room , a curated speakeasy in the heart of Downtown Hollywood. The restaurant offers comfort food in a warm, inviting setting, complemented by a curated music program. With a hint of mystery, it’s both intimate and vibrant. To celebrate the opening, BOL Hospitality Group hosted a VIP Preview and ribbon-cutting ceremony where guests had the opportunity to exclusively experience the new restaurant and indulge in complimentary libations and bites, including Cavatappi Mac & Cheese, Spicy Rigatoni, Short Rib Tacos and Crisp-Skin Branzino. Mayor of the City of Hollywood Josh Levy, City of Hollywood dignitaries and representatives from the Greater Hollywood Chamber of Commerce joined BOL Hospitality Group Co-Founder Eric Douglas and the BOL Hospitality Group executive team for a ribbon-cutting ceremony. Located at 2032 Harrison St., Hollywood, FL 33020 , in the heart of Downtown Hollywood, Common Room was designed to serve as a neighborhood anchor. Common Room’s philosophy centers on reliably delicious food and expertly crafted cocktails in a warm and energetic atmosphere. The Common Room team prides itself on hospitality, where guests become regulars. Its approachable dining experience, layered with a post-dinner experiential cocktail component, offers guests two distinct experiences under one roof. Tucked discreetly inside Common Room, the restaurant’s hidden cocktail bar, The Brooklyn Room , is designed to feel like a true speakeasy discovery, by invitation only. It’s completely concealed from the dining room. Access is granted exclusively by the manager, adding to the sense of intrigue and exclusivity. Entry is granted by invitation only, though regulars who dine at Common Room or any of BOL Hospitality Group’s concepts tend to find their way inside. As a nod to the New York City Borough,
-
---- Article 413 ---
-URL: https://www.mysanantonio.com/business/article/heb-loop-1604-22467024.php
-Title: New San Antonio-area H-E-B is almost open. Here's what to expect.
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 10:17:02
-
-[Could not fetch: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))]
-
---- Article 414 ---
-URL: https://www.lep.co.uk/public-notices/premium-fast-food-chain-prepares-to-open-in-preston-9284885
-Title: 'Premium' fast food chain Wraps & Wings prepares to open its first northern branch here in Preston
+--- Article 85 ---
+URL: https://www.worcesternews.co.uk/news/26667310.authentic-family-run-italian-restaurant-coming-worcester/
+Title: New family-run Italian restaurant promising 'authentic recipes' to open in Worcester
 Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 10:17:00
+Published: 2026-10-24 15:00:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.lep.co.uk/public-notices/premium-fast-food-chain-prepares-to-open-in-preston-9284885]
-
---- Article 415 ---
-URL: https://www.bayshorebroadcasting.ca/2026/10/14/218553/
-Title: Blue Mountain Resort Announces Opening Day For Winter Ski Season
-Status hint: Closing | Industry: Hospitality
-Published: 2026-10-14 10:14:12
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bayshorebroadcasting.ca/2026/10/14/218553/]
-
---- Article 416 ---
-URL: https://www.chron.com/food/article/moderno-tex-mex-closed-houston-22475563.php
-Title: Houston Tex-Mex restaurant closing after 12 years of operation
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 10:07:52
-
-JavaScript is disabled in your browser. Please enable JavaScript to proceed.
-
---- Article 417 ---
-URL: https://coastalabc.com/news/local/newport-restaurant-group-plans-new-restaurant-at-garden-city-center-october-13-2026?teaserSource=trending
-Title: New restaurant at Garden City Center going where old Applebee's location stood
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 10:06:35
-
-New restaurant to come to Garden City Center where former Applebee's location stood by NBC 10 NEWS Tue, October 13, 2026 at 9:53 PM Updated Wed, October 14, 2026 at 1:25 PM 4 VIEW ALL PHOTOS Newport Restaurant Group announced Tuesday that it plans to open a new restaurant at Garden City Center, replacing the Applebee’s that was destroyed by fire in 2024. (WJAR) Comment on this story 0 Comment Share story Share topics: Garden City Center Newport Restaurant Group Applebee’s Restaurant opening Fire damage Midway Road Employee-owned Cranston Fire Department CRANSTON, R.I. (WJAR) — Newport Restaurant Group announced Tuesday that it plans to open a new restaurant at Garden City Center, replacing the Applebee’s that was destroyed by fire in 2024 . The 5,000-square-foot restaurant will be at 24 Midway Road, across from Kaffeology. Its concept is still in development, and the company did not announce a name or opening date. The restaurant will be the 19th in the employee-owned company’s portfolio and its second at Garden City Center. Avvio Ristorante has operated at the shopping center since 2016. The Applebee's in Garden City was demolished on Dec. 10, 2025.  (WJAR) “We are thrilled to have the opportunity to bring our brand of hospitality to this space,” said Mick Lamond, Newport Restaurant Group’s CEO. “We look forward to adding to Garden City’s vibrant dining scene, and as an employee-owned company, we’ll be adding dozens of meaningful jobs in the community.” The Applebee’s sustained significant damage in an early morning fire on Oct. 16, 2024. At the time, the Cranston Fire Department said the building was a total loss. Firefighters respond to a fire at an Applebee's restaurant at Garden City Center in Cranston on Oct. 16, 2024. The restaurant was looking to rebuild at a new location. (WJAR) An NBC 10 News crew witnessed flames coming from the roof and a partial roof collapse. Fire officials said they believed the fire may have started in the building’s ductwork around 
-
---- Article 418 ---
-URL: https://www.foxnews.com/food-drink/hooters-restaurants-keep-closing-even-ceo-says-theres-more-story
-Title: Hooters restaurants keep closing even as CEO says there's more to the story
-Status hint: Closing | Industry: Restaurants
-Published: 2026-10-14 10:00:17
-
-close Video Hooters girls reveal favorite food, surprising menu picks and customer connections South Florida Hooters waitresses Gracie Williams and Micayla Williams speak to Fox News Digital about the restaurant chain's signature uniforms, community involvement, popular food choices and the personal connections they build with returning guests. NEW You can now listen to Fox News articles! Hooters restaurants continue to disappear across America, including several longtime locations in Florida — but the iconic chain's CEO insists the closures aren't a sign that the brand is losing its appeal. Neil Kiefer, CEO of Florida-based Hooters Inc., told Fox News Digital the company is focused on rebuilding the restaurant chain after its original founders regained control of the brand following its 2025 bankruptcy. "The number of stores will go up and down, but the longevity of our commitment will not," Kiefer said. "These store closures are not an indication of brand strength." HOOTERS RESTAURANTS KEEP DISAPPEARING AS ICONIC CHAIN LOSES LONGTIME LOCATIONS IN FOUNDING STATE His remarks come after Fox News Digital reported that Hooters closed its last remaining restaurant in Jacksonville, Florida, ending a 40-year presence in the city. The closure followed the September shutdown of a Hooters in Panama City Beach, which had operated for more than three decades. Hooters restaurants continue to disappear across America, including several longtime locations in Florida — but the chain's leadership insists the closures aren't a sign the brand is losing its appeal. (Peter Burke/Fox News Digital) Other longtime locations have also disappeared, including a Hooters in Boca Raton, Florida, which closed earlier this year after 16 years when its landlord declined to renew the lease . But Kiefer said the recent closures need to be viewed in the context of the company's ownership changes. "In March 2025, Hooters of America filed for bankruptcy ," he said. HISTORY OF HOOTERS: 5 FACTS YOU LIKEL
-
---- Article 419 ---
-URL: https://www.chad.co.uk/news/people/jollyes-pets-set-to-open-new-mansfield-store-9286658
-Title: Jollyes Pets set to open new Mansfield store
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 09:57:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.chad.co.uk/news/people/jollyes-pets-set-to-open-new-mansfield-store-9286658]
-
---- Article 420 ---
-URL: https://www.bozemandailychronicle.com/wire/international/prosecution-labels-russell-brand-a-ruthless-sexual-predator-at-opening-of-his-sex-assault-trial/article_b2add6b9-8576-5301-ad4a-ceb79e8c4e33.html
-Title: Prosecution labels Russell Brand a ruthless sexual predator at opening of his sex assault trial
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 09:47:32
-
-Russell Brand speaks to the media as he arrives at Southwark Crown Court in London, Wednesday Oct. 14, 2026. Ben Whitley - PA Russell Brand speaks to the media as he arrives at Southwark Crown Court in London, Wednesday Oct. 14, 2026. Ben Whitley - PA http://www.bozemandailychronicle.com offers audio versions of articles using Instaread. Some words may be mispronounced. LONDON (AP) — Russell Brand behaved as a “ruthless” sexual predator when he assaulted six women over the course of a decade, a prosecutor said Wednesday as she opened the rape and sexual assault case against the actor-comedian. Brand, 51, has pleaded not guilty to three counts of rape, three counts of sexual assault and one count of indecent assault. The charges involve six women and alleged offenses between 1999 and 2009. Prosecutor Riel Karmy-Jones told jurors at Southwark Crown Court in London that the six women, who do not know each other, were assaulted in “a hotel room, workplaces, a toilet cubicle in a bar and at (Brand’s) home address.” She said that at the time Brand had an “indiscriminate and voracious” desire for sexual contact, and “women were simply a means to an end.” “He was ruthless, he was calculating, he was manipulative. And, the prosecution say, he was a sexual predator,” Karmy-Jones said. Brand is on bail and arrived at court Wednesday to a crowed of photographers and video journalists. He said he felt “blessed.” “I feel, of course, concerned but hopeful that this process will lead to good outcomes for everybody involved,” Brand said. “That’s my prayer.” Known for risque stand-up routines and battles with drugs and alcohol, Brand rose to prominence in the early 2000s, hosting television programs and his own BBC radio show. He appeared in Hollywood films including “Forgetting Sarah Marshall” and “Get Him to the Greek.” In recent years he has moved away from mainstream media, relocated to Florida and built a large online following with videos mixing wellness, conspiracy theories an
-
---- Article 421 ---
-URL: https://www.bizjournals.com/columbus/news/2026/10/14/racetrac-adds-another-columbus-area-store-to-its-2.html
-Title: RaceTrac adds another Columbus-area store to its 2026 opening plan
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 09:43:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/columbus/news/2026/10/14/racetrac-adds-another-columbus-area-store-to-its-2.html]
-
---- Article 422 ---
-URL: https://wdwnt.com/2026/10/disney-store-announces-limited-time-annual-passholder-20-discount-in-todays-daily-recap-for-10-13-2026/
-Title: Disney Store Announces Limited-Time Annual Passholder 20% Discount in Today's Daily Recap for 10/13/2026
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 09:30:00
-
-Limited Edition Walt Disney World 55th Anniversary Cinderella doll now available online, Nomad Lounge offering exclusive $49 food and drink Annual Passholder deal, and Disneyland closes exits and reroutes guests after suspicious device found near Harbor Boulevard — all this and more in today’s daily recap for Tuesday, October 13, 2026. Table of Contents Disney News Recap Universal News Recap Watch the Latest From WDW News Today Disney News Recap ‘The Emperor’s New Groove’ Pins Featuring Kuzco, Kronk, & Pacha Arrive at Disneyland Winnie the Pooh Pandora Charm, Ring, and Snow Globe at Disneyland Resort Two New Disneyland Golf Shirts Bring Subtle and Colorful Disney Style to the Fairway BREAKING: Name & More Revealed for Japan’s First Disney Cruise Line Ship Dollywood Christmas Chapel Popcorn Bucket for Smoky Mountain Christmas Coming Soon Online Viva Navidad Street Party Moving to New Location at Disney California Adventure in 2026 Ursula, Maleficent, and More Disney Villains Featured in McDonald’s Halloween Boo Buckets ‘A Proud Family Wizmas’ Holiday Special Premiere Date & Guest Cast Announced ‘Star Wars’ Characters Temporarily Removed from LEGO Store Display at Downtown Disney D23-Exclusive ‘Princess Diaries’ 25th Anniversary Apparel and Bags Now Available at Disneyland Resort Epic Games Delays Disney Project After Mandating ‘AI-First’ Development Holiday Jewelry Including Necklaces, Earrings, and More Now Available at Walt Disney World How Disney Developed the Mother-Daughter Story of ‘Hexed’ Marie, Stitch, ‘Runaway Railway’ & More Auto Magnets Arrive at Disneyland Resort Christmas Lights Start Appearing on “it’s a small world” at Disneyland Disneyland Entrance and Exit Signs Broken and Peppered with Polka Dots Sunshine Seasons in EPCOT Introduces Dedicated Allergy & Dietary Requests Counter 2026 Disney Christmas Advent Calendar of Cookie-Inspired Pins Available at Disneyland and Online Meeko?! Raccoon Spotted Eating From Disney’s Grand Floridian Resort Trash Can 
-
---- Article 423 ---
-URL: https://www.glasgowlive.co.uk/whats-on/whats-on-news/scotland-reopening-brewers-fayre-beefeater-34761769
-Title: 5 locations
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 09:25:00
-
-Oops. Our website is temporarily delivering an degraded response in your location. We are working hard to get it back online.
-
---- Article 424 ---
-URL: https://www.lancasterguardian.co.uk/business/plans-unveiled-to-turn-former-lancaster-village-pub-into-new-convenience-store-9286475
-Title: Plans unveiled to turn former Lancaster village pub into new convenience store
-Status hint: Opening | Industry: Convenience Stores / Distributors
-Published: 2026-10-14 09:19:00
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.lancasterguardian.co.uk/business/plans-unveiled-to-turn-former-lancaster-village-pub-into-new-convenience-store-9286475]
-
---- Article 425 ---
-URL: https://www.the-gazette.co.uk/news/26634878.white-stuff-open-new-store-braehead-autumn/
-Title: Fashion and lifestyle brand to open store at Braehead this autumn
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 09:18:32
-
-Braehead Shopping Centre Business Fashion Leisure Shopping White Stuff to open new store at Braehead this autumn Braehead Shopping Centre Business Fashion Leisure Shopping By 
-            Nicole Mitchell Multimedia Journalist Share 0 Comments 2 Skip to next photo 1 / 1 Show caption 1 / 1 Share 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+Business Food and drink Leisure Worcester 'Authentic' family-run Italian restaurant coming to Worcester Business Food and drink Leisure Worcester By 
+            Kieran Williams Reporter Share 0 Comments COMING SOON: La Contessa is a new Italian restaurant set to open in Friar Street (Image: Newsquest) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
         and has been written by our American colleagues.
-        It does not necessarily reflect the view of The Herald. A leading British fashion and lifestyle brand is coming to Braehead shopping centre this autumn. White Stuff , established in 1985, is set to open a brand new store, showcasing the brand's signature women's wear, menswear, and accessories alongside its popular knitwear, denim, and dedicated rainwear lines. Known for their unique patterns, bold colour palettes and use of considered fabrics, all championed by their in-house design team, White Stuff will bring a distinctive, quality-led offer to Braehead, complementing the centre’s existing fashion line-up including M&S, Next and Flannels. It will occupy a 2741 sq ft unit in the centre. READ NEXT: Dobbies seeks Santas and elves to spread Christmas cheer at Braehead store 'A sad day' - Locals react as historic Paisley jewellers confirms closure date Beloved Paisley business set to close after serving the community for 117 years White Stuff, Braehead (Image: Supplied) Rachel Scott, head of leasing at Global Mutual, said: "Brands are increasingly selective about where they invest in physical stores, so White Stuff’s decision to open at Frasers Plus Braehead is a positive endorsement of the opportunity this destination presents. "For us, the focus is on securing operators that can perform over the long term and respond to what our customers are looking for. "White Stuff’s commitment is another example of that approach translating into leasing activity." Clare Davis, cluster manager at White Stuff, adde
+        It does not necessarily reflect the view of The Herald. A new family-run Italian restaurant promising 'authentic recipes and delicious food' is coming to Worcester. Signs have appeared in the former Cade Piano, Friar Street, announcing that the restaurant will soon be known as La Contessa. In a post on Instagram, a spokesperson said: "We are delighted to introduce La Contessa, a family-run Italian restaurant coming soon to the heart of Worcester. "At La Contessa, our passion is simple: to bring you the true taste of Italy through authentic recipes, carefully selected high-quality ingredients, and delicious food prepared with love. "As a family-run business, we believe that dining is about so much more than just good food; it's about bringing people together, creating memories, and making every guest feel like part of our family." Refurbishment work started at Cafe Piano several weeks ago, but the owners were tight-lipped on what people could expect, other than revealing their Italian inspiration. READ MORE: Giant pumpkins made from plastic bricks appear in city centre windows for Halloween The spokesperson added: "From our kitchen to your table, we promise delicious Italian food, genuine hospitality, and the warm, welcoming atmosphere that makes Italian dining so special. "We cannot wait to open our doors and welcome you into our little corner of Italy." No opening date has been announced yet, but posters in the restaurant's windows are advertising for waitresses, bar staff and management. Business Foo
 
---- Article 426 ---
-URL: https://www.aol.ca/articles/wegmans-opening-store-wednesday-see-091509000.html
-Title: Wegmans opening new store Wednesday. See where
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 09:15:09
-
-Victoria E. Freile, New York Connect Team Wed, October 14, 2026 at 9:15 AM UTC The 110,000-square-foot store will employ 450 workers and allow overnight tailgating ahead of its grand opening. Wegmans Food Markets will open its newest store Wednesday, Oct. 14, in Charlotte, North Carolina. The new store in the Ballantyne neighborhood will be Wegmans’ fifth location in North Carolina, bringing the Gates-based grocery chain’s total to 114 stores. About Wegmans’ new Charlotte store Located at 11550 North Community House Road, the 110,000-square-foot store is less than a half-mile from The Bowl at Ballantyne , a mixed-use development with apartments, retail shops, restaurants and entertainment options. The store will feature Wegmans’ traditional departments, including produce, seafood, meat, bakery, deli and cheese, along with prepared foods, Meals2Go and a large beer and wine section. Wegmans worked with real estate firm Northwood Office to secure the Charlotte location. When plans were announced in 2024, Clifton Coble, Northwood’s senior vice president of development, said the community needed a more experiential grocery store. “Wegmans, of course, was top of mind,” Coble said, adding that the company was excited to welcome the popular East Coast grocer to Ballantyne. Advertisement The store will employ 450 full- and part-time workers. Wegmans’ other North Carolina stores are in Chapel Hill, Raleigh, West Cary and Wake Forest. The company operates stores across nine Eastern states and the District of Columbia. Wegmans celebrated its 100th anniversary in 2016 and has been named one of Fortune’s 100 Best Companies to Work For for 29 consecutive years, ranking No. 5 in 2026. When does the new Wegmans open? The Ballantyne store is scheduled to open at 9 a.m. Wednesday, Oct. 14 , according to Wegmans . The company expects a large turnout and will allow overnight tailgating in the store’s parking lot starting Tuesday, Oct. 13. Wegmans will provide staff to oversee the festiv
-
---- Article 427 ---
-URL: https://amp.indystar.com/story/money/business/development/2026/10/14/georgia-street-promenade-opens-with-plans-for-expansion-on-the-way/92231137007/
-Title: Georgia Street Promenade opens, with plans for expansion on the way
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 09:06:00
-
-[Could not fetch: 402 Client Error: Payment Required for url: https://www.indystar.com/story/money/business/development/2026/10/14/georgia-street-promenade-opens-with-plans-for-expansion-on-the-way/92231137007/]
-
---- Article 428 ---
-URL: https://www.naplesnews.com/story/grocery/2026/10/14/when-is-the-new-costco-opening-in-naples-florida-collier-county-grocery-shopping-warehouse-chicken/92040670007/
-Title: New Costco in East Naples taking shape. When will it open?
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 09:02:00
-
-[Could not fetch: 402 Client Error: Payment Required for url: https://www.naplesnews.com/story/grocery/2026/10/14/when-is-the-new-costco-opening-in-naples-florida-collier-county-grocery-shopping-warehouse-chicken/92040670007/]
-
---- Article 429 ---
-URL: https://www.postandcourier.com/beaufort-county/news/hilton-head-coffee-roasters-ribbon-cutting/article_bd01a930-51c4-4633-a15c-2bb8312fc8b6.html
-Title: Hilton Head Island Coffee Roasters adds a new location on the island’s south end
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 09:00:00
-
-Facebook Twitter WhatsApp SMS Email [+] Add Post and Courier News on Google The grand opening of the second location for Hilton Head Island Coffee Roasters is scheduled for Oct. 16, 2026. The new location is at 38C New Orleans Road, Suite 101 on Hilton Head Island. Mallory Parrish/Staff Facebook Twitter WhatsApp SMS Email Print Copy article link Save HILTON HEAD ISLAND — What began with a soft opening in June will become official this fall when Hilton Head Island Coffee Roasters celebrates the grand opening of its second shop. The local coffee company will hold a ribbon-cutting ceremony at 10 a.m. Friday, Oct. 16, at the new location, 38C New Orleans Road, Suite 101. Community members are invited to stop by and join the celebration. The expansion marks a milestone for Hilton Head Island Coffee Roasters, which has built its business over the past five years from its original roastery and espresso bar on Cardinal Road on the island’s North End. Beyond serving customers at its shops, the company has expanded its reach across the Lowcountry through wholesale partnerships. While the Cardinal Road location houses the company’s original roasting operation and espresso bar, the New Orleans Road shop was designed as a hybrid coffee shop and retail destination. The space includes expanded seating and room for customers to browse its retail collection. Along with bags of freshly roasted beans, the shop sells local honey, books, mugs and other items. Its retail collection also includes custom apparel screen-printed by Pockets Full of Sunshine , a Hilton Head Island nonprofit that creates employment and social opportunities for adults with intellectual and physical disabilities. “We are so grateful for the overwhelming support we’ve received since soft opening our doors on New Orleans Road this June,” the Hilton Head Island Coffee Roasters team said in a statement. “Our goal has always been to bring people together over great coffee. This new space allows us to serve even more o
-
---- Article 430 ---
-URL: https://www.rochesterfirst.com/news/business/local-business/ollies-announces-grand-opening-for-new-newark-store/amp/
-Title: Ollie’s announces grand opening for new Newark store
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 08:47:58
-
-ROCHESTER, N.Y. (WROC) — Ollie’s Bargain Outlet announced the opening date of its new location in Newark. The new location will be opening on Wednesday, October 21 at 9 a.m. The store will be occupying the former Herb Phillipson’s in the Arcadia Shopping Center. Hours of operation are 9 a.m. to 9 p.m. News 8 first learned of the new Ollie’s location in June when Newark village officials announced it. It was originally expected to open last month. Ollie’s currently has stores in Rochester, Henrietta, Webster, Brockport, Canandaigua, and Geneva.
-
---- Article 431 ---
-URL: https://www.hulldailymail.co.uk/news/hull-east-yorkshire-news/sstrene-grene-confirms-opening-date-11197762
-Title: Søstrene Grene confirms opening date for Beverley store
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 08:39:00
-
-Oops. Our website is temporarily delivering an degraded response in your location. We are working hard to get it back online.
-
---- Article 432 ---
-URL: https://cambodianess.com/article/gordon-ramsay-burger-to-open-first-southeast-asian-outlet-in-phnom-penh
-Title: Gordon Ramsay Burger to Open First Southeast Asian Outlet in Phnom Penh
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 08:19:44
-
-Advertisements Gordon Ramsay Burger to Open First Southeast Asian Outlet in Phnom Penh From left to right: Mr Solyta, Oknha San, Gordon Ramsay, Dato' Jack,  Dato' Melvin By: Paid Content October 14, 2026 , 11:24 AM 00:00 / 00:00 PHNOM PENH, CAMBODIA – 14th October, 2026 – JS Group proudly announces the highly anticipated debut of Gordon Ramsay Burger in Phnom Penh, Cambodia, marking the internationally acclaimed brand’s first outpost in South East Asia. Opening soon on Level 42  of the newly launched JS TOWER, the restaurant will be located on the rooftop of South East Asia’s first Planet Hollywood Hotel, pairing signature culinary excellence with a vibrant hospitality experience and sweeping views across the city’s skyline. From left to right: Gordon Ramsay, Oknha Koy Le San, Dato_ Jack Yap First established at Planet Hollywood Resort & Casino in Las Vegas in 2012, Gordon Ramsay Burger has since expanded to several cities, including Chicago, Boston, Vancouver and locations in South Korea. The Phnom Penh outlet will serve the brand’s signature creations, including the Hell’s Kitchen Burger, along with sides, house-made sauces and shakes. The menu will also feature burgers incorporating local flavors inspired by Ramsay’s culinary travels in Cambodia, where he explored traditional Khmer cuisine and local ingredients, according to the company. The restaurant will feature indoor dining, a bar serving cocktails and premium spirits, and an outdoor terrace overlooking the city. Gordon Ramsay Burger Phnom Penh (Bar) Dato’ Jack Yap, managing director of JS Group, said the partnership would bring an internationally recognized dining brand to Cambodia while creating opportunities for Cambodian employees to develop their skills. “Working alongside Gordon Ramsay and his team presents an incredible opportunity to nurture Cambodia’s next generation of young talents, to learn from the very best and to take pride in being part of a globally recognised brand,” Yap said. He added that
-
---- Article 433 ---
-URL: https://www.racingqueensland.com.au/racing/replays/tab-race-replays/race-player/greyhound/qot%20/20261014/race/14
-Title: Greyhound GOLDEN CHASE NOMS CLOSING SOON 352m Wed 14 Oct 2026
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 08:08:53
-
-Home Racing Replays and Sectionals TAB Race Replays Share Share this page Share on a platform Or copy the page link Copy URL Close share Greyhound Ladbrokes Q1 Lakeside Wed 14 Oct 2026 Race 14 View meeting details Sorry, your browser doesn't support embedded videos,
-            but don't worry, you can download it and watch it with your favorite video player! Race 14 GOLDEN CHASE NOMS CLOSING SOON 352m M5 Wed 14 Oct 2026 Ladbrokes Q1 Lakeside
-
---- Article 434 ---
-URL: https://wyrk.com/ixp/16/p/gray-target-store-new-york/
-Title: Target Makes big Change To Store In Western New York
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 07:04:07
-
-Big Changes For Target In Western New York Big Changes For Target In Western New York Dave Fields Dave Fields Published: October 14, 2026 Photo by Shabaz Usmani on Unsplash Share on Facebook It looks like there are some big changes coming to a Target here in Western New York. If you shop at Target, you know that when you pull into the parking lot, you see the massive red sign above the store; well, that isn't a thing anymore, at least at one location. Target Store Goes Gray In Amherst I was out and about over the weekend, and I noticed something a little off when my wife and I pulled into the shopping center off Niagara Falls Blvd. The bright red of the Target store was no longer red. It was now gray. Photo Credit: Dave Fields/TSM2026 Photo Credit: Dave Fields/TSM2026 I did some research online, and it looks like the gray is part of a new trend that some Target stores will be using. According to a story by Parade.com, there is a new Target that opened in New York State that went all gray to match the vibe of the coastal town where it opened. READ MORE: STORES WE USED TO LOVE CHRISTMAS SHOPPING AT IN WESTER NEW YORK I mean, Amherst is far from coastal, but several other Target Stores were switching to gray or neutral colors, and maybe they wanted to use Amherst as a test store. I will say it does look more modern and sleek, but I missed the bright red when I pulled in. As far as I know, the other Target stores in Cheektowaga, Buffalo, and Orchard Park are still red. If you shop there, let me know what color the storefronts are. Send me a message HERE . The Top 10 Most Shoplifted Items at Target! Source: Big Changes For Target In Western New York Filed Under : Shopping , Target , Buffalo News , Buffalo Buzz Categories : WNY News
-
---- Article 435 ---
-URL: https://massmarketretailers.com/wegmans-opens-new-store-in-ballantyne-n-c/
-Title: Wegmans opens new store in Ballantyne, N.C.
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 07:00:00
-
-BALLANTYNE, N.C. – Store Manager Patrick McGuinness and his team of 450 employees have opened their new Wegmans’ Ballantyne location . The 110,000-square-foot store, located at 11550 North Community House Road, opened today, marking the company’s entrance into the Charlotte region. The Ballantyne location offers an abundant selection of ready-to-eat and ready-to-heat restaurant foods prepared by Executive Chef Rich Lawson and his culinary staff including everything from fresh sushi, pizza, and wings, to hot soup, freshly made salads, and sandwiches. Customers can enjoy Asian-inspired cuisine, a self-serve coffee station featuring Wegmans’ signature coffee, hot cocoa, and espresso drinks, and packaged, ready-to-go entrees and sides. The seafood department features fish sourced daily from fishing families on the east coast, across the country, and around the world. The store also features a produce section with hundreds of different fruits and vegetables, including many organic choices, and a cheese shop that has specialty and artisan cheeses produced domestically or imported from around the world. Customers can visit www.wegmans.com to sign up for Wegmans Shoppers Club and download the Wegmans app, which offers recipes, digital coupons, and the ability to create shopping lists sorted by aisle. Wegmans website and app also allow customers to complete all their grocery shopping online for curbside pickup or delivery to their door in as little as one hour. Ballantyne is Wegmans’ 115th store overall and the first in Charlotte. The Ballantyne team has already contributed over $30,000 to their local neighbors through community donations and sponsorships. Learn more about how they’re making a difference here . Subscribe to Our Newsletter Get the weekly Mass Market Retailers newsletter delivered straight to your inbox. Sign Up Now Submit Your Press Release Have news to share? Send us your press releases and announcements. Send Press Release
-
---- Article 436 ---
-URL: https://turkmenportal.com/en/news/100424-a-clinic-for-alternative-medicine-has-opened-at-a-university-in-ashgabat------
-Title: A clinic for alternative medicine has opened at a university in Ashgabat
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 07:00:00
-
-All categories 15.04.2026 22945 Share on social network A clinic for alternative medicine has opened at a university in Ashgabat The "Alternative Medicine Room" was officially opened at the Myrat Garryev State Medical University of Turkmenistan. The opening ceremony was attended by a delegation from the Beijing University of Chinese Medicine, led by the university's rector, Tang Zhishu. The ceremony's significance was significantly enhanced by the participation of Oguljahan Atabayeva, Vice President for Medical Affairs at the Gurbanguly Berdimuhamedov Charitable Foundation for Assistance to Children in Need of Care, the State News Agency of Turkmenistan reports . Musical and song performances by the country's medical university's creative ensemble added a special touch to the grand opening. Participants were introduced to the Cabinet's facilities and equipment, as well as materials on the main areas of alternative medicine. This event is a visible result of the country's ongoing efforts to improve the national healthcare system and enhance the quality of medical services provided to citizens, the source notes. Poster Pop singers will perform in Ashgabat. Movie schedule — September 12–13, 2026, Ashgabat Cinema The concert “Eastern Stories” will take place in Ashgabat In Ashgabat, the Festa della Musica will be held in honor of the 80th anniversary of the proclamation of the Italian Republic Day Pop singers will perform in Ashgabat. Movie schedule — September 12–13, 2026, Ashgabat Cinema Articles A Bridge of Stability in a Changing World: Why Turkmenistan Matters to the Future of the Modern Silk Road Global Energy Dialogue to Continue from Bangkok to Ashgabat at OGT 2026 From Energy Resources to Investment Opportunities: Why Global Investors Are Looking More Closely at Turkmenistan AI and Digitalisation to Shape the Future of Turkmenistan’s Energy Sector A Bridge of Stability in a Changing World: Why Turkmenistan Matters to the Future of the Modern Silk Road Global En
-
---- Article 437 ---
-URL: https://www.mirror.co.uk/lifestyle/food-drink/brewers-fayre-beefeater-restaurants-reopening-37761388
-Title: all the locations confirmed so far
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 07:00:00
-
-Oops. Our website is temporarily delivering an degraded response in your location. We are working hard to get it back online.
-
---- Article 438 ---
-URL: https://www.walesonline.co.uk/whats-on/food-drink-news/brewers-fayre-beefeater-restaurants-reopening-34750579
-Title: full list of locations
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 07:00:00
-
-Oops. Our website is temporarily delivering an degraded response in your location. We are working hard to get it back online.
-
---- Article 439 ---
-URL: https://www.travelerstoday.com/articles/61118/20261014/norwegian-aura-debuts-19-days-early-two-mediterranean-sailings-now-open-booking.htm
-Title: Norwegian Aura Debuts 19 Days Early: Two Mediterranean Sailings Now Open for Booking
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 06:25:05
-
-A Norwegian cruise sails in Punta Arenas, Chile on February 9, 2024. JUAN BARRETO/Getty Images Norwegian Cruise Line announced October 9 that Norwegian Aura — its largest ship ever, at approximately 170,000 gross tons — will make its maiden voyage on May 2, 2027, nineteen days ahead of the May 21 date the line had previously scheduled. Two new itineraries created by the early delivery are now open for booking, with a current Fall Flash Sale offering 50 percent off and up to $750 in onboard credit per stateroom for balcony cabins and above. What Are the Two New Inaugural Sailings? The first sailing is a 10-night cruise departing Trieste, Italy, on May 2, 2027 . Norwegian Aura will call at Dubrovnik and Split in Croatia, Bar in Montenegro, and then Corfu, Santorini, and Mykonos in Greece before arriving at Piraeus, the main port of Athens. The second is a nine-night reverse itinerary departing Piraeus on May 12, adding Rhodes and Zadar to the mix before returning to Trieste on May 21. Reported starting fares run around $1,757 per person for the 10-night voyage and $1,610 per person for the nine-night return, according to Cruise Critic sidebar data — NCL has not published base fares directly in its press release. The line's Fall Flash Sale is combinable with its Free at Sea package , which includes unlimited open bar, specialty dining credits, shore excursion credits, and Wi-Fi. Both sailings are bookable now at ncl.com, through a travel professional, or by calling 888-NCL-CRUISE. What Kind of Ship Is Norwegian Aura? Norwegian Aura is the line's third entry in the Prima Plus generation of ships — and by the numbers, a step beyond its two predecessors. Norwegian Aqua (2025) and Norwegian Luna (2026) each measure about 156,300 gross tons and carry about 3,550 guests at double occupancy. Norwegian Aura comes in at approximately 170,000 gross tons, carries 3,840 guests at double occupancy , and stretches nearly 1,130 feet — about 10 percent larger in every dimension. The m
-
---- Article 440 ---
-URL: https://www.theconnecticutscoop.com/all-hartford-county-posts/rocky-hill-scoop-cumberland-farms-bringing-second-location-to-rocky-hill
-Title: ROCKY HILL SCOOP: Cumberland Farms bringing second location to Rocky Hill!
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 05:32:49
-
-HOMEPAGE The Weekly Scoop News by County Ice Cream Playoffs County Winners STATEWIDE NEWS > Statewide News Scoop Rewinds All Local Gems TOLLAND COUNTY > All Tolland County Posts WINDHAM COUNTY > All Windham County Posts HARTFORD COUNTY > All Hartford County Posts NEW HAVEN COUNTY > All New Haven County Posts LITCHFIELD COUNTY > All Litchfield County Posts FAIRFIELD COUNTY > All Fairfield County Posts NEW LONDON COUNTY > All New London County Posts MIDDLESEX COUNTY > All Middlesex County Posts Massachusetts > All Mass Posts Advertise Contact About
-
---- Article 441 ---
-URL: https://secretmiami.com/fundimension-wynwood-arcade-closing-october/
-Title: is closing this October
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-14 05:31:29
-
-FunDimension Save Share Bianca Marcof – Staff Writer · October 14, 2026 Add us as a preferred source After nearly a decade of serving up nostalgic fun and memories that went beyond its games, FunDimension has announced that it will be closing its doors for good . “We have hosted thousands of birthdays, school field trips, corporate outings, and date nights. We have seen first dates become anniversaries, coworkers become friends over a round of bumper cars, and grandparents discover they can still throw a strike in duckpin bowling,” the entertainment center wrote in an Instagram post . “That loyalty is what built this place. Not the games or the lights, but the people who filled the room week after week. You did not just come to a venue. You came to see us, and we always saw you.” But it’s not game over for locals just yet. You have until the end of the month to chase one more high score and relive your arcade days, as the post concludes, “We are open every day until October 31, with every attraction running and our full team here. Come back one more time, or two, or three times.” One of Florida’s top arcades Home to dozens of arcade games, laser tag, VR setups, duckpin bowling, bumper cars, rock climbing, axe throwing and inflatable obstacle courses , FunDimension has served as the place for a little friendly competition among kids and adults alike. It was also the shooting location for several music videos , from Imagine Dragons’ “Zero” to Manuel Turizo and Rauw Alejandro’s “La Nota.” Plus, the center recently ranked No. 39 on BusinessRate’s Top 100 Florida Arcades list and secured a spot on our roundup of the city’s best arcades . View this post on Instagram Founder Joyce Alarcon-Frohman told the Miami Herald that the reason for its closure was unsustainable rent , adding, “We are also just one more small local business in Wynwood closing its doors in today’s economic environment. The middle class is disappearing and with that, small local venues.” Learn more on t
-
---- Article 442 ---
-URL: https://tenerifeweekly.com/2026/10/13/mercadona-reopens-its-adeje-supermarket-in-tenerife-following-adaptation-to-new-store-9-model/
-Title: Mercadona Reopens Its Adeje Supermarket in Tenerife Following Adaptation to New 'Store 9' Model
-Status hint: Opening | Industry: Grocery
-Published: 2026-10-14 05:25:15
-
-Europa Press Dávila Suggests PSOE’s “Hidden Hand” Is Sabotaging ‘Express Cranes’ in Tenerife October 15, 2026
-
---- Article 443 ---
-URL: https://www.knoxtntoday.com/the-book-whisperer-daughter-go-book-store-hopping/
-Title: The Book Whisperer & daughter go book store hopping
+--- Article 86 ---
+URL: https://hoodline.com/2026/10/anime-toy-shop-egg-cellent-cracks-into-dulles-town-center-lineup/
+Title: Egg-Cellent Toy Store Opens at Dulles Town Center
 Status hint: Opening | Industry: Books / Toys / Gaming
-Published: 2026-10-14 05:16:08
+Published: 2026-10-24 14:52:31
 
-The Book Whisperer & daughter go book store hopping Posted by Linda Sullivan - The Book Whisperer | Oct 14, 2026 | Our Town Readers | 0 My daughter and I went leaf peeping in New England last week and like any other trip we take, we searched out the independent bookstores along our route. We visited five of the more than 200 booksellers in the region. Each one had its own unique character. We began our trip in Boston and on our first morning, we made our way to Beacon Hill Books. Beacon Hill Books and Cafe in Boston, Massachusetts 71 Charles St reet Boston, MA 02114 Beacon Hill Books and Cafe is the most beautiful bookstore I have ever visited. The busy bookstore is in a restored 1845 Greek Revival townhouse on Charles Street, and since opening in 2022, the bookshop has been a destination for book lovers. I have followed their Instagram account since the beginning and could not wait to finally visit. The Children’s section takes up an entire floor of the store. It is dreamy. Child size doors welcome visitors into the space and a train chugs along an overhead track. I am inspired to paint my own walls the exact shade of pale blue and build a fireplace in every room. Put Beacon Hill Books on your itinerary for the next time you visit Boston. After visiting a few other landmarks, we drove to New Hampshire. The fall foliage was at its peak and we were wowed at every turn in the road. White Birch Books in North Conway, New Hampshire 2568 White Mountain Highway North Conway, NH 03860 After leaf peeping in the White Mountains, we made our way back to North Conway and stopped at White Birch Books located in an old house with a beautiful wraparound porch. This independent bookshop has served the literary community of Mount Washington Valley for more than thirty years. It is a little bit quirky. It is cozy. The collection is extensive and well stocked. Readers really appreciate staff pick notecards and the sheer number is impressive. Visitors climb a wide and welcoming stairc
+Source: Famartin / Wikimedia Commons A toy store known for its wall-to-wall Pokémon figurines and anime collectibles is setting up shop in Loudoun County. Egg-Cellent, which already operates a location at Tysons Corner Center, is opening a Japanese toy store at Dulles Town Center, bringing its mix of Squishmallows, anime keepsakes, and Pokémon merchandise to a new corner of Northern Virginia. The news comes from The Burn , which reports that the new Dulles Town Center outpost will sit between Perfume City and Baran Clothing Shop inside the mall. According to the outlet, Egg-Cellent specializes in Pokémon merchandise, Japanese anime toys, and similar products, and the Dulles store is expected to offer Pokémon figurines and stuffed animals alongside keepsake figures of anime characters from Naruto and Dragon Ball. What's Already on Shelves at the Tysons Store Egg-Cellent's existing presence gives a good sense of what shoppers might find once the Dulles doors open. The shop's own website lists an existing location at Tysons Corner Center in Tysons, and a 2023 neighborhood guide from Washingtonian described Egg-Cellent as the new toy spot there, stocked with Squishmallow stuffed animals, Japanese anime figurines, and Pokémon memorabilia. That Tysons location sits at 1961 Chain Bridge Road, per the same Washingtonian piece, inside one of the region's busiest shopping centers. Per The Burn's report, the Dulles Town Center location is also expected to have Japanese toy vending machines, a feature that has become a draw for anime and collectible fans at similar specialty shops. The planned addition of Naruto and Dragon Ball keepsake figures suggests the new store could lean further into anime merchandise than a typical mall toy stand. Filling Out the Dulles Town Center Lineup Dulles Town Center has seen its retail mix shift in recent years, and a specialty toy shop focused on Japanese pop culture marks a notable addition for Loudoun County shoppers who previously had to hea
 
---- Article 444 ---
-URL: https://www.sandiegoville.com/2026/10/historic-san-diego-mexican-restaurant.html
-Title: Historic San Diego Mexican Restaurant Demands Retraction Of Health Closure Report Despite County Records Showing Major Vermin Violations
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-14 05:09:52
-
-FEED CONCERTS MERCH
-
---- Article 445 ---
-URL: https://www.liverpoolecho.co.uk/whats-on/shopping/hundreds-ms-jobs-new-store-34757560
-Title: Hundreds of M&S jobs and new store coming to Merseyside
+--- Article 87 ---
+URL: https://hoodline.com/2026/10/din-tai-fung-permit-hints-at-galleria-spot-where-nobu-houston-now-stands/
+Title: Din Tai Fung Eyes Houston Galleria Location, Filing Shows
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 05:00:00
+Published: 2026-10-24 14:51:57
 
-Oops. Our website is temporarily delivering an degraded response in your location. We are working hard to get it back online.
+1633 Broadway — First East Coast Din Tai Fung Google Street View Houston diners who have long envied Din Tai Fung outposts in Los Angeles, Seattle, Las Vegas and New York may finally get their own shot at the famed soup dumplings. A state filing suggests the Taiwanese restaurant chain could be moving into the Houston Galleria, potentially taking over the space currently occupied by Nobu and neighboring suites. What the State Filing Shows The signal comes from a project filed with the Texas Department of Licensing and Regulation, first reported by Axios Houston on Friday. As reported by CultureMap Houston , the filing indicates Din Tai Fung may be moving forward with a location in the Galleria, with the project set to replace Nobu and adjacent suites, per the TDLR filing. The same filing reportedly puts the footprint at almost 16,800 square feet, with construction estimated to run from February 2027 to mid-June 2027 and a projected cost of $1 million, according to the estimated TDLR timeline cited in the report. CultureMap's reporting cautions that the TDLR filing may not indicate an official lease has been signed, and notes the project timeline may shift significantly before any shovels hit the ground. A separate TDLR project record, registered Oct. 6, 2025 under project number TABS2026002621, appears in the state's permitting database , while an earlier TDLR record separately describes a re-demise and tenant remodel at the Galleria's Rink Level. As of Oct. 23, Nobu Houston remained open and had not announced any plans to close, the report notes. Nobu's Houston Run Nobu Houston debuted in 2018, with a grand opening party that drew chef Nobu Matsuhisa, co-founder Meir Teper and actor Robert De Niro, according to the same CultureMap report. The restaurant's potential displacement would mark a notable shakeup for the Galleria's upscale dining lineup, though nothing about its future has been confirmed by any of the parties involved. CultureMap says it contacted represen
 
---- Article 446 ---
-URL: https://www.vietnam.vn/en/nha-pho-vinh-tien-don-co-hoi-kinh-doanh-truoc-mua-khai-truong-diem-den-giai-tri-moi-cua-the-gioi
-Title: Townhouses in Bay Tien are seizing business opportunities ahead of the grand opening of the 'new world entertainment destination'.
+--- Article 88 ---
+URL: https://influxmagazine.com/the-27th-coney-island-film-fest-is-open-to-submissions/
+Title: The 27th Coney Island Film Fest is Open to Submissions
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 04:35:50
+Published: 2026-10-24 14:47:58
 
-Townhouses in Bay Tien are seizing business opportunities ahead of the grand opening of the 'new world entertainment destination'. The VinWonders “wonder,” golf course, and accommodation system at Vinhomes Green Paradise Can Gio are expected to open simultaneously from July 1, 2027, activating a super-advantageous commercial development opportunity in Tien Bay. Owning a townhouse before this milestone gives buyers more time to choose a business model, find tenants, and prepare the premises to welcome future customers. Thời báo Ngân hàng • 14/10/2026 Follow Vietnam.vn on G o o g l e Add Vietnam.vn on G o o g l e 0 Gateway location connecting many destinations Vinh Tien Bay is positioned as the "new District 1" of Ho Chi Minh City, bringing together entertainment, resort, commercial, event, and cultural and artistic functions similar to the old District 1. In the connectivity structure of this "new District 1," the Can Gio Train Station and Depot area serves as the main transportation hub. The 7.2-hectare Vincom Mega Mall in Vinh Tien Bay is located opposite the Hub Depot and the Song Xanh Theater. This layout opens up the possibility of connecting transportation needs with shopping and socializing needs. Visitors arriving via the future Ben Thanh - Can Gio high-speed railway line can access amenities from the gateway area. For townhouses, the significance of a transportation hub lies in the opportunity for visitors to participate in their next journey after leaving the station. Two major thoroughfares, including the 120m-wide Times Avenue and the 50m-wide Future Road, provide additional connectivity between functional areas in Tien Bay. This network expands access to amenities while also creating more opportunities for owners to choose businesses based on location and target customer groups. Connecting to the train station/depot area and major roads opens up advantageous access to amenities for the townhouses in Tien Bay in the future. For self-employed individuals, 
+Coney Island Film Festival Opens Submissions for Its 27th Annual Celebration of Independent Cinema Festival website: Coney Island Film Festival One of New York’s most distinctive independent film festivals returns April 30–May 2, 2027, bringing filmmakers, movie lovers, and the unmistakable spirit of Coney Island together for another celebration of independent cinema. Independent filmmakers looking for a festival experience that goes beyond traditional screenings and awards ceremonies have a unique opportunity with the return of the Coney Island Film Festival . Now accepting submissions for its 27th annual edition, the Brooklyn-based event has spent more than two decades celebrating independent cinema against the colorful backdrop of one of America’s most recognizable entertainment destinations. Scheduled for April 30 through May 2, 2027, the festival continues its tradition of showcasing an eclectic collection of films while bringing together filmmakers, audiences, and industry professionals for a weekend that combines cinema with the unmistakable atmosphere of Coney Island. Recognized by MovieMaker Magazine as one of the “25 Coolest Film Festivals” and “25 Film Festivals Worth the Entry Fee,” the Coney Island Film Festival has established itself as an event that embraces independent filmmaking in both its programming and personality. The festival is also an Indie Film Exchange (IFX) Founding Partner , with filmmakers now able to submit their projects directly through the IFX platform. A Film Festival Unlike Any Other There are film festivals, and then there’s the Coney Island Film Festival. Located in Brooklyn’s legendary seaside neighborhood, the festival offers an experience that reflects the area’s colorful history, unconventional character, and longstanding relationship with entertainment. While many festivals emphasize industry networking and formal presentations, Coney Island takes a decidedly different approach. Its atmosphere is relaxed, welcoming, and jus
 
---- Article 447 ---
-URL: https://communityimpact.com/central-austin/dining/urban-egg-debuts-first-austin-restaurant/
-Title: Urban Egg opens first Austin location on Burnet Road
+--- Article 89 ---
+URL: https://www.thestreet.com/travel/iconic-disney-ride-to-close-after-43-years
+Title: Iconic Disney ride to close after 43 years
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-24 14:39:20
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.thestreet.com/travel/iconic-disney-ride-to-close-after-43-years]
+
+--- Article 90 ---
+URL: https://www.the-sun.com/money/17195580/trader-joes-opens-theme-park-location
+Title: Trader Joe's opening 12,500-square-foot store near theme park
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 04:32:20
+Published: 2026-10-24 14:35:16
 
-Dining Central Austin Urban Egg debuts first Austin restaurant Explore Central Austin on the Impact Map stories, offers and more Katlynn Fox 1 min read Published October 13, 2026 at 6:32 p.m. CT Urban Egg and Austin Chamber held a ribbon cutting on Oct. 13. The new restaruant officially opened on Oct. 12, marking the brand's third Texas location. ( Katlynn Fox/Community Impact ) Urban Egg is now open on Burnet Road in North Austin, serving up breakfast and lunch classics. The new expansion marks Urban Egg’s first Austin location , with other locations found in Colorado, Kansas and Missouri. On the menu The Austin location menu will feature uniquely Texan offerings, including a Ranch Water, baked chilaquiles and shrimp and grits, according to a news release. The restaurant also partnered with local food suppliers including Fiesta Tortillas, Texas Coffee Roasters, New World Bakery and Texan Heartland. The drink menu Urban Egg has a selection of cocktails, coffee-based drinks and juice blends. The celebration Urban Egg is hosting a multi-day grand opening from Oct. 12-14 featuring exclusive giveaways. The first 20 customers to dine each day from Oct. 12-14 will receive free coffee for a year. The new business is also hosting a raffle to give one customer free pancakes for a year. Opened Oct. 12 7600 Burnet Road, Ste. 250, Austin www.urbanegg.com
+Verifying Device Verifying your device, please wait Verification failed. Please try again. Try Again Verification failed. Please try again.
 
---- Article 448 ---
-URL: https://cumbriacrack.com/2026/10/13/opening-date-for-egremonts-new-aldi-revealed/
-Title: Opening date for Egremont’s new Aldi revealed
+--- Article 91 ---
+URL: https://www.nj.com/business/2026/10/popular-nj-shopping-mall-adding-6-new-stores-heres-whats-coming.html
+Title: Bustling Bergen County shopping mall adding 6 new stores. See what’s opening.
+Status hint: Opening | Industry: Retail REITs
+Published: 2026-10-24 14:00:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.nj.com/business/2026/10/popular-nj-shopping-mall-adding-6-new-stores-heres-whats-coming.html]
+
+--- Article 92 ---
+URL: https://www.newsobserver.com/news/business/article317648054.html
+Title: New stores are opening in Crabtree Valley Mall, Durham and Chapel Hill
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 04:17:14
+Published: 2026-10-24 14:00:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://cumbriacrack.com/2026/10/13/opening-date-for-egremonts-new-aldi-revealed/]
+Courtesy of Crabtree Valley Mall Courtesy of Crabtree Valley Mall Key Takeaways Key Takeaways AI-generated summary reviewed by our newsroom. Read our AI Policy. The Yard Collective opens Oct. 24 in Durham after rebranding from 3 Sisters. Vietri opens its first flagship store Oct. 17 in Chapel Hill’s East 54. Buc-ee’s eyes a second North Carolina site near Rocky Mount’s I-95. Four new businesses are making moves across the Triangle area this fall, from custom apparel in Durham to Italian home goods in Chapel Hill. Here’s a quick look at where to shop, eat and explore. The Yard Collective , a custom apparel and embroidery shop at 5410 NC Hwy 55 in Durham, officially opens Saturday, Oct. 24 after rebranding from 3 Sisters Embroidery, with a focus on HBCU and Divine Nine gear. North Carolina-based Italian dishware and home decor brand Vietri opened its first flagship location Saturday, Oct. 17 in Chapel Hill’s East 54 shopping center, featuring handcrafted collections for the table, home and garden. Pop culture merchandise store BoxLunch celebrated its grand opening at Crabtree Valley Mall Saturday, Oct. 17, with games, a live DJ and gift cards worth $10 to $100 for the first 50 attendees. Every $10 spent provides a meal through its Feeding America partnership. Buc-ee’s is eyeing a second North Carolina location near the Interstate 95 and Halifax Road interchange in Rocky Mount, where the Texas-based chain hopes to build a 74,000-square-foot travel center. Its first NC store is already under construction in Alamance County. The summary points above were compiled with the help of AI tools and edited by journalists. The source reporting referenced above was written and edited entirely by journalists. Read Next Food & Drink National health franchise opens 2nd NC spot in Apex shopping center October 22, 2026 2:13 PM Read Next Food & Drink National fast food chain closes NC locations after franchisee files bankruptcy October 22, 2026 9:55 AM Related Stories from  Raleigh New
 
---- Article 449 ---
-URL: https://www.bizjournals.com/nashville/news/2026/10/13/batter-up-social-nashville-flagship-location.html
-Title: World's first open-air batting venue to open flagship location in Nashville
+--- Article 93 ---
+URL: https://kroc.com/when-is-popeyes-opening-rochester/
+Title: Opening Very Soon: After 5 Long Years, Rochester’s Popeyes Is Almost Ready!
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-14 04:04:00
+Published: 2026-10-24 13:16:25
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/nashville/news/2026/10/13/batter-up-social-nashville-flagship-location.html]
+It’s Finally Happening: Rochester’s First Popeyes Is Opening Soon It’s Finally Happening: Rochester’s First Popeyes Is Opening Soon Dunken Dunken Updated: October 24, 2026 Troy Dunken TSM Rochester Share on Facebook Share on Twitter Earlier this year, we built a wish list of restaurants based on feedback from Rochester locals, and Popeyes was the second most requested spot in town. (Scroll down to see the full list of top-requested restaurants and let us know what's missing!) Now, a half decade after finding out they were coming to town, the finish line for Popeyes is finally in sight. Construction is almost done and the restaurant is close to opening. Get our free mobile app Popeyes Rochester, MN Location Opening Soon Popeyes is one of my favorite chains, so I was pumped several years ago when the company confirmed to me that their first location would be opening by late 2021. I was so excited to be able to get their delicious chicken tenders with mashed potatoes and a biscuit. That obviously didn't happen, and as time went on, a lot of people started losing hope. But last May, a construction crew finally broke ground, and now it won't be long until they're up and running. Where Will The Popeyes Restaurants Be Located in Rochester, MN? Google Google Rochester's first Popeyes location will open near the Apache Mall at 823 Apache Lane SW. A second restaurant is set to open up by Walmart North next spring. When Will Popeye's Open in Rochester, MN? According to the Post Bulletin, construction crews at the Apache Mall site are wrapping up final details and preparing the building for city inspections. Here's a look at what modern Popeyes restaurants look like: Popeyes Newsroom Popeyes Newsroom We've been told for months that early November was the target opening date, so assuming the inspections pass without a hitch, Rochester’s very first Popeyes is officially on track to open its doors in the next couple of weeks. The 2026 Wish List: 7 Restaurants Rochester Locals Want
 
---- Article 450 ---
-URL: https://collabo-cafe.com/en/events/collabo/bungo-stray-dogs-kinokuniya-shinjuku-2026/?amp=1
-Title: "Bunstro" Pop-Up Store at Kinokuniya Bookstore Shinjuku Opens October 27!
-Status hint: Opening | Industry: Books / Toys / Gaming
-Published: 2026-10-14 03:54:17
+--- Article 94 ---
+URL: https://lufkindailynews.com/news_reuters/top_news/file-photo-newly-opened-new-yalu-river-bridge-as-seen-from-dandong/image_36848f41-eed7-5934-b18e-c3c8f7c321e4.html
+Title: FILE PHOTO: Newly opened New Yalu River Bridge as seen from Dandong
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 13:12:02
 
-The “Literary Masters: Stray Dogs” pop-up store—“Literary Masters: Stray Dogs Pop-Up Store at Kinokuniya Shinjuku Main Store”—based on the original work by Kafka Asagiri and illustrated by Harukawa 35, is now open! The event will be held at the Kinokuniya Shinjuku Main Store from October 27 to November 10, 2026, featuring merchandise based on the second installment of the “Pure Literary Masters Café” illustration series, as well as re-released items. Key Points of This Article ・Held from October 27 to November 10, 2026, at THE ENTRANCE on the 1st floor of the Main Building at Kinokuniya Bookstore Shinjuku Main Store ・Merchandise featuring illustrations from the second installment of the “Pure Literary Masters Café” original illustration series is now available ・Re-released items, such as the “modern fashion” and “Ghost House” versions, will also be available ・For every 2,000 yen (tax included) spent, customers will receive one random bonus sticker (8 varieties total) ・On the first day, certain time slots will require advance online reservations; COCOLLABO will also offer pre-order sales The article continues after the following advertisement List of “Bungo Stray Dogs” Articles Details on the “Literary Masters: Stray Dogs POP-UP STORE at Kinokuniya Shinjuku Main Store” A “Literary Masters: Stray Dogs” POP-UP STORE will be held at THE ENTRANCE on the first floor of the main building at Kinokuniya Shinjuku Main Store. Illustrations from the second installment of the “Junbungo Café” original illustration series will be unveiled, and merchandise featuring these illustrations will be on sale. The lineup will also include re-releases of items from past series. ©Kafka Asagiri, Harukawa 35/KADOKAWA/Bungo Stray Dogs Production Committee ©Caravan, Inc Advance online reservations required for select time slots on the first day On the first day, October 27, advance online reservations will be required for select time slots. Reservations will be accepted on a first-come, first-se
+Facebook Twitter WhatsApp SMS Email Print Copy article link Save FILE PHOTO: A China Immigration inspection vessel travels along the Yalu river past a North Korean customs building at the end of the newly opened New Yalu River Bridge, which connects North Korea's Sinuiju from China's Dandong New Zone, as seen from Dandong, Liaoning province, China October 15, 2026. REUTERS/Florence Lo/File Photo Florence Lo Facebook Twitter WhatsApp SMS Email Print Copy article link Save Latest e-Edition Most Popular Articles Images Videos Commented Articles Angelina County jury acquits Huntington man of child injury charges Man, woman found dead of apparent gunshot wounds in Third Street home Brookshire Brothers opening new location with premier outdoor entertainment venue Nov. 11 Angelina County jury finds Chacon guilty of continuous sexual abuse Puttopia Mini Golf and Restaurant opens in Lufkin Sanitation worker killed in crash with train Dogs treated like family at Drop Tine Kennels Witchy woman: Lufkin native launches The Ritual Bloom metaphysical shop Generations unite for prayer and dance during Lufkin Navaratri event Morning incident ruled to be false report to induce emergency response Images Sorry, there are no recent results for popular images. Videos Sorry, there are no recent results for popular videos. Commented Sorry, there are no recent results for popular commented articles. Latest Charm East Texas
+
+--- Article 95 ---
+URL: https://lufkindailynews.com/news_reuters/top_news/newly-opened-new-yalu-river-bridge-as-seen-from-dandong/image_a9d2d1c3-91ab-54ac-98a6-29448dc4fdbd.html
+Title: Newly opened New Yalu River Bridge as seen from Dandong
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 13:12:02
+
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://lufkindailynews.com/news_reuters/top_news/newly-opened-new-yalu-river-bridge-as-seen-from-dandong/image_a9d2d1c3-91ab-54ac-98a6-29448dc4fdbd.html]
+
+--- Article 96 ---
+URL: https://www.nbcpalmsprings.com/local-and-community/2026/10/24/ranch-house-bar-and-grill-celebrates-grand-opening-in-indio
+Title: Ranch House Bar and Grill Celebrates Grand Opening in Indio
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 13:10:41
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.nbcpalmsprings.com/local-and-community/2026/10/24/ranch-house-bar-and-grill-celebrates-grand-opening-in-indio]
+
+--- Article 97 ---
+URL: https://mocoshow.com/2026/10/24/hangry-joes-opens-newest-montgomery-county-location/
+Title: Hangry Joe’s Opens Newest Montgomery County Location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 13:00:37
+
+Hangry Joe’s Hot Chicken is now open at Briggs Chaney Marketplace, located at 13811 Outlet Dr. The restaurant has taken over the former Metro PCS space between Mimi’s Perfect Nails and H&R Block. The opening follows several months of construction and preparation at the shopping center. As we previously reported, the location secured its construction permit in late 2025 and had initially targeted a potential early 2026 opening before the timeline shifted to the fall. Hangry Joe’s is known for its Nashville-style hot chicken sandwiches, tenders, wings, and chicken and waffles, with heat levels ranging from mild options to its signature hotter varieties. The Briggs Chaney restaurant joins several other Montgomery County locations, including Wheaton at 2533 Ennals Ave, Rockville at 718-B Rockville Pike and 10050 Darnestown Rd, Montgomery Village at 19290 Montgomery Village Ave, and Germantown at 19730 Germantown Rd. Author MCS Staff
+
+--- Article 98 ---
+URL: https://www.westword.com/food-drink/restaurant-openings-and-closings-denver-broadway-bar-and-pretzels-40952295/
+Title: Every opening and closing this week: Broadway bar that opened after the pandemic has closed
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 13:00:00
+
+Restaurants Every opening and closing this week: Broadway bar that opened after the pandemic has closed Plus:  Openings include Risica in RiNo, the Pretzelry, Den Thai Street, Banh Mi House and more. By Antony Bruno October 24, 2026 The L on Broadway survived the pandemic, but has now closed 5 years later. Antony Bruno Add Westword as a preferred source on Google Tags: Business Openings & Closings Audio By Carbonatix Back in 2021, Denver’s restaurant and bar scene was slowly emerging from the harsh winds of the pandemic. Many establishments closed. Many more reopened. And a few brave souls chose this time to open net-new concepts hoping to attract diners and drinkers reveling in post-lockdown freedom. One of them was The L . Founded by veteran bar team Adam Hodak and Alex Lerman, The L took over a former pet food store at 46 Broadway. Hodak was one of the forces driving the old Green Russell on Larimer Square, and launched the beverage program at Denver Milk Market. Lerman worked for Hodak for years until leaving briefly to tend bar in New York, and returned to open the L with his former boss. Their pre-pandemic journey was challenging, however. After signing a lease in September 2019, multiple liquor license hearings were postponed over lockdown logistics, so the pair couldn’t open the space until January 2021. That saga came to a quick and quiet end this week. GET MORE COVERAGE LIKE THIS Sign up for the Food & Drink newsletter to get the latest stories delivered to your inbox Notice of Collection | Terms | Privacy THANK YOU! You're all set. CLOSE Editor's Picks Andrea Frizzi’s Risica is now open in RiNo Uptown burger bar to close after 16 years Italian eatery closes after five years in RiNo “Wish I had better news. Last Night for the L,” Hodak wrote on Instagram Thursday, Oct. 22. “I thank everyone who made it their home and everyone who enjoyed it. I tried. I just couldn’t keep it going.” One door closes, another opens in RiNo Andrea Frizzi at Risica, a “Milanese
+
+--- Article 99 ---
+URL: https://www.pressreader.com/usa/los-angeles-times/20261024/281681146870297
+Title: Vallarta Supermarke­ts opens new store in Duarte
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 12:56:15
+
+PressReader.com - Digital Newspaper & Magazine Subscriptions
+
+--- Article 100 ---
+URL: https://thetomahawk.com/news/425840/wood-fired-kitchen-and-wine-bar-to-open-in-2027/
+Title: Wood-fired kitchen and wine bar to open in 2027
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-24 12:30:00
+

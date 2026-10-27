@@ -1,4 +1,4 @@
-You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates, footage sizes, or statuses:
 
 🔍 Extract these fields
 • Store/Shop/Restaurant Name
@@ -11,23 +11,30 @@ You are an expert, precise data extractor specialized in retail and restaurant o
   - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
   - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
   👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Footage Size
+  - Extract the store, shop, restaurant, or facility's footage size only if it is explicitly mentioned in the article text
+  - Preserve the exact figure and unit as stated, e.g. "12,000 square feet", "2,500 sq. ft.", "approximately 8,000 square feet"
+  - If the article mentions multiple relevant footage sizes for the same business, include each size with its context
+  - Do NOT calculate, convert, estimate, or infer footage size; do not confuse it with acreage, lot size, seating capacity, or other measurements
+  - If no footage size is mentioned, write exactly "Not specified"
 • Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
 
 📊 Output format
 Create ONE clean Markdown table with these exact column headers (in this order):
-| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Footage Size | Short Description | Article Link | Published Date |
 
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
 • For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If an article has qualifying business information but no footage size, write "Not specified" in the Footage Size column
 • If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
 
 🚫 Strict constraints
-• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses, dates, or footage sizes  • ❌ No rewriting or normalizing status text
 
 📎 Final section (mandatory)
 At the very end of your response, add:
@@ -39,411 +46,401 @@ If none, write: None
 
 
 --- Article 351 ---
-URL: https://www.ourtownny.com/news/celebrity-hair-salon-john-barrett-lays-off-71-plans-dec-closure-FH6292698
-Title: Celebrity Hair Salon John Barrett Lays off 71, Plans Dec. Closure
-Status hint: Closing | Industry: Health / Beauty
-Published: 2026-10-16 02:54:34
+URL: https://www.thedestinlog.com/story/news/local/2026/10/20/destin-is-open-for-business-after-hurricane/92346272007/
+Title: Gov. DeSantis says Destin is open
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 19:51:00
 
-1 Celebrity hair salon
+[Could not fetch: HTTPSConnectionPool(host='www.thedestinlog.com', port=443): Max retries exceeded with url: /story/news/local/2026/10/20/destin-is-open-for-business-after-hurricane/92346272007/ (Caused by NameResolutionError("HTTPSConnection(host='www.thedestinlog.com', port=443): Failed to resolve 'www.thedestinlog.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 352 ---
-URL: https://abc11.com/post/buc-ees-could-open-second-north-carolina-location-rocky-mount-95/19942478/
-Title: Buc-ee's could open second North Carolina location in Rocky Mount near I-95
+URL: https://www.statecollege.com/articles/business/wawa-breaks-ground-for-state-college-area-store/
+Title: Wawa Breaks Ground for State College Area Store
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 02:29:17
+Published: 2026-10-20 19:47:34
 
-Buc-ee's could open second North Carolina location in Rocky Mount near I-95 - ABC11 Raleigh-Durham TRAVEL Buc-ee's eyes Rocky Mount for second NC location Friday, October 16, 2026 2:23AM Buc-ee's is considering a second North Carolina location, with plans to develop nearly 34 acres near I-95 in Rocky Mount. ROCKY MOUNT, N.C. (WTVD) -- North Carolina could be getting its second Buc-ee's, this time in Rocky Mount. The city confirmed Thursday that the Texas-based convenience store chain is looking to develop nearly 34 acres near the I-95 and Halifax Road interchange. Buc-ee's has requested that the property be rezoned, and the city is reviewing the request. The chain's first North Carolina location is currently under construction along I-40/I-85 in Mebane and is expected to open in November 2027. Buc-ee's travel centers are known for their large number of gas pumps, brisket sandwiches and large, clean restrooms. Download the ABC11 News app Report a correction or typo Copyright © 2026 WTVD-TV. All Rights Reserved. Related Topics TRAVEL ROCKY MOUNT NC GAS STATION CAR BUSINESS Watch Live ON NOW Sunny and breezy start to the week Early voting sites see big turnout in NC Roxboro police officer faces charges after arrest on Glenwood Avenue Cary community rallies to help Nepal flood victims Airman killed rappelling from ceiling in Salute to Armed Forces ceremony 1 dead, 8 hospitalized after Harnett County crash Pope Leo says he will gradually resume duties after cancer surgery 4 killed in explosion during live-fire military training exercise in Canada
+[Could not fetch: HTTPSConnectionPool(host='www.statecollege.com', port=443): Max retries exceeded with url: /articles/business/wawa-breaks-ground-for-state-college-area-store/ (Caused by NameResolutionError("HTTPSConnection(host='www.statecollege.com', port=443): Failed to resolve 'www.statecollege.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 353 ---
-URL: https://www.leafkyoto.net/en/10-16-26-kyoto-cosme/
-Title: Kyoto’s First [@cosme STORE] Opens in Kawaramachi! Featuring the Latest Korean Cosmetics and Self-Service Skin Analysis
+URL: https://www.the-sun.com/money/17176802/tropical-smoothie-cafe-store-opening/
+Title: Tropical Smoothie Cafe known for 'detox drinks' announces ambitious plans to open 40 stores in US region
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 02:24:51
+Published: 2026-10-20 19:45:06
 
-The 6th-floor restaurant floor and the B2 specialty store floor at [Kyoto Yodobashi]... 2026.8.21
+[Could not fetch: HTTPSConnectionPool(host='www.the-sun.com', port=443): Max retries exceeded with url: /money/17176802/tropical-smoothie-cafe-store-opening/ (Caused by NameResolutionError("HTTPSConnection(host='www.the-sun.com', port=443): Failed to resolve 'www.the-sun.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 354 ---
-URL: https://www.waikatotimes.co.nz/nz-news/361100471/horsing-around-equifest-crowds-saddle-opening-day
-Title: Horsing around: Equifest crowds saddle up for opening day
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 02:06:52
+URL: https://whatnow.com/new-york/retail/pop-up-grocer-to-open-upper-east-side-cafe-and-grocery-store/
+Title: Pop Up Grocer to Open Upper East Side Cafe and Grocery Store
+Status hint: Opening | Industry: Grocery
+Published: 2026-10-20 19:43:24
 
-The Waikato Times
+[Could not fetch: HTTPSConnectionPool(host='whatnow.com', port=443): Max retries exceeded with url: /new-york/retail/pop-up-grocer-to-open-upper-east-side-cafe-and-grocery-store/ (Caused by NameResolutionError("HTTPSConnection(host='whatnow.com', port=443): Failed to resolve 'whatnow.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 355 ---
-URL: https://communityimpact.com/conroe-montgomery/dining/spectator-s-bar-and-grill/
-Title: Spectator's Bar and Grill now open in Conroe
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 01:41:00
+URL: https://www.ocala.com/story/business/2026/10/20/only-a-few-days-away-for-the-new-bjs-wholesale-club-opening/92343158007/
+Title: BJ's Wholesale Club opening its doors on Oct. 23
+Status hint: Opening | Industry: Grocery Wholesale
+Published: 2026-10-20 19:43:00
 
-Dining Conroe - Montgomery Spectator's Bar and Grill now open in Conroe Explore Conroe - Montgomery on the Impact Map stories, offers and more Jessica Shorten
+[Could not fetch: HTTPSConnectionPool(host='www.ocala.com', port=443): Max retries exceeded with url: /story/business/2026/10/20/only-a-few-days-away-for-the-new-bjs-wholesale-club-opening/92343158007/ (Caused by NameResolutionError("HTTPSConnection(host='www.ocala.com', port=443): Failed to resolve 'www.ocala.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 356 ---
-URL: https://hoodline.com/2026/10/classic-burgers-marks-apple-valley-debut-with-ribbon-cutting-classic-car-cruise/
-Title: Classic Burgers Grand Opening Hits Apple Valley Oct. 16
+URL: https://www.the-sun.com/money/17178851/heb-open-new-grocery-store-october-converse-texas/
+Title: H-E-B sets sights on October 28 opening with groceries and made-to-order BBQ
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 01:37:43
+Published: 2026-10-20 19:42:53
 
-21044 Bear Valley Rd. — Approximate Site of Grand Opening Google Street View Classic Burgers is throwing open its doors in Apple Valley this Friday with a ribbon-cutting ceremony at noon followed by a Classic Car Cruise Night starting at 4 p.m., complete with food specials, live music and a raffle. The burger spot at 21044 Bear Valley Road, next to Town and Country Tire, has quietly been serving customers since July 1, but Friday marks its full public celebration. Owner Ayed Hugais told the Victorville Daily Press that he and his family decided to open the store before holding its planned celebration. The timeline tracks with a longer-running soft launch: according to the restaurant's Instagram https://www.instagram.com/p/DaQlCZaCUps/?hl=en , Classic Burgers first began serving customers at the Apple Valley location on July 1 through a drive-thru-only setup, well ahead of this week's formal grand opening. The restaurant grinds its burger meat fresh in-house every morning. Menu items include the Lava Burger, the Pastrami Cheeseburger, and the Mojave Heat chicken sandwich. A Building With Its Own Cruise Night History The Bear Valley Road building carries some local car-culture pedigree of its own. The same property previously housed Burgerlicious, a local burger joint that hosted a cruise night car show in its parking lot in 2017, according to Victor Valley News . The Apple Valley restaurant operates as “Classic No2,” the company's second location following its flagship “Classic No1” in Inyokern, an unincorporated Kern County community, per the business's own website. Car Shows Around Apple Valley A car show in Apple Valley was expected to draw nearly 300 registrants, as Hoodline has reported . The Happy Trails Parade was followed by a separate street fair and car show at James Woody Park. Friday's event folds Classic Burgers into Apple Valley's car-show calendar, pairing a new local business with a classic car cruise at an address that hosted a cruise night in 2017. 
+[Could not fetch: HTTPSConnectionPool(host='www.the-sun.com', port=443): Max retries exceeded with url: /money/17178851/heb-open-new-grocery-store-october-converse-texas/ (Caused by NameResolutionError("HTTPSConnection(host='www.the-sun.com', port=443): Failed to resolve 'www.the-sun.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 357 ---
-URL: https://medina-gazette.com/news/477672/legacy-hotel-holds-career-fair-ahead-of-grand-opening/
-Title: Legacy Hotel holds career fair ahead of grand opening
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-16 01:32:46
+URL: https://nashvillelifestyles.com/dining/food-and-drink/bar-cala-cala-introduces-a-hi-fi-discotecha-culinary-experie/
+Title: Now Open in East Nashville, Bar Cala Cala
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 19:34:45
 
-
+[Could not fetch: HTTPSConnectionPool(host='nashvillelifestyles.com', port=443): Max retries exceeded with url: /dining/food-and-drink/bar-cala-cala-introduces-a-hi-fi-discotecha-culinary-experie/ (Caused by NameResolutionError("HTTPSConnection(host='nashvillelifestyles.com', port=443): Failed to resolve 'nashvillelifestyles.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 358 ---
-URL: https://www.wfmz.com/features/eat-sip-shop/very-emotional-time-beloved-zoto-s-diner-to-close-after-more-than-50-years-of-operation/article_25e222ad-919e-4682-9e5f-7d70bba287f7.html
-Title: ‘Very emotional time’: Beloved Zoto’s Diner to permanently close after 53 years
+URL: https://secretnyc.co/new-restaurants-bars-nyc-october-2026/
+Title: New restaurants & bars opening in NYC October 2026
 Status hint: Opening | Industry: Restaurants
-Published: 2026-10-16 01:25:00
+Published: 2026-10-20 19:28:37
 
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.wfmz.com/features/eat-sip-shop/very-emotional-time-beloved-zoto-s-diner-to-close-after-more-than-50-years-of-operation/article_25e222ad-919e-4682-9e5f-7d70bba287f7.html]
+[Could not fetch: HTTPSConnectionPool(host='secretnyc.co', port=443): Max retries exceeded with url: /new-restaurants-bars-nyc-october-2026/ (Caused by NameResolutionError("HTTPSConnection(host='secretnyc.co', port=443): Failed to resolve 'secretnyc.co' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 359 ---
-URL: https://cebudailynews.inquirer.net/775731/archival-targets-november-opening-for-idle-%E2%82%B19-9m-labangon-health-center
-Title: Archival targets November opening for idle ₱9.9M Labangon health center
-Status hint: Opening | Industry: Pharmaceutical / Medical
-Published: 2026-10-16 01:20:00
+URL: https://www.instagram.com/p/DeulSpZypCE/
+Title: Fans of the Sign of the Beefcarver line up outside and wrapped around the back of restaurant on Woodward Avenue in Royal Oak on Tuesday, Oct. 20, 2026. Since announcing they were closing on October 25th people have been lining up to eat there one mo
+Status hint: Closing | Industry: Restaurants
+Published: 2026-10-20 19:27:35
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://cebudailynews.inquirer.net/775731/archival-targets-november-opening-for-idle-%E2%82%B19-9m-labangon-health-center]
+[Could not fetch: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /p/DeulSpZypCE/ (Caused by NameResolutionError("HTTPSConnection(host='www.instagram.com', port=443): Failed to resolve 'www.instagram.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 360 ---
-URL: https://travelhost.com/hotels/intercontinental-taipei-dome-baseball-stadium-hotel-open
-Title: A 347-Room Hotel Just Opened Inside Taipei’s 40,000-Seat Stadium
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-16 01:03:00
+URL: https://www.bizjournals.com/washington/news/2026/10/20/concentra-reagan-national-airport-clinic.html
+Title: Concentra opening health clinic near Reagan National Airport, plots further N. Va. expansion
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 19:24:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://travelhost.com/hotels/intercontinental-taipei-dome-baseball-stadium-hotel-open]
+[Could not fetch: HTTPSConnectionPool(host='www.bizjournals.com', port=443): Max retries exceeded with url: /washington/news/2026/10/20/concentra-reagan-national-airport-clinic.html (Caused by NameResolutionError("HTTPSConnection(host='www.bizjournals.com', port=443): Failed to resolve 'www.bizjournals.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 361 ---
-URL: https://whatnow.com/phoenix/restaurants/emberance-plans-late-fall-opening-in-phoenix/
-Title: Emberance Plans Late Fall Opening in Phoenix
+URL: https://yieldpro.com/2026/10/santa-rosa-california-ribbon-cutting/
+Title: Sonoma County Community Development Commission Celebrated Grand Opening of 75-Unit Affordable Housing Property in Santa Rosa California
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-16 01:00:29
+Published: 2026-10-20 19:22:47
 
-Rendering of Emberance’s interior at Hilton Phoenix Resort at The Peak (Image credit: Emberance) SHARE Emberance plans to open in late fall 2026 at Hilton Phoenix Resort at The Peak , at 7667 N. 16th Street , according to a press release shared with What Now Phoenix. The restaurant will occupy a freestanding, 7,366-square-foot building and serve breakfast, lunch, and dinner. An exact opening date has not been set. Chef Mireya Ryan will head the kitchen. She has 13 years of experience in luxury hospitality and fine dining, including culinary leadership roles in Phoenix and San Diego. Most recently, she worked as executive sous chef at T. Cook’s at Royal Palms Resort and Spa . The menu will take inspiration from the Sonoran Desert and feature ingredients from Arizona growers and producers. A robata grill will be central to the kitchen’s live-fire cooking. The bar will offer cocktails and wine. “We’ve created an intimate, relaxed dining room made for memorable experiences, where the food and hospitality capture the spirit of the Southwest,” Julia Najafi , vice president and principal of Pivotal Group , said in the release. A central bar will seat 22 guests. Outside, two terraces will have seating around fire pits, with views of Piestewa Peak and the resort pool. A private dining room will accommodate dinners, events, and celebrations. Before opening, the team will offer a preview at Arizona Taco Fest , scheduled for October 17 and 18 at Salt River Fields . Attendees will be able to sample the food and meet Chef Mireya Ryan and other members of the restaurant’s team. Follow Emberance on Instagram for opening updates. Rendering of Emberance’s exterior and patio at Hilton Phoenix Resort at The Peak (Image Credit: Emberance) Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 7667 N 16th St, Phoenix, AZ 85020 Be the First to Know From new restaurant openings to exciting retail launches and real estate insights,
+[Could not fetch: HTTPSConnectionPool(host='yieldpro.com', port=443): Max retries exceeded with url: /2026/10/santa-rosa-california-ribbon-cutting/ (Caused by NameResolutionError("HTTPSConnection(host='yieldpro.com', port=443): Failed to resolve 'yieldpro.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 362 ---
-URL: https://neon.reviewjournal.com/kats/off-strip-resort-opening-its-first-ticketed-show-this-month-3344348/
-Title: Off-Strip resort opening its first ticketed show this month
-Status hint: Closing | Industry: Hospitality
-Published: 2026-10-16 00:39:53
+URL: https://abc7.com/post/portos-bakery-opening-announces-new-location-inland-empire/19960896/
+Title: Porto's Bakery opening announces new location in the Inland Empire
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 19:16:17
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://neon.reviewjournal.com/kats/off-strip-resort-opening-its-first-ticketed-show-this-month-3344348/]
+[Could not fetch: HTTPSConnectionPool(host='abc7.com', port=443): Max retries exceeded with url: /post/portos-bakery-opening-announces-new-location-inland-empire/19960896/ (Caused by NameResolutionError("HTTPSConnection(host='abc7.com', port=443): Failed to resolve 'abc7.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 363 ---
-URL: https://travelweekly.com.au/four-seasons-to-open-cliffside-resort-in-morocco/
-Title: Four Seasons to open cliffside resort in Morocco
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-15 23:45:42
+URL: https://patch.com/connecticut/manchester/affordable-designer-clothing-store-opens-has-expansion-plans-connecticut
+Title: Affordable Designer Clothing Store Opens, Has Expansion Plans In Connecticut
+Status hint: Opening | Industry: Apparel
+Published: 2026-10-20 19:14:26
 
-Four Seasons Resort Tangier rendering. SHARE Four Seasons has announced plans to open Four Seasons Resort Tangier, Morocco, a new luxury cliffside resort overlooking the Mediterranean Sea and Strait of Gibraltar in the city’s Cap Malabata district. Four Seasons Resort Tangier will offer a rare connection between continents, cultures, and coastlines with views of Spain across the water. The resort sits approximately 15 minutes from Tangier’s high-speed train station and 45 minutes from Tangier Ibn Battouta Airport. “As our fourth property in Morocco, Four Seasons Resort Tangier expands our collection in one of the region’s most compelling destinations,” Four Seasons group head of development Ricardo Suarez said. “We look forward to bringing this exceptional project to life and creating a Resort that reflects the character of Tangier while offering guests the opportunity to experience its unique coastal setting alongside the service excellence that defines Four Seasons.” Resort highlights Arjitec designed the resort with interiors by Goddard Littlefair. It will feature 99 guest rooms and suites, including 27 standalone villas, and more than 260 metres (850 feet) of waterfront, creating a distinctive retreat that celebrates the natural beauty and rich heritage of northern Morocco. Four Seasons Resort Tangier places guests within easy reach of the city’s culture, souks, and coastline. It features expansive pool and waterfront lounging, four signature dining venues blending local and international flavours, a full-service spa and fitness center, as well as the brand’s signature Kids For All Seasons program. For celebrations, meetings, and special events, flexible indoor and outdoor venues provide a setting for connection and collaboration, all complemented by panoramic waterfront views. “We are thrilled to partner with Four Seasons on the development of Four Seasons Resort Tangier,” Royal Resort Cap Malabata chief executive officer Abdulwahed Al Kooheji said. “Together w
+[Could not fetch: HTTPSConnectionPool(host='patch.com', port=443): Max retries exceeded with url: /connecticut/manchester/affordable-designer-clothing-store-opens-has-expansion-plans-connecticut (Caused by NameResolutionError("HTTPSConnection(host='patch.com', port=443): Failed to resolve 'patch.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 364 ---
-URL: https://www.ctvnews.ca/winnipeg/video/2026/10/15/free-clothing-store-opens-in-exchange-district/
-Title: Free clothing store opens in Exchange District
+URL: https://m.economictimes.com/world/business/a-janitor-and-a-hairdresser-opened-a-tiny-la-clothing-store-with-11000-in-1984-31-years-later-forever-21-made-them-worth-5-9-billion/articleshow/135048763.cms
+Title: A janitor and a hairdresser opened a tiny LA clothing store with $11,000 in 1984; 31 years later, Forever
 Status hint: Opening | Industry: Apparel
-Published: 2026-10-15 23:11:43
+Published: 2026-10-20 19:12:09
 
-Free clothing store opens in Exchange District – CTVNews Skip to main content ADVERTISEMENT Share current article via Email Share current article via X Share current article via Reddit Share current article via LinkedIn Winnipeg Watch Free clothing store opens in Exchange District Main Street Project celebrates grand opening of Ash’s Closet October 15, 2026 at 7:11p.m. EDT
+[Could not fetch: HTTPSConnectionPool(host='m.economictimes.com', port=443): Max retries exceeded with url: /world/business/a-janitor-and-a-hairdresser-opened-a-tiny-la-clothing-store-with-11000-in-1984-31-years-later-forever-21-made-them-worth-5-9-billion/articleshow/135048763.cms (Caused by NameResolutionError("HTTPSConnection(host='m.economictimes.com', port=443): Failed to resolve 'm.economictimes.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 365 ---
-URL: https://www.yahoo.com/news/videos/reputation-salon-celebrates-opening-bridgeport-222753716.html
-Title: 'Reputation the Salon' celebrates opening in Bridgeport
-Status hint: Opening | Industry: Health / Beauty
-Published: 2026-10-15 22:27:53
+URL: https://finance.yahoo.com/real-estate/articles/american-home-furniture-close-months-190500274.html
+Title: American Home Furniture to close months after bankruptcy filing
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 19:05:00
 
-A local entrepreneur officially celebrated his place in the West Virginia business community on Thursday with a ribbon-cutting in Bridgeport. About Our Ads
+[Could not fetch: HTTPSConnectionPool(host='finance.yahoo.com', port=443): Max retries exceeded with url: /real-estate/articles/american-home-furniture-close-months-190500274.html (Caused by NameResolutionError("HTTPSConnection(host='finance.yahoo.com', port=443): Failed to resolve 'finance.yahoo.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 366 ---
-URL: https://finance.yahoo.com/small-business/articles/national-cookie-franchise-closing-several-221649432.html
-Title: National cookie franchise closing several stores nationally, including in Alabama
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-15 22:16:49
+URL: https://www.bizjournals.com/charlotte/news/2026/10/20/lowes-foods-lease-grocer-mpv-properties-catawba.html
+Title: Lowes Foods targets retail project for new store in Charlotte region
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 19:00:00
 
-National cookie franchise closing several stores nationally, including in Alabama William Thornton Fri, October 16, 2026 at 3:46 AM GMT+5:30 1 min read Crumbl Cookies, facing declining sales, have begun closing several stores, including one in Montgomery. The Zelda Road location is now listed as permanently closed on Google. The franchise still has a store at 7736 Vaughn Road in Montgomery. Crumbl has 18 locations in Alabama. The closure comes at a challenging time for the company. Restaurant Business is reporting that at least 57 Crumbl locations have closed this year and at least 55 franchises were listed for sale. Sales at Crumbl have declined over the past two years, and traffic at the chain's more than 1,000 locations was down 32% year over year, according to data pulled from the traffic-tracker firm Placer.ai. According to documents obtained by Restaurant Business and reported by 2KUTV , August sales were 70 percent lower than two years prior. The company's annual sales per location peaked at $1.84 million in 2022. They declined to $1.16 million in 2023, rose to $1.36 million in 2024, and fell to $1.14 million in 2025. Stories by William Thornton Birmingham-Shuttlesworth officially opens $5 million renovation project Birmingham-based chicken franchise looking to expand nationwide World Cup superfan Freddy reveals his face: 'Our anonymity is gone now' Change coming in 2027 for Regions corporate office workers Disaster financial services available for Hurricane Isaias victims Read the original article on al.com . Add al.com as a Preferred Source by clicking here . Terms and Privacy Policy Privacy Dashboard More Info
+[Could not fetch: HTTPSConnectionPool(host='www.bizjournals.com', port=443): Max retries exceeded with url: /charlotte/news/2026/10/20/lowes-foods-lease-grocer-mpv-properties-catawba.html (Caused by NameResolutionError("HTTPSConnection(host='www.bizjournals.com', port=443): Failed to resolve 'www.bizjournals.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 367 ---
-URL: https://www.insidenova.com/online_features/press_releases/grande-lakes-orlando-celebrates-the-holiday-season-with-the-return-of-its-christmas-market-and/article_97c2bea6-362d-5251-8681-d128bf42bc66.html
-Title: GRANDE LAKES ORLANDO CELEBRATES THE HOLIDAY SEASON WITH THE RETURN OF ITS CHRISTMAS MARKET AND ORLANDO'S ONLY OPEN-AIR ICE-SKATING RINK
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 22:02:00
+URL: https://www.berkeleyside.org/2026/10/20/bkk-mexican-thai-lemon-crab-kats-kitchen-chabar-open
+Title: New Berkeley diner debuts at former Rick & Ann's location, a Thai/Mexican spot comes to town, and more openings
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 19:00:00
 
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.insidenova.com/online_features/press_releases/grande-lakes-orlando-celebrates-the-holiday-season-with-the-return-of-its-christmas-market-and/article_97c2bea6-362d-5251-8681-d128bf42bc66.html]
+[Could not fetch: HTTPSConnectionPool(host='www.berkeleyside.org', port=443): Max retries exceeded with url: /2026/10/20/bkk-mexican-thai-lemon-crab-kats-kitchen-chabar-open (Caused by NameResolutionError("HTTPSConnection(host='www.berkeleyside.org', port=443): Failed to resolve 'www.berkeleyside.org' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 368 ---
-URL: https://dallas.culturemap.com/news/travel/briggs-distilling-opening-driftwood/?rebelltitem=2
-Title: Family-owned whiskey distillery opening in the Texas Hill Country
+URL: https://www.corowafreepress.com.au/news/the-gates-officially-open-at-rutherglen-community-garden/
+Title: The gates officially open at Rutherglen Community Garden
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 21:55:00
+Published: 2026-10-20 19:00:00
 
-a family friendly destination Family-owned whiskey distillery opening in the Texas Hill Country Amber Heckler Oct 15, 2026 | 4:55 pm A new family-owned distillery is joining the vast landscape of breweries, wineries, and other spirit-makers in the Texas Hill Country. Briggs Distilling Co. will start serving cocktails, mocktails, and more at its spacious facility at 121 Brownson Ln. in Driftwood on Saturday, October 17. The 9,000-square-foot distillery is owned and operated by the Briggs family. It was founded by R.S. Briggs with longtime family friend Davis Tucker serving as its president. Master distiller Colton Weinstein is in charge of production and distilling operations. The distillery has developed three expressions for whiskey drinkers to try neat or in a cocktail. Each is made with Texas rainwater and bottled on-site. From a press release, look out for the following flavor profiles: Straight Rye Whiskey: spice and bright herbs with lingering sherry notes to finish Heritage Reserve Bourbon: caramel, candy, and leather notes with hints of spice and cherry and a medium finish Wheated Bourbon: described as "sweet and fruity, with tobacco notes that coat the mouth and a medium-short finish " Patrons can buy a bottle of Briggs whiskey or bourbon on-site to take home. Photo by Hayden Walker The spirits will be available to try in individual tastings ($10 each) and flights ($15), as well as draft, frozen, and house cocktails priced from $10-$14 each. Briggs Distilling will also serve mocktails, a frozen Texas Two-Step (lime, orange, and house cane syrup with a choice of strawberry, mango, coconut, or passion fruit), and other non-alcoholic options like soda, ginger beer, and coffee from neighboring Driftwood café Sonder Coffee Lounge . Beyond the whiskey-making operations and the tasting room, the property will feature a treehouse-inspired children's area, family- and dog-friendly amenities, and an on-site food truck. Live music from local musicians will also be a r
+[Could not fetch: HTTPSConnectionPool(host='www.corowafreepress.com.au', port=443): Max retries exceeded with url: /news/the-gates-officially-open-at-rutherglen-community-garden/ (Caused by NameResolutionError("HTTPSConnection(host='www.corowafreepress.com.au', port=443): Failed to resolve 'www.corowafreepress.com.au' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 369 ---
-URL: https://www.timeout.com/bangkok/news/jellycat-is-opening-its-first-store-in-thailand-at-central-chidlom-101626
-Title: Jellycat to open its first store in Thailand at Central Chidlom
+URL: https://youarecurrent.com/2026/10/20/snapshot-westfield-community-gohealth-celebrates-opening/
+Title: Snapshot: Westfield Community-GoHealth celebrates opening
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 21:27:00
+Published: 2026-10-20 18:59:31
 
-
+[Could not fetch: HTTPSConnectionPool(host='youarecurrent.com', port=443): Max retries exceeded with url: /2026/10/20/snapshot-westfield-community-gohealth-celebrates-opening/ (Caused by NameResolutionError("HTTPSConnection(host='youarecurrent.com', port=443): Failed to resolve 'youarecurrent.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 370 ---
-URL: https://ibmadison.com/ymca-of-dane-county-breaks-ground-on-west-branch-facility/
-Title: YMCA of Dane County breaks ground on West Branch facility
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 20:45:41
+URL: https://www.theinertia.com/features/does-being-the-first-ski-resort-to-open-matter-we-examined/
+Title: Does Being the First Ski Resort to Open Matter? We Examined
+Status hint: Opening | Industry: Hospitality
+Published: 2026-10-20 18:58:15
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://ibmadison.com/ymca-of-dane-county-breaks-ground-on-west-branch-facility/]
+[Could not fetch: HTTPSConnectionPool(host='www.theinertia.com', port=443): Max retries exceeded with url: /features/does-being-the-first-ski-resort-to-open-matter-we-examined/ (Caused by NameResolutionError("HTTPSConnection(host='www.theinertia.com', port=443): Failed to resolve 'www.theinertia.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 371 ---
-URL: https://martinsvillebulletin.com/sports/college/football/article_50a4a723-fdf0-50f6-9d70-88a0df08991c.html
-Title: Report: College Football Playoff expanding to 24 teams starting in 2027 season
+URL: https://muddyrivernews.com/top-stories/haymakers-reopens-fuel-pumps-in-west-quincy-plans-construction-of-new-store-this-fall/20261020114044/
+Title: Haymakers reopens fuel pumps in West Quincy, plans construction of new store this fall
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 20:43:52
+Published: 2026-10-20 18:54:21
 
-[Could not fetch: 429 Client Error: Too Many Requests for url: https://martinsvillebulletin.com/sports/college/football/article_50a4a723-fdf0-50f6-9d70-88a0df08991c.html]
+[Could not fetch: HTTPSConnectionPool(host='muddyrivernews.com', port=443): Max retries exceeded with url: /top-stories/haymakers-reopens-fuel-pumps-in-west-quincy-plans-construction-of-new-store-this-fall/20261020114044/ (Caused by NameResolutionError("HTTPSConnection(host='muddyrivernews.com', port=443): Failed to resolve 'muddyrivernews.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 372 ---
-URL: https://news.ochsner.org/news-releases/ochsner-opens-new-health-center-in-thibodaux/
-Title: Thibodaux Now Open in Lafourche Parish
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 20:40:54
+URL: https://www.bizjournals.com/columbus/news/2026/10/20/german-village-grocery-store-opening.html
+Title: New German Village-area grocery store to open in November
+Status hint: Opening | Industry: Grocery
+Published: 2026-10-20 18:53:00
 
-[Could not fetch: 502 Server Error: Bad Gateway for url: https://news.ochsner.org/news-releases/ochsner-opens-new-health-center-in-thibodaux/]
+[Could not fetch: HTTPSConnectionPool(host='www.bizjournals.com', port=443): Max retries exceeded with url: /columbus/news/2026/10/20/german-village-grocery-store-opening.html (Caused by NameResolutionError("HTTPSConnection(host='www.bizjournals.com', port=443): Failed to resolve 'www.bizjournals.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 373 ---
-URL: https://in.ign.com/nautus/274631/nautus-official-open-beta-launch-trailer-galaxies-autumn-2026-showcase
-Title: Official Open Beta Launch Trailer
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 20:30:00
+URL: https://www.kget.com/news/local-news/maya-cinemas-files-for-chapter-11-bankruptcy-but-will-remain-open-for-business/
+Title: Maya Cinemas files for Chapter 11 bankruptcy, but will remain open for business
+Status hint: Opening | Industry: Movie Theatres
+Published: 2026-10-20 18:49:21
 
-01:10 Nautus - Official Reveal Trailer
+[Could not fetch: HTTPSConnectionPool(host='www.kget.com', port=443): Max retries exceeded with url: /news/local-news/maya-cinemas-files-for-chapter-11-bankruptcy-but-will-remain-open-for-business/ (Caused by NameResolutionError("HTTPSConnection(host='www.kget.com', port=443): Failed to resolve 'www.kget.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 374 ---
-URL: https://www.realtor.com/news/trends/plaza-hotel-closing-renovations-manhattan-condo-impact/
-Title: The Plaza Hotel Is Closing for 4 Years—Here’s What That Means for Its Condo Residents
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-15 20:05:22
+URL: https://www.nrn.com/restaurant-finance/a-big-wendy-s-franchisee-could-close-up-to-60-restaurants
+Title: A big Wendy’s franchisee could close up to 60 restaurants
+Status hint: Closing | Industry: Restaurants
+Published: 2026-10-20 18:48:05
 
-Next year, New York 's iconic Plaza Hotel will close for renovations—and it's unclear what that means for the owners of its 181 luxury condo units. But the building's lead broker says he isn't worried it'll affect residents much. On Wednesday, the hotel's management company, Fairmont Hotels and Resorts, announced that the storied Central Park hotel would close starting in 2027 for a full exterior renovation. The project is expected to take around four years. "The Plaza Hotel is advancing plans for repair and restoration works to its landmark-protected façade," Fairmont said in a statement. "The undertaking reflects the complexity of maintaining a property of such architectural and historical significance, with careful consideration given to preservation requirements and the building’s long-term care, as well as the safety of our guests, employees, and the wider community." At The Plaza, where a themed suite can cost as much as $20,000 a night, guests pay a premium for the luxury and the opportunity to revel in its history. Henry Janeway Hardenbergh designed the historic French chateau-style property, built in 1907 for $12.5 million (about $400 million today). It's had numerous owners—including Donald Trump , who put it in bankruptcy protection while overseeing it and sold it at an $83 million loss. Over the years, it's hosted luminaries such as F. Scott Fitzgerald , Frank Sinatra , Marilyn Monroe , and perhaps most notably, the fictional children's book character Eloise . It's also been heavily featured in movies and TV shows, including "Home Alone 2: Lost in New York" and "Gossip Girl." In 2005, El Ad Properties bought the building for $675 million and shuttered it for a full renovation. The original 805 rooms were converted into 284 hotel rooms and 181 condos, which opened in 2008. Charlie Attias has served as the building's lead broker ever since. Attias says he isn't worried the hotel's closure will adversely affect condo residents because the hotel and condo un
+[Could not fetch: HTTPSConnectionPool(host='www.nrn.com', port=443): Max retries exceeded with url: /restaurant-finance/a-big-wendy-s-franchisee-could-close-up-to-60-restaurants (Caused by NameResolutionError("HTTPSConnection(host='www.nrn.com', port=443): Failed to resolve 'www.nrn.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 375 ---
-URL: https://communityimpact.com/keller-roanoke-northeast-fort-worth/dining/pizza-guys-to-open-new-location-at-heritage-trace-plaza-in-fort-worth/
-Title: Pizza Guys to open new location at Heritage Trace Plaza in Fort Worth
+URL: https://mouthbysouthwest.com/2026/10/20/angies-opens-today-in-west-phoenix-kicking-off-9-store-expansion/
+Title: Angie’s opens today in west Phoenix, kicking off 9-store expansion
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 20:00:00
+Published: 2026-10-20 18:44:21
 
-Dining Keller - Roanoke - Northeast Fort Worth Pizza Guys to open new location at Heritage Trace Plaza in Fort Worth Explore Keller - Roanoke - Northeast Fort Worth on the Impact Map stories, offers and more Caleb Gottry 1 min read Published October 15, 2026 at 10:00 a.m. CT North Fort Worth's Heritage Trace Plaza will be the site of the second Pizza Guys restaurant in Texas. ( Courtesy Pizza Guys ) This article is based on a Texas Department of Licensing and Regulations filing . Community Impact will update this story when more information is available. A new Pizza Guys will open at the intersection of Riverside Drive and Heritage Trace Parkway in north Fort Worth, according to the company’s website . Renovations and alterations on the restaurant’s interior began in September and is expected to conclude by the end of the year, according to the TDLR filing. The tenant-funded construction will cost $300,000 and encompass the 1,307-square-foot retail and commercial space near The Scoop N Scootery at Heritage Trace Plaza, according to the filing. What they offer The Pizza Guys menu features more than 30 pizzas, including five cheese stuffed crust, spicy curry, all meat and classic vegetarian. The restaurant also serves wings, garlic rolls, pastas, salads and Cheesecake Factory cheesecake. The pizza shop was established in California in 1986 and opened its first Texas location in 2025, according to previous reporting . 3529 Heritage Trace Parkway, Fort Worth www.pizzaguys.com
+[Could not fetch: HTTPSConnectionPool(host='mouthbysouthwest.com', port=443): Max retries exceeded with url: /2026/10/20/angies-opens-today-in-west-phoenix-kicking-off-9-store-expansion/ (Caused by NameResolutionError("HTTPSConnection(host='mouthbysouthwest.com', port=443): Failed to resolve 'mouthbysouthwest.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 376 ---
-URL: https://whatnow.com/las-vegas/restaurants/sbarro-to-open-in-charleston-heights/
-Title: Sbarro to open in Charleston Heights
+URL: https://patch.com/florida/southtampa/major-retailer-open-tampa-store
+Title: Major Retailer To Open Tampa Store
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 19:42:58
+Published: 2026-10-20 18:40:57
 
-Sbarro is planned to open inside the Charleston & Mohawk Conoco travel center.  (Image credit: Sbarro Facebook) SHARE Sbarro is working on another Las Vegas Valley opening with help from the local franchisee, LV Petroleum Food Services . According to a recently filed City of Las Vegas permit, the Italian fast-food chain is expected to open in Charleston Heights within the Charleston & Mohawk Conoco travel center at 5340 W Charleston Blvd . “Sbarro is a fast-casual pizza chain best known for large New York–style slices : thin, foldable crust topped with tomato sauce and melted cheese, with options like pepperoni. It’s often served by the slice, so it’s a quick, filling meal,” LV Petroleum Senior Vice President of Food and Franchise Brands, Jeanette Davis , said in an interview with What Now Las Vegas . “Good food, great guest service, and delicious food! We will also be heavily involved in the communities we open in.” The company has a long-standing partnership with Sbarro, opening franchisees throughout the Las Vegas Valley. “We are developing several brands all around Vegas,” Davis said. Founded in 1956 by Neapolitan immigrants Gennaro and Carmela “Mama” Sbarro , Sbarro first opened as an Italian salumeria in New York. After Carmela’s pizza slices became a massive hit with shift workers, the family pivoted to a dedicated pizza and Italian fast-food model. There are now more than 800 Sbarro locations worldwide across 27 countries, with more than 300 of those in the US alone. Top states include California, Florida, and Ohio. Nevada has just 15 locations sprawled across the state, with the majority in Las Vegas, including one inside the Fashion Show Mall on the Strip. What Now also reached out to Sbarro CEO David Karam for more details about the upcoming opening, but did not hear back by the time of this publication. “We will have a ribbon cutting and grand opening a month after the actual opening,” Davis said. “Other than the delicious pizza — it’s the Strombolis , b
+[Could not fetch: HTTPSConnectionPool(host='patch.com', port=443): Max retries exceeded with url: /florida/southtampa/major-retailer-open-tampa-store (Caused by NameResolutionError("HTTPSConnection(host='patch.com', port=443): Failed to resolve 'patch.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 377 ---
-URL: https://www.beaumontenterprise.com/news/article/texas-quail-season-outlook-22479028.php
-Title: Texas quail season opening soon with strong outlooks and forecasts
+URL: https://patch.com/florida/orlando/major-retailer-open-orlando-store
+Title: Major Retailer To Open Orlando Store
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 19:36:31
+Published: 2026-10-20 18:40:43
 
-JavaScript is disabled in your browser. Please enable JavaScript to proceed.
+[Could not fetch: HTTPSConnectionPool(host='patch.com', port=443): Max retries exceeded with url: /florida/orlando/major-retailer-open-orlando-store (Caused by NameResolutionError("HTTPSConnection(host='patch.com', port=443): Failed to resolve 'patch.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 378 ---
-URL: https://www.news4jax.com/news/local/2026/10/15/fat-tuesday-delays-riverside-location-grand-opening-to-make-upgrades-based-on-feedback/
-Title: Fat Tuesday delays Riverside location grand opening to make upgrades based on feedback
+URL: https://hbsdealer.com/two-more-locations-costellos-ace
+Title: Two more locations for Costello's Ace
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 19:25:50
+Published: 2026-10-20 18:40:25
 
-A warning and 8 advisories in effect for 5 regions in the area
+[Could not fetch: HTTPSConnectionPool(host='hbsdealer.com', port=443): Max retries exceeded with url: /two-more-locations-costellos-ace (Caused by NameResolutionError("HTTPSConnection(host='hbsdealer.com', port=443): Failed to resolve 'hbsdealer.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 379 ---
-URL: https://www.disneyfanatic.com/disney-adds-third-basin-location-to-disneys-boardwalk-resort-following-hurly-burly-opening-el1/
-Title: Disney Adds Third Basin Location to Disney's BoardWalk Resort Following Hurly-Burly Opening
-Status hint: Opening | Industry: Hospitality
-Published: 2026-10-15 19:13:01
+URL: https://canadiangrocer.com/maxi-opens-large-format-store-new-brunswick
+Title: Maxi opens large format store in New Brunswick
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 18:35:09
 
-Credit: Disney Basin on the BoardWalk has a page on the Walt Disney World site now. Marked coming soon. No opening date, yet. But read what Disney put on it: “Blend your own bath tea, make a bar of soap from scratch or emboss a soap with a personal touch at this 1920s-style apothecary-inspired shop.” Three things in there. A bath tea blending counter. A make-your-own-soap station. A soap embossing press. Plus the usual Basin spread, which is the good stuff. Natural soaps. Botanical bath salts. Bath bombs. Body butters. Lip salves. Shampoo and conditioner bars. Some context. You know Basin. Everybody knows Basin. It is the Disney Springs shop you smell from forty feet away, where the soap is stacked like a bakery case, and the bath bombs come in colors that do not exist in nature. Two locations on property right now. Disney Springs and in Disney's Grand Floridian . Both are stores. Lovely stores. You walk in, you sniff fourteen things, you buy three, you leave. Twelve minutes, tops. This new one is not that. Credit: Disney It Is an Activity, Not a Shop Put a make-your-own station in a store, and you have changed what the business is. A shop wants your impulse money. An activity wants your time, and on a Disney day, time is the thing in shortest supply. So the comparison here is not another gift shop. It is Droid Depot over at Galaxy's Edge , where what you walk out holding is really just the receipt for an experience. And the Souvenir Gets Better Basin stuff is already a smart thing to bring home. Cheap enough, packs flat, and a bath bomb from a trip actually gets used instead of living in a closet next to the spirit jersey. One catch, though. You can buy Basin products without ever going to Disney World. The trip is not what makes them special; the purchase location is. A soap bar you embossed yourself? That one does not exist anywhere else. Cannot order it later. Cannot replace it. That is a real upgrade, and it is exactly why Disney keeps bolting make-it-yourself 
+[Could not fetch: HTTPSConnectionPool(host='canadiangrocer.com', port=443): Max retries exceeded with url: /maxi-opens-large-format-store-new-brunswick (Caused by NameResolutionError("HTTPSConnection(host='canadiangrocer.com', port=443): Failed to resolve 'canadiangrocer.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 380 ---
-URL: https://theshelbyreport.com/2026/10/15/vallartas-first-duarte-ca-store-to-feature-new-sushi-concept/
-Title: Vallarta’s First Duarte, CA, Store To Feature New Sushi Concept
+URL: https://www.sj-r.com/story/business/2026/10/20/trader-joes-expanding-in-illinois-with-4-new-locations/92336962007/
+Title: Trader Joe's announces new locations in Illinois
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 18:43:26
+Published: 2026-10-20 18:35:00
 
-Grocery MarketMoves LinkedIn Facebook X Email Copy link Vallarta Supermarkets , the family-owned Latin grocery chain operating in California and Arizona, will open its first Duarte, California, location with a ribbon-cutting ceremony Oct. 21. The store at 1470 Mountain Ave. marks the company’s 66th location and continues its growth in Southern California. The protein departments The 45,839-square-foot store will bring 200 new jobs to the community, from department staff to store leadership roles. The grand opening celebration will feature live entertainment and giveaways, with the first 300 customers receiving a complimentary reusable grocery bag filled with groceries. Five local schools and charitable organizations also will share $10,000 in donations from Vallarta. “We’re excited to open our doors in Duarte and become part of this community,” said Allie Garcia, VP of marketing at Vallarta Supermarkets. “With every new store, our goal is to create a welcoming destination where families can find fresh, high-quality ingredients that reflect the cultures and traditions they love.” SushiOro debuts The Duarte store will introduce SushiOro, Vallarta’s new in-store sushi concept featuring hand-rolled sushi with flavors developed by the grocer’s in-house chefs. SushiOro will debut six signature sauces, ranging from sweet and zesty to bold and spicy, with select sauces paired with core Vallarta rolls and all six available separately. Signature departments The Tortilleria The store will feature all of Vallarta’s signature departments, including in-house corn and flour tortillas, hand-decorated cakes and pan dulce in the Panadería, and fresh ceviches. The Carnicería – which Vallarta calls the Home of the Original Carne Asada – offers premium cuts of meat marinated in signature spices, while the Cremería showcases traditional cheeses like queso fresco and cotija, and the Pescadería and in-house Cevichería deliver seafood and aguachiles. For prepared foods, La Cocina serves hot
+[Could not fetch: HTTPSConnectionPool(host='www.sj-r.com', port=443): Max retries exceeded with url: /story/business/2026/10/20/trader-joes-expanding-in-illinois-with-4-new-locations/92336962007/ (Caused by NameResolutionError("HTTPSConnection(host='www.sj-r.com', port=443): Failed to resolve 'www.sj-r.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 381 ---
-URL: https://springfieldherald.news/opening-celebrations-coming-for-two-new-downtown-businesses-p31195-103.htm
-Title: Opening celebrations coming for two new downtown businesses
+URL: https://www.mlive.com/news/jackson/2026/10/whats-that-new-jimmy-johns-dunkin-combo-location-coming-to-jackson-area.html
+Title: What's that? New Jimmy John's Dunkin combo location coming to Jackson area
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 18:32:16
+Published: 2026-10-20 18:35:00
 
-Opening celebrations coming for two new downtown businesses Thursday, October 15, 2026 Happy Scalez and Three Ducks Bookstore both set to celebrate grand openings with ribbon cutting events downtown this weekend SPRINGFIELD, IL – Downtown Springfield, Inc. (DSI) is excited to support two new businesses as they celebrate their openings downtown with ribbon cutting events this weekend. Happy Scalez: Ribbon cutting on Friday, Oct. 16 at 10 a.m. Three Ducks Bookstore: Ribbon cutting on Saturday, Oct. 17 at 10:30 a.m. Happy Scalez (122 S. Fourth St.) is an exotic pet store with a speciality in building, repairing and maintaining aquariums and terrariums. Owned by couple Robert and Sonya Andrew, the business began in 2019 with terrarium design and upkeep. They have now expanded to a brick-and-mortar location complete with a variety of fish and reptiles, as well as the expertise and tools required for their care. “We knew we wanted to be downtown,” said Sonya Andrew. “We have aquarium clients nearby, but we also love the ability to draw people in from our windows. We’re near downtown events like the Old Capitol Farmers Market, and we invite anyone interested in learning about these amazing animals to stop inside.” Happy Scalez will celebrate its grand opening on Friday, Oct. 16 with a ribbon cutting event at 10 a.m. Three Ducks Bookstore ( 414 E. Monroe St .) offers new and gently used books with a focus on indie publishers. Drew Kodrich has reimagined the space next to Dumb Records and filled it with new shelving, ample books and a community seating area designed with book clubs in mind. “I’m excited to offer a space away from the algorithms and surrounded by some actual, tangible media,” said Kodrich. “My goal is not just to help readers find and enjoy new titles, but to create a space that invites the community in.” Three Ducks Bookstore has a grand opening celebration planned for Saturday, Oct. 17 from 9 a.m. - 7 p.m. The ribbon cutting will take place at 10:30 a.m. “W
+[Could not fetch: HTTPSConnectionPool(host='www.mlive.com', port=443): Max retries exceeded with url: /news/jackson/2026/10/whats-that-new-jimmy-johns-dunkin-combo-location-coming-to-jackson-area.html (Caused by NameResolutionError("HTTPSConnection(host='www.mlive.com', port=443): Failed to resolve 'www.mlive.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 382 ---
-URL: https://hoodline.com/2026/10/mexican-craft-giant-parisina-set-to-fill-san-antonio-s-empty-joann-store/
-Title: Parisina Fabrics Opens Soon in San Antonio's Old Joann Store
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-15 18:26:10
+URL: https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/in-2024-brad-paisley-and-kimberly-williams-paisley-pledged-1-million-for-a-second-free-grocery-store-the-nashville-location-opened-in-2026/articleshow/135064099.cms
+Title: In 2024, Brad Paisley and Kimberly Williams-Paisley pledged $1 million for a second free grocery store; t
+Status hint: Opening | Industry: Grocery
+Published: 2026-10-20 18:30:00
 
-25 NE Loop 410, Suite 114 — Planned Parisina Storefront Google Street View The empty Joann Fabrics storefront near North Star Mall is about to get a new tenant, and it's one that's been quietly working its way across Texas. Parisina, a Mexican hobby and craft chain with nearly a century of history, has confirmed plans to open its first San Antonio location inside the vacant big-box space at 25 NE Loop 410, Suite 114. The move makes San Antonio the company's third Texas location, following stores that opened inside a former Forever 21 in McAllen in December 2025 and inside another shuttered Joann Fabrics in Spring in May 2026, according to Houston Historic Retail . As MySA first reported, Parisina has not yet revealed an opening date for the San Antonio store. The chain's stores typically carry fabrics, textiles, sewing and craft supplies, and home goods, and the company says its locations offer one of the largest selections of fabrics, crafts, and home items in the Americas. A Nearly Century-Old Chain Crosses the Border Parisina traces its roots to 1933, when founder Juan José Sierra opened a 220-square-meter store in the Historic Center of Mexico City, according to background compiled from Wikipedia and corporate filings. The company now operates under parent Grupo Parisina, S.A. de C.V., which runs more than 600 stores and employs over 10,000 workers across Mexico, per Mexico News Daily . Fabric sells for $5.99 or less per yard with some restrictions, the same report notes, and Parisina is often compared to Joann's and Hobby Lobby in scale and selection. Parisina has begun hiring for the San Antonio store, with openings for store managers, keyholders, and sales floor associates. On social media, the company has invited followers to track its progress toward opening, posting that shoppers should “get ready to discover a world of #fabrics, #artsandcrafts, #homedecor, and so much more,” adding, “we can't wait to meet our new creative community!” Filling a Void Joann 
+[Could not fetch: HTTPSConnectionPool(host='timesofindia.indiatimes.com', port=443): Max retries exceeded with url: /entertainment/english/hollywood/news/in-2024-brad-paisley-and-kimberly-williams-paisley-pledged-1-million-for-a-second-free-grocery-store-the-nashville-location-opened-in-2026/articleshow/135064099.cms (Caused by NameResolutionError("HTTPSConnection(host='timesofindia.indiatimes.com', port=443): Failed to resolve 'timesofindia.indiatimes.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 383 ---
-URL: https://1851franchise.com/pigtails-and-crewcuts/odessa-florida-franchise-opening-2733311
-Title: Pigtails & Crewcuts Accelerates National Growth With New Odessa Franchise Opening
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 18:13:00
+URL: https://www.austinweeklynews.com/newsletter/fine-dining-bohemian-style-restaurant-opening-on-north-avenue/
+Title: Fine dining, Bohemian-style restaurant opening on North Avenue
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 18:30:00
 
-Pigtails & Crewcuts SPONSORED Pigtails & Crewcuts Accelerates National Growth With New Odessa Franchise Opening Rachel and Matt Breejen are bringing Pigtails & Crewcuts to Hillsborough County as the brand continues to grow in Florida. By Victoria Campisi Staff Writer October 15, 2026
+[Could not fetch: HTTPSConnectionPool(host='www.austinweeklynews.com', port=443): Max retries exceeded with url: /newsletter/fine-dining-bohemian-style-restaurant-opening-on-north-avenue/ (Caused by NameResolutionError("HTTPSConnection(host='www.austinweeklynews.com', port=443): Failed to resolve 'www.austinweeklynews.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 384 ---
-URL: https://patch.com/new-jersey/hoboken/former-hoboken-coffee-shop-may-be-replaced-new-york-city-restaurant-chain-oasis
-Title: Hoboken Coffee Shop That Closed Will Be Replaced By New York City Restaurant Chain, Oasis
-Status hint: Closing | Industry: Restaurants
-Published: 2026-10-15 17:47:50
+URL: https://www.newschannel5.com/news/state/tennessee/robertson-county/pickup-truck-crashes-into-springfield-grocery-store-driver-taken-into-custody
+Title: Pickup truck crashes into Springfield grocery store, driver taken into custody
+Status hint: Opening | Industry: Grocery
+Published: 2026-10-20 18:29:22
 
-Restaurants & Bars First NJ Location Of NYC Café Chain Is Coming To Hoboken A New York City-based group of cafés, Oasis, will cross the river and open in North Jersey. Caren Lissner , Patch Staff Posted Thu, Oct  15, 2026 at 1:47 pm ET | Updated Fri, Oct  16, 2026 at 10:20 am ET The storefront on First Street. (Patch) HOBOKEN, NJ — A group of New York City cafés with unique coffee and dessert items will open their first New Jersey location in Hoboken, a spokesperson confirmed Thursday. Oasis, a café with eight locations in New York City — including a new one to open in Chelsea this Friday — will occupy the former Roost Outpost coffee spot on First Street. Oasis opened its first café in New York 40 years ago. Find out what's happening in Hoboken for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . The Roost closed in March after its owner said the landlords had proposed a steep rent increase. At the time, the Roost wrote , "Our café was not able to secure a lease extension for our location at 55 First St. ... As members of the Hoboken community that love this town dearly, we want to express our deepest thanks and appreciation to each and every one of you." Find out what's happening in Hoboken for free with the latest updates from Patch. By subscribing, you agree to Patch's Privacy Policy and Terms of Use . The spot is now undergoing renovations as Oasis plans its jump across the river. 'What It Doesn't Have Is An Oasis' Dennis Amvrosiatos, the owner of Oasis Café, told Patch on Thursday, "We’re really excited to bring Oasis to Hoboken, especially as our first location outside of New York." He added, "Hoboken has coffee shops, but what it doesn’t have is an Oasis. We really believe there’s nothing quite like what we offer. Anyone can open a coffee shop. Building a place that people connect with, come back to, and make part of their lives is a different story. That's what we've been doing since 1986, and th
+[Could not fetch: HTTPSConnectionPool(host='www.newschannel5.com', port=443): Max retries exceeded with url: /news/state/tennessee/robertson-county/pickup-truck-crashes-into-springfield-grocery-store-driver-taken-into-custody (Caused by NameResolutionError("HTTPSConnection(host='www.newschannel5.com', port=443): Failed to resolve 'www.newschannel5.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 385 ---
-URL: https://hoodline.com/2026/10/tokyo-udon-sensation-signs-10-year-lease-for-first-nyc-spot-in-flatiron/
-Title: Udon Shin to Open First NYC Restaurant in Flatiron District
-Status hint: Opening | Industry: Restaurants
-Published: 2026-10-15 17:46:35
+URL: https://www.sfgate.com/food/article/bay-area-zio-fraedos-closure-22484376.php
+Title: City rent increase forces Zio Fraedo's restaurant in Vallejo to close after 20 years
+Status hint: Closing | Industry: Restaurants
+Published: 2026-10-20 18:28:37
 
-5651 N. 7th St. — Approximate Site of Planned Udon Shin Google Street View Udon Shin, the Tokyo noodle shop known for lines wrapping around the block, is gearing up to open its first New York City restaurant at 37 West 17th Street in Manhattan's Flatiron District. The chain has signed a 10-year lease for 2,500 square feet in a building that most recently housed the now-closed Italian restaurant Basta Pasta. According to Commercial Observer , asking rent for the space was $30,000 per month. The deal brings a Tokyo-born noodle concept to a stretch of Manhattan two blocks west of Union Square Park and roughly six blocks south of the Flatiron Building, putting it in the middle of one of the city's busiest restaurant corridors. Udon Shin originated in Tokyo, where chef Narahara Shinji opened the original Yoyogi, Shibuya location in April 2011, per North Central News . At that flagship, Shinji hand-cuts fresh noodles and crafts dashi from bonito flakes and kelp, the outlet reports. The brand has since built a following for thick, springy handmade udon noodles, crispy tempura, rich dashi broths, and what Mouth by Southwest calls the dish the internet won't stop talking about: the Carbonara Udon, according to Mouth by Southwest . From Tokyo to Mesa, Now Manhattan North Central News reported plans for a Udon Shin location in Phoenix, while Mouth by Southwest reported that the Mesa restaurant had opened as the chain’s first U.S. location. The chain has two other U.S. locations: the recently opened Mesa restaurant and another spot coming soon to Utah. Aaron Gavios, the tenant broker on the Flatiron lease who works for Gavios Realty Group, said the Mesa outpost already has lines out the door. Gavios described Udon Shin as a likely latest Japanese foodie sensation and said he expects long waits and long lines when the Flatiron location opens. The Mesa restaurant was set to open inside Mekong Plaza. North Central News had previously reported a separate planned Udon Shin location 
+[Could not fetch: HTTPSConnectionPool(host='www.sfgate.com', port=443): Max retries exceeded with url: /food/article/bay-area-zio-fraedos-closure-22484376.php (Caused by NameResolutionError("HTTPSConnection(host='www.sfgate.com', port=443): Failed to resolve 'www.sfgate.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 386 ---
-URL: https://www.aol.com/articles/golden-corral-closed-restaurants-across-173511000.html
-Title: Golden Corral Has Closed Restaurants Across 7 States in 2026. Here's What's Happening
-Status hint: Closing | Industry: Restaurants
-Published: 2026-10-15 17:35:11
+URL: https://www.nrn.com/casual-dining/golden-corral-is-closing-more-restaurants-than-usual-this-year
+Title: Golden Corral is closing more restaurants than usual this year
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 18:24:33
 
-Siddharth Munjal Thu, October 15, 2026 at 5:35 PM UTC 0 Golden Corral, one of America’s best-known buffet chains , has built its business around all-you-can-eat meals featuring carved meats, fried chicken, salads, sides, and desserts. However, the chain has closed seven restaurants across seven states over the past nine months, with local reports citing rising costs, lease expirations, and other operational challenges. But the company says it’s still growing. Golden Corral told USA TODAY that it has six new restaurants in the works and plans to keep expanding through 2027. The chain also said some shuttered locations could reopen under new franchise owners. Boston Globe / Getty Images Why Are Golden Corral Restaurants Closing? They have happened at different times throughout 2026, and the reasons differ by location. The Canton, Ohio, restaurant closed its doors on February 1 after serving the community for more than 20 years. The first of the locations, in Alton, Illinois, opened April 30. The owners said the restaurant was no longer sustainable. The Davenport, Iowa, restaurant closed July 6, with no reason given publicly. The Boynton Beach location closed July 26, citing its lease expiration and operational changes. Advertisement Golden Corral closed its Boise, Idaho, restaurant in September, with no public explanation. The report notes the most recent closure was in Brownsville, Texas, where the restaurant closed on September 14. The franchise owner cited required renovations and rising costs, including rent. The latest addition to the list is Independence, Missouri. According to The Kansas City Star , the Golden Corral at 19120 E. Valley View Parkway closed on October 4 after operating for around 15 years. Two managers confirmed the closure to the newspaper ahead of the restaurant’s final weekend. Location Closure Date Reported Reason Canton, Ohio February 1, 2026 No reason publicly specified Alton, Illinois April 30, 2026 Owners said the restaurant could no long
+[Could not fetch: HTTPSConnectionPool(host='www.nrn.com', port=443): Max retries exceeded with url: /casual-dining/golden-corral-is-closing-more-restaurants-than-usual-this-year (Caused by NameResolutionError("HTTPSConnection(host='www.nrn.com', port=443): Failed to resolve 'www.nrn.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 387 ---
-URL: https://thepointsguy.com/news/new-york-laguardia-terminal-b-construction-completed/
-Title: The final piece of the transformed LaGuardia Terminal B is now open
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 17:34:23
+URL: https://weartv.com/news/local/ae-fabric-and-crafts-in-pensacola-prepares-to-close-for-good-after-isaias-roof-damage
+Title: A&E Fabric and Crafts in Pensacola prepares to close for good after Isaias roof damage
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 18:13:26
 
-ADVERTISEMENT News The final piece of the transformed LaGuardia Terminal B is now open Zach Griff Zach Griff Senior reporter Zach Griff is a senior reporter at TPG. He writes travel and product reviews, deep dives into loyalty programs, news about the airline industry and more. Jan. 27, 2022 • 5 min read The final piece of the transformed LaGuardia Terminal B is now open Facebook Twitter LinkedIn Copy URL Email The cards we feature here are from partners who compensate us when you are approved through our site, and this may impact how or where these products appear. We don’t cover all available credit cards, but our analysis, reviews, and opinions are entirely from our editorial team. Terms apply to the offers listed on this page. Please view our advertising policy and product review methodology for more information. Believe it or not, New York's LaGuardia airport is well on its way to being one of the nicest in the country. The final piece of the construction puzzle for Terminal B officially opened on Thursday: a passenger bridge connecting the main departures and arrivals hall with the Western Concourse. (Photo by Zach Griff/The Points Guy) This pedestrian bridge marks the end of disruptions to the passenger journey in Terminal B. Now, all flyers, regardless of which airline they're flying, will exclusively pass through newly built infrastructure . Before the bridge opened, travelers flying with American Airlines checked in and cleared security at the new headhouse , but then took a step back in time by walking to the gate through a portion of the old central terminal. Previous slide Next slide 1 of 4 Temporary walkway to the Western Concourse (Photo by Zach Griff/The Points Guy) 0 1 2 3 Now, the bridge soars high above the leaky ceilings, narrow hallways and long bathroom lines of yesteryear. To celebrate the occasion, New York Gov. Kathy Hochul attended a grand opening ceremony, along with officials from the Port Authority of New York and New Jersey, which overs
+[Could not fetch: HTTPSConnectionPool(host='weartv.com', port=443): Max retries exceeded with url: /news/local/ae-fabric-and-crafts-in-pensacola-prepares-to-close-for-good-after-isaias-roof-damage (Caused by NameResolutionError("HTTPSConnection(host='weartv.com', port=443): Failed to resolve 'weartv.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 388 ---
-URL: https://sg.finance.yahoo.com/news/jetblue-launches-fort-lauderdale-cali-170000127.html
-Title: JetBlue Launches New Fort Lauderdale–Cali Service, Expanding to Four Destinations in Colombia
+URL: https://www.tcpalm.com/story/news/state/2026/10/20/new-bucees-locations-opening-florida-where-when-which-cities-how-many/92342383007/
+Title: Florida’s getting 2 new Buc-ee’s locations next year. Here’s where
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 17:00:00
+Published: 2026-10-20 18:13:00
 
-This is a paid press release. Contact the press release distributor directly with any enquiries. JetBlue Launches New Fort Lauderdale–Cali Service, Expanding to Four Destinations in Colombia Business Wire Thu, 15 October 2026 at 10:30 pm GMT+5:30 4 min read JBLU New daily route builds on JetBlue's record growth in Fort Lauderdale as the airline continues to expand its largest-ever schedule at FLL To celebrate the launch, limited one-way fares are available starting at $139 in Main and $239 in EvenMore® only at jetblue.com FORT LAUDERDALE, Fla., October 15, 2026 --( BUSINESS WIRE )--JetBlue (NASDAQ: JBLU) today launched new daily nonstop service between Fort Lauderdale-Hollywood International Airport (FLL) and Alfonso Bonilla Aragón International Airport (CLO), serving Cali, Colombia. The launch marks another milestone in JetBlue's expansion in both South Florida and Colombia, giving customers a new nonstop option between Fort Lauderdale and one of Colombia's largest cities, while providing travelers from Cali with convenient connections through FLL to destinations across the airline's growing network. Cali becomes JetBlue's fourth destination in Colombia, joining Cartagena and Medellín, and follows the airline's launch of Fort Lauderdale–Barranquilla service earlier this month. The additions deepen JetBlue's presence in a region that remains an important part of its network, with Latin America and the Caribbean accounting for approximately one-third of the airline's overall capacity. Known as the "Salsa Capital of the World," Cali is renowned for its music and dance culture and serves as a major commercial and cultural center in southwestern Colombia. The new daily service creates a convenient nonstop link to South Florida, supporting travel for customers, visiting friends and relatives, exploring the region or traveling for business. "The addition of Cali marks another important milestone in JetBlue's continued growth in Colombia, extending our award-winning servic
+[Could not fetch: HTTPSConnectionPool(host='www.tcpalm.com', port=443): Max retries exceeded with url: /story/news/state/2026/10/20/new-bucees-locations-opening-florida-where-when-which-cities-how-many/92342383007/ (Caused by NameResolutionError("HTTPSConnection(host='www.tcpalm.com', port=443): Failed to resolve 'www.tcpalm.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 389 ---
-URL: https://www.countypress.co.uk/news/26641489.aldi-reveals-isle-wight-plans-extended-car-park/
-Title: Aldi reveals plans for extended car park at new store
+URL: https://www.bizjournals.com/austin/news/2026/10/20/veracruz-all-natural-texas-opening-lamar-garbos.html
+Title: Veracruz All Natural opening new location in former Garbo's space on North Lamar
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 16:31:28
+Published: 2026-10-20 18:07:00
 
-Supermarkets Planning and development Ryde Aldi reveals Isle of Wight plans for extended car park Supermarkets Planning and development Ryde By 
-            Rufus Pickles Local Democracy Reporter - Isle of Wight Share 0 Comments Visual of the planned Aldi store at Cothey Way, Ryde. (Image: Aldi) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
-        and has been written by our American colleagues.
-        It does not necessarily reflect the view of The Herald. What is the Public Notice Portal? Find, save and share Public Notices that affect you in the area. Search the Public Notice Portal What is the Public Notice Portal? What is the Public Notice Portal? The Public Notice Portal carries statutory public notices published in local newspapers and is the fastest and most effective way of finding out what is happening in YOUR neighbourhood. Search the Public Notice Portal The car park of a planned Isle of Wight Aldi store could be extended with 23 extra spaces to reduce the risk of overspill into the surrounding area. In March, County Hall approved a proposal for a new discount supermarket at Cothey Way in Ryde, including 12 electric vehicle charging stations as well as associated parking, landscaping and infrastructure, after 300 letters of support. Aldi has now submitted plans to increase parking provision from 114 to 137 spaces, according to a Planning Statement from Zesta. Read more Care home quality concerns deepen as 16 Island facilities rated below good Beach safety officers dealt with 68 first aid incidents in eight weeks School transport shakeup could save council over £1.5m Shipping container planned for new sushi and coffee cafe Refused 60-home campsite development goes to appeal The supermarket giant previously said the new store will improve access to an award-winning range of high-quality, low-cost products, improving customer choice while reducing the need to travel to supermarkets further afield. 
+[Could not fetch: HTTPSConnectionPool(host='www.bizjournals.com', port=443): Max retries exceeded with url: /austin/news/2026/10/20/veracruz-all-natural-texas-opening-lamar-garbos.html (Caused by NameResolutionError("HTTPSConnection(host='www.bizjournals.com', port=443): Failed to resolve 'www.bizjournals.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 390 ---
-URL: https://www.wspa.com/news/open-for-business-development-booms-in-upstate-city-following-reopened-highway/
-Title: ‘Open for business’: Development booms in Upstate city following reopened highway
+URL: https://www.walesonline.co.uk/whats-on/shopping/almost-100-jobs-created-ms-34791944
+Title: Almost 100 jobs to be created as M&S and Next plan new stores for Caerphilly
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 16:20:18
+Published: 2026-10-20 18:06:00
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.wspa.com/news/open-for-business-development-booms-in-upstate-city-following-reopened-highway/]
+[Could not fetch: HTTPSConnectionPool(host='www.walesonline.co.uk', port=443): Max retries exceeded with url: /whats-on/shopping/almost-100-jobs-created-ms-34791944 (Caused by NameResolutionError("HTTPSConnection(host='www.walesonline.co.uk', port=443): Failed to resolve 'www.walesonline.co.uk' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 391 ---
-URL: https://www.westword.com/food-drink/park-and-co-closing-denver-40948861/
-Title: Uptown burger bar to close after 16 years
-Status hint: Closing | Industry: Specialty / Other
-Published: 2026-10-15 16:15:23
+URL: https://ccentral.ca/emerging-trend-retail-condominium-and-apartment-convenience-stores
+Title: Emerging trend in retail: condominium and apartment convenience stores
+Status hint: Opening | Industry: Convenience Stores / Distributors
+Published: 2026-10-20 18:03:11
 
-Bars & Breweries Uptown burger bar to close after 16 years Park & Co.'s last day is Monday, Oct. 19 By Antony Bruno October 15, 2026 Park & Co. has been on 17th Ave. in Uptown for 16 years. Antony Bruno Add Westword as a preferred source on Google Tags: Burgers Business Openings & Closings Audio By Carbonatix After 16 years of serving drinks, burgers, and other bar fare on East 17th Avenue, Park & Co. announced it will close its doors this Monday, Oct. 19. “Since opening in 2010, Park & Co has been Uptown’s spot for happy hour, game day, a great cocktail and a late-night bite, and we’re grateful to everyone who made it part of their routine,” reads a statement from the restaurant. “To our team, our regulars and this neighborhood: thank you. We’d love to see you for one more round before we close the doors on the 19th, and we invite you to dine with us at our other Gastamo restaurants across Denver.” Park & Co. launched in 2010, aiming to bring an “upscale burger bar” to the Uptown neighborhood. It replaced the old Bump & Grind, a Denver institution known for wild drag brunches long before they became mainstream . Earlier this year, Park & Co. brought in new general manager, Cole Crocker, and introduced a new menu that included burgers like the Bourbon Bacon Jam and Black Garlic Macha, as well as items like a Buffalo Chicken Wrap, Roasted Beet Salad and a Colorado Ranch Water. GET MORE COVERAGE LIKE THIS Sign up for the Food & Drink newsletter to get the latest stories delivered to your inbox Notice of Collection | Terms | Privacy THANK YOU! You're all set. CLOSE Editor's Picks Park Burger closing Highland location after nearly 15 years The ultimate guide to the best burgers in Denver The business of drag is lifting up the Denver brunch scene It’s the second restaurant owned by the Gastamo Group to shut down in recent months. In June, the hospitality group closed the Highland location of its Park Burger chain. Park Burger’s original Platt Park and Hilltop expansion l
+[Could not fetch: HTTPSConnectionPool(host='ccentral.ca', port=443): Max retries exceeded with url: /emerging-trend-retail-condominium-and-apartment-convenience-stores (Caused by NameResolutionError("HTTPSConnection(host='ccentral.ca', port=443): Failed to resolve 'ccentral.ca' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 392 ---
-URL: https://fallriverreporter.com/three-new-wingstop-locations-coming-to-the-south-coast-1/
-Title: Three new Wingstop locations coming to the South Coast
+URL: https://elizabethton.com/2026/10/20/phils-dream-pit-opens-elizabethton-location/
+Title: Phil’s Dream Pit opens Elizabethton location
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 15:26:02
+Published: 2026-10-20 18:02:19
 
-Also available in Português / Español / ខ្មែរ (Cambodian) Share Three restaurant chain locations that specializes in chicken wings are coming to the South Coast in Massachusetts. Wingstop is a Dallas-based fast-casual chicken wing chain founded in Garland, Texas, in 1994 by Antonio Swad and Bernadette Fiaschetti. It is known for cooked-to-order bone-in and boneless wings, tenders, and hand-cut seasoned fries tossed in signature flavors such as Lemon Pepper, Original Hot, Garlic Parmesan, and Mango Habanero. The company has more than 3,000 restaurants worldwide. Massachusetts already has a growing footprint, including Attleboro, Brockton, Raynham, Seekonk, Worcester, and others. Advertisement The first of the 3 new Wingstops is planned at 341 State Road (Route 6) in Dartmouth. Wingstop’s website lists it as coming soon. No exact opening date has been announced. The second location is planned at 1090 Kings Highway in New Bedford. There is no firm opening date yet. The third location is coming to 829 G.A.R. Highway (Route 6) in Somerset with no confirmed opening date. Ken Paiva 3 weeks ago 1 minute read Share this story Share
+[Could not fetch: HTTPSConnectionPool(host='elizabethton.com', port=443): Max retries exceeded with url: /2026/10/20/phils-dream-pit-opens-elizabethton-location/ (Caused by NameResolutionError("HTTPSConnection(host='elizabethton.com', port=443): Failed to resolve 'elizabethton.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 393 ---
-URL: https://www.cravenherald.co.uk/news/26640490.new-lidl-will-bring-multi-million-pound-investment-town/
-Title: New Lidl store will pave the way for 'multi-million pound investment' in the town'
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 15:00:00
+URL: https://www.yahoo.com/lifestyle/articles/customers-mob-sign-beefcarver-share-175921575.html
+Title: Customers mob Sign of the Beefcarver, share memories ahead of closing
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 17:59:21
 
-Leisure Planning and development Shopping Skipton New Lidl will bring 'multi-million pound investment' to town Leisure Planning and development Shopping Skipton By 
-            Lesley Tate Chief reporter Share 0 Comments 4 Skip to next photo 1 / 1 Show caption 1 / 1 Share 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
-        and has been written by our American colleagues.
-        It does not necessarily reflect the view of The Herald. What is the Public Notice Portal? Find, save and share Public Notices that affect you in the area. Search the Public Notice Portal What is the Public Notice Portal? What is the Public Notice Portal? The Public Notice Portal carries statutory public notices published in local newspapers and is the fastest and most effective way of finding out what is happening in YOUR neighbourhood. Search the Public Notice Portal A NEW Lidl store in Skipton will pave the way for a 'multi-million pound investment' in the town, says the supermarket discounter. Following the granting of planning permission for a new store on land off Wyvern Way and next to the A629, Lidl says it is now a 'step closer' to bringing 'market-leading value to local shoppers'. An image of how the new Lidl store will look (Image: Lidl) Permission for the development was granted by North Yorkshire Council's Skipton and Ripon Area Planning Committee earlier this month, despite concerns about the loss of some land earmarked for employment and the impact of additional traffic. Lidl says it is delighted to receive planning permission, which is subject to the completion of a Section 106 agreement, and will give details of when work will start, and when the supermarket will open, as plans progress. A spokesperson for Lidl GB said: “We’re delighted that the Skipton and Ripon Area Planning Committee has resolved to grant planning permission for our new Lidl store off Wyvern Way, subject to completion of the Section 106
+[Could not fetch: HTTPSConnectionPool(host='www.yahoo.com', port=443): Max retries exceeded with url: /lifestyle/articles/customers-mob-sign-beefcarver-share-175921575.html (Caused by NameResolutionError("HTTPSConnection(host='www.yahoo.com', port=443): Failed to resolve 'www.yahoo.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 394 ---
-URL: https://973espn.com/new-pizzeria-replacing-nicks-pizza-northfield/
-Title: New Pizzeria Replacing Former Nick’s Pizza Location in Northfield
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 14:34:20
+URL: https://brobible.com/sports/article/john-daly-finds-home-masters-week-hooters-top-golf/
+Title: John Daly Finds New Long-Term Home For Masters Week After Closing Of Legendary Hooters
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 17:54:46
 
-New Pizzeria Replacing Former Nick’s Pizza Location in Northfield New Pizzeria Replacing Former Nick’s Pizza Location in Northfield Mike Gill Mike Gill Published: October 15, 2026 Mike Gill Share on Facebook Share on Twitter Residents of Northfield have been wondering what has been going on at the former Nick's Pizza location at 2405 New Road. New Sign Goes Up at Former Nick's Pizza Spot The location has been closed for over three months now,  but passing by there on Wednesday night there was a new sign outside. XO Pizza Kitchen. They have a sign out front on New Road with a phone number listed as 609-701-0017. What We Know About XO Pizza Kitchen XO Pizza is a family run local pizza shop that was formerly at 2118 Boardwalk in North Wildwood, with some great reviews on their White pizza and Grandma's pizza. While no information on when they will open seems to be available at this time, it does appear that the location will remain a pizza shop, replacing Nick's, which was in that location since 2018 before recently closing in March of 2026. People began posting on social media wondering why they suddenly couldn't reach the\ restaurant by phone or online. A Longtime Pizza Hub in Northfield The location has been serving pizza on the Mainland for years, before it became Nick's Pizza, it was Jo-Jo's, which is right next door to the Wawa in Northfield. The Ultimate South Jersey Pizza Guide Filed Under : Atlantic County , Northfield Categories : Articles , Community
+[Could not fetch: HTTPSConnectionPool(host='brobible.com', port=443): Max retries exceeded with url: /sports/article/john-daly-finds-home-masters-week-hooters-top-golf/ (Caused by NameResolutionError("HTTPSConnection(host='brobible.com', port=443): Failed to resolve 'brobible.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 395 ---
-URL: https://www.aol.com/articles/historic-plaza-hotel-close-4-141401000.html
-Title: Historic Plaza Hotel to close for 4 years
-Status hint: Closing | Industry: Hospitality
-Published: 2026-10-15 14:17:11
+URL: https://www.staugustine.com/story/entertainment/dining/2026/10/20/why-crave-health-restaurant-is-leaving-downtown-st-augustine-for-us-1/92341993007/
+Title: Crave closes downtown St. Augustine location to focus on US 1 shop
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 17:52:00
 
-Danielle Langenfeld Updated Thu, October 15, 2026 at 2:17 PM UTC 0 [WATCH: In the video player above, one of the ‘best hotel lobbies in the world’ is in Northeast Ohio.] NEW YORK, New York (WJW) -- The famous Plaza Hotel in New York City will be closed for at least four years for renovation work to its historic façade. According to a media release , the closure will begin in January 2027. Oscar-winning actress pregnant at 52 Advertisement The closure is a reflection of the project's complexity which organizers said requires detailed planning and coordination to meet historic preservation requirements. The Plaza Hotel is seen in New York City, United States, on August 6, 2026. The historic luxury hotel is located on Fifth Avenue at the southern edge of Central Park in Manhattan. (Photo by Marcin Golba/NurPhoto via Getty Images) This isn't the first time the landmark hotel has closed its doors for major restoration work. According to the hotel's website , in 2025, The Plaza closed for an extensive $450 million lobby-to-roof restoration. The work lasted until 2008 when the hotel reopened. The Plaza is almost 120 years old. It first opened in 1907. Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to Fox 8 Cleveland WJW.
+[Could not fetch: HTTPSConnectionPool(host='www.staugustine.com', port=443): Max retries exceeded with url: /story/entertainment/dining/2026/10/20/why-crave-health-restaurant-is-leaving-downtown-st-augustine-for-us-1/92341993007/ (Caused by NameResolutionError("HTTPSConnection(host='www.staugustine.com', port=443): Failed to resolve 'www.staugustine.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 396 ---
-URL: https://www.commercialappeal.com/story/entertainment/dining/2026/10/15/gussied-up-opening-in-memphis-tn/92134091007/
-Title: Gussied Up celebrates arrival in Edge District ahead of opening
+URL: https://www.palmbeachpost.com/story/grocery/shopping/2026/10/20/trader-joes-near-me-new-stores-in-florida-boynton-beach/92347836007/
+Title: Trader Joe's opening new Florida stores, including Palm Beach County
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 14:13:00
+Published: 2026-10-20 17:45:00
 
-[Could not fetch: 402 Client Error: Payment Required for url: https://www.commercialappeal.com/story/entertainment/dining/2026/10/15/gussied-up-opening-in-memphis-tn/92134091007/]
+[Could not fetch: HTTPSConnectionPool(host='www.palmbeachpost.com', port=443): Max retries exceeded with url: /story/grocery/shopping/2026/10/20/trader-joes-near-me-new-stores-in-florida-boynton-beach/92347836007/ (Caused by NameResolutionError("HTTPSConnection(host='www.palmbeachpost.com', port=443): Failed to resolve 'www.palmbeachpost.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 397 ---
-URL: https://www.aol.co.uk/articles/iconic-york-hotel-plaza-set-135451000.html
-Title: Iconic New York hotel The Plaza set to close for four years for restoration works
-Status hint: Closing | Industry: Hospitality
-Published: 2026-10-15 13:54:51
+URL: https://www.wlwt.com/article/chick-fil-a-cincinnat-clifton-new-location-opening-date/74194696
+Title: Chick-fil-A opening first location in Clifton this week
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-10-20 17:42:00
 
-Dianne Apen-Sadler Thu, October 15, 2026 at 1:54 PM UTC 0 (Jen Dries/Unsplash) The Plaza Hotel has been a landmark on New York City’s Fifth Avenue for more than a century, instantly recognisable thanks to its iconic façade. Now that façade is getting a facelift, with works set to take at least four years to complete. The hotel will close its doors in January 2027. In a statement, The Plaza Hotel management said: “The undertaking reflects the complexity of maintaining a property of such architectural and historical significance, with careful consideration given to preservation requirements and the building’s long-term care, as well as the safety of our guests, employees, and the wider community. “The scope and complexity of the façade works require detailed planning and coordination with relevant stakeholders, alongside adherence to applicable historic preservation requirements.” The Plaza Hotel has been recognised as one of the Historic Hotels of America, one of just 288 properties selected by the National Trust for Historic Preservation. The history of The Plaza Hotel The Plaza Hotel, which is styled after a French Renaissance chateau, first opened in 1907 and quickly became an icon – it even featured in The Great Gatsby and was the setting for the Eloise series of books. Outside of the world of books, The Plaza Hotel has been shown on the silver screen numerous times, with films shot here including Home Alone 2: Lost in New York (which has a cameo from Donald Trump, who owned the hotel at the time), Crocodile Dundee and Sleepless in Seattle. Since the beginning, The Plaza Hotel has been a hub for celebrities, with famous past guests including The Beatles, Liza Minnelli and Frank Lloyd Wright. Afternoon tea at The Palm Court is a must for many New York City tourists, so if you’ve been putting off a trip, you might just want to book your flight ASAP or you’ll miss your chance for nearly half a decade.
+[Could not fetch: HTTPSConnectionPool(host='www.wlwt.com', port=443): Max retries exceeded with url: /article/chick-fil-a-cincinnat-clifton-new-location-opening-date/74194696 (Caused by NameResolutionError("HTTPSConnection(host='www.wlwt.com', port=443): Failed to resolve 'www.wlwt.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 398 ---
-URL: https://www.modernghana.com/entertainment/84599/polo-beach-club-teases-new-location-after-demoliti.html
-Title: Polo Beach Club Teases New Location After Demolition
+URL: https://www.franchising.com/amp/news/20261020_bodybar_pilates_to_open_second_studio_in_pennsylvania_this_fall.html
+Title: Bodybar Pilates to Open Second Studio in Pennsylvania This Fall
 Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 13:41:00
+Published: 2026-10-20 17:38:57
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.modernghana.com/entertainment/84599/polo-beach-club-teases-new-location-after-demoliti.html]
+[Could not fetch: HTTPSConnectionPool(host='www.franchising.com', port=443): Max retries exceeded with url: /amp/news/20261020_bodybar_pilates_to_open_second_studio_in_pennsylvania_this_fall.html (Caused by NameResolutionError("HTTPSConnection(host='www.franchising.com', port=443): Failed to resolve 'www.franchising.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 399 ---
-URL: https://www.wdwmagic.com/shopping/basin-on-the-boardwalk/news/15oct2026-basin-on-the-boardwalk-gets-official-disney-page-as-opening-gets-closer.htm
-Title: Basin on the BoardWalk Gets Official Disney Page as Opening Gets Closer
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 13:35:00
+URL: https://www.wsbtv.com/news/local/atlanta/popular-beltline-restaurant-expands-with-new-west-midtown-location/GX52NB6OTRAARJQHO6OIHSXQH4/
+Title: Popular BeltLine restaurant expands with new West Midtown location
+Status hint: Opening | Industry: Restaurants
+Published: 2026-10-20 17:24:00
 
-Basin on the BoardWalk Gets Official Disney Page as Opening Gets Closer All News Places Photos Videos Menus Forums Sort by Relevance Newest ✦  Popular right now  ✦ Park Hours & Calendar Updated frequently Operating hours, early entry times, and park hopping info for all four parks. Lightning Lane Prices Updated daily Current Lightning Lane prices for Genie+ and Individual Lightning Lane attractions. Dining at Walt Disney World Dining Guide Restaurants, menus, and reviews for quick service and table service dining. Latest Disney News Updated multiple times per day Park updates, construction news, entertainment, and official announcements. width="24" height="24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="28" stroke-linecap="round"
-        stroke-linejoin="round">
+[Could not fetch: HTTPSConnectionPool(host='www.wsbtv.com', port=443): Max retries exceeded with url: /news/local/atlanta/popular-beltline-restaurant-expands-with-new-west-midtown-location/GX52NB6OTRAARJQHO6OIHSXQH4/ (Caused by NameResolutionError("HTTPSConnection(host='www.wsbtv.com', port=443): Failed to resolve 'www.wsbtv.com' ([Errno 11001] getaddrinfo failed)"))]
 
 --- Article 400 ---
-URL: https://www.fox23.com/news/local/ikea-set-to-open-tulsa-hills-store-october-23
-Title: IKEA set to open Tulsa Hills store October 23
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-10-15 13:31:27
+URL: https://orlandoparkstop.com/news/theme-park-news/animal-actors-closing-soon-and-horror-make-up-reopening-with-blumhouse-properties/
+Title: Animal Actors Closing Soon and Horror Make-Up Reopening with Blumhouse Properties
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-10-20 17:18:36
 
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.fox23.com/news/local/ikea-set-to-open-tulsa-hills-store-october-23]
+[Could not fetch: HTTPSConnectionPool(host='orlandoparkstop.com', port=443): Max retries exceeded with url: /news/theme-park-news/animal-actors-closing-soon-and-horror-make-up-reopening-with-blumhouse-properties/ (Caused by NameResolutionError("HTTPSConnection(host='orlandoparkstop.com', port=443): Failed to resolve 'orlandoparkstop.com' ([Errno 11001] getaddrinfo failed)"))]
