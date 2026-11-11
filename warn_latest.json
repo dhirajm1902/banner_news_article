@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-10",
-  "total": 6010,
+  "last_updated": "2026-11-11",
+  "total": 5832,
   "data": [
     {
       "state": "Alabama",
@@ -930,6 +930,16 @@
       "layoff_date": "January 3, 2026",
       "employees_affected": "52",
       "closure_type": "2",
+      "notes": ""
+    },
+    {
+      "state": "Maryland",
+      "company": "The Container Store, Inc.",
+      "city": "1000 Woodley Road Aberdeen, MD 21001",
+      "notice_date": "11/06/2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "Plant Closure",
       "notes": ""
     },
     {
@@ -2331,6 +2341,16 @@
       "employees_affected": "",
       "closure_type": "Mass Layoff",
       "notes": "Central"
+    },
+    {
+      "state": "Oklahoma",
+      "company": "Dayton Parts, LLC dba Dorman Products",
+      "city": "Durant",
+      "notice_date": "11/9/2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "Mass Layoff",
+      "notes": "Southern"
     },
     {
       "state": "Oregon",
@@ -11025,9 +11045,9 @@
     {
       "state": "Virginia",
       "company": "Haynes Furniture Company, Inc.",
-      "city": "Virginia, VA",
+      "city": "Virginia Beach, VA",
       "notice_date": "10/30/2026",
-      "layoff_date": "11/10/2026",
+      "layoff_date": "11/11/2026",
       "employees_affected": "83",
       "closure_type": "Closure",
       "notes": ""
@@ -11657,7 +11677,7 @@
       "company": "AeroFarms, Inc. - Rescinded",
       "city": "Ringgold, VA",
       "notice_date": "04/29/2026",
-      "layoff_date": "11/10/2026",
+      "layoff_date": "11/11/2026",
       "employees_affected": "133",
       "closure_type": "Closure",
       "notes": ""
@@ -17974,6 +17994,16 @@
     },
     {
       "state": "California",
+      "company": "Ojai Valley Inn",
+      "city": "Ventura County",
+      "notice_date": "10/21/2026",
+      "layoff_date": "01/04/2027",
+      "employees_affected": "751",
+      "closure_type": "",
+      "notes": "72 Accommodation and Food Services"
+    },
+    {
+      "state": "California",
       "company": "Comcast",
       "city": "Alameda County",
       "notice_date": "10/29/2026",
@@ -18487,7 +18517,7 @@
       "company": "Crinetics Pharmaceuticals, Inc.",
       "city": "San Diego County",
       "notice_date": "11/03/2026",
-      "layoff_date": "01/04/2026",
+      "layoff_date": "01/04/2027",
       "employees_affected": "78",
       "closure_type": "",
       "notes": "54 Professional Scientific and Technical Services"
@@ -18511,6 +18541,206 @@
       "employees_affected": "34",
       "closure_type": "",
       "notes": "72 Accommodation and Food Services"
+    },
+    {
+      "state": "California",
+      "company": "US Motor Works, LLC",
+      "city": "Los Angeles County",
+      "notice_date": "10/30/2026",
+      "layoff_date": "12/31/2026",
+      "employees_affected": "19",
+      "closure_type": "",
+      "notes": "42 Wholesale Trade"
+    },
+    {
+      "state": "California",
+      "company": "Ellison Institute, LLC dba Ellison Medical Institute",
+      "city": "Los Angeles County",
+      "notice_date": "11/04/2026",
+      "layoff_date": "01/03/2027",
+      "employees_affected": "88",
+      "closure_type": "",
+      "notes": "54 Professional Scientific and Technical Services"
+    },
+    {
+      "state": "California",
+      "company": "VCA Corporate Support Office",
+      "city": "Los Angeles County",
+      "notice_date": "11/02/2026",
+      "layoff_date": "01/02/2027",
+      "employees_affected": "18",
+      "closure_type": "",
+      "notes": "54 Professional Scientific and Technical Services"
+    },
+    {
+      "state": "California",
+      "company": "National Distribution Centers, LLC",
+      "city": "Riverside County",
+      "notice_date": "11/04/2026",
+      "layoff_date": "01/04/2027",
+      "employees_affected": "167",
+      "closure_type": "",
+      "notes": "48-49 Transportation and Warehousing"
+    },
+    {
+      "state": "California",
+      "company": "Raley's",
+      "city": "Sonoma County",
+      "notice_date": "10/28/2026",
+      "layoff_date": "12/13/2026",
+      "employees_affected": "3",
+      "closure_type": "",
+      "notes": "44-45 Retail Trade"
+    },
+    {
+      "state": "California",
+      "company": "VCA Corporate Support Office",
+      "city": "Los Angeles County",
+      "notice_date": "11/06/2026",
+      "layoff_date": "09/01/2026",
+      "employees_affected": "36",
+      "closure_type": "",
+      "notes": "54 Professional Scientific and Technical Services"
+    },
+    {
+      "state": "California",
+      "company": "Blue Shield of CA - Oakland",
+      "city": "Alameda County",
+      "notice_date": "11/06/2026",
+      "layoff_date": "01/12/2027",
+      "employees_affected": "13",
+      "closure_type": "",
+      "notes": "52 Finance and Insurance"
+    },
+    {
+      "state": "California",
+      "company": "Blue Shield of California - El Dorado Hills, Building C",
+      "city": "El Dorado County",
+      "notice_date": "11/06/2026",
+      "layoff_date": "01/12/2027",
+      "employees_affected": "3",
+      "closure_type": "",
+      "notes": "52 Finance and Insurance"
+    },
+    {
+      "state": "California",
+      "company": "Blue Shield of CA - El Dorado Hills, Building B",
+      "city": "El Dorado County",
+      "notice_date": "11/06/2026",
+      "layoff_date": "01/12/2027",
+      "employees_affected": "7",
+      "closure_type": "",
+      "notes": "52 Finance and Insurance"
+    },
+    {
+      "state": "California",
+      "company": "Blue Shield of CA - Long Beach",
+      "city": "Los Angeles County",
+      "notice_date": "11/06/2026",
+      "layoff_date": "01/12/2027",
+      "employees_affected": "12",
+      "closure_type": "",
+      "notes": "52 Finance and Insurance"
+    },
+    {
+      "state": "California",
+      "company": "Blue Shield of CA - Woodland Hills",
+      "city": "Los Angeles County",
+      "notice_date": "11/06/2026",
+      "layoff_date": "01/12/2027",
+      "employees_affected": "5",
+      "closure_type": "",
+      "notes": "52 Finance and Insurance"
+    },
+    {
+      "state": "California",
+      "company": "Blue Shield of CA - Rancho Cordova",
+      "city": "Sacramento County",
+      "notice_date": "11/06/2026",
+      "layoff_date": "01/12/2027",
+      "employees_affected": "5",
+      "closure_type": "",
+      "notes": "52 Finance and Insurance"
+    },
+    {
+      "state": "California",
+      "company": "Blue Shield of CA - San Diego",
+      "city": "San Diego County",
+      "notice_date": "11/06/2026",
+      "layoff_date": "01/12/2027",
+      "employees_affected": "4",
+      "closure_type": "",
+      "notes": "52 Finance and Insurance"
+    },
+    {
+      "state": "California",
+      "company": "Blue Shield of CA - Lodi",
+      "city": "San Joaquin County",
+      "notice_date": "11/06/2026",
+      "layoff_date": "01/12/2027",
+      "employees_affected": "5",
+      "closure_type": "",
+      "notes": "52 Finance and Insurance"
+    },
+    {
+      "state": "California",
+      "company": "Wright Tree Service of the West, Inc. (32134 Auberry Rd)",
+      "city": "Fresno County",
+      "notice_date": "11/09/2026",
+      "layoff_date": "11/09/2026",
+      "employees_affected": "54",
+      "closure_type": "",
+      "notes": "56 Administrative and Support and Waste Management and Remediation"
+    },
+    {
+      "state": "California",
+      "company": "Wright Tree Service of the West, Inc. (270 N See Vee Ln)",
+      "city": "Inyo County",
+      "notice_date": "11/09/2026",
+      "layoff_date": "11/09/2026",
+      "employees_affected": "9",
+      "closure_type": "",
+      "notes": "56 Administrative and Support and Waste Management and Remediation"
+    },
+    {
+      "state": "California",
+      "company": "Wright Tree Service of the West, Inc. (4571 Lake Isabella Blvd)",
+      "city": "Kern County",
+      "notice_date": "11/09/2026",
+      "layoff_date": "11/09/2026",
+      "employees_affected": "19",
+      "closure_type": "",
+      "notes": "56 Administrative and Support and Waste Management and Remediation"
+    },
+    {
+      "state": "California",
+      "company": "Wright Tree Service of the West, Inc. (8056 Evans Rd)",
+      "city": "Kern County",
+      "notice_date": "11/09/2026",
+      "layoff_date": "11/09/2026",
+      "employees_affected": "19",
+      "closure_type": "",
+      "notes": "56 Administrative and Support and Waste Management and Remediation"
+    },
+    {
+      "state": "California",
+      "company": "Wright Tree Service of the West, Inc. (430 Sherwin Creek Rd)",
+      "city": "Mono County",
+      "notice_date": "11/09/2026",
+      "layoff_date": "11/09/2026",
+      "employees_affected": "12",
+      "closure_type": "",
+      "notes": "56 Administrative and Support and Waste Management and Remediation"
+    },
+    {
+      "state": "California",
+      "company": "Wright Tree Service of the West, Inc. (13426 Avenue 232)",
+      "city": "Tulare County",
+      "notice_date": "11/09/2026",
+      "layoff_date": "11/09/2026",
+      "employees_affected": "77",
+      "closure_type": "",
+      "notes": "56 Administrative and Support and Waste Management and Remediation"
     },
     {
       "state": "Colorado",
@@ -28457,16 +28687,6 @@
       "company": "Veyer, LLC",
       "city": "Edwardsville",
       "notice_date": "05/16/2025",
-      "layoff_date": "",
-      "employees_affected": "",
-      "closure_type": "WARN",
-      "notes": "3 - Workforce Partnership"
-    },
-    {
-      "state": "Kansas",
-      "company": "Boston Heart Diagnostics Corporation",
-      "city": "Lenexa",
-      "notice_date": "11/05/2026",
       "layoff_date": "",
       "employees_affected": "",
       "closure_type": "WARN",
@@ -48104,6 +48324,16 @@
     },
     {
       "state": "New Jersey",
+      "company": "Walmart Hoboken February 5/1/2026 100",
+      "city": "",
+      "notice_date": "",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "",
+      "notes": ""
+    },
+    {
+      "state": "New Jersey",
       "company": "RCHP(ReformedChurchofHighlandParkAffordableHousing",
       "city": "",
       "notice_date": "",
@@ -48814,2256 +49044,6 @@
     },
     {
       "state": "New York",
-      "company": "420 Park FB LLC",
-      "city": "",
-      "notice_date": "2026-04-06",
-      "layoff_date": "2026-07-06",
-      "employees_affected": "42",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Acme Markets, Inc.",
-      "city": "",
-      "notice_date": "2026-09-10",
-      "layoff_date": "2026-12-10",
-      "employees_affected": "38",
-      "closure_type": "Closure",
-      "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "Air Company Holdings Inc.",
-      "city": "",
-      "notice_date": "2026-05-04",
-      "layoff_date": "2026-08-02",
-      "employees_affected": "4",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Air Company Holdings Inc.",
-      "city": "",
-      "notice_date": "2026-05-04",
-      "layoff_date": "2026-08-02",
-      "employees_affected": "14",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Air Company Holdings Inc.",
-      "city": "",
-      "notice_date": "2026-05-04",
-      "layoff_date": "2026-08-02",
-      "employees_affected": "5",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Allied Aviation Service Company of New York Inc.",
-      "city": "",
-      "notice_date": "2026-05-29",
-      "layoff_date": "2026-08-02",
-      "employees_affected": "42",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "Alray Car Parts Supply & Mfg. Corp.d/b/a Tinker Auto Parts",
-      "city": "",
-      "notice_date": "2026-07-01",
-      "layoff_date": "2026-09-30",
-      "employees_affected": "20",
-      "closure_type": "Closure",
-      "notes": "Suffolk"
-    },
-    {
-      "state": "New York",
-      "company": "Alray Car Parts Supply & Mfg. Corp.d/b/a Tinker Auto Parts",
-      "city": "",
-      "notice_date": "2026-07-01",
-      "layoff_date": "2026-09-30",
-      "employees_affected": "31",
-      "closure_type": "Closure",
-      "notes": "Suffolk"
-    },
-    {
-      "state": "New York",
-      "company": "Altera Digital Health, Inc.",
-      "city": "",
-      "notice_date": "2026-09-25",
-      "layoff_date": "2026-12-31",
-      "employees_affected": "133",
-      "closure_type": "Layoff",
-      "notes": "Suffolk"
-    },
-    {
-      "state": "New York",
-      "company": "Amazon",
-      "city": "",
-      "notice_date": "2026-01-28",
-      "layoff_date": "2026-04-28",
-      "employees_affected": "135",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Amazon (Long Island)",
-      "city": "",
-      "notice_date": "2026-01-27",
-      "layoff_date": "2026-04-28",
-      "employees_affected": "71",
-      "closure_type": "Closure",
-      "notes": "Nassau"
-    },
-    {
-      "state": "New York",
-      "company": "Amazon (Long Island)",
-      "city": "",
-      "notice_date": "2026-01-27",
-      "layoff_date": "2026-04-28",
-      "employees_affected": "44",
-      "closure_type": "Closure",
-      "notes": "Suffolk"
-    },
-    {
-      "state": "New York",
-      "company": "Amazon (Western)",
-      "city": "",
-      "notice_date": "2026-02-27",
-      "layoff_date": "2026-05-30",
-      "employees_affected": "542",
-      "closure_type": "Closure",
-      "notes": "Erie"
-    },
-    {
-      "state": "New York",
-      "company": "Apple Bank",
-      "city": "",
-      "notice_date": "2026-04-30",
-      "layoff_date": "2026-08-31",
-      "employees_affected": "26",
-      "closure_type": "Layoff",
-      "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "AVI Foodsystems, Inc.",
-      "city": "",
-      "notice_date": "2026-05-08",
-      "layoff_date": "2026-05-31",
-      "employees_affected": "45",
-      "closure_type": "Closure",
-      "notes": "Allegany"
-    },
-    {
-      "state": "New York",
-      "company": "Bank of America",
-      "city": "",
-      "notice_date": "2026-03-19",
-      "layoff_date": "2026-06-24",
-      "employees_affected": "170",
-      "closure_type": "Closure",
-      "notes": "Erie"
-    },
-    {
-      "state": "New York",
-      "company": "BMC Benchmark Management Company, LLC. (Edith Macy Center Hotel)",
-      "city": "",
-      "notice_date": "2026-01-29",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "49",
-      "closure_type": "Closure",
-      "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "Bowery F&B, LLC",
-      "city": "",
-      "notice_date": "2026-09-17",
-      "layoff_date": "2026-12-21",
-      "employees_affected": "28",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Brinker International Payroll Company, L.P.",
-      "city": "",
-      "notice_date": "2026-06-30",
-      "layoff_date": "2026-09-28",
-      "employees_affected": "57",
-      "closure_type": "Closure",
-      "notes": "Nassau"
-    },
-    {
-      "state": "New York",
-      "company": "Bronx Parent Housing Network",
-      "city": "",
-      "notice_date": "2026-05-27",
-      "layoff_date": "2026-08-31",
-      "employees_affected": "44",
-      "closure_type": "Layoff",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Buffalo Newspress Inc. d/b/a BNP Empowered Print",
-      "city": "",
-      "notice_date": "2026-07-09",
-      "layoff_date": "2026-07-09",
-      "employees_affected": "81",
-      "closure_type": "Closure",
-      "notes": "Erie"
-    },
-    {
-      "state": "New York",
-      "company": "Bush Industries Inc. d/b/a eSolutions Group",
-      "city": "",
-      "notice_date": "2026-04-30",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "237",
-      "closure_type": "Closure",
-      "notes": "Chautauqua"
-    },
-    {
-      "state": "New York",
-      "company": "BuzzFeed Media Enterprises Inc",
-      "city": "",
-      "notice_date": "2026-07-27",
-      "layoff_date": "2026-07-27",
-      "employees_affected": "84",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Career Systems Development Corporation",
-      "city": "",
-      "notice_date": "2026-08-20",
-      "layoff_date": "2026-09-30",
-      "employees_affected": "39",
-      "closure_type": "Layoff",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Career Systems Development Corporation",
-      "city": "",
-      "notice_date": "2026-08-20",
-      "layoff_date": "2026-09-30",
-      "employees_affected": "67",
-      "closure_type": "Layoff",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Catholic Guardian Services (Rescission)",
-      "city": "",
-      "notice_date": "2026-01-12",
-      "layoff_date": "2026-04-12",
-      "employees_affected": "0",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Catholic Guardian Services (Rescission)",
-      "city": "",
-      "notice_date": "2026-01-12",
-      "layoff_date": "2026-04-12",
-      "employees_affected": "0",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Catholic Guardian Services (Rescission)",
-      "city": "",
-      "notice_date": "2026-01-12",
-      "layoff_date": "2026-04-12",
-      "employees_affected": "0",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Catholic Guardian Services (Rescission)",
-      "city": "",
-      "notice_date": "2026-01-12",
-      "layoff_date": "2026-04-12",
-      "employees_affected": "0",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Cayuga Home for Children",
-      "city": "",
-      "notice_date": "2026-04-01",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Albany"
-    },
-    {
-      "state": "New York",
-      "company": "Cayuga Home for Children",
-      "city": "",
-      "notice_date": "2026-10-05",
-      "layoff_date": "2027-01-04",
-      "employees_affected": "34",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Cayuga Home for Children",
-      "city": "",
-      "notice_date": "2026-04-01",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "14",
-      "closure_type": "Closure",
-      "notes": "Cayuga"
-    },
-    {
-      "state": "New York",
-      "company": "Cayuga Home for Children",
-      "city": "",
-      "notice_date": "2026-10-05",
-      "layoff_date": "2027-01-04",
-      "employees_affected": "4",
-      "closure_type": "Closure",
-      "notes": "Cayuga"
-    },
-    {
-      "state": "New York",
-      "company": "Cayuga Home for Children",
-      "city": "",
-      "notice_date": "2026-04-01",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Oneida"
-    },
-    {
-      "state": "New York",
-      "company": "Cayuga Home for Children",
-      "city": "",
-      "notice_date": "2026-04-01",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "319",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Cazar Logistics",
-      "city": "",
-      "notice_date": "2026-01-31",
-      "layoff_date": "2026-05-03",
-      "employees_affected": "37",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Children's Home of Poughkeepsie",
-      "city": "",
-      "notice_date": "2026-09-24",
-      "layoff_date": "2026-12-28",
-      "employees_affected": "39",
-      "closure_type": "Layoff",
-      "notes": "Dutchess"
-    },
-    {
-      "state": "New York",
-      "company": "Citibank, N.A.",
-      "city": "",
-      "notice_date": "2026-01-14",
-      "layoff_date": "2026-04-14",
-      "employees_affected": "820",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Citigroup Global Markets, Inc.",
-      "city": "",
-      "notice_date": "2026-01-14",
-      "layoff_date": "2026-04-14",
-      "employees_affected": "58",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Citigroup Technology, Inc.",
-      "city": "",
-      "notice_date": "2026-01-14",
-      "layoff_date": "2026-04-18",
-      "employees_affected": "3",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "College Association at Delhi, Inc.- SUNY Delhi",
-      "city": "",
-      "notice_date": "2026-04-01",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "53",
-      "closure_type": "Layoff",
-      "notes": "Delaware"
-    },
-    {
-      "state": "New York",
-      "company": "CPS 5 LLC",
-      "city": "",
-      "notice_date": "2026-10-14",
-      "layoff_date": "2027-01-18",
-      "employees_affected": "80",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "DF NY One Inc. d/b/a Dreamfields",
-      "city": "",
-      "notice_date": "2026-03-02",
-      "layoff_date": "2026-03-13",
-      "employees_affected": "13",
-      "closure_type": "Layoff",
-      "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "Diageo North America, Inc",
-      "city": "",
-      "notice_date": "2026-06-30",
-      "layoff_date": "2026-09-30",
-      "employees_affected": "305",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Dice Lion Technology LLC",
-      "city": "",
-      "notice_date": "2026-03-17",
-      "layoff_date": "2026-06-15",
-      "employees_affected": "37",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Durham School Services, LP./Monroe School Transportation, Inc.",
-      "city": "",
-      "notice_date": "2026-04-21",
-      "layoff_date": "2026-07-12",
-      "employees_affected": "180",
-      "closure_type": "Closure",
-      "notes": "Monroe"
-    },
-    {
-      "state": "New York",
-      "company": "Durham School Services, LP./Monroe School Transportation, Inc.",
-      "city": "",
-      "notice_date": "2026-04-13",
-      "layoff_date": "2026-07-12",
-      "employees_affected": "78",
-      "closure_type": "Closure",
-      "notes": "Albany"
-    },
-    {
-      "state": "New York",
-      "company": "Elevate NY, LLC.",
-      "city": "",
-      "notice_date": "2026-01-27",
-      "layoff_date": "2026-05-06",
-      "employees_affected": "99",
-      "closure_type": "Layoff",
-      "notes": "Rockland"
-    },
-    {
-      "state": "New York",
-      "company": "Enthuse LLC",
-      "city": "",
-      "notice_date": "2026-03-03",
-      "layoff_date": "2026-03-10",
-      "employees_affected": "13",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Etain, LLC.",
-      "city": "",
-      "notice_date": "2026-05-05",
-      "layoff_date": "2026-08-03",
-      "employees_affected": "0",
-      "closure_type": "Closure",
-      "notes": "Warren"
-    },
-    {
-      "state": "New York",
-      "company": "Federal Express Corporation (Capital Region)",
-      "city": "",
-      "notice_date": "2026-01-13",
-      "layoff_date": "2026-01-31",
-      "employees_affected": "43",
-      "closure_type": "Layoff",
-      "notes": "Albany"
-    },
-    {
-      "state": "New York",
-      "company": "Federal Express Corporation (Multiple Regions)",
-      "city": "",
-      "notice_date": "2026-03-23",
-      "layoff_date": "2026-08-03",
-      "employees_affected": "31",
-      "closure_type": "Closure",
-      "notes": "Oneida"
-    },
-    {
-      "state": "New York",
-      "company": "Federal Express Corporation (Multiple Regions)",
-      "city": "",
-      "notice_date": "2026-03-27",
-      "layoff_date": "2026-08-03",
-      "employees_affected": "36",
-      "closure_type": "Closure",
-      "notes": "Erie"
-    },
-    {
-      "state": "New York",
-      "company": "Federal Express Corporation (Multiple Regions)",
-      "city": "",
-      "notice_date": "2026-03-23",
-      "layoff_date": "2026-08-03",
-      "employees_affected": "32",
-      "closure_type": "Closure",
-      "notes": "Chemung"
-    },
-    {
-      "state": "New York",
-      "company": "Federal Express Corporation (Multiple Regions)",
-      "city": "",
-      "notice_date": "2026-03-24",
-      "layoff_date": "2026-08-03",
-      "employees_affected": "12",
-      "closure_type": "Closure",
-      "notes": "Tompkins"
-    },
-    {
-      "state": "New York",
-      "company": "Federal Express Corporation (Multiple Regions)",
-      "city": "",
-      "notice_date": "2026-03-23",
-      "layoff_date": "2026-08-03",
-      "employees_affected": "31",
-      "closure_type": "Closure",
-      "notes": "Broome"
-    },
-    {
-      "state": "New York",
-      "company": "Federal Express Corporation (Multiple Regions)",
-      "city": "",
-      "notice_date": "2026-03-24",
-      "layoff_date": "2026-08-03",
-      "employees_affected": "22",
-      "closure_type": "Closure",
-      "notes": "Onondaga"
-    },
-    {
-      "state": "New York",
-      "company": "Ferraro Foods of New York North, LLC.",
-      "city": "",
-      "notice_date": "2026-07-07",
-      "layoff_date": "2026-07-07",
-      "employees_affected": "62",
-      "closure_type": "Closure",
-      "notes": "Oneida"
-    },
-    {
-      "state": "New York",
-      "company": "Finger Lakes On Wheels, LLC.",
-      "city": "",
-      "notice_date": "2026-03-25",
-      "layoff_date": "2026-06-23",
-      "employees_affected": "85",
-      "closure_type": "Closure",
-      "notes": "Steuben"
-    },
-    {
-      "state": "New York",
-      "company": "Flagship Logistics, LLC.",
-      "city": "",
-      "notice_date": "2026-05-28",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "43",
-      "closure_type": "Closure",
-      "notes": "Steuben"
-    },
-    {
-      "state": "New York",
-      "company": "FreedomRoads, LLC.; CWI, LLC.; Meyer's RV Centers, LLC.",
-      "city": "",
-      "notice_date": "2026-09-09",
-      "layoff_date": "2026-12-08",
-      "employees_affected": "28",
-      "closure_type": "Closure",
-      "notes": "Erie"
-    },
-    {
-      "state": "New York",
-      "company": "Fresenius USA Manufacturing, Inc.",
-      "city": "",
-      "notice_date": "2026-01-28",
-      "layoff_date": "2026-04-28",
-      "employees_affected": "56",
-      "closure_type": "Layoff",
-      "notes": "Orange"
-    },
-    {
-      "state": "New York",
-      "company": "G&L Restaurant LLC",
-      "city": "",
-      "notice_date": "2026-04-14",
-      "layoff_date": "2026-07-14",
-      "employees_affected": "37",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Glossier, Inc.",
-      "city": "",
-      "notice_date": "2026-02-13",
-      "layoff_date": "2026-02-13",
-      "employees_affected": "41",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "GoGo Bus Tours Inc .d/b/a 2gobus",
-      "city": "",
-      "notice_date": "2026-01-15",
-      "layoff_date": "2026-03-31",
-      "employees_affected": "75",
-      "closure_type": "Layoff",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Great Jones Distillers, LLC",
-      "city": "",
-      "notice_date": "2026-09-08",
-      "layoff_date": "2026-12-07",
-      "employees_affected": "26",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "GU Markets, LLC.",
-      "city": "",
-      "notice_date": "2026-09-03",
-      "layoff_date": "2026-12-05",
-      "employees_affected": "19",
-      "closure_type": "Closure",
-      "notes": "Oneida"
-    },
-    {
-      "state": "New York",
-      "company": "GU Markets, LLC.",
-      "city": "",
-      "notice_date": "2026-09-03",
-      "layoff_date": "2026-12-05",
-      "employees_affected": "27",
-      "closure_type": "Closure",
-      "notes": "Cortland"
-    },
-    {
-      "state": "New York",
-      "company": "H&M Fashion USA, Inc.",
-      "city": "",
-      "notice_date": "2026-06-05",
-      "layoff_date": "2026-09-04",
-      "employees_affected": "76",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "HNI Workplace Furnishings, LLC.",
-      "city": "",
-      "notice_date": "2026-03-05",
-      "layoff_date": "2026-08-16",
-      "employees_affected": "123",
-      "closure_type": "Closure",
-      "notes": "Steuben"
-    },
-    {
-      "state": "New York",
-      "company": "Hudson Valley Fish Farm, Inc.",
-      "city": "",
-      "notice_date": "2026-07-30",
-      "layoff_date": "2026-10-28",
-      "employees_affected": "47",
-      "closure_type": "Closure",
-      "notes": "Columbia"
-    },
-    {
-      "state": "New York",
-      "company": "Hyatt Corporation",
-      "city": "",
-      "notice_date": "2026-07-01",
-      "layoff_date": "2026-09-29",
-      "employees_affected": "52",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Independence Care System",
-      "city": "",
-      "notice_date": "2026-05-01",
-      "layoff_date": "2026-07-30",
-      "employees_affected": "89",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "International Imaging Materials, Inc. (Armor-IIMAK)",
-      "city": "",
-      "notice_date": "2026-04-27",
-      "layoff_date": "2026-07-31",
-      "employees_affected": "198",
-      "closure_type": "Closure",
-      "notes": "Erie"
-    },
-    {
-      "state": "New York",
-      "company": "InvaGen Pharmaceuticals, Inc.",
-      "city": "",
-      "notice_date": "2026-08-28",
-      "layoff_date": "2026-11-27",
-      "employees_affected": "160",
-      "closure_type": "Layoff",
-      "notes": "Suffolk"
-    },
-    {
-      "state": "New York",
-      "company": "InvaGen Pharmaceuticals, Inc.",
-      "city": "",
-      "notice_date": "2026-08-28",
-      "layoff_date": "2026-11-27",
-      "employees_affected": "45",
-      "closure_type": "Layoff",
-      "notes": "Suffolk"
-    },
-    {
-      "state": "New York",
-      "company": "IPIC Theaters, LLC.",
-      "city": "",
-      "notice_date": "2026-02-23",
-      "layoff_date": "2026-05-28",
-      "employees_affected": "58",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Jennie B. Richmond Nursing Home",
-      "city": "",
-      "notice_date": "2026-06-02",
-      "layoff_date": "2026-08-31",
-      "employees_affected": "37",
-      "closure_type": "Closure",
-      "notes": "Erie"
-    },
-    {
-      "state": "New York",
-      "company": "KJ Quality Logistics, LLC.",
-      "city": "",
-      "notice_date": "2026-08-28",
-      "layoff_date": "2026-11-26",
-      "employees_affected": "41",
-      "closure_type": "Closure",
-      "notes": "Monroe"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "0",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Nassau"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-23",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "0",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Nassau"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-23",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "3",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "0",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "1",
-      "closure_type": "Closure",
-      "notes": "Nassau"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "3",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "Knight Facilities Management, Inc.",
-      "city": "",
-      "notice_date": "2026-04-22",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "Krispy Kreme Doughnut Corporation",
-      "city": "",
-      "notice_date": "2026-01-27",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "52",
-      "closure_type": "Layoff",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Liberty Dental Plan Corporation",
-      "city": "",
-      "notice_date": "2026-02-05",
-      "layoff_date": "2026-05-06",
-      "employees_affected": "2",
-      "closure_type": "Layoff",
-      "notes": "Nassau"
-    },
-    {
-      "state": "New York",
-      "company": "Lincoln Hall",
-      "city": "",
-      "notice_date": "2026-01-06",
-      "layoff_date": "2026-04-06",
-      "employees_affected": "123",
-      "closure_type": "Closure",
-      "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "Lumina Care Medical Staff",
-      "city": "",
-      "notice_date": "2026-08-04",
-      "layoff_date": "2026-11-03",
-      "employees_affected": "135",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Lutheran Social Services of New York",
-      "city": "",
-      "notice_date": "2026-04-01",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "20",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Lutheran Social Services of New York",
-      "city": "",
-      "notice_date": "2026-01-29",
-      "layoff_date": "2026-03-31",
-      "employees_affected": "37",
-      "closure_type": "Layoff",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Lutheran Social Services of New York",
-      "city": "",
-      "notice_date": "2026-04-01",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "30",
-      "closure_type": "Closure",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Lutheran Social Services of New York",
-      "city": "",
-      "notice_date": "2026-01-29",
-      "layoff_date": "2026-03-31",
-      "employees_affected": "20",
-      "closure_type": "Layoff",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "Lutheran Social Services of New York",
-      "city": "",
-      "notice_date": "2026-04-01",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "38",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "Main Street Sports Group, LLC",
-      "city": "",
-      "notice_date": "2026-02-13",
-      "layoff_date": "2026-05-14",
-      "employees_affected": "66",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Masonite Corporation d/b/a Owens Corning Doors",
-      "city": "",
-      "notice_date": "2026-08-25",
-      "layoff_date": "2026-11-23",
-      "employees_affected": "46",
-      "closure_type": "Closure",
-      "notes": "Broome"
-    },
-    {
-      "state": "New York",
-      "company": "McKesson",
-      "city": "",
-      "notice_date": "2026-02-10",
-      "layoff_date": "2026-05-18",
-      "employees_affected": "78",
-      "closure_type": "Closure",
-      "notes": "Erie"
-    },
-    {
-      "state": "New York",
-      "company": "Medical Care at Home, P.C.",
-      "city": "",
-      "notice_date": "2026-04-27",
-      "layoff_date": "2026-07-24",
-      "employees_affected": "28",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Meta",
-      "city": "",
-      "notice_date": "2026-05-20",
-      "layoff_date": "2026-08-20",
-      "employees_affected": "361",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Meta",
-      "city": "",
-      "notice_date": "2026-05-20",
-      "layoff_date": "2026-08-20",
-      "employees_affected": "267",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Meta",
-      "city": "",
-      "notice_date": "2026-05-20",
-      "layoff_date": "2026-08-20",
-      "employees_affected": "304",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Mezz57th, LLC",
-      "city": "",
-      "notice_date": "2026-09-08",
-      "layoff_date": "2026-12-23",
-      "employees_affected": "71",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Miller's Ale House, Inc.",
-      "city": "",
-      "notice_date": "2026-08-24",
-      "layoff_date": "2026-09-26",
-      "employees_affected": "25",
-      "closure_type": "Closure",
-      "notes": "Richmond"
-    },
-    {
-      "state": "New York",
-      "company": "Mizkan America, Inc.",
-      "city": "",
-      "notice_date": "2026-02-10",
-      "layoff_date": "2026-05-11",
-      "employees_affected": "30",
-      "closure_type": "Layoff",
-      "notes": "Orleans"
-    },
-    {
-      "state": "New York",
-      "company": "Morgan Stanley",
-      "city": "",
-      "notice_date": "2026-03-05",
-      "layoff_date": "2026-05-27",
-      "employees_affected": "7",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Morgan Stanley",
-      "city": "",
-      "notice_date": "2026-03-05",
-      "layoff_date": "2026-05-27",
-      "employees_affected": "1",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Morgan Stanley",
-      "city": "",
-      "notice_date": "2026-03-05",
-      "layoff_date": "2026-05-27",
-      "employees_affected": "2",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Morgan Stanley",
-      "city": "",
-      "notice_date": "2026-03-05",
-      "layoff_date": "2026-05-27",
-      "employees_affected": "82",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Morgan Stanley",
-      "city": "",
-      "notice_date": "2026-03-05",
-      "layoff_date": "2026-05-27",
-      "employees_affected": "120",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Morgan Stanley",
-      "city": "",
-      "notice_date": "2026-03-05",
-      "layoff_date": "2026-05-27",
-      "employees_affected": "61",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Morgan Stanley",
-      "city": "",
-      "notice_date": "2026-03-05",
-      "layoff_date": "2026-05-27",
-      "employees_affected": "1",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "NBCUniversal Media, LLC",
-      "city": "",
-      "notice_date": "2026-03-13",
-      "layoff_date": "2026-06-11",
-      "employees_affected": "123",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Nespresso",
-      "city": "",
-      "notice_date": "2026-01-13",
-      "layoff_date": "2026-04-13",
-      "employees_affected": "46",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "NeuLion USA LLC",
-      "city": "",
-      "notice_date": "2026-03-17",
-      "layoff_date": "2026-06-15",
-      "employees_affected": "7",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "NHS U.S., LLC.",
-      "city": "",
-      "notice_date": "2026-03-25",
-      "layoff_date": "2026-07-03",
-      "employees_affected": "31",
-      "closure_type": "Layoff",
-      "notes": "Suffolk"
-    },
-    {
-      "state": "New York",
-      "company": "Novanta Corporation",
-      "city": "",
-      "notice_date": "2026-07-21",
-      "layoff_date": "2027-03-31",
-      "employees_affected": "49",
-      "closure_type": "Closure",
-      "notes": "Onondaga"
-    },
-    {
-      "state": "New York",
-      "company": "NY HEAT, LLC. (The Lambs Club)",
-      "city": "",
-      "notice_date": "2026-03-11",
-      "layoff_date": "2026-07-27",
-      "employees_affected": "75",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "NYY Steak LLC",
-      "city": "",
-      "notice_date": "2026-07-02",
-      "layoff_date": "2026-09-30",
-      "employees_affected": "21",
-      "closure_type": "Closure",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "OceanFirst Bank, N.A.",
-      "city": "",
-      "notice_date": "2026-05-11",
-      "layoff_date": "2026-08-10",
-      "employees_affected": "174",
-      "closure_type": "Layoff",
-      "notes": "Nassau"
-    },
-    {
-      "state": "New York",
-      "company": "Old Navy LLC",
-      "city": "",
-      "notice_date": "2026-10-19",
-      "layoff_date": "2027-01-22",
-      "employees_affected": "44",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "One Moment Logistics Inc.",
-      "city": "",
-      "notice_date": "2026-07-07",
-      "layoff_date": "2026-07-17",
-      "employees_affected": "52",
-      "closure_type": "Closure",
-      "notes": "Herkimer"
-    },
-    {
-      "state": "New York",
-      "company": "Oracle America, Inc.",
-      "city": "",
-      "notice_date": "2026-04-02",
-      "layoff_date": "2026-07-01",
-      "employees_affected": "62",
-      "closure_type": "Layoff",
-      "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "Oswego Beverage Company, LLC.",
-      "city": "",
-      "notice_date": "2026-05-29",
-      "layoff_date": "2026-08-28",
-      "employees_affected": "59",
-      "closure_type": "Closure",
-      "notes": "Oswego"
-    },
-    {
-      "state": "New York",
-      "company": "Oswego Beverage Company, LLC.",
-      "city": "",
-      "notice_date": "2026-05-29",
-      "layoff_date": "2026-08-28",
-      "employees_affected": "42",
-      "closure_type": "Closure",
-      "notes": "Jefferson"
-    },
-    {
-      "state": "New York",
-      "company": "PharmaCann, Inc.",
-      "city": "",
-      "notice_date": "2026-03-20",
-      "layoff_date": "2026-06-20",
-      "employees_affected": "130",
-      "closure_type": "Closure",
-      "notes": "Orange"
-    },
-    {
-      "state": "New York",
-      "company": "Piedmont Airlines, Inc.",
-      "city": "",
-      "notice_date": "2026-06-12",
-      "layoff_date": "2026-09-10",
-      "employees_affected": "88",
-      "closure_type": "Closure",
-      "notes": "Onondaga"
-    },
-    {
-      "state": "New York",
-      "company": "Pinnacle Managing Co LLC",
-      "city": "",
-      "notice_date": "2026-02-20",
-      "layoff_date": "2026-04-30",
-      "employees_affected": "64",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Pomonok Home Services, Inc.",
-      "city": "",
-      "notice_date": "2026-07-09",
-      "layoff_date": "2026-10-08",
-      "employees_affected": "226",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "PT OPCO, LLC d/b/a Pink Taco",
-      "city": "",
-      "notice_date": "2026-02-17",
-      "layoff_date": "2026-02-18",
-      "employees_affected": "36",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Recreational Equipment, Inc.",
-      "city": "",
-      "notice_date": "2026-04-24",
-      "layoff_date": "2026-07-23",
-      "employees_affected": "72",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Republic National Distributing Company New York, LLC.",
-      "city": "",
-      "notice_date": "2026-05-01",
-      "layoff_date": "2026-07-31",
-      "employees_affected": "86",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Republic National Distributing Company New York, LLC.",
-      "city": "",
-      "notice_date": "2026-05-01",
-      "layoff_date": "2026-07-31",
-      "employees_affected": "46",
-      "closure_type": "Closure",
-      "notes": "Onondaga"
-    },
-    {
-      "state": "New York",
-      "company": "Resideo, LLC. D/B/A ADI",
-      "city": "",
-      "notice_date": "2026-06-12",
-      "layoff_date": "2026-09-15",
-      "employees_affected": "55",
-      "closure_type": "Closure",
-      "notes": "Albany"
-    },
-    {
-      "state": "New York",
-      "company": "Rising Ground Inc.",
-      "city": "",
-      "notice_date": "2026-02-20",
-      "layoff_date": "2026-05-21",
-      "employees_affected": "43",
-      "closure_type": "Layoff",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "Rising Ground Inc.",
-      "city": "",
-      "notice_date": "2026-02-20",
-      "layoff_date": "2026-05-21",
-      "employees_affected": "27",
-      "closure_type": "Layoff",
-      "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "Rising Ground Inc.",
-      "city": "",
-      "notice_date": "2026-02-20",
-      "layoff_date": "2026-05-21",
-      "employees_affected": "17",
-      "closure_type": "Layoff",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Rising Ground Inc.",
-      "city": "",
-      "notice_date": "2026-02-20",
-      "layoff_date": "2026-05-21",
-      "employees_affected": "15",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Rising Ground Inc.",
-      "city": "",
-      "notice_date": "2026-02-20",
-      "layoff_date": "2026-05-21",
-      "employees_affected": "29",
-      "closure_type": "Layoff",
-      "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "Rising Ground Inc.",
-      "city": "",
-      "notice_date": "2026-02-20",
-      "layoff_date": "2026-05-21",
-      "employees_affected": "29",
-      "closure_type": "Layoff",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Rising Ground Inc.",
-      "city": "",
-      "notice_date": "2026-02-20",
-      "layoff_date": "2026-05-21",
-      "employees_affected": "24",
-      "closure_type": "Layoff",
-      "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "Rising Ground Inc.",
-      "city": "",
-      "notice_date": "2026-02-20",
-      "layoff_date": "2026-05-21",
-      "employees_affected": "5",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Rising Ground Inc.",
-      "city": "",
-      "notice_date": "2026-02-20",
-      "layoff_date": "2026-05-21",
-      "employees_affected": "68",
-      "closure_type": "Layoff",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "S.S. Delivery Systems LLC",
-      "city": "",
-      "notice_date": "2026-02-26",
-      "layoff_date": "2026-03-31",
-      "employees_affected": "4",
-      "closure_type": "Closure",
-      "notes": "Monroe"
-    },
-    {
-      "state": "New York",
-      "company": "S.S. Delivery Systems LLC",
-      "city": "",
-      "notice_date": "2026-02-26",
-      "layoff_date": "2026-03-31",
-      "employees_affected": "45",
-      "closure_type": "Closure",
-      "notes": "Monroe"
-    },
-    {
-      "state": "New York",
-      "company": "Saint-Gobain Ceramics & Plastics, Inc. (Monofrax, LLC.)",
-      "city": "",
-      "notice_date": "2026-05-27",
-      "layoff_date": "2026-09-01",
-      "employees_affected": "79",
-      "closure_type": "Layoff",
-      "notes": "Chautauqua"
-    },
-    {
-      "state": "New York",
-      "company": "Saks & Company LLC",
-      "city": "",
-      "notice_date": "2026-04-30",
-      "layoff_date": "2026-05-01",
-      "employees_affected": "136",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Saks & Company LLC",
-      "city": "",
-      "notice_date": "2026-04-20",
-      "layoff_date": "2026-05-01",
-      "employees_affected": "24",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Saks & Company LLC",
-      "city": "",
-      "notice_date": "2026-04-30",
-      "layoff_date": "2026-05-01",
-      "employees_affected": "3",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Saks & Company LLC",
-      "city": "",
-      "notice_date": "2026-04-30",
-      "layoff_date": "2026-05-01",
-      "employees_affected": "2",
-      "closure_type": "Closure",
-      "notes": "Nassau"
-    },
-    {
-      "state": "New York",
-      "company": "Saks & Company LLC",
-      "city": "",
-      "notice_date": "2026-04-30",
-      "layoff_date": "2026-05-01",
-      "employees_affected": "8",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Sardi's Enterprises, Ltd.",
-      "city": "",
-      "notice_date": "2026-03-25",
-      "layoff_date": "2026-06-24",
-      "employees_affected": "62",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "SDH Education West, LLC d/b/a Sodexo - Binghamton University",
-      "city": "",
-      "notice_date": "2026-02-26",
-      "layoff_date": "2026-05-31",
-      "employees_affected": "3",
-      "closure_type": "Closure",
-      "notes": "Broome"
-    },
-    {
-      "state": "New York",
-      "company": "SDH Education West, LLC d/b/a Sodexo - Binghamton University",
-      "city": "",
-      "notice_date": "2026-02-26",
-      "layoff_date": "2026-05-31",
-      "employees_affected": "144",
-      "closure_type": "Closure",
-      "notes": "Broome"
-    },
-    {
-      "state": "New York",
-      "company": "SDH Education West, LLC d/b/a Sodexo - Binghamton University",
-      "city": "",
-      "notice_date": "2026-02-26",
-      "layoff_date": "2026-05-31",
-      "employees_affected": "542",
-      "closure_type": "Closure",
-      "notes": "Broome"
-    },
-    {
-      "state": "New York",
-      "company": "Seaport Entertainment Management LLC",
-      "city": "",
-      "notice_date": "2026-02-23",
-      "layoff_date": "2026-02-23",
-      "employees_affected": "93",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Sky Chefs, LLC",
-      "city": "",
-      "notice_date": "2026-08-04",
-      "layoff_date": "2026-10-07",
-      "employees_affected": "471",
-      "closure_type": "Layoff",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "Sparus Holdings, LLC. & Southern Cross, LLC",
-      "city": "",
-      "notice_date": "2026-03-31",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "19",
-      "closure_type": "Layoff",
-      "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "Spirit Airlines, LLC",
-      "city": "",
-      "notice_date": "2026-05-02",
-      "layoff_date": "2026-05-02",
-      "employees_affected": "186",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Springer Nature America, Inc.",
-      "city": "",
-      "notice_date": "2026-06-23",
-      "layoff_date": "2026-06-23",
-      "employees_affected": "24",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Stefanini Inc",
-      "city": "",
-      "notice_date": "2026-07-22",
-      "layoff_date": "2026-09-20",
-      "employees_affected": "24",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "SY SEIT, LLC.",
-      "city": "",
-      "notice_date": "2026-05-26",
-      "layoff_date": "2026-08-31",
-      "employees_affected": "13",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "SYPartners, LLC",
-      "city": "",
-      "notice_date": "2026-10-02",
-      "layoff_date": "2026-12-31",
-      "employees_affected": "31",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "The Bank of Nova Scotia",
-      "city": "",
-      "notice_date": "2026-02-11",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "15",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "The Children's Village",
-      "city": "",
-      "notice_date": "2026-04-01",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "200",
-      "closure_type": "Closure",
-      "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "The Coca-Cola Company",
-      "city": "",
-      "notice_date": "2026-03-02",
-      "layoff_date": "2026-05-31",
-      "employees_affected": "41",
-      "closure_type": "Layoff",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "The Goodyear Tire and Rubber Company",
-      "city": "",
-      "notice_date": "2026-10-01",
-      "layoff_date": "2026-12-30",
-      "employees_affected": "51",
-      "closure_type": "Closure",
-      "notes": "Niagara"
-    },
-    {
-      "state": "New York",
-      "company": "The Rockefeller University",
-      "city": "",
-      "notice_date": "2026-04-02",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "27",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "The Rockefeller University Hospital",
-      "city": "",
-      "notice_date": "2026-03-02",
-      "layoff_date": "2026-05-31",
-      "employees_affected": "41",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "ThreeC Logistics, LLC.",
-      "city": "",
-      "notice_date": "2026-08-11",
-      "layoff_date": "2026-11-11",
-      "employees_affected": "78",
-      "closure_type": "Closure",
-      "notes": "Albany"
-    },
-    {
-      "state": "New York",
-      "company": "TL Cannon Management Corp. - Applebee's (Capital)",
-      "city": "",
-      "notice_date": "2026-01-12",
-      "layoff_date": "2026-04-12",
-      "employees_affected": "15",
-      "closure_type": "Closure",
-      "notes": "Schenectady"
-    },
-    {
-      "state": "New York",
-      "company": "Tourmaline Bio Inc.",
-      "city": "",
-      "notice_date": "2026-02-19",
-      "layoff_date": "2026-05-29",
-      "employees_affected": "60",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Ultrepet, LLC. d/b/a Evergreen Recycling, LLC.",
-      "city": "",
-      "notice_date": "2026-02-24",
-      "layoff_date": "2026-02-24",
-      "employees_affected": "59",
-      "closure_type": "Closure",
-      "notes": "Albany"
-    },
-    {
-      "state": "New York",
-      "company": "Unique Care Ltd",
-      "city": "",
-      "notice_date": "2026-03-30",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "59",
-      "closure_type": "Closure",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "University of Rochester (Childrenâs Institute, Inc.)",
-      "city": "",
-      "notice_date": "2026-03-27",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "34",
-      "closure_type": "Layoff",
-      "notes": "Monroe"
-    },
-    {
-      "state": "New York",
-      "company": "Urban Resource Institute",
-      "city": "",
-      "notice_date": "2026-04-01",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "8",
-      "closure_type": "Closure",
-      "notes": "Queens"
-    },
-    {
-      "state": "New York",
-      "company": "USIC Locating Services, LLC. d/b/a Reconn Utility Services",
-      "city": "",
-      "notice_date": "2026-04-01",
-      "layoff_date": "2026-04-06",
-      "employees_affected": "72",
-      "closure_type": "Layoff",
-      "notes": "Suffolk"
-    },
-    {
-      "state": "New York",
-      "company": "Van Trans, LLC.",
-      "city": "",
-      "notice_date": "2026-05-15",
-      "layoff_date": "2026-09-01",
-      "employees_affected": "297",
-      "closure_type": "Layoff",
-      "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "VanDeMark Chemical Inc.",
-      "city": "",
-      "notice_date": "2026-02-24",
-      "layoff_date": "2026-05-25",
-      "employees_affected": "0",
-      "closure_type": "Closure",
-      "notes": "Niagara"
-    },
-    {
-      "state": "New York",
-      "company": "Villa Mary Immaculate d/b/a St. Peterâs Nursing and Rehabilitation Center (SPNRC)",
-      "city": "",
-      "notice_date": "2026-03-06",
-      "layoff_date": "2026-06-30",
-      "employees_affected": "133",
-      "closure_type": "Closure",
-      "notes": "Albany"
-    },
-    {
-      "state": "New York",
-      "company": "Vimeo.com Inc.",
-      "city": "",
-      "notice_date": "2026-01-20",
-      "layoff_date": "2026-04-20",
-      "employees_affected": "133",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Waterview Heights Rehabilitation and Nursing Center",
-      "city": "",
-      "notice_date": "2026-08-14",
-      "layoff_date": "2026-09-07",
-      "employees_affected": "216",
-      "closure_type": "Closure",
-      "notes": "Monroe"
-    },
-    {
-      "state": "New York",
-      "company": "WP Company, LLC",
-      "city": "",
-      "notice_date": "2026-02-04",
-      "layoff_date": "2026-05-08",
-      "employees_affected": "47",
-      "closure_type": "Layoff",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
       "company": "Plug Power, Inc.",
       "city": "125 Vista Blvd.",
       "notice_date": "March 25, 2025",
@@ -51071,16 +49051,6 @@
       "employees_affected": "261",
       "closure_type": "Economic",
       "notes": "Albany"
-    },
-    {
-      "state": "New York",
-      "company": "Bedabox, LLC d/b/a ShipMonk",
-      "city": "5 Inez Drive",
-      "notice_date": "December 16, 2024",
-      "layoff_date": "",
-      "employees_affected": "67",
-      "closure_type": "",
-      "notes": "Suffolk"
     },
     {
       "state": "New York",
@@ -51134,26 +49104,6 @@
     },
     {
       "state": "New York",
-      "company": "Sumitomo Rubber USA., LLC",
-      "city": "10 Sheridan Drive",
-      "notice_date": "November 7, 2024",
-      "layoff_date": "",
-      "employees_affected": "1380",
-      "closure_type": "",
-      "notes": "Erie"
-    },
-    {
-      "state": "New York",
-      "company": "Amscan Inc., a Party City Holdings, Inc.",
-      "city": "47 Elizabeth Drive",
-      "notice_date": "December 20, 2024",
-      "layoff_date": "",
-      "employees_affected": "524",
-      "closure_type": "",
-      "notes": "Orange"
-    },
-    {
-      "state": "New York",
       "company": "Rapid Reliable Care by DocGo, LLC. d/b/a Rapid Reliable Care; DocGo",
       "city": "685 Third Avenue, 9th Floor",
       "notice_date": "February 27, 2025",
@@ -51194,16 +49144,6 @@
     },
     {
       "state": "New York",
-      "company": "Cold Spring Acquisition, LLC d/b/a Cold Spring Hills Center for Nursing and Rehabilitation",
-      "city": "378 Syosset-Woodbury Road",
-      "notice_date": "December 17, 2024",
-      "layoff_date": "",
-      "employees_affected": "490",
-      "closure_type": "",
-      "notes": "Nassau"
-    },
-    {
-      "state": "New York",
       "company": "Eaglestone, LLC, Eaglestone Holdings, LLC, Eaglestone Intermediate Holdings, LLC, and",
       "city": "Eaglestone Shared Services, LLC.",
       "notice_date": "February 7, 2025",
@@ -51221,16 +49161,6 @@
       "employees_affected": "2",
       "closure_type": "Funding Loss",
       "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Marquardt Switches, Inc.",
-      "city": "2711 US-20",
-      "notice_date": "October 1, 2024",
-      "layoff_date": "December 31, 2024",
-      "employees_affected": "8",
-      "closure_type": "Economic",
-      "notes": "Madison"
     },
     {
       "state": "New York",
@@ -51284,36 +49214,6 @@
     },
     {
       "state": "New York",
-      "company": "UltraVolt, Inc., a wholly owned subsidiary of Advanced Energy Industries, Inc.",
-      "city": "1800 Ocean Ave.",
-      "notice_date": "October 29, 2024",
-      "layoff_date": "",
-      "employees_affected": "43",
-      "closure_type": "",
-      "notes": "Suffolk"
-    },
-    {
-      "state": "New York",
-      "company": "SpencerARL New York, Inc.",
-      "city": "31 Area Development Dr.",
-      "notice_date": "July 9, 2024",
-      "layoff_date": "",
-      "employees_affected": "111",
-      "closure_type": "",
-      "notes": "Clinton"
-    },
-    {
-      "state": "New York",
-      "company": "The College of Saint Rose",
-      "city": "432 Western Avenue",
-      "notice_date": "February 15, 2024",
-      "layoff_date": "",
-      "employees_affected": "646",
-      "closure_type": "",
-      "notes": "Albany"
-    },
-    {
-      "state": "New York",
       "company": "Catholic Charities of Orange, Sullivan & Ulster (CCOSU)",
       "city": "27 Matthews Street",
       "notice_date": "February 19, 2025",
@@ -51341,16 +49241,6 @@
       "employees_affected": "4",
       "closure_type": "",
       "notes": "Kings"
-    },
-    {
-      "state": "New York",
-      "company": "SpencerARL New York, Inc.",
-      "city": "31 Area Development Dr.",
-      "notice_date": "July 9, 2024",
-      "layoff_date": "",
-      "employees_affected": "111",
-      "closure_type": "",
-      "notes": "Clinton"
     },
     {
       "state": "New York",
@@ -51434,26 +49324,6 @@
     },
     {
       "state": "New York",
-      "company": "Parsons Corporation",
-      "city": "100 Broadway, 20th Floor",
-      "notice_date": "January 26, 2024",
-      "layoff_date": "May 10, 2024",
-      "employees_affected": "49",
-      "closure_type": "Contract Expiration",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Parsons Corporation",
-      "city": "100 Broadway, 20th Floor",
-      "notice_date": "January 26, 2024",
-      "layoff_date": "May 10, 2024",
-      "employees_affected": "48",
-      "closure_type": "Contract Expiration",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
       "company": "Macy’s Retail Holdings, Inc.",
       "city": "145 Progress Place",
       "notice_date": "January 9, 2025",
@@ -51461,16 +49331,6 @@
       "employees_affected": "127",
       "closure_type": "",
       "notes": "Monroe"
-    },
-    {
-      "state": "New York",
-      "company": "Marquardt Switches, Inc.",
-      "city": "2711 US-20",
-      "notice_date": "October 1, 2024",
-      "layoff_date": "December 31, 2024",
-      "employees_affected": "5",
-      "closure_type": "Economic",
-      "notes": "Madison"
     },
     {
       "state": "New York",
@@ -51501,26 +49361,6 @@
       "employees_affected": "1",
       "closure_type": "Economic",
       "notes": "Suffolk"
-    },
-    {
-      "state": "New York",
-      "company": "BAMIA 2, LLC. d/b/a Reef Technology",
-      "city": "501 Brickell Key Dr. Ste. 601",
-      "notice_date": "July 1, 2024",
-      "layoff_date": "",
-      "employees_affected": "53",
-      "closure_type": "",
-      "notes": "Bronx"
-    },
-    {
-      "state": "New York",
-      "company": "YANWA, LLC.",
-      "city": "1181 Tinton Avenue, Apt. 3B",
-      "notice_date": "November 27, 2024",
-      "layoff_date": "",
-      "employees_affected": "74",
-      "closure_type": "",
-      "notes": "Kings"
     },
     {
       "state": "New York",
@@ -51564,16 +49404,6 @@
     },
     {
       "state": "New York",
-      "company": "Semikron Danfoss, LLC.",
-      "city": "330 Technology Drive",
-      "notice_date": "December 18, 2024",
-      "layoff_date": "November 1, 2024",
-      "employees_affected": "43",
-      "closure_type": "Contract Loss",
-      "notes": "Oneida"
-    },
-    {
-      "state": "New York",
       "company": "Exel, Inc. d/b/a DHL Supply Chain (USA)",
       "city": "360 Westar Blvd.",
       "notice_date": "January 13, 2025",
@@ -51581,26 +49411,6 @@
       "employees_affected": "116",
       "closure_type": "",
       "notes": "Richmond"
-    },
-    {
-      "state": "New York",
-      "company": "LiveIntent, Inc.",
-      "city": "1 World Trade Center, 45th Floor",
-      "notice_date": "October 21, 2024",
-      "layoff_date": "October 21, 2024",
-      "employees_affected": "35",
-      "closure_type": "Merger",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Amscan Inc., a Party City Holdings, Inc.",
-      "city": "47 Elizabeth Drive",
-      "notice_date": "December 20, 2024",
-      "layoff_date": "",
-      "employees_affected": "524",
-      "closure_type": "",
-      "notes": "Orange"
     },
     {
       "state": "New York",
@@ -51614,16 +49424,6 @@
     },
     {
       "state": "New York",
-      "company": "Venture Forthe, Inc.",
-      "city": "3900 Packard Rd.",
-      "notice_date": "December 31, 2024",
-      "layoff_date": "March 31, 2025",
-      "employees_affected": "280",
-      "closure_type": "Contract Loss",
-      "notes": "Niagara"
-    },
-    {
-      "state": "New York",
       "company": "Barrie House Coffee Company, LLC.",
       "city": "4 Warehouse Lane",
       "notice_date": "January 10, 2025",
@@ -51631,36 +49431,6 @@
       "employees_affected": "39",
       "closure_type": "",
       "notes": "Westchester"
-    },
-    {
-      "state": "New York",
-      "company": "The College of Saint Rose",
-      "city": "432 Western Avenue",
-      "notice_date": "February 15, 2024",
-      "layoff_date": "",
-      "employees_affected": "646",
-      "closure_type": "",
-      "notes": "Albany"
-    },
-    {
-      "state": "New York",
-      "company": "HTx Services, L.L.C.",
-      "city": "1 Fairchild Court, Suite 200",
-      "notice_date": "December 27, 2024",
-      "layoff_date": "",
-      "employees_affected": "86",
-      "closure_type": "",
-      "notes": "Nassau"
-    },
-    {
-      "state": "New York",
-      "company": "East 54 Hotel Management, LLC. d/b/a Hotel Elysee",
-      "city": "60 East 54th Street",
-      "notice_date": "December 20, 2024",
-      "layoff_date": "",
-      "employees_affected": "49",
-      "closure_type": "",
-      "notes": "New York"
     },
     {
       "state": "New York",
@@ -51691,56 +49461,6 @@
       "employees_affected": "51",
       "closure_type": "Other",
       "notes": "Erie"
-    },
-    {
-      "state": "New York",
-      "company": "Cold Spring Acquisition, LLC d/b/a Cold Spring Hills Center for Nursing and Rehabilitation",
-      "city": "378 Syosset-Woodbury Road",
-      "notice_date": "December 17, 2024",
-      "layoff_date": "",
-      "employees_affected": "490",
-      "closure_type": "",
-      "notes": "Nassau"
-    },
-    {
-      "state": "New York",
-      "company": "IPRO (Island Peer Review Organization, Inc.)",
-      "city": "1979 Marcus Avenue, Suite 105",
-      "notice_date": "July 15, 2024",
-      "layoff_date": "",
-      "employees_affected": "128",
-      "closure_type": "Contract Expiration",
-      "notes": "Suffolk"
-    },
-    {
-      "state": "New York",
-      "company": "Paramount Global",
-      "city": "1515 Broadway",
-      "notice_date": "February 13, 2024",
-      "layoff_date": "May 17, 2024",
-      "employees_affected": "1192",
-      "closure_type": "Economic",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "Paramount Global",
-      "city": "1515 Broadway",
-      "notice_date": "February 13, 2024",
-      "layoff_date": "May 17, 2024",
-      "employees_affected": "1178",
-      "closure_type": "Economic",
-      "notes": "New York"
-    },
-    {
-      "state": "New York",
-      "company": "DOTC Delivery, LLC.",
-      "city": "3537 36th Street",
-      "notice_date": "April 29, 2024",
-      "layoff_date": "",
-      "employees_affected": "99",
-      "closure_type": "",
-      "notes": "Queens"
     },
     {
       "state": "North Carolina",
@@ -54017,6 +51737,506 @@
       "company": "McGee Air Services, Inc.",
       "city": "Phoenix",
       "notice_date": "Sep 10, 2025",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "U.S Census Bureau",
+      "city": "Tucson",
+      "notice_date": "Oct 10, 2025",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Buena Vista Recovery",
+      "city": "Scottsdale",
+      "notice_date": "Oct 28, 2025",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Microchip",
+      "city": "Tempe",
+      "notice_date": "Oct 29, 2025",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Arizona Autism",
+      "city": "Phoenix",
+      "notice_date": "Oct 30, 2025",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Allied Tube and Conduit Corporation",
+      "city": "Phoenix",
+      "notice_date": "Nov 05, 2025",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Evernorth Care Group",
+      "city": "Scottsdale",
+      "notice_date": "Nov 11, 2025",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Nordstrom",
+      "city": "Centennial",
+      "notice_date": "Nov 17, 2025",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Nordstrom",
+      "city": "Centennial",
+      "notice_date": "Nov 20, 2025",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "GNC Distribution Center",
+      "city": "Phoenix",
+      "notice_date": "Jan 07, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "DHM Payroll - Fiesta Tempe, LLC,",
+      "city": "Tempe",
+      "notice_date": "Nov 26, 2025",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Aramark Campus, LLC",
+      "city": "Vail",
+      "notice_date": "Apr 01, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Catholic Community Services of Southern Arizona, Inc.",
+      "city": "Tucson",
+      "notice_date": "Apr 08, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "VisionQuest National LTD",
+      "city": "Tucson",
+      "notice_date": "Apr 09, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "The Tendit Group, LLC.",
+      "city": "Phoenix",
+      "notice_date": "Apr 14, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Marsden Services, LLC",
+      "city": "Tucson",
+      "notice_date": "Apr 15, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Paragon Space Development Corporation",
+      "city": "Tucson",
+      "notice_date": "Jun 12, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Northpoint Expeditionary Learning Academy",
+      "city": "Prescott",
+      "notice_date": "Apr 29, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Republic National Distributing Company, LLC",
+      "city": "Phoenix",
+      "notice_date": "Apr 23, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Federal Express Corporation",
+      "city": "Phoenix",
+      "notice_date": "Jun 02, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "DLH Solutions",
+      "city": "Tucson",
+      "notice_date": "Apr 17, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Essendant",
+      "city": "Phoenix",
+      "notice_date": "Aug 04, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Avelo Airlines",
+      "city": "Mesa",
+      "notice_date": "Jan 07, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "SMBC Group - JeniusBank",
+      "city": "Scottsdale",
+      "notice_date": "Jan 08, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Benchmark",
+      "city": "Phoenix",
+      "notice_date": "Apr 29, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "SDH Education West, LLC",
+      "city": "Phoenix",
+      "notice_date": "May 14, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Honeywell AZ0Y",
+      "city": "Chandler",
+      "notice_date": "May 27, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "SMBC MANUBANK",
+      "city": "New York",
+      "notice_date": "Jun 04, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Leona Arizona Employment Group, Inc.",
+      "city": "Phoenix",
+      "notice_date": "Jun 16, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Conduent Commercial Solutions, LLC",
+      "city": "Florham Park",
+      "notice_date": "Jun 29, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Southwest Key Programs",
+      "city": "Phoenix",
+      "notice_date": "Aug 06, 2025",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Benchmark",
+      "city": "Phoenix",
+      "notice_date": "Jan 27, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Shell Recharge Solutions",
+      "city": "Los Angeles",
+      "notice_date": "Jan 29, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Automated Harvesting, LLC.",
+      "city": "Yuma",
+      "notice_date": "Jan 30, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Liberty Dental Plan",
+      "city": "Tustin",
+      "notice_date": "Feb 05, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Saks & Company LLC",
+      "city": "Phoenix",
+      "notice_date": "Feb 10, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Lowe's Companies, Inc.",
+      "city": "Mooresville",
+      "notice_date": "Feb 16, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Regional Acceptance Corporation",
+      "city": "Tempe",
+      "notice_date": "Sep 15, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Ingram Micro Services LLC",
+      "city": "Chandler",
+      "notice_date": "Jun 24, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Lucid USA, Inc.",
+      "city": "Casa Grande",
+      "notice_date": "Jun 22, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Central Admixture Pharmacy Services, Inc.",
+      "city": "Phoenix",
+      "notice_date": "Jun 25, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "National Distribution Centers, LLC",
+      "city": "Waddell",
+      "notice_date": "May 21, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Select Medical Corporation",
+      "city": "Tucson",
+      "notice_date": "Jul 09, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Infineon Technologies America Corp",
+      "city": "Mesa",
+      "notice_date": "Aug 03, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "West Pharmaceutical Services, Inc.",
+      "city": "Scottsdale",
+      "notice_date": "Sep 03, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Becton Dickson and Company (BD)",
+      "city": "Tempe",
+      "notice_date": "Sep 08, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "SMBC MANUBANK",
+      "city": "New York",
+      "notice_date": "Aug 11, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Salad and Go",
+      "city": "Phoenix",
+      "notice_date": "Aug 04, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Amentum",
+      "city": "Chandler",
+      "notice_date": "Aug 21, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "Advanced Call Center Technologies (ACT)",
+      "city": "San Luis",
+      "notice_date": "May 01, 2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "WARN",
+      "notes": ""
+    },
+    {
+      "state": "Arizona",
+      "company": "AssistRX",
+      "city": "Tempe",
+      "notice_date": "Sep 30, 2026",
       "layoff_date": "",
       "employees_affected": "",
       "closure_type": "WARN",
