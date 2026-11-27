@@ -1,0 +1,85 @@
+name: Weekly Banner Location Monitor
+
+# Scrapes every active company's store locator (banner_location_monitoring_system/),
+# compares with the previous successful scrape and writes NEW / REMOVED / UPDATED /
+# UNCHANGED results to Supabase (blms_* tables) for the dashboard tab.
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'   # every Monday 03:00 UTC
+  workflow_dispatch:
+    inputs:
+      company:
+        description: 'Only this company key (e.g. dogtopia) - blank = all active'
+        required: false
+        default: ''
+      skip_browser:
+        description: 'Skip Cloudflare sites (Hollywood Feed, Mud Bay)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: location-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install pandas requests beautifulsoup4 patchright "supabase>=2.0.0,<3.0.0"
+
+      - name: Install Patchright browser
+        run: patchright install --with-deps chromium
+
+      - name: Install xvfb
+        run: sudo apt-get update && sudo apt-get install -y xvfb
+
+      - name: Run location monitor
+        # Hollywood Feed and Mud Bay sit behind Cloudflare and need a real
+        # (non-headless) browser window - xvfb-run provides a virtual display.
+        env:
+          # Separate Supabase project for location monitoring (not the main dashboard DB)
+          BLMS_SUPABASE_URL: ${{ secrets.BLMS_SUPABASE_URL }}
+          BLMS_SUPABASE_KEY: ${{ secrets.BLMS_SUPABASE_KEY }}
+          BLMS_TRIGGER: ${{ github.event_name }}
+          INPUT_COMPANY: ${{ github.event.inputs.company }}
+          INPUT_SKIP_BROWSER: ${{ github.event.inputs.skip_browser }}
+        run: |
+          ARGS=()
+          if [ -n "$INPUT_COMPANY" ]; then ARGS+=(--company "$INPUT_COMPANY"); fi
+          if [ "$INPUT_SKIP_BROWSER" = "true" ]; then ARGS+=(--skip-browser); fi
+          xvfb-run -a python banner_location_monitoring_system/monitor.py "${ARGS[@]}"
+
+      - name: Commit dashboard JSON
+        if: always()
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add docs/location_monitor.json || true
+          git diff --staged --quiet || git commit -m "Auto-update: Weekly location monitor $(date -u '+%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X theirs origin main && git push origin main && break
+            echo "Push attempt $i failed, retrying in 15s..."
+            git rebase --abort 2>/dev/null || true
+            sleep 15
+          done

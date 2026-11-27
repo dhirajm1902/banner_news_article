@@ -34,6 +34,7 @@ pip install pandas feedparser python-dateutil supabase selenium requests beautif
 | `warn.py` | State WARN Act portals | 5,000+ lines; state-specific handlers |
 | `ct_scoop_scraper.py` | CT Scoop | Regional announcements |
 | `community_impact_scraper.py` | communityimpact.com/business/ | Uses Patchright (Cloudflare bot-check, same as Costco in `company_website_comingsoon.py`); per-metro-city article listings |
+| `banner_location_monitoring_system/` | Company store locators | Weekly snapshot + change detection (NEW/REMOVED/UPDATED/UNCHANGED); see its README.md |
 
 ### Extraction Pipeline (Claude-Assisted)
 1. **`daily_news_prepare.py`** — Batches ~50 articles, writes `newsbatch_N.txt` files with a structured Claude prompt asking for a markdown extraction table.
@@ -76,7 +77,7 @@ Single-file glassmorphic dashboard. Key behaviors:
 - Requires Supabase session — page is hidden until auth is verified.
 - Fetches data directly from Supabase tables via the JS client.
 - AI chat widget calls **Gemini API** (not Claude) from the browser using `GEMINI_API_KEY` embedded at build/deploy time.
-- Tabs: Store News, CT Scoop, Restaurant News, Biz Debut, Daily News, Warn News, Company Website, Community Impact — most have Articles and Extraction sub-tabs (Warn News and Company Website don't).
+- Tabs: Store News, CT Scoop, Restaurant News, Biz Debut, Daily News, Warn News, Company Website, Community Impact, Banner Location Monitoring — most have Articles and Extraction sub-tabs (Warn News and Company Website don't; Banner Location Monitoring has its own 8 views and reads the `blms_*` Supabase tables, falling back to `docs/location_monitor.json`).
 - Deployed to both GitHub Pages and Vercel; Vercel config adds 1-hour cache headers on JSON files.
 
 ## GitHub Actions Automation
@@ -92,6 +93,7 @@ Nine workflows in `.github/workflows/` run on schedule:
 | Daily WARN Act | daily | `warn.py` → sync |
 | Daily Community Impact | 22:30 daily | `community_impact_scraper.py` → `community_impact_auto_extract.py` (Groq) → sync |
 | Extraction master build | manual trigger | `build_extraction_masters.py` → sync |
+| Weekly location monitor | Mon 03:00 | `banner_location_monitoring_system/monitor.py` → `blms_*` tables + `docs/location_monitor.json` |
 
 All workflows commit updated CSVs back to `main` and call `sync_to_supabase.py`.
 

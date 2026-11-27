@@ -372,6 +372,9 @@
                 <button id="tabCommunityBtn" class="tab-btn" onclick="switchTab('community')">
                     <i class="fas fa-city mr-1.5"></i>Community Impact<span id="tabCommunityNewCount" class="tab-new-dot hidden"></span>
                 </button>
+                <button id="tabLocMonBtn" class="tab-btn" onclick="switchTab('locmon')">
+                    <i class="fas fa-map-location-dot mr-1.5"></i>Banner Location Monitoring
+                </button>
             </div>
         </div>
 
@@ -1648,6 +1651,94 @@
 
         </div>
 
+        <!-- BANNER LOCATION MONITORING TAB (banner_location_monitoring_system/) -->
+        <div id="locmonTabContent" class="hidden">
+            <div class="mb-6 flex justify-center">
+                <div class="glass rounded-2xl p-1 flex gap-1 flex-wrap justify-center" id="lmSubTabs">
+                    <button class="sub-tab-btn active" data-view="dashboard" onclick="lmSwitchView('dashboard')"><i class="fas fa-gauge mr-1"></i> Dashboard</button>
+                    <button class="sub-tab-btn" data-view="companies" onclick="lmSwitchView('companies')"><i class="fas fa-building mr-1"></i> Companies</button>
+                    <button class="sub-tab-btn" data-view="locations" onclick="lmSwitchView('locations')"><i class="fas fa-location-dot mr-1"></i> All Locations</button>
+                    <button class="sub-tab-btn" data-view="new" onclick="lmSwitchView('new')"><i class="fas fa-circle-plus mr-1"></i> New</button>
+                    <button class="sub-tab-btn" data-view="removed" onclick="lmSwitchView('removed')"><i class="fas fa-circle-minus mr-1"></i> Removed</button>
+                    <button class="sub-tab-btn" data-view="updated" onclick="lmSwitchView('updated')"><i class="fas fa-pen-to-square mr-1"></i> Updated</button>
+                    <button class="sub-tab-btn" data-view="history" onclick="lmSwitchView('history')"><i class="fas fa-clock-rotate-left mr-1"></i> Scrape History</button>
+                    <button class="sub-tab-btn" data-view="review" onclick="lmSwitchView('review')"><i class="fas fa-user-check mr-1"></i> Manual Review<span id="lmReviewBadge" class="hidden ml-1.5 px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-violet-500/30 text-violet-200"></span></button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div id="lmStats" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8 fade-in" style="display:none;">
+                <div class="stats-card rounded-2xl p-5 card-accent-blue">
+                    <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Companies Monitored</p>
+                    <p class="text-3xl font-bold text-white" id="lmStatCompanies">0</p>
+                </div>
+                <div class="stats-card rounded-2xl p-5 card-accent-blue">
+                    <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Active Locations</p>
+                    <p class="text-3xl font-bold text-gray-200" id="lmStatLocations">0</p>
+                </div>
+                <div class="stats-card rounded-2xl p-5 cursor-pointer" style="background:rgba(15,23,42,0.7);border:1px solid rgba(16,185,129,0.25);" onclick="lmSwitchView('new')">
+                    <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">New</p>
+                    <p class="text-3xl font-bold text-emerald-400" id="lmStatNew">0</p>
+                </div>
+                <div class="stats-card rounded-2xl p-5 cursor-pointer" style="background:rgba(15,23,42,0.7);border:1px solid rgba(244,63,94,0.25);" onclick="lmSwitchView('removed')">
+                    <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Removed</p>
+                    <p class="text-3xl font-bold text-rose-400" id="lmStatRemoved">0</p>
+                </div>
+                <div class="stats-card rounded-2xl p-5 cursor-pointer" style="background:rgba(15,23,42,0.7);border:1px solid rgba(245,158,11,0.25);" onclick="lmSwitchView('updated')">
+                    <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Updated</p>
+                    <p class="text-3xl font-bold text-amber-400" id="lmStatUpdated">0</p>
+                </div>
+                <div class="stats-card rounded-2xl p-5 cursor-pointer" style="background:rgba(15,23,42,0.7);border:1px solid rgba(139,92,246,0.25);" onclick="lmSwitchView('review')">
+                    <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Needs Review</p>
+                    <p class="text-3xl font-bold text-violet-400" id="lmStatReview">0</p>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3 flex-wrap">
+                <div class="flex-1 relative min-w-[220px]">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                    <input type="text" id="lmSearch" placeholder="Search store, address, city, state, ZIP..."
+                        class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(lmRender,250)()">
+                </div>
+                <select id="lmCompany" onchange="lmRender()" class="input-field px-4 py-3 text-sm">
+                    <option value="all">All Companies</option>
+                </select>
+                <select id="lmPeriod" onchange="lmRender()" class="input-field px-4 py-3 text-sm" title="Which changes to count">
+                    <option value="latest">Latest run</option>
+                    <option value="7">Last 7 days</option>
+                    <option value="30">Last 30 days</option>
+                    <option value="90">Last 90 days</option>
+                    <option value="all">All time</option>
+                </select>
+                <select id="lmLocStatus" onchange="lmRender()" class="input-field px-4 py-3 text-sm hidden">
+                    <option value="active">Active only</option>
+                    <option value="removed">Removed only</option>
+                    <option value="all">Active + removed</option>
+                </select>
+                <button onclick="lmDownloadCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                    <i class="fas fa-download"></i><span>Download CSV</span>
+                </button>
+            </div>
+
+            <div id="lmLoading" class="text-center py-20 hidden">
+                <div class="loading-spinner mx-auto mb-4"></div>
+                <p class="text-gray-400 text-sm">Loading location monitoring data...</p>
+            </div>
+            <div id="lmEmpty" class="text-center py-20 hidden">
+                <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-map-location-dot text-3xl text-gray-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-300" id="lmEmptyTitle">No location monitoring data yet</h3>
+                <p class="text-gray-500 text-sm" id="lmEmptyText">Run banner_location_monitoring_system/monitor.py to collect the first snapshot.</p>
+            </div>
+            <div id="lmContent" class="fade-in"></div>
+            <div id="lmFooter" class="mt-3 px-1 text-gray-500 text-xs flex justify-between hidden">
+                <span>Source: <span id="lmSource" class="text-gray-300">—</span></span>
+                <span>Last run: <span id="lmLastRun" class="text-gray-300">—</span></span>
+            </div>
+        </div>
+
     </div>
 
     <footer class="relative z-10 mt-16 py-8 border-t border-white/5">
@@ -1886,8 +1977,8 @@
 
     function switchTab(tab) {
         activeTab = tab;
-        const tabs = { store: 'storeTabContent', newbanner: 'newBannerTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent', daily: 'dailyTabContent', warn: 'warnTabContent', companyweb: 'companywebTabContent', community: 'communityTabContent' };
-        const btns = { store: 'tabStoreBtn', newbanner: 'tabNewBannerBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn', daily: 'tabDailyBtn', warn: 'tabWarnBtn', companyweb: 'tabCompanyWebBtn', community: 'tabCommunityBtn' };
+        const tabs = { store: 'storeTabContent', newbanner: 'newBannerTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent', daily: 'dailyTabContent', warn: 'warnTabContent', companyweb: 'companywebTabContent', community: 'communityTabContent', locmon: 'locmonTabContent' };
+        const btns = { store: 'tabStoreBtn', newbanner: 'tabNewBannerBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn', daily: 'tabDailyBtn', warn: 'tabWarnBtn', companyweb: 'tabCompanyWebBtn', community: 'tabCommunityBtn', locmon: 'tabLocMonBtn' };
         Object.values(tabs).forEach(id => document.getElementById(id).classList.add('hidden'));
         Object.values(btns).forEach(id => document.getElementById(id).classList.remove('active'));
         document.getElementById(tabs[tab]).classList.remove('hidden');
@@ -1913,6 +2004,8 @@
         } else if (tab === 'community') {
             if (activeCommunitySubTab === 'articles' && communityArticles.length === 0) loadCommunityData();
             if (activeCommunitySubTab === 'extraction' && communityExtractionRows.length === 0) loadCommunityExtractionData();
+        } else if (tab === 'locmon') {
+            if (!lm.loaded) lmLoad();
         }
     }
 
@@ -3770,6 +3863,8 @@
         } else if (activeTab === 'companyweb') {
             companyWebRows = [];
             loader = loadCompanyWebData();
+        } else if (activeTab === 'locmon') {
+            loader = lmLoad();
         }
         Promise.resolve(loader).finally(() => setTimeout(() => icon.classList.remove('spin-anim'), 500));
     }
@@ -4158,6 +4253,439 @@
         )].join('\n');
         dlCSV('\uFEFF' + csv, `company_website_openings_${TODAY}.csv`);
         showToast('Company Website CSV downloaded!');
+    }
+
+    // ══ BANNER LOCATION MONITORING ══
+    // Reads the blms_* tables (banner_location_monitoring_system/schema.sql) with the
+    // logged-in session; falls back to docs/location_monitor.json written by monitor.py.
+    const LM_JSON_URL = 'docs/location_monitor.json';
+    // Separate Supabase project for location monitoring. Paste its Project URL and
+    // ANON (public) key here - never the service_role key. Empty = JSON fallback only.
+    const LM_SUPA_URL  = 'https://jufnoxiqvachmzsrydme.supabase.co';
+    const LM_SUPA_ANON = 'sb_publishable_8lMXefei40CMZmaLAPItTA_jwz8VyPk';
+    // true only after running the OPTIONAL review block in schema.sql
+    const LM_REVIEW_WRITABLE = false;
+    let _lmSbClient = null;
+    function lmClient() {
+        if (!LM_SUPA_URL || !LM_SUPA_ANON) return null;
+        if (!_lmSbClient) _lmSbClient = supabase.createClient(LM_SUPA_URL, LM_SUPA_ANON, {
+            auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false, storageKey: 'blms-auth' },
+        });
+        return _lmSbClient;
+    }
+    const LM_PAGE = 300;
+    const LM_LOC_COLS = 'id,company_id,external_store_id,store_name,address,city,state,zip_code,country,phone,latitude,longitude,status,store_page,is_active,first_seen_at,last_seen_at,removed_at';
+    const LM_TYPE_STYLE = {
+        NEW:       'bg-emerald-500/15 text-emerald-300 border-emerald-500/40',
+        REMOVED:   'bg-rose-500/15 text-rose-300 border-rose-500/40',
+        UPDATED:   'bg-amber-500/15 text-amber-300 border-amber-500/40',
+        UNCHANGED: 'bg-slate-500/15 text-slate-300 border-slate-500/30',
+    };
+    const LM_RUN_STYLE = {
+        completed:  'bg-emerald-500/15 text-emerald-300 border-emerald-500/40',
+        incomplete: 'bg-amber-500/15 text-amber-300 border-amber-500/40',
+        failed:     'bg-rose-500/15 text-rose-300 border-rose-500/40',
+        running:    'bg-blue-500/15 text-blue-300 border-blue-500/40',
+    };
+    const LM_FIELD_LABEL = { store_name:'Name', address:'Address', city:'City', state:'State', zip_code:'ZIP', phone:'Phone', status:'Status', latitude:'Lat', longitude:'Lng', external_store_id:'Store ID' };
+
+    let lm = { loaded:false, source:'', companies:[], runs:[], locations:[], changes:[], latestRunIds:new Set(), companyById:{} };
+    let lmView = 'dashboard', lmChangeType = 'all', lmLimit = LM_PAGE, lmCsv = { rows:[], cols:[], name:'locations' };
+
+    async function lmFetchAll(table, columns, build) {
+        const out = [];
+        for (let from = 0; ; from += 1000) {
+            let q = lmClient().from(table).select(columns);
+            if (build) q = build(q);
+            const { data, error } = await q.order('id', { ascending: false }).range(from, from + 999);
+            if (error) throw error;
+            out.push(...data);
+            if (data.length < 1000) return out;
+        }
+    }
+
+    async function lmLoadSupabase() {
+        const [companies, runs, locations, changes] = await Promise.all([
+            lmFetchAll('blms_companies', '*'),
+            lmFetchAll('blms_scrape_runs', '*'),
+            lmFetchAll('blms_store_locations', LM_LOC_COLS),
+            lmFetchAll('blms_location_changes', '*', q => q.neq('change_type', 'UNCHANGED')),
+        ]);
+        const latest = companies.map(c => c.last_successful_run_id).filter(Boolean);
+        const unchanged = latest.length
+            ? await lmFetchAll('blms_location_changes', '*', q => q.eq('change_type', 'UNCHANGED').in('run_id', latest))
+            : [];
+        return { companies, runs, locations, changes: changes.concat(unchanged) };
+    }
+
+    async function lmLoad() {
+        document.getElementById('lmLoading').classList.remove('hidden');
+        document.getElementById('lmEmpty').classList.add('hidden');
+        document.getElementById('lmContent').innerHTML = '';
+        let data = null, source = '';
+        try {
+            if (!lmClient()) throw new Error('LM_SUPA_URL / LM_SUPA_ANON not set');
+            data = await lmLoadSupabase(); source = 'supabase';
+            if (!data.companies.length) throw new Error('no companies in Supabase yet');
+        } catch (err) {
+            console.warn('Location monitor: Supabase unavailable, using JSON fallback -', err.message || err);
+            try {
+                const res = await fetch(LM_JSON_URL + '?t=' + Date.now());
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                data = await res.json(); source = 'json';
+            } catch (e2) { data = null; }
+        }
+        document.getElementById('lmLoading').classList.add('hidden');
+        if (!data || !(data.companies || []).length) {
+            document.getElementById('lmEmpty').classList.remove('hidden');
+            document.getElementById('lmStats').style.display = 'none';
+            return;
+        }
+        lm = {
+            loaded: true, source,
+            companies: data.companies || [], runs: data.runs || [],
+            locations: data.locations || [], changes: data.changes || [],
+        };
+        lm.companyById = Object.fromEntries(lm.companies.map(c => [c.id, c]));
+        lm.latestRunIds = new Set(lm.companies.map(c => c.last_successful_run_id).filter(Boolean));
+        lm.runs.sort((a, b) => b.id - a.id);
+        // The JSON export slims UNCHANGED rows - fill store details from the location
+        const locById = lm.locById = Object.fromEntries(lm.locations.map(l => [l.id, l]));
+        lm.changes.forEach(c => {
+            const l = locById[c.location_id];
+            if (l && !c.store_name) ['store_name','address','city','state','zip_code'].forEach(k => { c[k] = l[k]; });
+        });
+
+        const sel = document.getElementById('lmCompany');
+        const cur = sel.value;
+        sel.innerHTML = '<option value="all">All Companies</option>' + [...lm.companies]
+            .sort((a, b) => a.company_name.localeCompare(b.company_name))
+            .map(c => `<option value="${c.id}">${escapeHtml(c.company_name)}</option>`).join('');
+        if ([...sel.options].some(o => o.value === cur)) sel.value = cur;
+
+        const lastRun = lm.runs.find(r => r.status === 'completed');
+        document.getElementById('lmSource').textContent = source === 'supabase' ? 'Supabase (live)' : 'docs/location_monitor.json (fallback)';
+        document.getElementById('lmLastRun').textContent = lastRun ? lmDate(lastRun.completed_at || lastRun.started_at, true) : '—';
+        document.getElementById('lmFooter').classList.remove('hidden');
+        lmRender();
+    }
+
+    function lmSwitchView(view) {
+        lmView = view; lmLimit = LM_PAGE;
+        document.querySelectorAll('#lmSubTabs .sub-tab-btn').forEach(b => b.classList.toggle('active', b.dataset.view === view));
+        if (lm.loaded) lmRender();
+    }
+
+    function lmSetType(t) { lmChangeType = t; lmLimit = LM_PAGE; lmRender(); }
+    function lmMore() { lmLimit += LM_PAGE; lmRender(); }
+
+    // ── helpers ──
+    function lmDate(s, withTime) {
+        if (!s) return '—';
+        const d = new Date(s);
+        if (isNaN(d)) return escapeHtml(String(s));
+        return withTime
+            ? d.toLocaleString('en-US', { month:'short', day:'numeric', year:'numeric', hour:'numeric', minute:'2-digit' })
+            : d.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+    }
+    function lmCompanyName(id) { return (lm.companyById[id] || {}).company_name || '—'; }
+    function lmBadge(text, cls) {
+        return `<span class="px-2 py-0.5 rounded-full text-[11px] font-bold border whitespace-nowrap ${cls}">${escapeHtml(text)}</span>`;
+    }
+    function lmCityState(r) { return [r.city, r.state].filter(Boolean).join(', ') + (r.zip_code ? ' ' + r.zip_code : ''); }
+    function lmTerm() { return document.getElementById('lmSearch').value.trim().toLowerCase(); }
+    function lmMatchesTerm(r, term) {
+        if (!term) return true;
+        return ['store_name','address','city','state','zip_code','phone','external_store_id']
+            .some(k => String(r[k] ?? '').toLowerCase().includes(term)) || lmCompanyName(r.company_id).toLowerCase().includes(term);
+    }
+    function lmCompanyFilter(r) {
+        const c = document.getElementById('lmCompany').value;
+        return c === 'all' || String(r.company_id) === c;
+    }
+    function lmInPeriod(c) {
+        const p = document.getElementById('lmPeriod').value;
+        if (p === 'latest') return lm.latestRunIds.has(c.run_id);
+        if (p === 'all') return true;
+        return new Date(c.detected_at) >= new Date(Date.now() - Number(p) * 864e5);
+    }
+    function lmFilteredChanges(type) {
+        const term = lmTerm();
+        return lm.changes.filter(c => (type === 'all' || c.change_type === type)
+            && lmCompanyFilter(c) && lmInPeriod(c) && lmMatchesTerm(c, term))
+            .sort((a, b) => (b.detected_at || '').localeCompare(a.detected_at || '') || b.id - a.id);
+    }
+    function lmPendingReviews() {
+        return lm.changes.filter(c => c.needs_review && c.review_status === 'pending' && lmCompanyFilter(c));
+    }
+    function lmOpenRunIssues() {
+        // latest run of each company that did not complete = unresolved scrape problem
+        const seen = new Set(), out = [];
+        for (const r of lm.runs) {
+            if (seen.has(r.company_id)) continue;
+            seen.add(r.company_id);
+            if (r.status !== 'completed' && r.status !== 'running' && lmCompanyFilter(r)) out.push(r);
+        }
+        return out;
+    }
+    function lmLink(url) {
+        return url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" class="px-2 py-1 rounded-lg text-xs bg-blue-900/40 text-blue-300 border border-blue-700/30 hover:bg-blue-800/60 whitespace-nowrap"><i class="fas fa-external-link-alt mr-1"></i>View</a>` : '<span class="text-gray-600 text-xs">—</span>';
+    }
+    function lmTable(headers, rowsHtml, total) {
+        const more = total > lmLimit
+            ? `<div class="text-center py-3 glass border-t border-white/5"><button onclick="lmMore()" class="text-xs text-indigo-300 hover:text-indigo-200">Show more (${total - lmLimit} remaining)</button></div>` : '';
+        return `<div class="overflow-x-auto rounded-2xl border border-white/5">
+            <table class="w-full text-sm text-left data-table"><thead><tr>${headers.map(h => `<th class="px-3 py-3 whitespace-nowrap">${h}</th>`).join('')}</tr></thead>
+            <tbody>${rowsHtml || `<tr><td colspan="${headers.length}" class="px-3 py-10 text-center text-gray-500 text-sm">Nothing to show for these filters.</td></tr>`}</tbody></table>
+            <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5">Showing <span class="text-gray-300 font-semibold">${Math.min(total, lmLimit)}</span> of ${total}</div>${more}</div>`;
+    }
+    function lmLocLink(c) {
+        const loc = (lm.locById || {})[c.location_id];
+        return lmLink(loc && loc.store_page);
+    }
+
+    // ── rendering ──
+    function lmRender() {
+        if (!lm.loaded) return;
+        const isChangeView = ['dashboard','new','removed','updated'].includes(lmView);
+        document.getElementById('lmPeriod').classList.toggle('hidden', !isChangeView);
+        document.getElementById('lmLocStatus').classList.toggle('hidden', lmView !== 'locations');
+        lmRenderStats();
+        const el = document.getElementById('lmContent');
+        const views = { dashboard: lmViewDashboard, companies: lmViewCompanies, locations: lmViewLocations,
+                        new: () => lmViewChanges('NEW'), removed: () => lmViewChanges('REMOVED'),
+                        updated: () => lmViewChanges('UPDATED'), history: lmViewHistory, review: lmViewReview };
+        el.innerHTML = views[lmView]();
+    }
+
+    function lmRenderStats() {
+        const companies = lm.companies.filter(c => c.is_active && lmCompanyFilter({ company_id: c.id }));
+        const changes = lm.changes.filter(c => lmCompanyFilter(c) && lmInPeriod(c));
+        const count = t => changes.filter(c => c.change_type === t).length;
+        const reviews = lmPendingReviews().length + lmOpenRunIssues().length;
+        setCount('lmStatCompanies', companies.length);
+        setCount('lmStatLocations', lm.locations.filter(l => l.is_active && lmCompanyFilter(l)).length);
+        setCount('lmStatNew', count('NEW'));
+        setCount('lmStatRemoved', count('REMOVED'));
+        setCount('lmStatUpdated', count('UPDATED'));
+        setCount('lmStatReview', reviews);
+        const badge = document.getElementById('lmReviewBadge');
+        badge.textContent = reviews; badge.classList.toggle('hidden', !reviews);
+        document.getElementById('lmStats').style.display = 'grid';
+    }
+
+    function lmChangeDetail(c) {
+        if (c.change_type === 'UPDATED' && c.changed_fields && c.changed_fields.length) {
+            return c.changed_fields.map(f => `<div class="text-xs"><span class="text-gray-500">${LM_FIELD_LABEL[f] || f}:</span>
+                <span class="text-rose-300/80 line-through">${escapeHtml(String((c.previous_values || {})[f] ?? '—'))}</span>
+                <i class="fas fa-arrow-right mx-1 text-gray-600 text-[10px]"></i>
+                <span class="text-emerald-300">${escapeHtml(String((c.new_values || {})[f] ?? '—'))}</span></div>`).join('');
+        }
+        return `<span class="text-xs text-gray-400">${escapeHtml(c.address || '')}</span>`;
+    }
+
+    function lmViewDashboard() {
+        const all = lmFilteredChanges('all');
+        const types = ['all','NEW','REMOVED','UPDATED','UNCHANGED'];
+        const counts = Object.fromEntries(types.map(t => [t, t === 'all' ? all.length : all.filter(c => c.change_type === t).length]));
+        const chips = types.map(t => `<button onclick="lmSetType('${t}')" class="px-3 py-1.5 rounded-full text-xs font-semibold border transition-all ${lmChangeType === t ? 'bg-indigo-500/25 text-indigo-200 border-indigo-400/50' : 'text-gray-400 border-white/10 hover:text-gray-200'}">${t === 'all' ? 'All' : t} <span class="opacity-60">${counts[t]}</span></button>`).join('');
+        const rows = (lmChangeType === 'all' ? all.filter(c => c.change_type !== 'UNCHANGED') : all.filter(c => c.change_type === lmChangeType));
+        lmCsv = { rows, name: 'location_changes', cols: ['change_type','company','store_name','address','city','state','zip_code','changed_fields','detected_at','needs_review','review_reason'] };
+        const list = rows.slice(0, lmLimit).map(c => `
+            <div class="flex items-start justify-between gap-4 px-4 py-3 border-t border-white/5 hover:bg-white/[0.02]">
+                <div class="min-w-0">
+                    <div class="font-semibold text-gray-200 text-sm">${escapeHtml(lmCompanyName(c.company_id))} — ${highlight(c.store_name || c.city || '', lmTerm())}
+                        ${c.reappeared ? '<span class="ml-1 text-[10px] text-emerald-400/80 uppercase">reappeared</span>' : ''}
+                        ${c.needs_review ? '<i class="fas fa-flag ml-1 text-violet-400 text-xs" title="' + escapeHtml(c.review_reason || 'Needs review') + '"></i>' : ''}</div>
+                    <div class="text-xs text-gray-500 mt-0.5">${escapeHtml(lmCityState(c))} · ${lmDate(c.detected_at)}</div>
+                    <div class="mt-1">${lmChangeDetail(c)}</div>
+                </div>
+                ${lmBadge(c.change_type, LM_TYPE_STYLE[c.change_type])}
+            </div>`).join('');
+        const more = rows.length > lmLimit ? `<div class="text-center py-3 border-t border-white/5"><button onclick="lmMore()" class="text-xs text-indigo-300">Show more (${rows.length - lmLimit} remaining)</button></div>` : '';
+        const isLatest = document.getElementById('lmPeriod').value === 'latest';
+        const hint = lmChangeType === 'all' ? '<span class="text-[11px] text-gray-600">UNCHANGED hidden in “All” — use the chip to see them</span>' : '';
+        return `
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+            <div class="xl:col-span-2 glass rounded-2xl overflow-hidden">
+                <div class="px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+                    <h3 class="text-sm font-semibold text-gray-200"><i class="fas fa-arrows-rotate mr-2 text-indigo-400"></i>Location changes ${isLatest ? '<span class="text-gray-500 font-normal">(latest run per company)</span>' : ''}</h3>
+                    <div class="flex flex-wrap gap-1.5">${chips}</div>
+                </div>
+                <div class="px-4 pb-2">${hint}</div>
+                ${list || '<div class="px-4 py-12 text-center text-gray-500 text-sm border-t border-white/5">No changes detected for these filters.</div>'}
+                ${more}
+            </div>
+            <div class="glass rounded-2xl overflow-hidden">
+                <div class="px-4 py-3 text-sm font-semibold text-gray-200"><i class="fas fa-building mr-2 text-indigo-400"></i>By company</div>
+                ${lmCompanySummaryRows().map(s => `
+                <div class="px-4 py-2.5 border-t border-white/5 flex items-center justify-between gap-2 cursor-pointer hover:bg-white/[0.02]" onclick="document.getElementById('lmCompany').value='${s.id}';lmRender()">
+                    <div class="min-w-0">
+                        <div class="text-sm text-gray-200 truncate">${escapeHtml(s.name)}</div>
+                        <div class="text-[11px] text-gray-500">${s.active} active · ${lmDate(s.lastSuccess)}</div>
+                    </div>
+                    <div class="flex gap-1 text-[11px] font-semibold">
+                        <span class="text-emerald-400" title="New">+${s.NEW}</span>
+                        <span class="text-rose-400" title="Removed">−${s.REMOVED}</span>
+                        <span class="text-amber-400" title="Updated">~${s.UPDATED}</span>
+                        ${s.runStatus && s.runStatus !== 'completed' ? lmBadge(s.runStatus, LM_RUN_STYLE[s.runStatus] || '') : ''}
+                    </div>
+                </div>`).join('')}
+            </div>
+        </div>`;
+    }
+
+    function lmCompanySummaryRows() {
+        return [...lm.companies].sort((a, b) => a.company_name.localeCompare(b.company_name)).map(c => {
+            const ch = lm.changes.filter(x => x.company_id === c.id && lmInPeriod(x));
+            const n = t => ch.filter(x => x.change_type === t).length;
+            const lastRun = lm.runs.find(r => r.company_id === c.id);
+            return { id: c.id, name: c.company_name, active: lm.locations.filter(l => l.company_id === c.id && l.is_active).length,
+                     total: lm.locations.filter(l => l.company_id === c.id).length,
+                     NEW: n('NEW'), REMOVED: n('REMOVED'), UPDATED: n('UPDATED'),
+                     lastSuccess: c.last_success_at, lastRun, runStatus: lastRun && lastRun.status, company: c };
+        });
+    }
+
+    function lmViewCompanies() {
+        const term = lmTerm();
+        const rows = lmCompanySummaryRows().filter(s => lmCompanyFilter({ company_id: s.id })
+            && (!term || s.name.toLowerCase().includes(term) || (s.company.website_url || '').toLowerCase().includes(term)));
+        lmCsv = { rows: rows.map(s => ({ company: s.name, website_url: s.company.website_url, locator_url: s.company.locator_url, scraper_type: s.company.scraper_type,
+            scrape_frequency: s.company.scrape_frequency, is_active: s.company.is_active, active_locations: s.active, total_locations: s.total,
+            last_scraped_at: s.company.last_scraped_at, last_run_status: s.runStatus, last_success_at: s.lastSuccess })),
+            name: 'companies', cols: ['company','website_url','locator_url','scraper_type','scrape_frequency','is_active','active_locations','total_locations','last_scraped_at','last_run_status','last_success_at'] };
+        const html = rows.map(s => `<tr>
+            <td class="px-3 py-3"><div class="font-semibold text-gray-200">${highlight(s.name, term)}</div>${s.company.is_active ? '' : '<span class="text-[10px] text-gray-500 uppercase">paused</span>'}</td>
+            <td class="px-3 py-3 text-xs"><a class="text-blue-300 hover:underline" href="${escapeHtml(s.company.locator_url || s.company.website_url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHtml((s.company.website_url || '').replace(/^https?:\/\/(www\.)?/, ''))}</a></td>
+            <td class="px-3 py-3 text-xs text-gray-400">${escapeHtml(s.company.scraper_type || '—')}</td>
+            <td class="px-3 py-3 text-xs text-gray-400 capitalize">${escapeHtml(s.company.scrape_frequency || '—')}</td>
+            <td class="px-3 py-3 text-gray-200 font-semibold">${s.active}<span class="text-gray-600 font-normal text-xs"> / ${s.total}</span></td>
+            <td class="px-3 py-3 text-xs text-gray-400 whitespace-nowrap">${lmDate(s.company.last_scraped_at, true)}</td>
+            <td class="px-3 py-3">${s.runStatus ? lmBadge(s.runStatus, LM_RUN_STYLE[s.runStatus] || '') : '—'}</td>
+            <td class="px-3 py-3 text-xs whitespace-nowrap"><span class="text-emerald-400">+${s.NEW}</span> <span class="text-rose-400">−${s.REMOVED}</span> <span class="text-amber-400">~${s.UPDATED}</span></td>
+        </tr>`).join('');
+        return lmTable(['Company','Website','Scraper','Frequency','Active / Total','Last Scrape','Last Status','Changes (period)'], html, rows.length);
+    }
+
+    function lmViewLocations() {
+        const term = lmTerm(), st = document.getElementById('lmLocStatus').value;
+        const rows = lm.locations.filter(l => lmCompanyFilter(l) && lmMatchesTerm(l, term)
+                && (st === 'all' || (st === 'active' ? l.is_active : !l.is_active)))
+            .sort((a, b) => lmCompanyName(a.company_id).localeCompare(lmCompanyName(b.company_id)) || (a.state || '').localeCompare(b.state || '') || (a.city || '').localeCompare(b.city || ''));
+        lmCsv = { rows, name: 'all_locations', cols: ['company','external_store_id','store_name','address','city','state','zip_code','country','phone','latitude','longitude','status','is_active','first_seen_at','last_seen_at','removed_at','store_page'] };
+        const html = rows.slice(0, lmLimit).map(l => `<tr class="${l.is_active ? '' : 'opacity-60'}">
+            <td class="px-3 py-2.5 text-xs text-indigo-300 whitespace-nowrap">${escapeHtml(lmCompanyName(l.company_id))}</td>
+            <td class="px-3 py-2.5 text-gray-200">${highlight(l.store_name || '—', term)}</td>
+            <td class="px-3 py-2.5 text-xs text-gray-400">${highlight(l.address || '—', term)}</td>
+            <td class="px-3 py-2.5 text-xs text-gray-300 whitespace-nowrap">${highlight(lmCityState(l), term)}</td>
+            <td class="px-3 py-2.5 text-xs text-gray-400 whitespace-nowrap">${escapeHtml(l.phone || '—')}</td>
+            <td class="px-3 py-2.5 text-xs whitespace-nowrap">${l.is_active ? escapeHtml(l.status || 'Open') : lmBadge('REMOVED', LM_TYPE_STYLE.REMOVED)}</td>
+            <td class="px-3 py-2.5 text-xs text-gray-500 whitespace-nowrap">${lmDate(l.first_seen_at)}</td>
+            <td class="px-3 py-2.5 text-xs text-gray-500 whitespace-nowrap">${lmDate(l.is_active ? l.last_seen_at : l.removed_at)}</td>
+            <td class="px-3 py-2.5">${lmLink(l.store_page)}</td>
+        </tr>`).join('');
+        return lmTable(['Company','Store','Address','City / State / ZIP','Phone','Status','First Seen','Last Seen / Removed','Link'], html, rows.length);
+    }
+
+    function lmViewChanges(type) {
+        const term = lmTerm();
+        const rows = lmFilteredChanges(type);
+        lmCsv = { rows, name: type.toLowerCase() + '_locations', cols: ['company','store_name','address','city','state','zip_code','changed_fields','previous_values','new_values','match_method','reappeared','detected_at','needs_review','review_reason','review_status'] };
+        const html = rows.slice(0, lmLimit).map(c => `<tr>
+            <td class="px-3 py-2.5 text-xs text-indigo-300 whitespace-nowrap">${escapeHtml(lmCompanyName(c.company_id))}</td>
+            <td class="px-3 py-2.5 text-gray-200">${highlight(c.store_name || '—', term)}
+                ${c.reappeared ? '<div class="text-[10px] text-emerald-400/80 uppercase">reappeared</div>' : ''}</td>
+            <td class="px-3 py-2.5">${type === 'UPDATED' ? lmChangeDetail(c) : `<span class="text-xs text-gray-400">${highlight(c.address || '—', term)}</span>`}</td>
+            <td class="px-3 py-2.5 text-xs text-gray-300 whitespace-nowrap">${highlight(lmCityState(c), term)}</td>
+            <td class="px-3 py-2.5 text-xs text-gray-500 whitespace-nowrap">${lmDate(c.detected_at)}</td>
+            <td class="px-3 py-2.5 text-xs text-gray-500 whitespace-nowrap">${escapeHtml((c.match_method || '—').replace(/_/g, ' '))}</td>
+            <td class="px-3 py-2.5 text-xs">${c.needs_review ? `<span class="text-violet-300" title="${escapeHtml(c.review_reason || '')}"><i class="fas fa-flag mr-1"></i>${escapeHtml(c.review_status || 'pending')}</span>` : '<span class="text-gray-600">—</span>'}</td>
+            <td class="px-3 py-2.5">${lmLocLink(c)}</td>
+        </tr>`).join('');
+        const label = { NEW: 'Address', REMOVED: 'Last Known Address', UPDATED: 'Changed Fields (previous → current)' }[type];
+        return lmTable(['Company','Store', label,'City / State / ZIP','Detected','Matched By','Review','Link'], html, rows.length);
+    }
+
+    function lmViewHistory() {
+        const term = lmTerm();
+        const rows = lm.runs.filter(r => lmCompanyFilter(r) && (!term || lmCompanyName(r.company_id).toLowerCase().includes(term) || (r.status || '').includes(term)));
+        lmCsv = { rows, name: 'scrape_history', cols: ['id','company','started_at','completed_at','status','trigger','is_baseline','locations_found','new_count','removed_count','updated_count','unchanged_count','review_count','duration_seconds','error_message'] };
+        const html = rows.slice(0, lmLimit).map(r => `<tr>
+            <td class="px-3 py-2.5 text-xs text-gray-500">#${r.id}</td>
+            <td class="px-3 py-2.5 text-xs text-gray-300 whitespace-nowrap">${lmDate(r.started_at, true)}</td>
+            <td class="px-3 py-2.5 text-xs text-indigo-300 whitespace-nowrap">${escapeHtml(lmCompanyName(r.company_id))}</td>
+            <td class="px-3 py-2.5">${lmBadge(r.status, LM_RUN_STYLE[r.status] || '')}${r.is_baseline ? ' <span class="text-[10px] text-gray-500 uppercase">baseline</span>' : ''}</td>
+            <td class="px-3 py-2.5 text-gray-200 font-semibold">${r.locations_found ?? '—'}</td>
+            <td class="px-3 py-2.5 text-xs whitespace-nowrap">${r.status === 'completed' ? `<span class="text-emerald-400">+${r.new_count || 0}</span> <span class="text-rose-400">−${r.removed_count || 0}</span> <span class="text-amber-400">~${r.updated_count || 0}</span>` : '—'}</td>
+            <td class="px-3 py-2.5 text-xs text-gray-500 whitespace-nowrap">${r.duration_seconds != null ? Math.round(r.duration_seconds) + 's' : '—'} · ${escapeHtml(r.trigger || '')}</td>
+            <td class="px-3 py-2.5 text-xs text-gray-400 max-w-[360px]"><span class="line-clamp-2" title="${escapeHtml(r.error_message || (r.warnings || []).join('\n'))}">${escapeHtml(r.error_message || ((r.warnings || []).length ? r.warnings.length + ' warning(s)' : ''))}</span></td>
+        </tr>`).join('');
+        return lmTable(['Run','Started','Company','Status','Found','Changes','Duration · Trigger','Notes'], html, rows.length);
+    }
+
+    function lmViewReview() {
+        const issues = lmOpenRunIssues();
+        const reviews = lmPendingReviews().sort((a, b) => b.id - a.id);
+        lmCsv = { rows: reviews, name: 'manual_review', cols: ['id','change_type','company','store_name','address','city','state','zip_code','review_reason','changed_fields','previous_values','new_values','detected_at'] };
+        const canAct = lm.source === 'supabase' && LM_REVIEW_WRITABLE;
+        const issueHtml = issues.map(r => `
+            <div class="px-4 py-3 border-t border-white/5 flex items-start justify-between gap-3">
+                <div><div class="text-sm text-gray-200 font-semibold">${escapeHtml(lmCompanyName(r.company_id))} — scrape ${escapeHtml(r.status)}</div>
+                <div class="text-xs text-gray-400 mt-0.5">${escapeHtml(r.error_message || 'No details')}</div>
+                <div class="text-[11px] text-gray-600 mt-0.5">${lmDate(r.started_at, true)} · nothing was removed; master data still reflects the last successful run</div></div>
+                ${lmBadge(r.status, LM_RUN_STYLE[r.status] || '')}
+            </div>`).join('');
+        const reviewHtml = reviews.slice(0, lmLimit).map(c => `
+            <div class="px-4 py-3 border-t border-white/5 flex items-start justify-between gap-3">
+                <div class="min-w-0">
+                    <div class="text-sm text-gray-200 font-semibold">${escapeHtml(lmCompanyName(c.company_id))} — ${escapeHtml(c.store_name || '')} ${lmBadge(c.change_type, LM_TYPE_STYLE[c.change_type])}</div>
+                    <div class="text-xs text-violet-300/90 mt-0.5"><i class="fas fa-flag mr-1"></i>${escapeHtml(c.review_reason || 'Needs review')}</div>
+                    <div class="text-xs text-gray-500 mt-0.5">${escapeHtml(lmCityState(c))} · ${lmDate(c.detected_at)}</div>
+                    <div class="mt-1">${lmChangeDetail(c)}</div>
+                </div>
+                <div class="flex gap-2 shrink-0">${canAct ? `
+                    <button onclick="lmResolve(${c.id},'confirmed')" class="px-3 py-1.5 rounded-lg text-xs bg-emerald-600/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-600/30"><i class="fas fa-check mr-1"></i>Confirm</button>
+                    <button onclick="lmResolve(${c.id},'rejected')" class="px-3 py-1.5 rounded-lg text-xs bg-rose-600/20 text-rose-300 border border-rose-500/30 hover:bg-rose-600/30"><i class="fas fa-xmark mr-1"></i>Reject</button>` : ''}
+                </div>
+            </div>`).join('');
+        return `
+        <div class="space-y-6">
+            <div class="glass rounded-2xl overflow-hidden">
+                <div class="px-4 py-3 text-sm font-semibold text-gray-200"><i class="fas fa-triangle-exclamation mr-2 text-amber-400"></i>Incomplete / failed scrapes <span class="text-gray-500 font-normal">(${issues.length})</span></div>
+                ${issueHtml || '<div class="px-4 py-6 text-center text-gray-500 text-sm border-t border-white/5">Every company\'s latest scrape completed.</div>'}
+            </div>
+            <div class="glass rounded-2xl overflow-hidden">
+                <div class="px-4 py-3 text-sm font-semibold text-gray-200"><i class="fas fa-user-check mr-2 text-violet-400"></i>Uncertain matches &amp; possible false removals <span class="text-gray-500 font-normal">(${reviews.length})</span></div>
+                ${reviewHtml || '<div class="px-4 py-6 text-center text-gray-500 text-sm border-t border-white/5">Nothing waiting for review.</div>'}
+                ${reviews.length > lmLimit ? `<div class="text-center py-3 border-t border-white/5"><button onclick="lmMore()" class="text-xs text-indigo-300">Show more</button></div>` : ''}
+                ${canAct ? '' : '<div class="px-4 py-2 text-[11px] text-gray-600 border-t border-white/5">View-only. Resolve items in Supabase → Table Editor → blms_location_changes (set review_status to confirmed / rejected).</div>'}
+            </div>
+        </div>`;
+    }
+
+    async function lmResolve(id, status) {
+        const { error } = await lmClient().from('blms_location_changes')
+            .update({ review_status: status, reviewed_by: _currentUserEmail || null, reviewed_at: new Date().toISOString() })
+            .eq('id', id);
+        if (error) { console.error(error); showToast('Could not save review: ' + error.message, 'error'); return; }
+        const c = lm.changes.find(x => x.id === id);
+        if (c) { c.review_status = status; c.reviewed_by = _currentUserEmail; }
+        showToast(`Marked as ${status}`);
+        lmRender();
+    }
+
+    function lmDownloadCSV() {
+        if (!lmCsv.rows.length) { showToast('Nothing to download', 'error'); return; }
+        const val = (r, k) => {
+            const v = k === 'company' ? lmCompanyName(r.company_id) : r[k];
+            if (v == null) return '';
+            return typeof v === 'object' ? JSON.stringify(v) : String(v);
+        };
+        const csv = [lmCsv.cols.join(','), ...lmCsv.rows.map(r =>
+            lmCsv.cols.map(k => `"${val(r, k).replace(/"/g, '""')}"`).join(','))].join('\n');
+        dlCSV('﻿' + csv, `location_monitor_${lmCsv.name}_${TODAY}.csv`);
+        showToast('CSV downloaded!');
     }
 
     window.addEventListener('DOMContentLoaded', () => {

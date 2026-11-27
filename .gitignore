@@ -15,3 +15,7 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+
+# Banner Location Monitoring System - local test DB and browser profiles
+banner_location_monitoring_system/data/
+.browser_profile_*/
