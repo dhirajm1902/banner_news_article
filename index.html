@@ -4439,10 +4439,29 @@
             <tbody>${rowsHtml || `<tr><td colspan="${headers.length}" class="px-3 py-10 text-center text-gray-500 text-sm">Nothing to show for these filters.</td></tr>`}</tbody></table>
             <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5">Showing <span class="text-gray-300 font-semibold">${Math.min(total, lmLimit)}</span> of ${total}</div>${more}</div>`;
     }
-    function lmLocLink(c) {
-        const loc = (lm.locById || {})[c.location_id];
-        return lmLink(loc && loc.store_page);
+    // Links to verify a location: its own page on the company site (or the company's
+    // store locator when the site has no per-store page) + a Google Maps search.
+    function lmVerifyLinks(r, locId) {
+        const loc = (lm.locById || {})[locId] || r;
+        const company = lm.companyById[r.company_id] || {};
+        const isMaps = /google\.[a-z.]+\/maps/i.test(loc.store_page || '');
+        const sitePage = !isMaps && loc.store_page;
+        const siteUrl = sitePage || company.locator_url || company.website_url;
+        const q = [company.company_name, r.address || loc.address, r.city || loc.city, r.state || loc.state, r.zip_code || loc.zip_code]
+            .filter(Boolean).join(', ');
+        const mapsUrl = isMaps ? loc.store_page
+            : (loc.latitude != null && loc.longitude != null && !(r.address || loc.address))
+                ? `https://www.google.com/maps/search/?api=1&query=${loc.latitude},${loc.longitude}`
+                : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+        const btn = 'px-2 py-1 rounded-lg text-xs border whitespace-nowrap transition-colors';
+        return `<span class="inline-flex gap-1.5">
+            ${siteUrl ? `<a href="${escapeHtml(siteUrl)}" target="_blank" rel="noopener noreferrer" title="${sitePage ? 'Store page on company website' : 'Company store locator (no per-store page)'}"
+                class="${btn} bg-blue-900/40 text-blue-300 border-blue-700/30 hover:bg-blue-800/60"><i class="fas fa-${sitePage ? 'store' : 'globe'} mr-1"></i>${sitePage ? 'Store page' : 'Locator'}</a>` : ''}
+            ${q || mapsUrl ? `<a href="${escapeHtml(mapsUrl)}" target="_blank" rel="noopener noreferrer" title="Open in Google Maps"
+                class="${btn} bg-emerald-900/30 text-emerald-300 border-emerald-700/30 hover:bg-emerald-800/50"><i class="fas fa-map-pin mr-1"></i>Map</a>` : ''}
+        </span>`;
     }
+    function lmLocLink(c) { return lmVerifyLinks(c, c.location_id); }
 
     // ── rendering ──
     function lmRender() {
@@ -4500,7 +4519,10 @@
                     <div class="text-xs text-gray-500 mt-0.5">${escapeHtml(lmCityState(c))} · ${lmDate(c.detected_at)}</div>
                     <div class="mt-1">${lmChangeDetail(c)}</div>
                 </div>
-                ${lmBadge(c.change_type, LM_TYPE_STYLE[c.change_type])}
+                <div class="flex flex-col items-end gap-2 shrink-0">
+                    ${lmBadge(c.change_type, LM_TYPE_STYLE[c.change_type])}
+                    ${lmLocLink(c)}
+                </div>
             </div>`).join('');
         const more = rows.length > lmLimit ? `<div class="text-center py-3 border-t border-white/5"><button onclick="lmMore()" class="text-xs text-indigo-300">Show more (${rows.length - lmLimit} remaining)</button></div>` : '';
         const isLatest = document.getElementById('lmPeriod').value === 'latest';
@@ -4583,9 +4605,9 @@
             <td class="px-3 py-2.5 text-xs whitespace-nowrap">${l.is_active ? escapeHtml(l.status || 'Open') : lmBadge('REMOVED', LM_TYPE_STYLE.REMOVED)}</td>
             <td class="px-3 py-2.5 text-xs text-gray-500 whitespace-nowrap">${lmDate(l.first_seen_at)}</td>
             <td class="px-3 py-2.5 text-xs text-gray-500 whitespace-nowrap">${lmDate(l.is_active ? l.last_seen_at : l.removed_at)}</td>
-            <td class="px-3 py-2.5">${lmLink(l.store_page)}</td>
+            <td class="px-3 py-2.5">${lmVerifyLinks(l, l.id)}</td>
         </tr>`).join('');
-        return lmTable(['Company','Store','Address','City / State / ZIP','Phone','Status','First Seen','Last Seen / Removed','Link'], html, rows.length);
+        return lmTable(['Company','Store','Address','City / State / ZIP','Phone','Status','First Seen','Last Seen / Removed','Verify'], html, rows.length);
     }
 
     function lmViewChanges(type) {
@@ -4604,7 +4626,7 @@
             <td class="px-3 py-2.5">${lmLocLink(c)}</td>
         </tr>`).join('');
         const label = { NEW: 'Address', REMOVED: 'Last Known Address', UPDATED: 'Changed Fields (previous → current)' }[type];
-        return lmTable(['Company','Store', label,'City / State / ZIP','Detected','Matched By','Review','Link'], html, rows.length);
+        return lmTable(['Company','Store', label,'City / State / ZIP','Detected','Matched By','Review','Verify'], html, rows.length);
     }
 
     function lmViewHistory() {
@@ -4644,9 +4666,9 @@
                     <div class="text-xs text-gray-500 mt-0.5">${escapeHtml(lmCityState(c))} · ${lmDate(c.detected_at)}</div>
                     <div class="mt-1">${lmChangeDetail(c)}</div>
                 </div>
-                <div class="flex gap-2 shrink-0">${canAct ? `
+                <div class="flex flex-col items-end gap-2 shrink-0">${lmLocLink(c)}<div class="flex gap-2">${canAct ? `
                     <button onclick="lmResolve(${c.id},'confirmed')" class="px-3 py-1.5 rounded-lg text-xs bg-emerald-600/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-600/30"><i class="fas fa-check mr-1"></i>Confirm</button>
-                    <button onclick="lmResolve(${c.id},'rejected')" class="px-3 py-1.5 rounded-lg text-xs bg-rose-600/20 text-rose-300 border border-rose-500/30 hover:bg-rose-600/30"><i class="fas fa-xmark mr-1"></i>Reject</button>` : ''}
+                    <button onclick="lmResolve(${c.id},'rejected')" class="px-3 py-1.5 rounded-lg text-xs bg-rose-600/20 text-rose-300 border border-rose-500/30 hover:bg-rose-600/30"><i class="fas fa-xmark mr-1"></i>Reject</button>` : ''}</div>
                 </div>
             </div>`).join('');
         return `
