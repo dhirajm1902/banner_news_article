@@ -1,7 +1,7 @@
 {
-  "last_updated": "November 25, 2026 10:57 UTC",
-  "total_records": 1358,
-  "new_this_run": 2,
+  "last_updated": "November 28, 2026 09:51 UTC",
+  "total_records": 1359,
+  "new_this_run": 1,
   "data": [
     {
       "company": "ALDI",
@@ -10856,7 +10856,7 @@
       "address": "4800 Veterans Pkwy, Garner, NC 27529",
       "opening_date": "12/3/2026",
       "link": "https://wawa.a.bigcontent.io/v1/static/12032026_Garner_NC_Media_Alert",
-      "is_new": true,
+      "is_new": false,
       "first_seen": "November 25, 2026"
     },
     {
@@ -10864,8 +10864,16 @@
       "address": "551 N Winstead Ave, Rocky Mount, NC 27804",
       "opening_date": "12/3/2026",
       "link": "https://wawa.a.bigcontent.io/v1/static/12032026_Rocky_Mount_NC_Media_Alert",
-      "is_new": true,
+      "is_new": false,
       "first_seen": "November 25, 2026"
+    },
+    {
+      "company": "Dogtopia",
+      "address": "8922 North Greenwood Avenue, Suite 2-3, Niles, Illinois 60714, United States",
+      "opening_date": "",
+      "link": "https://www.dogtopia.com/locations/niles/",
+      "is_new": true,
+      "first_seen": "November 28, 2026"
     }
   ]
 }
